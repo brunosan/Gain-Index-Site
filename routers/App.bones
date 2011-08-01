@@ -3,7 +3,7 @@ router = Backbone.Router.extend({
         '/' : 'home',
     },
     home: function() {
-        // TODO
+        this.send(new views.App().el);
     },
     notFound: function() {
         this.send(new views.App({view: new views.Error()}).el);
