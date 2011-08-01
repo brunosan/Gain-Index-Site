@@ -15,6 +15,12 @@ router = Backbone.Router.extend({
             ]
         });
         Bones.admin.render();
+
+
+        if (!Bones.server) {
+            Bones.user.status();
+        }
+
     },
     home: function() {
         this.send(new views.App().el);
