@@ -43,7 +43,7 @@ Bones.Command.options['secret'] = {
 Bones.Command.options['databases'] = {
     'title': 'databases=[users:pages]',
     'description': 'Colon separated list of databases.',
-    'default': 'users:data'
+    'default': 'users:data:documents'
 }
 
 /**
