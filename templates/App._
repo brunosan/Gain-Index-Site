@@ -15,6 +15,7 @@
 
   <link rel='stylesheet' href='/assets/gain/stylesheets/reset.css?<%= version %>' media='all' />
   <link rel='stylesheet' href='/assets/gain/stylesheets/style.css?<%= version %>' media='screen' />
+  <link rel='stylesheet' href='/assets/bones-admin/style.css?<%= version %>' media='screen' />
 </head>
 <body>
   <div id='app'>

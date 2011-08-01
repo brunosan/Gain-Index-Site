@@ -2,6 +2,17 @@ router = Backbone.Router.extend({
     routes: {
         '/' : 'home',
     },
+    initialize: function(options) {
+        Backbone.Router.prototype.initialize.call(this, options);
+        Bones.user = new models.User;
+
+        // Add bones-admin view.
+        Bones.admin = new views['Admin']({
+            model: Bones.user,
+            auth: views['AdminLogin']
+        });
+        Bones.admin.render();
+    },
     home: function() {
         this.send(new views.App().el);
     },
