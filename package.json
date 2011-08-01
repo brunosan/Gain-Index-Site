@@ -1,0 +1,18 @@
+{
+  "author": "Development Seed <info@developmentseed.org> (developmentseed.org)",
+  "name": "gain",
+  "description": "Global Adaptation Index website",
+  "version": "0.0.0",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/developmentseed/gain.git"
+  },
+  "engines": {
+    "node": "~v0.4.9"
+  },
+  "dependencies": {
+    "bones": "https://github.com/developmentseed/bones/tarball/master", 
+    "backbone-couch": "= 1.0.0"
+  },
+  "devDependencies": {}
+}
