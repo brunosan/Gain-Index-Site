@@ -13,7 +13,8 @@ router = Backbone.Router.extend({
             model: Bones.user,
             auth: views['AdminLogin'],
             dropdowns: [
-                views['AdminDropdownUser']
+                views['AdminDropdownUser'],
+                views['AdminDropdownPage']
             ]
         });
         Bones.admin.render();
