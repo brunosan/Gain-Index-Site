@@ -36,7 +36,7 @@ command.prototype.initialize = function(options) {
                 var name = i.slice(0, -4);
                 files.push({
                     filename: __dirname + '/../resources/' + v + '/' + i,
-                    id: v + '-' + name, 
+                    id: '/api/Indicator/' + v + '-' + name,
                     category: v,
                     name: name
                 });
@@ -49,7 +49,7 @@ command.prototype.initialize = function(options) {
                         var version = j.slice(0, -4);
                         files.push({
                             filename: __dirname + '/../resources/' + v + '/' + i + '/' + j,
-                            id: v + '-' + name + '-' + version, 
+                            id: '/api/Indicator/' + v + '-' + name + '-' + version,
                             category: v,
                             version: version,
                             name: name
@@ -76,7 +76,7 @@ command.prototype.initialize = function(options) {
             record.values = {};
             for (var k in v) {
                 if (k == 'ISO3') {
-                    record[k] = v[k].toLowerCase();
+                    record[k] = v[k];
                 }
                 else if (k == 'name') {
                     record['country'] = v[k];
