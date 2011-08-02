@@ -1,6 +1,8 @@
 router = Backbone.Router.extend({
     routes: {
+        '' : 'home',
         '/' : 'home',
+        '/country/:id': 'country'
     },
     initialize: function(options) {
         Backbone.Router.prototype.initialize.call(this, options);
@@ -24,6 +26,16 @@ router = Backbone.Router.extend({
     },
     home: function() {
         this.send(new views.App().el);
+    },
+    country: function(id) {
+        var router = this;
+        var fetcher = this.fetcher();
+        var indicators = new models.Indicators(null, {country: id});
+
+        fetcher.push(indicators);
+        fetcher.fetch(function() {
+            router.send(new views.App().el);
+        });
     },
     notFound: function() {
         this.send(new views.App({view: new views.Error()}).el);
