@@ -80,12 +80,14 @@ command.prototype.initialize = function(options) {
                     record[k] = parseFloat(v[k]);
                 }
             }
-            console.warn(record);
-            //put(config, 'survey', record, function(err, doc){
-            //    if (err) {
-            //        errors.push(err);
-            //    }
-            //});
+            put(config, 'data', record, function(err, doc){
+                if (err) {
+                    errors.push(err);
+                }
+            });
+        })
+        .on('error', function(err) {
+            console.log([file, err]);
         });
     });
 };
