@@ -1,0 +1,10 @@
+{
+   "_id": "_design/byCountry",
+   "language": "javascript",
+   "views": {
+       "default": {
+           "map": "function(doc) {\n  emit(doc.ISO3, doc._id);\n}"
+       }
+   }
+}
+
