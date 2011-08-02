@@ -73,19 +73,25 @@ command.prototype.initialize = function(options) {
                 }
             });
 
+            record.values = {};
             for (var k in v) {
-                if (k == 'ISO3' || k == 'name') {
-                    record[k] = v[k];
+                if (k == 'ISO3') {
+                    record[k] = v[k].toLowerCase();
+                }
+                else if (k == 'name') {
+                    record['country'] = v[k];
                 } else {
-                    record[k] = parseFloat(v[k]);
+                    record.values[k] = parseFloat(v[k]);
                 }
             }
-            console.warn(record);
-            //put(config, 'survey', record, function(err, doc){
-            //    if (err) {
-            //        errors.push(err);
-            //    }
-            //});
+            put(config, 'data', record, function(err, doc){
+                if (err) {
+                    errors.push(err);
+                }
+            });
+        })
+        .on('error', function(err) {
+            console.log([file, err]);
         });
     });
 };
