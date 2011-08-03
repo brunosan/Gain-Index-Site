@@ -1,7 +1,7 @@
 router = Backbone.Router.extend({
     routes: {
-        '' : 'home',
-        '/' : 'home',
+        '' : 'front',
+        '/' : 'front',
         '/country/:id': 'country'
     },
     initialize: function(options) {
@@ -17,28 +17,29 @@ router = Backbone.Router.extend({
             ]
         });
         Bones.admin.render();
-
-
         if (!Bones.server) {
             Bones.user.status();
         }
-
     },
-    home: function() {
-        this.send(new views.App().el);
+    newApp: function() {
+        return new views.App({el: $('body')});
+    },
+    front: function() {
+        var app = this.newApp();
+        new views.Front({el: $('#view', app.el)});
+        this.send(app);
     },
     country: function(id) {
         var router = this;
         var fetcher = this.fetcher();
         var indicators = new models.Indicators(null, {country: id});
+        var app = this.newApp();
 
         fetcher.push(indicators);
         fetcher.fetch(function() {
-            router.send(new views.App().el);
+            new views.Country({collection: indicators, el: $('#view', app.el)})
+            router.send(app);
         });
-    },
-    notFound: function() {
-        this.send(new views.App({view: new views.Error()}).el);
     },
     send: function() {},
     fetcher: function() {

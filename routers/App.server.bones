@@ -1,5 +1,8 @@
 routers['App'] = routers['App'].extend({
-    send: function(out) {
-        this.res.send(out);
+    newApp: function() {
+        return new views.App();
+    },
+    send: function(view) {
+        return this.res.send(view.wrap());
     }
 });

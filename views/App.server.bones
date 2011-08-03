@@ -1,13 +1,16 @@
 var time = Date.now();
-
-views['App'].augment({
-    // Server specific setup:
-    // wrap Layout._ into App._ to deliver the full HTML page.
+views['App'] = views['App'].extend({
+    initialize: function() {
+        this.render();
+    },
     render: function() {
-        this.el = templates.App({
-            version: time,
-            layout: $(this.el).html()
-        });
+        $(this.el).empty().append(templates.Layout());
         return this;
+    },
+    wrap: function() {
+        return templates.App({
+            version: time,
+            body: $(this.el).html()
+        })
     }
 });
