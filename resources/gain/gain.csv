@@ -1,193 +1,1 @@
-"ISO3"	"name"	1995	1996	1997	1998	1999	2000	2001	2002	2003	2004	2005	2006	2007	2008	2009	2010
-"AFG"	"Afghanistan"																
-"ALB"	"Albania"																64.1
-"DZA"	"Algeria"																60.9
-"AND"	"Andorra"																
-"AGO"	"Angola"																42.9
-"ATG"	"Antigua and Barbuda"																
-"ARG"	"Argentina"																69
-"ARM"	"Armenia"																68
-"AUS"	"Australia"																81.4
-"AUT"	"Austria"																77.5
-"AZE"	"Azerbaijan"																62.5
-"BHS"	"Bahamas"																65.1
-"BHR"	"Bahrain"																64.7
-"BGD"	"Bangladesh"																48.8
-"BRB"	"Barbados"																71.7
-"BLR"	"Belarus"																66
-"BEL"	"Belgium"																73.2
-"BLZ"	"Belize"																61.8
-"BEN"	"Benin"																50.9
-"BTN"	"Bhutan"																55.6
-"BOL"	"Bolivia"																57.5
-"BIH"	"Bosnia & Herzegovina"																66
-"BWA"	"Botswana"																59.6
-"BRA"	"Brazil"																64.4
-"BRN"	"Brunei Darussalam"																
-"BGR"	"Bulgaria"																71
-"BFA"	"Burkina Faso"																48.7
-"BDI"	"Burundi"																37.2
-"KHM"	"Cambodia"																49.4
-"CMR"	"Cameroon"																48.1
-"CAN"	"Canada"																76.1
-"CPV"	"Cape Verde"																64.7
-"CAF"	"Central African Rep"																37
-"TCD"	"Chad"																39
-"CHL"	"Chile"																76.1
-"CHN"	"China"																58.8
-"COL"	"Colombia"																63.8
-"COM"	"Comoros"																47
-"COG"	"Congo"																46.9
-"COD"	"Congo, Dem Rep"																38.1
-"CRI"	"Costa Rica"																65.6
-"CIV"	"Côte d'Ivoire"																72.5
-"HRV"	"Croatia"																48.3
-"CUB"	"Cuba"																54.8
-"CYP"	"Cyprus"																71.8
-"CZE"	"Czech Republic"																77.4
-"DNK"	"Denmark"																83.8
-"DJI"	"Djibouti"																48.7
-"DMA"	"Dominica"																59.3
-"DOM"	"Dominican Rep"																63.3
-"ECU"	"Ecuador"																63
-"EGY"	"Egypt"																63.2
-"SLV"	"El Salvador"																64.9
-"GNQ"	"Equatorial Guinea"																47.4
-"ERI"	"Eritrea"																41
-"EST"	"Estonia"																73.3
-"ETH"	"Ethiopia"																40.3
-"FJI"	"Fiji"																58
-"FIN"	"Finland"																79.9
-"FRA"	"France"																76.8
-"GAB"	"Gabon"																55.8
-"GMB"	"Gambia"																53.2
-"GEO"	"Georgia"																65.3
-"DEU"	"Germany"																76.9
-"GHA"	"Ghana"																55.6
-"GRC"	"Greece"																72.6
-"GRD"	"Grenada"																
-"GTM"	"Guatemala"																59.3
-"GIN"	"Guinea"																44.4
-"GNB"	"Guinea-Bissau"																44.2
-"GUY"	"Guyana"																53.9
-"HTI"	"Haiti"																49.2
-"HND"	"Honduras"																59.6
-"HUN"	"Hungary"																73.7
-"ISL"	"Iceland"																77.3
-"IND"	"India"																52.7
-"IDN"	"Indonesia"																61.6
-"IRN"	"Iran"																58.7
-"IRQ"	"Iraq"																39.5
-"IRL"	"Ireland"																81.4
-"ISR"	"Israel"																70.6
-"ITA"	"Italy"																73.2
-"JAM"	"Jamaica"																62.9
-"JPN"	"Japan"																74.4
-"JOR"	"Jordan"																65.4
-"KAZ"	"Kazakhstan"																66.5
-"KEN"	"Kenya"																47.7
-"KIR"	"Kiribati"																
-"PRK"	"Korea, DPR"																
-"KOR"	"Korea"																71.4
-"KWT"	"Kuwait"																66.9
-"KGZ"	"Kyrgyzstan"																63
-"LAO"	"Laos"																49.6
-"LVA"	"Latvia"																72.3
-"LBN"	"Lebanon"																62.1
-"LSO"	"Lesotho"																47.2
-"LBR"	"Liberia"																43.5
-"LBY"	"Libya"																56.5
-"LIE"	"Liechtenstein"																
-"LTU"	"Lithuania"																73.9
-"LUX"	"Luxembourg"																76.4
-"MDG"	"Madagascar"																68.7
-"MWI"	"Malawi"																49.6
-"MYS"	"Malaysia"																47.8
-"MDV"	"Maldives"																67.5
-"MLI"	"Mali"																56.5
-"MLT"	"Malta"																47.5
-"MHL"	"Marshall Islands"																70.8
-"MRT"	"Mauritania"																
-"MUS"	"Mauritius"																46.2
-"MEX"	"Mexico"																72.4
-"FSM"	"Micronesia FS"																65.6
-"MDA"	"Moldova"																53.7
-"MCO"	"Monaco"																62.5
-"MKD"	"Macedonia"																
-"MNG"	"Mongolia"																61.3
-"MNE"	"Montenegro"																70.2
-"MAR"	"Morocco"																56.2
-"MOZ"	"Mozambique"																47
-"MMR"	"Myanmar"																42.5
-"NAM"	"Namibia"																56.5
-"NRU"	"Nauru"																
-"NPL"	"Nepal"																47.8
-"NLD"	"Netherlands"																77.4
-"NZL"	"New Zealand"																81.3
-"NIC"	"Nicaragua"																59.6
-"NER"	"Niger"																43.9
-"NGA"	"Nigeria"																47.4
-"NOR"	"Norway"																79.6
-"OMN"	"Oman"																67.3
-"PAK"	"Pakistan"																51.1
-"PLW"	"Palau"																
-"PAN"	"Panama"																65.8
-"PNG"	"Papua New Guinea"																47.2
-"PRY"	"Paraguay"																61.4
-"PER"	"Peru"																63.2
-"PHL"	"Philippines"																60.6
-"POL"	"Poland"																76.2
-"PRT"	"Portugal"																72.9
-"QAT"	"Qatar"																67.6
-"ROU"	"Romania"																72.2
-"RUS"	"Russian Fed"																62.5
-"RWA"	"Rwanda"																48.2
-"KNA"	"Saint Kitts and Nevis"																
-"LCA"	"Saint Lucia"																65.5
-"VCT"	"St Vincent & Grenadines"																68.2
-"WSM"	"Samoa"																59.5
-"SMR"	"San Marino"																
-"STP"	"Sao Tome & Principe"																51.7
-"SAU"	"Saudi Arabia"																62.4
-"SEN"	"Senegal"																49.7
-"SRB"	"Serbia"																67.4
-"SYC"	"Seychelles"																61.1
-"SLE"	"Sierra Leone"																42.6
-"SGP"	"Singapore"																75.7
-"SVK"	"Slovakia"																74.8
-"SVN"	"Slovenia"																76.8
-"SLB"	"Solomon Islands"																
-"SOM"	"Somalia"																
-"ZAF"	"South Africa"																62.4
-"ESP"	"Spain"																75.2
-"LKA"	"Sri Lanka"																61.1
-"SDN"	"Sudan"																38.2
-"SUR"	"Suriname"																60
-"SWZ"	"Swaziland"																51
-"SWE"	"Sweden"																77.9
-"CHE"	"Switzerland"																81.4
-"SYR"	"Syria"																57.3
-"TJK"	"Tajikistan"																53.2
-"TZA"	"Tanzania"																49.5
-"THA"	"Thailand"																66.3
-"TLS"	"Timor-Leste"																48.4
-"TGO"	"Togo"																44
-"TON"	"Tonga"																56.2
-"TTO"	"Trinidad & Tobago"																63.2
-"TUN"	"Tunisia"																62.3
-"TUR"	"Turkey"																65.2
-"TKM"	"Turkmenistan"																56.3
-"TUV"	"Tuvalu"																
-"UGA"	"Uganda"																48.9
-"UKR"	"Ukraine"																64.1
-"ARE"	"United Arab Emirates"																67.6
-"GBR"	"United Kingdom"																79.3
-"USA"	"United States"																78.5
-"URY"	"Uruguay"																75.5
-"UZB"	"Uzbekistan"																56.9
-"VUT"	"Vanuatu"																57.4
-"VEN"	"Venezuela"																60.3
-"VNM"	"Viet Nam"																58.6
-"YEM"	"Yemen"																45.1
-"ZMB"	"Zambia"																48
-"ZWE"	"Zimbabwe"																37.4
+ISO3,name,1995,1996,1997,1998,1999,2000,2001,2002,2003,2004,2005,2006,2007,2008,2009,2010AFG,Afghanistan,,,,,,,,,,,,,,,,ALB,Albania,,,,,,,,,,,,,,,,64.1DZA,Algeria,,,,,,,,,,,,,,,,60.9AND,Andorra,,,,,,,,,,,,,,,,AGO,Angola,,,,,,,,,,,,,,,,42.9ATG,Antigua and Barbuda,,,,,,,,,,,,,,,,ARG,Argentina,,,,,,,,,,,,,,,,69ARM,Armenia,,,,,,,,,,,,,,,,68AUS,Australia,,,,,,,,,,,,,,,,81.4AUT,Austria,,,,,,,,,,,,,,,,77.5AZE,Azerbaijan,,,,,,,,,,,,,,,,62.5BHS,Bahamas,,,,,,,,,,,,,,,,65.1BHR,Bahrain,,,,,,,,,,,,,,,,64.7BGD,Bangladesh,,,,,,,,,,,,,,,,48.8BRB,Barbados,,,,,,,,,,,,,,,,71.7BLR,Belarus,,,,,,,,,,,,,,,,66BEL,Belgium,,,,,,,,,,,,,,,,73.2BLZ,Belize,,,,,,,,,,,,,,,,61.8BEN,Benin,,,,,,,,,,,,,,,,50.9BTN,Bhutan,,,,,,,,,,,,,,,,55.6BOL,Bolivia,,,,,,,,,,,,,,,,57.5BIH,Bosnia & Herzegovina,,,,,,,,,,,,,,,,66BWA,Botswana,,,,,,,,,,,,,,,,59.6BRA,Brazil,,,,,,,,,,,,,,,,64.4BRN,Brunei Darussalam,,,,,,,,,,,,,,,,BGR,Bulgaria,,,,,,,,,,,,,,,,71BFA,Burkina Faso,,,,,,,,,,,,,,,,48.7BDI,Burundi,,,,,,,,,,,,,,,,37.2KHM,Cambodia,,,,,,,,,,,,,,,,49.4CMR,Cameroon,,,,,,,,,,,,,,,,48.1CAN,Canada,,,,,,,,,,,,,,,,76.1CPV,Cape Verde,,,,,,,,,,,,,,,,64.7CAF,Central African Rep,,,,,,,,,,,,,,,,37TCD,Chad,,,,,,,,,,,,,,,,39CHL,Chile,,,,,,,,,,,,,,,,76.1CHN,China,,,,,,,,,,,,,,,,58.8COL,Colombia,,,,,,,,,,,,,,,,63.8COM,Comoros,,,,,,,,,,,,,,,,47COG,Congo,,,,,,,,,,,,,,,,46.9COD,"Congo, Dem Rep",,,,,,,,,,,,,,,,38.1CRI,Costa Rica,,,,,,,,,,,,,,,,65.6CIV,C̫te d'Ivoire,,,,,,,,,,,,,,,,72.5HRV,Croatia,,,,,,,,,,,,,,,,48.3CUB,Cuba,,,,,,,,,,,,,,,,54.8CYP,Cyprus,,,,,,,,,,,,,,,,71.8CZE,Czech Republic,,,,,,,,,,,,,,,,77.4DNK,Denmark,,,,,,,,,,,,,,,,83.8DJI,Djibouti,,,,,,,,,,,,,,,,48.7DMA,Dominica,,,,,,,,,,,,,,,,59.3DOM,Dominican Rep,,,,,,,,,,,,,,,,63.3ECU,Ecuador,,,,,,,,,,,,,,,,63EGY,Egypt,,,,,,,,,,,,,,,,63.2SLV,El Salvador,,,,,,,,,,,,,,,,64.9GNQ,Equatorial Guinea,,,,,,,,,,,,,,,,47.4ERI,Eritrea,,,,,,,,,,,,,,,,41EST,Estonia,,,,,,,,,,,,,,,,73.3ETH,Ethiopia,,,,,,,,,,,,,,,,40.3FJI,Fiji,,,,,,,,,,,,,,,,58FIN,Finland,,,,,,,,,,,,,,,,79.9FRA,France,,,,,,,,,,,,,,,,76.8GAB,Gabon,,,,,,,,,,,,,,,,55.8GMB,Gambia,,,,,,,,,,,,,,,,53.2GEO,Georgia,,,,,,,,,,,,,,,,65.3DEU,Germany,,,,,,,,,,,,,,,,76.9GHA,Ghana,,,,,,,,,,,,,,,,55.6GRC,Greece,,,,,,,,,,,,,,,,72.6GRD,Grenada,,,,,,,,,,,,,,,,GTM,Guatemala,,,,,,,,,,,,,,,,59.3GIN,Guinea,,,,,,,,,,,,,,,,44.4GNB,Guinea-Bissau,,,,,,,,,,,,,,,,44.2GUY,Guyana,,,,,,,,,,,,,,,,53.9HTI,Haiti,,,,,,,,,,,,,,,,49.2HND,Honduras,,,,,,,,,,,,,,,,59.6HUN,Hungary,,,,,,,,,,,,,,,,73.7ISL,Iceland,,,,,,,,,,,,,,,,77.3IND,India,,,,,,,,,,,,,,,,52.7IDN,Indonesia,,,,,,,,,,,,,,,,61.6IRN,Iran,,,,,,,,,,,,,,,,58.7IRQ,Iraq,,,,,,,,,,,,,,,,39.5IRL,Ireland,,,,,,,,,,,,,,,,81.4ISR,Israel,,,,,,,,,,,,,,,,70.6ITA,Italy,,,,,,,,,,,,,,,,73.2JAM,Jamaica,,,,,,,,,,,,,,,,62.9JPN,Japan,,,,,,,,,,,,,,,,74.4JOR,Jordan,,,,,,,,,,,,,,,,65.4KAZ,Kazakhstan,,,,,,,,,,,,,,,,66.5KEN,Kenya,,,,,,,,,,,,,,,,47.7KIR,Kiribati,,,,,,,,,,,,,,,,PRK,"Korea, DPR",,,,,,,,,,,,,,,,KOR,Korea,,,,,,,,,,,,,,,,71.4KWT,Kuwait,,,,,,,,,,,,,,,,66.9KGZ,Kyrgyzstan,,,,,,,,,,,,,,,,63LAO,Laos,,,,,,,,,,,,,,,,49.6LVA,Latvia,,,,,,,,,,,,,,,,72.3LBN,Lebanon,,,,,,,,,,,,,,,,62.1LSO,Lesotho,,,,,,,,,,,,,,,,47.2LBR,Liberia,,,,,,,,,,,,,,,,43.5LBY,Libya,,,,,,,,,,,,,,,,56.5LIE,Liechtenstein,,,,,,,,,,,,,,,,LTU,Lithuania,,,,,,,,,,,,,,,,73.9LUX,Luxembourg,,,,,,,,,,,,,,,,76.4MDG,Madagascar,,,,,,,,,,,,,,,,68.7MWI,Malawi,,,,,,,,,,,,,,,,49.6MYS,Malaysia,,,,,,,,,,,,,,,,47.8MDV,Maldives,,,,,,,,,,,,,,,,67.5MLI,Mali,,,,,,,,,,,,,,,,56.5MLT,Malta,,,,,,,,,,,,,,,,47.5MHL,Marshall Islands,,,,,,,,,,,,,,,,70.8MRT,Mauritania,,,,,,,,,,,,,,,,MUS,Mauritius,,,,,,,,,,,,,,,,46.2MEX,Mexico,,,,,,,,,,,,,,,,72.4FSM,Micronesia FS,,,,,,,,,,,,,,,,65.6MDA,Moldova,,,,,,,,,,,,,,,,53.7MCO,Monaco,,,,,,,,,,,,,,,,62.5MKD,Macedonia,,,,,,,,,,,,,,,,MNG,Mongolia,,,,,,,,,,,,,,,,61.3MNE,Montenegro,,,,,,,,,,,,,,,,70.2MAR,Morocco,,,,,,,,,,,,,,,,56.2MOZ,Mozambique,,,,,,,,,,,,,,,,47MMR,Myanmar,,,,,,,,,,,,,,,,42.5NAM,Namibia,,,,,,,,,,,,,,,,56.5NRU,Nauru,,,,,,,,,,,,,,,,NPL,Nepal,,,,,,,,,,,,,,,,47.8NLD,Netherlands,,,,,,,,,,,,,,,,77.4NZL,New Zealand,,,,,,,,,,,,,,,,81.3NIC,Nicaragua,,,,,,,,,,,,,,,,59.6NER,Niger,,,,,,,,,,,,,,,,43.9NGA,Nigeria,,,,,,,,,,,,,,,,47.4NOR,Norway,,,,,,,,,,,,,,,,79.6OMN,Oman,,,,,,,,,,,,,,,,67.3PAK,Pakistan,,,,,,,,,,,,,,,,51.1PLW,Palau,,,,,,,,,,,,,,,,PAN,Panama,,,,,,,,,,,,,,,,65.8PNG,Papua New Guinea,,,,,,,,,,,,,,,,47.2PRY,Paraguay,,,,,,,,,,,,,,,,61.4PER,Peru,,,,,,,,,,,,,,,,63.2PHL,Philippines,,,,,,,,,,,,,,,,60.6POL,Poland,,,,,,,,,,,,,,,,76.2PRT,Portugal,,,,,,,,,,,,,,,,72.9QAT,Qatar,,,,,,,,,,,,,,,,67.6ROU,Romania,,,,,,,,,,,,,,,,72.2RUS,Russian Fed,,,,,,,,,,,,,,,,62.5RWA,Rwanda,,,,,,,,,,,,,,,,48.2KNA,Saint Kitts and Nevis,,,,,,,,,,,,,,,,LCA,Saint Lucia,,,,,,,,,,,,,,,,65.5VCT,St Vincent & Grenadines,,,,,,,,,,,,,,,,68.2WSM,Samoa,,,,,,,,,,,,,,,,59.5SMR,San Marino,,,,,,,,,,,,,,,,STP,Sao Tome & Principe,,,,,,,,,,,,,,,,51.7SAU,Saudi Arabia,,,,,,,,,,,,,,,,62.4SEN,Senegal,,,,,,,,,,,,,,,,49.7SRB,Serbia,,,,,,,,,,,,,,,,67.4SYC,Seychelles,,,,,,,,,,,,,,,,61.1SLE,Sierra Leone,,,,,,,,,,,,,,,,42.6SGP,Singapore,,,,,,,,,,,,,,,,75.7SVK,Slovakia,,,,,,,,,,,,,,,,74.8SVN,Slovenia,,,,,,,,,,,,,,,,76.8SLB,Solomon Islands,,,,,,,,,,,,,,,,SOM,Somalia,,,,,,,,,,,,,,,,ZAF,South Africa,,,,,,,,,,,,,,,,62.4ESP,Spain,,,,,,,,,,,,,,,,75.2LKA,Sri Lanka,,,,,,,,,,,,,,,,61.1SDN,Sudan,,,,,,,,,,,,,,,,38.2SUR,Suriname,,,,,,,,,,,,,,,,60SWZ,Swaziland,,,,,,,,,,,,,,,,51SWE,Sweden,,,,,,,,,,,,,,,,77.9CHE,Switzerland,,,,,,,,,,,,,,,,81.4SYR,Syria,,,,,,,,,,,,,,,,57.3TJK,Tajikistan,,,,,,,,,,,,,,,,53.2TZA,Tanzania,,,,,,,,,,,,,,,,49.5THA,Thailand,,,,,,,,,,,,,,,,66.3TLS,Timor-Leste,,,,,,,,,,,,,,,,48.4TGO,Togo,,,,,,,,,,,,,,,,44TON,Tonga,,,,,,,,,,,,,,,,56.2TTO,Trinidad & Tobago,,,,,,,,,,,,,,,,63.2TUN,Tunisia,,,,,,,,,,,,,,,,62.3TUR,Turkey,,,,,,,,,,,,,,,,65.2TKM,Turkmenistan,,,,,,,,,,,,,,,,56.3TUV,Tuvalu,,,,,,,,,,,,,,,,UGA,Uganda,,,,,,,,,,,,,,,,48.9UKR,Ukraine,,,,,,,,,,,,,,,,64.1ARE,United Arab Emirates,,,,,,,,,,,,,,,,67.6GBR,United Kingdom,,,,,,,,,,,,,,,,79.3USA,United States,,,,,,,,,,,,,,,,78.5URY,Uruguay,,,,,,,,,,,,,,,,75.5UZB,Uzbekistan,,,,,,,,,,,,,,,,56.9VUT,Vanuatu,,,,,,,,,,,,,,,,57.4VEN,Venezuela,,,,,,,,,,,,,,,,60.3VNM,Viet Nam,,,,,,,,,,,,,,,,58.6YEM,Yemen,,,,,,,,,,,,,,,,45.1ZMB,Zambia,,,,,,,,,,,,,,,,48ZWE,Zimbabwe,,,,,,,,,,,,,,,,37.4
