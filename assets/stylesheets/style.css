@@ -1,3 +1,69 @@
+.limiter {
+  width: 960px;
+  margin: 0px auto;
+  }
+
+/**
+ * Header styles
+ */
+#header {
+  height: 60px;
+  background-color: #11202c;
+  }
+#header .limiter {
+  position: relative;
+  clear: both;
+  }
+#header h2,
+#header .navigation {
+  float: left;
+  height: 60px
+  }
+#header .tagline {
+  position: absolute;
+  left: 120px;
+  top: 15px;
+  }
+#header .tagline div {
+  line-height: 15px;
+  width: 220px;
+  color: #5a2;
+  }
+#header .tagline div.index {
+  color: #fff;
+  }
+#header .navigation {
+  position: absolute;
+  left: 320px;
+  }
+#header .navigation li {
+  float: left;
+  height: 60px;
+  line-height: 60px;
+  width: 75px;
+  text-align: center;
+  border-left: 1px solid #11202c;
+  background: #5a2;
+  }
+
+#header .search {
+  position: absolute;
+  left: 640px;
+  top: 15px;
+  }
+
+.search input {
+  padding: 5px 10px;
+  background-color: #fff;
+  border-radius: 2px;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  }
+
+.search input.button {
+  background-color: #5a2;
+  }
+
 /**
  * Bones-admin : popups.
  */
