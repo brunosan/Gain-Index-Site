@@ -17,7 +17,7 @@ view = views.App.extend({
             });
 
             _.each(['gain', 'readiness_delta', 'vulnerability_delta'], function(k) {
-                summary.push({
+                data.gain.hasOwnProperty(k) && summary.push({
                     id: k,
                     name: k,
                     value: data.gain[k]['2010']
