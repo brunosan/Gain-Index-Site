@@ -1,35 +1,55 @@
 view = views.App.extend({
+    events: _.extend({
+        'click ul.tabs li a': 'selectTab'
+    }, views.App.prototype.events),
     render: function() {
         if ($(this.el).is(':empty')) {
             var data = {},
                 title = '',
                 summary = [];
+                indicators = {},
+                currentYear = '2010';
 
+            // Build a look up table for the data.
             this.collection.each(function(model) {
                 if (!title) title = model.escape('country');
 
-                var cat = model.escape('category'),
-                    name = model.escape('name');
-
-                if (data[cat] == undefined) data[cat] = {};
-
-                data[cat][name] = model.get('values');
+                data[model.get('name')] = model.get('values');
             });
 
+            // Generate organized sets for the template.
+            _.each(this.collection.model.prototype.meta, function(field) {
+                if (indicators[field.indicator] == undefined) {
+                    indicators[field.indicator] = {};
+                }
+                if (indicators[field.indicator][field.sector] == undefined) {
+                    indicators[field.indicator][field.sector] = [];
+                }
+                indicators[field.indicator][field.sector].push({
+                    field: field,
+                    data: data[field.id]
+                });
+            });
+
+            // The summary information needs to be done manually.
             _.each(['gain', 'readiness_delta', 'vulnerability_delta'], function(k) {
-                data.gain.hasOwnProperty(k) && summary.push({
+                data.hasOwnProperty(k) && summary.push({
                     id: k,
                     name: k,
-                    value: data.gain[k]['2010']
+                    value: data[k][currentYear]
                 });
             });
 
             $(this.el).empty().append(templates.Country({
                 title: title,
                 summary: summary,
-                tabs: data
+                tabs: indicators 
             }));
         }
         return this;
+    },
+    selectTab: function(ev) {
+        console.log(ev);
+        return false;
     }
 });
