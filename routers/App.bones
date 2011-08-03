@@ -2,7 +2,10 @@ router = Backbone.Router.extend({
     routes: {
         '' : 'front',
         '/' : 'front',
-        '/country/:id': 'country'
+        '/country/:id': 'country',
+        '/:id': 'page',
+        '/:id/edit': 'pageEditor',
+       // '/.*': 'notFound'
     },
     initialize: function(options) {
         Backbone.Router.prototype.initialize.call(this, options);
@@ -13,8 +16,7 @@ router = Backbone.Router.extend({
             model: Bones.user,
             auth: views['AdminLogin'],
             dropdowns: [
-                views['AdminDropdownUser'],
-                views['AdminDropdownPage']
+                views['AdminDropdownUser']
             ]
         });
         Bones.admin.render();
@@ -34,6 +36,26 @@ router = Backbone.Router.extend({
         fetcher.fetch(function() {
             router.send(new views.Country({collection: indicators}));
         });
+    },
+    pageEditor: function(id) {
+        this.page(id, true);
+    },
+    page: function(id, edit) {
+        var router = this;
+        var fetcher = this.fetcher();
+
+        var model = new models.Page({id: id}, {
+            route: '/' + id,
+            editRoute: '/' + id + '/edit'
+        });
+
+        fetcher.push(model);
+        fetcher.fetch(function() {
+            var view = new views.Page({model: model});
+            router.send(view);
+            edit && view.edit();
+        });
+
     },
     send: function() {},
     fetcher: function() {
@@ -59,5 +81,13 @@ router = Backbone.Router.extend({
                 });
             }
         }
+    },
+    error: function(errors) {
+//        var err = _.isArray(errors) ? errors.pop() : errors;
+  //      this.send(new views.App({view: new views.Error(err)}).el);
+    },
+    notFound: function() {
+        this.error();
     }
+
 });

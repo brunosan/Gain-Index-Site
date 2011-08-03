@@ -1,0 +1,6 @@
+<div id='cabinet'>
+    <h2>
+    <span class='editable <%= render('id') %> editable-name'><%= render('name') %></span>
+    </h2>
+    <div class='editable <%= render('id') %> editable-body'><%= render('body') %></div>
+</div>
