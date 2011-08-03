@@ -1,25 +1,27 @@
-<h2><%= title %></h2>
-<div class='country-summary'>
-  <% _.each(summary, function(stat) { %>
-    <div class='stat.id'>
-        <%= stat.name %>
-        <%= stat.value %>
-    </div>
-  <% }); %>
-  <div class='matrix'></div>
-  <div class='map'></div>
-</div>
+<div id='cabinet'>
+  <h2><%= title %></h2>
+  <div class='country-summary'>
+    <% _.each(summary, function(stat) { %>
+      <div class='stat.id'>
+          <%= stat.name %>
+          <%= stat.value %>
+      </div>
+    <% }); %>
+    <div class='matrix'></div>
+    <div class='map'></div>
+  </div>
 
-<div class='prose'><p>Ei dicam partem accusamus vel, tale laoreet duo ei. Noster labitur mei ei. Cum iuvaret abhorreant ei. Cibo dolorum cum cu, nec in habemus torquatos, ad pro paulo commodo probatus.</p></div>
+  <div class='prose'><p>Ei dicam partem accusamus vel, tale laoreet duo ei. Noster labitur mei ei. Cum iuvaret abhorreant ei. Cibo dolorum cum cu, nec in habemus torquatos, ad pro paulo commodo probatus.</p></div>
 
-<div class='tab-wrapper'>
-  <ul class='tabs'>
-    <li><a href='#tab-vuln'>Vulnerability</a></li>
-    <li><a href='#tab-ready'>Readiness</a></li>
-  </ul>
-  <% _.each(tabs, function(tables, category) { %>
-    <div id='<%= category %>'>
-      TODO: tab.
-    </div>
-  <% }); %>
+  <div class='tab-wrapper'>
+    <ul class='tabs'>
+      <li><a href='#tab-vuln'>Vulnerability</a></li>
+      <li><a href='#tab-ready'>Readiness</a></li>
+    </ul>
+    <% _.each(tabs, function(tables, category) { %>
+      <div id='<%= category %>'>
+        TODO: tab.
+      </div>
+    <% }); %>
+  </div>
 </div>
