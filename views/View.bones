@@ -6,8 +6,7 @@ view.prototype.events = {
 // Routes a click event
 // --------------------
 view.prototype.routeClick = function(ev) {
-    console.log('route');
-    return false;
+    return true;
     if (_.size(window.currentKeys)) {
         return true;
     }
