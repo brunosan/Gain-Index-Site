@@ -1,6 +1,6 @@
 view = views.App.extend({
     render: function() {
-        if ($('#view', this.el).is(':empty')) {
+        if ($(this.el).is(':empty')) {
             var data = {},
                 title = '',
                 summary = [];
@@ -24,7 +24,7 @@ view = views.App.extend({
                 });
             });
 
-            $('#view', this.el).empty().append(templates.Country({
+            $(this.el).empty().append(templates.Country({
                 title: title,
                 summary: summary,
                 tabs: data

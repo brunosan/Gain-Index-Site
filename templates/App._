@@ -18,6 +18,23 @@
   <link rel='stylesheet' href='/assets/bones-admin/style.css?<%= version %>' media='screen' />
 </head>
 <body>
-  <%= body%>
+  <div id='header'><div class='limiter'>
+    <h2><a href='/'>GaIn</a></h2>
+    <div class='tagline'>
+      <div class='index'>The Global Adaptation Index</div>
+      <div class='institute'>by Global Adaptation Institute</div>
+    </div>
+    <ul class='navigation'>
+      <li><a href='/map'>Map</a></li>
+      <li><a href='/rankings'>Rankings</a></li>
+      <li><a href='/matrix'>Matric</a></li>
+      <li><a href='/methodology'>Methodology</a></li>
+    </ul>
+    <div class='search'>
+      <input name='search' type='textfield' />
+      <input class='button' name='search-submit' type='submit' value='Search' />
+    </div>
+  </div></div>
+  <%= view%>
 </body>
 </html>
