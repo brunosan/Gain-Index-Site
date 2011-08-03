@@ -1,4 +1,7 @@
 view = views.App.extend({
+    events: _.extend({
+        'click ul.tabs li a': 'selectTab'
+    }, views.App.prototype.events),
     render: function() {
         if ($(this.el).is(':empty')) {
             var data = {},
@@ -44,5 +47,9 @@ view = views.App.extend({
             }));
         }
         return this;
+    },
+    selectTab: function(ev) {
+        console.log(ev);
+        return false;
     }
 });

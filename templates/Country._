@@ -15,21 +15,22 @@
 
   <div class='tab-wrapper'>
     <ul class='tabs'>
-      <li><a href='#tab-vulnerability'>Vulnerability</a></li>
+      <li class='active'><a href='#tab-vulnerability'>Vulnerability</a></li>
       <li><a href='#tab-readiness'>Readiness</a></li>
     </ul>
     <% _.each(tabs, function(tables, category) { %>
-      <div id='tab-<%= category %>'>
-        <% _.each(tables, function(rows, label) { %>
-          <table>
-            <thead><th><td><%= label %></td></th><thead>
-            <tbody>
+      <div id='tab-<%= category %>' class='tab-content <%= (category == 'vulnerability' ? 'active' : '') %>'>
+        <table>
+          <thead><tr><th></th><th>Raw</th><th>Normalized</th></tr></thead>
+          <tbody>
+          <% _.each(tables, function(rows, label) { %>
+              <tr class='heading'><td><%= label %></td><td></td><td></td></tr></thead>
               <% _.each(rows, function(row) { %>
-                  <tr><td><%= row.field.name %></td></tr>
+                  <tr><td><%= row.field.name %></td><td></td><td></td></tr>
               <% }); %>
-            </tbody>
-          </table>
-        <% }); %>
+          <% }); %>
+          </tbody>
+        </table>
       </div>
     <% }); %>
   </div>

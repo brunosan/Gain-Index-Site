@@ -74,7 +74,7 @@ body {
   }
 
 /**
- * Cabinet and draw styles
+ * Cabinet and drawer styles
  */
 #cabinet {
   width: 635px;
@@ -83,6 +83,58 @@ body {
   -moz-box-shadow: 0px -20px 20px #000;
   -webkit-box-shadow: 0px -20px 20px #000;
   box-shadow: 0px -20px 20px #000;
+  }
+
+/**
+ * tabs
+ */
+.tab-wrapper ul.tabs {
+  background-color: #ebebeb;
+  width: 625px;
+  float: left;
+  height: 30px;
+  padding: 0px 0px 0px 10px;
+  }
+
+.tab-wrapper ul.tabs li {
+  float: left;
+  padding: 0px 5px;
+  margin-right: 5px;
+  line-height: 30px;
+  -moz-border-radius: 2px 0px 0px 2px;
+  -webkit-border-radius: 2px 0px 0px 2px;
+  border-radius: 2px 0px 0px 2px;
+  background-color: #c6c6c6;
+  }
+
+.tab-wrapper ul.tabs li.active {
+  background-color: #fff;
+  }
+
+.tab-wrapper .tab-content {
+  display:none;
+  }
+
+.tab-wrapper .tab-content.active {
+  display:block;
+  }
+
+/**
+ * Country pages
+ */
+.summary {
+  background-color: #c6c6c6;
+  }
+.tab-content table {
+  width: 100%;
+  table-layout: fixed;
+  }
+.tab-content tbody tr.heading {
+  border-bottom: 1px solid #000;
+  }
+
+.tab-content tbody tr {
+  border-bottom: 1px solid #666;
   }
 
 /**
