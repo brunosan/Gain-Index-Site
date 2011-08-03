@@ -1,9 +1,6 @@
-view = Backbone.View.extend({
-    initialize: function() {
-        this.render();
-    },
+view = views.App.extend({
     render: function() {
-        $(this.el).is(':empty') && $(this.el).empty().append(
+        $('#view', this.el).is(':empty') && $('#view', this.el).empty().append(
             templates.Front()
         );
         return this;

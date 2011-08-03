@@ -21,24 +21,17 @@ router = Backbone.Router.extend({
             Bones.user.status();
         }
     },
-    newApp: function() {
-        return new views.App({el: $('body')});
-    },
     front: function() {
-        var app = this.newApp();
-        new views.Front({el: $('#view', app.el)});
-        this.send(app);
+        this.send(new views.Front());
     },
     country: function(id) {
         var router = this;
         var fetcher = this.fetcher();
         var indicators = new models.Indicators(null, {country: id});
-        var app = this.newApp();
 
         fetcher.push(indicators);
         fetcher.fetch(function() {
-            new views.Country({collection: indicators, el: $('#view', app.el)})
-            router.send(app);
+            router.send(new views.Country({collection: indicators}));
         });
     },
     send: function() {},
