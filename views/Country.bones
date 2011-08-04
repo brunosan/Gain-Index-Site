@@ -25,10 +25,13 @@ view = views.App.extend({
                 if (indicators[field.indicator][field.sector] == undefined) {
                     indicators[field.indicator][field.sector] = [];
                 }
-                indicators[field.indicator][field.sector].push({
-                    field: field,
-                    data: data[field.id]
-                });
+                if (data[field.id] !== undefined) {
+                    indicators[field.indicator][field.sector].push({
+                        field: field,
+                        raw: data[field.id][currentYear],
+                        normalized: data[field.id][currentYear]
+                    });
+                }
             });
 
             // The summary information needs to be done manually.

@@ -21,12 +21,25 @@
     <% _.each(tabs, function(tables, category) { %>
       <div id='tab-<%= category %>' class='tab-content <%= (category == 'vulnerability' ? 'active' : '') %>'>
         <table>
-          <thead><tr><th></th><th>Raw</th><th>Normalized</th></tr></thead>
+          <thead><tr>
+              <th class='name'></th>
+              <th class='graph'></th>
+              <th class='raw'>Raw</th>
+              <th class='normalized'>Normalized</th>
+          </tr></thead>
           <tbody>
           <% _.each(tables, function(rows, label) { %>
-              <tr class='heading'><td><%= label %></td><td></td><td></td></tr></thead>
+              <tr class='heading'>
+                <td class='name'><%= label %></td>
+                <td></td><td></td><td></td>
+              </tr></thead>
               <% _.each(rows, function(row) { %>
-                  <tr><td><%= row.field.name %></td><td></td><td></td></tr>
+                  <tr>
+                    <td class='name'><a href='#'><%= row.field.name %></a></td>
+                    <td class='graph'></td>
+                    <td class='raw'><%= row.raw %></td>
+                    <td class='normlized'><%= row.normalized %></td>
+                  </tr>
               <% }); %>
           <% }); %>
           </tbody>

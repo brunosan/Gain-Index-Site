@@ -141,19 +141,31 @@ body {
 #view .country-profile {
   background-color: #ebebeb;
   }
-.tab-content {
+.country-profile .tab-content {
   background-color: #fff;
   }
-.tab-content table {
+.country-profile table {
   width: 100%;
   table-layout: fixed;
   }
-.tab-content tbody tr.heading {
-  border-bottom: 1px solid #000;
-  }
 
-.tab-content tbody tr {
-  border-bottom: 1px solid #666;
+.country-profile thead tr {
+  text-align: left;
+  }
+.country-profile tbody tr {
+  border-bottom: 1px solid #ebebeb;
+  }
+.country-profile tr {
+  line-height: 25px;
+  }
+.country-profile tr.heading {
+  border-bottom: 1px solid #c6c6c6;
+  line-height: 35px;
+  }
+.country-profile th.name,
+.country-profile td.name {
+  width: 360px;
+  padding-left: 20px;
   }
 
 /**
