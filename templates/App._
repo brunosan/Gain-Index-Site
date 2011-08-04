@@ -37,7 +37,7 @@
     </div>
   </div></div>
   <div id='page' class='limiter'>
-    <div id='view'><%= view %></div>
+    <div id='main'><%= main %></div>
   </div>
 </body>
 </html>

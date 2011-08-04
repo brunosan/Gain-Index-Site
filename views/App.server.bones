@@ -4,10 +4,10 @@ views['App'] = views['App'].extend({
         Backbone.View.prototype._ensureElement.apply(this, arguments);
     },
     // Wraps view in HTML document template.
-    wrap: function() {
+    wrap: function(view) {
         return templates.App({
             version: time,
-            view: $(this.el).html()
+            main: $(view.el).html()
         });
     }
 });

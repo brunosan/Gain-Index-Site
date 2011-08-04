@@ -1,7 +1,7 @@
 // Document view
 // -------------
 // Base class, not meant for direct use.
-view = views.App.extend({
+view = views.Main.extend({
     className: 'inner',
     events: _.extend({
         'click a.save': 'save',
