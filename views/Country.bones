@@ -58,7 +58,11 @@ view = views.Main.extend({
         xaxis: {show: false},
         yaxis: {show: false},
         grid: {borderColor: '#fff'},
-        series: {shadowSize: 0}
+        series: {
+            lines: { lineWidth: 1 },
+            shadowSize: 0
+        },
+        colors: ['#ccc', '#666', '#f00']
     },
     initGraphs: function() {
         var collection = this.collection,
@@ -81,7 +85,15 @@ view = views.Main.extend({
                 return [k, v];
             }).value();
 
-            $.plot(graph, [data], options);
+            var last = data.length -1;
+            var baseline = [[0, data[0][1]],[last, data[0][1]]];
+            var end = {
+                data: [[data.length -1, data[last][1]]],
+                lines: {show:false},
+                points: { show:true, radius: 1 }
+            };
+
+            $.plot(graph, [baseline, data, end], options);
         });
     },
     selectTab: function(ev) {
