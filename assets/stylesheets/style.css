@@ -49,15 +49,25 @@ body {
   float: left;
   height: 60px;
   line-height: 60px;
-  width: 75px;
+  width: 74px;
   text-align: center;
   border-left: 1px solid #11202c;
   background: #5a2;
   }
 
+#header .navigation li.method {
+  width: 89px;
+  }
+
+#header .navigation li a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #11202c;
+  }
+
 #header .search {
   position: absolute;
-  left: 640px;
+  left: 660px;
   top: 15px;
   }
 
@@ -67,6 +77,12 @@ body {
   border-radius: 2px;
   -moz-border-radius: 2px;
   -webkit-border-radius: 2px;
+  }
+
+.search input.textfield {
+  -moz-box-shadow: inset 0px 0px 3px #000;
+  -webkit-box-shadow: inset 0px 0px 3px #000;
+  box-shadow: inset 0px 0px 3px #000;
   }
 
 .search input.button {
