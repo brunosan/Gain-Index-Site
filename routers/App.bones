@@ -3,7 +3,7 @@ router = Backbone.Router.extend({
         '' : 'front',
         '/' : 'front',
         '/country/:id': 'country',
-        '/:id': 'page',
+        '/page/:id': 'page'
     },
     initialize: function(options) {
         Backbone.Router.prototype.initialize.call(this, options);

@@ -1,9 +1,9 @@
-view = views.App.extend({
+view = views.Main.extend({
     events: _.extend({
         'click ul.tabs li a': 'selectTab',
         'click .tab-content td.name a': 'openDrawer',
         'click .drawer .handle a': 'closeDrawer'
-    }, views.App.prototype.events),
+    }, views.Main.prototype.events),
     render: function() {
         if ($(this.el).is(':empty')) {
             var data = {},

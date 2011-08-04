@@ -9,6 +9,8 @@ var bones = require('bones');
 // Ensure these plugins are available early.
 require('./views/View');
 require('./views/App');
+require('./views/Main');
+require('./views/Main.server');
 
 bones.load(__dirname);
 
