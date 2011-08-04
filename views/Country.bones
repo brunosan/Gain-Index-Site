@@ -54,13 +54,34 @@ view = views.App.extend({
         this.initGraphs();
         return this;
     },
+    sparklineOptions: {
+        xaxis: {show: false},
+        yaxis: {show: false},
+        grid: {borderColor: '#fff'},
+        series: {shadowSize: 0}
+    },
     initGraphs: function() {
+        var collection = this.collection,
+            options = this.sparklineOptions;
+
         // iterate over all rows, if they have a div.graph setup the chart
         $('.country-profile table tr', this.el).each(function() {
-            var graph = $('.graph', this);
-            if (graph.length) {
-                //console.log(graph);
-            }
+            var graph = $('.graph .placeholder', this);
+            if (graph.length == 0) return;
+
+            var ind = $(this).attr('id').substr(10);
+            if (!ind) return;
+
+            var data = collection.detect(function(v) {
+                return v.get('name') == ind;
+            });
+            data = _(data.get('values')).chain().reject(function(v) {
+                return v === null;
+            }).map(function(v, k) {
+                return [k, v];
+            }).value();
+
+            $.plot(graph, [data], options);
         });
     },
     selectTab: function(ev) {

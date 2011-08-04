@@ -198,6 +198,12 @@ body {
   padding-left: 20px;
   }
 
+.country-profile td.graph div.placeholder {
+  height: 20px;
+  width: 80px;
+  margin-top: 5px;
+  }
+
 /**
  * Bones-admin : popups.
  */

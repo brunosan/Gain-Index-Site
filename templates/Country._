@@ -34,9 +34,9 @@
                 <td></td><td></td><td></td>
               </tr></thead>
               <% _.each(rows, function(row) { %>
-                  <tr>
+                  <tr id='indicator-<%= row.field.id %>'>
                     <td class='name'><a href='#'><%= row.field.name %></a></td>
-                    <td class='graph'><div></div></td>
+                    <td class='graph'><div class='placeholder'></div></td>
                     <td class='raw'><%= row.raw %></td>
                     <td class='normlized'><%= row.normalized %></td>
                   </tr>
