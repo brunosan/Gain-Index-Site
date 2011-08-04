@@ -21,14 +21,14 @@ view = views.App.extend({
 
             // Generate organized sets for the template.
             _.each(this.collection.model.prototype.meta, function(field) {
-                if (indicators[field.indicator] == undefined) {
-                    indicators[field.indicator] = {};
+                if (indicators[field.index] == undefined) {
+                    indicators[field.index] = {};
                 }
-                if (indicators[field.indicator][field.sector] == undefined) {
-                    indicators[field.indicator][field.sector] = [];
+                if (indicators[field.index][field.sector] == undefined) {
+                    indicators[field.index][field.sector] = [];
                 }
                 if (data[field.id] !== undefined) {
-                    indicators[field.indicator][field.sector].push({
+                    indicators[field.index][field.sector].push({
                         field: field,
                         raw: data[field.id][currentYear],
                         normalized: data[field.id][currentYear]
