@@ -49,7 +49,10 @@ view = views.App.extend({
         return this;
     },
     selectTab: function(ev) {
-        console.log(ev);
+        var target  = ev.currentTarget.href.split('#').pop();
+        $('.tab-content, ul.tabs li', this.el).removeClass('active');
+        $(ev.currentTarget).parents('li').addClass('active');
+        $('#'+ target, this.el).addClass('active');
         return false;
     }
 });

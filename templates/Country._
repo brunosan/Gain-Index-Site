@@ -1,4 +1,4 @@
-<div id='cabinet'>
+<div id='cabinet' class='country-profile'>
   <h2><%= title %></h2>
   <div class='country-summary'>
     <% _.each(summary, function(stat) { %>
