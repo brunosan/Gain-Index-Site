@@ -51,7 +51,17 @@ view = views.App.extend({
                 tabs: indicators 
             }));
         }
+        this.initGraphs();
         return this;
+    },
+    initGraphs: function() {
+        // iterate over all rows, if they have a div.graph setup the chart
+        $('.country-profile table tr', this.el).each(function() {
+            var graph = $('.graph', this);
+            if (graph.length) {
+                //console.log(graph);
+            }
+        });
     },
     selectTab: function(ev) {
         var target  = ev.currentTarget.href.split('#').pop();

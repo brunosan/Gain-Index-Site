@@ -12,6 +12,7 @@
   <script src='/assets/bones/models.js?<%= version %>'></script>
   <script src='/assets/bones/templates.js?<%= version %>'></script>
   <script src='/assets/gain/scripts/app.js?<%= version %>'></script>
+  <script src='/assets/gain/scripts/flot/jquery.flot.js?<%= version %>'></script>
 
   <link rel='stylesheet' href='/assets/gain/stylesheets/reset.css?<%= version %>' media='all' />
   <link rel='stylesheet' href='/assets/gain/stylesheets/style.css?<%= version %>' media='screen' />
