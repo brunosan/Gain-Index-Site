@@ -77,13 +77,5 @@ router = Backbone.Router.extend({
                 });
             }
         }
-    },
-    error: function(errors) {
-//        var err = _.isArray(errors) ? errors.pop() : errors;
-  //      this.send(new views.App({view: new views.Error(err)}).el);
-    },
-    notFound: function() {
-        this.error();
     }
-
 });
