@@ -1,0 +1,4 @@
+<strong><label><%= render(id) %></label></strong>
+<input type='button' value='Edit' class='viewing edit'>
+<input type='button' value='Save' class='editing save'>
+<input type='button' value='Cancel' class='editing cancel'>
