@@ -5,8 +5,5 @@ view = Backbone.View.extend({
     initialize: function() {
         this.app = new views.App();
         this.render();
-    },
-    wrap: function() {
-        console.log('here');
     }
 });
