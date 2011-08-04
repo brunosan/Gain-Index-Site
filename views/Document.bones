@@ -11,14 +11,6 @@ view = views.App.extend({
         _.bindAll(this, 'render', 'save', 'cancel');
         this.render();
     },
-    panel: null,
-    edit: function() {
-        (this.panel && this.panel.edit());
-    },
-    // A user can edit a document if they are her own or if she is admin.
-    editAccess: function(user) {
-        return user.authenticated;
-    },
     save: function(e) {
         e.preventDefault();
         $('.adminDocument input.save', this.el).trigger('click');
