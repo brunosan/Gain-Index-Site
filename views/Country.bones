@@ -1,6 +1,8 @@
 view = views.App.extend({
     events: _.extend({
-        'click ul.tabs li a': 'selectTab'
+        'click ul.tabs li a': 'selectTab',
+        'click .tab-content td.name a': 'openDrawer',
+        'click .drawer .handle a': 'closeDrawer'
     }, views.App.prototype.events),
     render: function() {
         if ($(this.el).is(':empty')) {
@@ -19,16 +21,19 @@ view = views.App.extend({
 
             // Generate organized sets for the template.
             _.each(this.collection.model.prototype.meta, function(field) {
-                if (indicators[field.indicator] == undefined) {
-                    indicators[field.indicator] = {};
+                if (indicators[field.index] == undefined) {
+                    indicators[field.index] = {};
                 }
-                if (indicators[field.indicator][field.sector] == undefined) {
-                    indicators[field.indicator][field.sector] = [];
+                if (indicators[field.index][field.sector] == undefined) {
+                    indicators[field.index][field.sector] = [];
                 }
-                indicators[field.indicator][field.sector].push({
-                    field: field,
-                    data: data[field.id]
-                });
+                if (data[field.id] !== undefined) {
+                    indicators[field.index][field.sector].push({
+                        field: field,
+                        raw: data[field.id][currentYear],
+                        normalized: data[field.id][currentYear]
+                    });
+                }
             });
 
             // The summary information needs to be done manually.
@@ -46,7 +51,50 @@ view = views.App.extend({
                 tabs: indicators 
             }));
         }
+        this.initGraphs();
         return this;
+    },
+    sparklineOptions: {
+        xaxis: {show: false},
+        yaxis: {show: false},
+        grid: {borderColor: '#fff'},
+        series: {
+            lines: { lineWidth: 1 },
+            shadowSize: 0
+        },
+        colors: ['#ccc', '#666', '#f00']
+    },
+    initGraphs: function() {
+        var collection = this.collection,
+            options = this.sparklineOptions;
+
+        // iterate over all rows, if they have a div.graph setup the chart
+        $('.country-profile table tr', this.el).each(function() {
+            var graph = $('.graph .placeholder', this);
+            if (graph.length == 0) return;
+
+            var ind = $(this).attr('id').substr(10);
+            if (!ind) return;
+
+            var data = collection.detect(function(v) {
+                return v.get('name') == ind;
+            });
+            data = _(data.get('values')).chain().reject(function(v) {
+                return v === null;
+            }).map(function(v, k) {
+                return [k, v];
+            }).value();
+
+            var last = data.length -1;
+            var baseline = [[0, data[0][1]],[last, data[0][1]]];
+            var end = {
+                data: [[data.length -1, data[last][1]]],
+                lines: {show:false},
+                points: { show:true, radius: 1 }
+            };
+
+            $.plot(graph, [baseline, data, end], options);
+        });
     },
     selectTab: function(ev) {
         var target  = ev.currentTarget.href.split('#').pop();
@@ -54,5 +102,11 @@ view = views.App.extend({
         $(ev.currentTarget).parents('li').addClass('active');
         $('#'+ target, this.el).addClass('active');
         return false;
+    },
+    openDrawer: function(ev) {
+        $('#empty-drawer', this.el).addClass('open');
+    },
+    closeDrawer: function() {
+        $('#empty-drawer', this.el).removeClass('open');
     }
 });
