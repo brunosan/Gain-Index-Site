@@ -48,12 +48,15 @@
     <% }); %>
   </div>
   <div id='default-drawer' class='drawer'>
+    <div class='handle'></div>
     <div class='drawer-content'>
       <h2>Similar Countries</h2>
        TODO
     </div>
   </div>
-  <div class='drawer'>
-    <div class='close'><a href='#close'>Close</a></div>
+  <div id='empty-drawer' class='drawer'>
+    <div class='handle'><a href='#close'>Close</a></div>
+    <div class='drawer-content'>
+    </div>
   </div>
 </div>

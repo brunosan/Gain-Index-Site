@@ -1,6 +1,8 @@
 view = views.App.extend({
     events: _.extend({
-        'click ul.tabs li a': 'selectTab'
+        'click ul.tabs li a': 'selectTab',
+        'click .tab-content td.name a': 'openDrawer',
+        'click .drawer .handle a': 'closeDrawer'
     }, views.App.prototype.events),
     render: function() {
         if ($(this.el).is(':empty')) {
@@ -57,5 +59,11 @@ view = views.App.extend({
         $(ev.currentTarget).parents('li').addClass('active');
         $('#'+ target, this.el).addClass('active');
         return false;
+    },
+    openDrawer: function(ev) {
+        $('#empty-drawer', this.el).addClass('open');
+    },
+    closeDrawer: function() {
+        $('#empty-drawer', this.el).removeClass('open');
     }
 });
