@@ -1,5 +1,4 @@
 view = Backbone.View.extend({
-    id: 'view',
     _ensureElement: function() {
         this.el = $('#view');
     },
