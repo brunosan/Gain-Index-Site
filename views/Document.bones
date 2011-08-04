@@ -15,19 +15,6 @@ view = views.App.extend({
     edit: function() {
         (this.panel && this.panel.edit());
     },
-    // Run after document view has rendered.
-    renderEditControl: function() {
-        if (this.editAccess(Bones.user)) {
-            this.panel = new views.AdminDocument({model: this.model, display: this});
-            $(this.el).addClass('show-status');
-            $(this.el).prepend(this.panel.el);
-            $('.main', this.el).append(templates.AdminActionsPanel());
-        }
-        return this;
-    },
-    render: function() {
-        return this.renderEditControl();
-    },
     // A user can edit a document if they are her own or if she is admin.
     editAccess: function(user) {
         return user.authenticated;

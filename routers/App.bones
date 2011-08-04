@@ -4,8 +4,6 @@ router = Backbone.Router.extend({
         '/' : 'front',
         '/country/:id': 'country',
         '/:id': 'page',
-        '/:id/edit': 'pageEditor',
-       // '/.*': 'notFound'
     },
     initialize: function(options) {
         Backbone.Router.prototype.initialize.call(this, options);
@@ -40,20 +38,18 @@ router = Backbone.Router.extend({
     pageEditor: function(id) {
         this.page(id, true);
     },
-    page: function(id, edit) {
+    page: function(id) {
         var router = this;
         var fetcher = this.fetcher();
 
         var model = new models.Page({id: id}, {
             route: '/' + id,
-            editRoute: '/' + id + '/edit'
         });
 
         fetcher.push(model);
         fetcher.fetch(function() {
             var view = new views.Page({model: model});
             router.send(view);
-            edit && view.edit();
         });
 
     },

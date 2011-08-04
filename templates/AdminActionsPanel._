@@ -1,0 +1,4 @@
+<div class='attribute admin-actions-panel'>
+  <a href='#' class='button save large'>Save</a>
+  <a href='#' class='button cancel large'>Cancel</a>
+</div>
