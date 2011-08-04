@@ -8,6 +8,7 @@ view = views.Main.extend({
         'click a.cancel': 'cancel'
     }, Backbone.View.prototype.events),
     initialize: function(options) {
+        views.Main.prototype.initialize.apply(this, arguments);
         _.bindAll(this, 'render', 'save', 'cancel');
         this.render();
     },
