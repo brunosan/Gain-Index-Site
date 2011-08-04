@@ -93,12 +93,30 @@ body {
  * Cabinet and drawer styles
  */
 #cabinet {
+  position: relative;
   width: 635px;
   padding: 10px 0px;
   background-color: #fff;
   -moz-box-shadow: 0px -20px 20px #000;
   -webkit-box-shadow: 0px -20px 20px #000;
   box-shadow: 0px -20px 20px #000;
+  }
+
+.drawer {
+  z-index: -1;
+  display:none;
+  position: absolute;
+  left: 635px;
+  top: 20px;
+  width: 325px;
+  background: #fff;
+  }
+.drawer-content {
+  padding: 0px 20px 20px 40px;
+  }
+
+#default-drawer {
+  display: block;
   }
 
 /**

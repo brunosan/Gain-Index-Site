@@ -36,7 +36,7 @@
               <% _.each(rows, function(row) { %>
                   <tr>
                     <td class='name'><a href='#'><%= row.field.name %></a></td>
-                    <td class='graph'></td>
+                    <td class='graph'><div></div></td>
                     <td class='raw'><%= row.raw %></td>
                     <td class='normlized'><%= row.normalized %></td>
                   </tr>
@@ -46,5 +46,14 @@
         </table>
       </div>
     <% }); %>
+  </div>
+  <div id='default-drawer' class='drawer'>
+    <div class='drawer-content'>
+      <h2>Similar Countries</h2>
+       TODO
+    </div>
+  </div>
+  <div class='drawer'>
+    <div class='close'><a href='#close'>Close</a></div>
   </div>
 </div>
