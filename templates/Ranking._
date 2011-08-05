@@ -1,16 +1,16 @@
 <div class='ranking'>
-  <h2>Country rankings<h2>
-  <ul>
-    <% _.each(indeces, function(v, k) { %>
+  <h2>Country rankings</h2>
+  <ul class='indices'>
+    <% _.each(indices, function(v, k) { %>
       <li><%= v %></li>
     <% }); %>
   </ul>
-  <ul>
+  <ul class='sectors'>
     <% _.each(sectors, function(v, k) { %>
       <li><%= v %></li>
     <% }); %>
   </ul>
-  <table>
+  <table class='data'>
     <thead><tr><th>Country</th><th>TODO</th></tr></thead>
     <tbody>
       <% _.each(country, function(v, k) { %>

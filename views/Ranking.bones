@@ -10,7 +10,7 @@ view = views.Main.extend({
 //        if ($(this.el).is(':empty')) {
             var data = [],
                 sectors = {},
-                indeces = {},
+                indices = {},
                 title = '',
                 currentYear = '2010';
 
@@ -18,14 +18,14 @@ view = views.Main.extend({
             var meta = this.collection.model.prototype.meta['gain'];
 
             _.each(this.collection.model.prototype.meta, function(v) {
-                indeces[v.index] = true;
+                indices[v.index] = true;
                 if (v.index = meta.index) {
                     sectors[v.sector] = true;
                 }
             });
 
             sectors = _.keys(sectors);
-            indeces = _.keys(indeces);
+            indices = _.keys(indices);
 
             // Build a look up table for the data.
             this.collection.each(function(model) {
@@ -40,7 +40,7 @@ view = views.Main.extend({
 
             // Empty pockets on top.
             $('.top', this.el).empty().append(templates.Ranking({
-                indeces: indeces,
+                indices: indices,
                 sectors: sectors,
                 country: data
             }));

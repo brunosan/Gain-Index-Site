@@ -20,7 +20,7 @@
     </ul>
     <% _.each(tabs, function(tables, category) { %>
       <div id='tab-<%= category %>' class='tab-content <%= (category == 'vulnerability' ? 'active' : '') %>'>
-        <table>
+        <table class='data'>
           <thead><tr>
               <th class='name'></th>
               <th class='graph'></th>

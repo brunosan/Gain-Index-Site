@@ -186,27 +186,33 @@ body {
   }
 
 /**
+ * Data tables
+ */
+table.data {
+  width: 100%;
+  table-layout: fixed;
+  }
+table.data tr {
+  line-height: 25px;
+  }
+table.data thead tr {
+  text-align: left;
+  }
+table.data tbody tr {
+  border-bottom: 1px solid #ebebeb;
+  }
+
+/**
  * Country pages
  */
-#view .country-profile {
+.country-profile {
   background-color: #ebebeb;
   }
 .country-profile .tab-content {
   background-color: #fff;
   }
-.country-profile table {
-  width: 100%;
-  table-layout: fixed;
-  }
-
-.country-profile thead tr {
-  text-align: left;
-  }
 .country-profile tbody tr {
   border-bottom: 1px solid #ebebeb;
-  }
-.country-profile tr {
-  line-height: 25px;
   }
 .country-profile tr.heading {
   border-bottom: 1px solid #c6c6c6;
@@ -217,18 +223,48 @@ body {
   width: 360px;
   padding-left: 20px;
   }
-
 .country-profile td.graph div.placeholder {
   height: 20px;
   width: 80px;
   margin-top: 5px;
   }
-
 .drawer .content .graph {
   height: 256px;
   width: 256px;
   }
 
+/** 
+ * Rankings page
+ */
+.ranking {
+  background-color: #ebebeb;
+  }
+.ranking ul.indices {
+  width: 100%;
+  float: left;
+  }
+.ranking ul.indices li {
+  float: left;
+  width: 120px;
+  padding: 0px 20px;
+  margin-left: 10px;
+  line-height: 30px;
+  background-color: #c6c6c6;
+  -moz-border-radius: 3px 3px 0px 0px;
+  -webkit-border-radius: 0px 3px 0px 0px;
+  border-radius: 3px 3px 0px 0px;
+  }
+.ranking ul.indices li.active {
+  background-color: #fff;
+  }
+.ranking table.data {
+  background: #fff;
+  }
+
+.ranking table.data th,
+.ranking table.data td {
+  padding: 0px 10px;
+  }
 /**
  * Bones-admin : popups.
  */
