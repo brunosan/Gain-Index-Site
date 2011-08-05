@@ -32,23 +32,24 @@ command.prototype.initialize = function(options) {
     categories.forEach(function(v) {
         var contents = fs.readdirSync(__dirname + '/../resources/' + v);
         contents.forEach(function(i) {
+            var target = __dirname + '/../resources/' + v + '/' + i;
             if (i.match(/\.csv$/)) {
                 var name = i.slice(0, -4);
                 files.push({
-                    filename: __dirname + '/../resources/' + v + '/' + i,
+                    filename: target,
                     id: '/api/Indicator/' + v + '-' + name,
                     category: v,
                     name: name
                 });
-            } else {
+            } else if (fs.statSync(target).isDirectory()) {
                 // Doing this non-recursively as I expect to see this flattened later.
-                var nested = fs.readdirSync(__dirname + '/../resources/' + v + '/' + i);
+                var nested = fs.readdirSync(target);
                 nested.forEach(function(j) {
                     if (j.match(/\.csv$/)) {
                         var name = i;
                         var version = j.slice(0, -4);
                         files.push({
-                            filename: __dirname + '/../resources/' + v + '/' + i + '/' + j,
+                            filename: target + '/' + j,
                             id: '/api/Indicator/' + v + '-' + name + '-' + version,
                             category: v,
                             version: version,
