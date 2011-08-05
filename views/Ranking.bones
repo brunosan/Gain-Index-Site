@@ -8,52 +8,50 @@ view = views.Main.extend({
         views.Main.prototype.initialize.apply(this, arguments);
     },
     render: function() {
-        if ($(this.el).is(':empty')) {
-            var data = [],
-                sectors = {},
-                indices = {},
-                title = '',
-                currentYear = '2010';
+        var data = [],
+            sectors = {},
+            indices = {},
+            title = '',
+            currentYear = '2010';
 
-            // Arrange our metadata.
-            var meta = this.collection.model.prototype.meta[this.collection.indicator];
+        // Arrange our metadata.
+        var meta = this.collection.model.prototype.meta[this.collection.indicator];
 
-            _.each(this.collection.model.prototype.meta, function(v) {
-                indices[v.index] = true;
-                if (v.index = meta.index) {
-                    sectors[v.sector] = true;
-                }
+        _.each(this.collection.model.prototype.meta, function(v) {
+            indices[v.index] = true;
+            if (v.index = meta.index) {
+                sectors[v.sector] = true;
+            }
+        });
+
+        sectors = _.keys(sectors);
+        indices = _.keys(indices);
+
+        // Build a look up table for the data.
+        this.collection.each(function(model) {
+            data.push({
+                name: model.escape('country'),
+                iso3: model.get('ISO3'),
+                value: model.get('values')[currentYear],
             });
+        });
 
-            sectors = _.keys(sectors);
-            indices = _.keys(indices);
+        // Approach the cabinet.
+        $(this.el).empty().append(templates.Cabinet());
 
-            // Build a look up table for the data.
-            this.collection.each(function(model) {
-                data.push({
-                    name: model.escape('country'),
-                    iso3: model.get('ISO3'),
-                    value: model.get('values')[currentYear],
-                });
-            });
+        // Empty pockets on top.
+        $('.top', this.el).empty().append(templates.Ranking({
+            indicatorName: meta.name,
+            indices: indices,
+            sectors: sectors,
+            countries: data
+        }));
 
-            // Approach the cabinet.
-            $(this.el).empty().append(templates.Cabinet());
-
-            // Empty pockets on top.
-            $('.top', this.el).empty().append(templates.Ranking({
-                indicatorName: meta.name,
-                indices: indices,
-                sectors: sectors,
-                countries: data
-            }));
-
-            // Some things fall on the floor.
-            $('.floor', this.el).empty().append(templates.RankingFloor({
-                title: meta.name,
-                content: '<p>'+meta.explanation+'</p>'
-            }));
-        }
+        // Some things fall on the floor.
+        $('.floor', this.el).empty().append(templates.RankingFloor({
+            title: meta.name,
+            content: '<p>'+meta.explanation+'</p>'
+        }));
         this.initGraphs();
         return this;
     },
