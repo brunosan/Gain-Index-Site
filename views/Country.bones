@@ -45,11 +45,18 @@ view = views.Main.extend({
                 });
             });
 
-            $(this.el).empty().append(templates.Country({
+            // Approach the cabinet.
+            $(this.el).empty().append(templates.Cabinet());
+
+            // Empty pockets on top.
+            $('.top', this.el).empty().append(templates.Country({
                 title: title,
                 summary: summary,
                 tabs: indicators 
             }));
+
+            // Some things fall on the floor.
+            $('.floor', this.el).empty().append('<p>TODO</p>');
         }
         this.initGraphs();
         return this;
@@ -116,9 +123,10 @@ view = views.Main.extend({
         return false;
     },
     openDrawer: function(ev) {
-        $('#empty-drawer', this.el).addClass('open');
+        $('.drawer .content', this.el).empty().append('<p>TODO</p>');
+        $('.drawer', this.el).addClass('open');
     },
     closeDrawer: function() {
-        $('#empty-drawer', this.el).removeClass('open');
+        $('.drawer', this.el).removeClass('open');
     }
 });
