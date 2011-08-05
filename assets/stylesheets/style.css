@@ -224,6 +224,11 @@ body {
   margin-top: 5px;
   }
 
+.drawer .content .graph {
+  height: 256px;
+  width: 256px;
+  }
+
 /**
  * Bones-admin : popups.
  */
