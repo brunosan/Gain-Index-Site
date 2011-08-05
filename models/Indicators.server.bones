@@ -22,11 +22,7 @@ models.Indicators.prototype.sync = function(method, model, options) {
         if (results.error) {
             return options.error(results.error);
         } else {
-            var ret = [];
-            results.rows.forEach(function(v) {
-                ret.push(v.doc);
-            });
-            options.success(ret);
+            options.success(_(results.rows).pluck('doc'));
         }
     };
     return request({uri: uri, method: 'GET'}, callback);
