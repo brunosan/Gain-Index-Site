@@ -1,6 +1,6 @@
 view = views.Document.extend({
     className: 'document page page-inner clearfix',
-    render: function() {
+    attach: function() {
         if (!Bones.user || !Bones.user.authenticated) {
             return this;
         }
@@ -9,6 +9,5 @@ view = views.Document.extend({
             display: this
         }));
         return this;
-    },
-
+    }
 });
