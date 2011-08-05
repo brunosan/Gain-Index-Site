@@ -1,8 +1,8 @@
 <div id='cabinet'>
   <div class='top'></div>
+  <div class='floor'></div>
   <div class='drawer'>
     <div class='handle'><a class='close' href='#close'>Close</a></div>
     <div class='content'></div>
   </div>
-  <div class='floor'></div>
 </div>

@@ -109,13 +109,16 @@ body {
 #cabinet .drawer {
   position: absolute;
   z-index: -1;
-  left: 315px;
+  left: 310px;
   top: 20px;
   width: 325px;
   background: #fff;
   border-radius: 0px 3px 3px 0px;
   -moz-border-radius: 0px 3px 3px 0px;
   -webkit-border-radius: 0px 3px 3px 0px;
+  transition: left .5s ease;
+  -moz-transition: left .5s ease;
+  -webkit-transition: left .5s ease;
   }
 #cabinet .drawer.open {
   left: 635px;
@@ -139,10 +142,13 @@ body {
   z-index: -1;
   left: 635px;
   top: 20px;
-  width: 325px;
+  width: 265px;
   position: absolute;
   padding: 10px 20px 20px 40px;
   background: #ebebeb;
+  border-radius: 0px 3px 3px 0px;
+  -moz-border-radius: 0px 3px 3px 0px;
+  -webkit-border-radius: 0px 3px 3px 0px;
   }
 
 /**
