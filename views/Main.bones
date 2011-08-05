@@ -14,4 +14,4 @@ view = Backbone.View.extend({
     }
 });
 
-view.render = false;
+view.render = Bones.server;
