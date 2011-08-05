@@ -4,6 +4,10 @@ view = views.Main.extend({
         'click .tab-content td.name a': 'openDrawer',
         'click .drawer .handle a': 'closeDrawer'
     }, views.Main.prototype.events),
+    initialize: function() {
+        _.bindAll(this, 'getGraphData');
+        views.Main.prototype.initialize.apply(this, arguments);
+    },
     render: function() {
         if ($(this.el).is(':empty')) {
             var data = {},
@@ -71,19 +75,8 @@ view = views.Main.extend({
         },
         colors: ['#ccc', '#666', '#f00']
     },
-    initGraphs: function() {
-        var collection = this.collection,
-            options = this.sparklineOptions;
-
-        // iterate over all rows, if they have a div.graph setup the chart
-        $('.country-profile table tr', this.el).each(function() {
-            var graph = $('.graph .placeholder', this);
-            if (graph.length == 0) return;
-
-            var ind = $(this).attr('id').substr(10);
-            if (!ind) return;
-
-            var data = collection.detect(function(v) {
+    getGraphData: function(ind) {
+            var data = this.collection.detect(function(v) {
                 return v.get('name') == ind;
             });
             data = _(data.get('values')).chain()
@@ -98,6 +91,23 @@ view = views.Main.extend({
             }).reject(function(v) {
                 return v[1] === null;
             }).value();
+
+            return data;
+    },
+    initGraphs: function() {
+        var view = this,
+            collection = this.collection,
+            options = this.sparklineOptions;
+
+        // iterate over all rows, if they have a div.graph setup the chart
+        $('.country-profile table tr', this.el).each(function() {
+            var graph = $('.graph .placeholder', this);
+            if (graph.length == 0) return;
+
+            var ind = $(this).attr('id').substr(10);
+            if (!ind) return;
+
+            var data = view.getGraphData(ind);
 
             if (data.length > 1) {
                 var last = data.length -1;
@@ -123,8 +133,25 @@ view = views.Main.extend({
         return false;
     },
     openDrawer: function(ev) {
-        $('.drawer .content', this.el).empty().append('<p>TODO</p>');
-        $('.drawer', this.el).addClass('open');
+        var ind = $(ev.currentTarget).parents('tr').attr('id').substr(10);;
+        if (!ind) return;
+
+        var data = this.getGraphData(ind);
+
+        var meta = this.collection.model.prototype.meta[ind];
+        if (meta != undefined) {
+            $('.drawer .content', this.el).empty().append(templates.IndicatorDrawer({
+                title: meta.name,
+                content: meta.explanation
+            }));
+
+            if (data.length > 1) {
+                $.plot($('.drawer .content .graph', this.el), [data]);
+            } else {
+                $('.drawer .content .graph', this.el).hide();
+            }
+            $('.drawer', this.el).addClass('open');
+        }
     },
     closeDrawer: function() {
         $('.drawer', this.el).removeClass('open');

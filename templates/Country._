@@ -38,7 +38,7 @@
                     <td class='name'><a href='#'><%= row.field.name %></a></td>
                     <td class='graph'><div class='placeholder'></div></td>
                     <td class='raw'><%= row.raw %></td>
-                    <td class='normlized'><%= row.normalized %></td>
+                    <td class='normalized'><%= row.normalized %></td>
                   </tr>
               <% }); %>
           <% }); %>
