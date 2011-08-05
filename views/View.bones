@@ -6,10 +6,10 @@ view.prototype.events = {
 // Routes a click event
 // --------------------
 view.prototype.routeClick = function(ev) {
-    return true;
     if (_.size(window.currentKeys)) {
         return true;
     }
+    var href = $(ev.currentTarget).get(0).getAttribute('href', 2);
     if (href) return this.route($(ev.currentTarget).get(0).getAttribute('href', 2));
     return true;
 };
@@ -21,7 +21,7 @@ view.prototype.route = function(path, noscroll) {
     if (path.charAt(0) === '/') {
         var matched = _.any(Backbone.history.handlers, function(handler) {
             if (handler.route.test(path)) {
-                Backbone.history.navigate(true);
+                Backbone.history.navigate(path, true);
                 that.scrollTop();
                 return true;
             }
