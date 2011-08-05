@@ -1,6 +1,7 @@
 var fs = require('fs');
 var path = require('path');
 var csv = require('csv'),
+    _ = require('underscore')._,
     request = require('request');
 
 var put = function(config, db, doc, callback) {
@@ -25,74 +26,122 @@ command.prototype.initialize = function(options) {
     var config = options.config,
         errors = [];
 
+
+    // constructor for record class that handles
+    // the meta-data.
+    function Record(data, category, name) {
+        this._id = '/api/Indicator/' + category + '-' + name + '-' + data.ISO3;
+        this.category = category;
+        this.name = name;
+        this.country = data.name;
+        this.ISO3 = data.ISO3;
+
+        return this;
+    }
+
+    /**
+     * Helper to reduce the values being imported.
+     */
+    function reduceValues(memo, value, key) {
+        if (/^\d{4}$/.test(key)) {
+            memo[key] = parseFloat(value);
+        }
+        return memo;
+    }
+
+    /**
+     * Helper to log errors.
+     */
+    function errorLog(err) {
+        console.warn(err);
+    }
+
+
+    /**
+     * Wrapper to pass a callback into the csv processing stack.
+     */
+    function processCSV(filename, process) {
+        return function(next) {
+            if (!fs.statSync(filename)) {
+                return next();
+            }
+            else {
+                csv()
+                .fromPath(filename, {columns: true})
+                .on('data', process)
+                .on('error', errorLog)
+                .on('end', next);
+            }
+        }
+    }
+
+    /**
+     * Import a standard CSV file.
+     */
+    function importCSV(source, category, name) {
+        return processCSV(source, function(v, i) {
+            var record = new Record(v, category, name);
+            record.values = _(v).reduce(reduceValues, {});
+
+            put(config, 'data', record, function(err, doc){
+                err && errors.push(err);
+            });
+        });
+    }
+
+    /**
+     * Import a composite indicator CSV directory
+     */
+    function importIndicatorDir(source, category, name) {
+        return function(next) {
+            var actions = [];
+            var records = {};
+
+            actions.push(processCSV(source + '/score.csv', function(v, i) {
+                var record = new Record(v, category, name);
+                record.values = _(v).reduce(reduceValues, {});
+                records[record.ISO3] = record;
+            }));
+
+            actions.push(processCSV(source + '/input.csv', function(v, i) {
+                var record = new Record(v, category, name);
+                records[record.ISO3].input = _(v).reduce(reduceValues, {});
+            }));
+
+            actions.push(function(next) {
+                var counter = _.after(_(records).size(), next);
+
+                _(records).each(function(record) {
+                    put(config, 'data', record, function(err, doc){
+                        err && errors.push(err);
+                        counter();
+                    });
+                });
+
+            });
+
+            _(actions).reduceRight(_.wrap, next)();
+        }
+    }
+
+
+    var actions = [];
+
     // Build a list of files to import by crawling the resources hierarchy.
     // Currently this is a blocking operation.
-    var files = [];
     var categories = ['gain', 'indicators', 'readiness', 'vulnerability'];
     categories.forEach(function(v) {
         var contents = fs.readdirSync(__dirname + '/../resources/' + v);
         contents.forEach(function(i) {
             var target = __dirname + '/../resources/' + v + '/' + i;
             if (i.match(/\.csv$/)) {
-                var name = i.slice(0, -4);
-                files.push({
-                    filename: target,
-                    id: '/api/Indicator/' + v + '-' + name,
-                    category: v,
-                    name: name
-                });
+                actions.push(importCSV(target, v, i.slice(0, -4)));
             } else if (fs.statSync(target).isDirectory()) {
-                // Doing this non-recursively as I expect to see this flattened later.
-                var nested = fs.readdirSync(target);
-                nested.forEach(function(j) {
-                    if (j.match(/\.csv$/)) {
-                        var name = i;
-                        var version = j.slice(0, -4);
-                        files.push({
-                            filename: target + '/' + j,
-                            id: '/api/Indicator/' + v + '-' + name + '-' + version,
-                            category: v,
-                            version: version,
-                            name: name
-                        });
-                    }
-                });
+                actions.push(importIndicatorDir(target, v, i));
             }
         });
     });
 
-    // Once we've build the file list import them asyncronously.
-    files.forEach(function(file) {
-        csv()
-        .fromPath(file.filename, {columns: true})
-        .on('data', function(v, i) {
-            var record = {};
-            record._id = file.id + '-' + (v['ISO3'] || v['ISO_3']);
-            ['category', 'version', 'name'].forEach(function(attr) {
-                if (file[attr] != undefined) {
-                    record[attr] = file[attr];
-                }
-            });
-
-            record.values = {};
-            for (var k in v) {
-                if (k == 'ISO3') {
-                    record[k] = v[k];
-                }
-                else if (k == 'name') {
-                    record['country'] = v[k];
-                } else {
-                    record.values[k] = parseFloat(v[k]);
-                }
-            }
-            put(config, 'data', record, function(err, doc){
-                if (err) {
-                    errors.push(err);
-                }
-            });
-        })
-        .on('error', function(err) {
-            console.log([file, err]);
-        });
-    });
+    // Once we've built the file list import them asyncronously.
+    _(actions).reduceRight(_.wrap, function() { console.warn('Import completed'); })();
 };
