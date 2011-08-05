@@ -79,21 +79,33 @@ view = views.Main.extend({
             var data = collection.detect(function(v) {
                 return v.get('name') == ind;
             });
-            data = _(data.get('values')).chain().reject(function(v) {
-                return v === null;
-            }).map(function(v, k) {
-                return [k, v];
+            data = _(data.get('values')).chain()
+
+            // Not sure if we need to ensure range...
+            // var years = data.keys();
+            // var min = years.min().value();
+            // var max = years.max().value();
+
+            data = data.map(function(v, k) {
+                return [parseInt(k, 10), v];
+            }).reject(function(v) {
+                return v[1] === null;
             }).value();
 
-            var last = data.length -1;
-            var baseline = [[0, data[0][1]],[last, data[0][1]]];
-            var end = {
-                data: [[data.length -1, data[last][1]]],
-                lines: {show:false},
-                points: { show:true, radius: 1 }
-            };
+            if (data.length > 1) {
+                var last = data.length -1;
+                var baseline = [
+                    [data[0][0], data[0][1]],
+                    [data[last][0], data[0][1]]
+                ];
+                var end = {
+                    data: [[data[last][0], data[last][1]]],
+                    lines: {show:false},
+                    points: { show:true, radius: 1 }
+                };
+                $.plot(graph, [baseline, data, end], options);
+            }
 
-            $.plot(graph, [baseline, data, end], options);
         });
     },
     selectTab: function(ev) {
