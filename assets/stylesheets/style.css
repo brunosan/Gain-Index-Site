@@ -17,7 +17,7 @@ body {
   -webkit-box-shadow: 0px 0px 20px #000;
   box-shadow: 0px 0px 20px #000;
   position: relative;
-  z-index: 1;
+  z-index: 2;
   }
 #header .limiter {
   position: relative;
@@ -94,41 +94,61 @@ body {
  */
 #cabinet {
   position: relative;
+  z-index: 1;
+  width: 960px;
+  }
+#cabinet .top {
+  float: left;
   width: 635px;
   padding: 10px 0px;
   background-color: #fff;
   -moz-box-shadow: 0px -20px 20px #000;
   -webkit-box-shadow: 0px -20px 20px #000;
   box-shadow: 0px -20px 20px #000;
-  }
-.drawer {
+}
+#cabinet .drawer {
+  position: absolute;
   z-index: -1;
-  left: 315px;
+  left: 310px;
   top: 20px;
   width: 325px;
-  position: absolute;
   background: #fff;
   border-radius: 0px 3px 3px 0px;
   -moz-border-radius: 0px 3px 3px 0px;
   -webkit-border-radius: 0px 3px 3px 0px;
+  transition: left .5s ease;
+  -moz-transition: left .5s ease;
+  -webkit-transition: left .5s ease;
   }
-.drawer .handle {
-  height: 20px;
-  line-height: 20px;
-  text-align: right;
-  padding-right: 20px;
-  background-color: #ebebeb;
-  border-radius: 0px 3px 0px 0px;
-  -moz-border-radius: 0px 3px 0px 0px;
-  -webkit-border-radius: 0px 3px 0px 0px;
-  }
-.drawer-content {
-  padding: 10px 20px 20px 40px;
-  }
-
-#empty-drawer.open,
-#default-drawer {
+#cabinet .drawer.open {
   left: 635px;
+  }
+  #cabinet .drawer .handle {
+    height: 20px;
+    line-height: 20px;
+    text-align: right;
+    padding-right: 20px;
+    background-color: #ebebeb;
+    border-radius: 0px 3px 0px 0px;
+    -moz-border-radius: 0px 3px 0px 0px;
+    -webkit-border-radius: 0px 3px 0px 0px;
+    }
+    #cabinet .drawer .content {
+      padding: 10px 20px 20px 40px;
+      }
+
+#cabinet .floor {
+  position: absolute;
+  z-index: -1;
+  left: 635px;
+  top: 20px;
+  width: 265px;
+  position: absolute;
+  padding: 10px 20px 20px 40px;
+  background: #ebebeb;
+  border-radius: 0px 3px 3px 0px;
+  -moz-border-radius: 0px 3px 3px 0px;
+  -webkit-border-radius: 0px 3px 3px 0px;
   }
 
 /**
