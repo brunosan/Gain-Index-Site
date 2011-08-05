@@ -152,8 +152,10 @@ view = views.Main.extend({
             }
             $('.drawer', this.el).addClass('open');
         }
+        return false;
     },
     closeDrawer: function() {
         $('.drawer', this.el).removeClass('open');
+        return false;
     }
 });

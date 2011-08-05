@@ -132,8 +132,10 @@ view = views.Main.extend({
             $('.drawer .content .graph', this.el).hide();
         }
         $('.drawer', this.el).addClass('open');
+        return false;
     },
     closeDrawer: function() {
         $('.drawer', this.el).removeClass('open');
+        return false;
     }
 });

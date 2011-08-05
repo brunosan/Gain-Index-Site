@@ -15,7 +15,7 @@
     <tbody>
       <% _.each(countries, function(v, k) { %>
         <tr id='country-<%= v.iso3 %>'>
-          <td><a href='#'><%= v.name %></a></td>
+          <td><a href='/country/<%= v.iso3 %>'><%= v.name %></a></td>
           <td><div class='graph'></div><%= v.value%></td>
         <tr>
       <% }); %>
