@@ -1,6 +1,7 @@
 view = views.Main.extend({
     events: _.extend({
-        'click .drawer .handle a': 'closeDrawer'
+        'click .drawer .handle a': 'closeDrawer',
+        'click table.data a': 'openDrawer'
     }, views.Main.prototype.events),
     initialize: function() {
         _.bindAll(this, 'getGraphData');
@@ -48,7 +49,10 @@ view = views.Main.extend({
             }));
 
             // Some things fall on the floor.
-            $('.floor', this.el).empty().append('<h3>'+meta.name+'</h3><p>'+meta.explanation+'</p>');
+            $('.floor', this.el).empty().append(templates.RankingFloor({
+                title: meta.name,
+                content: '<p>'+meta.explanation+'</p>'
+            }));
         }
         this.initGraphs();
         return this;
@@ -112,7 +116,26 @@ view = views.Main.extend({
             }
         });
     },
+    openDrawer: function(ev) {
+        var id = $(ev.currentTarget).parents('tr').attr('id').substr(8);;
+        if (!id) return;
+
+        var data = this.getGraphData(id);
+
+        $('.drawer .content', this.el).empty().append(templates.RankingDrawer({
+            title: id,
+        }));
+
+        if (data.length > 1) {
+            $.plot($('.drawer .content .graph', this.el), [data]);
+        } else {
+            $('.drawer .content .graph', this.el).hide();
+        }
+        $('.drawer', this.el).addClass('open');
+        return false;
+    },
     closeDrawer: function() {
         $('.drawer', this.el).removeClass('open');
+        return false;
     }
 });
