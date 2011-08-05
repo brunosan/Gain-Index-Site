@@ -3,6 +3,7 @@ router = Backbone.Router.extend({
         '' : 'front',
         '/' : 'front',
         '/country/:id': 'country',
+        '/ranking': 'ranking',
         '/page/:id': 'page'
     },
     initialize: function(options) {
@@ -33,6 +34,16 @@ router = Backbone.Router.extend({
         fetcher.push(indicators);
         fetcher.fetch(function() {
             router.send(new views.Country({collection: indicators}));
+        });
+    },
+    ranking: function() {
+        var router = this;
+        var fetcher = this.fetcher();
+        var indicators = new models.Indicators(null, {indicator: 'gain'});
+
+        fetcher.push(indicators);
+        fetcher.fetch(function() {
+            router.send(new views.Ranking({collection: indicators}));
         });
     },
     pageEditor: function(id) {
