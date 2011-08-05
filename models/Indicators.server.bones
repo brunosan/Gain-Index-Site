@@ -5,9 +5,14 @@ models.Indicators.prototype.sync = function(method, model, options) {
 
     var config = Bones.plugin.config;
 
+    var designDoc = (this.country == undefined) ? 'byIndicator' : 'byCountry';
+
+    var key = (this.country == undefined) ? encodeURIComponent('"'+ model.indicator +'"') :
+        encodeURIComponent('"'+ model.country +'"')
+
     var uri = 'http://' + config.couchHost +':'+ config.couchPort +'/';
-    uri += config.couchPrefix +'_data/_design/byCountry/_view/default?';
-    uri += 'key=' + encodeURIComponent('"'+ model.country +'"') +'&include_docs=true';
+    uri += config.couchPrefix +'_data/_design/' + designDoc + '/_view/default?';
+    uri += 'key=' + key  +'&include_docs=true';
 
     var callback = function(err, resp, body) {
         if (err) return options.error(err);
