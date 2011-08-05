@@ -7,7 +7,7 @@ view = views.Main.extend({
         views.Main.prototype.initialize.apply(this, arguments);
     },
     render: function() {
-//        if ($(this.el).is(':empty')) {
+        if ($(this.el).is(':empty')) {
             var data = [],
                 sectors = {},
                 indices = {},
@@ -31,7 +31,8 @@ view = views.Main.extend({
             this.collection.each(function(model) {
                 data.push({
                     name: model.escape('country'),
-                    value: model.get('values'),
+                    iso3: model.get('ISO3'),
+                    value: model.get('values')[currentYear],
                 });
             });
 
@@ -40,15 +41,16 @@ view = views.Main.extend({
 
             // Empty pockets on top.
             $('.top', this.el).empty().append(templates.Ranking({
+                indicatorName: meta.name,
                 indices: indices,
                 sectors: sectors,
-                country: data
+                countries: data
             }));
 
             // Some things fall on the floor.
-            $('.floor', this.el).empty().append('<p>TODO</p>');
-//        }
-        //this.initGraphs();
+            $('.floor', this.el).empty().append('<h3>'+meta.name+'</h3><p>'+meta.explanation+'</p>');
+        }
+        this.initGraphs();
         return this;
     },
     sparklineOptions: {
@@ -61,9 +63,9 @@ view = views.Main.extend({
         },
         colors: ['#ccc', '#666', '#f00']
     },
-    getGraphData: function(ind) {
+    getGraphData: function(id) {
             var data = this.collection.detect(function(v) {
-                return v.get('name') == ind;
+                return v.get('ISO3') == id;
             });
             data = _(data.get('values')).chain()
 
@@ -86,14 +88,14 @@ view = views.Main.extend({
             options = this.sparklineOptions;
 
         // iterate over all rows, if they have a div.graph setup the chart
-        $('.country-profile table tr', this.el).each(function() {
-            var graph = $('.graph .placeholder', this);
+        $('.ranking table tr', this.el).each(function() {
+            var graph = $('.graph', this);
             if (graph.length == 0) return;
 
-            var ind = $(this).attr('id').substr(10);
-            if (!ind) return;
+            var id = $(this).attr('id').substr(8);
+            if (!id) return;
 
-            var data = view.getGraphData(ind);
+            var data = view.getGraphData(id);
 
             if (data.length > 1) {
                 var last = data.length -1;
@@ -108,7 +110,6 @@ view = views.Main.extend({
                 };
                 $.plot(graph, [baseline, data, end], options);
             }
-
         });
     },
     closeDrawer: function() {

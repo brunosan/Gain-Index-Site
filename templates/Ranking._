@@ -11,10 +11,10 @@
     <% }); %>
   </ul>
   <table class='data'>
-    <thead><tr><th>Country</th><th>TODO</th></tr></thead>
+    <thead><tr><th>Country</th><th><%= indicatorName %></th></tr></thead>
     <tbody>
-      <% _.each(country, function(v, k) { %>
-        <tr><td><%= v.name %></td><td>TODO</td><tr>
+      <% _.each(countries, function(v, k) { %>
+        <tr id='country-<%= v.iso3 %>'><td><%= v.name %></td><td><div class='graph'></div><%= v.value%></td><tr>
       <% }); %>
     </tbody>
   </table>

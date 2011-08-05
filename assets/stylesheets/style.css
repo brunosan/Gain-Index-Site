@@ -260,11 +260,17 @@ table.data tbody tr {
 .ranking table.data {
   background: #fff;
   }
-
 .ranking table.data th,
 .ranking table.data td {
   padding: 0px 10px;
   }
+.ranking table.data div.graph {
+  float: left;
+  height: 20px;
+  width: 80px;
+  margin-top: 5px;
+  }
+
 /**
  * Bones-admin : popups.
  */
