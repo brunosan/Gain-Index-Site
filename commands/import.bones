@@ -67,7 +67,7 @@ command.prototype.initialize = function(options) {
         .fromPath(file.filename, {columns: true})
         .on('data', function(v, i) {
             var record = {};
-            record._id = file.id + '-' + v['ISO3'];
+            record._id = file.id + '-' + (v['ISO3'] || v['ISO_3']);
             ['category', 'version', 'name'].forEach(function(attr) {
                 if (file[attr] != undefined) {
                     record[attr] = file[attr];
