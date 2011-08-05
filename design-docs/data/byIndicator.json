@@ -1,0 +1,10 @@
+{
+   "_id": "_design/byIndicator",
+   "language": "javascript",
+   "views": {
+       "default": {
+           "map": "function(doc) {\n  emit(doc.name, doc._id);\n}"
+       }
+   }
+}
+

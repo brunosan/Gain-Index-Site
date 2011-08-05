@@ -1,4 +1,4 @@
-<div id='cabinet' class='country-profile'>
+<div class='country-profile'>
   <h2><%= title %></h2>
   <div class='country-summary'>
     <% _.each(summary, function(stat) { %>
@@ -38,7 +38,7 @@
                     <td class='name'><a href='#'><%= row.field.name %></a></td>
                     <td class='graph'><div class='placeholder'></div></td>
                     <td class='raw'><%= row.raw %></td>
-                    <td class='normlized'><%= row.normalized %></td>
+                    <td class='normalized'><%= row.normalized %></td>
                   </tr>
               <% }); %>
           <% }); %>
@@ -46,17 +46,5 @@
         </table>
       </div>
     <% }); %>
-  </div>
-  <div id='default-drawer' class='drawer'>
-    <div class='handle'></div>
-    <div class='drawer-content'>
-      <h2>Similar Countries</h2>
-       TODO
-    </div>
-  </div>
-  <div id='empty-drawer' class='drawer'>
-    <div class='handle'><a href='#close'>Close</a></div>
-    <div class='drawer-content'>
-    </div>
   </div>
 </div>
