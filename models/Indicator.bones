@@ -1,5 +1,9 @@
 model = Backbone.Model.extend({
     url: '',
+    defaults: {
+        input: {},
+        values: {}
+    },
     meta: {
         "business": {
             "id": "business",

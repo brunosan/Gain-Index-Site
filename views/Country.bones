@@ -20,7 +20,7 @@ view = views.Main.extend({
             this.collection.each(function(model) {
                 if (!title) title = model.escape('country');
 
-                data[model.get('name')] = model.get('values');
+                data[model.get('name')] = model;
             });
 
             // Generate organized sets for the template.
@@ -34,8 +34,8 @@ view = views.Main.extend({
                 if (data[field.id] !== undefined) {
                     indicators[field.index][field.sector].push({
                         field: field,
-                        raw: data[field.id][currentYear],
-                        normalized: data[field.id][currentYear]
+                        raw: data[field.id].get('input')[currentYear],
+                        normalized: data[field.id].get('values')[currentYear]
                     });
                 }
             });
@@ -45,7 +45,7 @@ view = views.Main.extend({
                 data.hasOwnProperty(k) && summary.push({
                     id: k,
                     name: k,
-                    value: data[k][currentYear]
+                    value: data[k].get('values')[currentYear]
                 });
             });
 

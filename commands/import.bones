@@ -108,6 +108,8 @@ command.prototype.initialize = function(options) {
                 records[record.ISO3].input = _(v).reduce(reduceValues, {});
             }));
 
+            // TODO: Add another couple of actions here to process the raw
+            // and raw0 files to generate the origin property.
             actions.push(function(next) {
                 var counter = _.after(_(records).size(), next);
 
