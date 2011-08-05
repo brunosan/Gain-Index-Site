@@ -15,7 +15,7 @@ view = views.Main.extend({
                 currentYear = '2010';
 
             // Arrange our metadata.
-            var meta = this.collection.model.prototype.meta['gain'];
+            var meta = this.collection.model.prototype.meta[this.collection.indicator];
 
             _.each(this.collection.model.prototype.meta, function(v) {
                 indices[v.index] = true;
