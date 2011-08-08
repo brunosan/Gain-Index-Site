@@ -43,7 +43,7 @@
 "sensitivity","Sensitivity","Vulnerability component comprised of water use, water disease, health workers per capita, rural population, paved roads, food import dependency, energy sensitivity and coastal population.",,,,,,
 "capacity","Capacity","Vulnerability component comprised of sanitary water, water access, maternal mortality, malnutrition, longevity,  and agricultural capacity.",,,,,,
 "water","Water","Vulnerability sector comprised of water access, water disease, water use, precipitation change and temperature change.",,,,,,
-"agriculture","Agriculture","Vulnerability sector comprised of yield change, rural population, malnutrition, food import dependency, and agricultural capacity.",,,,,,
+"food","Food","Vulnerability sector comprised of yield change, rural population, malnutrition, food import dependency, and food capacity.",,,,,,
 "health","Health","Vulnerability component comprised of health workers per capita, longevity, maternal mortality, disease mortality and external dependence.",,,,,,
 "infrastructure","Infrastructure","Vulnerability component comprised of paved roads, road flooding, energy access, energy sensitivity, coastal area and coastal population.",,,,,,
 "vulnerability","Vulnerability","Index calculated using indicators paved roads, road flooding, energy access, energy sensitivity, coastal area, coastal population, health workers per capita, longevity, maternal mortality, disease mortality, external dependence, yield change, rural population, malnutrition, food import dependency, agricultural capacity, water access, water disease, water use, precipitation change and temperature change.",,,,,,
