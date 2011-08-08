@@ -7,7 +7,13 @@
           <%= stat.value %>
       </div>
     <% }); %>
-    <div class='matrix'></div>
+    <div class='matrix'>
+      <div class='quad tl'></div>
+      <div class='quad tr'></div>
+      <div class='quad br'></div>
+      <div class='quad bl'></div>
+      <div class='pin'></div>
+    </div>
     <div class='map'></div>
   </div>
 
