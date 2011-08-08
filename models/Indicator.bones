@@ -10,7 +10,7 @@ model = Backbone.Model.extend({
         if (arguments.length && arguments[0] == 'input') {
            series = 'input'; 
         }
-        return this.get(series)[this.currentYear];
+        return this.get(series)[this.get('currentYear')];
     },
     meta: {
         "business": {

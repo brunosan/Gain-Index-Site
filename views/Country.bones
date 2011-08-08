@@ -9,59 +9,57 @@ view = views.Main.extend({
         views.Main.prototype.initialize.apply(this, arguments);
     },
     render: function() {
-        if ($(this.el).is(':empty')) {
-            var data = {},
-                title = '',
-                summary = [];
-                indicators = {},
-                currentYear = '2010';
+        var data = {},
+            title = '',
+            summary = [];
+            indicators = {},
+            currentYear = '2010';
 
-            // Build a look up table for the data.
-            this.collection.each(function(model) {
-                if (!title) title = model.escape('country');
+        // Build a look up table for the data.
+        this.collection.each(function(model) {
+            if (!title) title = model.escape('country');
 
-                data[model.get('name')] = model;
-            });
+            data[model.get('name')] = model;
+        });
 
-            // Generate organized sets for the template.
-            _.each(this.collection.model.prototype.meta, function(field) {
-                if (indicators[field.index] == undefined) {
-                    indicators[field.index] = {};
-                }
-                if (indicators[field.index][field.sector] == undefined) {
-                    indicators[field.index][field.sector] = [];
-                }
-                if (data[field.id] !== undefined) {
-                    indicators[field.index][field.sector].push({
-                        field: field,
-                        raw: data[field.id].currentValue('input'),
-                        normalized: data[field.id].currentValue()
-                    });
-                }
-            });
-
-            // The summary information needs to be done manually.
-            _.each(['gain', 'readiness_delta', 'vulnerability_delta'], function(k) {
-                data.hasOwnProperty(k) && summary.push({
-                    id: k,
-                    name: k,
-                    value: data[k].get('values')[currentYear]
+        // Generate organized sets for the template.
+        _.each(this.collection.model.prototype.meta, function(field) {
+            if (indicators[field.index] == undefined) {
+                indicators[field.index] = {};
+            }
+            if (indicators[field.index][field.sector] == undefined) {
+                indicators[field.index][field.sector] = [];
+            }
+            if (data[field.id] !== undefined) {
+                indicators[field.index][field.sector].push({
+                    field: field,
+                    raw: data[field.id].get('input')[currentYear],
+                    normalized: data[field.id].get('values')[currentYear]
                 });
+            }
+        });
+
+        // The summary information needs to be done manually.
+        _.each(['gain', 'readiness_delta', 'vulnerability_delta'], function(k) {
+            data.hasOwnProperty(k) && summary.push({
+                id: k,
+                name: k,
+                value: data[k].get('values')[currentYear]
             });
+        });
 
-            // Approach the cabinet.
-            $(this.el).empty().append(templates.Cabinet());
+        // Approach the cabinet.
+        $(this.el).empty().append(templates.Cabinet());
 
-            // Empty pockets on top.
-            $('.top', this.el).empty().append(templates.Country({
-                title: title,
-                summary: summary,
-                tabs: indicators 
-            }));
+        // Empty pockets on top.
+        $('.top', this.el).empty().append(templates.Country({
+            title: title,
+            summary: summary,
+            tabs: indicators 
+        }));
 
-            // Some things fall on the floor.
-            $('.floor', this.el).empty().append('<p>TODO</p>');
-        }
+        // Some things fall on the floor.
+        $('.floor', this.el).empty().append('<p>TODO</p>');
         this.initGraphs();
         return this;
     },
