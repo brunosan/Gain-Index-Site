@@ -35,7 +35,7 @@
               </tr></thead>
               <% _.each(rows, function(row) { %>
                   <tr id='indicator-<%= row.field.id %>'>
-                    <td class='name handle'><a href='/ranking/<%= row.field.id %>'><%= row.field.name %></a></td>
+                    <td class='name'><a href='/ranking/<%= row.field.id %>' class='handle'><%= row.field.name %></a></td>
                     <td class='graph'><div class='placeholder'></div></td>
                     <td class='raw'><%= row.raw %></td>
                     <td class='normalized'><%= row.normalized %></td>

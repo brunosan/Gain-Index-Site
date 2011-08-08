@@ -103,7 +103,10 @@ view = views.Main.extend({
         }));
 
         if (data.length > 1) {
-            $.plot($('.drawer .content .graph', this.el), [data]);
+            new views.Bigline({
+                el:$('.drawer .content .graph', this.el),
+                data:data
+            });
         } else {
             $('.drawer .content .graph', this.el).hide();
         }
