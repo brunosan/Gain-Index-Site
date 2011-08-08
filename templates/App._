@@ -27,7 +27,7 @@
     </div>
     <ul class='navigation'>
       <li class='map'><a href='/map'>Map</a></li>
-      <li class='rank'><a href='/rankings'>Rankings</a></li>
+      <li class='rank'><a href='/ranking'>Rankings</a></li>
       <li class='matrix'><a href='/matrix'>Matrix</a></li>
       <li class='method'><a href='/page/methodology'>Methodology</a></li>
     </ul>
