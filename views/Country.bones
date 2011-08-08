@@ -65,16 +65,6 @@ view = views.Main.extend({
     attach: function() {
         this.initGraphs();
     },
-    sparklineOptions: {
-        xaxis: {show: false},
-        yaxis: {show: false},
-        grid: {borderColor: '#fff'},
-        series: {
-            lines: { lineWidth: 1 },
-            shadowSize: 0
-        },
-        colors: ['#ccc', '#666', '#f00']
-    },
     getGraphData: function(ind) {
             var data = this.collection.detect(function(v) {
                 return v.get('name') == ind;
@@ -95,9 +85,7 @@ view = views.Main.extend({
             return data;
     },
     initGraphs: function() {
-        var view = this,
-            collection = this.collection,
-            options = this.sparklineOptions;
+        var view = this;
 
         // iterate over all rows, if they have a div.graph setup the chart
         $('.country-profile table tr', this.el).each(function() {
@@ -109,20 +97,7 @@ view = views.Main.extend({
 
             var data = view.getGraphData(ind);
 
-            if (data.length > 1) {
-                var last = data.length -1;
-                var baseline = [
-                    [data[0][0], data[0][1]],
-                    [data[last][0], data[0][1]]
-                ];
-                var end = {
-                    data: [[data[last][0], data[last][1]]],
-                    lines: {show:false},
-                    points: { show:true, radius: 1 }
-                };
-                $.plot(graph, [baseline, data, end], options);
-            }
-
+            new views.Sparkline({el: graph, data: data});
         });
     },
     selectTab: function(ev) {
