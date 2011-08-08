@@ -52,8 +52,10 @@ view = views.Main.extend({
             title: meta.name,
             content: '<p>'+meta.explanation+'</p>'
         }));
-        this.initGraphs();
         return this;
+    },
+    attach: function() {
+        this.initGraphs();
     },
     sparklineOptions: {
         xaxis: {show: false},

@@ -60,8 +60,10 @@ view = views.Main.extend({
 
         // Some things fall on the floor.
         $('.floor', this.el).empty().append('<p>TODO</p>');
-        this.initGraphs();
         return this;
+    },
+    attach: function() {
+        this.initGraphs();
     },
     sparklineOptions: {
         xaxis: {show: false},
