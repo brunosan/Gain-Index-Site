@@ -117,7 +117,8 @@ view = views.Main.extend({
         if (meta != undefined) {
             $('.drawer .content', this.el).empty().append(templates.IndicatorDrawer({
                 title: meta.name,
-                content: meta.explanation
+                content: meta.explanation,
+                indicator: meta.id
             }));
 
             if (data.length > 1) {

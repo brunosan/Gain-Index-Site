@@ -100,6 +100,7 @@ view = views.Main.extend({
 
         $('.drawer .content', this.el).empty().append(templates.RankingDrawer({
             title: id,
+            country: id
         }));
 
         if (data.length > 1) {
