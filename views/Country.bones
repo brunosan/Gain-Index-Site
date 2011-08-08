@@ -34,8 +34,8 @@ view = views.Main.extend({
                 if (data[field.id] !== undefined) {
                     indicators[field.index][field.sector].push({
                         field: field,
-                        raw: data[field.id].get('input')[currentYear],
-                        normalized: data[field.id].get('values')[currentYear]
+                        raw: data[field.id].currentValue('input'),
+                        normalized: data[field.id].currentValue()
                     });
                 }
             });

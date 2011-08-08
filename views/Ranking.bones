@@ -12,11 +12,11 @@ view = views.Main.extend({
             var data = [],
                 sectors = {},
                 indices = {},
-                title = '',
-                currentYear = '2010';
+                title = '';
 
             // Arrange our metadata.
             var meta = this.collection.model.prototype.meta[this.collection.indicator];
+            if (!meta) return this; // should be a 404
 
             _.each(this.collection.model.prototype.meta, function(v) {
                 indices[v.index] = true;
@@ -33,7 +33,7 @@ view = views.Main.extend({
                 data.push({
                     name: model.escape('country'),
                     iso3: model.get('ISO3'),
-                    value: model.get('values')[currentYear],
+                    value: model.currentValue(),
                 });
             });
 

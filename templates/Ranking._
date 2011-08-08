@@ -1,13 +1,13 @@
 <div class='ranking'>
   <h2>Country rankings</h2>
   <ul class='indices'>
-    <% _.each(indices, function(v, k) { %>
-      <li><%= v %></li>
+    <% _.each(indices, function(index) { %>
+      <li><a href='/ranking/<%= index %>'><%= index %></a></li>
     <% }); %>
   </ul>
   <ul class='sectors'>
-    <% _.each(sectors, function(v, k) { %>
-      <li><%= v %></li>
+    <% _.each(sectors, function(sector) { %>
+      <li><a href='/ranking/<%= sector.id %>'><%= sector.name %></a></li>
     <% }); %>
   </ul>
   <table class='data'>
@@ -17,7 +17,7 @@
         <tr id='country-<%= v.iso3 %>'>
           <td><a href='/country/<%= v.iso3 %>'><%= v.name %></a></td>
           <td><div class='graph'></div><%= v.value%></td>
-        <tr>
+        </tr>
       <% }); %>
     </tbody>
   </table>

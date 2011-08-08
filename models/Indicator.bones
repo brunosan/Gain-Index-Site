@@ -1,8 +1,16 @@
 model = Backbone.Model.extend({
     url: '',
     defaults: {
+        currentYear: 2010,
         input: {},
         values: {}
+    },
+    currentValue: function() {
+        var series = 'values'
+        if (arguments.length && arguments[0] == 'input') {
+           series = 'input'; 
+        }
+        return this.get(series)[this.currentYear];
     },
     meta: {
         "business": {
