@@ -40,11 +40,14 @@ command.prototype.initialize = function(options) {
     }
 
     /**
-     * Helper to reduce the values being imported.
+     * Helper to reduce the raw values being imported.
      */
     function reduceValues(memo, value, key) {
         if (/^\d{4}$/.test(key)) {
-            memo[key] = parseFloat(value);
+            var fl = parseFloat(value);
+            if (!_.isNull(fl) && !_.isNaN(fl)) {
+                memo[key] = fl;
+            }
         }
         return memo;
     }
@@ -61,17 +64,17 @@ command.prototype.initialize = function(options) {
      * Wrapper to pass a callback into the csv processing stack.
      */
     function processCSV(filename, process) {
+        var filename = path.resolve(filename);
         return function(next) {
-            if (!fs.statSync(filename)) {
-                return next();
-            }
-            else {
+            fs.stat(filename, function(err, stats) {
+                if (err) return next();
+
                 csv()
-                .fromPath(filename, {columns: true})
-                .on('data', process)
-                .on('error', errorLog)
-                .on('end', next);
-            }
+                    .fromPath(filename, {columns: true})
+                    .on('data', process)
+                    .on('error', errorLog)
+                    .on('end', next);
+            });
         }
     }
 
@@ -108,8 +111,54 @@ command.prototype.initialize = function(options) {
                 records[record.ISO3].input = _(v).reduce(reduceValues, {});
             }));
 
-            // TODO: Add another couple of actions here to process the raw
-            // and raw0 files to generate the origin property.
+            var raw = {};
+            actions.push(processCSV(source + '/raw.csv', function(v, i) {
+                var record = new Record(v, category, name);
+                raw[record.ISO3] = _(v).reduce(reduceValues, {});
+            }));
+
+            var raw0 = {};
+            actions.push(processCSV(source + '/raw0.csv', function(v, i) {
+                var record = new Record(v, category, name);
+                raw0[record.ISO3] = _(v).reduce(reduceValues, {});
+            }));
+
+
+            // interpolated/extrapolated
+            actions.push(function(next) {
+                var counter = _.after(_(records).size(), next);
+                _(records).each(function(record, iso3) {
+                    records[iso3].origin = _(record.input).reduce(function(memo, value, year) {
+                        if (raw0[iso3] && raw0[iso3][year] === value) {
+                            memo[year] = 'raw';
+                        } else if (raw[iso3] && raw[iso3][year] === value) {
+                            memo[year] = 'assumed';
+                        } else if (raw[iso3]) {
+                            var years = _(raw[iso3]).keys();
+
+                            var laterYears = _(years).any(function(y) {
+                                return y > year;
+                            });
+
+                            var earlierYears = _(years).any(function(y) {
+                                return y < year;
+                            });
+
+                            if (earlierYears && laterYears) {
+                                memo[year] = 'interpolated';
+                            } else if (earlierYears || laterYears) {
+                                memo[year] = 'extrapolated';
+                            }
+
+                        }
+
+                        return memo;
+                    }, {});
+                    counter();
+                });
+
+            });
+
             actions.push(function(next) {
                 var counter = _.after(_(records).size(), next);
 
