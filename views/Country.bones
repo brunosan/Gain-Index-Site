@@ -13,7 +13,6 @@ view = views.Main.extend({
             title = '',
             summary = {};
             indicators = {},
-            currentYear = '2010',
             meta = this.collection.model.prototype.meta;
 
         // Build a look up table for the data.
@@ -34,8 +33,8 @@ view = views.Main.extend({
             if (data[field.id] !== undefined) {
                 indicators[field.index][field.sector].push({
                     field: field,
-                    raw: data[field.id].get('input')[currentYear],
-                    normalized: data[field.id].get('values')[currentYear]
+                    raw: data[field.id].currentValue('input'),
+                    normalized: data[field.id].currentValue()
                 });
             }
         });
@@ -44,7 +43,7 @@ view = views.Main.extend({
         _.each(['gain', 'readiness', 'vulnerability'], function(k) {
             summary[k] = {
                 name: meta[k].name,
-                value: data[k].get('values')[currentYear]
+                value: data[k].currentValue()
             };
         });
 
