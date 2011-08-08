@@ -7,7 +7,7 @@
 "D-Temp","Temperature Change","Projected change in temperature - by the end of the 21st Century.","vulnerability","water","exposure","CRU data sets",,
 "daly","Disability Adjusted Life Years","Increase in Disability Adjusted Life Years due to climate change in the late 21st Century","vulnerability","health","exposure","Ebi 2008",,
 "energy_access","Energy Access","% pop with access to electricity.","vulnerability","infrastructure","exposure","UNPD WHO analysis",,
-"energy_sensit","Energy Senstitivity","Energy at risk - percent energy derived from hydro & imports","vulnerability","infrastructure","sensitivity","http://data.worldbank.org/indicator/EG.IMP.CONS.ZS","http://data.worldbank.org/indicator/EG.ELC.HYRO.ZS",
+"energy_sensit","Energy Sensitivity","Energy at risk - percent energy derived from hydro & imports","vulnerability","infrastructure","sensitivity","http://data.worldbank.org/indicator/EG.IMP.CONS.ZS","http://data.worldbank.org/indicator/EG.ELC.HYRO.ZS",
 "enrollment","Tertiary Education","Enrollment tertiary Education (% Gross)","readiness","n/a","social","http://data.worldbank.org/indicator/SE.TER.ENRR",,
 "external","External Dependence","External resources for health (% of total expenditure on health)","vulnerability","health","sensitivity","http://data.worldbank.org/indicator/SH.XPD.EXTR.ZS",,
 "finan","Financial Freedom","Index of Economic Freedom. Fiancial Freedom subcomponent","readiness","n/a","economic","http://www.heritage.org/index/explore",,
