@@ -1,18 +1,23 @@
 <div class='country-profile'>
   <h2><%= title %></h2>
+  <p>All numbers are from YEAR</p>
   <div class='country-summary'>
-    <% _.each(summary, function(stat) { %>
-      <div class='stat.id'>
+    <div class='stats'>
+    <% _.each(summary, function(stat, klass) { %>
+      <div class='<%= klass %>'>
           <%= stat.name %>
           <%= stat.value %>
       </div>
     <% }); %>
-    <div class='matrix'>
-      <div class='quad tl'></div>
-      <div class='quad tr'></div>
-      <div class='quad br'></div>
-      <div class='quad bl'></div>
-      <div class='pin'></div>
+    </div>
+    <div class='chart'>
+      <div class='matrix'>
+        <div class='quad tl'></div>
+        <div class='quad tr'></div>
+        <div class='quad br'></div>
+        <div class='quad bl'></div>
+        <div class='pin' style='top: <%= pin.y %>px; left: <%= pin.x %>px;'></div>
+      </div>
     </div>
     <div class='map'></div>
   </div>

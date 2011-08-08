@@ -253,6 +253,18 @@ table.data tbody tr {
   .matrix .lr.active { background-color: blue; }
   .matrix .ll.active { background-color: yellow; }
 
+  .matrix .pin {
+    position: absolute;
+    background-color: #666;
+    top: 43px;
+    left: 43px;
+    width: 10px;
+    height: 10px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    }
+
 /**
  * Country pages
  */
@@ -279,6 +291,63 @@ table.data tbody tr {
   width: 80px;
   margin-top: 5px;
   }
+
+.country-summary {
+  float: left;
+  width: 625px;
+  padding: 10px 0px 10px 10px;
+  }
+  .country-summary > div {
+    float: left;
+    border-color: #c6c6c6;
+    border-style: solid;
+    border-width: 0px;
+    }
+  .country-summary div.stats {
+    width: 175px;
+    border-width: 1px 0px 1px 1px;
+    -moz-border-radius: 3px 0px 0px 3px;
+    -webkit-border-radius: 3px 0px 0px 3px;
+    border-radius: 3px 0px 0px 3px;
+    }
+    .country-summary div.stats > div {
+      text-align: center;
+      }
+    .country-summary div.gain {
+      float:left;
+      height: 135px;
+      width: 89px;
+      border-color: #c6c6c6;
+      border-style: solid;
+      border-width: 0px 1px 0px 0px;
+      }
+    .country-summary div.readiness {
+      float: right;
+      height: 59px;
+      width: 85px;
+      border-color: #c6c6c6;
+      border-style: solid;
+      border-width: 0px 0px 1px 0px;
+      }
+    .country-summary div.vulnerability {
+      float: right;
+      height: 60px;
+      width: 85px;
+      }
+  .country-summary div.chart {
+    border-width: 1px 0px 1px 1px;
+    height: 135px;
+    width: 125px;
+    }
+    .country-summary div.chart .matrix {
+      margin: 25px 0px 0px 10px;
+      }
+  .country-summary div.map {
+    border-width: 1px 0px 1px 1px;
+    height: 135px;
+    width: 320px;
+    }
+
 .drawer .content .graph {
   height: 256px;
   width: 256px;

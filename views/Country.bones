@@ -11,9 +11,10 @@ view = views.Main.extend({
     render: function() {
         var data = {},
             title = '',
-            summary = [];
+            summary = {};
             indicators = {},
-            currentYear = '2010';
+            currentYear = '2010',
+            meta = this.collection.model.prototype.meta;
 
         // Build a look up table for the data.
         this.collection.each(function(model) {
@@ -23,7 +24,7 @@ view = views.Main.extend({
         });
 
         // Generate organized sets for the template.
-        _.each(this.collection.model.prototype.meta, function(field) {
+        _.each(meta, function(field) {
             if (indicators[field.index] == undefined) {
                 indicators[field.index] = {};
             }
@@ -40,12 +41,11 @@ view = views.Main.extend({
         });
 
         // The summary information needs to be done manually.
-        _.each(['gain', 'readiness_delta', 'vulnerability_delta'], function(k) {
-            data.hasOwnProperty(k) && summary.push({
-                id: k,
-                name: k,
+        _.each(['gain', 'readiness', 'vulnerability'], function(k) {
+            summary[k] = {
+                name: meta[k].name,
                 value: data[k].get('values')[currentYear]
-            });
+            };
         });
 
         // Approach the cabinet.
@@ -55,7 +55,11 @@ view = views.Main.extend({
         $('.top', this.el).empty().append(templates.Country({
             title: title,
             summary: summary,
-            tabs: indicators 
+            tabs: indicators,
+            pin: {
+                x: Math.round((summary.readiness.value * 80) + 15),
+                y: 80 - Math.round(summary.vulnerability.value * 80)
+            }
         }));
 
         // Some things fall on the floor.
