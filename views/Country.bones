@@ -157,5 +157,11 @@ view = views.Main.extend({
     closeDrawer: function() {
         $('.drawer', this.el).removeClass('open');
         return false;
+    },
+    routeClick: function(ev) {
+        if ($(ev.currentTarget).hasClass('handle')) {
+            return false;
+        }
+        return views.Main.prototype.routeClick(ev);
     }
 });

@@ -1,7 +1,7 @@
 view = views.Main.extend({
     events: _.extend({
-        'click .drawer .handle a': 'closeDrawer',
-        'click table.data a': 'openDrawer'
+        'click .drawer .handle a.handle': 'closeDrawer',
+        'click table.data a.handle': 'openDrawer'
     }, views.Main.prototype.events),
     initialize: function() {
         _.bindAll(this, 'getGraphData');
@@ -137,5 +137,11 @@ view = views.Main.extend({
     closeDrawer: function() {
         $('.drawer', this.el).removeClass('open');
         return false;
+    },
+    routeClick: function(ev) {
+        if ($(ev.currentTarget).hasClass('handle')) {
+            return false;
+        }
+        return views.Main.prototype.routeClick(ev);
     }
 });
