@@ -1,3 +1,19 @@
+var start = _.once(function() {
+    var bypass = true,
+        _loadUrl = Backbone.History.prototype.loadUrl;
+
+    Backbone.History.prototype.loadUrl = function(e) {
+        if (bypass) {
+            bypass = false;
+            return;
+        }
+        _loadUrl.call(this, e);
+    }
+
+    Bones.start({pushState: true, root: ""});
+});
+
+
 view = Backbone.View.extend({
     _ensureElement: function() {
         this.el = $('body');
@@ -10,10 +26,6 @@ view = Backbone.View.extend({
 view.prototype.events = {
     'click a': 'routeClick'
 };
-
-var start = _.once(function() {
-    Bones.start({pushState: true, root: ""});
-});
 
 // Routes a click event
 // --------------------
