@@ -5,8 +5,9 @@ routers.App.prototype.send = function(view, options) {
 
     // Execute the main view.
     var main = new view(options);
+    main.render();
     
-    var o = '{suppressRender:true,';
+    var o = '{el: $("#main"), suppressRender:true,';
     _.each(options, function(v, k) {
         // Any options that is a model or collection will have it's title
         // declared. Use this to re-hydrate it.
@@ -22,7 +23,7 @@ routers.App.prototype.send = function(view, options) {
         version: time,
         main: $(main.el).html(),
         startup: 'Bones.initialize(function(models, views, routers, templates) {'+
-                 'new views.' + main.constructor.title +'('+ o +')'+
+                 'new views.' + main.constructor.title +'('+ o +').attach()'+
                  '});'
     }));
 
