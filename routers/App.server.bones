@@ -6,7 +6,7 @@ routers.App.prototype.send = function(view, options) {
     // Execute the main view.
     var main = new view(options);
     
-    var o = '{';
+    var o = '{suppressRender:true,';
     _.each(options, function(v, k) {
         // Any options that is a model or collection will have it's title
         // declared. Use this to re-hydrate it.

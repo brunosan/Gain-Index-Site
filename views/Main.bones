@@ -2,9 +2,9 @@ view = Backbone.View.extend({
     _ensureElement: function() {
         this.el = $('#main');
     },
-    initialize: function() {
+    initialize: function(options) {
         this.app = new views.App();
-        this.render();
+        !options.suppressRender && this.render();
         !Bones.server && this.attach();
     },
     attach: function() {
