@@ -1,13 +1,5 @@
-var time = Date.now();
-views['App'] = views['App'].extend({
-    _ensureElement: function() {
-        Backbone.View.prototype._ensureElement.apply(this, arguments);
-    },
-    // Wraps view in HTML document template.
-    wrap: function(view) {
-        return templates.App({
-            version: time,
-            main: $(view.el).html()
-        });
-    }
-});
+// On the client we override this, but on the server we need the default
+// behavior.
+views.App.prototype._ensureElement = function() {
+    Backbone.View.prototype._ensureElement.apply(this, arguments);
+};

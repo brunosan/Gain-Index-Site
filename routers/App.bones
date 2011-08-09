@@ -7,34 +7,17 @@ router = Backbone.Router.extend({
         '/ranking/:id': 'ranking',
         '/page/:id': 'page'
     },
-    initialize: function(options) {
-        Backbone.Router.prototype.initialize.call(this, options);
-        Bones.user = new models.User;
-
-        // Add bones-admin view.
-        Bones.admin = new views['Admin']({
-            model: Bones.user,
-            auth: views['AdminLogin'],
-            dropdowns: [
-                views['AdminDropdownUser']
-            ]
-        });
-        Bones.admin.render();
-        if (!Bones.server) {
-            Bones.user.status();
-        }
-    },
     front: function() {
-        this.send(new views.Front());
+        this.send(views.Front);
     },
     country: function(id) {
         var router = this;
         var fetcher = this.fetcher();
-        var indicators = new models.Indicators(null, {country: id});
+        var country = new models.Country({id: id});
 
-        fetcher.push(indicators);
+        fetcher.push(country);
         fetcher.fetch(function() {
-            router.send(new views.Country({collection: indicators}));
+            router.send(views.Country, {model: country});
         });
     },
     rankingDefault: function(id) {
@@ -43,11 +26,11 @@ router = Backbone.Router.extend({
     ranking: function(id) {
         var router = this;
         var fetcher = this.fetcher();
-        var indicators = new models.Indicators(null, {indicator: id});
+        var ranking = new models.Ranking({id: id});
 
-        fetcher.push(indicators);
+        fetcher.push(ranking);
         fetcher.fetch(function() {
-            router.send(new views.Ranking({collection: indicators}));
+            router.send(views.Ranking, {model: ranking});
         });
     },
     pageEditor: function(id) {
@@ -63,12 +46,16 @@ router = Backbone.Router.extend({
 
         fetcher.push(model);
         fetcher.fetch(function() {
-            var view = new views.Page({model: model});
-            router.send(view);
+            router.send(views.Page, {model: model});
         });
 
     },
-    send: function() {},
+    send: function(view) {
+        var options = arguments.length > 1 ? arguments[1] : {};
+        var v = new view(options);
+        $('#page').empty().append(v.el);
+        v.render().attach();
+    },
     fetcher: function() {
         var models = [];
         var fetched = 0;

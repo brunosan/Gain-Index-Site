@@ -11,13 +11,14 @@ view = views.Main.extend({
         var data = [],
             sectors = {},
             indices = {},
-            title = '';
+            title = '',
+            collection = this.model.get('indicators');
 
         // Arrange our metadata.
-        var meta = this.collection.model.prototype.meta[this.collection.indicator];
+        var meta = collection.model.prototype.meta[this.model.get('id')];
         if (!meta) return this; // should be a 404
 
-        _.each(this.collection.model.prototype.meta, function(v) {
+        _.each(collection.model.prototype.meta, function(v) {
             indices[v.index] = true;
             if (v.index == meta.index) {
                 sectors[v.sector] = true;
@@ -28,7 +29,7 @@ view = views.Main.extend({
         indices = _.keys(indices);
 
         // Build a look up table for the data.
-        this.collection.each(function(model) {
+        collection.each(function(model) {
             data.push({
                 name: model.escape('country'),
                 iso3: model.get('ISO3'),
@@ -58,7 +59,8 @@ view = views.Main.extend({
         this.initGraphs();
     },
     getGraphData: function(id) {
-            var data = this.collection.detect(function(v) {
+            var collection = this.model.get('indicators');
+            var data = collection.detect(function(v) {
                 return v.get('ISO3') == id;
             });
             data = _(data.get('values')).chain()
