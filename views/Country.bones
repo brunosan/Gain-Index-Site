@@ -11,15 +11,18 @@ view = views.Main.extend({
     render: function() {
         var data = {},
             title = '',
-            summary = {};
-            indicators = {},
-            meta = this.collection.model.prototype.meta;
+            summary = {},
+            pin = {},
+            indicators = {};
+            collection = this.model.get('indicators'),
+            meta = collection.model.prototype.meta;
+
 
         // Build a look up table for the data.
-        this.collection.each(function(model) {
-            if (!title) title = model.escape('country');
+        collection.each(function(m) {
+            if (!title) title = m.escape('country');
 
-            data[model.get('name')] = model;
+            data[m.get('name')] = m;
         });
 
         // Generate organized sets for the template.
@@ -41,10 +44,16 @@ view = views.Main.extend({
 
         // The summary information needs to be done manually.
         _.each(['gain', 'readiness', 'vulnerability'], function(k) {
-            summary[k] = {
-                name: meta[k].name,
-                value: data[k].currentValue()
-            };
+            if (data.hasOwnProperty(k)) {
+                summary[k] = {
+                    name: meta[k].name,
+                    value: data[k].currentValue()
+                };
+            }
+            if (summary.readiness && summary.vulnerability) {
+                pin.x = Math.round((summary.readiness.value * 80) + 15);
+                pin.y = 80 - Math.round(summary.vulnerability.value * 80);
+            }
         });
 
         // Approach the cabinet.
@@ -55,10 +64,7 @@ view = views.Main.extend({
             title: title,
             summary: summary,
             tabs: indicators,
-            pin: {
-                x: Math.round((summary.readiness.value * 80) + 15),
-                y: 80 - Math.round(summary.vulnerability.value * 80)
-            }
+            pin: pin
         }));
 
         // Some things fall on the floor.
@@ -69,7 +75,8 @@ view = views.Main.extend({
         this.initGraphs();
     },
     getGraphData: function(ind) {
-            var data = this.collection.detect(function(v) {
+            var collection = this.model.get('indicators');
+            var data = collection.detect(function(v) {
                 return v.get('name') == ind;
             });
             data = _(data.get('values')).chain()
@@ -116,7 +123,8 @@ view = views.Main.extend({
 
         var data = this.getGraphData(ind);
 
-        var meta = this.collection.model.prototype.meta[ind];
+        var collection = this.model.get('indicators');
+        var meta = collection.model.prototype.meta[ind];
         if (meta != undefined) {
             $('.drawer .content', this.el).empty().append(templates.IndicatorDrawer({
                 title: meta.name,
