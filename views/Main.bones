@@ -4,9 +4,7 @@ view = Backbone.View.extend({
     },
     initialize: function() {
         this.app = new views.App();
-        // The first time around the view comes rendered from the server.
-        view.render && this.render();
-        view.render = true;
+        this.render();
         !Bones.server && this.attach();
     },
     attach: function() {

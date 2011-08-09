@@ -34,7 +34,7 @@ router = Backbone.Router.extend({
 
         fetcher.push(indicators);
         fetcher.fetch(function() {
-            router.send(new views.Country({collection: indicators}));
+            router.send(views.Country, {collection: indicators});
         });
     },
     rankingDefault: function(id) {
@@ -47,7 +47,7 @@ router = Backbone.Router.extend({
 
         fetcher.push(indicators);
         fetcher.fetch(function() {
-            router.send(new views.Ranking({collection: indicators}));
+            router.send(views.Ranking, {collection: indicators});
         });
     },
     pageEditor: function(id) {
@@ -68,7 +68,10 @@ router = Backbone.Router.extend({
         });
 
     },
-    send: function() {},
+    send: function(view) {
+        var options = arguments.length > 1 ? arguments[1] : {};
+        new view(options);
+    },
     fetcher: function() {
         var models = [];
         var fetched = 0;

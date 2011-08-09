@@ -3,9 +3,14 @@ view.prototype.events = {
     'click a': 'routeClick'
 };
 
+var start = _.once(function() {
+    Bones.start({pushState: true, root: ""});
+});
+
 // Routes a click event
 // --------------------
 view.prototype.routeClick = function(ev) {
+    start();
     if (_.size(window.currentKeys)) {
         return true;
     }
