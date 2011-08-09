@@ -15,7 +15,7 @@ view = views.Main.extend({
             collection = this.model.get('indicators');
 
         // Arrange our metadata.
-        var meta = collection.model.prototype.meta[this.collection.indicator];
+        var meta = collection.model.prototype.meta[this.model.get('id')];
         if (!meta) return this; // should be a 404
 
         _.each(collection.model.prototype.meta, function(v) {
@@ -60,7 +60,7 @@ view = views.Main.extend({
     },
     getGraphData: function(id) {
             var collection = this.model.get('indicators');
-            var data = this.collection.detect(function(v) {
+            var data = collection.detect(function(v) {
                 return v.get('ISO3') == id;
             });
             data = _(data.get('values')).chain()
