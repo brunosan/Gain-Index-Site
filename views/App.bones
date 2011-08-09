@@ -13,6 +13,21 @@ var start = _.once(function() {
     Bones.start({pushState: true, root: ""});
 });
 
+var adminSetup = _.once(function() {
+    Bones.user = new models.User;
+
+    // Add bones-admin view.
+    Bones.admin = new views['Admin']({
+        model: Bones.user,
+        auth: views['AdminLogin'],
+        dropdowns: [
+            views['AdminDropdownUser']
+        ]
+    });
+    Bones.admin.render();
+    Bones.user.status();
+});
+
 
 view = Backbone.View.extend({
     _ensureElement: function() {
@@ -20,6 +35,9 @@ view = Backbone.View.extend({
     },
     initialize: function() {
         this.render();
+        if (!Bones.server) {
+            adminSetup();
+        }
     }
 });
 

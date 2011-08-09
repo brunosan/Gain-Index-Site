@@ -7,23 +7,6 @@ router = Backbone.Router.extend({
         '/ranking/:id': 'ranking',
         '/page/:id': 'page'
     },
-    initialize: function(options) {
-        Backbone.Router.prototype.initialize.call(this, options);
-        Bones.user = new models.User;
-
-        // Add bones-admin view.
-        Bones.admin = new views['Admin']({
-            model: Bones.user,
-            auth: views['AdminLogin'],
-            dropdowns: [
-                views['AdminDropdownUser']
-            ]
-        });
-        Bones.admin.render();
-        if (!Bones.server) {
-            Bones.user.status();
-        }
-    },
     front: function() {
         this.send(views.Front);
     },
