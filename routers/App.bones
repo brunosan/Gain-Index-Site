@@ -25,7 +25,7 @@ router = Backbone.Router.extend({
         }
     },
     front: function() {
-        this.send(new views.Front());
+        this.send(views.Front);
     },
     country: function(id) {
         var router = this;
@@ -63,8 +63,7 @@ router = Backbone.Router.extend({
 
         fetcher.push(model);
         fetcher.fetch(function() {
-            var view = new views.Page({model: model});
-            router.send(view);
+            router.send(views.Page, {model: model});
         });
 
     },
