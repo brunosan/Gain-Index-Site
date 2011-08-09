@@ -68,7 +68,7 @@ view = views.Main.extend({
         }));
 
         // Some things fall on the floor.
-        $('.floor', this.el).empty().append('<p>TODO</p>');
+        $('.floor', this.el).empty().append(templates.CountryFloor());
         return this;
     },
     attach: function() {

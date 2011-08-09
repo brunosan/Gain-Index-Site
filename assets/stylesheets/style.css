@@ -135,6 +135,7 @@ body {
   #cabinet .drawer .content {
     padding: 10px 20px 20px 40px;
     }
+  #cabinet .floor .more,
   #cabinet .drawer .more {
     margin: 5px 0px 10px;
     padding: 5px;
@@ -157,6 +158,10 @@ body {
   -moz-border-radius: 0px 3px 3px 0px;
   -webkit-border-radius: 0px 3px 3px 0px;
   }
+
+  #cabinet .floor .more {
+    background: #fff;
+    }
 
 
 /**
