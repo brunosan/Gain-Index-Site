@@ -405,7 +405,7 @@ table.data tbody tr {
       line-height: 20px;
       border-right: 1px solid #fff;
       }
-    .ranking ul.indices li.active {
+    .ranking .categories ul li.active {
       background-color: #fff;
       }
 .ranking table.data {

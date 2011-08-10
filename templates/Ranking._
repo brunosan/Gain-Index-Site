@@ -21,10 +21,15 @@
     </ul>
   </div>
   <table class='data'>
-    <thead><tr><th>Country</th><th><%= indicatorName %></th></tr></thead>
+    <thead><tr>
+      <th><a class='sort rank' href='#sort-rank'>Rank</a></th>
+      <th><a class='sort alpha' href='#sort-alpha'>Country</a></th>
+      <th><%= indicatorName %></th>
+    </tr></thead>
     <tbody>
       <% _.each(countries, function(v, k) { %>
         <tr id='country-<%= v.iso3 %>'>
+          <td><%= v.rank %></td>
           <td><a href='/country/<%= v.iso3 %>' class='handle'><%= v.name %></a></td>
           <td><div class='graph'></div><%= v.value%></td>
         </tr>

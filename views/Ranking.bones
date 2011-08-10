@@ -1,9 +1,18 @@
 view = views.Main.extend({
     events: _.extend({
         'click .drawer .handle a.handle': 'closeDrawer',
-        'click table.data a.handle': 'openDrawer'
+        'click table.data a.handle': 'openDrawer',
+        'click a.sort.rank': 'sortRank',
+        'click a.sort.alpha':  'sortAlpha'
     }, views.Main.prototype.events),
     initialize: function() {
+        // "Reset" is fired when the collection is sorted. When that happens
+        // it's time to re-render.
+        var view = this;
+        this.model.get('indicators').bind('reset', function() {
+            view.render().attach();
+        });
+
         _.bindAll(this, 'getGraphData');
         views.Main.prototype.initialize.apply(this, arguments);
     },
@@ -31,9 +40,9 @@ view = views.Main.extend({
             }
         });
 
-        components = _.keys(components);
-        sectors = _.keys(sectors);
-        indices = _.keys(indices);
+        components = _.keys(components).sort();
+        sectors = _.keys(sectors).sort();
+        indices = _.keys(indices).sort();
 
         // Build a look up table for the data.
         collection.each(function(model) {
@@ -41,6 +50,7 @@ view = views.Main.extend({
                 name: model.escape('country'),
                 iso3: model.get('ISO3'),
                 value: model.currentValue(),
+                rank: model.get('rank')
             });
         });
 
@@ -126,10 +136,33 @@ view = views.Main.extend({
         $('.drawer', this.el).removeClass('open');
         return false;
     },
-    routeClick: function(ev) {
-        if ($(ev.currentTarget).hasClass('handle')) {
-            return false;
+    sortAlpha: function() {
+        var collection = this.model.get('indicators');
+        collection.comparator = function(model) {
+            return model.get('country');
+        };
+        collection.sort();
+        return false;
+    },
+    sortRank: function(ev) {
+        var e = $(ev.currentTarget),
+            collection = this.model.get('indicators');
+
+        if (e.hasClass('desc')) {
+            collection.comparator = function(model) {
+                var rank = model.get('rank');
+                if (rank) return rank;
+                return Infinity;
+            };
+        } else {
+            collection.comparator = function(model) {
+                var rank = model.get('rank');
+                if (rank) return -rank;
+                return -Infinity;
+            };
         }
-        return views.Main.prototype.routeClick(ev);
+
+        collection.sort();
+        return false;
     }
 });
