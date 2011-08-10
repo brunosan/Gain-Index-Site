@@ -72,10 +72,13 @@ view = views.Main.extend({
     },
     selectTab: function(ev) {
         var e = $(ev.currentTarget);
+
+        $('ul.tabs li.active', this.el).removeClass('active');
+        e.parents('li').addClass('active');
+        e.siblings('ul').find('li:first').addClass('active');
         
         this.tableView.options.tab = 'vulnerability';
         this.tableView.options.structure = 'components';
-
         if (e.hasClass('readiness')) {
             this.tableView.options.tab = 'readiness';
         }

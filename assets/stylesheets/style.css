@@ -183,6 +183,9 @@ body {
     border-radius: 3px 3px 0px 0px;
     background-color: #c6c6c6;
     }
+    .tab-wrapper ul.tabs li > div {
+      float: left;
+      }
     .tab-wrapper ul.tabs li.active {
       background-color: #fff;
       }
@@ -204,6 +207,11 @@ body {
     -moz-border-radius: 0px;
     -webkit-border-radius: 0px;
     border-radius: 0px;
+    background-color: #c6c6c6;
+    }
+
+  .tab-wrapper ul.tabs li ul.options li.active {
+    background-color: #ebebeb;
     }
 
 /**
