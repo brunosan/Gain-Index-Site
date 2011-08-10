@@ -30,17 +30,17 @@ view = Backbone.View.extend({
         return this;
     },
     attach: function() {
-        var view = this;
+        var collection = this.collection;
 
         // iterate over all rows, if they have a div.graph setup the chart
-        $('.ranking table tr', this.el).each(function() {
+        $('tr', this.el).each(function() {
             var graph = $('.graph', this);
             if (graph.length == 0) return;
 
             var id = $(this).attr('id').substr(8);
             if (!id) return;
 
-            var data = view.collection.getGraphData(id);
+            var data = collection.getGraphData('ISO3', id);
 
             new views.Sparkline({el: graph, data: data});
         });
