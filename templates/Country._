@@ -26,13 +26,13 @@
 
   <div class='tab-wrapper'>
     <ul class='tabs'>
-      <li class='active'><a href='#tab-vulnerability'>Vulnerability</a>
+      <li class='active'><a href='#vulnerability' class='vulnerability'>Vulnerability</a>
         <ul class='options'>
-          <li>Sector</li>
-          <li>Component</li>
+          <li><a href='#vulnerability/sector' class='vulnerability sectors'>Sector</a></li>
+          <li><a href='#vulnerability/component' class='vulnerability components active'>Component</a></li>
         </ul>
       </li>
-      <li><a href='#tab-readiness'>Readiness</a></li>
+      <li><a href='#readiness' class='readiness'>Readiness</a></li>
     </ul>
     <div id='tab' class='tab-content'>
       <table class='data'></table>

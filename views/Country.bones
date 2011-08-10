@@ -71,10 +71,19 @@ view = views.Main.extend({
         this.tableView.attach();
     },
     selectTab: function(ev) {
-        var target  = ev.currentTarget.href.split('#').pop();
-        $('.tab-content, ul.tabs li', this.el).removeClass('active');
-        $(ev.currentTarget).parents('li').addClass('active');
-        $('#'+ target, this.el).addClass('active');
+        var e = $(ev.currentTarget);
+        
+        this.tableView.options.tab = 'vulnerability';
+        this.tableView.options.structure = 'components';
+
+        if (e.hasClass('readiness')) {
+            this.tableView.options.tab = 'readiness';
+        }
+        if (e.hasClass('sectors')) {
+            this.tableView.options.structure = 'sectors';
+        }
+
+        this.tableView.render().attach();
         return false;
     },
     openDrawer: function(ev) {

@@ -1,5 +1,6 @@
 view = views.Main.extend({
     initialize: function(options) {
+        _.bindAll(this, 'render', 'attach');
         this.options = this.options || {};
         this.options.tab = options.index || 'vulnerability';
         this.options.structure = options.structure || 'components';
@@ -29,13 +30,12 @@ view = views.Main.extend({
 
         // Build a look up table for the data.
         // TODO move this to the collection.
-        collection.each(function(m) {
+        this.collection.each(function(m) {
             lookup[m.get('name')] = m;
         });
 
         var branch = this.tree[this.options.tab][this.options.structure],
             meta = this.collection.model.prototype.meta
-
 
         var appendData = function(key, klass) {
             var field = {
