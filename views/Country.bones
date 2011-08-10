@@ -49,6 +49,12 @@ view = views.Main.extend({
             pin: pin
         }));
 
+        this.aboutView = new views.AboutQuadrant({
+            el: $('.prose', this.el),
+            model: this.model
+        }).render();
+
+
         // Some things fall on the floor.
         $('.floor', this.el).empty().append(templates.CountryFloor());
 
