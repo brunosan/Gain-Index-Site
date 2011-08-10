@@ -382,25 +382,32 @@ table.data tbody tr {
 .ranking ul.indices li.active {
   background-color: #fff;
   }
-.ranking ul.sectors{
-  width: 100%;
-  float: left;
-  padding: 20px 0px;
+
+.ranking .categories {
   background-color: #fff;
-  }
-.ranking ul.sectors li {
   float: left;
-  padding: 0px 10px;
-  margin-left: 10px;
-  line-height: 20px;
-  background-color: #c6c6c6;
-  -moz-border-radius: 3px;
-  -webkit-border-radius: 3px;
-  border-radius: 3px;
+  width: 615px;
+  padding: 10px 10px;
   }
-.ranking ul.indices li.active {
-  background-color: #fff;
-  }
+  .ranking .categories ul {
+    float: left;
+    padding: 0px 0px;
+    margin-right: 20px;
+    background-color: #fff;
+    background-color: #c6c6c6;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    }
+    .ranking .categories ul li {
+      float: left;
+      padding: 0px 5px;
+      line-height: 20px;
+      border-right: 1px solid #fff;
+      }
+    .ranking ul.indices li.active {
+      background-color: #fff;
+      }
 .ranking table.data {
   background: #fff;
   border-top: 2px solid #c6c6c6;

@@ -11,6 +11,7 @@ view = views.Main.extend({
         var data = [],
             sectors = {},
             indices = {},
+            components = {},
             title = '',
             collection = this.model.get('indicators');
 
@@ -21,10 +22,16 @@ view = views.Main.extend({
         _.each(collection.model.prototype.meta, function(v) {
             indices[v.index] = true;
             if (v.index == meta.index) {
-                sectors[v.sector] = true;
+                if (v.sector) {
+                    sectors[v.sector] = true;
+                }
+                if (v.component) {
+                    components[v.component] = true;
+                }
             }
         });
 
+        components = _.keys(components);
         sectors = _.keys(sectors);
         indices = _.keys(indices);
 
@@ -43,8 +50,10 @@ view = views.Main.extend({
         // Empty pockets on top.
         $('.top', this.el).empty().append(templates.Ranking({
             indicatorName: meta.name,
+            activeIndex: meta.index,
             indices: indices,
             sectors: sectors,
+            components: components,
             countries: data
         }));
 
@@ -56,7 +65,20 @@ view = views.Main.extend({
         return this;
     },
     attach: function() {
-        this.initGraphs();
+        var view = this;
+
+        // iterate over all rows, if they have a div.graph setup the chart
+        $('.ranking table tr', this.el).each(function() {
+            var graph = $('.graph', this);
+            if (graph.length == 0) return;
+
+            var id = $(this).attr('id').substr(8);
+            if (!id) return;
+
+            var data = view.getGraphData(id);
+
+            new views.Sparkline({el: graph, data: data});
+        });
     },
     getGraphData: function(id) {
             var collection = this.model.get('indicators');
@@ -77,22 +99,6 @@ view = views.Main.extend({
             }).value();
 
             return data;
-    },
-    initGraphs: function() {
-        var view = this;
-
-        // iterate over all rows, if they have a div.graph setup the chart
-        $('.ranking table tr', this.el).each(function() {
-            var graph = $('.graph', this);
-            if (graph.length == 0) return;
-
-            var id = $(this).attr('id').substr(8);
-            if (!id) return;
-
-            var data = view.getGraphData(id);
-
-            new views.Sparkline({el: graph, data: data});
-        });
     },
     openDrawer: function(ev) {
         var id = $(ev.currentTarget).parents('tr').attr('id').substr(8);;
