@@ -1,2 +1,3 @@
-<div class='graph'></div>
 <h3><%= title %><h3/>
+<div class='more'><a href='/country/<%= country %>'>More</a></div>
+<div class='graph'></div>

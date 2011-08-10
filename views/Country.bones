@@ -5,48 +5,38 @@ view = views.Main.extend({
         'click .drawer .handle a': 'closeDrawer'
     }, views.Main.prototype.events),
     initialize: function() {
-        _.bindAll(this, 'getGraphData');
         views.Main.prototype.initialize.apply(this, arguments);
     },
     render: function() {
-        var data = {},
+        var lookup = {},
             title = '',
-            summary = [];
-            indicators = {},
-            currentYear = '2010';
+            summary = {},
+            pin = {},
+            indicators = {};
+            collection = this.model.get('indicators'),
+            meta = collection.model.prototype.meta;
+
 
         // Build a look up table for the data.
-        this.collection.each(function(model) {
-            if (!title) title = model.escape('country');
-
-            data[model.get('name')] = model;
-        });
-
-        // Generate organized sets for the template.
-        _.each(this.collection.model.prototype.meta, function(field) {
-            if (indicators[field.index] == undefined) {
-                indicators[field.index] = {};
-            }
-            if (indicators[field.index][field.sector] == undefined) {
-                indicators[field.index][field.sector] = [];
-            }
-            if (data[field.id] !== undefined) {
-                indicators[field.index][field.sector].push({
-                    field: field,
-                    raw: data[field.id].get('input')[currentYear],
-                    normalized: data[field.id].get('values')[currentYear]
-                });
-            }
+        // TODO move this to the collection.
+        collection.each(function(m) {
+            lookup[m.get('name')] = m;
         });
 
         // The summary information needs to be done manually.
-        _.each(['gain', 'readiness_delta', 'vulnerability_delta'], function(k) {
-            data.hasOwnProperty(k) && summary.push({
-                id: k,
-                name: k,
-                value: data[k].get('values')[currentYear]
-            });
+        _.each(['gain', 'readiness', 'vulnerability'], function(k) {
+            if (!title) title = lookup[k].escape('country');
+            if (lookup.hasOwnProperty(k)) {
+                summary[k] = {
+                    name: meta[k].name,
+                    value: lookup[k].currentValue()
+                };
+            }
         });
+        if (summary.readiness && summary.vulnerability) {
+            pin.x = Math.round((summary.readiness.value * 80) + 15);
+            pin.y = 80 - Math.round(summary.vulnerability.value * 80);
+        }
 
         // Approach the cabinet.
         $(this.el).empty().append(templates.Cabinet());
@@ -55,96 +45,71 @@ view = views.Main.extend({
         $('.top', this.el).empty().append(templates.Country({
             title: title,
             summary: summary,
-            tabs: indicators 
+            tabs: indicators,
+            pin: pin
         }));
 
         // Some things fall on the floor.
-        $('.floor', this.el).empty().append('<p>TODO</p>');
-        this.initGraphs();
+        $('.floor', this.el).empty().append(templates.CountryFloor());
+
+        if (this.tableView == undefined) {
+            this.tableView = new views.CountryTable({
+                el: $('table.data', this.el),
+                collection: this.model.get('indicators')
+            });
+        }
+        this.tableView.render();
         return this;
     },
-    sparklineOptions: {
-        xaxis: {show: false},
-        yaxis: {show: false},
-        grid: {borderColor: '#fff'},
-        series: {
-            lines: { lineWidth: 1 },
-            shadowSize: 0
-        },
-        colors: ['#ccc', '#666', '#f00']
-    },
-    getGraphData: function(ind) {
-            var data = this.collection.detect(function(v) {
-                return v.get('name') == ind;
+    attach: function() {
+        if (this.tableView == undefined) {
+            this.tableView = new views.CountryTable({
+                el: $('table.data', this.el),
+                collection: this.model.get('indicators')
             });
-            data = _(data.get('values')).chain()
-
-            // Not sure if we need to ensure range...
-            // var years = data.keys();
-            // var min = years.min().value();
-            // var max = years.max().value();
-
-            data = data.map(function(v, k) {
-                return [parseInt(k, 10), v];
-            }).reject(function(v) {
-                return v[1] === null;
-            }).value();
-
-            return data;
-    },
-    initGraphs: function() {
-        var view = this,
-            collection = this.collection,
-            options = this.sparklineOptions;
-
-        // iterate over all rows, if they have a div.graph setup the chart
-        $('.country-profile table tr', this.el).each(function() {
-            var graph = $('.graph .placeholder', this);
-            if (graph.length == 0) return;
-
-            var ind = $(this).attr('id').substr(10);
-            if (!ind) return;
-
-            var data = view.getGraphData(ind);
-
-            if (data.length > 1) {
-                var last = data.length -1;
-                var baseline = [
-                    [data[0][0], data[0][1]],
-                    [data[last][0], data[0][1]]
-                ];
-                var end = {
-                    data: [[data[last][0], data[last][1]]],
-                    lines: {show:false},
-                    points: { show:true, radius: 1 }
-                };
-                $.plot(graph, [baseline, data, end], options);
-            }
-
-        });
+        }
+        this.tableView.attach();
     },
     selectTab: function(ev) {
-        var target  = ev.currentTarget.href.split('#').pop();
-        $('.tab-content, ul.tabs li', this.el).removeClass('active');
-        $(ev.currentTarget).parents('li').addClass('active');
-        $('#'+ target, this.el).addClass('active');
+        var e = $(ev.currentTarget);
+
+        $('ul.tabs li.active', this.el).removeClass('active');
+        e.parents('li').addClass('active');
+        e.parents('div:first').siblings('ul').find('li:first').addClass('active');
+        
+        this.tableView.options.tab = 'vulnerability';
+        this.tableView.options.structure = 'components';
+        if (e.hasClass('readiness')) {
+            this.tableView.options.tab = 'readiness';
+        }
+        if (e.hasClass('sectors')) {
+            this.tableView.options.structure = 'sectors';
+        }
+
+        this.tableView.render().attach();
         return false;
     },
     openDrawer: function(ev) {
         var ind = $(ev.currentTarget).parents('tr').attr('id').substr(10);;
         if (!ind) return;
 
-        var data = this.getGraphData(ind);
+        var collection = this.model.get('indicators');
+        var data = collection.getGraphData('name', ind);
 
-        var meta = this.collection.model.prototype.meta[ind];
+        var collection = this.model.get('indicators');
+        var meta = collection.model.prototype.meta[ind];
         if (meta != undefined) {
             $('.drawer .content', this.el).empty().append(templates.IndicatorDrawer({
                 title: meta.name,
-                content: meta.explanation
+                content: meta.explanation,
+                indicator: meta.id
             }));
 
-            if (data.length > 1) {
-                $.plot($('.drawer .content .graph', this.el), [data]);
+            if (data && data.length > 1) {
+                new views.Bigline({
+                    el: $('.drawer .content .graph', this.el),
+                    data: data
+                })
             } else {
                 $('.drawer .content .graph', this.el).hide();
             }

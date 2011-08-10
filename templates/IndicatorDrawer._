@@ -1,3 +1,4 @@
-<div class='graph'></div>
 <h3><%= title %><h3/>
 <div><%= content %></div>
+<div class='more'><a href='/ranking/<%= indicator %>'>More</a></div>
+<div class='graph'></div>

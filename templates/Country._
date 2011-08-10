@@ -1,13 +1,24 @@
 <div class='country-profile'>
   <h2><%= title %></h2>
+  <p>All numbers are from YEAR</p>
   <div class='country-summary'>
-    <% _.each(summary, function(stat) { %>
-      <div class='stat.id'>
+    <div class='stats'>
+    <% _.each(summary, function(stat, klass) { %>
+      <div class='<%= klass %>'>
           <%= stat.name %>
           <%= stat.value %>
       </div>
     <% }); %>
-    <div class='matrix'></div>
+    </div>
+    <div class='chart'>
+      <div class='matrix'>
+        <div class='quad tl'></div>
+        <div class='quad tr'></div>
+        <div class='quad br'></div>
+        <div class='quad bl'></div>
+        <div class='pin' style='top: <%= pin.y %>px; left: <%= pin.x %>px;'></div>
+      </div>
+    </div>
     <div class='map'></div>
   </div>
 
@@ -15,36 +26,16 @@
 
   <div class='tab-wrapper'>
     <ul class='tabs'>
-      <li class='active'><a href='#tab-vulnerability'>Vulnerability</a></li>
-      <li><a href='#tab-readiness'>Readiness</a></li>
+      <li class='active'><div><a href='#vulnerability' class='vulnerability'>Vulnerability</a></div>
+        <ul class='options'>
+          <li class='active'><a href='#vulnerability/component' class='vulnerability components'>Component</a></li>
+          <li><a href='#vulnerability/sector' class='vulnerability sectors'>Sector</a></li>
+        </ul>
+      </li>
+      <li><a href='#readiness' class='readiness'>Readiness</a></li>
     </ul>
-    <% _.each(tabs, function(tables, category) { %>
-      <div id='tab-<%= category %>' class='tab-content <%= (category == 'vulnerability' ? 'active' : '') %>'>
-        <table class='data'>
-          <thead><tr>
-              <th class='name'></th>
-              <th class='graph'></th>
-              <th class='raw'>Raw</th>
-              <th class='normalized'>Normalized</th>
-          </tr></thead>
-          <tbody>
-          <% _.each(tables, function(rows, label) { %>
-              <tr class='heading'>
-                <td class='name'><%= label %></td>
-                <td></td><td></td><td></td>
-              </tr></thead>
-              <% _.each(rows, function(row) { %>
-                  <tr id='indicator-<%= row.field.id %>'>
-                    <td class='name'><a href='/ranking/<%= row.field.id %>'><%= row.field.name %></a></td>
-                    <td class='graph'><div class='placeholder'></div></td>
-                    <td class='raw'><%= row.raw %></td>
-                    <td class='normalized'><%= row.normalized %></td>
-                  </tr>
-              <% }); %>
-          <% }); %>
-          </tbody>
-        </table>
-      </div>
-    <% }); %>
+    <div id='tab' class='tab-content'>
+      <table class='data'></table>
+    </div>
   </div>
 </div>

@@ -1,14 +1,13 @@
 var request = require('request');
 
-models.Indicators.prototype.sync = function(method, model, options) {
+models.Ranking.prototype.sync = function(method, model, options) {
     if (method != 'read') error('Unsupported method');
 
     var config = Bones.plugin.config;
 
-    var designDoc = (this.country == undefined) ? 'byIndicator' : 'byCountry';
+    var designDoc = 'byIndicator';
 
-    var key = (this.country == undefined) ? encodeURIComponent('"'+ model.indicator +'"') :
-        encodeURIComponent('"'+ model.country +'"')
+    var key = encodeURIComponent('"'+ model.get('id') +'"')
 
     var uri = 'http://' + config.couchHost +':'+ config.couchPort +'/';
     uri += config.couchPrefix +'_data/_design/' + designDoc + '/_view/default?';
@@ -22,7 +21,10 @@ models.Indicators.prototype.sync = function(method, model, options) {
         if (results.error) {
             return options.error(results.error);
         } else {
-            options.success(_(results.rows).pluck('doc'));
+            options.success({
+              id: model.get('id'),
+              indicators: _(results.rows).pluck('doc')
+            });
         }
     };
     return request({uri: uri, method: 'GET'}, callback);

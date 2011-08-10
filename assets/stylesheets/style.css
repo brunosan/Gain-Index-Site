@@ -132,9 +132,18 @@ body {
     -moz-border-radius: 0px 3px 0px 0px;
     -webkit-border-radius: 0px 3px 0px 0px;
     }
-    #cabinet .drawer .content {
-      padding: 10px 20px 20px 40px;
-      }
+  #cabinet .drawer .content {
+    padding: 10px 20px 20px 40px;
+    }
+  #cabinet .floor .more,
+  #cabinet .drawer .more {
+    margin: 5px 0px 10px;
+    padding: 5px;
+    background: #ebebeb;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    }
 
 #cabinet .floor {
   position: absolute;
@@ -150,6 +159,10 @@ body {
   -webkit-border-radius: 0px 3px 3px 0px;
   }
 
+  #cabinet .floor .more {
+    background: #fff;
+    }
+
 /**
  * tabs
  */
@@ -160,29 +173,47 @@ body {
   height: 30px;
   padding: 0px 0px 0px 10px;
   }
+  .tab-wrapper ul.tabs li {
+    float: left;
+    padding: 0px 5px;
+    margin-right: 5px;
+    line-height: 30px;
+    -moz-border-radius: 3px 3px 0px 0px;
+    -webkit-border-radius: 0px 3px 0px 0px;
+    border-radius: 3px 3px 0px 0px;
+    background-color: #c6c6c6;
+    }
+    .tab-wrapper ul.tabs li > div {
+      float: left;
+      }
+    .tab-wrapper ul.tabs li.active {
+      background-color: #fff;
+      }
 
-.tab-wrapper ul.tabs li {
-  float: left;
-  padding: 0px 5px;
-  margin-right: 5px;
+.tab-wrapper ul.tabs ul.options {
+  display: none;
+  }
+.tab-wrapper ul.tabs li.active ul.options {
+  margin: 5px 0px 0px 10px;
+  display: block;
+  float: right;
   line-height: 30px;
-  -moz-border-radius: 3px 3px 0px 0px;
-  -webkit-border-radius: 0px 3px 0px 0px;
-  border-radius: 3px 3px 0px 0px;
-  background-color: #c6c6c6;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
   }
+  .tab-wrapper ul.tabs li ul.options li {
+    margin-right: 1px;
+    line-height: 20px;
+    -moz-border-radius: 0px;
+    -webkit-border-radius: 0px;
+    border-radius: 0px;
+    background-color: #c6c6c6;
+    }
 
-.tab-wrapper ul.tabs li.active {
-  background-color: #fff;
-  }
-
-.tab-wrapper .tab-content {
-  display:none;
-  }
-
-.tab-wrapper .tab-content.active {
-  display:block;
-  }
+  .tab-wrapper ul.tabs li ul.options li.active {
+    background-color: #ebebeb;
+    }
 
 /**
  * Data tables
@@ -202,6 +233,61 @@ table.data tbody tr {
   }
 
 /**
+ * Small Matrix
+ */
+.matrix {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  }
+  .matrix .quad {
+    position: absolute;
+    background: #c6c6c6;
+    height: 42px;
+    width: 42px;
+    }
+  .matrix .tl {
+    top: 0px; left: 15px;
+    -moz-border-radius: 3px 0px 0px 0px;
+    -webkit-border-radius: 3px 0px 0px 0px;
+    border-radius: 3px 0px 0px 0px;
+    }
+  .matrix .tr {
+    top: 0px; left: 58px;
+    -moz-border-radius: 0px 3px 0px 0px;
+    -webkit-border-radius: 0px 3px 0px 0px;
+    border-radius: 0px 3px 0px 0px;
+    }
+  .matrix .br {
+    top: 43px; left: 58px;
+    -moz-border-radius: 0px 0px 3px 0px;
+    -webkit-border-radius: 0px 0px 3px 0px;
+    border-radius: 0px 0px 3px 0px;
+    }
+  .matrix .bl {
+    top: 43px; left: 15px;
+    -moz-border-radius: 0px 0px 0px 3px;
+    -webkit-border-radius: 0px 0px 0px 3px;
+    border-radius: 0px 0px 0px 3px;
+    }
+  .matrix .tl.active { background-color: red; }
+  .matrix .tr.active { background-color: green; }
+  .matrix .lr.active { background-color: blue; }
+  .matrix .ll.active { background-color: yellow; }
+
+  .matrix .pin {
+    position: absolute;
+    background-color: #666;
+    top: 43px;
+    left: 43px;
+    width: 10px;
+    height: 10px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    }
+
+/**
  * Country pages
  */
 .country-profile {
@@ -213,9 +299,15 @@ table.data tbody tr {
 .country-profile tbody tr {
   border-bottom: 1px solid #ebebeb;
   }
-.country-profile tr.heading {
-  border-bottom: 1px solid #c6c6c6;
-  line-height: 35px;
+.country-profile tr.index {
+  background-color: #eaeaea;
+  border-bottom: 2px solid #c6c6c6;
+  line-height: 40px;
+  }
+
+.country-profile tr.section {
+  border-bottom: 2px solid #c6c6c6;
+  line-height: 40px;
   }
 .country-profile th.name,
 .country-profile td.name {
@@ -227,6 +319,63 @@ table.data tbody tr {
   width: 80px;
   margin-top: 5px;
   }
+
+.country-summary {
+  float: left;
+  width: 625px;
+  padding: 10px 0px 10px 10px;
+  }
+  .country-summary > div {
+    float: left;
+    border-color: #c6c6c6;
+    border-style: solid;
+    border-width: 0px;
+    }
+  .country-summary div.stats {
+    width: 175px;
+    border-width: 1px 0px 1px 1px;
+    -moz-border-radius: 3px 0px 0px 3px;
+    -webkit-border-radius: 3px 0px 0px 3px;
+    border-radius: 3px 0px 0px 3px;
+    }
+    .country-summary div.stats > div {
+      text-align: center;
+      }
+    .country-summary div.gain {
+      float:left;
+      height: 135px;
+      width: 89px;
+      border-color: #c6c6c6;
+      border-style: solid;
+      border-width: 0px 1px 0px 0px;
+      }
+    .country-summary div.readiness {
+      float: right;
+      height: 59px;
+      width: 85px;
+      border-color: #c6c6c6;
+      border-style: solid;
+      border-width: 0px 0px 1px 0px;
+      }
+    .country-summary div.vulnerability {
+      float: right;
+      height: 60px;
+      width: 85px;
+      }
+  .country-summary div.chart {
+    border-width: 1px 0px 1px 1px;
+    height: 135px;
+    width: 125px;
+    }
+    .country-summary div.chart .matrix {
+      margin: 25px 0px 0px 10px;
+      }
+  .country-summary div.map {
+    border-width: 1px 0px 1px 1px;
+    height: 135px;
+    width: 320px;
+    }
+
 .drawer .content .graph {
   height: 256px;
   width: 256px;
@@ -250,14 +399,41 @@ table.data tbody tr {
   line-height: 30px;
   background-color: #c6c6c6;
   -moz-border-radius: 3px 3px 0px 0px;
-  -webkit-border-radius: 0px 3px 0px 0px;
+  -webkit-border-radius: 3px 3px 0px 0px;
   border-radius: 3px 3px 0px 0px;
   }
 .ranking ul.indices li.active {
   background-color: #fff;
   }
+
+.ranking .categories {
+  background-color: #fff;
+  float: left;
+  width: 615px;
+  padding: 10px 10px;
+  }
+  .ranking .categories ul {
+    float: left;
+    padding: 0px 0px;
+    margin-right: 20px;
+    background-color: #fff;
+    background-color: #c6c6c6;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    }
+    .ranking .categories ul li {
+      float: left;
+      padding: 0px 5px;
+      line-height: 20px;
+      border-right: 1px solid #fff;
+      }
+    .ranking .categories ul li.active {
+      background-color: #fff;
+      }
 .ranking table.data {
   background: #fff;
+  border-top: 2px solid #c6c6c6;
   }
 .ranking table.data th,
 .ranking table.data td {

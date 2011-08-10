@@ -1,40 +1,38 @@
 view = views.Main.extend({
     events: _.extend({
-        'click .drawer .handle a': 'closeDrawer',
-        'click table.data a': 'openDrawer'
+        'click .drawer .handle a.handle': 'closeDrawer',
+        'click table.data a.handle': 'openDrawer',
     }, views.Main.prototype.events),
     initialize: function() {
-        _.bindAll(this, 'getGraphData');
         views.Main.prototype.initialize.apply(this, arguments);
     },
     render: function() {
         var data = [],
             sectors = {},
             indices = {},
+            components = {},
             title = '',
-            currentYear = '2010';
+            collection = this.model.get('indicators');
 
         // Arrange our metadata.
-        var meta = this.collection.model.prototype.meta[this.collection.indicator];
+        var meta = collection.model.prototype.meta[this.model.get('id')];
+        if (!meta) return this; // should be a 404
 
-        _.each(this.collection.model.prototype.meta, function(v) {
+        _.each(collection.model.prototype.meta, function(v) {
             indices[v.index] = true;
-            if (v.index = meta.index) {
-                sectors[v.sector] = true;
+            if (v.index == meta.index) {
+                if (v.sector) {
+                    sectors[v.sector] = true;
+                }
+                if (v.component) {
+                    components[v.component] = true;
+                }
             }
         });
 
-        sectors = _.keys(sectors);
-        indices = _.keys(indices);
-
-        // Build a look up table for the data.
-        this.collection.each(function(model) {
-            data.push({
-                name: model.escape('country'),
-                iso3: model.get('ISO3'),
-                value: model.get('values')[currentYear],
-            });
-        });
+        components = _.keys(components).sort();
+        sectors = _.keys(sectors).sort();
+        indices = _.keys(indices).sort();
 
         // Approach the cabinet.
         $(this.el).empty().append(templates.Cabinet());
@@ -42,90 +40,51 @@ view = views.Main.extend({
         // Empty pockets on top.
         $('.top', this.el).empty().append(templates.Ranking({
             indicatorName: meta.name,
+            activeIndex: meta.index,
             indices: indices,
             sectors: sectors,
-            countries: data
+            components: components
         }));
+
+        this.tableView = new views.RankingTable({
+            el: $('table.data', this.el),
+            collection: this.model.get('indicators')
+        }).render();
 
         // Some things fall on the floor.
         $('.floor', this.el).empty().append(templates.RankingFloor({
             title: meta.name,
             content: '<p>'+meta.explanation+'</p>'
         }));
-        this.initGraphs();
         return this;
     },
-    sparklineOptions: {
-        xaxis: {show: false},
-        yaxis: {show: false},
-        grid: {borderColor: '#fff'},
-        series: {
-            lines: { lineWidth: 1 },
-            shadowSize: 0
-        },
-        colors: ['#ccc', '#666', '#f00']
-    },
-    getGraphData: function(id) {
-            var data = this.collection.detect(function(v) {
-                return v.get('ISO3') == id;
+    attach: function() {
+        var view = this;
+
+        if (this.tableView == undefined) {
+            this.tableView = new views.RankingTable({
+                el: $('table.data', this.el),
+                collection: this.model.get('indicators')
             });
-            data = _(data.get('values')).chain()
-
-            // Not sure if we need to ensure range...
-            // var years = data.keys();
-            // var min = years.min().value();
-            // var max = years.max().value();
-
-            data = data.map(function(v, k) {
-                return [parseInt(k, 10), v];
-            }).reject(function(v) {
-                return v[1] === null;
-            }).value();
-
-            return data;
-    },
-    initGraphs: function() {
-        var view = this,
-            collection = this.collection,
-            options = this.sparklineOptions;
-
-        // iterate over all rows, if they have a div.graph setup the chart
-        $('.ranking table tr', this.el).each(function() {
-            var graph = $('.graph', this);
-            if (graph.length == 0) return;
-
-            var id = $(this).attr('id').substr(8);
-            if (!id) return;
-
-            var data = view.getGraphData(id);
-
-            if (data.length > 1) {
-                var last = data.length -1;
-                var baseline = [
-                    [data[0][0], data[0][1]],
-                    [data[last][0], data[0][1]]
-                ];
-                var end = {
-                    data: [[data[last][0], data[last][1]]],
-                    lines: {show:false},
-                    points: { show:true, radius: 1 }
-                };
-                $.plot(graph, [baseline, data, end], options);
-            }
-        });
+        }
+        this.tableView.attach();
     },
     openDrawer: function(ev) {
         var id = $(ev.currentTarget).parents('tr').attr('id').substr(8);;
         if (!id) return;
 
-        var data = this.getGraphData(id);
+        var data = this.model.get('indicators').getGraphData('ISO3', id);
 
         $('.drawer .content', this.el).empty().append(templates.RankingDrawer({
             title: id,
+            country: id
         }));
 
         if (data.length > 1) {
-            $.plot($('.drawer .content .graph', this.el), [data]);
+            new views.Bigline({
+                el:$('.drawer .content .graph', this.el),
+                data:data
+            });
         } else {
             $('.drawer .content .graph', this.el).hide();
         }

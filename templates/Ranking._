@@ -1,24 +1,24 @@
 <div class='ranking'>
   <h2>Country rankings</h2>
   <ul class='indices'>
-    <% _.each(indices, function(v, k) { %>
-      <li><%= v %></li>
+    <% _.each(indices, function(index) { %>
+      <li><a href='/ranking/<%= index %>'><%= index %></a></li>
     <% }); %>
   </ul>
-  <ul class='sectors'>
-    <% _.each(sectors, function(v, k) { %>
-      <li><%= v %></li>
-    <% }); %>
-  </ul>
-  <table class='data'>
-    <thead><tr><th>Country</th><th><%= indicatorName %></th></tr></thead>
-    <tbody>
-      <% _.each(countries, function(v, k) { %>
-        <tr id='country-<%= v.iso3 %>'>
-          <td><a href='/country/<%= v.iso3 %>'><%= v.name %></a></td>
-          <td><div class='graph'></div><%= v.value%></td>
-        <tr>
+  <div class='categories'>
+    <ul>
+      <li><a href='/ranking/<%= activeIndex %>'><%= activeIndex %></a></li>
+    </ul>
+    <ul>
+      <% _.each(sectors, function(sector) { %>
+        <li><a href='/ranking/<%= sector %>'><%= sector %></a></li>
       <% }); %>
-    </tbody>
-  </table>
+    </ul>
+    <ul>
+      <% _.each(components, function(component) { %>
+        <li><a href='/ranking/<%= component %>'><%= component %></a></li>
+      <% }); %>
+    </ul>
+  </div>
+  <table class='data'></table>
 </div>

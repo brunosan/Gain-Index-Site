@@ -1,0 +1,14 @@
+<thead><tr>
+  <th><a class='sort rank' href='#sort-rank'>Rank</a></th>
+  <th><a class='sort alpha' href='#sort-alpha'>Country</a></th>
+  <th></th>
+</tr></thead>
+<tbody>
+  <% _.each(rows, function(v, k) { %>
+    <tr id='country-<%= v.iso3 %>'>
+      <td><%= v.rank %></td>
+      <td><a href='/country/<%= v.iso3 %>' class='handle'><%= v.name %></a></td>
+      <td><div class='graph'></div><%= v.value%></td>
+    </tr>
+  <% }); %>
+</tbody>
