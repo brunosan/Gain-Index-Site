@@ -53,21 +53,11 @@ view = Backbone.View.extend({
         return false;
     },
     sortRank: function(ev) {
-        $(this.el).toggleClass('sortRankDesc');
-
-        if ($(this.el).hasClass('sortRankDesc')) {
-            this.collection.comparator = function(model) {
-                var rank = model.get('rank');
-                if (rank) return rank;
-                return Infinity;
-            };
-        } else {
-            this.collection.comparator = function(model) {
-                var rank = model.get('rank');
-                if (rank) return -rank;
-                return Infinity;
-            };
-        }
+        this.collection.comparator = function(model) {
+            var rank = model.get('rank');
+            if (rank) return rank;
+            return Infinity;
+        };
         this.collection.sort();
         return false;
     }
