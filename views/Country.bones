@@ -75,7 +75,7 @@ view = views.Main.extend({
 
         $('ul.tabs li.active', this.el).removeClass('active');
         e.parents('li').addClass('active');
-        e.siblings('ul').find('li:first').addClass('active');
+        e.parents('div:first').siblings('ul').find('li:first').addClass('active');
         
         this.tableView.options.tab = 'vulnerability';
         this.tableView.options.structure = 'components';

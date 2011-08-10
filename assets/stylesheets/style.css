@@ -194,7 +194,7 @@ body {
   display: none;
   }
 .tab-wrapper ul.tabs li.active ul.options {
-  margin-top: 5px;
+  margin: 5px 0px 0px 10px;
   display: block;
   float: right;
   line-height: 30px;
@@ -203,6 +203,7 @@ body {
   border-radius: 3px;
   }
   .tab-wrapper ul.tabs li ul.options li {
+    margin-right: 1px;
     line-height: 20px;
     -moz-border-radius: 0px;
     -webkit-border-radius: 0px;
@@ -298,9 +299,15 @@ table.data tbody tr {
 .country-profile tbody tr {
   border-bottom: 1px solid #ebebeb;
   }
-.country-profile tr.heading {
-  border-bottom: 1px solid #c6c6c6;
-  line-height: 35px;
+.country-profile tr.index {
+  background-color: #eaeaea;
+  border-bottom: 2px solid #c6c6c6;
+  line-height: 40px;
+  }
+
+.country-profile tr.section {
+  border-bottom: 2px solid #c6c6c6;
+  line-height: 40px;
   }
 .country-profile th.name,
 .country-profile td.name {
