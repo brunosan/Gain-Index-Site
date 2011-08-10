@@ -1,8 +1,11 @@
 view = views.Main.extend({
     render: function() {
-        $(this.el).empty().append(
-            templates.Front()
-        );
+        // Approach the cabinet.
+        $(this.el).empty().append(templates.Cabinet());
+
+        // Empty pockets on top.
+        $('.top', this.el).empty().append(templates.Front());
+
         return this;
     }
 });
