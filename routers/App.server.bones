@@ -7,7 +7,7 @@ routers.App.prototype.send = function(view, options) {
     var main = new view(options);
     main.render();
     
-    var o = '{el: $("#main"), suppressRender:true,';
+    var o = '{el: $("#main"),';
     _.each(options, function(v, k) {
         // Any options that is a model or collection will have it's title
         // declared. Use this to re-hydrate it.
@@ -16,8 +16,8 @@ routers.App.prototype.send = function(view, options) {
         } else {
             o += JSON.stringify(k) + ':' + JSON.stringify(options[k]) +',';
         }
-        o = o.replace(/,$/, '}');
     });
+    o = o.replace(/,$/, '}');
 
     this.res.send(Bones.plugin.templates.App({
         version: time,
