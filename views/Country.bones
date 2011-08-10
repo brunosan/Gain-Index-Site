@@ -99,7 +99,7 @@ view = views.Main.extend({
         var collection = this.model.get('indicators');
         var meta = collection.model.prototype.meta[ind];
         if (meta != undefined) {
-            $('.drawer .content', this.el).empty().append(templates.IndicatorDrawer({
+            $('.drawer .content', this.el).empty().append(templates.CountryDrawer({
                 title: meta.name,
                 content: meta.explanation,
                 indicator: meta.id
