@@ -163,7 +163,6 @@ body {
     background: #fff;
     }
 
-
 /**
  * tabs
  */
@@ -174,29 +173,38 @@ body {
   height: 30px;
   padding: 0px 0px 0px 10px;
   }
+  .tab-wrapper ul.tabs li {
+    float: left;
+    padding: 0px 5px;
+    margin-right: 5px;
+    line-height: 30px;
+    -moz-border-radius: 3px 3px 0px 0px;
+    -webkit-border-radius: 0px 3px 0px 0px;
+    border-radius: 3px 3px 0px 0px;
+    background-color: #c6c6c6;
+    }
+    .tab-wrapper ul.tabs li.active {
+      background-color: #fff;
+      }
 
-.tab-wrapper ul.tabs li {
-  float: left;
-  padding: 0px 5px;
-  margin-right: 5px;
+.tab-wrapper ul.tabs ul.options {
+  display: none;
+  }
+.tab-wrapper ul.tabs li.active ul.options {
+  margin-top: 5px;
+  display: block;
+  float: right;
   line-height: 30px;
-  -moz-border-radius: 3px 3px 0px 0px;
-  -webkit-border-radius: 0px 3px 0px 0px;
-  border-radius: 3px 3px 0px 0px;
-  background-color: #c6c6c6;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
   }
-
-.tab-wrapper ul.tabs li.active {
-  background-color: #fff;
-  }
-
-.tab-wrapper .tab-content {
-  display:none;
-  }
-
-.tab-wrapper .tab-content.active {
-  display:block;
-  }
+  .tab-wrapper ul.tabs li ul.options li {
+    line-height: 20px;
+    -moz-border-radius: 0px;
+    -webkit-border-radius: 0px;
+    border-radius: 0px;
+    }
 
 /**
  * Data tables
