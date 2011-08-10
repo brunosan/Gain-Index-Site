@@ -14,7 +14,7 @@ view = Backbone.View.extend({
     },
     render: function(options) {
         var data = options.data;
-        if (data.length > 1) {
+        if (data && data.length > 1) {
 
             var points = {
                 data: data,

@@ -14,7 +14,7 @@ view = Backbone.View.extend({
     },
     render: function(options) {
         var data = options.data;
-        if (data.length > 1) {
+        if (data && data.length > 1) {
             var last = data.length -1;
             var baseline = [
                 [data[0][0], data[0][1]],

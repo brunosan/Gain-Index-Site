@@ -33,19 +33,20 @@ model = Backbone.Collection.extend({
         var data = this.detect(function(v) {
             return v.get(key) == val;
         });
-        data = _(data.get('values')).chain()
+        if (data) {
+          data = _(data.get('values')).chain()
 
-        // Not sure if we need to ensure range...
-        // var years = data.keys();
-        // var min = years.min().value();
-        // var max = years.max().value();
+          // Not sure if we need to ensure range...
+          // var years = data.keys();
+          // var min = years.min().value();
+          // var max = years.max().value();
 
-        data = data.map(function(v, k) {
-            return [parseInt(k, 10), v];
-        }).reject(function(v) {
-            return v[1] === null;
-        }).value();
-
+          data = data.map(function(v, k) {
+              return [parseInt(k, 10), v];
+          }).reject(function(v) {
+              return v[1] === null;
+          }).value();
+        }
         return data;
     }
 });

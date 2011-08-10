@@ -93,7 +93,7 @@ view = views.Main.extend({
                 indicator: meta.id
             }));
 
-            if (data.length > 1) {
+            if (data && data.length > 1) {
                 new views.Bigline({
                     el: $('.drawer .content .graph', this.el),
                     data: data
