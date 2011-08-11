@@ -288,6 +288,25 @@ table.data tbody tr {
     }
 
 /**
+ * Front page
+ */
+.front #map {
+  height: 490px;
+  width: 640px;
+  }
+
+.front #carousel {
+  height: 155px;
+  background-color: #ebebeb;
+  border-top: 2px solid #ccc
+  }
+
+.front .mission {
+  background-color: #ebebeb;
+  padding: 10px;
+  }
+
+/**
  * Country pages
  */
 .country-profile {
