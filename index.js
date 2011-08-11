@@ -7,6 +7,7 @@ require('bones-auth');
 var bones = require('bones');
 
 // Ensure these plugins are available early.
+require('./commands/import');
 require('./views/View');
 require('./views/App');
 require('./views/Main');

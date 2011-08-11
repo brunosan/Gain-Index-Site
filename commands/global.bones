@@ -47,17 +47,29 @@ Bones.Command.options['databases'] = {
 }
 
 /**
+ * Callback used to initialize the server for certain commands.
+ */
+function bootstrapCommand(parent, plugin, callback) {
+    parent.call(this, plugin, function() {
+        this.servers = {};
+        for (var server in plugin.servers) {
+            this.servers[server] = new plugin.servers[server](plugin);
+        }
+        callback();
+    });
+}
+
+/**
  * Need to initialize all the servers for the user plugin commands to work.
  */
 commands.user.augment({
-    bootstrap: function(parent, plugin, callback) {
-        parent.call(this, plugin, function() {
-            this.servers = {};
-            for (var server in plugin.servers) {
-                this.servers[server] = new plugin.servers[server](plugin);
-            }
-            callback();
-        });
-    }
+    bootstrap: bootstrapCommand
+});
+
+/**
+ * Need to initialize all the servers for the import plugin commands to work.
+ */
+commands.import.augment({
+    bootstrap: bootstrapCommand
 });
 

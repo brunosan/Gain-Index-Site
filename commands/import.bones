@@ -1,6 +1,7 @@
 var fs = require('fs');
 var path = require('path');
 var csv = require('csv'),
+    exec = require('child_process').exec,
     _ = require('underscore')._,
     request = require('request');
 
@@ -17,6 +18,24 @@ var put = function(config, db, doc, callback) {
         callback(err, doc);
     });
 };
+
+/**
+ * Formats UNIX time to YYYY-MM-DD HH:MM
+ *
+ * @param {Integer} UNIX time in milliseconds.
+ * @return {String} a formatted time string.
+ */
+function formatDate(ms) {
+    function pad(n) { return n < 10 ? '0' + n : n; }
+    var d = new Date(ms);
+    var date = [
+        d.getFullYear(),
+        pad(d.getDate()),
+        pad(d.getMonth()),
+        pad(d.getHours()) + 'h' + pad(d.getMinutes())
+    ];
+    return date.join('-');
+}
 
 command = Bones.Command.extend();
 
@@ -191,6 +210,30 @@ command.prototype.initialize = function(options) {
                 actions.push(importIndicatorDir(target, v, i));
             }
         });
+    });
+
+    // Zip up and register the file created as ready for download.
+    actions.push(function(next) {
+        var ts = Date.now();
+        var filename = 'resources-' + formatDate(ts) + '.zip';
+        var child = exec('zip -r assets/files/' + filename + ' resources -i \*.csv',
+            {cwd: path.resolve(__dirname + '/../') },
+            function(err, stdout, stderr) {
+                if (err !== null) {
+                    console.log('exec error: ' + err);
+                    next();
+                }
+                else {
+                    console.log('Zip file created');
+                    fs.stat(__dirname + '/../assets/files/' + filename, function(err, stats) {
+                        (new models.Download({id: 'data'})).save({ 
+                            filename: filename, 
+                            timestamp: ts, 
+                            size: stats.size
+                        }, { success: next });
+                    });
+                }
+            });
     });
 
     // Once we've built the file list import them asyncronously.
