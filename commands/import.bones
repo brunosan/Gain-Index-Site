@@ -101,14 +101,63 @@ command.prototype.initialize = function(options) {
      * Import a standard CSV file.
      */
     function importCSV(source, category, name) {
-        return processCSV(source, function(v, i) {
-            var record = new Record(v, category, name);
-            record.values = _(v).reduce(reduceValues, {});
+        return function(next) {
+            var actions = [];
+            var records = {};
 
-            put(config, 'data', record, function(err, doc){
-                err && errors.push(err);
+            actions.push(processCSV(source, function(v, i) {
+                var record = new Record(v, category, name);
+                record.values = _(v).reduce(reduceValues, {});
+                records[record.ISO3] = record;
+            }));
+
+            actions.push(function(next) {
+                // store just the values for use in the reduce function.
+                var values = _(records).pluck('values');
+
+                var years = _(values).chain()
+                    .map(function(r) { return _(r).keys(); })
+                    .flatten()
+                    .uniq()
+                    .sort()
+                    .value();
+
+                var sorted = _(years).reduce(function(memo, year) {
+                    memo[year] = _(values).chain()
+                        .pluck(year)
+                        .without(null, undefined)
+                        .sort()
+                        .value() || [];
+                    return memo;
+                }, {});
+
+                function reduceRank(memo, value, year) {
+                    var index = _(sorted[year]).indexOf(value);
+                    if (~index) {
+                        memo[year] = index + 1;
+                    }
+                    return memo;
+                }
+
+                _(records).each(function(record, key) {
+                    records[key].rank = _(record.values).reduce(reduceRank, {});
+                });
+                next();
             });
-        });
+
+            actions.push(function(next) {
+                var counter = _.after(_(records).size(), next);
+
+                _(records).each(function(record) {
+                    put(config, 'data', record, function(err, doc){
+                        err && errors.push(err);
+                        counter();
+                    });
+                });
+            });
+
+            _(actions).reduceRight(_.wrap, next)();
+        };
     }
 
     /**
