@@ -342,7 +342,7 @@ table.data tbody tr {
  * Country pages
  */
 .country-profile {
-  background-color: #ebebeb;
+  background-color: white;
   }
 .country-profile .tab-content {
   background-color: #fff;
@@ -426,6 +426,54 @@ table.data tbody tr {
     height: 135px;
     width: 320px;
     }
+.country-profile .tab-wrapper,
+.country-profile .rankings {
+  background-color: #ebebeb;
+}
+
+.country-profile h3 {
+  font-size: 14px;
+  line-height: 16px;
+  padding: 0 0 10px 0;
+}
+.country-profile .rankings {
+  padding: 10px 0 20px 10px;
+  font-size: 11px;
+}
+
+.country-profile .rankings table {
+  border: 1px solid #c6c6c6;
+  border-right: none;
+}
+
+.country-profile .rankings th,
+.country-profile .rankings td {
+  border-bottom: 1px solid #c6c6c6;
+  padding: 5px 0;
+  text-align: center;
+}
+.country-profile .rankings td span.value {
+   font-weight: bold;
+   background-color: #abd7ee;
+   padding: 3px;
+   -moz-border-radius: 3px;
+   -webkit-border-radius: 3px;
+   border-radius: 3px;
+}
+
+.country-profile .rankings table tr th.label {
+  border-right: 1px solid #c6c6c6;
+  font-weight: bold;
+  color: black;
+  width: 80px;
+  text-align: left;
+  padding-left: 10px;
+}
+
+.country-profile .rankings tr.years th {
+  color: gray;
+}
+
 
 .drawer .content .graph {
   height: 256px;

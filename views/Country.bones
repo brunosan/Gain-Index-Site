@@ -45,6 +45,7 @@ view = views.Main.extend({
         $('.top', this.el).empty().append(templates.Country({
             title: title,
             summary: summary,
+            rank: lookup.gain.get('rank'),
             tabs: indicators,
             pin: pin
         }));
@@ -60,7 +61,7 @@ view = views.Main.extend({
 
         if (this.tableView == undefined) {
             this.tableView = new views.CountryTable({
-                el: $('table.data', this.el),
+                el: $('table#country-data', this.el),
                 collection: this.model.get('indicators')
             });
         }
