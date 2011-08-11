@@ -40,16 +40,20 @@ view = Backbone.View.extend({
 
     },
     formatRank: function(value) {
-        var value = '' + value;
-        if (/1\d$/.test(value)) {
-            return value + 'th';
+        var index = value.desc < value.asc ? 'desc' : 'asc';
+
+        var qualifier = {desc: 'most', asc: 'least'}[index];
+
+        var rank = value[index];
+        var suffix = 'th';
+
+        var suffixMap = {1: 'st', 2: 'nd', 3: 'rd'};
+
+        if (!/1\d$/.test('' + rank)) {
+            suffix = suffixMap[rank % 10] || 'th';
         }
-        switch (value[value.length - 1]) {
-            case '1': return value + 'st';
-            case '2': return value + 'nd';
-            case '3': return value + 'rd';
-            default: return value + 'th';
-        }
+
+        return (rank == 1) ? qualifier : rank + suffix + ' ' + qualifier;
     }
 
 });

@@ -134,7 +134,10 @@ command.prototype.initialize = function(options) {
                 function reduceRank(memo, value, year) {
                     var index = _(sorted[year]).indexOf(value);
                     if (~index) {
-                        memo[year] = index + 1;
+                        var rank = {};
+                        rank.asc = index + 1;
+                        rank.desc = _(sorted[year]).size() - rank.asc;
+                        memo[year] = rank;
                     }
                     return memo;
                 }
