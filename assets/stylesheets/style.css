@@ -303,6 +303,13 @@ table.data tbody tr {
   border-top: 2px solid #ccc
   }
 
+  .front #carousel .content li {
+    display: none;
+    }
+  .front #carousel .content li.active {
+    display: block;
+    }
+
 .front .mission {
   background-color: #ebebeb;
   padding: 10px;
