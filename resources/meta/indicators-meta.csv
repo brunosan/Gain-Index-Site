@@ -1,4 +1,4 @@
-"id","name","explanation","format","index","sector","component","source1","source2","source3"
+"id","name","description","format","index","sector","component","source1","source2","source3"
 "business","Business freedom","Index of Economic Freedom. Business Freedom subcomponent","number","readiness",,"economic","http://www.heritage.org/index/explore",,
 "coast_area","Coastal area","Land less than 5 m above sea-level (%)","percent","vulnerability","infrastructure","exposure","cait.wri.org/cait-va.php?page=valand5m&mode=view",,
 "coast_popn","Coastal population","Population living less than 5 m above sea-level (%)","percent","vulnerability","infrastructure","sensitivity","http://cait.wri.org/cait-va.php?page=vapop5m&mode=view",,
