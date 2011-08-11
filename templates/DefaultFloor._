@@ -1,0 +1,8 @@
+<div class='content'>
+  <h3>Global Adaptation Index (GaIn)</h3>
+  <p>the Global Adaptation Index is designed to help decision makers in the public and private sector to prioritize investements that will increase the adaptive capacity of people and communities, against the effects of climate changes and other global trends. It measures two main concepts: First, the Vulnerability of a country to climate change, and second, the Readiness of a country to successfully implement adaptation solutions.</p>
+</div>
+<div class='search content'>
+  <input class='textfield' name='search' type='textfield' />
+  <input class='button' name='search-submit' type='submit' value='Go' />
+</div>

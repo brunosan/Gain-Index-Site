@@ -21,20 +21,14 @@
 <body>
   <div id='header'><div class='limiter'>
     <h2><a href='/'>GaIn</a></h2>
-    <div class='tagline'>
-      <div class='index'>The Global Adaptation Index</div>
-      <div class='institute'>by Global Adaptation Institute</div>
-    </div>
+    <div class='tagline'>The Global Adaptation Index</div>
     <ul class='navigation'>
       <li class='map'><a href='/map'>Map</a></li>
       <li class='rank'><a href='/ranking'>Rankings</a></li>
       <li class='matrix'><a href='/matrix'>Matrix</a></li>
-      <li class='method'><a href='/page/methodology'>Methodology</a></li>
+      <li class='method'><a href='/page/about'>About</a></li>
     </ul>
-    <div class='search'>
-      <input class='textfield' name='search' type='textfield' />
-      <input class='button' name='search-submit' type='submit' value='Search' />
-    </div>
+    <div class='org'><a href='http://globalai.org'>Global Adaptaion Institute</a></div>
   </div></div>
   <div id='page' class='limiter'>
     <div id='main'><%= main %></div>

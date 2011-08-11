@@ -56,7 +56,7 @@ view = views.Main.extend({
 
 
         // Some things fall on the floor.
-        $('.floor', this.el).empty().append(templates.CountryFloor());
+        $('.floor', this.el).empty().append(templates.DefaultFloor());
 
         if (this.tableView == undefined) {
             this.tableView = new views.CountryTable({

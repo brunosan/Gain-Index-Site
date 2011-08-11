@@ -6,6 +6,9 @@ view = views.Main.extend({
         // Empty pockets on top.
         $('.top', this.el).empty().append(templates.Front());
 
+        // Some things fall on the floor.
+        $('.floor', this.el).empty().append(templates.DefaultFloor());
+
         return this;
     }
 });

@@ -32,14 +32,9 @@ body {
   position: absolute;
   left: 120px;
   top: 15px;
-  }
-#header .tagline div {
   line-height: 15px;
-  width: 220px;
+  width: 100px;
   color: #5a2;
-  }
-#header .tagline div.index {
-  color: #fff;
   }
 #header .navigation {
   position: absolute;
@@ -65,28 +60,10 @@ body {
   color: #11202c;
   }
 
-#header .search {
+#header .org {
   position: absolute;
   left: 660px;
   top: 15px;
-  }
-
-.search input {
-  padding: 5px 10px;
-  background-color: #fff;
-  border-radius: 2px;
-  -moz-border-radius: 2px;
-  -webkit-border-radius: 2px;
-  }
-
-.search input.textfield {
-  -moz-box-shadow: inset 0px 0px 3px #000;
-  -webkit-box-shadow: inset 0px 0px 3px #000;
-  box-shadow: inset 0px 0px 3px #000;
-  }
-
-.search input.button {
-  background-color: #5a2;
   }
 
 /**
@@ -151,16 +128,41 @@ body {
   left: 635px;
   top: 20px;
   width: 265px;
-  position: absolute;
-  padding: 10px 20px 20px 40px;
   background: #ebebeb;
   border-radius: 0px 3px 3px 0px;
   -moz-border-radius: 0px 3px 3px 0px;
   -webkit-border-radius: 0px 3px 3px 0px;
   }
 
+  #cabinet .floor .content {
+    padding: 20px 20px 20px 40px;
+    }
+
   #cabinet .floor .more {
     background: #fff;
+    }
+
+.floor .search {
+  padding: 20px 0px;
+  background-color: #c6c6c6
+  }
+
+  .floor .search input {
+    padding: 5px 10px;
+    background-color: #fff;
+    border-radius: 2px;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    }
+
+  .floor .search input.textfield {
+    -moz-box-shadow: inset 0px 0px 3px #000;
+    -webkit-box-shadow: inset 0px 0px 3px #000;
+    box-shadow: inset 0px 0px 3px #000;
+    }
+
+  .floor .search input.button {
+    background-color: #fff;
     }
 
 /**
