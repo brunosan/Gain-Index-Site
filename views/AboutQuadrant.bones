@@ -34,10 +34,40 @@ view = Backbone.View.extend({
 
         // Description text based on quadrant.
         $(this.el).empty().append(templates[template]({
-            country: country,
+            country: this.formatCountry(country),
             ranks: ranks
         }));
 
+    },
+    // a small helper function to process some country
+    // names into more gramattically correct alternative.
+    formatCountry: function(name) {
+        var map = {
+            'Central African Republic': 'The Central African Republic',
+            'Congo, the Democratic Republic of the': 'The Democratic Republic of the Congo',
+            'Czech Republic': 'The Czech Republic',
+            'Dominican Republic': 'The Dominican Republic',
+            'Iran, Islamic Republic of': 'The Islamic Republic of Iran',
+            'Korea, Democratic People\'s Republic of': 'The Democratic People\'s Republic of Korea',
+            'Korea, Republic of': 'The Republic of Korea',
+            'Lao People\'s Democratic Republic': 'The Lao People\'s Democratic Republic',
+            'Libyan Arab Jamahiriya': 'The Libyan Arab Jamahiriya',
+            'Marshall Islands': 'The Marshall Islands',
+            'Micronesia, Federated States of': 'The Federated States of Micronesia',
+            'Moldova, Republic of': 'The Republic of Moldova',
+            'Netherlands': 'The Netherlands',
+            'Philippines': 'The Philippines',
+            'Russian Federation': 'The Russian Federation',
+            'Seychelles': 'The Seychelles',
+            'Syrian Arab Republic': 'The Syrian Arab Republic',
+            'Tanzania, United Republic of': 'The United Republic of Tanzania',
+            'United Arab Emirates': 'The United Arab Emirates',
+            'United Kingdom': 'The United Kingdom',
+            'United States': 'The United States',
+            'Venezuela, Bolivarian Republic of': 'The Bolivarian Republic of Venezuela'
+        }
+
+        return map[name] || name;
     },
     formatRank: function(value) {
         var index = value.desc < value.asc ? 'desc' : 'asc';
