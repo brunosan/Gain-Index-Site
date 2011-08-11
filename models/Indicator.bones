@@ -10,6 +10,9 @@ model = Backbone.Model.extend({
         if (arguments.length && arguments[0] == 'input') {
            series = 'input'; 
         }
+        if (arguments.length && arguments[0] == 'rank') {
+           series = 'rank';
+        }
         return this.get(series)[this.get('currentYear')];
     },
     meta: {

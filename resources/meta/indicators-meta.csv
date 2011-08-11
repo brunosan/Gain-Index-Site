@@ -36,7 +36,7 @@
 "water_disease","Water disease","Deaths due to water borne diseases in under 5 year-olds","number","vulnerability","water","sensitivity","WHO",,
 "water_use","Water use","Water withdrawn for all uses as percent of total internal & external water","percent","vulnerability","water","sensitivity","http://www.fao.org/nr/water/aquastat/data/query/index.html?lang=en",,
 "yield_cv","Variation of cereal yield","Coefficient of variation of annual cereal yield ","number","vulnerability","food","exposure","http://data.worldbank.org/indicator/AG.YLD.CREL.KG",,
-"yld_proj","Yield change","Projected impact of climate change on agricultural yields. (ACDI)","percent","vulnerability","food","exposure","From Cline via Wheeler",,
+"yld_proj","Yield change","Projected impact of climate change on agricultural yields. (ACDI)","percent","vulnerability","food","exposure","http://www.cgdev.org/content/publications/detail/1424986",,
 "governance","Governance","Readiness component comprised of voice & accountability, political stability and non-violence, and control of corruption.",,"readiness",,"governance",,,
 "economic","Economic readiness","Readiness component comprised of government spending, business, trade, fiscal, financial, investement and monetary freedoms.",,"readiness",,"economic",,,
 "social","Social readiness","Readiness component comprised of mobile penetration, tertiary education, rule of law and labor freedom.",,"readiness",,"social",,,

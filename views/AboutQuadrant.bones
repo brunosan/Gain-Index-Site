@@ -21,7 +21,7 @@ view = Backbone.View.extend({
         
         _.each(['gain', 'readiness', 'vulnerability'], function(k) {
             if (data.hasOwnProperty(k)) {
-                ranks[k] = that.formatRank(data[k].get('rank'));
+                ranks[k] = that.formatRank(data[k].currentValue('rank'));
             }
         });
 
