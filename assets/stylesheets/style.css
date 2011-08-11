@@ -28,37 +28,48 @@ body {
   float: left;
   height: 60px
   }
+  #header h2 a.logo {
+    display: block;
+    position: absolute;
+    top:15px;
+    left: 10px;
+    text-indent: -9999px;
+    width: 80px;
+    height: 25px;
+    background: url('../images/sprite.png') 0px -50px no-repeat;
+    }
+
 #header .tagline {
   position: absolute;
   left: 120px;
   top: 15px;
-  line-height: 15px;
+  font-size: 12px;
+  line-height: 12px;
   width: 100px;
   color: #5a2;
   }
+
 #header .navigation {
   position: absolute;
-  left: 320px;
+  left: 295px;
+  top: 7px;
   }
-#header .navigation li {
-  float: left;
-  height: 60px;
-  line-height: 60px;
-  width: 74px;
-  text-align: center;
-  border-left: 1px solid #11202c;
-  background: #5a2;
-  }
-
-#header .navigation li.method {
-  width: 89px;
-  }
-
-#header .navigation li a {
-  text-decoration: none;
-  font-weight: bold;
-  color: #11202c;
-  }
+  #header .navigation li {
+    float: left;
+    }
+    #header .navigation li a {
+      float: left;
+      height: 45px;
+      width: 65px;
+      margin-right: 10px;
+      text-indent: -9999px;
+      background-image: url('../images/sprite.png');
+      background-repeat: no-repeat;
+      }
+    #header .navigation li a.map { background-position: 0px -130px;}
+    #header .navigation li a.rank { background-position: -75px -130px; width: 90px;}
+    #header .navigation li a.matrix { background-position: -175px -130px; width: 80px;}
+    #header .navigation li a.about { background-position: -265px -130px; width: 75px;}
 
 #header .org {
   position: absolute;
