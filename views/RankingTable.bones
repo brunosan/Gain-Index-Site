@@ -16,12 +16,14 @@ view = Backbone.View.extend({
 
         // Build a look up table for the data.
         this.collection.each(function(model) {
-            data.push({
-                name: model.escape('country'),
-                iso3: model.get('ISO3'),
-                value: model.currentValue(),
-                rank: model.get('rank')
-            });
+            if (model.currentValue('rank')) {
+                data.push({
+                    name: model.escape('country'),
+                    iso3: model.get('ISO3'),
+                    value: model.currentValue(),
+                    rank: model.currentValue('rank') || {}
+                });
+            }
         });
 
         $(this.el).empty().append(templates.RankingTable({
