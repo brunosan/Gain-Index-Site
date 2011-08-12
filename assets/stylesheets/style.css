@@ -339,10 +339,63 @@ table.data tbody tr {
   }
 
 /**
+ * Download page
+ */
+.download-page {
+  background-color: white;
+  color: gray;
+  padding: 20px;
+  font-size: 15px;
+  width: 640px;
+}
+.download-page h2 {
+  font-size: 30px;
+  line-height: 50px;
+  width: 100%;
+  border-bottom: 1px solid #c6c6c6;
+}
+.download-page .prose {
+  padding: 10px;
+}
+.download-page ul {
+  border: 1px solid #c6c6c6;
+  padding: 10px;
+   -moz-border-radius: 6px;
+   -webkit-border-radius: 6px;
+   border-radius: 6px;
+}
+
+.download-page li {
+  list-style: disc;
+  padding: 5px 0 5px 0;
+  margin-left: 20px;
+}
+
+.download-page a.download-icon {
+   background-color: #e6e6e6;
+   display: block;
+   font-size: 20px;
+   font-weight: bold;
+   padding: 15px 0 15px 100px;
+   margin: 20px 0;
+   color: #46ab1a;
+   -moz-border-radius: 3px;
+   -webkit-border-radius: 3px;
+   border-radius: 3px;
+   text-decoration: none;
+   border-bottom: 1px solid #999;
+}
+
+.download-page a.download-icon:hover {
+   background-color: #eee;
+   border-bottom: 1px solid #aaa;
+}
+
+/**
  * Country pages
  */
 .country-profile {
-  background-color: #ebebeb;
+  background-color: white;
   }
 .country-profile .tab-content {
   background-color: #fff;
@@ -426,6 +479,54 @@ table.data tbody tr {
     height: 135px;
     width: 320px;
     }
+.country-profile .tab-wrapper,
+.country-profile .rankings {
+  background-color: #ebebeb;
+}
+
+.country-profile h3 {
+  font-size: 14px;
+  line-height: 16px;
+  padding: 0 0 10px 0;
+}
+.country-profile .rankings {
+  padding: 10px 0 20px 10px;
+  font-size: 11px;
+}
+
+.country-profile .rankings table {
+  border: 1px solid #c6c6c6;
+  border-right: none;
+}
+
+.country-profile .rankings th,
+.country-profile .rankings td {
+  border-bottom: 1px solid #c6c6c6;
+  padding: 5px 0;
+  text-align: center;
+}
+.country-profile .rankings td span.value {
+   font-weight: bold;
+   background-color: #abd7ee;
+   padding: 3px;
+   -moz-border-radius: 3px;
+   -webkit-border-radius: 3px;
+   border-radius: 3px;
+}
+
+.country-profile .rankings table tr th.label {
+  border-right: 1px solid #c6c6c6;
+  font-weight: bold;
+  color: black;
+  width: 80px;
+  text-align: left;
+  padding-left: 10px;
+}
+
+.country-profile .rankings tr.years th {
+  color: gray;
+}
+
 
 .drawer .content .graph {
   height: 256px;

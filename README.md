@@ -16,8 +16,9 @@ After cloning the repository / downloading the tarball:
 
 1. Change into project directory, run `npm install`
 2. Run `./index.js install`
-3. Add a user `./index.js user add admin email@example.com secretpw`
-4. Run `./index.js`
+3. Run `./index.js import`
+4. Add a user `./index.js user add admin email@example.com secretpw`
+5. Run `./index.js`
 
 The application will refuse to install if it detects existing databases. To
 install anew, run `./index.js uninstall` first.

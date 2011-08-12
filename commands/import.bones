@@ -126,15 +126,19 @@ command.prototype.initialize = function(options) {
                     memo[year] = _(values).chain()
                         .pluck(year)
                         .without(null, undefined)
+                        .uniq()
                         .sort()
                         .value() || [];
                     return memo;
                 }, {});
 
                 function reduceRank(memo, value, year) {
-                    var index = _(sorted[year]).indexOf(value);
+                    var index = _(sorted[year]).indexOf(value, true);
                     if (~index) {
-                        memo[year] = index + 1;
+                        var rank = {};
+                        rank.asc = index + 1;
+                        rank.desc = _(sorted[year]).size() - index;
+                        memo[year] = rank;
                     }
                     return memo;
                 }

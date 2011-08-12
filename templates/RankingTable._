@@ -6,7 +6,7 @@
 <tbody>
   <% _.each(rows, function(v, k) { %>
     <tr id='country-<%= v.iso3 %>'>
-      <td><%= v.rank %></td>
+      <td><%= v.rank.desc %></td>
       <td><a href='/country/<%= v.iso3 %>' class='handle'><%= v.name %></a></td>
       <td><div class='graph'></div><%= v.value%></td>
     </tr>

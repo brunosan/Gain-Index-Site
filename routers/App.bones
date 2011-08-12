@@ -5,6 +5,7 @@ router = Backbone.Router.extend({
         '/country/:id': 'country',
         '/ranking': 'rankingDefault',
         '/ranking/:id': 'ranking',
+        '/download': 'download',
         '/page/:id': 'page'
     },
     front: function() {
@@ -35,6 +36,17 @@ router = Backbone.Router.extend({
     },
     pageEditor: function(id) {
         this.page(id, true);
+    },
+    download: function() {
+        var router = this;
+        var fetcher = this.fetcher();
+        var model = new models.Download({id: 'data'});
+
+        fetcher.push(model);
+        fetcher.fetch(function() {
+            router.send(views.Download, {model: model});
+        });
+
     },
     page: function(id) {
         var router = this;
