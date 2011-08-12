@@ -1,0 +1,16 @@
+<div class='download-page'>
+  <h2>Download Data</h2>
+  <div class='prose'>Download the Global Adaptation Index&#8482;, scores and indicators between 1995 and 2010 as available on this web site in CSV format.</div>
+  <ul>
+    <li>Global Adaptation Index&#8482;.</li>
+    <li>Vulnerability score.</li>
+    <li>Sector scores: Water, Agriculture, Health, Infrastructure.</li>
+    <li>Component scores: Exposure, Sensitivity, Capacity.</li>
+    <li>Readiness score.</li>
+    <li>Sector Scores: Economic Readiness, Governance, Social Readiness.</li>
+    <li>All indicators used to generate GaIn&#8482; and scores.</li>
+  </ul>
+  <a href='/assets/files/<%= model.escape('filename') %>' class='download-icon'>
+      DOWNLOAD (.zip, <%= model.getFileSize() %>)
+  </a>
+</div>
