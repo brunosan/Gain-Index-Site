@@ -36,7 +36,7 @@
       <tbody>
         <tr>
           <th class='label'>GaIn&#8482;</th>
-          <% _.each(rank, function(rank, year) { %>  <td><span class='value'><%= rank.asc %></span></td>  <% }); %>
+          <% _.each(rank, function(rank, year) { %>  <td><span class='value'><%= rank.desc %></span></td>  <% }); %>
         </tr>
       </tbody>
     </table>
