@@ -10,7 +10,7 @@
     <li>Sector Scores: Economic Readiness, Governance, Social Readiness.</li>
     <li>All indicators used to generate GaIn&#8482; and scores.</li>
   </ul>
-  <a href='/assets/files/<%= model.escape('filename') %>' class='download-icon'>
+  <a href='/assets/gain/files/<%= model.escape('filename') %>' class='download-icon'>
       DOWNLOAD (.zip, <%= model.getFileSize() %>)
   </a>
 </div>
