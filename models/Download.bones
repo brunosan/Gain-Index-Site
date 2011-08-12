@@ -1,9 +1,15 @@
+require('chrono');
+
 model = Backbone.Model.extend({
     initialize: function() {
-        _.bind(this, 'getFileSize');
+        _.bind(this, 'getFileSize', 'getDate');
     },
     url: function() {
         return '/api/Download/' + encodeURIComponent(this.get('id'));
+    },
+    getDate: function() {
+        var d = new Date(this.get('timestamp'));
+        return d.format('d F Y', 'CET');
     },
     getFileSize: function() {
         var value = this.get('size');

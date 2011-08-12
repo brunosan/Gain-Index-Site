@@ -377,13 +377,17 @@ table.data tbody tr {
    font-size: 20px;
    font-weight: bold;
    padding: 15px 0 15px 100px;
-   margin: 20px 0;
+   margin: 20px 0 10px;
    color: #46ab1a;
    -moz-border-radius: 3px;
    -webkit-border-radius: 3px;
    border-radius: 3px;
    text-decoration: none;
    border-bottom: 1px solid #999;
+}
+.download-page .timestamp {
+  font-size: 14px;
+  float: right;
 }
 
 .download-page a.download-icon:hover {
