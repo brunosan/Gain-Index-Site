@@ -64,7 +64,7 @@ a:hover {
 .tabs li a {
   font-family: 'AlternateGothicLTNo3Regular',"HelveticaNeueBoldCondensed", "HelveticaNeue-Bold-Condensed", "Arial Narrow", "Arial", sans-serif;
   font-weight: 100;
-  font-size: 18px;
+  font-size: 18px; 
   color: #434343;
   text-decoration: none;
   text-transform: uppercase;
