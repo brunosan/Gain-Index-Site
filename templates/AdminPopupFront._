@@ -1,14 +1,25 @@
 <form>
 <div class='attribute featuredFirst'>
     <label for='featuredFirst'>First featured country</label>
-    <input type='text' name='featuredFirst' />
+    <select name="featuredFirst">
+        <% _.each(countries, function(v, k) { %>
+            <option value="<%= k %>"><%= v %></option>
+        <% }); %>
+    </select>
     <div class='description'>Choose the first country to feature on the front page.</div>
 </div>
 <div class='attribute featuredSecond'>
     <label for='featuredSecond'>Second featured country</label>
-    <input type='text' name='featuredSecond' />
-    <div class='description'>Choose the first country to feature on the front page.</div>
+    <select name="featuredSecond">
+        <% _.each(countries, function(v, k) { %>
+            <option value="<%= k %>"><%= v %></option>
+        <% }); %>
+    </select>
+    <div class='description'>Choose the second country to feature on the front page.</div>
 </div>
+
+
+
 <input type="hidden" name="id" value="front" />
 <div class='buttons'>
     <input type='submit' value='Create <%= documentType %>' />

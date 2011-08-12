@@ -21,7 +21,7 @@ view = views.AdminDropdown.extend({
             title: 'Change frontpage',
             documentType: 'front',
             pathPrefix: '/front/',
-            model: new models.Indicator(),
+            model: new models.Front(),
         });
         return false;
     }
