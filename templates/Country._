@@ -24,6 +24,7 @@
   </div>
     <div class='prose'><p>Ei dicam partem accusamus vel, tale laoreet duo ei. Noster labitur mei ei. Cum iuvaret abhorreant ei. Cibo dolorum cum cu, nec in habemus torquatos, ad pro paulo commodo probatus.</p></div>
 
+  <% if (_(rank).size()) { %>
   <div class='rankings'>
     <h3>Rankings</h3>
     <table class='data'>
@@ -41,6 +42,7 @@
       </tbody>
     </table>
   </div>
+  <% } %>
   <div class='tab-wrapper'>
     <ul class='tabs'>
       <li class='active'><div><a href='#vulnerability' class='vulnerability'>Vulnerability</a></div>

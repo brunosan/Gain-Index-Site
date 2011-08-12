@@ -8,6 +8,7 @@ view = Backbone.View.extend({
 
         var data = {},
             ranks = {},
+            missing = [],
             country = '',
             collection = this.model.get('indicators');
 
@@ -20,22 +21,44 @@ view = Backbone.View.extend({
         });
         
         _.each(['gain', 'readiness', 'vulnerability'], function(k) {
+            var value = false;
+
             if (data.hasOwnProperty(k)) {
-                ranks[k] = that.formatRank(data[k].currentValue('rank'));
+                value = that.formatRank(data[k].currentValue('rank'));
+            }
+
+            if (value) {
+                ranks[k] = value;
+            }
+            else {
+                k !== 'gain' && missing.push({
+                    'vulnerability': 'Vulnerability',
+                    'readiness': 'Readiness'
+                }[k]);
             }
         });
 
-        var coords = [
-            data.vulnerability.currentValue() > 0.5 ? 'Top' : 'Bottom',
-            data.readiness.currentValue() > 0.5 ? 'Right' : 'Left'
-        ];
+        var template = 'AboutQuadrant';
 
-        var template = 'AboutQuadrant' + coords.join('');
+        if (!missing.length) {
+            var coords = [
+                data.vulnerability.currentValue() > 0.5 ? 'Top' : 'Bottom',
+                data.readiness.currentValue() > 0.5 ? 'Right' : 'Left'
+            ];
+
+            template = template + coords.join('');
+        }
+
 
         // Description text based on quadrant.
         $(this.el).empty().append(templates[template]({
             country: this.formatCountry(country),
-            ranks: ranks
+            ranks: ranks,
+            missing: missing,
+            rankVerb: {
+                readiness: 'ready',
+                vulnerability: 'vulnerable'
+            }
         }));
 
     },
@@ -70,6 +93,9 @@ view = Backbone.View.extend({
         return map[name] || name;
     },
     formatRank: function(value) {
+        if (_.isUndefined(value)) {
+            return false;
+        }
         var index = value.desc < value.asc ? 'desc' : 'asc';
 
         var qualifier = {desc: 'most', asc: 'least'}[index];
