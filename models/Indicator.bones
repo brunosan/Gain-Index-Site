@@ -618,7 +618,7 @@ model = Backbone.Model.extend({
         },
         "gain": {
             "id": "gain",
-            "name": "GaIn",
+            "name": "The Global Adaptation Index™",
             "description": "The Global Adaptation Index™ (GaIn™) exposes countries' vulnerabilities to climate change and opportunities to improve resilience. It aims to help businesses and the public sector to better prioritize investments for a more efficient response to the immediate global challenges ahead.",
             "format": null,
             "index": "gain",
