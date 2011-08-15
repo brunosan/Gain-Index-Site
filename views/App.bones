@@ -29,7 +29,8 @@ var adminSetup = _.once(function() {
     Bones.user.status();
 });
 
-
+// Topmost view
+// ------------
 view = Backbone.View.extend({
     _ensureElement: function() {
         this.el = $('body');
@@ -42,6 +43,8 @@ view = Backbone.View.extend({
     }
 });
 
+// Registers event handler for all click events
+// --------------------------------------------
 view.prototype.events = {
     'click a': 'routeClick'
 };
@@ -60,7 +63,7 @@ view.prototype.routeClick = function(ev) {
 
 // Routes a path
 // -------------
-view.prototype.route = function(path, noscroll) {
+view.prototype.route = function(path) {
     var that = this;
     if (path.charAt(0) === '/') {
         var matched = _.any(Backbone.history.handlers, function(handler) {
