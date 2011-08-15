@@ -73,7 +73,6 @@ view = views.Main.extend({
             });
         }
         this.tableView.attach();
-        !Bones.server && this.setupSlider();
     },
     selectTab: function(ev) {
         var e = $(ev.currentTarget);
@@ -93,33 +92,6 @@ view = views.Main.extend({
 
         this.tableView.render().attach();
         return false;
-    },
-    setupSlider: function() {
-        window.drawerTop = $('#cabinet .floor').offset().top;
-        _.each(['floor', 'drawer'], function(sel) {
-            _.once(function() {
-                $(window).scroll(function() {
-                    var el = $('#cabinet .' + sel);
-                    var top = window.drawerTop;
-                    var range = $('#cabinet .top').outerHeight()
-                                + $('#cabinet .top').offset().top
-                                - el.outerHeight();
-                    var pos = $(this).scrollTop();
-                    if (pos > top) {
-                        el.addClass('fixed');
-                    }
-                    else {
-                        el.removeClass('fixed');
-                    }
-                    if (pos > range) {
-                        el.addClass('bottom');
-                    }
-                    else {
-                        el.removeClass('bottom');
-                    }
-                });
-            })();
-        });
     },
     openDrawer: function(ev) {
         var ind = $(ev.currentTarget).parents('tr').attr('id').substr(10);;
