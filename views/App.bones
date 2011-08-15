@@ -22,7 +22,7 @@ var adminSetup = _.once(function() {
         auth: views['AdminLogin'],
         dropdowns: [
             views['AdminDropdownUser'],
-            views['AdminDropdownFront']
+            views['AdminDropdownExtra']
         ]
     });
     Bones.admin.render();

@@ -17,7 +17,7 @@ view = views.AdminDropdown.extend({
         views.AdminDropdown.prototype.initialize.call(this, options);
     },
     frontFeature: function() {
-        new views.AdminPopupFront({
+        new views.AdminPopupFrontFeature({
             title: 'Change featured countries on front page',
             documentType: 'front',
             pathPrefix: '/front/',
