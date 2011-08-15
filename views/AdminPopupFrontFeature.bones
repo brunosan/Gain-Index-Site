@@ -19,7 +19,7 @@ view = views.AdminPopup.extend({
                 that.options.countries['tod'] = 'TODO';
                 that.options.documentType = options.documentType;
                 _.bindAll(that, 'submit');
-                that.content = templates.AdminPopupFront({
+                that.content = templates.AdminPopupFrontFeature({
                     documentType: that.options.documentType,
                     countries: that.options.countries,
                     featuredFirst: model.get('featuredFirst'),
