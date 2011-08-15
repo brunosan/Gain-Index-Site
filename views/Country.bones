@@ -105,7 +105,7 @@ view = views.Main.extend({
         if (meta != undefined) {
             $('.drawer .content', this.el).empty().append(templates.CountryDrawer({
                 title: meta.name,
-                content: meta.explanation,
+                content: meta.description,
                 indicator: meta.id
             }));
 

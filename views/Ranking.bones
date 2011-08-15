@@ -54,7 +54,7 @@ view = views.Main.extend({
         // Some things fall on the floor.
         $('.floor', this.el).empty().append(templates.RankingFloor({
             title: meta.name,
-            content: '<p>'+meta.explanation+'</p>'
+            content: '<p>' + meta.description + '</p>'
         }));
         return this;
     },
