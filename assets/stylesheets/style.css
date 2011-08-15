@@ -198,7 +198,8 @@ a:hover {
   -webkit-transition: left .5s ease;
   }
 #cabinet .drawer.open {
-  left: 635px;
+  left: 50%;
+  margin-left: 155px;
   }
   #cabinet .drawer .handle {
     height: 40px;
@@ -226,20 +227,20 @@ a:hover {
 #cabinet .floor {
   position: absolute;
   z-index: -1;
+  top: 20px;
   left: 50%;
   margin-left: 155px;
-  top: 20px;
   width: 320px;
   background: #ebebeb;
   border-radius: 0px 3px 3px 0px;
   -moz-border-radius: 0px 3px 3px 0px;
   -webkit-border-radius: 0px 3px 3px 0px;
   }
-  #cabinet .floor.fixed {
+  #cabinet .slider.fixed {
     position: fixed;
     top: 0;
     }
-    #cabinet .floor.fixed.bottom {
+    #cabinet .slider.fixed.bottom {
       position: absolute;
       top: auto;
       bottom: 0;

@@ -1,7 +1,7 @@
 <div id='cabinet' class='clearfix'>
   <div class='top'></div>
-  <div class='floor'></div>
-  <div class='drawer'>
+  <div class='slider floor'></div>
+  <div class='slider drawer'>
     <div class='handle'><a class='close handle' href='#close'>Close</a></div>
     <div class='content'></div>
   </div>

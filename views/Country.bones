@@ -94,29 +94,32 @@ view = views.Main.extend({
         this.tableView.render().attach();
         return false;
     },
-    setupSlider: function(ev) {
+    setupSlider: function() {
         window.drawerTop = $('#cabinet .floor').offset().top;
-        _.once(function() {
-            $(window).scroll(function() {
-                var top = window.drawerTop;
-                var range = $('#cabinet .top').outerHeight()
-                            + $('#cabinet .top').offset().top
-                            - $('#cabinet .floor').outerHeight();
-                var pos = $(this).scrollTop();
-                if (pos > top) {
-                    $('#cabinet .floor').addClass('fixed');
-                }
-                else {
-                    $('#cabinet .floor').removeClass('fixed');
-                }
-                if (pos > range) {
-                    $('#cabinet .floor').addClass('bottom');
-                }
-                else {
-                    $('#cabinet .floor').removeClass('bottom');
-                }
-            });
-        })();
+        _.each(['floor', 'drawer'], function(sel) {
+            _.once(function() {
+                $(window).scroll(function() {
+                    var el = $('#cabinet .' + sel);
+                    var top = window.drawerTop;
+                    var range = $('#cabinet .top').outerHeight()
+                                + $('#cabinet .top').offset().top
+                                - el.outerHeight();
+                    var pos = $(this).scrollTop();
+                    if (pos > top) {
+                        el.addClass('fixed');
+                    }
+                    else {
+                        el.removeClass('fixed');
+                    }
+                    if (pos > range) {
+                        el.addClass('bottom');
+                    }
+                    else {
+                        el.removeClass('bottom');
+                    }
+                });
+            })();
+        });
     },
     openDrawer: function(ev) {
         var ind = $(ev.currentTarget).parents('tr').attr('id').substr(10);;
