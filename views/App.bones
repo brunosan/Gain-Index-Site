@@ -1,3 +1,5 @@
+// Starts routing on client
+// ------------------------
 var start = _.once(function() {
     var bypass = true,
         _loadUrl = Backbone.History.prototype.loadUrl;
@@ -13,6 +15,8 @@ var start = _.once(function() {
     Bones.start({pushState: true, root: ""});
 });
 
+// Sets up user and administrative elements on client
+// --------------------------------------------------
 var adminSetup = _.once(function() {
     Bones.user = new models.User;
 
@@ -29,7 +33,28 @@ var adminSetup = _.once(function() {
     Bones.user.status();
 });
 
+// Sets up key tracking on client
+// ------------------------------
+// TODO: should we use Bones.currentKeys?
+var keyTracking = _.once(function() {
+    $(function() {
+        // Global tracking of pressed keys.
+        $(document).keydown(function(ev) {
+            window.currentKeys = window.currentKeys || {};
+            window.currentKeys[ev.keyCode] = ev;
+        });
+        $(document).keyup(function(ev) {
+            window.currentKeys = window.currentKeys || {};
+            if (window.currentKeys[ev.keyCode]) {
+                delete window.currentKeys[ev.keyCode];
+            }
+        });
 
+    });
+});
+
+// Topmost view
+// ------------
 view = Backbone.View.extend({
     _ensureElement: function() {
         this.el = $('body');
@@ -38,10 +63,13 @@ view = Backbone.View.extend({
         this.render();
         if (!Bones.server) {
             adminSetup();
+            keyTracking();
         }
     }
 });
 
+// Registers event handler for all click events
+// --------------------------------------------
 view.prototype.events = {
     'click a': 'routeClick'
 };
@@ -60,7 +88,7 @@ view.prototype.routeClick = function(ev) {
 
 // Routes a path
 // -------------
-view.prototype.route = function(path, noscroll) {
+view.prototype.route = function(path) {
     var that = this;
     if (path.charAt(0) === '/') {
         var matched = _.any(Backbone.history.handlers, function(handler) {
