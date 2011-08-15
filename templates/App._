@@ -23,7 +23,7 @@
     <h2><a class='logo' href='/'>GaIn</a></h2>
     <div class='tagline'>The Global Adaptation Index</div>
     <ul class='navigation'>
-      <li><a  class='map' href='/map'>Map</a></li>
+      <li><a  class='map' href='/'>Map</a></li>
       <li><a  class='rank' href='/ranking'>Rankings</a></li>
       <li><a  class='matrix' href='/matrix'>Matrix</a></li>
       <li><a  class='about' href='/page/about'>About</a></li>
