@@ -334,6 +334,7 @@ a:hover {
 table.data {
   width: 100%;
   table-layout: fixed;
+  clear: left;
   }
 table.data tr {
   line-height: 25px;
