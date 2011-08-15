@@ -27,7 +27,4 @@ model = models.Document.extend({
     url: function() {
         return '/api/Front/' + encodeURIComponent(this.id);
     },
-    link: function() {
-        return '/front/' + encodeURIComponent(this.id);
-    }
 });
