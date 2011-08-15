@@ -70,7 +70,7 @@ view = views.Main.extend({
         this.tableView.attach();
     },
     openDrawer: function(ev) {
-        var id = $(ev.currentTarget).parents('tr').attr('id').substr(8);;
+        var id = $(ev.currentTarget).parents('tr').attr('id').substr(8);
         if (!id) return;
 
         var data = this.model.get('indicators').getGraphData('ISO3', id);
