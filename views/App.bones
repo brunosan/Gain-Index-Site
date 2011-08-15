@@ -1,3 +1,5 @@
+// Starts client side routing
+// --------------------------
 var start = _.once(function() {
     var bypass = true,
         _loadUrl = Backbone.History.prototype.loadUrl;
@@ -13,6 +15,8 @@ var start = _.once(function() {
     Bones.start({pushState: true, root: ""});
 });
 
+// Sets up user and administrative elements
+// ----------------------------------------
 var adminSetup = _.once(function() {
     Bones.user = new models.User;
 
