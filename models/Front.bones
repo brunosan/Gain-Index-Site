@@ -1,5 +1,5 @@
 model = models.Document.extend({
-     schema: {
+    schema: {
         id: 'Front',
         type: 'object',
         properties: {

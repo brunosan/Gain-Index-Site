@@ -3,7 +3,11 @@
     <label for='featuredFirst'>First featured country</label>
     <select name="featuredFirst">
         <% _.each(countries, function(v, k) { %>
-            <option value="<%= k %>"><%= v %></option>
+            <% if (k == featuredFirst) { %>
+                <option value="<%= k %>" selected="selected"><%= v %></option>
+            <% } else { %>
+                <option value="<%= k %>"><%= v %></option>
+            <% } %>
         <% }); %>
     </select>
     <div class='description'>Choose the first country to feature on the front page.</div>
@@ -12,16 +16,17 @@
     <label for='featuredSecond'>Second featured country</label>
     <select name="featuredSecond">
         <% _.each(countries, function(v, k) { %>
-            <option value="<%= k %>"><%= v %></option>
+            <% if (k == featuredSecond) { %>
+                <option value="<%= k %>" selected="selected"><%= v %></option>
+            <% } else { %>
+                <option value="<%= k %>"><%= v %></option>
+            <% } %>
         <% }); %>
     </select>
     <div class='description'>Choose the second country to feature on the front page.</div>
 </div>
-
-
-
 <input type="hidden" name="id" value="front" />
 <div class='buttons'>
-    <input type='submit' value='Create <%= documentType %>' />
+    <input type='submit' value='Save' />
 </div>
 </form>

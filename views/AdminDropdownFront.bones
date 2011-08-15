@@ -9,7 +9,7 @@ view = views.AdminDropdown.extend({
         'click a[href=#frontFeature]': 'frontFeature',
     }, views.AdminDropdown.prototype.events),
     links: [
-        { href: '#frontFeature', title: 'Feature' },
+        { href: '#frontFeature', title: 'Featured Countries' },
     ],
     initialize: function(options) {
         this.title = "Structure";
@@ -18,12 +18,11 @@ view = views.AdminDropdown.extend({
     },
     frontFeature: function() {
         new views.AdminPopupFront({
-            title: 'Change frontpage',
+            title: 'Change featured countries on front page',
             documentType: 'front',
             pathPrefix: '/front/',
-            model: new models.Front(),
+            model: new models.Front({id: 'front'})
         });
         return false;
     }
-    
 });
