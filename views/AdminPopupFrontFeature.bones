@@ -47,8 +47,6 @@ view = views.AdminPopup.extend({
                 var message = 'Featured countries on front page have been updated.';
                 new views.AdminGrowl({message: message, autoclose: 15000});
                 that.close();
-                // Send to front page.
-                that.route('/');
             },
             error: Bones.admin.error
         });
