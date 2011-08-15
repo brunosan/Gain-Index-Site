@@ -11,7 +11,6 @@ view = views.AdminPopup.extend({
         var that = this;
         model.fetch({
             success: function(model) {
-                console.log(model.get('author'));
                 // @TODO replace all this w/ countries model
                 that.options.countries = {};
                 that.options.countries['abw'] = 'Aruba';
