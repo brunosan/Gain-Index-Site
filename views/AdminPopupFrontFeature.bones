@@ -27,9 +27,7 @@ view = views.AdminPopup.extend({
                 });
                 views.AdminPopup.prototype.initialize.call(that, options);
             },
-            error: function() {
-                // @TODO add message here. 
-            }
+            error: Bones.admin.error
         });
     },
     submit: function(e) {
