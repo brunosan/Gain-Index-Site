@@ -1,5 +1,5 @@
 <div class='ranking'>
-  <h2>Country rankings</h2>
+  <h2>Country Rankings</h2>
   <ul class='indices'>
     <% _.each(indices, function(index) { %>
       <li><a href='/ranking/<%= index %>'><%= index %></a></li>
