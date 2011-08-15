@@ -4,9 +4,6 @@ view = views.Main.extend({
         'click .tab-content td.name a': 'openDrawer',
         'click .drawer .handle a': 'closeDrawer'
     }, views.Main.prototype.events),
-    initialize: function() {
-        views.Main.prototype.initialize.apply(this, arguments);
-    },
     render: function() {
         var lookup = {},
             title = '',
