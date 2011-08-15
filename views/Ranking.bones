@@ -3,9 +3,6 @@ view = views.Main.extend({
         'click .drawer .handle a.handle': 'closeDrawer',
         'click table.data a.handle': 'openDrawer',
     }, views.Main.prototype.events),
-    initialize: function() {
-        views.Main.prototype.initialize.apply(this, arguments);
-    },
     render: function() {
         var data = [],
             sectors = {},
