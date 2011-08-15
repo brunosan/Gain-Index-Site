@@ -11,7 +11,7 @@ view = views.Main.extend({
             pin = {},
             indicators = {};
             collection = this.model.get('indicators'),
-            meta = collection.model.prototype.meta;
+            meta = collection.model.meta;
 
 
         // Build a look up table for the data.
@@ -101,7 +101,7 @@ view = views.Main.extend({
         var data = collection.getGraphData('name', ind);
 
         var collection = this.model.get('indicators');
-        var meta = collection.model.prototype.meta[ind];
+        var meta = collection.model.meta[ind];
         if (meta != undefined) {
             $('.drawer .content', this.el).empty().append(templates.CountryDrawer({
                 title: meta.name,

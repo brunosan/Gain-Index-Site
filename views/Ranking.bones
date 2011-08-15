@@ -12,10 +12,10 @@ view = views.Main.extend({
             collection = this.model.get('indicators');
 
         // Arrange our metadata.
-        var meta = collection.model.prototype.meta[this.model.get('id')];
+        var meta = collection.model.meta[this.model.get('id')];
         if (!meta) return this; // should be a 404
 
-        _.each(collection.model.prototype.meta, function(v) {
+        _.each(collection.model.meta, function(v) {
             indices[v.index] = true;
             if (v.index == meta.index) {
                 if (v.sector) {
