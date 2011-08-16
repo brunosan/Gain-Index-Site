@@ -23,8 +23,7 @@ routers.App.prototype.send = function(view, options) {
         version: time,
         main: $(main.el).html(),
         startup: 'Bones.initialize(function(models, views, routers, templates) {'+
-                 'new views.' + main.constructor.title +'('+ o +').attach()'+
+                 'new views.' + main.constructor.title +'('+ o +').attach().activeLinks()'+
                  '});'
     }));
-
 }

@@ -78,6 +78,7 @@ view = views.Main.extend({
             });
         }
         this.tableView.attach();
+        return this;
     },
     openDrawer: function(ev) {
         var meta = models.Country.meta;

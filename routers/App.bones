@@ -68,7 +68,7 @@ router = Backbone.Router.extend({
         var options = arguments.length > 1 ? arguments[1] : {};
         var v = new view(options);
         $('#page').empty().append(v.el);
-        v.render().attach();
+        v.render().attach().activeLinks();
     },
     fetcher: function() {
         var models = [];

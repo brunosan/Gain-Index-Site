@@ -62,7 +62,6 @@ view = Backbone.View.extend({
     initialize: function() {
         this.render();
         if (!Bones.server) {
-            this.activeLinks();
             adminSetup();
             keyTracking();
         }
@@ -96,7 +95,6 @@ view.prototype.route = function(path) {
             if (handler.route.test(path)) {
                 Backbone.history.navigate(path, true);
                 view.scrollTop();
-                view.activeLinks()
                 return true;
             }
         });
@@ -116,21 +114,4 @@ view.prototype.scrollTop = function() {
         $('html').animate({scrollTop: 0});
         return;
     }
-};
-
-// Adds 'active' class to links in active path
-// -------------------------------------------
-// TODO: IE debug.
-view.prototype.activeLinks = function() {
-    $('a.active').removeClass('active');
-    var activePath = window.location.pathname;
-
-    $('a').each(function(i, a) {
-        var href = $(a).attr('href');
-        if (activePath == '/') {
-            activePath == href && $(a).addClass('active');
-        } else {
-            (activePath.indexOf(href) != -1) && (href != '/') && $(a).addClass('active');
-        }
-    });
 };

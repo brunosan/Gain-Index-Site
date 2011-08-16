@@ -7,6 +7,19 @@ view = Backbone.View.extend({
     attach: function() {
         return this;
     },
+    activeLinks: function() {
+        $('a.active').removeClass('active');
+        var activePath = window.location.pathname;
+
+        $('a').each(function(i, a) {
+            var href = $(a).attr('href');
+            if (activePath == '/') {
+                activePath == href && $(a).addClass('active');
+            } else {
+                (activePath.indexOf(href) != -1) && (href != '/') && $(a).addClass('active');
+            }
+        });
+    },
     // Initializes global drawer events
     // --------------------------------
     drawerEvents: function() {
