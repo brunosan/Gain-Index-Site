@@ -20,7 +20,6 @@ model = Backbone.Model.extend({
 model.meta = {
     "business": {
         "id": "business",
-        "name_short": "Business freedom",
         "name": "Business freedom",
         "description": "Index of economic freedom: business freedom subcomponent",
         "format": "number",
@@ -33,7 +32,6 @@ model.meta = {
     },
     "coast_area": {
         "id": "coast_area",
-        "name_short": "Coastal area",
         "name": "Coastal area",
         "description": "Land less than 5 meters above sea-level",
         "format": "percent",
@@ -46,7 +44,6 @@ model.meta = {
     },
     "coast_popn": {
         "id": "coast_popn",
-        "name_short": "Coastal population",
         "name": "Coastal population",
         "description": "Population living less than 5 meters above sea-level",
         "format": "percent",
@@ -59,7 +56,6 @@ model.meta = {
     },
     "corruption": {
         "id": "corruption",
-        "name_short": "Control of corruption",
         "name": "Control of corruption",
         "description": "World governance indicator: control of corruption component",
         "format": "number",
@@ -72,7 +68,6 @@ model.meta = {
     },
     "D-Ppt": {
         "id": "D-Ppt",
-        "name_short": "Precipitation change",
         "name": "Precipitation change",
         "description": "Projected change in precipitation by the end of the 21st century",
         "format": "percent",
@@ -85,7 +80,6 @@ model.meta = {
     },
     "D-Temp": {
         "id": "D-Temp",
-        "name_short": "Temperature change",
         "name": "Temperature change",
         "description": "Projected change in temperature by the end of the 21st century",
         "format": "celsius",
@@ -98,7 +92,6 @@ model.meta = {
     },
     "daly": {
         "id": "daly",
-        "name_short": "Disability adjusted life years",
         "name": "Disability adjusted life years",
         "description": "Percent increase in DALY due to climate change in the late 21st century",
         "format": "percent",
@@ -111,7 +104,6 @@ model.meta = {
     },
     "energy_access": {
         "id": "energy_access",
-        "name_short": "Energy access",
         "name": "Energy access",
         "description": "Percent population with access to electricity",
         "format": "percent",
@@ -124,7 +116,6 @@ model.meta = {
     },
     "energy_sensit": {
         "id": "energy_sensit",
-        "name_short": "Energy sensitivity",
         "name": "Energy sensitivity",
         "description": "Percent of energy derived from hydroelectric and imported power",
         "format": "percent",
@@ -137,7 +128,6 @@ model.meta = {
     },
     "enrollment": {
         "id": "enrollment",
-        "name_short": "Tertiary education",
         "name": "Tertiary education",
         "description": "Percent enrollment tertiary education",
         "format": "percent",
@@ -150,7 +140,6 @@ model.meta = {
     },
     "external": {
         "id": "external",
-        "name_short": "External dependence",
         "name": "External dependence",
         "description": "Total expendature on external resources for health",
         "format": "percent",
@@ -163,7 +152,6 @@ model.meta = {
     },
     "finan": {
         "id": "finan",
-        "name_short": "Financial freedom",
         "name": "Financial freedom",
         "description": "Index of economic freedom: fiancial freedom subcomponent",
         "format": "number",
@@ -176,7 +164,6 @@ model.meta = {
     },
     "fiscal": {
         "id": "fiscal",
-        "name_short": "Fiscal freedom",
         "name": "Fiscal freedom",
         "description": "Index of economic freedom: fiscal freedom subcomponent",
         "format": "number",
@@ -189,7 +176,6 @@ model.meta = {
     },
     "food_capacity": {
         "id": "food_capacity",
-        "name_short": "Food capacity",
         "name": "Food capacity",
         "description": "Average of 2 best scores between use of fertilizers, mechanization and irrigation",
         "format": "number",
@@ -202,7 +188,6 @@ model.meta = {
     },
     "gov_spend": {
         "id": "gov_spend",
-        "name_short": "Government spending",
         "name": "Government spending",
         "description": "Index of economic freedom: goverment spending subcomponent",
         "format": "number",
@@ -215,7 +200,6 @@ model.meta = {
     },
     "health_disease": {
         "id": "health_disease",
-        "name_short": "Disease mortality",
         "name": "Disease mortality",
         "description": "Percentage mortality due to infectious diseases",
         "format": "percent",
@@ -228,7 +212,6 @@ model.meta = {
     },
     "imports": {
         "id": "imports",
-        "name_short": "Food import dependency",
         "name": "Food import dependency",
         "description": "Proportion of cereal consumption derived from external sources",
         "format": "percent",
@@ -241,7 +224,6 @@ model.meta = {
     },
     "invest": {
         "id": "invest",
-        "name_short": "Investment freedom",
         "name": "Investment freedom",
         "description": "Index of economic freedom: investment freedom subcomponent",
         "format": "number",
@@ -254,7 +236,6 @@ model.meta = {
     },
     "labor": {
         "id": "labor",
-        "name_short": "Labor freedom",
         "name": "Labor freedom",
         "description": "Index of economic freedom: labor freedom subcomponent",
         "format": "number",
@@ -267,7 +248,6 @@ model.meta = {
     },
     "life": {
         "id": "life",
-        "name_short": "Life expectancy",
         "name": "Life expectancy",
         "description": "Life expectancy at birth",
         "format": "number",
@@ -280,7 +260,6 @@ model.meta = {
     },
     "malnutr": {
         "id": "malnutr",
-        "name_short": "Malnutrition",
         "name": "Malnutrition",
         "description": "Percent of under 5 year-olds with low weight for their height",
         "format": "percent",
@@ -293,7 +272,6 @@ model.meta = {
     },
     "matern": {
         "id": "matern",
-        "name_short": "Maternal mortality",
         "name": "Maternal mortality",
         "description": "Lifetime risk of maternal death",
         "format": "percent",
@@ -306,7 +284,6 @@ model.meta = {
     },
     "mobiles": {
         "id": "mobiles",
-        "name_short": "Mobile penetration",
         "name": "Mobile penetration",
         "description": "Mobile cellular subscriptions (per 100 people)",
         "format": "number",
@@ -319,7 +296,6 @@ model.meta = {
     },
     "monetary": {
         "id": "monetary",
-        "name_short": "Monetary freedom",
         "name": "Monetary freedom",
         "description": "Index of economic freedom: monetary freedom subcomponent",
         "format": "number",
@@ -332,7 +308,6 @@ model.meta = {
     },
     "non_violence": {
         "id": "non_violence",
-        "name_short": "Political stability & non-violence",
         "name": "Political stability & non-violence",
         "description": "World governance indicator: political stability and non-violence component",
         "format": "number",
@@ -345,7 +320,6 @@ model.meta = {
     },
     "road_floods": {
         "id": "road_floods",
-        "name_short": "Road flooding",
         "name": "Road flooding",
         "description": "Frequency of floods divided by land area",
         "format": "number",
@@ -358,7 +332,6 @@ model.meta = {
     },
     "road_paved": {
         "id": "road_paved",
-        "name_short": "Paved roads",
         "name": "Paved roads",
         "description": "Percentage of paved roads",
         "format": "percent",
@@ -371,7 +344,6 @@ model.meta = {
     },
     "rural_popn": {
         "id": "rural_popn",
-        "name_short": "Rural population",
         "name": "Rural population",
         "description": "Percent of population in rural livelihoods",
         "format": "percent",
@@ -384,7 +356,6 @@ model.meta = {
     },
     "rule_of_law": {
         "id": "rule_of_law",
-        "name_short": "Rule of law",
         "name": "Rule of law",
         "description": "World governance indicator: rule of law component",
         "format": "number",
@@ -397,7 +368,6 @@ model.meta = {
     },
     "sanit": {
         "id": "sanit",
-        "name_short": "Sanitary water",
         "name": "Sanitary water",
         "description": "Percent population with access to improved sanitation",
         "format": "percent",
@@ -410,7 +380,6 @@ model.meta = {
     },
     "staff": {
         "id": "staff",
-        "name_short": "Health workers per capita",
         "name": "Health workers per capita",
         "description": "Number of medical workers per 1000 people",
         "format": "number",
@@ -423,7 +392,6 @@ model.meta = {
     },
     "trade": {
         "id": "trade",
-        "name_short": "Trade freedom",
         "name": "Trade freedom",
         "description": "Index of economic freedom: trade freedom subcomponent",
         "format": "number",
@@ -436,7 +404,6 @@ model.meta = {
     },
     "voice_accountability": {
         "id": "voice_accountability",
-        "name_short": "Voice & accountability",
         "name": "Voice & accountability",
         "description": "World governance indicator: voice and accountability component",
         "format": "number",
@@ -449,7 +416,6 @@ model.meta = {
     },
     "water_access": {
         "id": "water_access",
-        "name_short": "Water access",
         "name": "Water access",
         "description": "Percent population with access to improved water supply",
         "format": "percent",
@@ -462,7 +428,6 @@ model.meta = {
     },
     "water_disease": {
         "id": "water_disease",
-        "name_short": "Water disease",
         "name": "Water disease",
         "description": "Deaths due to water borne diseases in under 5 year-olds",
         "format": "number",
@@ -475,7 +440,6 @@ model.meta = {
     },
     "water_use": {
         "id": "water_use",
-        "name_short": "Water use",
         "name": "Water use",
         "description": "Percent of total internal and external water withdrawn for all uses ",
         "format": "percent",
@@ -488,7 +452,6 @@ model.meta = {
     },
     "yield_cv": {
         "id": "yield_cv",
-        "name_short": "Variation of cereal yield",
         "name": "Variation of cereal yield",
         "description": "Coefficient of variation of annual cereal yield ",
         "format": "number",
@@ -501,7 +464,6 @@ model.meta = {
     },
     "yld_proj": {
         "id": "yld_proj",
-        "name_short": "Yield change",
         "name": "Yield change",
         "description": "Projected impact of climate change on agricultural yields",
         "format": "percent",
@@ -514,7 +476,6 @@ model.meta = {
     },
     "governance": {
         "id": "governance",
-        "name_short": "Governance",
         "name": "Governance",
         "description": "Component measuring national stability, governmental responsiveness and corruption ",
         "format": null,
@@ -527,7 +488,6 @@ model.meta = {
     },
     "economic": {
         "id": "economic",
-        "name_short": "Economic readiness",
         "name": "Economic readiness",
         "description": "Component measuring economic stability, growth and governmental regulation",
         "format": null,
@@ -540,7 +500,6 @@ model.meta = {
     },
     "social": {
         "id": "social",
-        "name_short": "Social readiness",
         "name": "Social readiness",
         "description": "Component measuring the society's awareness and understanding of climate risks and their belief that changes will increase adaptation capacity",
         "format": null,
@@ -553,7 +512,6 @@ model.meta = {
     },
     "exposure": {
         "id": "exposure",
-        "name_short": "Exposure",
         "name": "Exposure",
         "description": "Component analyzing the probability of climate related hazards",
         "format": null,
@@ -566,7 +524,6 @@ model.meta = {
     },
     "sensitivity": {
         "id": "sensitivity",
-        "name_short": "Sensitivity",
         "name": "Sensitivity",
         "description": "Component measuring the potential severity of the impacts of climate-related threats",
         "format": null,
@@ -579,7 +536,6 @@ model.meta = {
     },
     "capacity": {
         "id": "capacity",
-        "name_short": "Capacity",
         "name": "Capacity",
         "description": "Component measuring the availability of economic, social and institutional resources to cope with and adapt to the impacts of climate change",
         "format": null,
@@ -592,7 +548,6 @@ model.meta = {
     },
     "water": {
         "id": "water",
-        "name_short": "Water",
         "name": "Water",
         "description": "Sector measuring a nation's current and future ability to provide clean water",
         "format": null,
@@ -605,7 +560,6 @@ model.meta = {
     },
     "food": {
         "id": "food",
-        "name_short": "Food",
         "name": "Food",
         "description": "Sector measuring the nation's food production, nutrition and rural population",
         "format": null,
@@ -618,7 +572,6 @@ model.meta = {
     },
     "health": {
         "id": "health",
-        "name_short": "Health",
         "name": "Health",
         "description": "Sector measuring a nation's ability to provide health services against several mortality statistics",
         "format": null,
@@ -631,7 +584,6 @@ model.meta = {
     },
     "infrastructure": {
         "id": "infrastructure",
-        "name_short": "Infrastructure",
         "name": "Infrastructure",
         "description": "Sector analyzing three direct factors impacting human well-being in the face of climate change: coasts, energy and transportation",
         "format": null,
@@ -644,7 +596,6 @@ model.meta = {
     },
     "vulnerability": {
         "id": "vulnerability",
-        "name_short": "Vulnerability",
         "name": "Vulnerability",
         "description": "Vulnerability meausres a country's exposure, sensitivity and ability to cope with climate related hazards, as well as accounting for the overall status of food, water, health and infrastructure within the nation",
         "format": null,
@@ -657,7 +608,6 @@ model.meta = {
     },
     "readiness": {
         "id": "readiness",
-        "name_short": "Readiness",
         "name": "Readiness",
         "description": "Readiness measures the ability of a country's private and public sectors to leverage resources effectively towards increasing resiliency to climate change",
         "format": null,
@@ -670,8 +620,7 @@ model.meta = {
     },
     "gain": {
         "id": "gain",
-        "name_short": "GaIn™",
-        "name": "Global Adaptation Index™",
+        "name": "GaIn™",
         "description": "The Global Adaptation Index™ (GaIn™) exposes countries' vulnerabilities to climate change and opportunities to improve resilience. It aims to help businesses and the public sector to better prioritize investments for a more efficient response to the immediate global challenges ahead.",
         "format": null,
         "index": "gain",
