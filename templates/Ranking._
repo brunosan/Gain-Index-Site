@@ -2,21 +2,18 @@
   <h2>Country Rankings</h2>
   <ul class='indices'>
     <% _.each(indices, function(index) { %>
-      <li><a href='/ranking/<%= index %>'><%= index %></a></li>
+      <li><a href='/ranking/<%= index.id %>'><%= index.name %></a></li>
     <% }); %>
   </ul>
   <div class='categories'>
     <ul>
-      <li><a href='/ranking/<%= activeIndex %>'><%= activeIndex %></a></li>
-    </ul>
-    <ul>
       <% _.each(sectors, function(sector) { %>
-        <li><a href='/ranking/<%= sector %>'><%= sector %></a></li>
+        <li><a href='/ranking/<%= sector.id %>'><%= sector.name %></a></li>
       <% }); %>
     </ul>
     <ul>
       <% _.each(components, function(component) { %>
-        <li><a href='/ranking/<%= component %>'><%= component %></a></li>
+        <li><a href='/ranking/<%= component.id %>'><%= component.name %></a></li>
       <% }); %>
     </ul>
   </div>

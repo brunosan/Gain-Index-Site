@@ -16,20 +16,32 @@ view = views.Main.extend({
         if (!meta) return this; // should be a 404
 
         _.each(collection.model.meta, function(v) {
-            indices[v.index] = true;
+            indices[v.index] = {
+                id: v.index,
+                name: collection.model.meta[v.index].name
+            };
             if (v.index == meta.index) {
                 if (v.sector) {
-                    sectors[v.sector] = true;
+                    sectors[v.sector] = {
+                        id: v.sector,
+                        name: collection.model.meta[v.sector].name
+                    };
                 }
                 if (v.component) {
-                    components[v.component] = true;
+                    components[v.component] = {
+                        id: v.component,
+                        name: collection.model.meta[v.component].name
+                    };
                 }
             }
         });
 
-        components = _.keys(components).sort();
-        sectors = _.keys(sectors).sort();
-        indices = _.keys(indices).sort();
+        var comparator = function(index) {
+            return index.name;
+        };
+        components = _.sortBy(components, comparator);
+        sectors = _.sortBy(sectors, comparator);
+        indices = _.sortBy(indices, comparator);
 
         // Approach the cabinet.
         $(this.el).empty().append(templates.Cabinet());
@@ -37,7 +49,6 @@ view = views.Main.extend({
         // Empty pockets on top.
         $('.top', this.el).empty().append(templates.Ranking({
             indicatorName: meta.name,
-            activeIndex: meta.index,
             indices: indices,
             sectors: sectors,
             components: components
