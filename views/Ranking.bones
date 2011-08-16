@@ -16,22 +16,22 @@ view = views.Main.extend({
         if (!meta[this.model.get('id')]) {
             return this;
         }
-        var index = meta[this.model.get('id')].index;
+        var id = this.model.get('id');
         _.each(meta, function(v) {
             indices[v.index] = {
-                id: v.index,
+                path: v.index,
                 name: meta[v.index].name
             };
-            if (v.index == index) {
+            if (v.index == meta[id].index) {
                 if (v.sector) {
                     sectors[v.sector] = {
-                        id: v.sector,
+                        path: v.index + '/' + v.sector,
                         name: meta[v.sector].name
                     };
                 }
                 if (v.component) {
                     components[v.component] = {
-                        id: v.component,
+                        path: v.index + '/' + v.component,
                         name: meta[v.component].name
                     };
                 }

@@ -5,6 +5,8 @@ router = Backbone.Router.extend({
         '/country/:id': 'country',
         '/ranking': 'rankingDefault',
         '/ranking/:id': 'ranking',
+        '/ranking/readiness/:id': 'ranking',
+        '/ranking/vulnerability/:id': 'ranking',
         '/download': 'download',
         '/page/:id': 'page'
     },
