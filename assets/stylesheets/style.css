@@ -517,6 +517,10 @@ table.data tbody tr {
   width: 80px;
   margin-top: 5px;
   }
+.country-profile div.background-info {
+  width: 50%;
+  float: left;
+  }
 
 .country-summary {
   float: left;
