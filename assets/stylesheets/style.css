@@ -145,7 +145,8 @@ a:hover {
     #header .navigation li a.about.active { background-position: -265px -175px; width: 75px;}
     #header .navigation li a.about:hover { background-position: -265px -175px; width: 75px;}
 
-#header .org {
+#header .org a {
+  display: block;
   position: absolute;
   left: 850px;
   top: 10px;
