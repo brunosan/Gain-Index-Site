@@ -35,16 +35,25 @@ view = views.Main.extend({
             pin.y = 80 - Math.round(summary.vulnerability.value * 80);
         }
 
+        // GDP and Population data.  Assumes we want the latest year, and that both
+        // GDP and Pop latest year will be the same year (see template).
+        var gdp = {}; var pop = {};
+        gdp.val = _.last(collection.getGraphData('name', 'gdp'))[1] || 'Unavailable';
+        gdp.yr = _.last(collection.getGraphData('name', 'gdp'))[0] || 'Unavailable';
+        pop.val = _.last(collection.getGraphData('name', 'pop'))[1] || 'Unavailable';
+        pop.yr = _.last(collection.getGraphData('name', 'pop'))[0] || 'Unavailable';
+
         // Approach the cabinet.
         $(this.el).empty().append(templates.Cabinet());
-
         // Empty pockets on top.
         $('.top', this.el).empty().append(templates.Country({
             title: title,
             summary: summary,
             rank: lookup.gain.get('rank'),
             tabs: indicators,
-            pin: pin
+            pin: pin,
+            gdp: gdp,
+            pop: pop
         }));
 
         this.aboutView = new views.AboutQuadrant({
