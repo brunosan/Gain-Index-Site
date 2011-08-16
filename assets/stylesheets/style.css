@@ -156,6 +156,18 @@ a:hover {
   }
 
 /**
+ * Footer styles
+ */
+#footer {
+ height: 100px;
+ font-size: 20px;
+ background-color: #11202C;
+ -moz-box-shadow: 0px 0px 20px #000;
+ -webkit-box-shadow: 0px 0px 20px #000;
+ box-shadow: 0px 0px 20px #000;
+ }
+
+/**
  * Cabinet and drawer styles
  */
 #cabinet {
@@ -186,7 +198,8 @@ a:hover {
   -webkit-transition: left .5s ease;
   }
 #cabinet .drawer.open {
-  left: 635px;
+  left: 50%;
+  margin-left: 155px;
   }
   #cabinet .drawer .handle {
     height: 40px;
@@ -214,14 +227,24 @@ a:hover {
 #cabinet .floor {
   position: absolute;
   z-index: -1;
-  left: 635px;
   top: 20px;
+  left: 50%;
+  margin-left: 155px;
   width: 320px;
   background: #ebebeb;
   border-radius: 0px 3px 3px 0px;
   -moz-border-radius: 0px 3px 3px 0px;
   -webkit-border-radius: 0px 3px 3px 0px;
   }
+  #cabinet .slider.fixed {
+    position: fixed;
+    top: 0;
+    }
+    #cabinet .slider.fixed.bottom {
+      position: absolute;
+      top: auto;
+      bottom: 0;
+      }
 
   #cabinet .floor .content {
     padding: 20px 20px 20px 40px;
@@ -312,6 +335,7 @@ a:hover {
 table.data {
   width: 100%;
   table-layout: fixed;
+  clear: left;
   }
 table.data tr {
   line-height: 25px;
@@ -692,3 +716,17 @@ table.data tbody tr {
   padding: 15px 20px;
   }
 
+/*-----------------------
+  Markup free clearing
+  Details: http://perishablepress.com/press/2009/12/06/new-clearfix-hack
+-------------------------*/
+.clearfix:after {
+  content: '.';
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+  }
+
+* html .clearfix { height: 1%; } /* IE6 */
+*:first-child + html .clearfix { min-height: 1%; } /* IE7 */

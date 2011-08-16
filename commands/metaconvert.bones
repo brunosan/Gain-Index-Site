@@ -3,16 +3,23 @@ var fs = require('fs'),
     request = require('request');
 
 command = Bones.Command.extend();
-command.description = 'Generate JSON from /resoureces/meta/indicators-meta.csv';
-command.prototype.initialize = function(options) {
+command.description = 'concert indicators or country meta csv files to JSON';
 
-    var filename = __dirname + '/../resources/meta/indicators-meta.csv',
+command.options['file'] = {
+    'title': 'file',
+    'description': 'indicators|country - Meta file to convert inciators-meta.csv or country-meta.csv',
+    'default': 'indicators'
+};
+
+command.prototype.initialize = function(options) {
+    var type = options.config.file || 'indicators'
+    var filename = __dirname + '/../resources/meta/' + type + '-meta.csv',
         data = {};
 
     csv()
     .fromPath(filename, {columns: true})
     .on('data', function(v, i) {
-        data[v.id] = v    
+        data[v.id || v['ISO3']] = v;
     })
     .on('end', function() {
         console.log(JSON.stringify(data, null, 4));

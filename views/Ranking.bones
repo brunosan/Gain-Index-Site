@@ -3,9 +3,6 @@ view = views.Main.extend({
         'click .drawer .handle a.handle': 'closeDrawer',
         'click table.data a.handle': 'openDrawer',
     }, views.Main.prototype.events),
-    initialize: function() {
-        views.Main.prototype.initialize.apply(this, arguments);
-    },
     render: function() {
         var data = [],
             sectors = {},
@@ -15,10 +12,10 @@ view = views.Main.extend({
             collection = this.model.get('indicators');
 
         // Arrange our metadata.
-        var meta = collection.model.prototype.meta[this.model.get('id')];
+        var meta = collection.model.meta[this.model.get('id')];
         if (!meta) return this; // should be a 404
 
-        _.each(collection.model.prototype.meta, function(v) {
+        _.each(collection.model.meta, function(v) {
             indices[v.index] = true;
             if (v.index == meta.index) {
                 if (v.sector) {
@@ -54,7 +51,7 @@ view = views.Main.extend({
         // Some things fall on the floor.
         $('.floor', this.el).empty().append(templates.RankingFloor({
             title: meta.name,
-            content: '<p>'+meta.explanation+'</p>'
+            content: '<p>' + meta.description + '</p>'
         }));
         return this;
     },
@@ -70,7 +67,7 @@ view = views.Main.extend({
         this.tableView.attach();
     },
     openDrawer: function(ev) {
-        var id = $(ev.currentTarget).parents('tr').attr('id').substr(8);;
+        var id = $(ev.currentTarget).parents('tr').attr('id').substr(8);
         if (!id) return;
 
         var data = this.model.get('indicators').getGraphData('ISO3', id);
