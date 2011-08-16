@@ -38,10 +38,22 @@ view = views.Main.extend({
         // GDP and Population data.  Assumes we want the latest year, and that both
         // GDP and Pop latest year will be the same year (see template).
         var gdp = {}; var pop = {};
-        gdp.val = _.last(collection.getGraphData('name', 'gdp'))[1] || 'Unavailable';
-        gdp.yr = _.last(collection.getGraphData('name', 'gdp'))[0] || 'Unavailable';
-        pop.val = _.last(collection.getGraphData('name', 'pop'))[1] || 'Unavailable';
-        pop.yr = _.last(collection.getGraphData('name', 'pop'))[0] || 'Unavailable';
+        var gdpLatest = _.last(collection.getGraphData('name', 'gdp'));
+        var popLatest = _.last(collection.getGraphData('name', 'pop'));
+        if (gdpLatest instanceof Array) {
+            gdp.val = gdpLatest[1].toFixed(0);
+            gdp.yr = gdpLatest[0];
+        } else {
+            gdp.val = gdp.yr = 'Unknown';
+        }
+        if (popLatest instanceof Array) {
+            pop.val = popLatest[1];
+            pop.yr = popLatest[0];
+        } else {
+            pop.val = pop.yr = 'Unknown';
+        }
+        // Determine year of data
+        var bgdYear = (gdp.yr != 'Unknown' ? gdp.yr : pop.yr);
 
         // Approach the cabinet.
         $(this.el).empty().append(templates.Cabinet());
@@ -53,7 +65,8 @@ view = views.Main.extend({
             tabs: indicators,
             pin: pin,
             gdp: gdp,
-            pop: pop
+            pop: pop,
+            bgdYear: bgdYear
         }));
 
         this.aboutView = new views.AboutQuadrant({
