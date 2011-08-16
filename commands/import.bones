@@ -63,7 +63,7 @@ command.prototype.initialize = function(options) {
      */
     function reduceValues(memo, value, key) {
         if (/^\d{4}$/.test(key)) {
-            var fl = parseFloat(value);
+            var fl = parseFloat(('' + value).replace(/,/g, ''));
             if (!_.isNull(fl) && !_.isNaN(fl)) {
                 memo[key] = fl;
             }
