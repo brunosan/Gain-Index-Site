@@ -1,6 +1,6 @@
 <div class='country-profile'>
   <h2><%= title %></h2>
-  <p>All numbers are for <%= gdp.yr %></p>
+  <p>All numbers are for <%= bgdYear %></p>
   <div class='background-info left clearfix'>GDP (Current US$): $<%= gdp.val %></div>
   <div class='background-info right clearfix'>Population, total: <%= pop.val %></div>
   <div class='country-summary'>
