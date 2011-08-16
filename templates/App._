@@ -29,8 +29,12 @@
     </ul>
     <div class='org'><a href='http://globalai.org'>Global Adaptaion Institute</a></div>
   </div></div>
-  <div id='page' class='limiter'>
+  <div id='page' class='limiter clearfix'>
     <div id='main'><%= main %></div>
+  </div>
+  <div id='footer'>
+    <div class='limiter'>
+    </div>
   </div>
   <script><%= startup %></script>
 </body>
