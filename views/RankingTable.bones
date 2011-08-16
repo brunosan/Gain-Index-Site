@@ -61,12 +61,7 @@ view = Backbone.View.extend({
         return false;
     },
     sortRank: function(ev) {
-        this.collection.comparator = function(model) {
-            var rank = model.get('rank');
-            if (rank) return rank;
-            return Infinity;
-        };
-        this.collection.sort();
+        this.collection.sortByRank();
         return false;
     },
     sortIncome: function(ev) {
