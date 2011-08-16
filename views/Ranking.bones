@@ -6,7 +6,6 @@ view = views.Main.extend({
     render: function() {
         var data = [],
             sectors = {},
-            indices = {},
             components = {},
             title = '',
             collection = this.model.get('indicators'),
@@ -22,10 +21,6 @@ view = views.Main.extend({
             name: meta[meta[id].index].name
         };
         _.each(meta, function(v) {
-            indices[v.index] = {
-                path: v.index == 'gain' ? '/ranking' : '/ranking/' + v.index,
-                name: meta[v.index].name
-            };
             if (v.index == meta[id].index) {
                 if (v.sector) {
                     sectors[v.sector] = {
@@ -47,7 +42,6 @@ view = views.Main.extend({
         };
         components = _.sortBy(components, comparator);
         sectors = _.sortBy(sectors, comparator);
-        indices = _.sortBy(indices, comparator);
 
         // Approach the cabinet.
         $(this.el).empty().append(templates.Cabinet());
@@ -56,7 +50,6 @@ view = views.Main.extend({
         $('.top', this.el).empty().append(templates.Ranking({
             indicatorName: this.model.get('subject').meta('name'),
             active: active,
-            indices: indices,
             sectors: sectors,
             components: components
         }));

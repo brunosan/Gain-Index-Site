@@ -8,16 +8,13 @@ view = Backbone.View.extend({
         return this;
     },
     activeLinks: function() {
-        $('a.active').removeClass('active');
         var activePath = window.location.pathname;
-
-        $('a').each(function(i, a) {
-            var href = $(a).attr('href');
-            if (activePath == '/') {
-                activePath == href && $(a).addClass('active');
-            } else {
-                (activePath.indexOf(href) != -1) && (href != '/') && $(a).addClass('active');
-            }
+        $('a.active').removeClass('active');
+        $('a.exact').each(function(i, a) {
+            activePath == $(a).attr('href') && $(a).addClass('active');
+        });
+        $('a:not(.exact)').each(function(i, a) {
+            (activePath.indexOf($(a).attr('href')) != -1) && $(a).addClass('active');
         });
     },
     // Initializes global drawer events

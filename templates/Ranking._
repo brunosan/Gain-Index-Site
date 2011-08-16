@@ -1,14 +1,14 @@
 <div class='ranking'>
   <h2>Country Rankings</h2>
   <ul class='indices'>
-    <% _.each(indices, function(index) { %>
-      <li><a href='<%= index.path %>'><%= index.name %></a></li>
-    <% }); %>
+    <li><a href='/ranking' class='exact'>GaIn™</a></li>
+    <li><a href='/ranking/vulnerability'>Vulnerability</a></li>
+    <li><a href='/ranking/readiness'>Readiness</a></li>
   </ul>
   <div class='categories'>
     <% if (active.path) { %>
     <ul>
-      <li><a href='<%= active.path %>'><%= active.name %></a></li>
+      <li><a href='<%= active.path %>' class='exact'><%= active.name %></a></li>
     </ul>
     <% } %>
 	 	<ul>
