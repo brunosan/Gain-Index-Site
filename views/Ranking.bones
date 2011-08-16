@@ -17,21 +17,25 @@ view = views.Main.extend({
             return this;
         }
         var id = this.model.get('id');
+        var active = (id == 'gain') ? {} : {
+            path: '/ranking/' + meta[id].index,
+            name: meta[meta[id].index].name
+        };
         _.each(meta, function(v) {
             indices[v.index] = {
-                path: v.index,
+                path: v.index == 'gain' ? '/ranking' : '/ranking/' + v.index,
                 name: meta[v.index].name
             };
             if (v.index == meta[id].index) {
                 if (v.sector) {
                     sectors[v.sector] = {
-                        path: v.index + '/' + v.sector,
+                        path: '/ranking/' + v.index + '/' + v.sector,
                         name: meta[v.sector].name
                     };
                 }
                 if (v.component) {
                     components[v.component] = {
-                        path: v.index + '/' + v.component,
+                        path: '/ranking/' + v.index + '/' + v.component,
                         name: meta[v.component].name
                     };
                 }
@@ -51,6 +55,7 @@ view = views.Main.extend({
         // Empty pockets on top.
         $('.top', this.el).empty().append(templates.Ranking({
             indicatorName: this.model.get('subject').meta('name'),
+            active: active,
             indices: indices,
             sectors: sectors,
             components: components

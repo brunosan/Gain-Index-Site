@@ -2,18 +2,23 @@
   <h2>Country Rankings</h2>
   <ul class='indices'>
     <% _.each(indices, function(index) { %>
-      <li><a href='/ranking/<%= index.path %>'><%= index.name %></a></li>
+      <li><a href='<%= index.path %>'><%= index.name %></a></li>
     <% }); %>
   </ul>
   <div class='categories'>
+    <% if (active.path) { %>
     <ul>
+      <li><a href='<%= active.path %>'><%= active.name %></a></li>
+    </ul>
+    <% } %>
+	 	<ul>
       <% _.each(sectors, function(sector) { %>
-        <li><a href='/ranking/<%= sector.path %>'><%= sector.name %></a></li>
+        <li><a href='<%= sector.path %>'><%= sector.name %></a></li>
       <% }); %>
     </ul>
     <ul>
       <% _.each(components, function(component) { %>
-        <li><a href='/ranking/<%= component.path %>'><%= component.name %></a></li>
+        <li><a href='<%= component.path %>'><%= component.name %></a></li>
       <% }); %>
     </ul>
   </div>
