@@ -6,7 +6,7 @@ view = views.Main.extend({
         this.options.structure = options.structure || 'components';
 
         var tree = {};
-        _.each(this.collection.model.prototype.meta, function(field) {
+        _.each(this.collection.model.meta, function(field) {
             if (field.index && tree[field.index] == undefined) {
                 tree[field.index] = {'components': {}, 'sectors': {}};
             }
@@ -35,7 +35,7 @@ view = views.Main.extend({
         });
 
         var branch = this.tree[this.options.tab][this.options.structure],
-            meta = this.collection.model.prototype.meta
+            meta = this.collection.model.meta
 
         var appendData = function(key, klass) {
             var field = {

@@ -11,17 +11,10 @@ view = views.AdminPopup.extend({
         var that = this;
         model.fetch({
             success: function(model) {
-                // @TODO replace all this w/ countries model
-                that.options.countries = {};
-                that.options.countries['abw'] = 'Aruba';
-                that.options.countries['afg'] = 'Afghanistan';
-                that.options.countries['ago'] = 'Angola';
-                that.options.countries['tod'] = 'TODO';
-                that.options.documentType = options.documentType;
                 _.bindAll(that, 'submit');
                 that.content = templates.AdminPopupFrontFeature({
                     documentType: that.options.documentType,
-                    countries: that.options.countries,
+                    countries: models.Country.meta,
                     featuredFirst: model.get('featuredFirst'),
                     featuredSecond: model.get('featuredSecond')
                 });

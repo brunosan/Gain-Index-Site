@@ -4,9 +4,9 @@
     <select name="featuredFirst">
         <% _.each(countries, function(v, k) { %>
             <% if (k == featuredFirst) { %>
-                <option value="<%= k %>" selected="selected"><%= v %></option>
+                <option value="<%= k %>" selected="selected"><%= v.name %></option>
             <% } else { %>
-                <option value="<%= k %>"><%= v %></option>
+                <option value="<%= k %>"><%= v.name %></option>
             <% } %>
         <% }); %>
     </select>
@@ -17,9 +17,9 @@
     <select name="featuredSecond">
         <% _.each(countries, function(v, k) { %>
             <% if (k == featuredSecond) { %>
-                <option value="<%= k %>" selected="selected"><%= v %></option>
+                <option value="<%= k %>" selected="selected"><%= v.name %></option>
             <% } else { %>
-                <option value="<%= k %>"><%= v %></option>
+                <option value="<%= k %>"><%= v.name %></option>
             <% } %>
         <% }); %>
     </select>
