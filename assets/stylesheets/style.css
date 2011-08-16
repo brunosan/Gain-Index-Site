@@ -642,7 +642,7 @@ table.data tbody tr {
   width: 100%;
   float: left;
   }
-.ranking ul.indices li {
+.ranking ul.indices li a {
   float: left;
   width: 120px;
   padding: 0px 20px;
@@ -653,7 +653,7 @@ table.data tbody tr {
   -webkit-border-radius: 3px 3px 0px 0px;
   border-radius: 3px 3px 0px 0px;
   }
-.ranking ul.indices li.active {
+.ranking ul.indices li a.active {
   background-color: #fff;
   }
 
