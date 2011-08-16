@@ -20,7 +20,9 @@
     "underscore": "= 1.1.7",
     "request": "https://github.com/mikeal/request/tarball/8bb7f98ba8b78c217552c979811c07f1299318fe",
     "backbone-couch": "= 1.0.0",
-    "chrono": "= 1.0.1"
+    "chrono": "= 1.0.1",
+    "tilelive": "= 4.0.5",
+    "tilelive-mapnik" : "= 0.2.1"
   },
   "devDependencies": {}
 }
