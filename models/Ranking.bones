@@ -9,8 +9,12 @@ model = Backbone.Model.extend({
     },
     initialize: function(attributes, options) {
         var indicators = new models.Indicators(attributes.indicators);
+        var subject = new models.Indicator({id: this.id});
         this.calculateRankings(indicators);
-        this.set({indicators: indicators}, {silent : true});
+        this.set({
+            indicators: indicators,
+            subject: subject
+        }, {silent : true});
     },
     calculateRankings: function(indicators) {
 

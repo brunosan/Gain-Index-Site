@@ -14,6 +14,9 @@ model = Backbone.Model.extend({
            series = 'rank';
         }
         return this.get(series)[this.get('currentYear')];
+    },
+    meta: function(key) {
+        return Backbone.Model.escapeHTML(model.meta[this.id][key] || '');
     }
 });
 

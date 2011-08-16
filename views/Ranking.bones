@@ -9,28 +9,30 @@ view = views.Main.extend({
             indices = {},
             components = {},
             title = '',
-            collection = this.model.get('indicators');
+            collection = this.model.get('indicators'),
+            meta = collection.model.meta;
 
         // Arrange our metadata.
-        var meta = collection.model.meta[this.model.get('id')];
-        if (!meta) return this; // should be a 404
-
-        _.each(collection.model.meta, function(v) {
+        if (!meta[this.model.get('id')]) {
+            return this;
+        }
+        var index = meta[this.model.get('id')].index;
+        _.each(meta, function(v) {
             indices[v.index] = {
                 id: v.index,
-                name: collection.model.meta[v.index].name
+                name: meta[v.index].name
             };
-            if (v.index == meta.index) {
+            if (v.index == index) {
                 if (v.sector) {
                     sectors[v.sector] = {
                         id: v.sector,
-                        name: collection.model.meta[v.sector].name
+                        name: meta[v.sector].name
                     };
                 }
                 if (v.component) {
                     components[v.component] = {
                         id: v.component,
-                        name: collection.model.meta[v.component].name
+                        name: meta[v.component].name
                     };
                 }
             }
@@ -48,7 +50,7 @@ view = views.Main.extend({
 
         // Empty pockets on top.
         $('.top', this.el).empty().append(templates.Ranking({
-            indicatorName: meta.name,
+            indicatorName: this.model.get('subject').meta('name'),
             indices: indices,
             sectors: sectors,
             components: components
@@ -61,8 +63,8 @@ view = views.Main.extend({
 
         // Some things fall on the floor.
         $('.floor', this.el).empty().append(templates.RankingFloor({
-            title: meta.name,
-            content: '<p>' + meta.description + '</p>'
+            title: this.model.get('subject').meta('name'),
+            content: '<p>' + this.model.get('subject').meta('description') + '</p>'
         }));
         return this;
     },
@@ -86,7 +88,7 @@ view = views.Main.extend({
 
         $('.drawer .content', this.el).empty().append(templates.RankingDrawer({
             countryName: meta[id].name,
-            indicatorName: models.Indicator.meta[this.model.id].name,
+            indicatorName: this.model.get('subject').meta('name'),
             countryId: id
         }));
 
