@@ -67,14 +67,16 @@ view = views.Main.extend({
         this.tableView.attach();
     },
     openDrawer: function(ev) {
+        var meta = models.Country.meta;
         var id = $(ev.currentTarget).parents('tr').attr('id').substr(8);
-        if (!id) return;
+        if (!id || !meta[id]) return;
 
         var data = this.model.get('indicators').getGraphData('ISO3', id);
 
         $('.drawer .content', this.el).empty().append(templates.RankingDrawer({
-            title: id,
-            country: id
+            countryName: meta[id].name,
+            indicatorName: models.Indicator.meta[this.model.id].name,
+            countryId: id
         }));
 
         if (data.length > 1) {
