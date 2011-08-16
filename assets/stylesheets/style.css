@@ -643,6 +643,9 @@ table.data tbody tr {
   float: left;
   }
 .ranking ul.indices li a {
+  font-family: 'AlternateGothicLTNo3Regular',"HelveticaNeueBoldCondensed", "HelveticaNeue-Bold-Condensed", "Arial Narrow", "Arial", sans-serif;
+  color: #000;
+  text-transform: uppercase;
   float: left;
   width: 120px;
   padding: 0px 20px;
@@ -666,21 +669,40 @@ table.data tbody tr {
   .ranking .categories ul {
     float: left;
     padding: 0px 0px;
-    margin-right: 20px;
-    background-color: #fff;
-    background-color: #c6c6c6;
-    -moz-border-radius: 3px;
-    -webkit-border-radius: 3px;
-    border-radius: 3px;
+    margin-right: 10px;
     }
     .ranking .categories ul li {
       float: left;
-      padding: 0px 5px;
-      line-height: 20px;
-      border-right: 1px solid #fff;
+      margin-right: 1px;
       }
-    .ranking .categories ul li.active {
-      background-color: #fff;
+    .ranking .categories ul li a {
+      color: #fff;
+      text-transform: uppercase;
+      font-size: 11px;
+      padding: 0 5px;
+      display: block;
+      line-height: 20px;
+      background-color: #c6c6c6;
+      border-bottom: 1px solid #a8a8a8;
+      }
+    .ranking .categories ul li:first-child a {
+      -moz-border-radius-topleft: 3px;
+      -moz-border-radius-bottomleft: 3px;
+      -webkit-border-top-left-radius: 3px;
+      -webkit-border-bottom-left-radius: 3px;
+      border-top-left-radius: 3px;
+      border-bottom-left-radius: 3px;
+      }
+    .ranking .categories ul li:last-child a {
+      -moz-border-radius-topright: 3px;
+      -moz-border-radius-bottomright: 3px;
+      -webkit-border-top-right-radius: 3px;
+      -webkit-border-bottom-right-radius: 3px;
+      border-top-right-radius: 3px;
+      border-bottom-right-radius: 3px;
+      }
+    .ranking .categories ul li a.active {
+      background-color: #a8a8a8;
       }
 .ranking table.data {
   background: #fff;
