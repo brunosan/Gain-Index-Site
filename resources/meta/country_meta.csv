@@ -1,193 +1,1 @@
-"ISO3","name","oecd_value","oecd_income"
-"AFG","Afghanistan",1,"Low-income"
-"ALB","Albania",2,"Lower-middle-income"
-"DZA","Algeria",2,"Lower-middle-income"
-"AND","Andorra",4,"Upper-income"
-"AGO","Angola",2,"Lower-middle-income"
-"ATG","Antigua and Barbuda",4,"Upper-income"
-"ARG","Argentina",3,"Upper-middle-income"
-"ARM","Armenia",2,"Lower-middle-income"
-"AUS","Australia",4,"Upper-income"
-"AUT","Austria",4,"Upper-income"
-"AZE","Azerbaijan",2,"Lower-middle-income"
-"BHS","Bahamas",4,"Upper-income"
-"BHR","Bahrain",4,"Upper-income"
-"BGD","Bangladesh",1,"Low-income"
-"BRB","Barbados",4,"Upper-income"
-"BLR","Belarus",3,"Upper-middle-income"
-"BEL","Belgium",4,"Upper-income"
-"BLZ","Belize",3,"Upper-middle-income"
-"BEN","Benin",1,"Low-income"
-"BTN","Bhutan",2,"Lower-middle-income"
-"BOL","Bolivia",2,"Lower-middle-income"
-"BIH","Bosnia & Herzegovina",2,"Lower-middle-income"
-"BWA","Botswana",3,"Upper-middle-income"
-"BRA","Brazil",3,"Upper-middle-income"
-"BRN","Brunei Darussalam",4,"Upper-income"
-"BGR","Bulgaria",3,"Upper-middle-income"
-"BFA","Burkina Faso",1,"Low-income"
-"BDI","Burundi",1,"Low-income"
-"KHM","Cambodia",1,"Low-income"
-"CMR","Cameroon",2,"Lower-middle-income"
-"CAN","Canada",4,"Upper-income"
-"CPV","Cape Verde",2,"Lower-middle-income"
-"CAF","The Central African Republic",1,"Low-income"
-"TCD","Chad",1,"Low-income"
-"CHL","Chile",3,"Upper-middle-income"
-"CHN","China",2,"Lower-middle-income"
-"COL","Colombia",2,"Lower-middle-income"
-"COM","Comoros",1,"Low-income"
-"COG","Congo",2,"Lower-middle-income"
-"COD","The Democratic Republic of the Congo",1,"Low-income"
-"CRI","Costa Rica",3,"Upper-middle-income"
-"CIV","Côte d'Ivoire",1,"Low-income"
-"HRV","Croatia",3,"Upper-middle-income"
-"CUB","Cuba",3,"Upper-middle-income"
-"CYP","Cyprus",4,"Upper-income"
-"CZE","The Czech Republic",4,"Upper-income"
-"DNK","Denmark",4,"Upper-income"
-"DJI","Djibouti",2,"Lower-middle-income"
-"DMA","Dominica",3,"Upper-middle-income"
-"DOM","The Dominican Republic",2,"Lower-middle-income"
-"ECU","Ecuador",2,"Lower-middle-income"
-"EGY","Egypt",2,"Lower-middle-income"
-"SLV","El Salvador",2,"Lower-middle-income"
-"GNQ","Equatorial Guinea",4,"Upper-income"
-"ERI","Eritrea",1,"Low-income"
-"EST","Estonia",4,"Upper-income"
-"ETH","Ethiopia",1,"Low-income"
-"FJI","Fiji",3,"Upper-middle-income"
-"FIN","Finland",4,"Upper-income"
-"FRA","France",4,"Upper-income"
-"GAB","Gabon",3,"Upper-middle-income"
-"GMB","Gambia",1,"Low-income"
-"GEO","Georgia",2,"Lower-middle-income"
-"DEU","Germany",4,"Upper-income"
-"GHA","Ghana",1,"Low-income"
-"GRC","Greece",4,"Upper-income"
-"GRD","Grenada",3,"Upper-middle-income"
-"GTM","Guatemala",2,"Lower-middle-income"
-"GIN","Guinea",1,"Low-income"
-"GNB","Guinea-Bissau",1,"Low-income"
-"GUY","Guyana",2,"Lower-middle-income"
-"HTI","Haiti",1,"Low-income"
-"HND","Honduras",2,"Lower-middle-income"
-"HUN","Hungary",4,"Upper-income"
-"ISL","Iceland",4,"Upper-income"
-"IND","India",2,"Lower-middle-income"
-"IDN","Indonesia",2,"Lower-middle-income"
-"IRN","Iran",2,"Lower-middle-income"
-"IRQ","Iraq",2,"Lower-middle-income"
-"IRL","Ireland",4,"Upper-income"
-"ISR","Israel",4,"Upper-income"
-"ITA","Italy",4,"Upper-income"
-"JAM","Jamaica",3,"Upper-middle-income"
-"JPN","Japan",4,"Upper-income"
-"JOR","Jordan",2,"Lower-middle-income"
-"KAZ","Kazakhstan",3,"Upper-middle-income"
-"KEN","Kenya",1,"Low-income"
-"KIR","Kiribati",2,"Lower-middle-income"
-"PRK","The Democratic People's Republic of Korea",1,"Low-income"
-"KOR","The Republic of Korea",4,"Upper-income"
-"KWT","Kuwait",4,"Upper-income"
-"KGZ","Kyrgyzstan",1,"Low-income"
-"LAO","Laos",1,"Low-income"
-"LVA","Latvia",3,"Upper-middle-income"
-"LBN","Lebanon",3,"Upper-middle-income"
-"LSO","Lesotho",2,"Lower-middle-income"
-"LBR","Liberia",1,"Low-income"
-"LBY","Libya",3,"Upper-middle-income"
-"LIE","Liechtenstein",4,"Upper-income"
-"LTU","Lithuania",3,"Upper-middle-income"
-"LUX","Luxembourg",4,"Upper-income"
-"MDG","Madagascar",1,"Low-income"
-"MWI","Malawi",1,"Low-income"
-"MYS","Malaysia",3,"Upper-middle-income"
-"MDV","Maldives",2,"Lower-middle-income"
-"MLI","Mali",1,"Low-income"
-"MLT","Malta",4,"Upper-income"
-"MHL","The Marshall Islands",2,"Lower-middle-income"
-"MRT","Mauritania",1,"Low-income"
-"MUS","Mauritius",3,"Upper-middle-income"
-"MEX","Mexico",3,"Upper-middle-income"
-"FSM","The Federated States of Micronesia",2,"Lower-middle-income"
-"MDA","Moldova",2,"Lower-middle-income"
-"MCO","Monaco",4,"Upper-income"
-"MKD","Macedonia",2,"Lower-middle-income"
-"MNG","Mongolia",2,"Lower-middle-income"
-"MNE","Montenegro",4,"Upper-income"
-"MAR","Morocco",2,"Lower-middle-income"
-"MOZ","Mozambique",1,"Low-income"
-"MMR","Myanmar",1,"Low-income"
-"NAM","Namibia",2,"Lower-middle-income"
-"NRU","Nauru",1,"Low-income"
-"NPL","Nepal",1,"Low-income"
-"NLD","The Netherlands",4,"Upper-income"
-"NZL","New Zealand",4,"Upper-income"
-"NIC","Nicaragua",2,"Lower-middle-income"
-"NER","Niger",1,"Low-income"
-"NGA","Nigeria",1,"Low-income"
-"NOR","Norway",4,"Upper-income"
-"OMN","Oman",4,"Upper-income"
-"PAK","Pakistan",1,"Low-income"
-"PLW","Palau",3,"Upper-middle-income"
-"PAN","Panama",3,"Upper-middle-income"
-"PNG","Papua New Guinea",1,"Low-income"
-"PRY","Paraguay",2,"Lower-middle-income"
-"PER","Peru",2,"Lower-middle-income"
-"PHL","Philippines",2,"Lower-middle-income"
-"POL","Poland",3,"Upper-middle-income"
-"PRT","Portugal",4,"Upper-income"
-"QAT","Qatar",4,"Upper-income"
-"ROU","Romania",3,"Upper-middle-income"
-"RUS","The Russian Federation",3,"Upper-middle-income"
-"RWA","Rwanda",1,"Low-income"
-"KNA","Saint Kitts and Nevis",3,"Upper-middle-income"
-"LCA","Saint Lucia",3,"Upper-middle-income"
-"VCT","St Vincent & Grenadines",3,"Upper-middle-income"
-"WSM","Samoa",2,"Lower-middle-income"
-"SMR","San Marino",4,"Upper-income"
-"STP","Sao Tome & Principe",1,"Low-income"
-"SAU","Saudi Arabia",4,"Upper-income"
-"SEN","Senegal",1,"Low-income"
-"SRB","Serbia",4,"Upper-income"
-"SYC","Seychelles",3,"Upper-middle-income"
-"SLE","Sierra Leone",1,"Low-income"
-"SGP","Singapore",4,"Upper-income"
-"SVK","Slovakia",4,"Upper-income"
-"SVN","Slovenia",4,"Upper-income"
-"SLB","Solomon Islands",1,"Low-income"
-"SOM","Somalia",1,"Low-income"
-"ZAF","South Africa",3,"Upper-middle-income"
-"ESP","Spain",4,"Upper-income"
-"LKA","Sri Lanka",2,"Lower-middle-income"
-"SDN","Sudan",2,"Lower-middle-income"
-"SUR","Suriname",3,"Upper-middle-income"
-"SWZ","Swaziland",2,"Lower-middle-income"
-"SWE","Sweden",4,"Upper-income"
-"CHE","Switzerland",4,"Upper-income"
-"SYR","Syria",2,"Lower-middle-income"
-"TJK","Tajikistan",1,"Low-income"
-"TZA","Tanzania",1,"Low-income"
-"THA","Thailand",2,"Lower-middle-income"
-"TLS","Timor-Leste",1,"Low-income"
-"TGO","Togo",1,"Low-income"
-"TON","Tonga",2,"Lower-middle-income"
-"TTO","Trinidad & Tobago",4,"Upper-income"
-"TUN","Tunisia",2,"Lower-middle-income"
-"TUR","Turkey",3,"Upper-middle-income"
-"TKM","Turkmenistan",2,"Lower-middle-income"
-"TUV","Tuvalu",1,"Low-income"
-"UGA","Uganda",1,"Low-income"
-"UKR","Ukraine",2,"Lower-middle-income"
-"ARE","United Arab Emirates",4,"Upper-income"
-"GBR","The United Kingdom",4,"Upper-income"
-"USA","The United States",4,"Upper-income"
-"URY","Uruguay",3,"Upper-middle-income"
-"UZB","Uzbekistan",1,"Low-income"
-"VUT","Vanuatu",2,"Lower-middle-income"
-"VEN","Venezuela",3,"Upper-middle-income"
-"VNM","Viet Nam",1,"Low-income"
-"YEM","Yemen",1,"Low-income"
-"ZMB","Zambia",1,"Low-income"
-"ZWE","Zimbabwe",1,"Low-income"
+ISO3,name,oecd_value,oecd_income,outlookAFG,Afghanistan,1,Low-income,ALB,Albania,2,Lower-middle-income,0.2DZA,Algeria,2,Lower-middle-income,-0.2AND,Andorra,4,Upper-income,AGO,Angola,2,Lower-middle-income,0.3ATG,Antigua and Barbuda,4,Upper-income,ARG,Argentina,3,Upper-middle-income,-0.6ARM,Armenia,2,Lower-middle-income,-0.3AUS,Australia,4,Upper-income,-0.3AUT,Austria,4,Upper-income,-0.2AZE,Azerbaijan,2,Lower-middle-income,0.3BHS,Bahamas,4,Upper-income,-1.1BHR,Bahrain,4,Upper-income,0.2BGD,Bangladesh,1,Low-income,1BRB,Barbados,4,Upper-income,-1BLR,Belarus,3,Upper-middle-income,0.9BEL,Belgium,4,Upper-income,-1BLZ,Belize,3,Upper-middle-income,-0.3BEN,Benin,1,Low-income,-0.2BTN,Bhutan,2,Lower-middle-income,-0.4BOL,Bolivia,2,Lower-middle-income,-1.1BIH,Bosnia & Herzegovina,2,Lower-middle-income,0.6BWA,Botswana,3,Upper-middle-income,0BRA,Brazil,3,Upper-middle-income,-0.5BRN,Brunei Darussalam,4,Upper-income,BGR,Bulgaria,3,Upper-middle-income,-0.6BFA,Burkina Faso,1,Low-income,-0.3BDI,Burundi,1,Low-income,-0.1KHM,Cambodia,1,Low-income,-0.1CMR,Cameroon,2,Lower-middle-income,-0.3CAN,Canada,4,Upper-income,-0.4CPV,Cape Verde,2,Lower-middle-income,0CAF,The Central African Republic,1,Low-income,-0.1TCD,Chad,1,Low-income,0.1CHL,Chile,3,Upper-middle-income,-0.4CHN,China,2,Lower-middle-income,-0.8COL,Colombia,2,Lower-middle-income,0.4COM,Comoros,1,Low-income,0.3COG,Congo,2,Lower-middle-income,-0.5COD,The Democratic Republic of the Congo,1,Low-income,-0.6CRI,Costa Rica,3,Upper-middle-income,-0.5CIV,Côte d'Ivoire,1,Low-income,-0.4HRV,Croatia,3,Upper-middle-income,0.5CUB,Cuba,3,Upper-middle-income,-0.3CYP,Cyprus,4,Upper-income,-0.2CZE,The Czech Republic,4,Upper-income,-0.1DNK,Denmark,4,Upper-income,-0.5DJI,Djibouti,2,Lower-middle-income,-0.3DMA,Dominica,3,Upper-middle-income,-0.2DOM,The Dominican Republic,2,Lower-middle-income,0ECU,Ecuador,2,Lower-middle-income,-1EGY,Egypt,2,Lower-middle-income,0.1SLV,El Salvador,2,Lower-middle-income,-0.2GNQ,Equatorial Guinea,4,Upper-income,-0.5ERI,Eritrea,1,Low-income,-0.7EST,Estonia,4,Upper-income,-0.5ETH,Ethiopia,1,Low-income,-0.6FJI,Fiji,3,Upper-middle-income,-0.2FIN,Finland,4,Upper-income,-0.2FRA,France,4,Upper-income,-0.2GAB,Gabon,3,Upper-middle-income,0.1GMB,Gambia,1,Low-income,-0.1GEO,Georgia,2,Lower-middle-income,-0.3DEU,Germany,4,Upper-income,-0.2GHA,Ghana,1,Low-income,0.3GRC,Greece,4,Upper-income,0GRD,Grenada,3,Upper-middle-income,GTM,Guatemala,2,Lower-middle-income,0GIN,Guinea,1,Low-income,0.1GNB,Guinea-Bissau,1,Low-income,-0.6GUY,Guyana,2,Lower-middle-income,-0.1HTI,Haiti,1,Low-income,0HND,Honduras,2,Lower-middle-income,-0.3HUN,Hungary,4,Upper-income,-0.2ISL,Iceland,4,Upper-income,-0.8IND,India,2,Lower-middle-income,-0.2IDN,Indonesia,2,Lower-middle-income,0.3IRN,Iran,2,Lower-middle-income,-0.3IRQ,Iraq,2,Lower-middle-income,-0.2IRL,Ireland,4,Upper-income,-0.6ISR,Israel,4,Upper-income,-0.2ITA,Italy,4,Upper-income,0JAM,Jamaica,3,Upper-middle-income,0.1JPN,Japan,4,Upper-income,-0.5JOR,Jordan,2,Lower-middle-income,-0.1KAZ,Kazakhstan,3,Upper-middle-income,-0.2KEN,Kenya,1,Low-income,-0.4KIR,Kiribati,2,Lower-middle-income,PRK,The Democratic People's Republic of Korea,1,Low-income,KOR,The Republic of Korea,4,Upper-income,0.2KWT,Kuwait,4,Upper-income,0.3KGZ,Kyrgyzstan,1,Low-income,-0.4LAO,Laos,1,Low-income,-0.2LVA,Latvia,3,Upper-middle-income,-0.5LBN,Lebanon,3,Upper-middle-income,0.1LSO,Lesotho,2,Lower-middle-income,-0.6LBR,Liberia,1,Low-income,-0.8LBY,Libya,3,Upper-middle-income,-1.3LIE,Liechtenstein,4,Upper-income,LTU,Lithuania,3,Upper-middle-income,-0.1LUX,Luxembourg,4,Upper-income,-0.2MDG,Madagascar,1,Low-income,0.2MWI,Malawi,1,Low-income,0.1MYS,Malaysia,3,Upper-middle-income,-0.4MDV,Maldives,2,Lower-middle-income,-0.7MLI,Mali,1,Low-income,-0.4MLT,Malta,4,Upper-income,0.3MHL,The Marshall Islands,2,Lower-middle-income,MRT,Mauritania,1,Low-income,-0.8MUS,Mauritius,3,Upper-middle-income,0.1MEX,Mexico,3,Upper-middle-income,0.6FSM,The Federated States of Micronesia,2,Lower-middle-income,-0.5MDA,Moldova,2,Lower-middle-income,-0.5MCO,Monaco,4,Upper-income,MKD,Macedonia,2,Lower-middle-income,0.7MNG,Mongolia,2,Lower-middle-income,-1MNE,Montenegro,4,Upper-income,1.4MAR,Morocco,2,Lower-middle-income,0.1MOZ,Mozambique,1,Low-income,0MMR,Myanmar,1,Low-income,-0.1NAM,Namibia,2,Lower-middle-income,-0.3NRU,Nauru,1,Low-income,NPL,Nepal,1,Low-income,-0.5NLD,The Netherlands,4,Upper-income,-0.8NZL,New Zealand,4,Upper-income,-0.1NIC,Nicaragua,2,Lower-middle-income,-0.6NER,Niger,1,Low-income,-0.4NGA,Nigeria,1,Low-income,0.3NOR,Norway,4,Upper-income,-0.3OMN,Oman,4,Upper-income,-0.3PAK,Pakistan,1,Low-income,-0.5PLW,Palau,3,Upper-middle-income,PAN,Panama,3,Upper-middle-income,-0.6PNG,Papua New Guinea,1,Low-income,-0.5PRY,Paraguay,2,Lower-middle-income,-0.1PER,Peru,2,Lower-middle-income,0.6PHL,Philippines,2,Lower-middle-income,-0.2POL,Poland,3,Upper-middle-income,0.3PRT,Portugal,4,Upper-income,-0.4QAT,Qatar,4,Upper-income,0.1ROU,Romania,3,Upper-middle-income,0RUS,The Russian Federation,3,Upper-middle-income,-0.3RWA,Rwanda,1,Low-income,1.1KNA,Saint Kitts and Nevis,3,Upper-middle-income,LCA,Saint Lucia,3,Upper-middle-income,0.2VCT,St Vincent & Grenadines,3,Upper-middle-income,0.6WSM,Samoa,2,Lower-middle-income,0.2SMR,San Marino,4,Upper-income,STP,Sao Tome & Principe,1,Low-income,1.2SAU,Saudi Arabia,4,Upper-income,-0.2SEN,Senegal,1,Low-income,-0.5SRB,Serbia,4,Upper-income,-0.1SYC,Seychelles,3,Upper-middle-income,-0.5SLE,Sierra Leone,1,Low-income,-0.1SGP,Singapore,4,Upper-income,-0.5SVK,Slovakia,4,Upper-income,-0.3SVN,Slovenia,4,Upper-income,0.2SLB,Solomon Islands,1,Low-income,SOM,Somalia,1,Low-income,ZAF,South Africa,3,Upper-middle-income,-0.4ESP,Spain,4,Upper-income,-0.3LKA,Sri Lanka,2,Lower-middle-income,-0.7SDN,Sudan,2,Lower-middle-income,-0.4SUR,Suriname,3,Upper-middle-income,-0.7SWZ,Swaziland,2,Lower-middle-income,-0.6SWE,Sweden,4,Upper-income,0.1CHE,Switzerland,4,Upper-income,0.1SYR,Syria,2,Lower-middle-income,-0.6TJK,Tajikistan,1,Low-income,-0.5TZA,Tanzania,1,Low-income,-0.2THA,Thailand,2,Lower-middle-income,0.2TLS,Timor-Leste,1,Low-income,-1.4TGO,Togo,1,Low-income,-0.7TON,Tonga,2,Lower-middle-income,-0.6TTO,Trinidad & Tobago,4,Upper-income,-0.6TUN,Tunisia,2,Lower-middle-income,-0.1TUR,Turkey,3,Upper-middle-income,0.3TKM,Turkmenistan,2,Lower-middle-income,-0.2TUV,Tuvalu,1,Low-income,UGA,Uganda,1,Low-income,-0.4UKR,Ukraine,2,Lower-middle-income,-0.8ARE,United Arab Emirates,4,Upper-income,0.2GBR,The United Kingdom,4,Upper-income,-0.7USA,The United States,4,Upper-income,-0.9URY,Uruguay,3,Upper-middle-income,-0.3UZB,Uzbekistan,1,Low-income,-1VUT,Vanuatu,2,Lower-middle-income,-0.8VEN,Venezuela,3,Upper-middle-income,-0.8VNM,Viet Nam,1,Low-income,-0.6YEM,Yemen,1,Low-income,-0.8ZMB,Zambia,1,Low-income,0.1ZWE,Zimbabwe,1,Low-income,0
