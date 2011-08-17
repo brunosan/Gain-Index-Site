@@ -53,7 +53,7 @@ model = Backbone.Model.extend({
         if (!options.format || _.isUndefined(value)) {
             return value;
         }
-        var color = gradient('#67b6e0', '#fc7b7e', 142, value.desc);
+        var color = gradientRgb(['#67b6e0', '#fc7b7e'], 142, value.desc);
         return "<div class='rank-number' style='background-color: #" + color + ";'>" + value.desc + '</div>';
     },
     meta: function(key) {
@@ -680,23 +680,53 @@ model.meta = {
 // ---------------
 // Could be broken out into its own module if we need to use it elsewhere, too.
 
-// Generate a gradient through grey for a value between 0 and max
-// --------------------------------------------------------------
-// from - the hex color to start with
-// to - the hex color to end with
+// Generate an RGB (= flat) gradient between given colors
+// ------------------------------------------------------
+// colors - an array of colors to run the gradient through.
 // max - the maximum range
 // pos - the position between 0 and max to generate a gradient color for
-//
-function gradient(from, to, max, pos) {
+function gradientRgb(colors, max, pos) {
+    return _gradient(_gradientRgb, colors, max, pos);
+}
+
+// Generate an HSL (= colorful) gradient between given colors
+// ----------------------------------------------------------
+// colors - an array of colors to run the gradient through.
+// max - the maximum range
+// pos - the position between 0 and max to generate a gradient color for
+function gradientHsl(colors, max, pos) {
+    return _gradient(_gradientHsl, colors, max, pos);
+}
+
+function _gradient(func, colors, max, pos) {
+    var sub = max / (colors.length - 1);
+    var i = Math.floor(pos / sub);
+    i = i < colors.length - 1 ? i : colors.length - 2;
+    return func(colors[i], colors[i + 1], sub, pos - sub * i);
+}
+
+function _gradientComponent(a, b, max, pos) {
+    return a + pos * (b - a) / max;
+};
+
+function _gradientHsl(from, to, max, pos) {
     from = hexToHsl(from);
     to = hexToHsl(to);
-    var half = max / 2;
-    var h = pos <= half ? from.h : to.h;
-    var s = pos <= half ?
-        from.s - pos * from.s / half :
-        (pos - half) * to.s / half;
-    var l = from.l + pos * (to.l - from.l) / max;
-    return hslToHex({h: h, s: s, l: l});
+    var result = {};
+    _.each(Object.keys(from), function(k) {
+        result[k] = _gradientComponent(from[k], to[k], max, pos);
+    });
+    return hslToHex(result);
+}
+
+function _gradientRgb(from, to, max, pos) {
+    from = hexToRgb(from);
+    to = hexToRgb(to);
+    var result = {};
+    _.each(Object.keys(from), function(k) {
+        result[k] = _gradientComponent(from[k], to[k], max, pos);
+    });
+    return rgbToHex(result);
 }
 
 // http://is.gd/CKCkga
