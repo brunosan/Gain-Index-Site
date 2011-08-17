@@ -663,8 +663,10 @@ table.data tr.active {
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
   border-radius: 3px;
-}
-
+  }
+  .ranking-history .rank-number {
+    margin: 0 auto;
+    }
 .country-profile .rankings table tr th.label {
   border-right: 1px solid #c6c6c6;
   font-weight: bold;

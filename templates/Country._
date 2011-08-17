@@ -29,7 +29,7 @@
   <% if (_(rank).size()) { %>
   <div class='rankings'>
     <h3>GaIn&#8482; Ranking since 1995</h3>
-    <table class='data'>
+    <table class='data ranking-history'>
       <thead>
         <tr class='years'>
           <th class='label'>Year</th>
