@@ -128,9 +128,9 @@ view = views.Main.extend({
     },
     openDrawer: function(ev) {
         $('table.data tr').removeClass('active');
-        $(ev.currentTarget).addClass('active');
         var ind = $(ev.currentTarget).attr('id').substr(10);;
         if (!ind) return;
+        $(ev.currentTarget).addClass('active');
 
         var collection = this.model.get('indicators');
         var data = collection.getGraphData('name', ind);
