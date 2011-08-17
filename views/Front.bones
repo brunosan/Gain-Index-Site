@@ -24,7 +24,7 @@ view = views.Main.extend({
                 var data = collection.getGraphData('name', i);
                 if (data instanceof Array) {
                     info.countryInfo[i].name = i;
-                    info.countryInfo[i].value = _.last(data)[1];
+                    info.countryInfo[i].value = _.last(data)[1].toFixed(2);
                 }
             });
             if (info.countryInfo['readiness'] && info.countryInfo['vulnerability']) {
@@ -40,8 +40,8 @@ view = views.Main.extend({
         }));
 
         _.each([this.model.featuredFirst, this.model.featuredSecond], function(model) {
-            this.aboutView = new views.AboutQuadrant({
-                el: $('.description .' + models.Country.meta[model.get('id')].name.toLowerCase(), that.el),
+            new views.AboutQuadrant({
+                el: $('.description.' + models.Country.meta[model.get('id')].name.toLowerCase(), that.el),
                 model: model
             }).render();
         });

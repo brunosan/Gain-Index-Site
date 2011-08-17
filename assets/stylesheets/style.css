@@ -578,9 +578,6 @@ table.data tr.active {
       height: 60px;
       width: 85px;
       }
-  .country-summary div.description {
-    width: 400px;
-    }
   .country-summary div.chart {
     border-width: 1px 0px 1px 1px;
     height: 135px;
@@ -594,6 +591,43 @@ table.data tr.active {
     height: 135px;
     width: 320px;
     }
+.featured div.stats div.country-summary {
+    border-color: #c6c6c6;
+    border-style: solid;
+    border-width: 1px 0px 1px 1px;
+    margin: 10px 0px 10px 10px;
+    width: 614px;
+    background-color: #fff;
+    padding: 10px 0px 0px 10px;
+  }
+.featured div.country-summary div.description {
+    width: 300px;
+  }
+.featured div.country-summary div.chart {
+    float: left;
+    height: 100%;
+      border-color: #c6c6c6;
+      border-style: solid;
+      border-width: 0px 0px 0px 1px;
+  }
+.featured div.country-summary div.chart .matrix {
+    margin: 5px 0 0 5px;
+  }
+.featured div.country-summary div.readiness, 
+.featured div.country-summary div.vulnerability {
+    width: 100%;
+    height: 30px;
+      border-color: #c6c6c6;
+      border-style: solid;
+      border-width: 0px 0px 1px 0px;
+  }
+.featured div.country-summary div.readiness {
+    border-width: 0px;
+  }
+.featured div.country-summary div.gain {
+    border-width: 0px;
+  }
+
 .country-profile .tab-wrapper,
 .country-profile .rankings {
   background-color: #ebebeb;
