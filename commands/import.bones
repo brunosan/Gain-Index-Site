@@ -25,6 +25,7 @@ var sqlitePut = function(db, doc, callback) {
     var data = doc.values;
     var stmt = 'INSERT INTO data VALUES (';
 
+    // TODO use proper placeholder instead of manually assembling this string.
     stmt += '"' + doc.name + '"';
     stmt += ',"' + doc.ISO3 + '"';
     for (var i = 1995; i <= 2010; i++) {
