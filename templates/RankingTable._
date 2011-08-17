@@ -8,7 +8,7 @@
   <% _.each(rows, function(v, k) { %>
     <tr id='country-<%= v.iso3 %>'>
       <td><%= v.rank %></td>
-      <td><a href='/country/<%= v.iso3 %>' class='handle'><%= v.name %></a></td>
+      <td><%= v.name %></td>
       <td><div class='income-group <%= v.incomeClass%>'><%= v.income%></div></td>
       <td><div class='graph'></div><%= v.score%></td>
     </tr>

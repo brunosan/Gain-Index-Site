@@ -708,6 +708,11 @@ table.data tbody tr {
   background: #fff;
   border-top: 2px solid #c6c6c6;
   }
+.ranking table tr:hover,
+.ranking table tr.active {
+  cursor: pointer;
+  background:#ebebeb;
+  }
 .ranking table.data th,
 .ranking table.data td {
   padding: 0px 10px;

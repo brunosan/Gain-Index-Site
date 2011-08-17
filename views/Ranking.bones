@@ -1,7 +1,7 @@
 view = views.Main.extend({
     events: _.extend({
         'click .drawer .handle a.handle': 'closeDrawer',
-        'click table.data a.handle': 'openDrawer',
+        'click table.data tr': 'openDrawer',
     }, views.Main.prototype.events),
     render: function() {
         var data = [],
@@ -79,8 +79,10 @@ view = views.Main.extend({
         return this;
     },
     openDrawer: function(ev) {
+        $('table.data tr').removeClass('active');
+        $(ev.currentTarget).addClass('active');
         var meta = models.Country.meta;
-        var id = $(ev.currentTarget).parents('tr').attr('id').substr(8);
+        var id = $(ev.currentTarget).attr('id').substr(8);
         if (!id || !meta[id]) return;
 
         var data = this.model.get('indicators').getGraphData('ISO3', id);
@@ -104,6 +106,7 @@ view = views.Main.extend({
     },
     closeDrawer: function() {
         $('.drawer', this.el).removeClass('open');
+        $('table.data tr').removeClass('active');
         return false;
     }
 });
