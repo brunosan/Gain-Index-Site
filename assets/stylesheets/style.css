@@ -487,6 +487,19 @@ table.data tbody tr {
 }
 
 /**
+ * Data tables
+ */
+table.data {
+  background: #fff;
+  border-top: 2px solid #c6c6c6;
+  }
+table.data tr:hover,
+table.data tr.active {
+  cursor: pointer;
+  background:#ebebeb;
+  }
+
+/**
  * Country pages
  */
 .country-profile {
@@ -499,7 +512,7 @@ table.data tbody tr {
   border-bottom: 1px solid #ebebeb;
   }
 .country-profile tr.index {
-  background-color: #eaeaea;
+  font-weight: bold;
   border-bottom: 2px solid #c6c6c6;
   line-height: 40px;
   }
@@ -704,15 +717,6 @@ table.data tbody tr {
     .ranking .categories ul li a.active {
       background-color: #a8a8a8;
       }
-.ranking table.data {
-  background: #fff;
-  border-top: 2px solid #c6c6c6;
-  }
-.ranking table tr:hover,
-.ranking table tr.active {
-  cursor: pointer;
-  background:#ebebeb;
-  }
 .ranking table.data th,
 .ranking table.data td {
   padding: 0px 10px;

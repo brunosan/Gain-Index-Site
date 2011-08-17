@@ -7,7 +7,7 @@
 <tbody>
 <% _.each(data, function(row) { %>
   <tr id='indicator-<%= row.field.id %>' class='<%= row.klass %>'>
-    <td class='name'><a href='/ranking/<%= row.field.id %>' class='handle'><%= row.field.name %></a></td>
+    <td class='name'><%= row.field.name %></td>
     <td class='graph'><div class='placeholder'></div></td>
     <td class='input'><%= row.input %></td>
     <td class='score'><%= row.score %></td>
