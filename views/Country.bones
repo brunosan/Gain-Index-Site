@@ -95,6 +95,7 @@ view = views.Main.extend({
             });
         }
         this.tableView.attach();
+        return this;
     },
     selectTab: function(ev) {
         var e = $(ev.currentTarget);
