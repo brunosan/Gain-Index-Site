@@ -1,0 +1,25 @@
+<h3>Featured Countries</h3>
+<div class='featured'>
+  <div class='country'>
+    Country
+  </div>
+  <% _.each(countries, function(summary) { %>
+    <div class='stats'>
+      <% _.each(summary, function(stat, klass) { %>
+        <div class='<%= klass %>'>
+          <%= stat.name %>
+          <%= stat.value %>
+        </div>
+      <% }); %>
+      <div class='chart'>
+        <div class='matrix'>
+          <div class='quad tl'></div>
+          <div class='quad tr'></div>
+          <div class='quad br'></div>
+          <div class='quad bl'></div>
+          <div class='pin' style='top: <%= summary.pin.y %>px; left: <%= summary.pin.x %>px;'></div>
+        </div>
+      </div>
+  </div>
+  <% }); %>
+</div>

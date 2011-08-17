@@ -148,7 +148,7 @@ view = views.Main.extend({
         return false;
     },
     // From StackOverflow http://is.gd/sR4ygY
-    numberFormat: function(n, decimals, decimal_sep, thousands_sep) { 
+    numberFormat: function(n, decimals, decimal_sep, thousands_sep) {
         var c = isNaN(decimals) ? 2 : Math.abs(decimals),
             d = decimal_sep || ',',
             t = (typeof thousands_sep === 'undefined') ? '.' : thousands_sep,
