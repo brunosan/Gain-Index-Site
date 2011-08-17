@@ -9,8 +9,16 @@ model = Backbone.Model.extend({
     initialize: function(attributes, options) {
         var indicators = new models.Indicators(attributes.indicators);
         this.set({indicators: indicators}, {silent : true});
+    },
+    meta: function(key) {
+        return Backbone.Model.escapeHTML(model.meta[this.id][key] || '');
     }
 });
+
+// From backbone.js
+Backbone.Model.escapeHTML = function(string) {
+    return string.replace(/&(?!\w+;|#\d+;|#x[\da-f]+;)/gi, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#x27').replace(/\//g,'&#x2F;');
+};
 
 model.meta = {
     "AFG": {

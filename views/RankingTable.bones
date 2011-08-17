@@ -14,11 +14,12 @@ view = Backbone.View.extend({
     },
     render: function() {
         var data = [],
-            meta = models.Country.meta;
+            meta = models.Country.meta,
+            previousId = $('tr.active', this.el).attr('id');
 
         // Build a look up table for the data.
         this.collection.each(function(model) {
-            if (model.currentValue('rank') && meta[model.get('ISO3')]) {
+            if (model.rank({format: false}) && meta[model.get('ISO3')]) {
                 data.push({
                     name: meta[model.get('ISO3')].name,
                     income: meta[model.get('ISO3')].oecd_income,
@@ -26,8 +27,8 @@ view = Backbone.View.extend({
                         .toLowerCase()
                         .replace(/[^a-zA-Z0-9]+/gi, '-'),
                     iso3: model.get('ISO3'),
-                    value: model.currentValue(),
-                    rank: model.currentValue('rank') || {}
+                    score: model.score(),
+                    rank: model.rank()
                 });
             }
         });
@@ -35,6 +36,8 @@ view = Backbone.View.extend({
         $(this.el).empty().append(templates.RankingTable({
             rows: data
         }));
+        // Conserve previously active table rows.
+        previousId && $('tr#' + previousId).addClass('active');
         return this;
     },
     attach: function() {
@@ -61,12 +64,7 @@ view = Backbone.View.extend({
         return false;
     },
     sortRank: function(ev) {
-        this.collection.comparator = function(model) {
-            var rank = model.get('rank');
-            if (rank) return rank;
-            return Infinity;
-        };
-        this.collection.sort();
+        this.collection.sortByRank();
         return false;
     },
     sortIncome: function(ev) {

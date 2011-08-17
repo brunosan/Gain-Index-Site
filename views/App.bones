@@ -89,12 +89,12 @@ view.prototype.routeClick = function(ev) {
 // Routes a path
 // -------------
 view.prototype.route = function(path) {
-    var that = this;
+    var view = this;
     if (path.charAt(0) === '/') {
         var matched = _.any(Backbone.history.handlers, function(handler) {
             if (handler.route.test(path)) {
                 Backbone.history.navigate(path, true);
-                that.scrollTop();
+                view.scrollTop();
                 return true;
             }
         });

@@ -1,36 +1,37 @@
 view = views.Main.extend({
     events: _.extend({
         'click .drawer .handle a.handle': 'closeDrawer',
-        'click table.data a.handle': 'openDrawer',
+        'click table.data tr': 'openDrawer',
     }, views.Main.prototype.events),
     render: function() {
         var data = [],
             sectors = {},
-            indices = {},
             components = {},
             title = '',
-            collection = this.model.get('indicators');
+            collection = this.model.get('indicators'),
+            meta = collection.model.meta;
 
         // Arrange our metadata.
-        var meta = collection.model.meta[this.model.get('id')];
-        if (!meta) return this; // should be a 404
-
-        _.each(collection.model.meta, function(v) {
-            indices[v.index] = {
-                id: v.index,
-                name: collection.model.meta[v.index].name
-            };
-            if (v.index == meta.index) {
+        if (!meta[this.model.get('id')]) {
+            return this;
+        }
+        var id = this.model.get('id');
+        var active = (id == 'gain') ? {} : {
+            path: '/ranking/' + meta[id].index,
+            name: meta[meta[id].index].name
+        };
+        _.each(meta, function(v) {
+            if (v.index == meta[id].index) {
                 if (v.sector) {
                     sectors[v.sector] = {
-                        id: v.sector,
-                        name: collection.model.meta[v.sector].name
+                        path: '/ranking/' + v.index + '/' + v.sector,
+                        name: meta[v.sector].name
                     };
                 }
                 if (v.component) {
                     components[v.component] = {
-                        id: v.component,
-                        name: collection.model.meta[v.component].name
+                        path: '/ranking/' + v.index + '/' + v.component,
+                        name: meta[v.component].name
                     };
                 }
             }
@@ -41,15 +42,14 @@ view = views.Main.extend({
         };
         components = _.sortBy(components, comparator);
         sectors = _.sortBy(sectors, comparator);
-        indices = _.sortBy(indices, comparator);
 
         // Approach the cabinet.
         $(this.el).empty().append(templates.Cabinet());
 
         // Empty pockets on top.
         $('.top', this.el).empty().append(templates.Ranking({
-            indicatorName: meta.name,
-            indices: indices,
+            indicatorName: this.model.get('subject').meta('name'),
+            active: active,
             sectors: sectors,
             components: components
         }));
@@ -61,8 +61,8 @@ view = views.Main.extend({
 
         // Some things fall on the floor.
         $('.floor', this.el).empty().append(templates.RankingFloor({
-            title: meta.name,
-            content: '<p>' + meta.description + '</p>'
+            title: this.model.get('subject').meta('name'),
+            content: '<p>' + this.model.get('subject').meta('description') + '</p>'
         }));
         return this;
     },
@@ -76,17 +76,20 @@ view = views.Main.extend({
             });
         }
         this.tableView.attach();
+        return this;
     },
     openDrawer: function(ev) {
+        $('table.data tr').removeClass('active');
+        $(ev.currentTarget).addClass('active');
         var meta = models.Country.meta;
-        var id = $(ev.currentTarget).parents('tr').attr('id').substr(8);
+        var id = $(ev.currentTarget).attr('id').substr(8);
         if (!id || !meta[id]) return;
 
         var data = this.model.get('indicators').getGraphData('ISO3', id);
 
         $('.drawer .content', this.el).empty().append(templates.RankingDrawer({
             countryName: meta[id].name,
-            indicatorName: models.Indicator.meta[this.model.id].name,
+            indicatorName: this.model.get('subject').meta('name'),
             countryId: id
         }));
 
@@ -103,6 +106,7 @@ view = views.Main.extend({
     },
     closeDrawer: function() {
         $('.drawer', this.el).removeClass('open');
+        $('table.data tr').removeClass('active');
         return false;
     }
 });

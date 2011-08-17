@@ -1,7 +1,7 @@
 view = views.Main.extend({
     events: _.extend({
         'click ul.tabs li a': 'selectTab',
-        'click .tab-content td.name a': 'openDrawer',
+        'click table.data tr': 'openDrawer',
         'click .drawer .handle a': 'closeDrawer'
     }, views.Main.prototype.events),
     render: function() {
@@ -26,13 +26,14 @@ view = views.Main.extend({
             if (lookup.hasOwnProperty(k)) {
                 summary[k] = {
                     name: meta[k].name,
-                    value: lookup[k].currentValue()
+                    value: lookup[k].score(),
+                    raw: lookup[k].score({format: false})
                 };
             }
         });
         if (summary.readiness && summary.vulnerability) {
-            pin.x = Math.round((summary.readiness.value * 80) + 15);
-            pin.y = 80 - Math.round(summary.vulnerability.value * 80);
+            pin.x = Math.round((summary.readiness.raw * 80) + 15);
+            pin.y = 80 - Math.round(summary.vulnerability.raw * 80);
         }
 
         // GDP and Population data.  Assumes we want the latest year, and that both
@@ -95,6 +96,7 @@ view = views.Main.extend({
             });
         }
         this.tableView.attach();
+        return this;
     },
     selectTab: function(ev) {
         var e = $(ev.currentTarget);
@@ -116,7 +118,9 @@ view = views.Main.extend({
         return false;
     },
     openDrawer: function(ev) {
-        var ind = $(ev.currentTarget).parents('tr').attr('id').substr(10);;
+        $('table.data tr').removeClass('active');
+        $(ev.currentTarget).addClass('active');
+        var ind = $(ev.currentTarget).attr('id').substr(10);;
         if (!ind) return;
 
         var collection = this.model.get('indicators');
@@ -145,6 +149,7 @@ view = views.Main.extend({
     },
     closeDrawer: function() {
         $('.drawer', this.el).removeClass('open');
+        $('table.data tr').removeClass('active');
         return false;
     },
     // From StackOverflow http://is.gd/sR4ygY

@@ -5,6 +5,8 @@ router = Backbone.Router.extend({
         '/country/:id': 'country',
         '/ranking': 'rankingDefault',
         '/ranking/:id': 'ranking',
+        '/ranking/readiness/:id': 'ranking',
+        '/ranking/vulnerability/:id': 'ranking',
         '/download': 'download',
         '/page/:id': 'page'
     },
@@ -81,7 +83,7 @@ router = Backbone.Router.extend({
         var options = arguments.length > 1 ? arguments[1] : {};
         var v = new view(options);
         $('#page').empty().append(v.el);
-        v.render().attach();
+        v.render().attach().activeLinks();
     },
     fetcher: function() {
         var models = [];
