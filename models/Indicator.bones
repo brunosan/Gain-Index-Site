@@ -13,7 +13,33 @@ model = Backbone.Model.extend({
     },
     score: function(options) {
         options = this.optionDefaults(options);
-        return this.get('values')[options.year];
+        var value = this.get('values')[options.year];
+        if (!options.format) {
+            return value;
+        }
+        if (_.isUndefined(value)) {
+            return '-';
+        }
+        var pad = function(num, fill) {
+            var num = num.toString(),
+                parts = num.split('.'),
+                length = 0;
+            if (parts[1]) {
+                length = parts[1].length;
+            } else {
+                num += '.';
+            }
+            while (length < fill) { num += '0'; length++;};
+            return num;
+        };
+        var formatFloat = function(value, precision) {
+            var f = Math.pow(10, precision);
+            return pad(Math.round(value * f) / f, precision);
+        };
+        if (value > 1.0) {
+            return formatFloat(value, 1);
+        }
+        return formatFloat(value, 3);
     },
     input: function(options) {
         // TODO: formatting.
