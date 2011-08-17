@@ -19,11 +19,10 @@ router = Backbone.Router.extend({
             var countries = [feature.get('featuredFirst'), feature.get('featuredSecond')];
             var featuredFirst = new models.Country({id: feature.get('featuredFirst')});
             var featuredSecond = new models.Country({id: feature.get('featuredSecond')});
+            var fetcher = router.fetcher();
             fetcher.push(featuredFirst);
             fetcher.push(featuredSecond);
             fetcher.fetch(function() {
-                // @TODO featuredSecond doesn't get fetched.
-                //console.log(featuredFirst.get('indicators').getGraphData('name', 'gdp'));
                 router.send(views.Front, {model: {featuredFirst: featuredFirst, featuredSecond: featuredSecond}});
             });
         });

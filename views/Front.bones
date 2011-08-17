@@ -9,12 +9,12 @@ view = views.Main.extend({
         // Featured countries
         var that = this;
         var countries = [];
-        var models = [this.model.featuredSecond, this.model.featuredSecond];
-        _.each(models, function(country) {
+        var models = [this.model.featuredFirst, this.model.featuredSecond];
+        _.each(models, function(model) {
             var pin = {}; var info = {};
-            var collection = country.get('indicators');
+            var collection = model.get('indicators');
             var indicators = ['gain', 'vulnerability', 'readiness'];
-            _.each(indicators, function (i) {
+            _.each(indicators, function(i) {
                 info[i] = {};
                 var data = collection.getGraphData('name', i);
                 if (data instanceof Array) {
