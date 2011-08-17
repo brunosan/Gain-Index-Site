@@ -25,7 +25,7 @@ model = Backbone.Collection.extend({
     },
     sortByRank: function(options) {
         this.comparator = function(model) {
-            var rank = model.currentValue('rank');
+            var rank = model.rank({format: false});
             if (rank) return rank.desc;
             return Infinity;
         };

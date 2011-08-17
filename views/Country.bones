@@ -26,13 +26,14 @@ view = views.Main.extend({
             if (lookup.hasOwnProperty(k)) {
                 summary[k] = {
                     name: meta[k].name,
-                    value: lookup[k].currentValue()
+                    value: lookup[k].score(),
+                    raw: lookup[k].score({format: false})
                 };
             }
         });
         if (summary.readiness && summary.vulnerability) {
-            pin.x = Math.round((summary.readiness.value * 80) + 15);
-            pin.y = 80 - Math.round(summary.vulnerability.value * 80);
+            pin.x = Math.round((summary.readiness.raw * 80) + 15);
+            pin.y = 80 - Math.round(summary.vulnerability.raw * 80);
         }
 
         // GDP and Population data.  Assumes we want the latest year, and that both

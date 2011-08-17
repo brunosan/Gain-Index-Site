@@ -5,15 +5,28 @@ model = Backbone.Model.extend({
         input: {},
         values: {}
     },
-    currentValue: function() {
-        var series = 'values'
-        if (arguments.length && arguments[0] == 'input') {
-           series = 'input'; 
+    optionDefaults: function(opt) {
+        opt = opt || {};
+        opt.format = opt.format == undefined ? true : opt.format;
+        opt.year = opt.year || this.get('currentYear');
+        return opt;
+    },
+    score: function(options) {
+        options = this.optionDefaults(options);
+        return this.get('values')[options.year];
+    },
+    input: function(options) {
+        // TODO: formatting.
+        options = this.optionDefaults(options);
+        return this.get('input')[options.year];
+    },
+    rank: function(options) {
+        options = this.optionDefaults(options);
+        var value = this.get('rank')[options.year];
+        if (!options.format || _.isUndefined(value)) {
+            return value;
         }
-        if (arguments.length && arguments[0] == 'rank') {
-           series = 'rank';
-        }
-        return this.get(series)[this.get('currentYear')];
+        return value.desc;
     },
     meta: function(key) {
         return Backbone.Model.escapeHTML(model.meta[this.id][key] || '');

@@ -7,10 +7,10 @@
 <tbody>
   <% _.each(rows, function(v, k) { %>
     <tr id='country-<%= v.iso3 %>'>
-      <td><%= v.rank.desc %></td>
+      <td><%= v.rank %></td>
       <td><a href='/country/<%= v.iso3 %>' class='handle'><%= v.name %></a></td>
       <td><div class='income-group <%= v.incomeClass%>'><%= v.income%></div></td>
-      <td><div class='graph'></div><%= v.value%></td>
+      <td><div class='graph'></div><%= v.score%></td>
     </tr>
   <% }); %>
 </tbody>
