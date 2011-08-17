@@ -62,13 +62,13 @@ models.Tileset.prototype.sync = function(method, model, options) {
 
             // This file does not exist; but we pass in literal strings below.
             // This is used as a cache key.
-            pathname: path.join(model.get('indicator'), model.get('year') + '.xml'),
+            pathname: path.join('resources/map', model.get('indicator') +'-'+ model.get('year') + '.xml'),
             query: {
                 updated: map.mml._updated,
                 bufferSize: 256
             },
             xml: map.xml,
-            mml: map.mml // Do we need this?
+            mml: map.mml
         };
 
         tilelive.load(uri, function(err, source) {
