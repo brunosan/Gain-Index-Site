@@ -6,34 +6,45 @@ view = views.Main.extend({
         // Empty pockets on top.
         $('.top', this.el).empty().append(templates.Front());
 
+
         // Featured countries
         var that = this;
         var countries = [];
-        var models = [this.model.featuredFirst, this.model.featuredSecond];
-        _.each(models, function(model) {
+
+        _.each([this.model.featuredFirst, this.model.featuredSecond], function(model) {
             var pin = {}; var info = {};
+            info.name = models.Country.meta[model.get('id')].name;
+            info.nameLower = info.name.toLowerCase();
+            info.countryInfo = {};
             var collection = model.get('indicators');
             var indicators = ['gain', 'vulnerability', 'readiness'];
+            
             _.each(indicators, function(i) {
-                info[i] = {};
+                info.countryInfo[i] = {};
                 var data = collection.getGraphData('name', i);
                 if (data instanceof Array) {
-                    info[i].name = i;
-                    info[i].value = _.last(data)[1];
+                    info.countryInfo[i].name = i;
+                    info.countryInfo[i].value = _.last(data)[1];
                 }
             });
-            if (info['readiness'] && info['vulnerability']) {
-                pin.x = Math.round((info['readiness'].value * 80) + 15);
-                pin.y = 80 - Math.round(info['vulnerability'].value * 80);
+            if (info.countryInfo['readiness'] && info.countryInfo['vulnerability']) {
+                pin.x = Math.round((info.countryInfo['readiness'].value * 80) + 15);
+                pin.y = 80 - Math.round(info.countryInfo['vulnerability'].value * 80);
                 info.pin = pin;
             }
             countries.push(info);
         });
-        // @TODO add in the country description
-        $('.featured', that.el).empty().append(templates.FeaturedFront({
+
+        $('.featured', this.el).empty().append(templates.FeaturedFront({
             countries: countries
-            //rank: lookup.gain.get('rank'),
         }));
+
+        _.each([this.model.featuredFirst, this.model.featuredSecond], function(model) {
+            this.aboutView = new views.AboutQuadrant({
+                el: $('.description .' + models.Country.meta[model.get('id')].name.toLowerCase(), that.el),
+                model: model
+            }).render();
+        });
  
         // Some things fall on the floor.
         $('.floor', this.el).empty().append(templates.DefaultFloor());

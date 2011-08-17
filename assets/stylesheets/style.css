@@ -578,6 +578,9 @@ table.data tr.active {
       height: 60px;
       width: 85px;
       }
+  .country-summary div.description {
+    width: 400px;
+    }
   .country-summary div.chart {
     border-width: 1px 0px 1px 1px;
     height: 135px;

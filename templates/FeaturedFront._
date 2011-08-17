@@ -1,11 +1,13 @@
 <h3>Featured Countries</h3>
 <div class='featured'>
-  <div class='country'>
-    Country
-  </div>
   <% _.each(countries, function(summary) { %>
+  <div class='country-summary clearfix'>
+  <%= summary.name %>
+    <div class='description <%= summary.nameLower %>'>
+        Country description goes here.
+    </div>
     <div class='stats'>
-      <% _.each(summary, function(stat, klass) { %>
+      <% _.each(summary.countryInfo, function(stat, klass) { %>
         <div class='<%= klass %>'>
           <%= stat.name %>
           <%= stat.value %>
@@ -20,6 +22,7 @@
           <div class='pin' style='top: <%= summary.pin.y %>px; left: <%= summary.pin.x %>px;'></div>
         </div>
       </div>
+  </div>
   </div>
   <% }); %>
 </div>
