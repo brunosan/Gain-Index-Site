@@ -23,7 +23,9 @@
     "sqlite3": "= 2.0.16",
     "chrono": "= 1.0.1",
     "tilelive": "= 4.0.5",
-    "tilelive-mapnik" : "= 0.2.1"
+    "tilelive-mapnik" : "= 0.2.1",
+    "carto": "= 0.2.3",
+    "millstone": "= 0.0.8"
   },
   "devDependencies": {}
 }
