@@ -26,14 +26,14 @@
      inkscape:pageopacity="1"
      inkscape:pageshadow="2"
      inkscape:zoom="1"
-     inkscape:cx="-507.15386"
-     inkscape:cy="1369.5659"
+     inkscape:cx="559.07726"
+     inkscape:cy="1616.2687"
      inkscape:document-units="px"
      inkscape:current-layer="layer3"
      showgrid="false"
      inkscape:window-width="1642"
      inkscape:window-height="951"
-     inkscape:window-x="34"
+     inkscape:window-x="410"
      inkscape:window-y="0"
      inkscape:window-maximized="0"
      showguides="false"
@@ -41,7 +41,7 @@
      borderlayer="false"
      inkscape:showpageshadow="false"
      inkscape:snap-bbox="true"
-     inkscape:snap-nodes="false"
+     inkscape:snap-nodes="true"
      inkscape:snap-bbox-midpoints="false"
      inkscape:snap-object-midpoints="false"
      inkscape:object-paths="false"
@@ -50,7 +50,7 @@
      fit-margin-left="0"
      fit-margin-right="0"
      fit-margin-bottom="0"
-     inkscape:snap-to-guides="true"
+     inkscape:snap-to-guides="false"
      inkscape:snap-center="false">
     <inkscape:grid
        snapvisiblegridlinesonly="true"
@@ -213,26 +213,6 @@
        inkscape:vp_z="960 : 984.99994 : 1"
        inkscape:persp3d-origin="480 : 656.66663 : 1"
        id="perspective7989" />
-    <pattern
-       inkscape:collect="always"
-       xlink:href="#pattern8329-9"
-       id="pattern9039"
-       patternTransform="translate(-91,257)" />
-    <pattern
-       inkscape:collect="always"
-       xlink:href="#pattern8998"
-       id="pattern9037"
-       patternTransform="translate(-91,257)" />
-    <pattern
-       inkscape:collect="always"
-       xlink:href="#pattern8329-5"
-       id="pattern8998"
-       patternTransform="translate(-91,257)" />
-    <pattern
-       inkscape:collect="always"
-       xlink:href="#pattern9788"
-       id="pattern8329"
-       patternTransform="translate(-91,257)" />
     <linearGradient
        osb:paint="solid"
        id="linearGradient7046">
@@ -1686,6 +1666,72 @@
          x="-316"
          y="234.36218" />
     </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath8165-3-7">
+      <rect
+         style="color:#000000;fill:#365899;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+         id="rect8167-1-6"
+         width="33"
+         height="20"
+         x="-195"
+         y="123.36218" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath8090-2">
+      <rect
+         style="color:#000000;fill:#186487;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+         id="rect8092-2"
+         width="16"
+         height="14"
+         x="-316"
+         y="234.36218" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath8090-2-9">
+      <rect
+         style="color:#000000;fill:#186487;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+         id="rect8092-2-9"
+         width="16"
+         height="14"
+         x="-316"
+         y="234.36218" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath8165-3-7-4">
+      <rect
+         style="color:#000000;fill:#365899;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+         id="rect8167-1-6-6"
+         width="33"
+         height="20"
+         x="-195"
+         y="123.36218" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath8090-2-9-6">
+      <rect
+         style="color:#000000;fill:#186487;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+         id="rect8092-2-9-6"
+         width="16"
+         height="14"
+         x="-316"
+         y="234.36218" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath8165-3-7-4-7">
+      <rect
+         style="color:#000000;fill:#365899;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+         id="rect8167-1-6-6-3"
+         width="33"
+         height="20"
+         x="-195"
+         y="123.36218" />
+    </clipPath>
   </defs>
   <metadata
      id="metadata7">
@@ -1817,74 +1863,6 @@
        id="path7216"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="ccccc" />
-    <rect
-       ry="0"
-       rx="0"
-       y="547.49994"
-       x="-923.5"
-       height="18.999998"
-       width="289.5"
-       id="rect9039"
-       style="color:#000000;fill:none;stroke:#c6c6c6;stroke-width:1;stroke-opacity:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
-    <rect
-       style="color:#000000;fill:none;stroke:#c6c6c6;stroke-width:1;stroke-opacity:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
-       id="rect6534-3-6-1"
-       width="289.5"
-       height="18.999998"
-       x="-619"
-       y="517.49988"
-       rx="0"
-       ry="0" />
-    <path
-       id="path9081"
-       d="m -609,513.66662 0,3.33334 -72,0 0,20.00008 72,0 0,3.33334 L -599,527 z"
-       style="color:#000000;fill:#67b6e0;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
-       inkscape:connector-curvature="0"
-       sodipodi:nodetypes="cccccccc" />
-    <path
-       style="color:#000000;fill:#67b6e0;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
-       d="m -756,409.99988 c -2.216,0 -4,1.784 -4,4 l 0,12 c 0,2.216 1.784,4 4,4 l 6,0 11,0 454,0 0,-10 0,-10 -454,0 -11,0 -6,0 z"
-       id="rect11189"
-       inkscape:connector-curvature="0" />
-    <path
-       sodipodi:nodetypes="cccccccc"
-       inkscape:connector-curvature="0"
-       id="path11166"
-       d="m -565,421.99976 161,0 0,4 9,-6 -9,-6 0,4 -161,0 z"
-       style="color:#000000;fill:#000000;fill-opacity:0.11764706;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
-    <path
-       style="color:#000000;fill:#000000;fill-opacity:0.11764706;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
-       d="m -385,421.99976 86,0 0,4 9,-6 -9,-6 0,4 -86,0 z"
-       id="path11168"
-       inkscape:connector-curvature="0"
-       sodipodi:nodetypes="cccccccc" />
-    <path
-       style="color:#000000;fill:url(#pattern9039);fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
-       d="m -285,409.99988 0,10 0,10 38,0 3,0 5,0 c 2.216,0 4,-1.784 4,-4 l 0,-12 c 0,-2.216 -1.784,-4 -4,-4 l -5,0 -3,0 -38,0 z"
-       id="path9711"
-       inkscape:connector-curvature="0" />
-    <path
-       inkscape:connector-curvature="0"
-       id="rect11193"
-       d="m -285,434.99988 0,10 0,10 38,0 2,0 6,0 c 2.216,0 4,-1.784 4,-4 l 0,-12 c 0,-2.216 -1.784,-4 -4,-4 l -6,0 -2,0 -38,0 z"
-       style="color:#000000;fill:url(#pattern8329);fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
-    <path
-       sodipodi:nodetypes="cccccccc"
-       inkscape:connector-curvature="0"
-       id="rect8374-5-3-4-6-4-4-6-6-9-2-3"
-       d="m -753,421.99976 79,0 0,4 9,-6 -9,-6 0,4 -79,0 z"
-       style="color:#000000;fill:#000000;fill-opacity:0.11764706;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
-    <path
-       style="color:#000000;fill:url(#pattern9037);fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
-       d="m -756,434.99988 c -2.216,0 -4,1.784 -4,4 l 0,12 c 0,2.216 1.784,4 4,4 l 6,0 11,0 454,0 0,-20 -454,0 -11,0 -6,0 z"
-       id="path9578"
-       inkscape:connector-curvature="0" />
-    <path
-       sodipodi:nodetypes="cccccc"
-       inkscape:connector-curvature="0"
-       id="path9495"
-       d="m -325,434.99976 40,0 0,20 -40,0 0,-10 z"
-       style="color:#000000;fill:#ff7c80;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
     <image
        transform="translate(0,20.999882)"
        y="86"
@@ -4878,11 +4856,6 @@
     </g>
     <path
        inkscape:connector-curvature="0"
-       id="path7142"
-       d="m -166.5,409.49988 129.000035,0"
-       style="color:#000000;fill:url(#linearGradient6998-3);fill-opacity:1;fill-rule:nonzero;stroke:url(#linearGradient7034-1);stroke-width:0.99999994;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
-    <path
-       inkscape:connector-curvature="0"
        id="path7288"
        d="m 190,314.49988 130,0"
        style="color:#000000;fill:#81db4b;fill-opacity:1;fill-rule:nonzero;stroke:url(#linearGradient7034);stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
@@ -4965,7 +4938,7 @@
        transform="translate(0,-315.36218)"
        inkscape:export-ydpi="90"
        inkscape:export-xdpi="90"
-       inkscape:export-filename="/Users/saman/Dropbox/work_repos/gai-gain/design/renders/country_indicator.png"
+       inkscape:export-filename="/Users/saman/Dropbox/work_repos/gai-gain/design/renders/country_base.png"
        id="g7390-8-5">
       <rect
          inkscape:export-ydpi="90"
@@ -4978,6 +4951,18 @@
          id="rect7392-5-1"
          style="color:#000000;fill:#11202c;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
     </g>
+    <rect
+       ry="4.0000024"
+       rx="4.0000024"
+       style="color:#000000;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       id="rect21131"
+       width="45"
+       height="29.99988"
+       x="925"
+       y="1455"
+       inkscape:export-filename="/Users/saman/graphics/gaIn/renders/map.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
     <path
        sodipodi:nodetypes="ssscssssss"
        inkscape:connector-curvature="0"
@@ -5072,7 +5057,7 @@
        inkscape:export-filename="/Users/saman/graphics/gaIn/renders/map.png"
        y="1455"
        x="925"
-       height="29.999998"
+       height="28.99988"
        width="45"
        id="rect16164-4-6-8"
        style="color:#000000;fill:#203b54;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
@@ -5123,20 +5108,6 @@
        style="color:#000000;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
        sodipodi:type="arc" />
     <text
-       sodipodi:linespacing="120%"
-       id="text9358"
-       y="495"
-       x="-929"
-       style="font-size:20px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-indent:0;text-align:start;text-decoration:none;line-height:120.00000477%;letter-spacing:0px;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:start;baseline-shift:baseline;color:#000000;fill:#434343;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Alternate Gothic LT No3;-inkscape-font-specification:Alternate Gothic LT No3 Bold"
-       xml:space="preserve"
-       inkscape:export-filename="/Users/saman/graphics/gaIn/renders/country_indicator.png"
-       inkscape:export-xdpi="90"
-       inkscape:export-ydpi="90"><tspan
-         y="495"
-         x="-929"
-         id="tspan9360"
-         sodipodi:role="line">GaIn™ Composition</tspan></text>
-    <text
        inkscape:export-ydpi="90"
        inkscape:export-xdpi="90"
        inkscape:export-filename="/Users/saman/graphics/gaIn/renders/country_indicator.png"
@@ -5150,91 +5121,6 @@
          id="tspan9372"
          x="20"
          y="526" /></text>
-    <path
-       style="color:#000000;fill:#ff7c80;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
-       d="m -485,434.99976 200,0 0,20 -200,0 0,-10 z"
-       id="rect9364"
-       inkscape:connector-curvature="0"
-       sodipodi:nodetypes="cccccc" />
-    <path
-       style="color:#000000;fill:#000000;fill-opacity:0.11764706;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
-       d="m -358,446.99976 -48,0 0,4 -9,-6 9,-6 0,4 48,0 z"
-       id="path11173"
-       inkscape:connector-curvature="0"
-       sodipodi:nodetypes="cccccccc" />
-    <path
-       sodipodi:nodetypes="cccccccc"
-       inkscape:connector-curvature="0"
-       id="path11171"
-       d="m -297,446.99976 -39,0 0,4 -9,-6 9,-6 0,4 39,0 z"
-       style="color:#000000;fill:#000000;fill-opacity:0.11764706;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
-    <text
-       sodipodi:linespacing="200%"
-       id="text9399"
-       y="422.99988"
-       x="-835"
-       style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:start;text-decoration:none;line-height:200%;letter-spacing:0px;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:start;baseline-shift:baseline;color:#000000;fill:#434343;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Helvetica Neue;-inkscape-font-specification:Helvetica Neue"
-       xml:space="preserve"
-       inkscape:export-filename="/Users/saman/graphics/gaIn/renders/country_indicator.png"
-       inkscape:export-xdpi="90"
-       inkscape:export-ydpi="90"><tspan
-         y="422.99988"
-         x="-835"
-         id="tspan9401"
-         sodipodi:role="line">Readiness</tspan></text>
-    <path
-       style="color:#000000;fill:none;stroke:#c6c6c6;stroke-width:0.99999994;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
-       d="m -759.53198,399.49988 274.53198,0"
-       id="path10546"
-       inkscape:connector-curvature="0"
-       inkscape:export-filename="/Users/saman/graphics/gaIn/renders/country_indicator.png"
-       inkscape:export-xdpi="90"
-       inkscape:export-ydpi="90"
-       sodipodi:nodetypes="cc" />
-    <path
-       inkscape:connector-curvature="0"
-       id="path10548"
-       d="m -485.5,404.49976 0,-9.5"
-       style="color:#000000;fill:none;stroke:#c6c6c6;stroke-width:0.99999994;stroke-opacity:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
-    <path
-       style="color:#000000;fill:none;stroke:#c6c6c6;stroke-width:0.99999994;stroke-opacity:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
-       d="m -759.53198,404.49976 0,-9.5"
-       id="path10550"
-       inkscape:connector-curvature="0" />
-    <g
-       id="g10580"
-       transform="translate(-1051.4958,-106.00012)">
-      <text
-         inkscape:export-ydpi="90"
-         inkscape:export-xdpi="90"
-         inkscape:export-filename="/Users/saman/graphics/gaIn/renders/country_indicator.png"
-         xml:space="preserve"
-         style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-indent:0;text-align:center;text-decoration:none;line-height:120.00000477%;letter-spacing:0px;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:middle;baseline-shift:baseline;color:#000000;fill:#434343;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Helvetica Neue;-inkscape-font-specification:Helvetica Neue Bold"
-         x="586.20911"
-         y="498.54401"
-         id="text10584"
-         sodipodi:linespacing="120%"
-         transform="scale(1.0008132,0.99918746)"><tspan
-           sodipodi:role="line"
-           id="tspan10586"
-           x="586.20911"
-           y="498.54401"
-           style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;text-anchor:middle;fill:#434343;fill-opacity:1;stroke:none;font-family:Helvetica Neue;-inkscape-font-specification:Helvetica Neue Bold">65.6</tspan></text>
-      <text
-         sodipodi:linespacing="120%"
-         id="text10588"
-         y="496.86752"
-         x="571.02637"
-         style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:end;text-decoration:none;line-height:120.00000477%;letter-spacing:0px;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:end;baseline-shift:baseline;color:#000000;fill:#434343;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Helvetica Neue;-inkscape-font-specification:Helvetica Neue"
-         xml:space="preserve"
-         inkscape:export-filename="/Users/saman/graphics/gaIn/renders/country_indicator.png"
-         inkscape:export-xdpi="90"
-         inkscape:export-ydpi="90"><tspan
-           y="496.86752"
-           x="571.02637"
-           id="tspan10590"
-           sodipodi:role="line">GaIn™</tspan></text>
-    </g>
     <rect
        y="256.99988"
        x="-101.00012"
@@ -5259,228 +5145,6 @@
        x="-91"
        y="257"
        id="rect10645" />
-    <text
-       inkscape:export-ydpi="90"
-       inkscape:export-xdpi="90"
-       inkscape:export-filename="/Users/saman/graphics/gaIn/renders/country_indicator.png"
-       xml:space="preserve"
-       style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:start;text-decoration:none;line-height:200%;letter-spacing:0px;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:start;baseline-shift:baseline;color:#000000;fill:#434343;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Helvetica Neue;-inkscape-font-specification:Helvetica Neue"
-       x="-835"
-       y="447.99988"
-       id="text9403"
-       sodipodi:linespacing="200%"><tspan
-         sodipodi:role="line"
-         id="tspan9405"
-         x="-835"
-         y="447.99988">Vulnerability</tspan></text>
-    <path
-       style="color:#000000;fill:#434343;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
-       d="m -747,420.99976 c 0,2.20914 -1.79086,4 -4,4 -2.20914,0 -4,-1.79086 -4,-4 0,-2.20914 2,-4 4,-6 2,2 4,3.79086 4,6 z"
-       id="path10888"
-       inkscape:connector-curvature="0"
-       sodipodi:nodetypes="ssscs" />
-    <path
-       style="color:#000000;fill:#434343;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
-       d="m -660,414.99988 c 0,2 1,3 3,3 0,-2 -1,-3 -3,-3 z m 4,0 0,10 2,0 0,-10 -2,0 z m 6,0 c -2,0 -3,1 -3,3 2,0 3,-1 3,-3 z m -10,4 c 0,2 1,3 3,3 0,-2 -1,-3 -3,-3 z m 10,0 c -2,0 -3,1 -3,3 2,0 3,-1 3,-3 z"
-       id="rect10893"
-       inkscape:connector-curvature="0" />
-    <path
-       style="font-size:medium;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:start;text-decoration:none;line-height:normal;letter-spacing:normal;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:start;baseline-shift:baseline;color:#000000;fill:#434343;fill-opacity:1;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Sans;-inkscape-font-specification:Sans"
-       d="m -570,415 0,1 0,1.5 c 0,1.04167 0.10675,1.91317 0.59375,2.5625 0.3959,0.52786 1.04121,0.81653 1.84375,0.90625 -0.23941,0.47292 -0.4375,1.13676 -0.4375,2.03125 0,0.86535 0.37098,1.48373 0.90625,1.75 0.53527,0.26627 1.09471,0.25115 1.59375,0.25 0.49904,-10e-4 1.30091,3e-5 2.03125,-0.21875 0.36517,-0.10939 0.71386,-0.26554 1,-0.5625 C -562.18261,423.92179 -562,423.48614 -562,423 c 1.10457,0 2,-0.89543 2,-2 0,-1.10457 -0.89543,-2 -2,-2 -1.10457,0 -2,0.89543 -2,2 0,0.7396 0.4031,1.37271 1,1.71875 L -563,423 c 0,0.26397 -0.0674,0.40662 -0.1875,0.53125 -0.12009,0.12463 -0.33394,0.23467 -0.59375,0.3125 -0.51962,0.15566 -1.21764,0.15525 -1.71875,0.15625 -0.50081,10e-4 -0.94148,-0.0182 -1.15625,-0.125 C -566.87102,423.76817 -567,423.64455 -567,423 c 0,-0.91667 0.20844,-1.44088 0.40625,-1.75 0.0989,-0.15456 0.18879,-0.25739 0.25,-0.3125 0.75769,-0.1013 1.36964,-0.36785 1.75,-0.875 0.487,-0.64933 0.59375,-1.52083 0.59375,-2.5625 l 0,-1.5 0,-1 -1,0 -1,0 0,1 1,0 0,1.5 c 0,0.95833 -0.14325,1.58683 -0.40625,1.9375 -0.23539,0.31386 -0.61428,0.52342 -1.34375,0.5625 -0.0856,0.005 -0.15377,0 -0.25,0 -0.91667,0 -1.33075,-0.21183 -1.59375,-0.5625 C -568.85675,419.08683 -569,418.45833 -569,417.5 l 0,-1.5 1,0 0,-1 -1,0 -1,0 z"
-       transform="translate(0,2.6171874e-6)"
-       id="path10915"
-       inkscape:connector-curvature="0" />
-    <path
-       style="color:#000000;fill:#434343;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
-       d="m -430,439.99988 0,10 10,0 0,-10 -10,0 z m 1,1 8,0 0,8 -8,0 0,-8 z m 6.65625,1.65625 -1.75,1.75 -1.6875,-0.84375 -0.375,-0.21875 -0.25,0.375 -2,3 0.8125,0.5625 1.78125,-2.65625 1.59375,0.8125 0.3125,0.15625 0.25,-0.25 2,-2 -0.6875,-0.6875 z"
-       id="rect10987"
-       inkscape:connector-curvature="0" />
-    <path
-       style="color:#000000;fill:#434343;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
-       d="m -358,439.99988 -2,2 0,1 1,0 0,5 -1,0 0,2 10,0 0,-2 -1,0 0,-5 1,0 0,-1 -2,-2 -6,0 z m 0,3 1,0 0,5 -1,0 0,-5 z m 2,0 2,0 0,5 -2,0 0,-5 z m 3,0 1,0 0,5 -1,0 0,-5 z"
-       id="rect10995"
-       inkscape:connector-curvature="0" />
-    <path
-       style="color:#000000;fill:#434343;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
-       d="m -295.5,439.99988 c -2.48528,0 -4.5,2.01472 -4.5,4.5 0,2.48528 2.01472,4.5 4.5,4.5 0.68451,0 1.32539,-0.16409 1.90625,-0.4375 l 3.59375,1.4375 -1.4375,-3.59375 c 0.27341,-0.58086 0.4375,-1.22174 0.4375,-1.90625 0,-2.48528 -2.01472,-4.5 -4.5,-4.5 z m -0.5,2 1,0 0,3 -1,0 0,-3 z m 0,4 1,0 0,1 -1,0 0,-1 z"
-       id="path11008"
-       inkscape:connector-curvature="0" />
-    <path
-       style="color:#000000;fill:#434343;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
-       d="m -387,414.99976 5,0 -3,4 5,0 -5,6 0,-3 -4,0 z"
-       id="path10936"
-       inkscape:connector-curvature="0"
-       sodipodi:nodetypes="cccccccc" />
-    <path
-       style="color:#000000;fill:#000000;fill-opacity:0.11764706;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
-       d="m -654,421.99976 70,0 0,4 9,-6 -9,-6 0,4 -70,0 z"
-       id="path11164"
-       inkscape:connector-curvature="0"
-       sodipodi:nodetypes="cccccccc" />
-    <path
-       sodipodi:nodetypes="cccccccc"
-       inkscape:connector-curvature="0"
-       id="path11175"
-       d="m -430,446.99976 -41,0 0,4 -9,-6 9,-6 0,4 41,0 z"
-       style="color:#000000;fill:#000000;fill-opacity:0.11764706;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
-    <path
-       style="color:#000000;fill:#c6c6c6;fill-opacity:1;stroke:#ebebeb;stroke-width:0.99999988;stroke-opacity:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
-       d="m -485.5,429.99975 0,-20"
-       id="path11177"
-       inkscape:connector-curvature="0" />
-    <path
-       inkscape:connector-curvature="0"
-       id="path11179"
-       d="m -485.5,454.99975 0,-20"
-       style="color:#000000;fill:#c6c6c6;fill-opacity:1;stroke:#ebebeb;stroke-width:0.99999988;stroke-opacity:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
-    <path
-       style="color:#000000;fill:#ff7c80;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
-       d="m -228,559.99988 40,0 0,20 -40,0 0,-10 z"
-       id="path8293"
-       inkscape:connector-curvature="0"
-       sodipodi:nodetypes="cccccc" />
-    <path
-       style="opacity:0.2;color:#000000;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
-       d="m -200,571.99988 -39,0 0,4 -9,-6 9,-6 0,4 39,0 z"
-       id="path8295"
-       inkscape:connector-curvature="0"
-       sodipodi:nodetypes="cccccccc" />
-    <path
-       inkscape:connector-curvature="0"
-       id="path8297"
-       d="m -198.5,565 c -2.48528,0 -4.5,2.01472 -4.5,4.5 0,2.48528 2.01472,4.5 4.5,4.5 0.68451,0 1.32539,-0.16409 1.90625,-0.4375 L -193,575 l -1.4375,-3.59375 c 0.27341,-0.58086 0.4375,-1.22174 0.4375,-1.90625 0,-2.48528 -2.01472,-4.5 -4.5,-4.5 z m -0.5,2 1,0 0,3 -1,0 0,-3 z m 0,4 1,0 0,1 -1,0 0,-1 z"
-       style="color:#000000;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
-    <g
-       transform="translate(-760,50)"
-       id="g8299">
-      <path
-         sodipodi:nodetypes="sssscccsssss"
-         inkscape:connector-curvature="0"
-         id="path8301"
-         d="m 474,462.49988 c -1.385,0 -2.5,1.115 -2.5,2.5 l 0,35 c 0,1.385 1.115,2.5 2.5,2.5 l 81,0 5,5 5,-5 80,0 c 1.38499,0 2.5,-1.115 2.5,-2.5 l 0,-35 c 0,-1.385 -1.11501,-2.5 -2.5,-2.5 z"
-         style="color:#000000;fill:#ffffff;fill-opacity:1;stroke:#434343;stroke-width:0.99999994;stroke-opacity:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
-      <text
-         transform="scale(1.0008132,0.99918746)"
-         sodipodi:linespacing="120%"
-         id="text8303"
-         y="479.38943"
-         x="558.72314"
-         style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:center;text-decoration:none;line-height:120.00000477%;letter-spacing:0px;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:middle;baseline-shift:baseline;color:#000000;fill:#434343;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Helvetica Neue;-inkscape-font-specification:Helvetica Neue"
-         xml:space="preserve"
-         inkscape:export-filename="/Users/saman/graphics/gaIn/renders/country_indicator.png"
-         inkscape:export-xdpi="90"
-         inkscape:export-ydpi="90"><tspan
-           style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;text-anchor:middle;fill:#434343;fill-opacity:1;stroke:none;font-family:Helvetica Neue;-inkscape-font-specification:Helvetica Neue"
-           y="479.38943"
-           x="558.72314"
-           id="tspan8305"
-           sodipodi:role="line"><tspan
-   style="font-weight:bold;-inkscape-font-specification:Helvetica Neue Bold"
-   id="tspan8307">Social</tspan> factors make up 20%</tspan><tspan
-           id="tspan8309"
-           style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;text-anchor:middle;fill:#434343;fill-opacity:1;stroke:none;font-family:Helvetica Neue;-inkscape-font-specification:Helvetica Neue"
-           y="493.79349"
-           x="558.72314"
-           sodipodi:role="line">of total Readiness score</tspan></text>
-    </g>
-    <rect
-       style="color:#000000;fill:#67b6e0;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
-       id="rect9041"
-       width="242"
-       height="20.00008"
-       x="-924"
-       y="516.99988"
-       rx="0"
-       ry="0" />
-    <rect
-       style="color:#000000;fill:#c6c6c6;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
-       id="rect9055"
-       width="300"
-       height="20.000082"
-       x="-629"
-       y="546.99988"
-       rx="0"
-       ry="0" />
-    <rect
-       ry="0"
-       rx="0"
-       y="546.99988"
-       x="609"
-       height="20.000082"
-       width="65"
-       id="rect9051"
-       style="color:#000000;fill:#ff7c80;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
-       transform="scale(-1,1)" />
-    <path
-       style="color:#000000;fill:#ff7c80;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
-       d="M -814,543.66662 -824,557 l 10,13.33339 0,-3.33335 150,0 0,-20.00008 -150,0 z"
-       id="path9053"
-       inkscape:connector-curvature="0"
-       sodipodi:nodetypes="cccccccc" />
-    <path
-       style="color:#000000;fill:none;stroke:#ebebeb;stroke-width:1;stroke-opacity:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
-       d="m -851.5,536.99988 0,-20"
-       id="path9208"
-       inkscape:connector-curvature="0" />
-    <path
-       inkscape:connector-curvature="0"
-       id="path9210"
-       d="m -761.5,536.99988 0,-20"
-       style="color:#000000;fill:none;stroke:#ebebeb;stroke-width:1;stroke-opacity:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
-    <path
-       inkscape:connector-curvature="0"
-       id="path9210-1"
-       d="m -626.5,567.45104 0,-20.92731"
-       style="color:#000000;fill:none;stroke:#ebebeb;stroke-width:0.99999982;stroke-opacity:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
-    <path
-       style="color:#000000;fill:none;stroke:#ebebeb;stroke-width:0.99999982;stroke-opacity:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
-       d="m -701.5,567.45104 0,-20.92731"
-       id="path9230"
-       inkscape:connector-curvature="0" />
-    <path
-       inkscape:connector-curvature="0"
-       id="path9232"
-       d="m -751.5,567.45104 0,-20.92731"
-       style="color:#000000;fill:none;stroke:#ebebeb;stroke-width:0.99999982;stroke-opacity:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
-    <g
-       style="display:inline"
-       transform="translate(-723.5,-33.999999)"
-       id="g8299-8">
-      <path
-         sodipodi:nodetypes="sssscccsssss"
-         inkscape:connector-curvature="0"
-         id="path8301-3"
-         d="m 474,462.49988 c -1.385,0 -2.5,1.115 -2.5,2.5 l 0,35 c 0,1.385 1.115,2.5 2.5,2.5 l 81,0 5,5 5,-5 80,0 c 1.38499,0 2.5,-1.115 2.5,-2.5 l 0,-35 c 0,-1.385 -1.11501,-2.5 -2.5,-2.5 z"
-         style="color:#000000;fill:#ffffff;fill-opacity:1;stroke:#434343;stroke-width:0.99999994;stroke-opacity:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
-      <text
-         transform="scale(1.0008132,0.99918746)"
-         sodipodi:linespacing="120%"
-         id="text8303-9"
-         y="479.38943"
-         x="558.72314"
-         style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:center;text-decoration:none;line-height:120.00000477%;letter-spacing:0px;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:middle;baseline-shift:baseline;color:#000000;fill:#434343;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Helvetica Neue;-inkscape-font-specification:Helvetica Neue"
-         xml:space="preserve"
-         inkscape:export-filename="/Users/saman/graphics/gaIn/renders/country_indicator.png"
-         inkscape:export-xdpi="90"
-         inkscape:export-ydpi="90"><tspan
-           style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;text-anchor:middle;fill:#434343;fill-opacity:1;stroke:none;font-family:Helvetica Neue;-inkscape-font-specification:Helvetica Neue"
-           y="479.38943"
-           x="558.72314"
-           id="tspan8305-0"
-           sodipodi:role="line"><tspan
-   style="font-weight:bold;-inkscape-font-specification:Helvetica Neue Bold"
-   id="tspan8307-5">Social</tspan> factors make up 20%</tspan><tspan
-           id="tspan8309-8"
-           style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;text-anchor:middle;fill:#434343;fill-opacity:1;stroke:none;font-family:Helvetica Neue;-inkscape-font-specification:Helvetica Neue"
-           y="493.79349"
-           x="558.72314"
-           sodipodi:role="line">of total Readiness score</tspan></text>
-    </g>
-    <path
-       style="color:#000000;fill:none;stroke:#ebebeb;stroke-width:1;stroke-opacity:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
-       d="m -681.5,536.99988 0,-20"
-       id="path9472"
-       inkscape:connector-curvature="0" />
     <g
        transform="translate(-199.99362,1195.8683)"
        style="display:inline"
@@ -6000,155 +5664,6 @@
          inkscape:connector-curvature="0"
          sodipodi:nodetypes="cccccccc" />
     </g>
-    <path
-       style="color:#000000;fill:none;stroke:#c6c6c6;stroke-width:0.99999994;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
-       d="m -924.52377,586.99988 109.53198,0"
-       id="path10546-3"
-       inkscape:connector-curvature="0"
-       inkscape:export-filename="/Users/saman/graphics/gaIn/renders/country_indicator.png"
-       inkscape:export-xdpi="90"
-       inkscape:export-ydpi="90"
-       sodipodi:nodetypes="cc" />
-    <path
-       inkscape:connector-curvature="0"
-       id="path10548-9"
-       d="m -815.49179,592.22616 0,-9.5"
-       style="color:#000000;fill:none;stroke:#c6c6c6;stroke-width:0.99999994;stroke-opacity:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
-    <path
-       style="color:#000000;fill:none;stroke:#c6c6c6;stroke-width:0.99999994;stroke-opacity:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
-       d="m -924.52377,592.22616 0,-9.5"
-       id="path10550-1"
-       inkscape:connector-curvature="0" />
-    <g
-       style="display:inline"
-       id="g10580-0"
-       transform="translate(-688.96977,134.31093)">
-      <text
-         inkscape:export-ydpi="90"
-         inkscape:export-xdpi="90"
-         inkscape:export-filename="/Users/saman/graphics/gaIn/renders/country_indicator.png"
-         xml:space="preserve"
-         style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-indent:0;text-align:center;text-decoration:none;line-height:120.00000477%;letter-spacing:0px;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:middle;baseline-shift:baseline;color:#000000;fill:#434343;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Helvetica Neue;-inkscape-font-specification:Helvetica Neue Bold"
-         x="586.20911"
-         y="498.54401"
-         id="text10584-00"
-         sodipodi:linespacing="120%"
-         transform="scale(1.0008132,0.99918746)"><tspan
-           sodipodi:role="line"
-           id="tspan10586-3"
-           x="586.20911"
-           y="498.54401"
-           style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;text-anchor:middle;fill:#434343;fill-opacity:1;stroke:none;font-family:Helvetica Neue;-inkscape-font-specification:Helvetica Neue Bold">50</tspan></text>
-      <text
-         sodipodi:linespacing="120%"
-         id="text10588-2"
-         y="498.86752"
-         x="571.02637"
-         style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:end;text-decoration:none;line-height:120.00000477%;letter-spacing:0px;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:end;baseline-shift:baseline;color:#000000;fill:#434343;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Helvetica Neue;-inkscape-font-specification:Helvetica Neue"
-         xml:space="preserve"
-         inkscape:export-filename="/Users/saman/graphics/gaIn/renders/country_indicator.png"
-         inkscape:export-xdpi="90"
-         inkscape:export-ydpi="90"><tspan
-           y="498.86752"
-           x="571.02637"
-           id="tspan10590-8"
-           sodipodi:role="line">GaIn™</tspan></text>
-      <text
-         transform="scale(1.0008132,0.99918746)"
-         sodipodi:linespacing="120%"
-         id="text8853"
-         y="498.54401"
-         x="529.58081"
-         style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-indent:0;text-align:end;text-decoration:none;line-height:120.00000477%;letter-spacing:0px;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:end;baseline-shift:baseline;color:#000000;fill:#434343;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Helvetica Neue;-inkscape-font-specification:Helvetica Neue Bold"
-         xml:space="preserve"
-         inkscape:export-filename="/Users/saman/graphics/gaIn/renders/country_indicator.png"
-         inkscape:export-xdpi="90"
-         inkscape:export-ydpi="90"><tspan
-           style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:end;text-anchor:end;fill:#434343;fill-opacity:1;stroke:none;font-family:Helvetica Neue;-inkscape-font-specification:Helvetica Neue Bold"
-           y="498.54401"
-           x="529.58081"
-           id="tspan8855"
-           sodipodi:role="line"><tspan
-   style="font-weight:normal;text-align:end;text-anchor:end;-inkscape-font-specification:Helvetica Neue"
-   id="tspan8857">((</tspan>.562-.562<tspan
-   style="font-weight:normal;text-align:end;text-anchor:end;-inkscape-font-specification:Helvetica Neue"
-   id="tspan8859">)+1)50=</tspan></tspan></text>
-    </g>
-    <text
-       inkscape:export-ydpi="90"
-       inkscape:export-xdpi="90"
-       inkscape:export-filename="/Users/saman/graphics/gaIn/renders/country_indicator.png"
-       xml:space="preserve"
-       style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-indent:0;text-align:center;text-decoration:none;line-height:120.00000477%;letter-spacing:0px;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:middle;baseline-shift:baseline;color:#000000;fill:#434343;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Helvetica Neue;-inkscape-font-specification:Helvetica Neue Bold"
-       x="-736.42719"
-       y="613.7832"
-       id="text10584-00-9"
-       sodipodi:linespacing="120%"
-       transform="scale(1.0008132,0.99918746)"><tspan
-         sodipodi:role="line"
-         id="tspan10586-3-9"
-         x="-736.42719"
-         y="613.7832"
-         style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;text-anchor:middle;fill:#434343;fill-opacity:1;stroke:none;font-family:Helvetica Neue;-inkscape-font-specification:Helvetica Neue Bold">65.6</tspan></text>
-    <text
-       sodipodi:linespacing="120%"
-       id="text10588-2-7"
-       y="614.013"
-       x="-752.68542"
-       style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:end;text-decoration:none;line-height:120.00000477%;letter-spacing:0px;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:end;baseline-shift:baseline;color:#000000;fill:#434343;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Helvetica Neue;-inkscape-font-specification:Helvetica Neue"
-       xml:space="preserve"
-       inkscape:export-filename="/Users/saman/graphics/gaIn/renders/country_indicator.png"
-       inkscape:export-xdpi="90"
-       inkscape:export-ydpi="90"><tspan
-         y="614.013"
-         x="-752.68542"
-         id="tspan10590-8-9"
-         sodipodi:role="line">GaIn™</tspan></text>
-    <text
-       transform="scale(1.0008132,0.99918746)"
-       sodipodi:linespacing="120%"
-       id="text8853-3"
-       y="614.13483"
-       x="-797.2041"
-       style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-indent:0;text-align:end;text-decoration:none;line-height:120.00000477%;letter-spacing:0px;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:end;baseline-shift:baseline;color:#000000;fill:#434343;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Helvetica Neue;-inkscape-font-specification:Helvetica Neue Bold"
-       xml:space="preserve"
-       inkscape:export-filename="/Users/saman/graphics/gaIn/renders/country_indicator.png"
-       inkscape:export-xdpi="90"
-       inkscape:export-ydpi="90"><tspan
-         style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:end;text-anchor:end;fill:#434343;fill-opacity:1;stroke:none;font-family:Helvetica Neue;-inkscape-font-specification:Helvetica Neue Bold"
-         y="614.13483"
-         x="-793.87598"
-         id="tspan8855-9"
-         sodipodi:role="line"><tspan
-           style="font-weight:normal;text-align:end;text-anchor:end;-inkscape-font-specification:Helvetica Neue"
-           id="tspan8859-7">+ 1 x 50 = </tspan></tspan></text>
-    <text
-       transform="scale(1.0008132,0.99918746)"
-       sodipodi:linespacing="120%"
-       id="text8853-4"
-       y="614.54852"
-       x="-858.76459"
-       style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-indent:0;text-align:end;text-decoration:none;line-height:120.00000477%;letter-spacing:0px;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:end;baseline-shift:baseline;color:#000000;fill:#434343;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Helvetica Neue;-inkscape-font-specification:Helvetica Neue Bold"
-       xml:space="preserve"
-       inkscape:export-filename="/Users/saman/graphics/gaIn/renders/country_indicator.png"
-       inkscape:export-xdpi="90"
-       inkscape:export-ydpi="90"><tspan
-         style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:end;text-anchor:end;fill:#434343;fill-opacity:1;stroke:none;font-family:Helvetica Neue;-inkscape-font-specification:Helvetica Neue Bold"
-         y="614.54852"
-         x="-858.76459"
-         id="tspan8855-1"
-         sodipodi:role="line">0.284</tspan></text>
-    <path
-       inkscape:connector-curvature="0"
-       id="path9162"
-       d="m -874.52377,597.22616 0,-10.5"
-       style="color:#000000;fill:none;stroke:#c6c6c6;stroke-width:0.99999994;stroke-opacity:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
-       sodipodi:nodetypes="cc" />
-    <path
-       style="color:#000000;fill:#c6c6c6;fill-opacity:1;fill-rule:nonzero;stroke:#c6c6c6;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
-       d="m -889,617.49988 30,0"
-       id="path9168"
-       inkscape:connector-curvature="0" />
     <text
        sodipodi:linespacing="120%"
        id="text9170"
@@ -6263,122 +5778,6 @@
        id="rect9287"
        style="color:#000000;fill:#8ad35e;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.99999988;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
        transform="scale(-1,1)" />
-    <text
-       sodipodi:linespacing="120%"
-       id="text8681-6"
-       y="751.75989"
-       x="-530.87854"
-       style="font-size:12px;font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:start;text-decoration:none;line-height:120.00000477%;letter-spacing:0px;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:start;baseline-shift:baseline;color:#000000;fill:#434343;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Helvetica Neue;-inkscape-font-specification:Helvetica Neue Italic"
-       xml:space="preserve"
-       inkscape:export-filename="/Users/saman/graphics/gaIn/renders/country_indicator.png"
-       inkscape:export-xdpi="90"
-       inkscape:export-ydpi="90"><tspan
-         y="751.75989"
-         x="-530.87854"
-         id="tspan8683-4"
-         sodipodi:role="line">Vulnerability Composition</tspan></text>
-    <rect
-       style="color:#000000;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.99999988;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
-       id="rect9192-3-0"
-       width="245"
-       height="10.000003"
-       x="-530.87854"
-       y="761.75989" />
-    <rect
-       style="color:#000000;fill:#67b6e0;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.99999988;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
-       id="rect9190-9-8"
-       width="61"
-       height="10.000003"
-       x="-346.87854"
-       y="761.75989" />
-    <rect
-       y="761.75989"
-       x="-376.87854"
-       height="10.000003"
-       width="29"
-       id="rect9188-6-9"
-       style="color:#000000;fill:#67b6e0;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.99999988;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
-    <rect
-       style="color:#000000;fill:#67b6e0;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.99999988;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
-       id="rect9186-3-2"
-       width="61.125"
-       height="10.000003"
-       x="-438.87854"
-       y="761.75989" />
-    <rect
-       y="761.75989"
-       x="-530.75354"
-       height="10.000003"
-       width="90.875"
-       id="rect9184-1-0"
-       style="color:#000000;fill:#67b6e0;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.99999988;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
-    <text
-       inkscape:export-ydpi="90"
-       inkscape:export-xdpi="90"
-       inkscape:export-filename="/Users/saman/graphics/gaIn/renders/country_indicator.png"
-       xml:space="preserve"
-       style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-indent:0;text-align:start;text-decoration:none;line-height:120.00000477%;letter-spacing:0px;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:start;baseline-shift:baseline;color:#000000;fill:#434343;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Helvetica Neue;-inkscape-font-specification:Helvetica Neue Bold"
-       x="-530.87854"
-       y="786.75989"
-       id="text9556-5"
-       sodipodi:linespacing="120%"><tspan
-         sodipodi:role="line"
-         id="tspan9558-3"
-         x="-530.87854"
-         y="786.75989"><tspan
-   style="font-weight:normal;-inkscape-font-specification:Helvetica Neue"
-   id="tspan9944-3">Water: </tspan>30%</tspan></text>
-    <text
-       inkscape:export-ydpi="90"
-       inkscape:export-xdpi="90"
-       inkscape:export-filename="/Users/saman/graphics/gaIn/renders/country_indicator.png"
-       xml:space="preserve"
-       style="font-size:12px;font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:start;text-decoration:none;line-height:120.00000477%;letter-spacing:0px;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:start;baseline-shift:baseline;color:#000000;fill:#434343;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Helvetica Neue;-inkscape-font-specification:Helvetica Neue Italic"
-       x="-530.87854"
-       y="811.75989"
-       id="text9560-9"
-       sodipodi:linespacing="120%"><tspan
-         sodipodi:role="line"
-         id="tspan9562-6"
-         x="-530.87854"
-         y="811.75989">Readiness Composition</tspan></text>
-    <rect
-       style="color:#000000;fill:#ff7c80;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.99999988;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
-       id="rect9568-4"
-       width="84"
-       height="10.000003"
-       x="-369.87854"
-       y="821.75989" />
-    <rect
-       y="821.75989"
-       x="-426.87854"
-       height="10.000003"
-       width="56"
-       id="rect9570-1"
-       style="color:#000000;fill:#ff7c80;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.99999988;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
-    <rect
-       style="color:#000000;fill:#ff7c80;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.99999988;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
-       id="rect9572-7"
-       width="103"
-       height="10.000003"
-       x="-530.87854"
-       y="821.75989" />
-    <text
-       sodipodi:linespacing="120%"
-       id="text9574-2"
-       y="846.75989"
-       x="-532.56549"
-       style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-indent:0;text-align:start;text-decoration:none;line-height:120.00000477%;letter-spacing:0px;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:start;baseline-shift:baseline;color:#000000;fill:#434343;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Helvetica Neue;-inkscape-font-specification:Helvetica Neue Bold"
-       xml:space="preserve"
-       inkscape:export-filename="/Users/saman/graphics/gaIn/renders/country_indicator.png"
-       inkscape:export-xdpi="90"
-       inkscape:export-ydpi="90"><tspan
-         y="846.75989"
-         x="-532.56549"
-         id="tspan9576-8"
-         sodipodi:role="line"><tspan
-   style="font-weight:normal;-inkscape-font-specification:Helvetica Neue"
-   id="tspan9946-5">Social:</tspan> 20%</tspan></text>
     <rect
        y="897.99988"
        x="275"
@@ -6420,6 +5819,158 @@
        id="rect20484"
        style="color:#000000;fill:#c6c6c6;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
        transform="matrix(0,1,-1,0,0,0)" />
+    <path
+       style="color:#000000;fill:none;stroke:#c6c6c6;stroke-width:0.99999994;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       d="m 564.44284,70.499881 61.11428,0 c 2.18434,0 3.7815,1.730381 3.94286,3.866667 l 0,13.05 0,8.216667 c 0,2.142133 -1.75852,3.866667 -3.94286,3.866667 l -61.11428,0 c -2.18434,0 -3.94286,-1.724534 -3.94286,-3.866667 l 0,-21.266667 c 0,-2.142134 1.75852,-3.866667 3.94286,-3.866667 z"
+       id="path7850-4"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ssscssssss" />
+    <g
+       inkscape:groupmode="layer"
+       id="layer13"
+       inkscape:label="active_social"
+       style="display:none">
+      <rect
+         style="color:#000000;fill:#c6c6c6;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+         id="rect20482-9"
+         width="8"
+         height="2"
+         x="571"
+         y="83.999878" />
+      <rect
+         style="color:#000000;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#c6c6c6;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+         id="rect20639"
+         width="149"
+         height="105"
+         x="480.5"
+         y="94.999878"
+         rx="3.9999998"
+         ry="3.9999998" />
+      <path
+         style="color:#000000;fill:#ffffff;fill-opacity:1;stroke:#c6c6c6;stroke-width:0.99999994;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+         d="m 484.44284,70.49988 141.11428,0 c 2.18434,0 3.7815,1.73038 3.94286,3.86667 l 0,13.05 0,12.21667 -149,0 0,-25.26667 c 0,-2.14214 1.75852,-3.86667 3.94286,-3.86667 z"
+         id="path7850-4-9"
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="ssscccss" />
+      <text
+         xml:space="preserve"
+         style="font-size:10px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-indent:0;text-align:end;text-decoration:none;line-height:120.00000477%;letter-spacing:0px;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:end;baseline-shift:baseline;color:#000000;fill:#434343;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Sans;-inkscape-font-specification:Helvetica Neue Bold"
+         x="600.64514"
+         y="88.574883"
+         id="text19640-6"
+         sodipodi:linespacing="120%"><tspan
+           sodipodi:role="line"
+           id="tspan19642-9"
+           x="600.64514"
+           y="88.574883"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:end;text-anchor:end;fill:#434343;fill-opacity:1;font-family:Helvetica Neue;-inkscape-font-specification:Helvetica Neue Bold">SHARE THIS COUNTRY</tspan></text>
+      <g
+         id="g20742">
+        <rect
+           ry="3.9999974"
+           rx="3.9999974"
+           y="74.999878"
+           x="605"
+           height="19.999998"
+           width="20"
+           id="rect8023-3-5-3-6"
+           style="color:#000000;fill:#434343;fill-opacity:1;stroke:none;stroke-width:2;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+        <path
+           inkscape:connector-curvature="0"
+           id="path8060-9-0-6-6"
+           d="m 610.71881,79.281256 -1.4375,1.437501 4.2812,4.281251 -4.2812,4.28125 1.4375,1.437497 4.2812,-4.281247 4.2813,4.281247 1.4375,-1.437497 -4.2813,-4.28125 4.2813,-4.281251 -1.4375,-1.437501 -4.2813,4.281251 -4.2812,-4.281251 z"
+           style="font-size:medium;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:start;text-decoration:none;line-height:normal;letter-spacing:normal;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:start;baseline-shift:baseline;color:#000000;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:2;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Sans;-inkscape-font-specification:Sans" />
+      </g>
+      <g
+         id="g21046">
+        <image
+           style="display:inline"
+           clip-path="url(#clipPath8165-3-7-4-7)"
+           width="305"
+           height="82"
+           xlink:href="data:image/png;base64,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 "
+           id="image7944-3-4"
+           x="-360"
+           y="102.36218"
+           transform="translate(685,46.637698)" />
+        <g
+           style="display:inline"
+           transform="translate(-200,-276.3623)"
+           id="g8193-7">
+          <rect
+             id="rect8195-2"
+             ry="3"
+             rx="3.0000002"
+             y="416.86218"
+             x="690.5"
+             height="19"
+             width="31.000002"
+             style="color:#000000;fill:#e5e8f1;fill-opacity:1;fill-rule:nonzero;stroke:#365899;stroke-width:1;stroke-opacity:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+          <path
+             style="color:#000000;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+             d="m 698,429.36218 0,3 c 0,0 4,0 4,0 l 0,-1 2,0 0,1 6,0 0,-1 1,0 0,-2 z"
+             id="path8235-0"
+             inkscape:connector-curvature="0" />
+          <image
+             clip-path="url(#clipPath8090-2-9-6)"
+             width="16"
+             height="287"
+             xlink:href="data:image/png;base64,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 "
+             id="image8025-5-6"
+             x="-316"
+             y="202.36218"
+             transform="translate(1012,184)" />
+        </g>
+        <g
+           style="display:inline"
+           id="g8044-8-4"
+           transform="translate(735,-92.362302)">
+          <rect
+             style="color:#000000;fill:#f7fafd;fill-opacity:1;fill-rule:nonzero;stroke:#53a3d6;stroke-width:1;stroke-opacity:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+             id="rect8028-1-6"
+             width="30"
+             height="19"
+             x="-244.49998"
+             y="202.86218"
+             rx="3"
+             ry="3" />
+          <path
+             sodipodi:nodetypes="cscccscccc"
+             inkscape:connector-curvature="0"
+             id="path8038-9-7"
+             d="m -237,213.36218 c 2,3 5,4 7,4 4,0 5,-4 5,-4 l 2,-1 -2,-1 c 0,0 0,-3 -2.5,-3 -2.5,0 -2.5,3 -2.5,3 l -5,-3 3,6 c 0,0 -3,0 -5,-1 z"
+             style="color:#000000;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+          <path
+             style="color:#000000;fill:#2297ca;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+             d="m -237,212.36218 c 2,3 5,4 7,4 4,0 5,-4 5,-4 l 2,-1 -2,-1 c 0,0 0,-3 -2.5,-3 -2.5,0 -2.5,3 -2.5,3 l -5,-3 3,6 c 0,0 -3,0 -5,-1 z"
+             id="path7844-5-5"
+             inkscape:connector-curvature="0"
+             sodipodi:nodetypes="cscccscccc" />
+        </g>
+      </g>
+      <text
+         sodipodi:linespacing="250%"
+         id="text5188-4-2-3-3-0-7-7"
+         y="125.03212"
+         x="529.97852"
+         style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:start;text-decoration:none;line-height:250%;letter-spacing:0px;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:start;baseline-shift:baseline;color:#000000;fill:#434343;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Arial;-inkscape-font-specification:Arial"
+         xml:space="preserve"
+         inkscape:export-filename="/Users/saman/graphics/gaIn/renders/country_indicator.png"
+         inkscape:export-xdpi="90"
+         inkscape:export-ydpi="90"><tspan
+           id="tspan11342-5-1-3"
+           y="125.03212"
+           x="529.97852"
+           sodipodi:role="line">Twitter</tspan><tspan
+           y="155.03212"
+           x="529.97852"
+           sodipodi:role="line"
+           id="tspan20793">Facebook</tspan><tspan
+           y="185.03212"
+           x="529.97852"
+           sodipodi:role="line"
+           id="tspan20795">Google+</tspan></text>
+    </g>
   </g>
   <g
      inkscape:groupmode="layer"
@@ -6660,33 +6211,12 @@
     <path
        inkscape:connector-curvature="0"
        style="color:#000000;fill:#ebebeb;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
-       d="m 956,75 c 2,0 4,2 4,4 l 0,367 c 0,2 -2.001,4.06326 -4,4 l -316,0 0,-375 z"
+       d="m 956,75 c 2,0 4,2 4,4 l 0,362 c 0,2 -2,4 -4,4 l -316,0 0,-370 z"
        id="path7718"
        sodipodi:nodetypes="ssssccs"
        inkscape:export-filename="/Users/saman/graphics/gaIn/renders/country_indicator.png"
        inkscape:export-xdpi="90"
        inkscape:export-ydpi="90" />
-    <path
-       inkscape:export-ydpi="90"
-       inkscape:export-xdpi="90"
-       inkscape:export-filename="/Users/saman/graphics/gaIn/renders/country_indicator.png"
-       sodipodi:nodetypes="cssccc"
-       id="path7720"
-       d="M 960,429.99988 960,506 c 0,2 -2.00399,3.87367 -4,4 l -316,0 0,-80.00012 z"
-       style="color:#000000;fill:url(#linearGradient7034);fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
-       inkscape:connector-curvature="0" />
-    <rect
-       inkscape:export-ydpi="90"
-       inkscape:export-xdpi="90"
-       inkscape:export-filename="/Users/saman/graphics/gaIn/renders/map.png"
-       y="454.99988"
-       x="890"
-       height="25.000004"
-       width="35"
-       id="rect7722"
-       style="color:#000000;fill:#969696;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
-       rx="4.0000024"
-       ry="4.0000024" />
     <text
        sodipodi:linespacing="120%"
        id="text7724"
@@ -6733,81 +6263,6 @@
            y="135"
            style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:start;text-decoration:none;line-height:150%;letter-spacing:0px;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:start;baseline-shift:baseline;color:#000000;fill:#434343;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Helvetica Neue;-inkscape-font-specification:Helvetica Neue" /></flowRegion><flowPara
          id="flowPara7744" /></flowRoot>    <rect
-       style="color:#000000;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#969696;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
-       id="rect7746"
-       width="199"
-       height="24"
-       x="680.5"
-       y="455.49988"
-       inkscape:export-filename="/Users/saman/graphics/gaIn/renders/country_profile.png"
-       inkscape:export-xdpi="90"
-       inkscape:export-ydpi="90"
-       rx="4.0000024"
-       ry="4.0000029" />
-    <text
-       inkscape:export-ydpi="90"
-       inkscape:export-xdpi="90"
-       inkscape:export-filename="/Users/saman/graphics/gaIn/renders/map.png"
-       xml:space="preserve"
-       style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:start;text-decoration:none;line-height:120.00000477%;letter-spacing:0px;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:start;baseline-shift:baseline;color:#000000;fill:#a8a8a8;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Helvetica Neue;-inkscape-font-specification:Helvetica Neue"
-       x="690"
-       y="472"
-       id="text7748"
-       sodipodi:linespacing="120%"><tspan
-         sodipodi:role="line"
-         id="tspan7750"
-         x="690"
-         y="472">Enter Country Name Here</tspan></text>
-    <rect
-       ry="4.0000024"
-       rx="4.0000024"
-       style="color:#000000;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
-       id="rect7752"
-       width="35"
-       height="24.000002"
-       x="890"
-       y="454.99988"
-       inkscape:export-filename="/Users/saman/graphics/gaIn/renders/map.png"
-       inkscape:export-xdpi="90"
-       inkscape:export-ydpi="90" />
-    <g
-       style="display:inline"
-       id="g7754"
-       transform="translate(4.49672,440.00001)">
-      <g
-         id="g7756">
-        <text
-           inkscape:export-ydpi="90"
-           inkscape:export-xdpi="90"
-           inkscape:export-filename="/Users/saman/graphics/gaIn/renders/country_profile.png"
-           xml:space="preserve"
-           style="font-size:15px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-indent:0;text-align:start;text-decoration:none;line-height:120.00000477%;letter-spacing:0px;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:start;baseline-shift:baseline;opacity:0.3;color:#000000;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Alternate Gothic LT No3;-inkscape-font-specification:Alternate Gothic LT No3 Bold"
-           x="896.5033"
-           y="31.99988"
-           id="text7759"
-           sodipodi:linespacing="120%"><tspan
-             sodipodi:role="line"
-             id="tspan7761"
-             x="896.5033"
-             y="31.99988">GO</tspan></text>
-        <text
-           sodipodi:linespacing="120%"
-           id="text7763"
-           y="31.074869"
-           x="895.31445"
-           style="font-size:10px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-indent:0;text-align:start;text-decoration:none;line-height:120.00000477%;letter-spacing:0px;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:start;baseline-shift:baseline;color:#000000;fill:#434343;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:HelveticaNeue;-inkscape-font-specification:HelveticaNeue Bold"
-           xml:space="preserve"
-           inkscape:export-filename="/Users/saman/graphics/gaIn/renders/country_profile.png"
-           inkscape:export-xdpi="90"
-           inkscape:export-ydpi="90"><tspan
-             style="font-size:10px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-indent:0;text-align:start;text-decoration:none;line-height:120.00000477%;letter-spacing:0px;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:start;baseline-shift:baseline;color:#000000;fill:#434343;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:HelveticaNeue;-inkscape-font-specification:HelveticaNeue Bold"
-             y="31.074869"
-             x="895.31445"
-             id="tspan7765"
-             sodipodi:role="line">GO</tspan></text>
-      </g>
-    </g>
-    <rect
        inkscape:export-ydpi="90"
        inkscape:export-xdpi="90"
        inkscape:export-filename="/Users/saman/graphics/gaIn/renders/map.png"
@@ -10133,8 +9588,7 @@
      transform="translate(0,147.63782)"
      id="layer1"
      inkscape:groupmode="layer"
-     inkscape:label="map"
-     sodipodi:insensitive="true">
+     inkscape:label="map">
     <rect
        y="1156.3621"
        x="-408"
@@ -10630,7 +10084,7 @@
                inkscape:export-ydpi="90" />
             <path
                transform="matrix(0.13333337,0,0,0.13333337,738.99999,316.33333)"
-               d="m 135,245 c 0,16.56854 -13.43146,30 -30,30 -16.568542,0 -30,-13.43146 -30,-30 0,-16.56854 13.431458,-30 30,-30 16.56854,0 30,13.43146 30,30 z"
+               d="m 135,245 a 30,30 0 1 1 -60,0 30,30 0 1 1 60,0 z"
                sodipodi:ry="30"
                sodipodi:rx="30"
                sodipodi:cy="245"
@@ -10826,7 +10280,7 @@
                sodipodi:cy="245"
                sodipodi:rx="30"
                sodipodi:ry="30"
-               d="m 135,245 c 0,16.56854 -13.43146,30 -30,30 -16.568542,0 -30,-13.43146 -30,-30 0,-16.56854 13.431458,-30 30,-30 16.56854,0 30,13.43146 30,30 z"
+               d="m 135,245 a 30,30 0 1 1 -60,0 30,30 0 1 1 60,0 z"
                transform="matrix(0.13333337,0,0,0.13333337,706.99999,284.33333)" />
             <g
                inkscape:export-ydpi="90"
@@ -10982,7 +10436,7 @@
          sodipodi:cy="477.49988"
          sodipodi:rx="17.5"
          sodipodi:ry="17.5"
-         d="m 710,477.49988 c 0,9.66498 -7.83502,17.5 -17.5,17.5 -9.66498,0 -17.5,-7.83502 -17.5,-17.5 0,-9.66499 7.83502,-17.5 17.5,-17.5 9.66498,0 17.5,7.83501 17.5,17.5 z"
+         d="m 710,477.49988 a 17.5,17.5 0 1 1 -35,0 17.5,17.5 0 1 1 35,0 z"
          transform="matrix(0.20000019,0,0,-0.20000019,-121.00012,510.36223)" />
     </g>
     <g
@@ -11034,7 +10488,7 @@
          style="color:#000000;fill:#434343;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:5;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
       <path
          transform="matrix(0.20000019,0,0,0.20000019,-101.00012,319.36189)"
-         d="m 710,477.49988 c 0,9.66498 -7.83502,17.5 -17.5,17.5 -9.66498,0 -17.5,-7.83502 -17.5,-17.5 0,-9.66499 7.83502,-17.5 17.5,-17.5 9.66498,0 17.5,7.83501 17.5,17.5 z"
+         d="m 710,477.49988 a 17.5,17.5 0 1 1 -35,0 17.5,17.5 0 1 1 35,0 z"
          sodipodi:ry="17.5"
          sodipodi:rx="17.5"
          sodipodi:cy="477.49988"
@@ -11121,7 +10575,7 @@
          style="color:#000000;fill:#434343;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
       <path
          transform="matrix(0.20000019,0,0,0.20000019,-81.00012,319.36189)"
-         d="m 710,477.49988 c 0,9.66498 -7.83502,17.5 -17.5,17.5 -9.66498,0 -17.5,-7.83502 -17.5,-17.5 0,-9.66499 7.83502,-17.5 17.5,-17.5 9.66498,0 17.5,7.83501 17.5,17.5 z"
+         d="m 710,477.49988 a 17.5,17.5 0 1 1 -35,0 17.5,17.5 0 1 1 35,0 z"
          sodipodi:ry="17.5"
          sodipodi:rx="17.5"
          sodipodi:cy="477.49988"
@@ -11186,7 +10640,7 @@
       </g>
       <path
          transform="matrix(0.20000019,0,0,0.20000019,-61.00012,319.36189)"
-         d="m 710,477.49988 c 0,9.66498 -7.83502,17.5 -17.5,17.5 -9.66498,0 -17.5,-7.83502 -17.5,-17.5 0,-9.66499 7.83502,-17.5 17.5,-17.5 9.66498,0 17.5,7.83501 17.5,17.5 z"
+         d="m 710,477.49988 a 17.5,17.5 0 1 1 -35,0 17.5,17.5 0 1 1 35,0 z"
          sodipodi:ry="17.5"
          sodipodi:rx="17.5"
          sodipodi:cy="477.49988"
@@ -11252,7 +10706,7 @@
              sodipodi:role="line">DOWNLOAD DATA</tspan></text>
         <path
            transform="matrix(0,0.83333323,-0.83333323,0,499.99991,955.69538)"
-           d="m 200,975 c 0,8.28427 -6.71573,15 -15,15 -8.28427,0 -15,-6.71573 -15,-15 0,-8.28427 6.71573,-15 15,-15 8.28427,0 15,6.71573 15,15 z"
+           d="m 200,975 a 15,15 0 1 1 -30,0 15,15 0 1 1 30,0 z"
            sodipodi:ry="15"
            sodipodi:rx="15"
            sodipodi:cy="975"
@@ -11516,20 +10970,6 @@
         </g>
       </g>
     </g>
-    <text
-       inkscape:export-ydpi="90"
-       inkscape:export-xdpi="90"
-       inkscape:export-filename="/Users/saman/graphics/gaIn/renders/country_indicator.png"
-       xml:space="preserve"
-       style="font-size:20px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-indent:0;text-align:start;text-decoration:none;line-height:120.00000477%;letter-spacing:0px;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:start;baseline-shift:baseline;color:#000000;fill:#434343;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Alternate Gothic LT No3;-inkscape-font-specification:Alternate Gothic LT No3 Bold"
-       x="-442"
-       y="436.36206"
-       id="text6416"
-       sodipodi:linespacing="120%"><tspan
-         sodipodi:role="line"
-         id="tspan6418"
-         x="-442"
-         y="436.36206">Global Adaptation Index™ Country Rankings</tspan></text>
     <text
        sodipodi:linespacing="120%"
        id="text8130"
@@ -11898,448 +11338,456 @@
        width="16"
        id="rect7680"
        style="color:#000000;fill:#8ad35e;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:11.25;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
-    <text
-       sodipodi:linespacing="120%"
-       id="text7716"
-       y="592.36206"
-       x="-680"
-       style="font-size:20px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-indent:0;text-align:start;text-decoration:none;line-height:120.00000477%;letter-spacing:0px;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:start;baseline-shift:baseline;color:#000000;fill:#434343;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Alternate Gothic LT No3;-inkscape-font-specification:Alternate Gothic LT No3 Bold"
-       xml:space="preserve"
-       inkscape:export-filename="/Users/saman/graphics/gaIn/renders/country_indicator.png"
-       inkscape:export-xdpi="90"
-       inkscape:export-ydpi="90"><tspan
-         y="592.36206"
+    <g
+       id="g21057"
+       transform="translate(-220,0)">
+      <text
+         inkscape:export-ydpi="90"
+         inkscape:export-xdpi="90"
+         inkscape:export-filename="/Users/saman/graphics/gaIn/renders/country_indicator.png"
+         xml:space="preserve"
+         style="font-size:20px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-indent:0;text-align:start;text-decoration:none;line-height:120.00000477%;letter-spacing:0px;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:start;baseline-shift:baseline;color:#000000;fill:#434343;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Alternate Gothic LT No3;-inkscape-font-specification:Alternate Gothic LT No3 Bold"
          x="-680"
-         id="tspan7718"
-         sodipodi:role="line">Global Adaptation Index™ Country Rankings</tspan></text>
-    <path
-       style="color:#000000;fill:none;stroke:#c6c6c6;stroke-width:1;stroke-linecap:square;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
-       d="m -699.5,761.86206 639,0"
-       id="path7722"
-       inkscape:connector-curvature="0"
-       inkscape:export-filename="/Users/saman/graphics/gaIn/renders/country_indicator.png"
-       inkscape:export-xdpi="90"
-       inkscape:export-ydpi="90" />
-    <text
-       sodipodi:linespacing="120%"
-       id="text7725"
-       y="630.87207"
-       x="-682.58685"
-       style="font-size:12px;font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:start;text-decoration:none;line-height:120.00000477%;letter-spacing:0px;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:start;baseline-shift:baseline;color:#000000;fill:#434343;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Helvetica Neue;-inkscape-font-specification:Helvetica Neue Italic"
-       xml:space="preserve"><tspan
-         y="630.87207"
+         y="592.36206"
+         id="text7716"
+         sodipodi:linespacing="120%"><tspan
+           sodipodi:role="line"
+           id="tspan7718"
+           x="-680"
+           y="592.36206">Global Adaptation Index™ Country Rankings</tspan></text>
+      <path
+         inkscape:export-ydpi="90"
+         inkscape:export-xdpi="90"
+         inkscape:export-filename="/Users/saman/graphics/gaIn/renders/country_indicator.png"
+         inkscape:connector-curvature="0"
+         id="path7722"
+         d="m -699.5,761.86206 639,0"
+         style="color:#000000;fill:none;stroke:#c6c6c6;stroke-width:1;stroke-linecap:square;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+      <text
+         xml:space="preserve"
+         style="font-size:12px;font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:start;text-decoration:none;line-height:120.00000477%;letter-spacing:0px;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:start;baseline-shift:baseline;color:#000000;fill:#434343;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Helvetica Neue;-inkscape-font-specification:Helvetica Neue Italic"
          x="-682.58685"
-         id="tspan7727"
-         sodipodi:role="line">Top 5 Countries</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-size:12px;font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:start;text-decoration:none;line-height:120.00000477%;letter-spacing:0px;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:start;baseline-shift:baseline;color:#000000;fill:#434343;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Helvetica Neue;-inkscape-font-specification:Helvetica Neue Italic"
-       x="-362.58685"
-       y="630.87207"
-       id="text7729"
-       sodipodi:linespacing="120%"><tspan
-         sodipodi:role="line"
-         id="tspan7731"
-         x="-362.58685"
-         y="630.87207">Bottom 5 Countries</tspan></text>
-    <path
-       inkscape:export-ydpi="90"
-       inkscape:export-xdpi="90"
-       inkscape:export-filename="/Users/saman/graphics/gaIn/renders/country_indicator.png"
-       inkscape:connector-curvature="0"
-       id="path7734"
-       d="m -699.5,641.86206 639,0"
-       style="color:#000000;fill:none;stroke:#ebebeb;stroke-width:0.99999994;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
-    <text
-       sodipodi:linespacing="200%"
-       id="text7736"
-       y="657.55005"
-       x="-648.44037"
-       style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:start;text-decoration:none;line-height:200%;letter-spacing:0px;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:start;baseline-shift:baseline;color:#000000;fill:#55aa22;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Helvetica Neue;-inkscape-font-specification:Helvetica Neue"
-       xml:space="preserve"
-       inkscape:export-filename="/Users/saman/graphics/gaIn/renders/country_indicator.png"
-       inkscape:export-xdpi="90"
-       inkscape:export-ydpi="90"><tspan
-         y="657.55005"
-         x="-648.44037"
-         sodipodi:role="line"
-         id="tspan7738">Denmark</tspan><tspan
-         y="681.55005"
-         x="-648.44037"
-         sodipodi:role="line"
-         id="tspan7740">France</tspan><tspan
-         y="705.55005"
-         x="-648.44037"
-         sodipodi:role="line"
-         id="tspan7742">Switzerland</tspan><tspan
-         y="729.55005"
-         x="-648.44037"
-         sodipodi:role="line"
-         id="tspan7744">Czech Republic</tspan><tspan
-         y="753.55005"
-         x="-648.44037"
-         sodipodi:role="line"
-         id="tspan7746">Germany</tspan></text>
-    <path
-       style="color:#000000;fill:none;stroke:#ebebeb;stroke-width:0.99999994;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
-       d="m -699.5,665.86206 639,0"
-       id="path7748"
-       inkscape:connector-curvature="0"
-       inkscape:export-filename="/Users/saman/graphics/gaIn/renders/country_indicator.png"
-       inkscape:export-xdpi="90"
-       inkscape:export-ydpi="90" />
-    <path
-       inkscape:export-ydpi="90"
-       inkscape:export-xdpi="90"
-       inkscape:export-filename="/Users/saman/graphics/gaIn/renders/country_indicator.png"
-       inkscape:connector-curvature="0"
-       id="path7750"
-       d="m -699.5,689.86206 639,0"
-       style="color:#000000;fill:none;stroke:#ebebeb;stroke-width:0.99999994;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
-    <path
-       style="color:#000000;fill:none;stroke:#ebebeb;stroke-width:0.99999994;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
-       d="m -699.5,713.86206 639,0"
-       id="path7752"
-       inkscape:connector-curvature="0"
-       inkscape:export-filename="/Users/saman/graphics/gaIn/renders/country_indicator.png"
-       inkscape:export-xdpi="90"
-       inkscape:export-ydpi="90" />
-    <path
-       inkscape:export-ydpi="90"
-       inkscape:export-xdpi="90"
-       inkscape:export-filename="/Users/saman/graphics/gaIn/renders/country_indicator.png"
-       inkscape:connector-curvature="0"
-       id="path7754"
-       d="m -699.5,737.86206 639,0"
-       style="color:#000000;fill:none;stroke:#ebebeb;stroke-width:0.99999994;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
-    <rect
-       ry="0"
-       rx="0"
-       y="611.36206"
-       x="-380"
-       height="151"
-       width="1"
-       id="rect7756"
-       style="color:#000000;fill:#c6c6c6;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
-    <rect
-       ry="3.9999998"
-       rx="4"
-       style="color:#000000;fill:#67b6e0;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1.22333372;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
-       id="rect7758"
-       width="25"
-       height="15.999997"
-       x="-685"
-       y="645.36206" />
-    <rect
-       y="669.36206"
-       x="-685"
-       height="16"
-       width="25"
-       id="rect7760"
-       style="color:#000000;fill:#67b6e0;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1.22333372;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
-       rx="4"
-       ry="4" />
-    <rect
-       y="693.36206"
-       x="-685"
-       height="16.000002"
-       width="25"
-       id="rect7762"
-       style="color:#000000;fill:#67b6e0;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1.22333372;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
-       rx="4"
-       ry="4" />
-    <rect
-       ry="4"
-       rx="4"
-       style="color:#000000;fill:#67b6e0;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1.22333372;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
-       id="rect7764"
-       width="25"
-       height="16"
-       x="-685"
-       y="717.36206" />
-    <rect
-       ry="4"
-       rx="4"
-       style="color:#000000;fill:#67b6e0;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1.22333372;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
-       id="rect7766"
-       width="25"
-       height="17"
-       x="-685"
-       y="741.36206" />
-    <text
-       inkscape:export-ydpi="90"
-       inkscape:export-xdpi="90"
-       inkscape:export-filename="/Users/saman/graphics/gaIn/renders/country_indicator.png"
-       xml:space="preserve"
-       style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:center;text-decoration:none;line-height:200%;letter-spacing:0px;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:middle;baseline-shift:baseline;color:#000000;fill:#434343;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Helvetica Neue;-inkscape-font-specification:Helvetica Neue"
-       x="-672.86328"
-       y="657.36206"
-       id="text7768"
-       sodipodi:linespacing="200%"><tspan
-         id="tspan7770"
-         sodipodi:role="line"
-         x="-672.86328"
-         y="657.36206">1</tspan><tspan
-         sodipodi:role="line"
-         x="-672.86328"
-         y="681.36206"
-         id="tspan7772">2</tspan><tspan
-         sodipodi:role="line"
-         x="-672.86328"
-         y="705.36206"
-         id="tspan7774">3</tspan><tspan
-         sodipodi:role="line"
-         x="-672.86328"
-         y="729.36206"
-         id="tspan7776">4</tspan><tspan
-         sodipodi:role="line"
-         x="-672.86328"
-         y="753.36206"
-         id="tspan7778">5</tspan></text>
-    <text
-       inkscape:export-ydpi="90"
-       inkscape:export-xdpi="90"
-       inkscape:export-filename="/Users/saman/graphics/gaIn/renders/country_indicator.png"
-       xml:space="preserve"
-       style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:start;text-decoration:none;line-height:200%;letter-spacing:0px;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:start;baseline-shift:baseline;color:#000000;fill:#55aa22;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Helvetica Neue;-inkscape-font-specification:Helvetica Neue"
-       x="-328.44037"
-       y="657.55005"
-       id="text7780"
-       sodipodi:linespacing="200%"><tspan
-         id="tspan7782"
-         sodipodi:role="line"
-         x="-328.44037"
-         y="657.55005">Sudan</tspan><tspan
-         id="tspan7784"
-         sodipodi:role="line"
-         x="-328.44037"
-         y="681.55005">Democratic Republic of Congo</tspan><tspan
-         id="tspan7786"
-         sodipodi:role="line"
-         x="-328.44037"
-         y="705.55005">Zimbabwe</tspan><tspan
-         id="tspan7788"
-         sodipodi:role="line"
-         x="-328.44037"
-         y="729.55005">Burundi</tspan><tspan
-         id="tspan7790"
-         sodipodi:role="line"
-         x="-328.44037"
-         y="753.55005">Central African Republic</tspan></text>
-    <rect
-       y="645.36206"
-       x="-365"
-       height="15.999997"
-       width="25"
-       id="rect7792"
-       style="color:#000000;fill:#ff7c80;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1.22333372;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
-       rx="4"
-       ry="3.9999998" />
-    <rect
-       ry="4"
-       rx="4"
-       style="color:#000000;fill:#ff7c80;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1.22333372;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
-       id="rect7794"
-       width="25"
-       height="16"
-       x="-365"
-       y="669.36206" />
-    <rect
-       ry="4"
-       rx="4"
-       style="color:#000000;fill:#ff7c80;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1.22333372;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
-       id="rect7796"
-       width="25"
-       height="16.000002"
-       x="-365"
-       y="693.36206" />
-    <rect
-       y="717.36206"
-       x="-365"
-       height="16"
-       width="25"
-       id="rect7798"
-       style="color:#000000;fill:#ff7c80;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1.22333372;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
-       rx="4"
-       ry="4" />
-    <rect
-       y="741.36206"
-       x="-365"
-       height="17"
-       width="25"
-       id="rect7800"
-       style="color:#000000;fill:#ff7c80;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1.22333372;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
-       rx="4"
-       ry="4" />
-    <text
-       sodipodi:linespacing="200%"
-       id="text7802"
-       y="657.36206"
-       x="-351.86328"
-       style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:center;text-decoration:none;line-height:200%;letter-spacing:0px;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:middle;baseline-shift:baseline;color:#000000;fill:#434343;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Helvetica Neue;-inkscape-font-specification:Helvetica Neue"
-       xml:space="preserve"
-       inkscape:export-filename="/Users/saman/graphics/gaIn/renders/country_indicator.png"
-       inkscape:export-xdpi="90"
-       inkscape:export-ydpi="90"><tspan
-         y="657.36206"
-         x="-351.86328"
-         sodipodi:role="line"
-         id="tspan7804">171</tspan><tspan
-         id="tspan7806"
-         y="681.36206"
-         x="-351.86328"
-         sodipodi:role="line">172</tspan><tspan
-         id="tspan7808"
-         y="705.36206"
-         x="-351.86328"
-         sodipodi:role="line">173</tspan><tspan
-         id="tspan7810"
-         y="729.36206"
-         x="-351.86328"
-         sodipodi:role="line">174</tspan><tspan
-         y="753.36206"
-         x="-351.86328"
-         sodipodi:role="line"
-         id="tspan7812">175</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-size:12px;font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:end;text-decoration:none;line-height:120.00000477%;letter-spacing:0px;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:end;baseline-shift:baseline;color:#000000;fill:#434343;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Helvetica Neue;-inkscape-font-specification:Helvetica Neue Italic"
-       x="-391.64185"
-       y="630.87207"
-       id="text7815"
-       sodipodi:linespacing="120%"><tspan
-         sodipodi:role="line"
-         id="tspan7817"
-         x="-391.64185"
-         y="630.87207">Score</tspan></text>
-    <text
-       sodipodi:linespacing="120%"
-       id="text7819"
-       y="630.87207"
-       x="-76.641846"
-       style="font-size:12px;font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:end;text-decoration:none;line-height:120.00000477%;letter-spacing:0px;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:end;baseline-shift:baseline;color:#000000;fill:#434343;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Helvetica Neue;-inkscape-font-specification:Helvetica Neue Italic"
-       xml:space="preserve"><tspan
          y="630.87207"
-         x="-76.641846"
-         id="tspan7821"
-         sodipodi:role="line">Score</tspan></text>
-    <rect
-       style="color:#000000;fill:#ebebeb;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
-       id="rect7823"
-       width="1"
-       height="151"
-       x="-430"
-       y="611.36206"
-       rx="0"
-       ry="0" />
-    <rect
-       ry="0"
-       rx="0"
-       y="611.36206"
-       x="-120"
-       height="151"
-       width="1"
-       id="rect7825"
-       style="color:#000000;fill:#ebebeb;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
-    <text
-       sodipodi:linespacing="200%"
-       id="text7827"
-       y="657.36206"
-       x="-422.0513"
-       style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:start;text-decoration:none;line-height:200%;letter-spacing:0px;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:start;baseline-shift:baseline;color:#000000;fill:#434343;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Helvetica Neue;-inkscape-font-specification:Helvetica Neue"
-       xml:space="preserve"
-       inkscape:export-filename="/Users/saman/graphics/gaIn/renders/country_indicator.png"
-       inkscape:export-xdpi="90"
-       inkscape:export-ydpi="90"><tspan
+         id="text7725"
+         sodipodi:linespacing="120%"><tspan
+           sodipodi:role="line"
+           id="tspan7727"
+           x="-682.58685"
+           y="630.87207">Top 5 Countries</tspan></text>
+      <text
+         sodipodi:linespacing="120%"
+         id="text7729"
+         y="630.87207"
+         x="-362.58685"
+         style="font-size:12px;font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:start;text-decoration:none;line-height:120.00000477%;letter-spacing:0px;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:start;baseline-shift:baseline;color:#000000;fill:#434343;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Helvetica Neue;-inkscape-font-specification:Helvetica Neue Italic"
+         xml:space="preserve"><tspan
+           y="630.87207"
+           x="-362.58685"
+           id="tspan7731"
+           sodipodi:role="line">Bottom 5 Countries</tspan></text>
+      <path
+         style="color:#000000;fill:none;stroke:#ebebeb;stroke-width:0.99999994;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+         d="m -699.5,641.86206 639,0"
+         id="path7734"
+         inkscape:connector-curvature="0"
+         inkscape:export-filename="/Users/saman/graphics/gaIn/renders/country_indicator.png"
+         inkscape:export-xdpi="90"
+         inkscape:export-ydpi="90" />
+      <text
+         inkscape:export-ydpi="90"
+         inkscape:export-xdpi="90"
+         inkscape:export-filename="/Users/saman/graphics/gaIn/renders/country_indicator.png"
+         xml:space="preserve"
+         style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:start;text-decoration:none;line-height:200%;letter-spacing:0px;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:start;baseline-shift:baseline;color:#000000;fill:#55aa22;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Helvetica Neue;-inkscape-font-specification:Helvetica Neue"
+         x="-648.44037"
+         y="657.55005"
+         id="text7736"
+         sodipodi:linespacing="200%"><tspan
+           id="tspan7738"
+           sodipodi:role="line"
+           x="-648.44037"
+           y="657.55005">Denmark</tspan><tspan
+           id="tspan7740"
+           sodipodi:role="line"
+           x="-648.44037"
+           y="681.55005">France</tspan><tspan
+           id="tspan7742"
+           sodipodi:role="line"
+           x="-648.44037"
+           y="705.55005">Switzerland</tspan><tspan
+           id="tspan7744"
+           sodipodi:role="line"
+           x="-648.44037"
+           y="729.55005">Czech Republic</tspan><tspan
+           id="tspan7746"
+           sodipodi:role="line"
+           x="-648.44037"
+           y="753.55005">Germany</tspan></text>
+      <path
+         inkscape:export-ydpi="90"
+         inkscape:export-xdpi="90"
+         inkscape:export-filename="/Users/saman/graphics/gaIn/renders/country_indicator.png"
+         inkscape:connector-curvature="0"
+         id="path7748"
+         d="m -699.5,665.86206 639,0"
+         style="color:#000000;fill:none;stroke:#ebebeb;stroke-width:0.99999994;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+      <path
+         style="color:#000000;fill:none;stroke:#ebebeb;stroke-width:0.99999994;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+         d="m -699.5,689.86206 639,0"
+         id="path7750"
+         inkscape:connector-curvature="0"
+         inkscape:export-filename="/Users/saman/graphics/gaIn/renders/country_indicator.png"
+         inkscape:export-xdpi="90"
+         inkscape:export-ydpi="90" />
+      <path
+         inkscape:export-ydpi="90"
+         inkscape:export-xdpi="90"
+         inkscape:export-filename="/Users/saman/graphics/gaIn/renders/country_indicator.png"
+         inkscape:connector-curvature="0"
+         id="path7752"
+         d="m -699.5,713.86206 639,0"
+         style="color:#000000;fill:none;stroke:#ebebeb;stroke-width:0.99999994;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+      <path
+         style="color:#000000;fill:none;stroke:#ebebeb;stroke-width:0.99999994;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+         d="m -699.5,737.86206 639,0"
+         id="path7754"
+         inkscape:connector-curvature="0"
+         inkscape:export-filename="/Users/saman/graphics/gaIn/renders/country_indicator.png"
+         inkscape:export-xdpi="90"
+         inkscape:export-ydpi="90" />
+      <rect
+         style="color:#000000;fill:#c6c6c6;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+         id="rect7756"
+         width="1"
+         height="151"
+         x="-380"
+         y="611.36206"
+         rx="0"
+         ry="0" />
+      <rect
+         y="645.36206"
+         x="-685"
+         height="15.999997"
+         width="25"
+         id="rect7758"
+         style="color:#000000;fill:#67b6e0;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1.22333372;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+         rx="4"
+         ry="3.9999998" />
+      <rect
+         ry="4"
+         rx="4"
+         style="color:#000000;fill:#67b6e0;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1.22333372;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+         id="rect7760"
+         width="25"
+         height="16"
+         x="-685"
+         y="669.36206" />
+      <rect
+         ry="4"
+         rx="4"
+         style="color:#000000;fill:#67b6e0;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1.22333372;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+         id="rect7762"
+         width="25"
+         height="16.000002"
+         x="-685"
+         y="693.36206" />
+      <rect
+         y="717.36206"
+         x="-685"
+         height="16"
+         width="25"
+         id="rect7764"
+         style="color:#000000;fill:#67b6e0;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1.22333372;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+         rx="4"
+         ry="4" />
+      <rect
+         y="741.36206"
+         x="-685"
+         height="17"
+         width="25"
+         id="rect7766"
+         style="color:#000000;fill:#67b6e0;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1.22333372;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+         rx="4"
+         ry="4" />
+      <text
+         sodipodi:linespacing="200%"
+         id="text7768"
          y="657.36206"
+         x="-672.86328"
+         style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:center;text-decoration:none;line-height:200%;letter-spacing:0px;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:middle;baseline-shift:baseline;color:#000000;fill:#434343;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Helvetica Neue;-inkscape-font-specification:Helvetica Neue"
+         xml:space="preserve"
+         inkscape:export-filename="/Users/saman/graphics/gaIn/renders/country_indicator.png"
+         inkscape:export-xdpi="90"
+         inkscape:export-ydpi="90"><tspan
+           y="657.36206"
+           x="-672.86328"
+           sodipodi:role="line"
+           id="tspan7770">1</tspan><tspan
+           id="tspan7772"
+           y="681.36206"
+           x="-672.86328"
+           sodipodi:role="line">2</tspan><tspan
+           id="tspan7774"
+           y="705.36206"
+           x="-672.86328"
+           sodipodi:role="line">3</tspan><tspan
+           id="tspan7776"
+           y="729.36206"
+           x="-672.86328"
+           sodipodi:role="line">4</tspan><tspan
+           id="tspan7778"
+           y="753.36206"
+           x="-672.86328"
+           sodipodi:role="line">5</tspan></text>
+      <text
+         sodipodi:linespacing="200%"
+         id="text7780"
+         y="657.55005"
+         x="-328.44037"
+         style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:start;text-decoration:none;line-height:200%;letter-spacing:0px;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:start;baseline-shift:baseline;color:#000000;fill:#55aa22;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Helvetica Neue;-inkscape-font-specification:Helvetica Neue"
+         xml:space="preserve"
+         inkscape:export-filename="/Users/saman/graphics/gaIn/renders/country_indicator.png"
+         inkscape:export-xdpi="90"
+         inkscape:export-ydpi="90"><tspan
+           y="657.55005"
+           x="-328.44037"
+           sodipodi:role="line"
+           id="tspan7782">Sudan</tspan><tspan
+           y="681.55005"
+           x="-328.44037"
+           sodipodi:role="line"
+           id="tspan7784">Democratic Republic of Congo</tspan><tspan
+           y="705.55005"
+           x="-328.44037"
+           sodipodi:role="line"
+           id="tspan7786">Zimbabwe</tspan><tspan
+           y="729.55005"
+           x="-328.44037"
+           sodipodi:role="line"
+           id="tspan7788">Burundi</tspan><tspan
+           y="753.55005"
+           x="-328.44037"
+           sodipodi:role="line"
+           id="tspan7790">Central African Republic</tspan></text>
+      <rect
+         ry="3.9999998"
+         rx="4"
+         style="color:#000000;fill:#ff7c80;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1.22333372;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+         id="rect7792"
+         width="25"
+         height="15.999997"
+         x="-365"
+         y="645.36206" />
+      <rect
+         y="669.36206"
+         x="-365"
+         height="16"
+         width="25"
+         id="rect7794"
+         style="color:#000000;fill:#ff7c80;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1.22333372;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+         rx="4"
+         ry="4" />
+      <rect
+         y="693.36206"
+         x="-365"
+         height="16.000002"
+         width="25"
+         id="rect7796"
+         style="color:#000000;fill:#ff7c80;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1.22333372;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+         rx="4"
+         ry="4" />
+      <rect
+         ry="4"
+         rx="4"
+         style="color:#000000;fill:#ff7c80;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1.22333372;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+         id="rect7798"
+         width="25"
+         height="16"
+         x="-365"
+         y="717.36206" />
+      <rect
+         ry="4"
+         rx="4"
+         style="color:#000000;fill:#ff7c80;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1.22333372;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+         id="rect7800"
+         width="25"
+         height="17"
+         x="-365"
+         y="741.36206" />
+      <text
+         inkscape:export-ydpi="90"
+         inkscape:export-xdpi="90"
+         inkscape:export-filename="/Users/saman/graphics/gaIn/renders/country_indicator.png"
+         xml:space="preserve"
+         style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:center;text-decoration:none;line-height:200%;letter-spacing:0px;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:middle;baseline-shift:baseline;color:#000000;fill:#434343;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Helvetica Neue;-inkscape-font-specification:Helvetica Neue"
+         x="-351.86328"
+         y="657.36206"
+         id="text7802"
+         sodipodi:linespacing="200%"><tspan
+           id="tspan7804"
+           sodipodi:role="line"
+           x="-351.86328"
+           y="657.36206">171</tspan><tspan
+           sodipodi:role="line"
+           x="-351.86328"
+           y="681.36206"
+           id="tspan7806">172</tspan><tspan
+           sodipodi:role="line"
+           x="-351.86328"
+           y="705.36206"
+           id="tspan7808">173</tspan><tspan
+           sodipodi:role="line"
+           x="-351.86328"
+           y="729.36206"
+           id="tspan7810">174</tspan><tspan
+           id="tspan7812"
+           sodipodi:role="line"
+           x="-351.86328"
+           y="753.36206">175</tspan></text>
+      <text
+         sodipodi:linespacing="120%"
+         id="text7815"
+         y="630.87207"
+         x="-391.64185"
+         style="font-size:12px;font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:end;text-decoration:none;line-height:120.00000477%;letter-spacing:0px;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:end;baseline-shift:baseline;color:#000000;fill:#434343;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Helvetica Neue;-inkscape-font-specification:Helvetica Neue Italic"
+         xml:space="preserve"><tspan
+           y="630.87207"
+           x="-391.64185"
+           id="tspan7817"
+           sodipodi:role="line">Score</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-size:12px;font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:end;text-decoration:none;line-height:120.00000477%;letter-spacing:0px;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:end;baseline-shift:baseline;color:#000000;fill:#434343;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Helvetica Neue;-inkscape-font-specification:Helvetica Neue Italic"
+         x="-76.641846"
+         y="630.87207"
+         id="text7819"
+         sodipodi:linespacing="120%"><tspan
+           sodipodi:role="line"
+           id="tspan7821"
+           x="-76.641846"
+           y="630.87207">Score</tspan></text>
+      <rect
+         ry="0"
+         rx="0"
+         y="611.36206"
+         x="-430"
+         height="151"
+         width="1"
+         id="rect7823"
+         style="color:#000000;fill:#ebebeb;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+      <rect
+         style="color:#000000;fill:#ebebeb;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+         id="rect7825"
+         width="1"
+         height="151"
+         x="-120"
+         y="611.36206"
+         rx="0"
+         ry="0" />
+      <text
+         inkscape:export-ydpi="90"
+         inkscape:export-xdpi="90"
+         inkscape:export-filename="/Users/saman/graphics/gaIn/renders/country_indicator.png"
+         xml:space="preserve"
+         style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:start;text-decoration:none;line-height:200%;letter-spacing:0px;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:start;baseline-shift:baseline;color:#000000;fill:#434343;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Helvetica Neue;-inkscape-font-specification:Helvetica Neue"
          x="-422.0513"
-         sodipodi:role="line"
-         id="tspan7829">83.8</tspan><tspan
-         id="tspan7831"
-         y="681.36206"
-         x="-422.0513"
-         sodipodi:role="line">81.4</tspan><tspan
-         id="tspan7833"
-         y="705.36206"
-         x="-422.0513"
-         sodipodi:role="line">81.4</tspan><tspan
-         id="tspan7835"
-         y="729.36206"
-         x="-422.0513"
-         sodipodi:role="line">81.4</tspan><tspan
-         id="tspan7837"
-         y="753.36206"
-         x="-422.0513"
-         sodipodi:role="line">81.3</tspan></text>
-    <text
-       inkscape:export-ydpi="90"
-       inkscape:export-xdpi="90"
-       inkscape:export-filename="/Users/saman/graphics/gaIn/renders/country_indicator.png"
-       xml:space="preserve"
-       style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:start;text-decoration:none;line-height:200%;letter-spacing:0px;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:start;baseline-shift:baseline;color:#000000;fill:#434343;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Helvetica Neue;-inkscape-font-specification:Helvetica Neue"
-       x="-109.12305"
-       y="657.36206"
-       id="text7839"
-       sodipodi:linespacing="200%"><tspan
-         id="tspan7841"
-         sodipodi:role="line"
+         y="657.36206"
+         id="text7827"
+         sodipodi:linespacing="200%"><tspan
+           id="tspan7829"
+           sodipodi:role="line"
+           x="-422.0513"
+           y="657.36206">83.8</tspan><tspan
+           sodipodi:role="line"
+           x="-422.0513"
+           y="681.36206"
+           id="tspan7831">81.4</tspan><tspan
+           sodipodi:role="line"
+           x="-422.0513"
+           y="705.36206"
+           id="tspan7833">81.4</tspan><tspan
+           sodipodi:role="line"
+           x="-422.0513"
+           y="729.36206"
+           id="tspan7835">81.4</tspan><tspan
+           sodipodi:role="line"
+           x="-422.0513"
+           y="753.36206"
+           id="tspan7837">81.3</tspan></text>
+      <text
+         sodipodi:linespacing="200%"
+         id="text7839"
+         y="657.36206"
          x="-109.12305"
-         y="657.36206">39.0</tspan><tspan
-         sodipodi:role="line"
-         x="-109.12305"
-         y="681.36206"
-         id="tspan7843">38.1</tspan><tspan
-         sodipodi:role="line"
-         x="-109.12305"
-         y="705.36206"
-         id="tspan7845">37.4</tspan><tspan
-         sodipodi:role="line"
-         x="-109.12305"
-         y="729.36206"
-         id="tspan7847">37.2</tspan><tspan
-         sodipodi:role="line"
-         x="-109.12305"
-         y="753.36206"
-         id="tspan7849">37.0</tspan></text>
-    <path
-       style="color:#000000;fill:#8ad35e;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
-       d="m 14,572.36206 612,0 c 2.216,0 4,1.784 4,4 l 0,13.5 0,8.5 c 0,2.216 -1.784,4 -4,4 l -612,0 c -2.216,0 -4,-1.784 -4,-4 l 0,-22 c 0,-2.216 1.784,-4 4,-4 z"
-       id="path7853"
-       inkscape:connector-curvature="0"
-       sodipodi:nodetypes="ssscssssss" />
-    <text
-       inkscape:export-ydpi="90"
-       inkscape:export-xdpi="90"
-       inkscape:export-filename="/Users/saman/graphics/gaIn/renders/country_indicator.png"
-       xml:space="preserve"
-       style="font-size:10px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-indent:0;text-align:start;text-decoration:none;line-height:120.00000477%;letter-spacing:0px;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:start;baseline-shift:baseline;color:#000000;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:HelveticaNeue;-inkscape-font-specification:HelveticaNeue Bold"
-       x="45"
-       y="591.36206"
-       id="text7855"
-       sodipodi:linespacing="120%"><tspan
-         sodipodi:role="line"
-         id="tspan7857"
-         x="45"
-         y="591.36206">VIEW FULL GAIN™ RANKINGS</tspan></text>
-    <path
-       inkscape:export-ydpi="90"
-       inkscape:export-xdpi="90"
-       inkscape:export-filename="/Users/saman/graphics/gaIn/renders/country_indicator.png"
-       inkscape:connector-curvature="0"
-       id="path7859"
-       d="m -699.5,611.86206 639,0"
-       style="color:#000000;fill:none;stroke:#c6c6c6;stroke-width:1;stroke-linecap:square;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
-    <path
-       style="color:#000000;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
-       d="m 20,579.36206 0,3 3,0 0,-3 -3,0 z m 4,0 0,3 11,0 0,-3 -11,0 z m -4,4 0,3 3,0 0,-3 -3,0 z m 4,0 0,3 11,0 0,-3 -11,0 z m -4,4 0,3 3,0 0,-3 -3,0 z m 4,0 0,3 11,0 0,-3 -11,0 z m -4,4 0,3 3,0 0,-3 -3,0 z m 4,0 0,3 11,0 0,-3 -11,0 z"
-       id="rect6584-3"
-       inkscape:connector-curvature="0" />
+         style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:start;text-decoration:none;line-height:200%;letter-spacing:0px;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:start;baseline-shift:baseline;color:#000000;fill:#434343;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Helvetica Neue;-inkscape-font-specification:Helvetica Neue"
+         xml:space="preserve"
+         inkscape:export-filename="/Users/saman/graphics/gaIn/renders/country_indicator.png"
+         inkscape:export-xdpi="90"
+         inkscape:export-ydpi="90"><tspan
+           y="657.36206"
+           x="-109.12305"
+           sodipodi:role="line"
+           id="tspan7841">39.0</tspan><tspan
+           id="tspan7843"
+           y="681.36206"
+           x="-109.12305"
+           sodipodi:role="line">38.1</tspan><tspan
+           id="tspan7845"
+           y="705.36206"
+           x="-109.12305"
+           sodipodi:role="line">37.4</tspan><tspan
+           id="tspan7847"
+           y="729.36206"
+           x="-109.12305"
+           sodipodi:role="line">37.2</tspan><tspan
+           id="tspan7849"
+           y="753.36206"
+           x="-109.12305"
+           sodipodi:role="line">37.0</tspan></text>
+      <path
+         style="color:#000000;fill:none;stroke:#c6c6c6;stroke-width:1;stroke-linecap:square;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+         d="m -699.5,611.86206 639,0"
+         id="path7859"
+         inkscape:connector-curvature="0"
+         inkscape:export-filename="/Users/saman/graphics/gaIn/renders/country_indicator.png"
+         inkscape:export-xdpi="90"
+         inkscape:export-ydpi="90" />
+    </g>
+    <g
+       id="g21125"
+       transform="translate(911,112)">
+      <path
+         sodipodi:nodetypes="ssscssssss"
+         inkscape:connector-curvature="0"
+         id="path7853"
+         d="m -897,460.36206 612,0 c 2.216,0 4,1.784 4,4 l 0,13.5 0,8.5 c 0,2.216 -1.784,4 -4,4 l -612,0 c -2.216,0 -4,-1.784 -4,-4 l 0,-22 c 0,-2.216 1.784,-4 4,-4 z"
+         style="color:#000000;fill:#8ad35e;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+      <text
+         sodipodi:linespacing="120%"
+         id="text7855"
+         y="479.36206"
+         x="-866"
+         style="font-size:10px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-indent:0;text-align:start;text-decoration:none;line-height:120.00000477%;letter-spacing:0px;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:start;baseline-shift:baseline;color:#000000;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:HelveticaNeue;-inkscape-font-specification:HelveticaNeue Bold"
+         xml:space="preserve"
+         inkscape:export-filename="/Users/saman/graphics/gaIn/renders/country_indicator.png"
+         inkscape:export-xdpi="90"
+         inkscape:export-ydpi="90"><tspan
+           y="479.36206"
+           x="-866"
+           id="tspan7857"
+           sodipodi:role="line">VIEW FULL GAIN™ RANKINGS</tspan></text>
+      <path
+         inkscape:connector-curvature="0"
+         id="rect6584-3"
+         d="m -891,467.36206 0,3 3,0 0,-3 -3,0 z m 4,0 0,3 11,0 0,-3 -11,0 z m -4,4 0,3 3,0 0,-3 -3,0 z m 4,0 0,3 11,0 0,-3 -11,0 z m -4,4 0,3 3,0 0,-3 -3,0 z m 4,0 0,3 11,0 0,-3 -11,0 z m -4,4 0,3 3,0 0,-3 -3,0 z m 4,0 0,3 11,0 0,-3 -11,0 z"
+         style="color:#000000;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+    </g>
     <g
        style="fill:#11202c;fill-opacity:1"
        transform="translate(0,-558.00012)"
        inkscape:export-ydpi="90"
        inkscape:export-xdpi="90"
-       inkscape:export-filename="/Users/saman/Dropbox/work_repos/gai-gain/design/renders/map_base.png"
+       inkscape:export-filename="/Users/saman/Dropbox/work_repos/gai-gain/design/renders/map_base_rankingsbutton.png"
        id="g7390">
       <rect
          inkscape:export-ydpi="90"
@@ -12507,11 +11955,11 @@
        sodipodi:cy="1371.9999"
        sodipodi:rx="4"
        sodipodi:ry="4"
-       d="m 670,1371.9999 c 0,2.2091 -1.79086,4 -4,4 -2.20914,0 -4,-1.7909 -4,-4 0,-2.2092 1.79086,-4 4,-4 2.20914,0 4,1.7908 4,4 z"
+       d="m 670,1371.9999 a 4,4 0 1 1 -8,0 4,4 0 1 1 8,0 z"
        transform="matrix(1.5,0,0,1.5,-332,-831.63776)" />
     <path
        transform="translate(1,-145.63782)"
-       d="m 670,1371.9999 c 0,2.2091 -1.79086,4 -4,4 -2.20914,0 -4,-1.7909 -4,-4 0,-2.2092 1.79086,-4 4,-4 2.20914,0 4,1.7908 4,4 z"
+       d="m 670,1371.9999 a 4,4 0 1 1 -8,0 4,4 0 1 1 8,0 z"
        sodipodi:ry="4"
        sodipodi:rx="4"
        sodipodi:cy="1371.9999"
@@ -23545,7 +22993,7 @@
        transform="translate(0,-1025.3622)"
        inkscape:export-ydpi="90"
        inkscape:export-xdpi="90"
-       inkscape:export-filename="/Users/saman/Dropbox/work_repos/gai-gain/design/renders/matrix_country.png"
+       inkscape:export-filename="/Users/saman/Dropbox/work_repos/gai-gain/design/renders/matrix_base.png"
        id="g7390-8-5-0">
       <path
          style="color:#000000;fill:#11202c;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
@@ -27431,7 +26879,7 @@
      inkscape:groupmode="layer"
      id="layer7"
      inkscape:label="indicator_sidebar"
-     style="display:inline"
+     style="display:none"
      transform="translate(0,-2.6171874e-6)">
     <path
        inkscape:export-ydpi="90"
@@ -27606,10 +27054,10 @@
          sodipodi:cy="250"
          sodipodi:rx="1"
          sodipodi:ry="1"
-         d="m 701,250 c 0,0.55228 -0.44772,1 -1,1 -0.55228,0 -1,-0.44772 -1,-1 0,-0.55228 0.44772,-1 1,-1 0.55228,0 1,0.44772 1,1 z"
+         d="m 701,250 a 1,1 0 1 1 -2,0 1,1 0 1 1 2,0 z"
          transform="translate(-8,30)" />
       <path
-         d="m 701,250 c 0,0.55228 -0.44772,1 -1,1 -0.55228,0 -1,-0.44772 -1,-1 0,-0.55228 0.44772,-1 1,-1 0.55228,0 1,0.44772 1,1 z"
+         d="m 701,250 a 1,1 0 1 1 -2,0 1,1 0 1 1 2,0 z"
          sodipodi:ry="1"
          sodipodi:rx="1"
          sodipodi:cy="250"
@@ -27627,9 +27075,9 @@
          sodipodi:cy="250"
          sodipodi:rx="1"
          sodipodi:ry="1"
-         d="m 701,250 c 0,0.55228 -0.44772,1 -1,1 -0.55228,0 -1,-0.44772 -1,-1 0,-0.55228 0.44772,-1 1,-1 0.55228,0 1,0.44772 1,1 z" />
+         d="m 701,250 a 1,1 0 1 1 -2,0 1,1 0 1 1 2,0 z" />
       <path
-         d="m 701,250 c 0,0.55228 -0.44772,1 -1,1 -0.55228,0 -1,-0.44772 -1,-1 0,-0.55228 0.44772,-1 1,-1 0.55228,0 1,0.44772 1,1 z"
+         d="m 701,250 a 1,1 0 1 1 -2,0 1,1 0 1 1 2,0 z"
          sodipodi:ry="1"
          sodipodi:rx="1"
          sodipodi:cy="250"
@@ -27647,9 +27095,9 @@
          sodipodi:cy="250"
          sodipodi:rx="1"
          sodipodi:ry="1"
-         d="m 701,250 c 0,0.55228 -0.44772,1 -1,1 -0.55228,0 -1,-0.44772 -1,-1 0,-0.55228 0.44772,-1 1,-1 0.55228,0 1,0.44772 1,1 z" />
+         d="m 701,250 a 1,1 0 1 1 -2,0 1,1 0 1 1 2,0 z" />
       <path
-         d="m 701,250 c 0,0.55228 -0.44772,1 -1,1 -0.55228,0 -1,-0.44772 -1,-1 0,-0.55228 0.44772,-1 1,-1 0.55228,0 1,0.44772 1,1 z"
+         d="m 701,250 a 1,1 0 1 1 -2,0 1,1 0 1 1 2,0 z"
          sodipodi:ry="1"
          sodipodi:rx="1"
          sodipodi:cy="250"
@@ -27667,9 +27115,9 @@
          sodipodi:cy="250"
          sodipodi:rx="1"
          sodipodi:ry="1"
-         d="m 701,250 c 0,0.55228 -0.44772,1 -1,1 -0.55228,0 -1,-0.44772 -1,-1 0,-0.55228 0.44772,-1 1,-1 0.55228,0 1,0.44772 1,1 z" />
+         d="m 701,250 a 1,1 0 1 1 -2,0 1,1 0 1 1 2,0 z" />
       <path
-         d="m 701,250 c 0,0.55228 -0.44772,1 -1,1 -0.55228,0 -1,-0.44772 -1,-1 0,-0.55228 0.44772,-1 1,-1 0.55228,0 1,0.44772 1,1 z"
+         d="m 701,250 a 1,1 0 1 1 -2,0 1,1 0 1 1 2,0 z"
          sodipodi:ry="1"
          sodipodi:rx="1"
          sodipodi:cy="250"
@@ -27687,9 +27135,9 @@
          sodipodi:cy="250"
          sodipodi:rx="1"
          sodipodi:ry="1"
-         d="m 701,250 c 0,0.55228 -0.44772,1 -1,1 -0.55228,0 -1,-0.44772 -1,-1 0,-0.55228 0.44772,-1 1,-1 0.55228,0 1,0.44772 1,1 z" />
+         d="m 701,250 a 1,1 0 1 1 -2,0 1,1 0 1 1 2,0 z" />
       <path
-         d="m 701,250 c 0,0.55228 -0.44772,1 -1,1 -0.55228,0 -1,-0.44772 -1,-1 0,-0.55228 0.44772,-1 1,-1 0.55228,0 1,0.44772 1,1 z"
+         d="m 701,250 a 1,1 0 1 1 -2,0 1,1 0 1 1 2,0 z"
          sodipodi:ry="1"
          sodipodi:rx="1"
          sodipodi:cy="250"
@@ -27707,9 +27155,9 @@
          sodipodi:cy="250"
          sodipodi:rx="1"
          sodipodi:ry="1"
-         d="m 701,250 c 0,0.55228 -0.44772,1 -1,1 -0.55228,0 -1,-0.44772 -1,-1 0,-0.55228 0.44772,-1 1,-1 0.55228,0 1,0.44772 1,1 z" />
+         d="m 701,250 a 1,1 0 1 1 -2,0 1,1 0 1 1 2,0 z" />
       <path
-         d="m 701,250 c 0,0.55228 -0.44772,1 -1,1 -0.55228,0 -1,-0.44772 -1,-1 0,-0.55228 0.44772,-1 1,-1 0.55228,0 1,0.44772 1,1 z"
+         d="m 701,250 a 1,1 0 1 1 -2,0 1,1 0 1 1 2,0 z"
          sodipodi:ry="1"
          sodipodi:rx="1"
          sodipodi:cy="250"
@@ -27727,9 +27175,9 @@
          sodipodi:cy="250"
          sodipodi:rx="1"
          sodipodi:ry="1"
-         d="m 701,250 c 0,0.55228 -0.44772,1 -1,1 -0.55228,0 -1,-0.44772 -1,-1 0,-0.55228 0.44772,-1 1,-1 0.55228,0 1,0.44772 1,1 z" />
+         d="m 701,250 a 1,1 0 1 1 -2,0 1,1 0 1 1 2,0 z" />
       <path
-         d="m 701,250 c 0,0.55228 -0.44772,1 -1,1 -0.55228,0 -1,-0.44772 -1,-1 0,-0.55228 0.44772,-1 1,-1 0.55228,0 1,0.44772 1,1 z"
+         d="m 701,250 a 1,1 0 1 1 -2,0 1,1 0 1 1 2,0 z"
          sodipodi:ry="1"
          sodipodi:rx="1"
          sodipodi:cy="250"
@@ -27747,7 +27195,7 @@
          sodipodi:cy="250"
          sodipodi:rx="1"
          sodipodi:ry="1"
-         d="m 701,250 c 0,0.55228 -0.44772,1 -1,1 -0.55228,0 -1,-0.44772 -1,-1 0,-0.55228 0.44772,-1 1,-1 0.55228,0 1,0.44772 1,1 z" />
+         d="m 701,250 a 1,1 0 1 1 -2,0 1,1 0 1 1 2,0 z" />
       <text
          xml:space="preserve"
          style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:center;text-decoration:none;line-height:150%;letter-spacing:0px;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:middle;baseline-shift:baseline;color:#000000;fill:#434343;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Helvetica Neue;-inkscape-font-specification:Helvetica Neue"
@@ -27793,7 +27241,7 @@
            id="tspan5844"
            sodipodi:role="line">2000</tspan></text>
       <path
-         d="m 701,250 c 0,0.55228 -0.44772,1 -1,1 -0.55228,0 -1,-0.44772 -1,-1 0,-0.55228 0.44772,-1 1,-1 0.55228,0 1,0.44772 1,1 z"
+         d="m 701,250 a 1,1 0 1 1 -2,0 1,1 0 1 1 2,0 z"
          sodipodi:ry="1"
          sodipodi:rx="1"
          sodipodi:cy="250"
@@ -27815,7 +27263,7 @@
          id="g5961"
          transform="translate(60,30)">
         <path
-           d="m 701,250 c 0,0.55228 -0.44772,1 -1,1 -0.55228,0 -1,-0.44772 -1,-1 0,-0.55228 0.44772,-1 1,-1 0.55228,0 1,0.44772 1,1 z"
+           d="m 701,250 a 1,1 0 1 1 -2,0 1,1 0 1 1 2,0 z"
            sodipodi:ry="1"
            sodipodi:rx="1"
            sodipodi:cy="250"
@@ -27936,7 +27384,7 @@
          sodipodi:cy="357.15625"
          sodipodi:rx="2.09375"
          sodipodi:ry="2.09375"
-         d="m 596.5,357.15625 c 0,1.15635 -0.9374,2.09375 -2.09375,2.09375 -1.15635,0 -2.09375,-0.9374 -2.09375,-2.09375 0,-1.15635 0.9374,-2.09375 2.09375,-2.09375 1.15635,0 2.09375,0.9374 2.09375,2.09375 z"
+         d="m 596.5,357.15625 a 2.09375,2.09375 0 1 1 -4.1875,0 2.09375,2.09375 0 1 1 4.1875,0 z"
          transform="matrix(0.47761493,0,0,0.47761493,129.1027,238.41684)" />
       <text
          sodipodi:linespacing="200%"
@@ -28309,10 +27757,10 @@
          sodipodi:cy="250"
          sodipodi:rx="1"
          sodipodi:ry="1"
-         d="m 701,250 c 0,0.55228 -0.44772,1 -1,1 -0.55228,0 -1,-0.44772 -1,-1 0,-0.55228 0.44772,-1 1,-1 0.55228,0 1,0.44772 1,1 z"
+         d="m 701,250 a 1,1 0 1 1 -2,0 1,1 0 1 1 2,0 z"
          transform="translate(-8,329.99998)" />
       <path
-         d="m 701,250 c 0,0.55228 -0.44772,1 -1,1 -0.55228,0 -1,-0.44772 -1,-1 0,-0.55228 0.44772,-1 1,-1 0.55228,0 1,0.44772 1,1 z"
+         d="m 701,250 a 1,1 0 1 1 -2,0 1,1 0 1 1 2,0 z"
          sodipodi:ry="1"
          sodipodi:rx="1"
          sodipodi:cy="250"
@@ -28330,9 +27778,9 @@
          sodipodi:cy="250"
          sodipodi:rx="1"
          sodipodi:ry="1"
-         d="m 701,250 c 0,0.55228 -0.44772,1 -1,1 -0.55228,0 -1,-0.44772 -1,-1 0,-0.55228 0.44772,-1 1,-1 0.55228,0 1,0.44772 1,1 z" />
+         d="m 701,250 a 1,1 0 1 1 -2,0 1,1 0 1 1 2,0 z" />
       <path
-         d="m 701,250 c 0,0.55228 -0.44772,1 -1,1 -0.55228,0 -1,-0.44772 -1,-1 0,-0.55228 0.44772,-1 1,-1 0.55228,0 1,0.44772 1,1 z"
+         d="m 701,250 a 1,1 0 1 1 -2,0 1,1 0 1 1 2,0 z"
          sodipodi:ry="1"
          sodipodi:rx="1"
          sodipodi:cy="250"
@@ -28350,9 +27798,9 @@
          sodipodi:cy="250"
          sodipodi:rx="1"
          sodipodi:ry="1"
-         d="m 701,250 c 0,0.55228 -0.44772,1 -1,1 -0.55228,0 -1,-0.44772 -1,-1 0,-0.55228 0.44772,-1 1,-1 0.55228,0 1,0.44772 1,1 z" />
+         d="m 701,250 a 1,1 0 1 1 -2,0 1,1 0 1 1 2,0 z" />
       <path
-         d="m 701,250 c 0,0.55228 -0.44772,1 -1,1 -0.55228,0 -1,-0.44772 -1,-1 0,-0.55228 0.44772,-1 1,-1 0.55228,0 1,0.44772 1,1 z"
+         d="m 701,250 a 1,1 0 1 1 -2,0 1,1 0 1 1 2,0 z"
          sodipodi:ry="1"
          sodipodi:rx="1"
          sodipodi:cy="250"
@@ -28370,9 +27818,9 @@
          sodipodi:cy="250"
          sodipodi:rx="1"
          sodipodi:ry="1"
-         d="m 701,250 c 0,0.55228 -0.44772,1 -1,1 -0.55228,0 -1,-0.44772 -1,-1 0,-0.55228 0.44772,-1 1,-1 0.55228,0 1,0.44772 1,1 z" />
+         d="m 701,250 a 1,1 0 1 1 -2,0 1,1 0 1 1 2,0 z" />
       <path
-         d="m 701,250 c 0,0.55228 -0.44772,1 -1,1 -0.55228,0 -1,-0.44772 -1,-1 0,-0.55228 0.44772,-1 1,-1 0.55228,0 1,0.44772 1,1 z"
+         d="m 701,250 a 1,1 0 1 1 -2,0 1,1 0 1 1 2,0 z"
          sodipodi:ry="1"
          sodipodi:rx="1"
          sodipodi:cy="250"
@@ -28390,9 +27838,9 @@
          sodipodi:cy="250"
          sodipodi:rx="1"
          sodipodi:ry="1"
-         d="m 701,250 c 0,0.55228 -0.44772,1 -1,1 -0.55228,0 -1,-0.44772 -1,-1 0,-0.55228 0.44772,-1 1,-1 0.55228,0 1,0.44772 1,1 z" />
+         d="m 701,250 a 1,1 0 1 1 -2,0 1,1 0 1 1 2,0 z" />
       <path
-         d="m 701,250 c 0,0.55228 -0.44772,1 -1,1 -0.55228,0 -1,-0.44772 -1,-1 0,-0.55228 0.44772,-1 1,-1 0.55228,0 1,0.44772 1,1 z"
+         d="m 701,250 a 1,1 0 1 1 -2,0 1,1 0 1 1 2,0 z"
          sodipodi:ry="1"
          sodipodi:rx="1"
          sodipodi:cy="250"
@@ -28410,9 +27858,9 @@
          sodipodi:cy="250"
          sodipodi:rx="1"
          sodipodi:ry="1"
-         d="m 701,250 c 0,0.55228 -0.44772,1 -1,1 -0.55228,0 -1,-0.44772 -1,-1 0,-0.55228 0.44772,-1 1,-1 0.55228,0 1,0.44772 1,1 z" />
+         d="m 701,250 a 1,1 0 1 1 -2,0 1,1 0 1 1 2,0 z" />
       <path
-         d="m 701,250 c 0,0.55228 -0.44772,1 -1,1 -0.55228,0 -1,-0.44772 -1,-1 0,-0.55228 0.44772,-1 1,-1 0.55228,0 1,0.44772 1,1 z"
+         d="m 701,250 a 1,1 0 1 1 -2,0 1,1 0 1 1 2,0 z"
          sodipodi:ry="1"
          sodipodi:rx="1"
          sodipodi:cy="250"
@@ -28430,9 +27878,9 @@
          sodipodi:cy="250"
          sodipodi:rx="1"
          sodipodi:ry="1"
-         d="m 701,250 c 0,0.55228 -0.44772,1 -1,1 -0.55228,0 -1,-0.44772 -1,-1 0,-0.55228 0.44772,-1 1,-1 0.55228,0 1,0.44772 1,1 z" />
+         d="m 701,250 a 1,1 0 1 1 -2,0 1,1 0 1 1 2,0 z" />
       <path
-         d="m 701,250 c 0,0.55228 -0.44772,1 -1,1 -0.55228,0 -1,-0.44772 -1,-1 0,-0.55228 0.44772,-1 1,-1 0.55228,0 1,0.44772 1,1 z"
+         d="m 701,250 a 1,1 0 1 1 -2,0 1,1 0 1 1 2,0 z"
          sodipodi:ry="1"
          sodipodi:rx="1"
          sodipodi:cy="250"
@@ -28450,7 +27898,7 @@
          sodipodi:cy="250"
          sodipodi:rx="1"
          sodipodi:ry="1"
-         d="m 701,250 c 0,0.55228 -0.44772,1 -1,1 -0.55228,0 -1,-0.44772 -1,-1 0,-0.55228 0.44772,-1 1,-1 0.55228,0 1,0.44772 1,1 z" />
+         d="m 701,250 a 1,1 0 1 1 -2,0 1,1 0 1 1 2,0 z" />
       <text
          xml:space="preserve"
          style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:center;text-decoration:none;line-height:150%;letter-spacing:0px;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:middle;baseline-shift:baseline;color:#000000;fill:#434343;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Helvetica Neue;-inkscape-font-specification:Helvetica Neue"
@@ -28496,7 +27944,7 @@
            id="tspan5844-3-92"
            sodipodi:role="line">2000</tspan></text>
       <path
-         d="m 701,250 c 0,0.55228 -0.44772,1 -1,1 -0.55228,0 -1,-0.44772 -1,-1 0,-0.55228 0.44772,-1 1,-1 0.55228,0 1,0.44772 1,1 z"
+         d="m 701,250 a 1,1 0 1 1 -2,0 1,1 0 1 1 2,0 z"
          sodipodi:ry="1"
          sodipodi:rx="1"
          sodipodi:cy="250"
@@ -28519,7 +27967,7 @@
          transform="translate(60,329.99998)"
          style="display:inline">
         <path
-           d="m 701,250 c 0,0.55228 -0.44772,1 -1,1 -0.55228,0 -1,-0.44772 -1,-1 0,-0.55228 0.44772,-1 1,-1 0.55228,0 1,0.44772 1,1 z"
+           d="m 701,250 a 1,1 0 1 1 -2,0 1,1 0 1 1 2,0 z"
            sodipodi:ry="1"
            sodipodi:rx="1"
            sodipodi:cy="250"
@@ -29006,18 +28454,12 @@
          d="m 852.5,127.49988 c -4.14214,0 -7.5,3.35786 -7.5,7.5 0,4.14213 3.35786,7.5 7.5,7.5 4.14214,0 7.5,-3.35787 7.5,-7.5 0,-4.14214 -3.35786,-7.5 -7.5,-7.5 z m -0.0312,3.125 c 0.568,1e-5 1.03025,0.0588 1.40625,0.21875 0.38399,0.15201 0.70549,0.36176 0.9375,0.59375 0.23199,0.23201 0.37274,0.47801 0.46875,0.75 0.10399,0.26401 0.15624,0.51801 0.15625,0.75 -10e-6,0.384 -0.0523,0.6895 -0.15625,0.9375 -0.096,0.248 -0.19176,0.449 -0.34375,0.625 -0.14401,0.176 -0.31601,0.34075 -0.5,0.46875 -0.17601,0.12 -0.34,0.247 -0.5,0.375 -0.16,0.12 -0.3095,0.24625 -0.4375,0.40625 -0.12,0.16 -0.18675,0.385 -0.21875,0.625 l 0,0.4375 -1.625,0 0,-0.53125 c 0.024,-0.344 0.0835,-0.643 0.1875,-0.875 0.112,-0.232 0.231,-0.43375 0.375,-0.59375 0.144,-0.168 0.30875,-0.28625 0.46875,-0.40625 0.16,-0.12 0.3015,-0.255 0.4375,-0.375 0.136,-0.12 0.2325,-0.26225 0.3125,-0.40625 0.088,-0.144 0.133,-0.31525 0.125,-0.53125 0,-0.36799 -0.0973,-0.63649 -0.28125,-0.8125 -0.176,-0.17599 -0.39875,-0.24999 -0.71875,-0.25 -0.216,1e-5 -0.43375,0.037 -0.59375,0.125 -0.152,0.08 -0.271,0.19976 -0.375,0.34375 -0.096,0.13601 -0.17075,0.27676 -0.21875,0.46875 -0.048,0.184 -0.0625,0.37775 -0.0625,0.59375 l -1.75,0 c 0.008,-0.432 0.0515,-0.82749 0.1875,-1.1875 0.144,-0.35999 0.34575,-0.64224 0.59375,-0.90625 0.256,-0.26399 0.55425,-0.48099 0.90625,-0.625 0.36,-0.15199 0.77875,-0.21874 1.21875,-0.21875 z m -1,6.90625 1.90625,0 0,1.84375 -1.90625,0 0,-1.84375 z"
          style="color:#000000;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
     </g>
-    <path
-       style="color:#000000;fill:none;stroke:#c6c6c6;stroke-width:0.99999994;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
-       d="m 564.44284,70.499881 61.11428,0 c 2.18434,0 3.7815,1.730381 3.94286,3.866667 l 0,13.05 0,8.216667 c 0,2.142133 -1.75852,3.866667 -3.94286,3.866667 l -61.11428,0 c -2.18434,0 -3.94286,-1.724534 -3.94286,-3.866667 l 0,-21.266667 c 0,-2.142134 1.75852,-3.866667 3.94286,-3.866667 z"
-       id="path7850-4"
-       inkscape:connector-curvature="0"
-       sodipodi:nodetypes="ssscssssss" />
   </g>
   <g
      inkscape:label="base"
      id="layer2"
      inkscape:groupmode="layer"
-     style="display:none"
+     style="display:inline"
      transform="translate(0,-2.6171874e-6)">
     <rect
        style="color:#000000;fill:#11202c;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
@@ -29026,7 +28468,7 @@
        height="55"
        x="-20"
        y="1.395709e-14"
-       inkscape:export-filename="/Users/saman/Dropbox/work_repos/gai-gain/design/renders/country_indicator.png"
+       inkscape:export-filename="/Users/saman/Dropbox/work_repos/gai-gain/design/renders/country_base.png"
        inkscape:export-xdpi="90"
        inkscape:export-ydpi="90" />
     <rect
@@ -29911,19 +29353,20 @@
   <g
      id="g12714"
      inkscape:groupmode="layer"
-     inkscape:label="lorem ipsum">
+     inkscape:label="lorem ipsum"
+     style="display:none">
     <flowRoot
        id="flowRoot12716"
        xml:space="preserve"
        transform="translate(-133.40234,-384.45721)"
-       style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;color:#000000;fill:#434343;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Helvetica Neue;-inkscape-font-specification:Helvetica Neue;line-height:150%"><flowRegion
+       style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:150%;color:#000000;fill:#434343;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Helvetica Neue;-inkscape-font-specification:Helvetica Neue"><flowRegion
          id="flowRegion12718"><rect
            id="rect12720"
            width="615.7832"
            height="199.45709"
            x="0"
            y="0"
-           style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;color:#000000;fill:#434343;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Helvetica Neue;-inkscape-font-specification:Helvetica Neue;line-height:150%" /></flowRegion><flowPara
+           style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:150%;color:#000000;fill:#434343;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Helvetica Neue;-inkscape-font-specification:Helvetica Neue" /></flowRegion><flowPara
          id="flowPara12722">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Mauris et pede. Nullam sapien mauris, venenatis at, fermentum at, tempus eu, urna. Quisque aliquam, nulla ac scelerisque convallis, nisi ligula sagittis risus, at nonummy arcu urna pulvinar nibh. </flowPara><flowPara
          id="flowPara12724" /><flowPara
          id="flowPara12726">Nunc metus. Morbi turpis arcu, egestas congue, condimentum quis, tristique cursus, leo. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin diam augue, semper vitae, varius et, viverra id, felis. Maecenas convallis dui. Integer fringilla. </flowPara><flowPara
