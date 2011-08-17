@@ -24,7 +24,7 @@ view = Backbone.View.extend({
             var value = false;
 
             if (data.hasOwnProperty(k)) {
-                value = that.formatRank(data[k].currentValue('rank'));
+                value = that.formatRank(data[k].rank({format: false}));
             }
 
             if (value) {
@@ -42,8 +42,8 @@ view = Backbone.View.extend({
 
         if (!missing.length) {
             var coords = [
-                data.vulnerability.currentValue() > 0.5 ? 'Top' : 'Bottom',
-                data.readiness.currentValue() > 0.5 ? 'Right' : 'Left'
+                data.vulnerability.score({format: false}) > 0.5 ? 'Top' : 'Bottom',
+                data.readiness.score({format: false}) > 0.5 ? 'Right' : 'Left'
             ];
 
             template = template + coords.join('');

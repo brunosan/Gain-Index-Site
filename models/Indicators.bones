@@ -22,5 +22,14 @@ model = Backbone.Collection.extend({
           }).value();
         }
         return data;
+    },
+    sortByRank: function(options) {
+        this.comparator = function(model) {
+            var rank = model.rank({format: false});
+            if (rank) return rank.desc;
+            return Infinity;
+        };
+        this.sort(options);
+        return this;
     }
 });

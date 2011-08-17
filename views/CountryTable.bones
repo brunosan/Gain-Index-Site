@@ -45,8 +45,8 @@ view = views.Main.extend({
                 normalized: null
             };
             if (lookup[key] != undefined) {
-                field.raw = lookup[key].currentValue('input');
-                field.normalized = lookup[key].currentValue();
+                field.input = lookup[key].input();
+                field.score = lookup[key].score();
             }
             data.push(field);
         }

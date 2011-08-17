@@ -1,4 +1,4 @@
-<h3><%= title %><h3/>
-<div class='more'><a href='/country/<%= country %>'>More</a></div>
-<h4><%= title %> over time </h4>
+<h3><%= countryName %><h3/>
+<div class='more'><a href='/country/<%= countryId %>'>More</a></div>
+<h4><%= indicatorName %> over time </h4>
 <div class='graph'></div>

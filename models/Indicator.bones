@@ -5,15 +5,57 @@ model = Backbone.Model.extend({
         input: {},
         values: {}
     },
-    currentValue: function() {
-        var series = 'values'
-        if (arguments.length && arguments[0] == 'input') {
-           series = 'input'; 
+    optionDefaults: function(opt) {
+        opt = opt || {};
+        opt.format = opt.format == undefined ? true : opt.format;
+        opt.year = opt.year || this.get('currentYear');
+        return opt;
+    },
+    score: function(options) {
+        options = this.optionDefaults(options);
+        var value = this.get('values')[options.year];
+        if (!options.format) {
+            return value;
         }
-        if (arguments.length && arguments[0] == 'rank') {
-           series = 'rank';
+        if (_.isUndefined(value)) {
+            return '-';
         }
-        return this.get(series)[this.get('currentYear')];
+        var pad = function(num, fill) {
+            var num = num.toString(),
+                parts = num.split('.'),
+                length = 0;
+            if (parts[1]) {
+                length = parts[1].length;
+            } else {
+                num += '.';
+            }
+            while (length < fill) { num += '0'; length++;};
+            return num;
+        };
+        var formatFloat = function(value, precision) {
+            var f = Math.pow(10, precision);
+            return pad(Math.round(value * f) / f, precision);
+        };
+        if (value > 1.0) {
+            return formatFloat(value, 1);
+        }
+        return formatFloat(value, 3);
+    },
+    input: function(options) {
+        // TODO: formatting.
+        options = this.optionDefaults(options);
+        return this.get('input')[options.year];
+    },
+    rank: function(options) {
+        options = this.optionDefaults(options);
+        var value = this.get('rank')[options.year];
+        if (!options.format || _.isUndefined(value)) {
+            return value;
+        }
+        return value.desc;
+    },
+    meta: function(key) {
+        return Backbone.Model.escapeHTML(model.meta[this.id][key] || '');
     }
 });
 
@@ -620,7 +662,7 @@ model.meta = {
     },
     "gain": {
         "id": "gain",
-        "name": "The Global Adaptation Index™",
+        "name": "GaIn™",
         "description": "The Global Adaptation Index™ (GaIn™) exposes countries' vulnerabilities to climate change and opportunities to improve resilience. It aims to help businesses and the public sector to better prioritize investments for a more efficient response to the immediate global challenges ahead.",
         "format": null,
         "index": "gain",
