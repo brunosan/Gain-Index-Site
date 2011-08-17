@@ -33,13 +33,13 @@
       <thead>
         <tr class='years'>
           <th class='label'>Year</th>
-          <% _.each(rank, function(rank, year) { %>  <th><%= year %></th>  <% }); %>
+          <% _.each(rank, function(rank) { %>  <th><%= rank.year %></th>  <% }); %>
         </tr>
       </thead>
       <tbody>
         <tr>
           <th class='label'>Ranking</th>
-          <% _.each(rank, function(rank, year) { %>  <td><span class='value'><%= rank.desc %></span></td>  <% }); %>
+          <% _.each(rank, function(rank) { %>  <td><%= rank.rank %></td>  <% }); %>
         </tr>
       </tbody>
     </table>

@@ -617,13 +617,16 @@ table.data tr.active {
   padding: 5px 0;
   text-align: center;
 }
-.country-profile .rankings td span.value {
-   font-weight: bold;
-   background-color: #abd7ee;
-   padding: 3px;
-   -moz-border-radius: 3px;
-   -webkit-border-radius: 3px;
-   border-radius: 3px;
+.rank-number {
+  width: 22px;
+  line-height: 19px;
+  text-align: center;
+  font-weight: bold;
+  background-color: #abd7ee;
+  padding: 0 2px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
 }
 
 .country-profile .rankings table tr th.label {

@@ -54,7 +54,7 @@ model = Backbone.Model.extend({
             return value;
         }
         var color = gradient('#67b6e0', '#fc7b7e', 142, value.desc);
-        return "<div class='rank' style='background-color: #" + color + ";'>" + value.desc + '</div>';
+        return "<div class='rank-number' style='background-color: #" + color + ";'>" + value.desc + '</div>';
     },
     meta: function(key) {
         return Backbone.Model.escapeHTML(model.meta[this.id][key] || '');
