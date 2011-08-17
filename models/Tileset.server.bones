@@ -18,6 +18,7 @@ models.Tileset.prototype.sync = function(method, model, options) {
 
     // TODO cache the xml we generate.
 
+    // First, load and parse the mml.
     actions.push(function(next) {
         fs.readFile(path.join(base, filename), 'utf8', function(err, data) {
             if (err) return options.error(err);
@@ -27,6 +28,7 @@ models.Tileset.prototype.sync = function(method, model, options) {
         });
     });
 
+    // Localize our mml.
     actions.push(function(next) {
         millstone.resolve({
             mml: map.mml,
@@ -40,6 +42,7 @@ models.Tileset.prototype.sync = function(method, model, options) {
         });
     });
 
+    // Let carto transform the mml to mapnik xml.
     actions.push(function(next) {
         new carto.Renderer({
             filename: filename,
@@ -47,6 +50,31 @@ models.Tileset.prototype.sync = function(method, model, options) {
             if (err) return options.error(err);
 
             map.xml = output;
+            next();
+        });
+    });
+
+    // Attach the tilelive source to our model.
+    actions.push(function(next) {
+        var uri = {
+            protocol: 'mapnik:',
+            slashes: true,
+
+            // This file does not exist; but we pass in literal strings below.
+            // This is used as a cache key.
+            pathname: path.join(model.get('indicator'), model.get('year') + '.xml'),
+            query: {
+                updated: map.mml._updated,
+                bufferSize: 256
+            },
+            xml: map.xml,
+            mml: map.mml // Do we need this?
+        };
+
+        tilelive.load(uri, function(err, source) {
+            if (err) return options.error(err);
+
+            model.source = source;
             next();
         });
     });
