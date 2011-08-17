@@ -25,7 +25,7 @@
     "tilelive": "= 4.0.5",
     "tilelive-mapnik" : "= 0.2.1",
     "carto": "= 0.2.3",
-    "millstone": "= 0.0.8"
+    "millstone": "https://github.com/mapbox/millstone/tarball/7349c43321001dc3b6f59be5067ee5fbbed8d9ee"
   },
   "devDependencies": {}
 }
