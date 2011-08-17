@@ -80,10 +80,10 @@ view = views.Main.extend({
     },
     openDrawer: function(ev) {
         $('table.data tr').removeClass('active');
-        $(ev.currentTarget).addClass('active');
         var meta = models.Country.meta;
         var id = $(ev.currentTarget).attr('id').substr(8);
         if (!id || !meta[id]) return;
+        $(ev.currentTarget).addClass('active');
 
         var data = this.model.get('indicators').getGraphData('ISO3', id);
 

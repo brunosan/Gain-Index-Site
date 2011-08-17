@@ -55,14 +55,23 @@ view = views.Main.extend({
         }
         // Determine year of data
         var bgdYear = (gdp.yr != 'Unknown' ? gdp.yr : pop.yr);
-        
+
+        // Generate historical rankings.
+        var rank = [];
+        _.each(lookup.gain.get('rank'), function(r, year) {
+            rank.push({
+                year: year,
+                rank: lookup.gain.rank({year: year})
+            });
+        });
+
         // Approach the cabinet.
         $(this.el).empty().append(templates.Cabinet());
         // Empty pockets on top.
         $('.top', this.el).empty().append(templates.Country({
             title: title,
             summary: summary,
-            rank: lookup.gain.get('rank'),
+            rank: rank,
             tabs: indicators,
             pin: pin,
             gdp: gdp,
@@ -119,9 +128,9 @@ view = views.Main.extend({
     },
     openDrawer: function(ev) {
         $('table.data tr').removeClass('active');
-        $(ev.currentTarget).addClass('active');
         var ind = $(ev.currentTarget).attr('id').substr(10);;
         if (!ind) return;
+        $(ev.currentTarget).addClass('active');
 
         var collection = this.model.get('indicators');
         var data = collection.getGraphData('name', ind);

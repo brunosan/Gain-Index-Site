@@ -17,7 +17,6 @@ view = Backbone.View.extend({
             meta = models.Country.meta,
             previousId = $('tr.active', this.el).attr('id');
 
-        // Build a look up table for the data.
         this.collection.each(function(model) {
             if (model.rank({format: false}) && meta[model.get('ISO3')]) {
                 data.push({
