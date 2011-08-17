@@ -11,7 +11,21 @@ router = Backbone.Router.extend({
         '/page/:id': 'page'
     },
     front: function() {
-        this.send(views.Front);
+        var router = this;
+        var fetcher = this.fetcher();
+        var feature = new models.Front({id: 'front'});
+        fetcher.push(feature);
+        fetcher.fetch(function() {
+            var countries = [feature.get('featuredFirst'), feature.get('featuredSecond')];
+            var featuredFirst = new models.Country({id: feature.get('featuredFirst')});
+            var featuredSecond = new models.Country({id: feature.get('featuredSecond')});
+            var fetcher = router.fetcher();
+            fetcher.push(featuredFirst);
+            fetcher.push(featuredSecond);
+            fetcher.fetch(function() {
+                router.send(views.Front, {model: {featuredFirst: featuredFirst, featuredSecond: featuredSecond}});
+            });
+        });
     },
     country: function(id) {
         var router = this;
