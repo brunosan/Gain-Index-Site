@@ -14,7 +14,8 @@ view = Backbone.View.extend({
     },
     render: function() {
         var data = [],
-            meta = models.Country.meta;
+            meta = models.Country.meta,
+            previousId = $('tr.active', this.el).attr('id');
 
         // Build a look up table for the data.
         this.collection.each(function(model) {
@@ -35,6 +36,8 @@ view = Backbone.View.extend({
         $(this.el).empty().append(templates.RankingTable({
             rows: data
         }));
+        // Conserve previously active table rows.
+        previousId && $('tr#' + previousId).addClass('active');
         return this;
     },
     attach: function() {
