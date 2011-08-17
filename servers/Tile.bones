@@ -3,22 +3,13 @@ server = Bones.Server.extend({
     port:3001,
 
     initialize: function(app) {
-        if (app.config.tilePort !== app.config.uiPort) {
-            this.port = app.config.tilePort;
-            this.enable('jsonp callback');
-            this.use(new servers['Cors'](app));
-            this.use(new servers['Host'](app));
-        } else {
-            this.port = null;
-        }
-
         this.config = app.config;
         this.config.header = { 'Cache-Control': 'max-age=' + 60 * 60 };
         this.initializeRoutes();
     },
 
     initializeRoutes: function() {
-        _.bindAll(this, 'load', 'tile', 'grid', 'layer', 'download', 'status');
+        _.bindAll(this, 'load', 'tile', 'grid', 'layer', 'status');
 
         this.param('tileset', this.load);
 
@@ -27,7 +18,6 @@ server = Bones.Server.extend({
         this.get('/:version(1|2).0.0/:tileset/:z/:x/:y.grid.json', this.grid);
         this.get('/:version(1|2).0.0/:tileset/layer.json', this.layer);
 
-        this.get('/download/:tileset.mbtiles', this.download);
         this.get('/status', this.status);
     },
 
@@ -58,7 +48,7 @@ server = Bones.Server.extend({
             return next(new Error.HTTP('Tileset does not exist', 404));
         }
 
-        var model = new models.Tileset({ id: id }, req.query);
+        var model = new models.Tileset({ id: id });
         model.fetch({
             success: function(model) {
                 res.model = model;
@@ -69,21 +59,6 @@ server = Bones.Server.extend({
                 next(err);
             }
         });
-    },
-
-    // MBTiles download.
-    // @TODO: Current `maxAge` option is hardcoded into place. Find better
-    // way to pass this through.
-    download: function(req, res, next) {
-        if (res.model.source.filename) {
-            res.sendfile(res.model.source.filename, { maxAge: 3600 }, function(err, path) {
-                // @TODO: log the error if one occurs.
-                // We don't call next() here as HTTP headers/response has
-                // already commenced by this point.
-            });
-        } else {
-            next(new Error.HTTP("Tileset can't be downloaded", 404));
-        }
     },
 
     // Tile endpoint
