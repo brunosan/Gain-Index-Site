@@ -25,14 +25,14 @@
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
      inkscape:zoom="1"
-     inkscape:cx="187.71553"
-     inkscape:cy="-70.324811"
+     inkscape:cx="152.25784"
+     inkscape:cy="-197.59439"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
-     inkscape:window-width="1295"
-     inkscape:window-height="767"
-     inkscape:window-x="-8"
+     inkscape:window-width="1280"
+     inkscape:window-height="756"
+     inkscape:window-x="127"
      inkscape:window-y="0"
      inkscape:window-maximized="0"
      fit-margin-top="0"
@@ -40,7 +40,7 @@
      fit-margin-right="0"
      fit-margin-bottom="0"
      inkscape:snap-bbox="true"
-     inkscape:snap-nodes="false"
+     inkscape:snap-nodes="true"
      showguides="true"
      inkscape:guide-bbox="true">
     <inkscape:grid
@@ -63,7 +63,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -1148,7 +1148,7 @@
     </g>
     <path
        transform="matrix(0.13333337,0,0,0.13333337,-10.000003,238.6955)"
-       d="m 135,245 a 30,30 0 1 1 -60,0 30,30 0 1 1 60,0 z"
+       d="m 135,245 c 0,16.56854 -13.43146,30 -30,30 -16.568542,0 -30,-13.43146 -30,-30 0,-16.56854 13.431458,-30 30,-30 16.56854,0 30,13.43146 30,30 z"
        sodipodi:ry="30"
        sodipodi:rx="30"
        sodipodi:cy="245"
@@ -1250,7 +1250,7 @@
        sodipodi:cy="477.49988"
        sodipodi:rx="17.5"
        sodipodi:ry="17.5"
-       d="m 710,477.49988 a 17.5,17.5 0 1 1 -35,0 17.5,17.5 0 1 1 35,0 z"
+       d="m 710,477.49988 c 0,9.66498 -7.83502,17.5 -17.5,17.5 -9.66498,0 -17.5,-7.83502 -17.5,-17.5 0,-9.66499 7.83502,-17.5 17.5,-17.5 9.66498,0 17.5,7.83501 17.5,17.5 z"
        transform="matrix(0.20000019,0,0,0.20000019,-131.00013,484.3621)"
        inkscape:export-filename="/Users/saman/Dropbox/work_repos/gai-gain/design/assets/sprite.png"
        inkscape:export-xdpi="90"
@@ -1353,7 +1353,7 @@
     </g>
     <path
        transform="matrix(0.20000019,0,0,0.20000019,-111.00013,509.36209)"
-       d="m 710,477.49988 a 17.5,17.5 0 1 1 -35,0 17.5,17.5 0 1 1 35,0 z"
+       d="m 710,477.49988 c 0,9.66498 -7.83502,17.5 -17.5,17.5 -9.66498,0 -17.5,-7.83502 -17.5,-17.5 0,-9.66499 7.83502,-17.5 17.5,-17.5 9.66498,0 17.5,7.83501 17.5,17.5 z"
        sodipodi:ry="17.5"
        sodipodi:rx="17.5"
        sodipodi:cy="477.49988"
@@ -1420,7 +1420,7 @@
        sodipodi:cy="477.49988"
        sodipodi:rx="17.5"
        sodipodi:ry="17.5"
-       d="m 710,477.49988 a 17.5,17.5 0 1 1 -35,0 17.5,17.5 0 1 1 35,0 z"
+       d="m 710,477.49988 c 0,9.66498 -7.83502,17.5 -17.5,17.5 -9.66498,0 -17.5,-7.83502 -17.5,-17.5 0,-9.66499 7.83502,-17.5 17.5,-17.5 9.66498,0 17.5,7.83501 17.5,17.5 z"
        transform="matrix(0.20000019,0,0,0.20000019,-91.00013,534.36209)"
        inkscape:export-filename="/Users/saman/Dropbox/work_repos/gai-gain/design/assets/sprite.png"
        inkscape:export-xdpi="90"
@@ -1475,7 +1475,7 @@
     </g>
     <path
        transform="matrix(0.20000019,0,0,0.20000019,-71.00013,559.36209)"
-       d="m 710,477.49988 a 17.5,17.5 0 1 1 -35,0 17.5,17.5 0 1 1 35,0 z"
+       d="m 710,477.49988 c 0,9.66498 -7.83502,17.5 -17.5,17.5 -9.66498,0 -17.5,-7.83502 -17.5,-17.5 0,-9.66499 7.83502,-17.5 17.5,-17.5 9.66498,0 17.5,7.83501 17.5,17.5 z"
        sodipodi:ry="17.5"
        sodipodi:rx="17.5"
        sodipodi:cy="477.49988"
@@ -1569,5 +1569,14 @@
        inkscape:export-filename="/Users/saman/Dropbox/work_repos/gai-gain/design/assets/sprite.png"
        inkscape:export-xdpi="90"
        inkscape:export-ydpi="90" />
+    <rect
+       style="opacity:0.5;color:#000000;fill:#35434c;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       id="rect7975"
+       width="24.698484"
+       height="130"
+       x="-29.698484"
+       y="-82.637825"
+       rx="3.9999998"
+       ry="3.9999998" />
   </g>
 </svg>

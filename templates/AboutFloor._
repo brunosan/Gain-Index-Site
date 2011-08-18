@@ -1,13 +1,11 @@
 <div class='content'>
   <h3>About</h3>
-  <ul>
-  <li>Overview</li>
-  <li>Methodology</li>
-  <li>Matrix</li>
-  <li>Consultation</li>
-  </ul>
-</div>
-<div class='search content'>
-  <input class='textfield' name='search' type='textfield' />
-  <input class='button' name='search-submit' type='submit' value='Go' />
+  <div id='about-nav-container'>
+    <ul id='about-nav'>
+      <li><a class='nav-overview' href='/about/overview'> Overview </a></li>
+      <li><a class='nav-methodology' href='/about/methodology'> Methodology </a></li>
+      <li><a class='nav-matrix' href='/about/matrix'> Matrix </a></li>
+      <li><a class='nav-consultation' href='/about/consultation'> Consultation </a></li>
+    </ul>
+  </div>
 </div>
