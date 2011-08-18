@@ -18,6 +18,7 @@
   <link rel='stylesheet' href='/assets/bones-admin/style.css?<%= version %>' media='screen' />
 </head>
 <body>
+  <div id='feedbacktab'><h4>Feedback</h4></div>
   <div id='header'><div class='limiter'>
     <h2><a class='logo' href='/'>GaIn</a></h2>
     <div class='tagline'>The Global Adaptation Index</div>
