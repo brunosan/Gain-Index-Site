@@ -6,9 +6,6 @@ view = views.Main.extend({
     }, views.Main.prototype.events),
     render: function() {
         var lookup = {},
-            title = '',
-            summary = {},
-            pin = {},
             indicators = {};
             collection = this.model.get('indicators'),
             meta = collection.model.meta;
@@ -18,22 +15,6 @@ view = views.Main.extend({
         collection.each(function(m) {
             lookup[m.get('name')] = m;
         });
-
-        // The summary information needs to be done manually.
-        _.each(['gain', 'readiness', 'vulnerability'], function(k) {
-            if (!title) title = lookup[k].escape('country');
-            if (lookup.hasOwnProperty(k)) {
-                summary[k] = {
-                    name: meta[k].name,
-                    value: lookup[k].score(),
-                    raw: lookup[k].score({format: false})
-                };
-            }
-        });
-        if (summary.readiness && summary.vulnerability) {
-            pin.x = Math.round((summary.readiness.raw * 80) + 15);
-            pin.y = 80 - Math.round(summary.vulnerability.raw * 80);
-        }
 
         // Generate historical rankings.
         var rank = [];
@@ -48,8 +29,7 @@ view = views.Main.extend({
         $(this.el).empty().append(templates.Cabinet());
         // Empty pockets on top.
         $('.top', this.el).empty().append(templates.Country({
-            title: title,
-            summary: summary,
+            title: this.model.meta('name'),
             rank: rank,
             tabs: indicators,
             gdp: {
@@ -63,16 +43,16 @@ view = views.Main.extend({
                 label: lookup['pop'].meta('name')
             }
         }));
-        $('.country-summary', this.el).empty().append(templates.CountrySummary({
-            pin: pin,
-            summary: summary
-        }));
+
+        new views.CountrySummary({
+            el: $('.country-summary', this.el).last(),
+            model: this.model
+        }).render();
 
         this.aboutView = new views.AboutQuadrant({
             el: $('.prose', this.el),
             model: this.model
         }).render();
-
 
         // Some things fall on the floor.
         $('.floor', this.el).empty().append(templates.DefaultFloor());
