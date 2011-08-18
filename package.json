@@ -27,7 +27,8 @@
     "tilelive-mapnik" : "= 0.2.1",
     "carto": "= 0.2.3",
     "millstone": "https://github.com/mapbox/millstone/tarball/3d0a6fe7a5f7b0932ec9717372fcd2b6fb42ca9e",
-    "wax": "3.0.5"
+    "wax": "3.0.5",
+    "couch-sqlite": "https://github.com/developmentseed/couch-sqlite/tarball/master"
   },
   "devDependencies": {}
 }
