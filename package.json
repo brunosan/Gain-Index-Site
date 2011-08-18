@@ -11,6 +11,7 @@
     "node": "~v0.4.9"
   },
   "dependencies": {
+    "mapnik": "0.5.3",
     "bones": "https://github.com/developmentseed/bones/tarball/master",
     "bones-admin": "https://github.com/developmentseed/bones-admin/tarball/master",
     "bones-auth": "https://github.com/developmentseed/bones-auth/tarball/master",
