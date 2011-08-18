@@ -8,7 +8,7 @@
     "url": "git://github.com/developmentseed/gain.git"
   },
   "engines": {
-    "node": "~v0.4.9"
+    "node": "~v0.4.10"
   },
   "dependencies": {
     "bones": "https://github.com/developmentseed/bones/tarball/master",
@@ -25,7 +25,7 @@
     "tilelive": "= 4.0.5",
     "tilelive-mapnik" : "= 0.2.1",
     "carto": "= 0.2.3",
-    "millstone": "https://github.com/mapbox/millstone/tarball/7349c43321001dc3b6f59be5067ee5fbbed8d9ee"
+    "millstone": "https://github.com/mapbox/millstone/tarball/82f9970442dca0dc3503dc366f2780617dca1a93"
   },
   "devDependencies": {}
 }

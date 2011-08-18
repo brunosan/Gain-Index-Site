@@ -11,7 +11,7 @@ Map {
   [DATA>=69][DATA<76]{ polygon-fill: #9FD6F1; }
   [DATA>=76]{ polygon-fill: #45B5E3; }
   [DATA=0]{ 
-    polygon-pattern-file: url(/home/mapbox/tilemill/files/data/gain/diagonal_8.png);
+    polygon-pattern-file: url(images/diagonal_8.png);
     polygon-pattern-alignment: global;
   }
 }
