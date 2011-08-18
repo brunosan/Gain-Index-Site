@@ -8,9 +8,10 @@
     "url": "git://github.com/developmentseed/gain.git"
   },
   "engines": {
-    "node": "~v0.4.9"
+    "node": "~v0.4.10"
   },
   "dependencies": {
+    "mapnik": "0.5.3",
     "bones": "https://github.com/developmentseed/bones/tarball/master",
     "bones-admin": "https://github.com/developmentseed/bones-admin/tarball/master",
     "bones-auth": "https://github.com/developmentseed/bones-auth/tarball/master",
@@ -20,7 +21,13 @@
     "underscore": "= 1.1.7",
     "request": "https://github.com/mikeal/request/tarball/8bb7f98ba8b78c217552c979811c07f1299318fe",
     "backbone-couch": "= 1.0.0",
-    "chrono": "= 1.0.1"
+    "sqlite3": "= 2.0.16",
+    "chrono": "= 1.0.1",
+    "tilelive": "= 4.0.5",
+    "tilelive-mapnik" : "= 0.2.1",
+    "carto": "= 0.2.3",
+    "millstone": "https://github.com/mapbox/millstone/tarball/3d0a6fe7a5f7b0932ec9717372fcd2b6fb42ca9e",
+    "wax": "3.0.5"
   },
   "devDependencies": {}
 }
