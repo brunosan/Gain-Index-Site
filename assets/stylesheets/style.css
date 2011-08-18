@@ -963,6 +963,8 @@ text-align: center;
 #about-nav-container a:hover {
   background-color: #fff;
   color: #000;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
   }
 
 /*-----------------------
