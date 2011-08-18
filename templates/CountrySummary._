@@ -1,0 +1,18 @@
+<div class='stats'>
+<% _.each(summary, function(stat, klass) { %>
+  <div class='<%= klass %>'>
+      <%= stat.name %>
+      <%= stat.value %>
+  </div>
+<% }); %>
+</div>
+<div class='chart'>
+  <div class='matrix'>
+    <div class='quad tl'></div>
+    <div class='quad tr'></div>
+    <div class='quad br'></div>
+    <div class='quad bl'></div>
+    <div class='pin' style='top: <%= pin.y %>px; left: <%= pin.x %>px;'></div>
+  </div>
+</div>
+<div class='map'></div>

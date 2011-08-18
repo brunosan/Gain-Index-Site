@@ -8,8 +8,8 @@ router = Backbone.Router.extend({
         '/ranking/readiness/:id': 'ranking',
         '/ranking/vulnerability/:id': 'ranking',
         '/download': 'download',
-        '/page/:id': 'page',
-        '/page/:id/edit': 'pageEditor'
+        '/about/:id': 'page',
+        '/about/:id/edit': 'pageEditor'
     },
     front: function() {
         var router = this;
@@ -70,8 +70,8 @@ router = Backbone.Router.extend({
         var fetcher = this.fetcher();
 
         var model = new models.Page({id: id}, {
-            route: '/page/' + id,
-            editRoute: '/page/' + id + '/edit'
+            route: '/about/' + id,
+            editRoute: '/about/' + id + '/edit'
         });
 
         fetcher.push(model);

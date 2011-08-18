@@ -23,7 +23,7 @@ view = views.AdminDropdownDocument.extend({
                 {title:'Actions', className:'actions'}
             ],
             rowView: views.AdminTableRowDocument,
-            path: function(id) { return '/page/' + id; }
+            path: function(id) { return '/about/' + id; }
         });
         return false;
     }
