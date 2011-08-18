@@ -1,0 +1,9 @@
+<td class='id'>
+    <span class='icon docs'></span>
+    <a href="<%= path(render('id')) %>"><%= render('name') %></a>
+</td>
+<td class='actions'>
+    <input class='edit' type='button' value='Edit' />
+    <input class='delete' type='button' value='Delete' />
+</td>
+

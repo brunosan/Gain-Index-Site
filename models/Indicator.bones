@@ -17,34 +17,18 @@ model = Backbone.Model.extend({
         if (!options.format) {
             return value;
         }
-        if (_.isUndefined(value)) {
-            return '-';
-        }
-        var pad = function(num, fill) {
-            var num = num.toString(),
-                parts = num.split('.'),
-                length = 0;
-            if (parts[1]) {
-                length = parts[1].length;
-            } else {
-                num += '.';
-            }
-            while (length < fill) { num += '0'; length++;};
-            return num;
-        };
-        var formatFloat = function(value, precision) {
-            var f = Math.pow(10, precision);
-            return pad(Math.round(value * f) / f, precision);
-        };
         if (value > 1.0) {
-            return formatFloat(value, 1);
+            return this.format(value, {format: 'number', decimals: 1});
         }
-        return formatFloat(value, 3);
+        return this.format(value, {format: 'number', decimals: 3});
     },
     input: function(options) {
-        // TODO: formatting.
         options = this.optionDefaults(options);
-        return this.get('input')[options.year];
+        var value = this.get('input')[options.year];
+        if (!options.format) {
+            return value;
+        }
+        return this.format(value);
     },
     // TODO: assumes a maximum rank of 142, determine actual maximum.
     rank: function(options) {
@@ -57,7 +41,34 @@ model = Backbone.Model.extend({
         return "<div class='rank-number' style='background-color: #" + color + ";'>" + value.desc + '</div>';
     },
     meta: function(key) {
-        return Backbone.Model.escapeHTML(model.meta[this.id][key] || '');
+        // TODO: Why do some indicators not have an id? Should we always use 'name'?
+        return Backbone.Model.escapeHTML(model.meta[this.id || this.get('name')][key] || '');
+    },
+    format: function(value, meta) {
+        if (_.isUndefined(value)) {
+            return '-';
+        }
+        // TODO: Why do some indicators not have an id? Should we always use 'name'?
+        meta = meta || model.meta[this.id || this.get('name')];
+        if (this.formats[meta.format]) {
+            value = this.formats[meta.format](value, meta);
+        }
+        if (meta.unit) {
+            return meta.unit.replace('%s', value);
+        }
+        return value;
+    },
+    formats: {
+        // From StackOverflow http://is.gd/sR4ygY
+        number: function(n, meta) {
+            var c = isNaN(meta.decimals) ? 0 : Math.abs(meta.decimals),
+                d = '.',
+                t = ',',
+                sign = (n < 0) ? '-' : '',
+                i = parseInt(n = Math.abs(n).toFixed(c)) + '',
+                j = ((j = i.length) > 3) ? j % 3 : 0;
+                return sign + (j ? i.substr(0, j) + t : '') + i.substr(j).replace(/(\d{3})(?=\d)/g, "$1" + t) + (c ? d + Math.abs(n - i).toFixed(c).slice(2) : ''); 
+        }
     }
 });
 
@@ -67,6 +78,8 @@ model.meta = {
         "name": "Business freedom",
         "description": "Index of economic freedom: business freedom subcomponent",
         "format": "number",
+        "decimals": null,
+        "unit": null,
         "index": "readiness",
         "sector": null,
         "component": "economic",
@@ -78,7 +91,9 @@ model.meta = {
         "id": "coast_area",
         "name": "Coastal area",
         "description": "Land less than 5 meters above sea-level",
-        "format": "percent",
+        "format": "number",
+        "decimals": "1",
+        "unit": "%s %",
         "index": "vulnerability",
         "sector": "infrastructure",
         "component": "exposure",
@@ -90,7 +105,9 @@ model.meta = {
         "id": "coast_popn",
         "name": "Coastal population",
         "description": "Population living less than 5 meters above sea-level",
-        "format": "percent",
+        "format": "number",
+        "decimals": "1",
+        "unit": "%s %",
         "index": "vulnerability",
         "sector": "infrastructure",
         "component": "sensitivity",
@@ -103,6 +120,8 @@ model.meta = {
         "name": "Control of corruption",
         "description": "World governance indicator: control of corruption component",
         "format": "number",
+        "decimals": null,
+        "unit": null,
         "index": "readiness",
         "sector": null,
         "component": "governance",
@@ -114,7 +133,9 @@ model.meta = {
         "id": "D-Ppt",
         "name": "Precipitation change",
         "description": "Projected change in precipitation by the end of the 21st century",
-        "format": "percent",
+        "format": "number",
+        "decimals": "1",
+        "unit": "%s %",
         "index": "vulnerability",
         "sector": "water",
         "component": "exposure",
@@ -126,7 +147,9 @@ model.meta = {
         "id": "D-Temp",
         "name": "Temperature change",
         "description": "Projected change in temperature by the end of the 21st century",
-        "format": "celsius",
+        "format": "number",
+        "decimals": "2",
+        "unit": "%s °C",
         "index": "vulnerability",
         "sector": "water",
         "component": "exposure",
@@ -138,7 +161,9 @@ model.meta = {
         "id": "daly",
         "name": "Disability adjusted life years",
         "description": "Percent increase in DALY due to climate change in the late 21st century",
-        "format": "percent",
+        "format": "number",
+        "decimals": "1",
+        "unit": "%s %",
         "index": "vulnerability",
         "sector": "health",
         "component": "exposure",
@@ -150,7 +175,9 @@ model.meta = {
         "id": "energy_access",
         "name": "Energy access",
         "description": "Percent population with access to electricity",
-        "format": "percent",
+        "format": "number",
+        "decimals": "1",
+        "unit": "%s %",
         "index": "vulnerability",
         "sector": "infrastructure",
         "component": "exposure",
@@ -162,7 +189,9 @@ model.meta = {
         "id": "energy_sensit",
         "name": "Energy sensitivity",
         "description": "Percent of energy derived from hydroelectric and imported power",
-        "format": "percent",
+        "format": "number",
+        "decimals": "1",
+        "unit": "%s %",
         "index": "vulnerability",
         "sector": "infrastructure",
         "component": "sensitivity",
@@ -174,7 +203,9 @@ model.meta = {
         "id": "enrollment",
         "name": "Tertiary education",
         "description": "Percent enrollment tertiary education",
-        "format": "percent",
+        "format": "number",
+        "decimals": "1",
+        "unit": "%s %",
         "index": "readiness",
         "sector": null,
         "component": "social",
@@ -186,7 +217,9 @@ model.meta = {
         "id": "external",
         "name": "External dependence",
         "description": "Total expendature on external resources for health",
-        "format": "percent",
+        "format": "number",
+        "decimals": "1",
+        "unit": "%s %",
         "index": "vulnerability",
         "sector": "health",
         "component": "sensitivity",
@@ -199,6 +232,8 @@ model.meta = {
         "name": "Financial freedom",
         "description": "Index of economic freedom: fiancial freedom subcomponent",
         "format": "number",
+        "decimals": null,
+        "unit": null,
         "index": "readiness",
         "sector": null,
         "component": "economic",
@@ -211,6 +246,8 @@ model.meta = {
         "name": "Fiscal freedom",
         "description": "Index of economic freedom: fiscal freedom subcomponent",
         "format": "number",
+        "decimals": null,
+        "unit": null,
         "index": "readiness",
         "sector": null,
         "component": "economic",
@@ -223,6 +260,8 @@ model.meta = {
         "name": "Food capacity",
         "description": "Average of 2 best scores between use of fertilizers, mechanization and irrigation",
         "format": "number",
+        "decimals": null,
+        "unit": null,
         "index": "vulnerability",
         "sector": "food",
         "component": "capacity",
@@ -230,11 +269,27 @@ model.meta = {
         "source2": "http://data.worldbank.org/indicator/AG.LND.TRAC.ZS",
         "source3": "http://data.worldbank.org/indicator/AG.LND.IRIG.AG.ZS"
     },
+    "gdp": {
+        "id": "gdp",
+        "name": "GDP per capita",
+        "description": "Gross domestic product per capita",
+        "format": "number",
+        "decimals": "2",
+        "unit": "USD %s",
+        "index": null,
+        "sector": null,
+        "component": null,
+        "source1": null,
+        "source2": null,
+        "source3": null
+    },
     "gov_spend": {
         "id": "gov_spend",
         "name": "Government spending",
         "description": "Index of economic freedom: goverment spending subcomponent",
         "format": "number",
+        "decimals": null,
+        "unit": null,
         "index": "readiness",
         "sector": null,
         "component": "economic",
@@ -246,7 +301,9 @@ model.meta = {
         "id": "health_disease",
         "name": "Disease mortality",
         "description": "Percentage mortality due to infectious diseases",
-        "format": "percent",
+        "format": "number",
+        "decimals": "1",
+        "unit": "%s %",
         "index": "vulnerability",
         "sector": "health",
         "component": "exposure",
@@ -258,7 +315,9 @@ model.meta = {
         "id": "imports",
         "name": "Food import dependency",
         "description": "Proportion of cereal consumption derived from external sources",
-        "format": "percent",
+        "format": "number",
+        "decimals": "1",
+        "unit": "%s %",
         "index": "vulnerability",
         "sector": "food",
         "component": "sensitivity",
@@ -271,6 +330,8 @@ model.meta = {
         "name": "Investment freedom",
         "description": "Index of economic freedom: investment freedom subcomponent",
         "format": "number",
+        "decimals": null,
+        "unit": null,
         "index": "readiness",
         "sector": null,
         "component": "economic",
@@ -283,6 +344,8 @@ model.meta = {
         "name": "Labor freedom",
         "description": "Index of economic freedom: labor freedom subcomponent",
         "format": "number",
+        "decimals": null,
+        "unit": null,
         "index": "readiness",
         "sector": null,
         "component": "social",
@@ -295,6 +358,8 @@ model.meta = {
         "name": "Life expectancy",
         "description": "Life expectancy at birth",
         "format": "number",
+        "decimals": null,
+        "unit": null,
         "index": "vulnerability",
         "sector": "health",
         "component": "capacity",
@@ -306,7 +371,9 @@ model.meta = {
         "id": "malnutr",
         "name": "Malnutrition",
         "description": "Percent of under 5 year-olds with low weight for their height",
-        "format": "percent",
+        "format": "number",
+        "decimals": "1",
+        "unit": "%s %",
         "index": "vulnerability",
         "sector": "food",
         "component": "capacity",
@@ -318,7 +385,9 @@ model.meta = {
         "id": "matern",
         "name": "Maternal mortality",
         "description": "Lifetime risk of maternal death",
-        "format": "percent",
+        "format": "number",
+        "decimals": "1",
+        "unit": "%s %",
         "index": "vulnerability",
         "sector": "health",
         "component": "capacity",
@@ -331,6 +400,8 @@ model.meta = {
         "name": "Mobile penetration",
         "description": "Mobile cellular subscriptions (per 100 people)",
         "format": "number",
+        "decimals": null,
+        "unit": null,
         "index": "readiness",
         "sector": null,
         "component": "social",
@@ -343,6 +414,8 @@ model.meta = {
         "name": "Monetary freedom",
         "description": "Index of economic freedom: monetary freedom subcomponent",
         "format": "number",
+        "decimals": null,
+        "unit": null,
         "index": "readiness",
         "sector": null,
         "component": "economic",
@@ -355,10 +428,26 @@ model.meta = {
         "name": "Political stability & non-violence",
         "description": "World governance indicator: political stability and non-violence component",
         "format": "number",
+        "decimals": null,
+        "unit": null,
         "index": "readiness",
         "sector": null,
         "component": "governance",
         "source1": "http://info.worldbank.org/governance/wgi/index.asp",
+        "source2": null,
+        "source3": null
+    },
+    "pop": {
+        "id": "pop",
+        "name": "Population",
+        "description": "Total population",
+        "format": "number",
+        "decimals": null,
+        "unit": null,
+        "index": null,
+        "sector": null,
+        "component": null,
+        "source1": null,
         "source2": null,
         "source3": null
     },
@@ -367,6 +456,8 @@ model.meta = {
         "name": "Road flooding",
         "description": "Frequency of floods divided by land area",
         "format": "number",
+        "decimals": null,
+        "unit": null,
         "index": "vulnerability",
         "sector": "infrastructure",
         "component": "exposure",
@@ -378,7 +469,9 @@ model.meta = {
         "id": "road_paved",
         "name": "Paved roads",
         "description": "Percentage of paved roads",
-        "format": "percent",
+        "format": "number",
+        "decimals": "1",
+        "unit": "%s %",
         "index": "vulnerability",
         "sector": "infrastructure",
         "component": "sensitivity",
@@ -390,7 +483,9 @@ model.meta = {
         "id": "rural_popn",
         "name": "Rural population",
         "description": "Percent of population in rural livelihoods",
-        "format": "percent",
+        "format": "number",
+        "decimals": "1",
+        "unit": "%s %",
         "index": "vulnerability",
         "sector": "food",
         "component": "sensitivity",
@@ -403,6 +498,8 @@ model.meta = {
         "name": "Rule of law",
         "description": "World governance indicator: rule of law component",
         "format": "number",
+        "decimals": null,
+        "unit": null,
         "index": "readiness",
         "sector": null,
         "component": "social",
@@ -414,7 +511,9 @@ model.meta = {
         "id": "sanit",
         "name": "Sanitary water",
         "description": "Percent population with access to improved sanitation",
-        "format": "percent",
+        "format": "number",
+        "decimals": "1",
+        "unit": "%s %",
         "index": "vulnerability",
         "sector": "water",
         "component": "capacity",
@@ -427,6 +526,8 @@ model.meta = {
         "name": "Health workers per capita",
         "description": "Number of medical workers per 1000 people",
         "format": "number",
+        "decimals": null,
+        "unit": null,
         "index": "vulnerability",
         "sector": "health",
         "component": "sensitivity",
@@ -439,6 +540,8 @@ model.meta = {
         "name": "Trade freedom",
         "description": "Index of economic freedom: trade freedom subcomponent",
         "format": "number",
+        "decimals": null,
+        "unit": null,
         "index": "readiness",
         "sector": null,
         "component": "economic",
@@ -451,6 +554,8 @@ model.meta = {
         "name": "Voice & accountability",
         "description": "World governance indicator: voice and accountability component",
         "format": "number",
+        "decimals": null,
+        "unit": null,
         "index": "readiness",
         "sector": null,
         "component": "governance",
@@ -462,7 +567,9 @@ model.meta = {
         "id": "water_access",
         "name": "Water access",
         "description": "Percent population with access to improved water supply",
-        "format": "percent",
+        "format": "number",
+        "decimals": "1",
+        "unit": "%s %",
         "index": "vulnerability",
         "sector": "water",
         "component": "capacity",
@@ -475,6 +582,8 @@ model.meta = {
         "name": "Water disease",
         "description": "Deaths due to water borne diseases in under 5 year-olds",
         "format": "number",
+        "decimals": null,
+        "unit": null,
         "index": "vulnerability",
         "sector": "water",
         "component": "sensitivity",
@@ -486,7 +595,9 @@ model.meta = {
         "id": "water_use",
         "name": "Water use",
         "description": "Percent of total internal and external water withdrawn for all uses ",
-        "format": "percent",
+        "format": "number",
+        "decimals": "1",
+        "unit": "%s %",
         "index": "vulnerability",
         "sector": "water",
         "component": "sensitivity",
@@ -499,6 +610,8 @@ model.meta = {
         "name": "Variation of cereal yield",
         "description": "Coefficient of variation of annual cereal yield ",
         "format": "number",
+        "decimals": null,
+        "unit": null,
         "index": "vulnerability",
         "sector": "food",
         "component": "exposure",
@@ -510,7 +623,9 @@ model.meta = {
         "id": "yld_proj",
         "name": "Yield change",
         "description": "Projected impact of climate change on agricultural yields",
-        "format": "percent",
+        "format": "number",
+        "decimals": "1",
+        "unit": "%s %",
         "index": "vulnerability",
         "sector": "food",
         "component": "exposure",
@@ -523,6 +638,8 @@ model.meta = {
         "name": "Governance",
         "description": "Component measuring national stability, governmental responsiveness and corruption ",
         "format": null,
+        "decimals": null,
+        "unit": null,
         "index": "readiness",
         "sector": null,
         "component": "governance",
@@ -535,6 +652,8 @@ model.meta = {
         "name": "Economic readiness",
         "description": "Component measuring economic stability, growth and governmental regulation",
         "format": null,
+        "decimals": null,
+        "unit": null,
         "index": "readiness",
         "sector": null,
         "component": "economic",
@@ -547,6 +666,8 @@ model.meta = {
         "name": "Social readiness",
         "description": "Component measuring the society's awareness and understanding of climate risks and their belief that changes will increase adaptation capacity",
         "format": null,
+        "decimals": null,
+        "unit": null,
         "index": "readiness",
         "sector": null,
         "component": "social",
@@ -559,6 +680,8 @@ model.meta = {
         "name": "Exposure",
         "description": "Component analyzing the probability of climate related hazards",
         "format": null,
+        "decimals": null,
+        "unit": null,
         "index": "vulnerability",
         "sector": null,
         "component": "exposure",
@@ -571,6 +694,8 @@ model.meta = {
         "name": "Sensitivity",
         "description": "Component measuring the potential severity of the impacts of climate-related threats",
         "format": null,
+        "decimals": null,
+        "unit": null,
         "index": "vulnerability",
         "sector": null,
         "component": "sensitivity",
@@ -583,6 +708,8 @@ model.meta = {
         "name": "Capacity",
         "description": "Component measuring the availability of economic, social and institutional resources to cope with and adapt to the impacts of climate change",
         "format": null,
+        "decimals": null,
+        "unit": null,
         "index": "vulnerability",
         "sector": null,
         "component": "capacity",
@@ -595,6 +722,8 @@ model.meta = {
         "name": "Water",
         "description": "Sector measuring a nation's current and future ability to provide clean water",
         "format": null,
+        "decimals": null,
+        "unit": null,
         "index": "vulnerability",
         "sector": "water",
         "component": null,
@@ -607,6 +736,8 @@ model.meta = {
         "name": "Food",
         "description": "Sector measuring the nation's food production, nutrition and rural population",
         "format": null,
+        "decimals": null,
+        "unit": null,
         "index": "vulnerability",
         "sector": "food",
         "component": null,
@@ -619,6 +750,8 @@ model.meta = {
         "name": "Health",
         "description": "Sector measuring a nation's ability to provide health services against several mortality statistics",
         "format": null,
+        "decimals": null,
+        "unit": null,
         "index": "vulnerability",
         "sector": "health",
         "component": null,
@@ -631,6 +764,8 @@ model.meta = {
         "name": "Infrastructure",
         "description": "Sector analyzing three direct factors impacting human well-being in the face of climate change: coasts, energy and transportation",
         "format": null,
+        "decimals": null,
+        "unit": null,
         "index": "vulnerability",
         "sector": "infrastructure",
         "component": null,
@@ -643,6 +778,8 @@ model.meta = {
         "name": "Vulnerability",
         "description": "Vulnerability meausres a country's exposure, sensitivity and ability to cope with climate related hazards, as well as accounting for the overall status of food, water, health and infrastructure within the nation",
         "format": null,
+        "decimals": null,
+        "unit": null,
         "index": "vulnerability",
         "sector": null,
         "component": null,
@@ -655,6 +792,8 @@ model.meta = {
         "name": "Readiness",
         "description": "Readiness measures the ability of a country's private and public sectors to leverage resources effectively towards increasing resiliency to climate change",
         "format": null,
+        "decimals": null,
+        "unit": null,
         "index": "readiness",
         "sector": null,
         "component": null,
@@ -667,6 +806,8 @@ model.meta = {
         "name": "GaIn™",
         "description": "The Global Adaptation Index™ (GaIn™) exposes countries' vulnerabilities to climate change and opportunities to improve resilience. It aims to help businesses and the public sector to better prioritize investments for a more efficient response to the immediate global challenges ahead.",
         "format": null,
+        "decimals": null,
+        "unit": null,
         "index": "gain",
         "sector": null,
         "component": null,

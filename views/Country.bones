@@ -13,7 +13,6 @@ view = views.Main.extend({
             collection = this.model.get('indicators'),
             meta = collection.model.meta;
 
-
         // Build a look up table for the data.
         // TODO move this to the collection.
         collection.each(function(m) {
@@ -36,26 +35,6 @@ view = views.Main.extend({
             pin.y = 80 - Math.round(summary.vulnerability.raw * 80);
         }
 
-        // GDP and Population data.  Assumes we want the latest year, and that both
-        // GDP and Pop latest year will be the same year (see template).
-        var gdp = {}; var pop = {};
-        var gdpLatest = _.last(collection.getGraphData('name', 'gdp'));
-        var popLatest = _.last(collection.getGraphData('name', 'pop'));
-        if (gdpLatest instanceof Array) {
-            gdp.val = this.numberFormat(gdpLatest[1], 2, '.', ',');
-            gdp.yr = gdpLatest[0];
-        } else {
-            gdp.val = gdp.yr = 'Unknown';
-        }
-        if (popLatest instanceof Array) {
-            pop.val = this.numberFormat(popLatest[1], 0, '.', ',');
-            pop.yr = popLatest[0];
-        } else {
-            pop.val = pop.yr = 'Unknown';
-        }
-        // Determine year of data
-        var bgdYear = (gdp.yr != 'Unknown' ? gdp.yr : pop.yr);
-
         // Generate historical rankings.
         var rank = [];
         _.each(lookup.gain.get('rank'), function(r, year) {
@@ -74,9 +53,16 @@ view = views.Main.extend({
             rank: rank,
             tabs: indicators,
             pin: pin,
-            gdp: gdp,
-            pop: pop,
-            bgdYear: bgdYear
+            gdp: {
+                year: 2009,
+                value: lookup['gdp'].input({year: 2009}),
+                label: lookup['gdp'].meta('name')
+            },
+            population: {
+                year: 2009,
+                value: lookup['pop'].input({year: 2009}),
+                label: lookup['pop'].meta('name')
+            }
         }));
 
         this.aboutView = new views.AboutQuadrant({
@@ -160,15 +146,5 @@ view = views.Main.extend({
         $('.drawer', this.el).removeClass('open');
         $('table.data tr').removeClass('active');
         return false;
-    },
-    // From StackOverflow http://is.gd/sR4ygY
-    numberFormat: function(n, decimals, decimal_sep, thousands_sep) {
-        var c = isNaN(decimals) ? 2 : Math.abs(decimals),
-            d = decimal_sep || ',',
-            t = (typeof thousands_sep === 'undefined') ? '.' : thousands_sep,
-            sign = (n < 0) ? '-' : '',
-            i = parseInt(n = Math.abs(n).toFixed(c)) + '', 
-            j = ((j = i.length) > 3) ? j % 3 : 0; 
-            return sign + (j ? i.substr(0, j) + t : '') + i.substr(j).replace(/(\d{3})(?=\d)/g, "$1" + t) + (c ? d + Math.abs(n - i).toFixed(c).slice(2) : ''); 
     }
 });
