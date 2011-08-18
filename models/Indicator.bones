@@ -84,7 +84,10 @@ model.meta = {
         "index": "readiness",
         "sector": null,
         "component": "economic",
-        "source": ["http://www.heritage.org/index/explore"]
+        "source": [{
+            "name": "Index of Economic Freedom",
+            "link": "http://www.heritage.org/index/explore"
+        }]
     },
     "coast_area": {
         "id": "coast_area",
@@ -97,7 +100,10 @@ model.meta = {
         "index": "vulnerability",
         "sector": "infrastructure",
         "component": "exposure",
-        "source": ["cait.wri.org/cait-va.php?page=valand5m&mode=view"]
+        "source": [{
+            "name": "cait.wri.org",
+            "link": "http://cait.wri.org/cait-va.php?page=valand5m&mode=view"
+        }]
     },
     "coast_popn": {
         "id": "coast_popn",
@@ -110,7 +116,10 @@ model.meta = {
         "index": "vulnerability",
         "sector": "infrastructure",
         "component": "sensitivity",
-        "source": ["http://cait.wri.org/cait-va.php?page=vapop5m&mode=view"]
+        "source": [{
+            "name": "cait.wri.org",
+            "link": "http://cait.wri.org/cait-va.php?page=vapop5m&mode=view"
+        }]
     },
     "corruption": {
         "id": "corruption",
@@ -123,7 +132,10 @@ model.meta = {
         "index": "readiness",
         "sector": null,
         "component": "governance",
-        "source": ["http://info.worldbank.org/governance/wgi/sc_country.asp"]
+        "source": [{
+            "name": "Worldwide Governance Indicators",
+            "link": "http://info.worldbank.org/governance/wgi/sc_country.asp"
+        }]
     },
     "D-Ppt": {
         "id": "D-Ppt",
@@ -136,7 +148,10 @@ model.meta = {
         "index": "vulnerability",
         "sector": "water",
         "component": "exposure",
-        "source": ["http://www.cru.uea.ac.uk/cru/data/precip/"]
+        "source": [{
+            "name": "www.cru.uea.ac.uk",
+            "link": "http://www.cru.uea.ac.uk/cru/data/precip/"
+        }]
     },
     "D-Temp": {
         "id": "D-Temp",
@@ -149,7 +164,10 @@ model.meta = {
         "index": "vulnerability",
         "sector": "water",
         "component": "exposure",
-        "source": ["http://www.cru.uea.ac.uk/cru/data/temperature/"]
+        "source": [{
+            "name": "www.cru.uea.ac.uk",
+            "link": "http://www.cru.uea.ac.uk/cru/data/temperature/"
+        }]
     },
     "daly": {
         "id": "daly",
@@ -162,7 +180,10 @@ model.meta = {
         "index": "vulnerability",
         "sector": "health",
         "component": "exposure",
-        "source": ["http://www.globalizationandhealth.com/content/4/1/9"]
+        "source": [{
+            "name": "www.globalizationandhealth.com",
+            "link": "http://www.globalizationandhealth.com/content/4/1/9"
+        }]
     },
     "energy_access": {
         "id": "energy_access",
@@ -175,7 +196,10 @@ model.meta = {
         "index": "vulnerability",
         "sector": "infrastructure",
         "component": "exposure",
-        "source": ["http://cait.wri.org/cait-va.php?page=vaelectricity&mode=view"]
+        "source": [{
+            "name": "cait.wri.org",
+            "link": "http://cait.wri.org/cait-va.php?page=vaelectricity&mode=view"
+        }]
     },
     "energy_sensit": {
         "id": "energy_sensit",
@@ -189,8 +213,14 @@ model.meta = {
         "sector": "infrastructure",
         "component": "sensitivity",
         "source": [
-            "http://data.worldbank.org/indicator/EG.IMP.CONS.ZS",
-            "http://data.worldbank.org/indicator/EG.ELC.HYRO.ZS"
+        {
+            "name": "World Development Indicators",
+            "link": "http://data.worldbank.org/indicator/EG.IMP.CONS.ZS"
+        },
+        {
+            "name": "World Development Indicators",
+            "link": "http://data.worldbank.org/indicator/EG.ELC.HYRO.ZS"
+        }
         ]
     },
     "enrollment": {
@@ -204,7 +234,10 @@ model.meta = {
         "index": "readiness",
         "sector": null,
         "component": "social",
-        "source": ["http://data.worldbank.org/indicator/SE.TER.ENRR"]
+        "source": [{
+            "name": "World Development Indicators",
+            "link": "http://data.worldbank.org/indicator/SE.TER.ENRR"
+        }]
     },
     "external": {
         "id": "external",
@@ -217,7 +250,10 @@ model.meta = {
         "index": "vulnerability",
         "sector": "health",
         "component": "sensitivity",
-        "source": ["http://data.worldbank.org/indicator/SH.XPD.EXTR.ZS"]
+        "source": [{
+            "name": "World Development Indicators",
+            "link": "http://data.worldbank.org/indicator/SH.XPD.EXTR.ZS"
+        }]
     },
     "finan": {
         "id": "finan",
@@ -230,7 +266,10 @@ model.meta = {
         "index": "readiness",
         "sector": null,
         "component": "economic",
-        "source": ["http://www.heritage.org/index/explore"]
+        "source": [{
+            "name": "Index of Economic Freedom",
+            "link": "http://www.heritage.org/index/explore"
+        }]
     },
     "fiscal": {
         "id": "fiscal",
@@ -243,7 +282,10 @@ model.meta = {
         "index": "readiness",
         "sector": null,
         "component": "economic",
-        "source": ["http://www.heritage.org/index/explore"]
+        "source": [{
+            "name": "Index of Economic Freedom",
+            "link": "http://www.heritage.org/index/explore"
+        }]
     },
     "food_capacity": {
         "id": "food_capacity",
@@ -257,9 +299,18 @@ model.meta = {
         "sector": "food",
         "component": "capacity",
         "source": [
-            "http://data.worldbank.org/indicator/AG.CON.FERT.ZS",
-            "http://data.worldbank.org/indicator/AG.LND.TRAC.ZS",
-            "http://data.worldbank.org/indicator/AG.LND.IRIG.AG.ZS"
+        {
+            "name": "World Development Indicators",
+            "link": "http://data.worldbank.org/indicator/AG.CON.FERT.ZS"
+        },
+        {
+            "name": "World Development Indicators",
+            "link": "http://data.worldbank.org/indicator/AG.LND.TRAC.ZS"
+        },
+        {
+            "name": "World Development Indicators",
+            "link": "http://data.worldbank.org/indicator/AG.LND.IRIG.AG.ZS"
+        }
         ]
     },
     "gdp": {
@@ -285,7 +336,10 @@ model.meta = {
         "index": "readiness",
         "sector": null,
         "component": "economic",
-        "source": ["http://data.worldbank.org/indicator/AG.CON.FERT.ZS"]
+        "source": [{
+            "name": "World Development Indicators",
+            "link": "http://data.worldbank.org/indicator/AG.CON.FERT.ZS"
+        }]
     },
     "health_disease": {
         "id": "health_disease",
@@ -298,7 +352,10 @@ model.meta = {
         "index": "vulnerability",
         "sector": "health",
         "component": "exposure",
-        "source": ["http://apps.who.int/ghodata/?vid=99001#"]
+        "source": [{
+            "name": "apps.who.int",
+            "link": "http://apps.who.int/ghodata/?vid=99001#"
+        }]
     },
     "imports": {
         "id": "imports",
@@ -324,7 +381,10 @@ model.meta = {
         "index": "readiness",
         "sector": null,
         "component": "economic",
-        "source": ["http://www.heritage.org/index/explore"]
+        "source": [{
+            "name": "Index of Economic Freedom",
+            "link": "http://www.heritage.org/index/explore"
+        }]
     },
     "labor": {
         "id": "labor",
@@ -337,7 +397,10 @@ model.meta = {
         "index": "readiness",
         "sector": null,
         "component": "social",
-        "source": ["http://www.heritage.org/index/explore"]
+        "source": [{
+            "name": "Index of Economic Freedom",
+            "link": "http://www.heritage.org/index/explore"
+        }]
     },
     "life": {
         "id": "life",
@@ -350,7 +413,10 @@ model.meta = {
         "index": "vulnerability",
         "sector": "health",
         "component": "capacity",
-        "source": ["http://data.worldbank.org/indicator/SP.DYN.LE00.IN"]
+        "source": [{
+            "name": "World Development Indicators",
+            "link": "http://data.worldbank.org/indicator/SP.DYN.LE00.IN"
+        }]
     },
     "malnutr": {
         "id": "malnutr",
@@ -376,7 +442,10 @@ model.meta = {
         "index": "vulnerability",
         "sector": "health",
         "component": "capacity",
-        "source": ["http://data.worldbank.org/indicator/SH.MMR.RISK.ZS"]
+        "source": [{
+            "name": "World Development Indicators",
+            "link": "http://data.worldbank.org/indicator/SH.MMR.RISK.ZS"
+        }]
     },
     "mobiles": {
         "id": "mobiles",
@@ -389,7 +458,10 @@ model.meta = {
         "index": "readiness",
         "sector": null,
         "component": "social",
-        "source": ["http://data.worldbank.org/indicator/IT.CEL.SETS.P2"]
+        "source": [{
+            "name": "World Development Indicators",
+            "link": "http://data.worldbank.org/indicator/IT.CEL.SETS.P2"
+        }]
     },
     "monetary": {
         "id": "monetary",
@@ -402,7 +474,10 @@ model.meta = {
         "index": "readiness",
         "sector": null,
         "component": "economic",
-        "source": ["http://www.heritage.org/index/explore"]
+        "source": [{
+            "name": "Index of Economic Freedom",
+            "link": "http://www.heritage.org/index/explore"
+        }]
     },
     "non_violence": {
         "id": "non_violence",
@@ -415,7 +490,10 @@ model.meta = {
         "index": "readiness",
         "sector": null,
         "component": "governance",
-        "source": ["http://info.worldbank.org/governance/wgi/index.asp"]
+        "source": [{
+            "name": "Worldwide Governance Indicators",
+            "link": "http://info.worldbank.org/governance/wgi/index.asp"
+        }]
     },
     "pop": {
         "id": "pop",
@@ -454,8 +532,14 @@ model.meta = {
         "sector": "infrastructure",
         "component": "sensitivity",
         "source": [
-            "http://data.worldbank.org/indicator/IS.ROD.PAVE.ZS",
-            "http://data.worldbank.org/indicator/SP.RUR.TOTL"
+        {
+            "name": "World Development Indicators",
+            "link": "http://data.worldbank.org/indicator/IS.ROD.PAVE.ZS"
+        },
+        {
+            "name": "World Development Indicators",
+            "link": "http://data.worldbank.org/indicator/SP.RUR.TOTL"
+        }
         ]
     },
     "rural_popn": {
@@ -469,7 +553,10 @@ model.meta = {
         "index": "vulnerability",
         "sector": "food",
         "component": "sensitivity",
-        "source": ["http://data.worldbank.org/indicator/SP.POP.TOTL"]
+        "source": [{
+            "name": "World Development Indicators",
+            "link": "http://data.worldbank.org/indicator/SP.POP.TOTL"
+        }]
     },
     "rule_of_law": {
         "id": "rule_of_law",
@@ -482,7 +569,10 @@ model.meta = {
         "index": "readiness",
         "sector": null,
         "component": "social",
-        "source": ["http://info.worldbank.org/governance/wgi/sc_country.asp"]
+        "source": [{
+            "name": "Worldwide Governance Indicators",
+            "link": "http://info.worldbank.org/governance/wgi/sc_country.asp"
+        }]
     },
     "sanit": {
         "id": "sanit",
@@ -495,7 +585,10 @@ model.meta = {
         "index": "vulnerability",
         "sector": "water",
         "component": "capacity",
-        "source": ["http://data.worldbank.org/indicator/SH.STA.ACSN"]
+        "source": [{
+            "name": "World Development Indicators",
+            "link": "http://data.worldbank.org/indicator/SH.STA.ACSN"
+        }]
     },
     "staff": {
         "id": "staff",
@@ -509,8 +602,14 @@ model.meta = {
         "sector": "health",
         "component": "sensitivity",
         "source": [
-            "http://data.worldbank.org/indicator/SH.MED.PHYS.ZS",
-            "http://data.worldbank.org/indicator/SH.MED.NUMW.P3"
+        {
+            "name": "World Development Indicators",
+            "link": "http://data.worldbank.org/indicator/SH.MED.PHYS.ZS"
+        },
+        {
+            "name": "World Development Indicators",
+            "link": "http://data.worldbank.org/indicator/SH.MED.NUMW.P3"
+        }
         ]
     },
     "trade": {
@@ -524,7 +623,10 @@ model.meta = {
         "index": "readiness",
         "sector": null,
         "component": "economic",
-        "source": ["http://www.heritage.org/index/explore"]
+        "source": [{
+            "name": "Index of Economic Freedom",
+            "link": "http://www.heritage.org/index/explore"
+        }]
     },
     "voice_accountability": {
         "id": "voice_accountability",
@@ -537,7 +639,10 @@ model.meta = {
         "index": "readiness",
         "sector": null,
         "component": "governance",
-        "source": ["http://info.worldbank.org/governance/wgi/sc_country.asp"]
+        "source": [{
+            "name": "Worldwide Governance Indicators",
+            "link": "http://info.worldbank.org/governance/wgi/sc_country.asp"
+        }]
     },
     "water_access": {
         "id": "water_access",
@@ -550,7 +655,10 @@ model.meta = {
         "index": "vulnerability",
         "sector": "water",
         "component": "capacity",
-        "source": ["http://data.worldbank.org/indicator/SH.H2O.SAFE.ZS"]
+        "source": [{
+            "name": "World Development Indicators",
+            "link": "http://data.worldbank.org/indicator/SH.H2O.SAFE.ZS"
+        }]
     },
     "water_disease": {
         "id": "water_disease",
@@ -576,7 +684,10 @@ model.meta = {
         "index": "vulnerability",
         "sector": "water",
         "component": "sensitivity",
-        "source": ["http://www.fao.org/nr/water/aquastat/data/query/index.html?lang=en"]
+        "source": [{
+            "name": "www.fao.org",
+            "link": "http://www.fao.org/nr/water/aquastat/data/query/index.html?lang=en"
+        }]
     },
     "yield_cv": {
         "id": "yield_cv",
@@ -589,7 +700,10 @@ model.meta = {
         "index": "vulnerability",
         "sector": "food",
         "component": "exposure",
-        "source": ["http://data.worldbank.org/indicator/AG.YLD.CREL.KG"]
+        "source": [{
+            "name": "World Development Indicators",
+            "link": "http://data.worldbank.org/indicator/AG.YLD.CREL.KG"
+        }]
     },
     "yld_proj": {
         "id": "yld_proj",
@@ -602,7 +716,10 @@ model.meta = {
         "index": "vulnerability",
         "sector": "food",
         "component": "exposure",
-        "source": ["http://www.cgdev.org/content/publications/detail/1424986"]
+        "source": [{
+            "name": "www.cgdev.org",
+            "link": "http://www.cgdev.org/content/publications/detail/1424986"
+        }]
     },
     "governance": {
         "id": "governance",
