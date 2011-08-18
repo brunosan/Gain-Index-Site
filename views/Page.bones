@@ -14,12 +14,16 @@ view = views.Document.extend({
         }));
     },
     render: function(options) {
+
+        // Approach the cabinet.
+        $(this.el).empty().append(templates.Cabinet());
+
         if (options && options.editable) {
-            $(this.el).empty().append(templates.AdminPage(
+            $('.top', this.el).empty().append(templates.AdminPage(
                 this.model.renderer()
             ));
         } else {
-            $(this.el).empty().append(templates.Page(
+            $('.top', this.el).empty().append(templates.Page(
                 this.model.renderer()
             ));
         }
