@@ -22,10 +22,10 @@ command.prototype.initialize = function(options) {
         data[v.id || v['ISO3']] = v;
     })
     .on('end', function() {
-        console.log(JSON.stringify(data, null, 4));
+        process.stdout.write(JSON.stringify(data, null, 4));
     })
     .on('error', function(err) {
-        console.log(err);
+        console.error(err);
     });
 }
 
