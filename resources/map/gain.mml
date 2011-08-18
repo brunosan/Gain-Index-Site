@@ -14,8 +14,8 @@
     {
       "Datasource": {
         "file": "layers/countries.sqlite",
-        "table": "(SELECT countries.*, scaleRank as DATA FROM countries)",
-        "attachdb": "",
+        "table": "(SELECT countries.*, data.'<%= year %>' as factor FROM countries LEFT JOIN indicators.data ON countries.iso_a3 = data.ISO3 WHERE data.NAME = '<%= indicator %>')",
+        "attachdb": "indicators@/Users/jm/Projects/gai-gain/files/indicators.sqlite",
         "key_field": "",
         "extend": "",
         "type": "sqlite"
