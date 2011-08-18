@@ -701,11 +701,14 @@ table.data tr.active {
     .country-summary div.chart .matrix {
       margin: 25px 0px 0px 10px;
       }
-  .country-summary div.map {
+  .country-summary .map {
     border-width: 1px 0px 1px 1px;
     height: 135px;
     width: 320px;
     }
+    .featured .country-summary .map {
+      display: none;
+      }
 .featured div.stats div.country-summary {
     border-color: #c6c6c6;
     border-style: solid;
@@ -745,12 +748,6 @@ table.data tr.active {
   }
 .featured div.country-summary div.gain {
     border-width: 0px;
-    text-align: center;
-  }
-
-.featured div.country-summary div.gain div.gainnumber {
-    font-size: 34px;
-    font-weight: bold;
     text-align: center;
   }
 

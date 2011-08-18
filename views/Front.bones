@@ -7,40 +7,41 @@ view = views.Main.extend({
         $('.top', this.el).empty().append(templates.Front());
 
         // Featured countries
+        $('.featured.countries', this.el).empty();
         var that = this;
-        var countries = [];
-
         _.each([this.model.featuredFirst, this.model.featuredSecond], function(model) {
-            var pin = {}; var info = {};
-            info.name = models.Country.meta[model.get('id')].name;
-            info.nameLower = info.name.toLowerCase();
-            info.countryInfo = {};
-            var collection = model.get('indicators');
-            var indicators = ['gain', 'vulnerability', 'readiness'];
-            
-            _.each(indicators, function(i) {
-                info.countryInfo[i] = {};
-                var data = collection.getGraphData('name', i);
-                if (data instanceof Array) {
-                    info.countryInfo[i].name = i;
-                    info.countryInfo[i].value = _.last(data)[1].toFixed(2);
+            var summary = {},
+                pin = {},
+                indicators = model.get('indicators');
+            $('.featured .countries', that.el).append(
+                templates.FeaturedFront({name: model.meta('name')})
+            );
+            new views.AboutQuadrant({
+                el: $('.featured .prose', that.el).last(),
+                model: model
+            }).render();
+            _.each(['gain', 'readiness', 'vulnerability'], function(k) {
+                var indicator = indicators.byName(k);
+                if (indicator) {
+                    summary[k] = {
+                        name: indicator.meta('name'),
+                        value: indicator.score(),
+                        raw: indicator.score({format: false})
+                    };
                 }
             });
-            if (info.countryInfo['readiness'] && info.countryInfo['vulnerability']) {
-                pin.x = Math.round((info.countryInfo['readiness'].value * 80) + 15);
-                pin.y = 80 - Math.round(info.countryInfo['vulnerability'].value * 80);
-                info.pin = pin;
+            if (summary.readiness && summary.vulnerability) {
+                pin.x = Math.round((summary.readiness.raw * 80) + 15);
+                pin.y = 80 - Math.round(summary.vulnerability.raw * 80);
             }
-            countries.push(info);
+            $('.featured .country-summary', that.el).last().append(templates.CountrySummary({
+                summary: summary,
+                pin: pin
+            }));
         });
-
-        $('.featured', this.el).empty().append(templates.FeaturedFront({
-            countries: countries
-        }));
-
         _.each([this.model.featuredFirst, this.model.featuredSecond], function(model) {
             new views.AboutQuadrant({
-                el: $('.description.' + models.Country.meta[model.get('id')].name.toLowerCase(), that.el),
+                el: $('.featured' + models.Country.meta[model.get('id')].name.toLowerCase(), that.el),
                 model: model
             }).render();
         });
