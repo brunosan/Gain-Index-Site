@@ -395,47 +395,47 @@ table.data tbody tr {
 /**
  * Small Matrix
  */
-.matrix {
+.mini-matrix {
   position: relative;
   width: 100px;
   height: 100px;
   }
-  .matrix .quad {
+  .mini-matrix .quad {
     position: absolute;
     background: #c6c6c6;
     height: 42px;
     width: 42px;
     }
-  .matrix .tl {
+  .mini-matrix .tl {
     top: 0px; left: 15px;
     -moz-border-radius: 3px 0px 0px 0px;
     -webkit-border-radius: 3px 0px 0px 0px;
     border-radius: 3px 0px 0px 0px;
     }
-  .matrix .tr {
+  .mini-matrix .tr {
     top: 0px; left: 58px;
     -moz-border-radius: 0px 3px 0px 0px;
     -webkit-border-radius: 0px 3px 0px 0px;
     border-radius: 0px 3px 0px 0px;
     }
-  .matrix .br {
+  .mini-matrix .br {
     top: 43px; left: 58px;
     -moz-border-radius: 0px 0px 3px 0px;
     -webkit-border-radius: 0px 0px 3px 0px;
     border-radius: 0px 0px 3px 0px;
     }
-  .matrix .bl {
+  .mini-matrix .bl {
     top: 43px; left: 15px;
     -moz-border-radius: 0px 0px 0px 3px;
     -webkit-border-radius: 0px 0px 0px 3px;
     border-radius: 0px 0px 0px 3px;
     }
-  .matrix .tl.active { background-color: red; }
-  .matrix .tr.active { background-color: green; }
-  .matrix .lr.active { background-color: blue; }
-  .matrix .ll.active { background-color: yellow; }
+  .mini-matrix .tl.active { background-color: red; }
+  .mini-matrix .tr.active { background-color: green; }
+  .mini-matrix .lr.active { background-color: blue; }
+  .mini-matrix .ll.active { background-color: yellow; }
 
-  .matrix .pin {
+  .mini-matrix .pin {
     position: absolute;
     background-color: #666;
     top: 43px;
@@ -698,7 +698,7 @@ table.data tr.active {
     height: 135px;
     width: 125px;
     }
-    .country-summary div.chart .matrix {
+    .country-summary div.chart .mini-matrix {
       margin: 25px 0px 0px 10px;
       }
   .country-summary .map {
@@ -732,7 +732,7 @@ table.data tr.active {
       border-style: solid;
       border-width: 0px 0px 0px 1px;
   }
-.featured div.country-summary div.chart .matrix {
+.featured div.country-summary div.chart .mini-matrix {
     margin: 5px 0 0 5px;
   }
 .featured div.country-summary div.readiness, 
