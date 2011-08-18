@@ -18,13 +18,12 @@ view = Backbone.View.extend({
     },
     // Run after document view has rendered.
     renderEditControl: function() {
-        // @TODO user is undefined.
-        //if (this.editAccess(Bones.user)) {
+        if (Bones.user.authenticated) {
             this.panel = new views.AdminDocument({model: this.model, display: this});
             $(this.el).addClass('show-status');
             $(this.el).prepend(this.panel.el);
             $('.main', this.el).append(templates.AdminActionsPanel());
-        //}
+        }
         return this;
     },
     render: function() {
@@ -33,17 +32,6 @@ view = Backbone.View.extend({
     attach: function() {
         // no-op.
         return;
-    },
-    // A user can edit a document if they are her own or if she is admin.
-    editAccess: function(user) {
-        if (!user.authenticated) return false;
-
-        var access = false;
-
-        access = access || user.hasGroup('admin');
-        access = access || user.id == this.model.get('author');
-
-        return access;
     },
     save: function(e) {
         e.preventDefault();
