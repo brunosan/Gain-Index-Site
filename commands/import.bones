@@ -234,6 +234,7 @@ command.prototype.initialize = function(options) {
 
             actions.push(processCSV(source + '/input.csv', function(v, i) {
                 var record = new Record(v, category, name);
+                records[record.ISO3] = records[record.ISO3] || record;
                 records[record.ISO3].input = _(v).reduce(reduceValues, {});
             }));
 

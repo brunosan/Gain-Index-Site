@@ -6,7 +6,6 @@ view = views.Main.extend({
         // Empty pockets on top.
         $('.top', this.el).empty().append(templates.Front());
 
-
         // Featured countries
         var that = this;
         var countries = [];
