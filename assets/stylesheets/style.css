@@ -322,6 +322,25 @@ a:hover {
     background-color: #fff;
     }
 
+#footer .search {
+  }
+  #footer .search input {
+    padding: 5px 10px;
+    background-color: #fff;
+    border-radius: 2px;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    }
+  #footer .search input.textfield {
+    -moz-box-shadow: inset 0px 0px 3px #000;
+    -webkit-box-shadow: inset 0px 0px 3px #000;
+    box-shadow: inset 0px 0px 3px #000;
+    background-color: #fff;
+    }
+  #footer .search input.button {
+    background-color: #fff;
+    }
+
 /**
  * tabs
  */
@@ -932,12 +951,11 @@ text-align: center;
   }
 
 /**
- * About navigation
+ * About section navigation
  */
 #about-nav-container { 
   width: 200px;
   }
-
 #about-nav-container ul {
   margin-left: 20px;
   padding-left: 0;
@@ -945,7 +963,6 @@ text-align: center;
   font-family: 'AlternateGothicLTNo3Regular',"HelveticaNeueBoldCondensed","HelveticaNeue-Bold-Condensed","Arial Narrow","Arial",sans-serif;
   text-transform: uppercase;
   }
-
 #about-nav-container a {
   display: block;
   padding: 3px;
@@ -954,13 +971,12 @@ text-align: center;
   color: #000;
   padding-left: 20px
   }
-
 #about-nav-container a:link, #about-nav a:visited {
   color: #000;
   text-decoration: none;
   }
-
-#about-nav-container a:hover {
+#about-nav-container a:hover,
+#about-nav-container a:active {
   background-color: #fff;
   color: #000;
   -webkit-border-radius: 4px;

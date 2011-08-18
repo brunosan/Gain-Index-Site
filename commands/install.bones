@@ -34,19 +34,6 @@ command.prototype.initialize = function(plugin) {
     config.databases.split(':').forEach(function(dbName) {
         command.installDB(plugin, dbName);
     });
-
-    // Install sqlite db.
-    var db;
-    db = new sqlite3.Database(config.files + '/indicators.sqlite', function() {
-        var stmt = 'CREATE TABLE IF NOT EXISTS data (NAME VARCHAR, ISO3 VARCHAR';
-        for (i = 1995; i <= 2010; i++) {
-            stmt += ",'"+i+"' INTEGER";
-        }
-        stmt += ')';
-
-        db.run(stmt);
-        console.log('Installed SQLite database');
-    });
 };
 
 command.prototype.installDB = function(plugin, dbName) {
