@@ -23,6 +23,10 @@ view = views.Document.extend({
                 this.model.renderer()
             ));
         }
-        return this.renderEditControl();
+
+        // Some things fall on the floor.
+        $('.floor', this.el).empty().append(templates.AboutFloor());
+        
+        return this;
     }
 });
