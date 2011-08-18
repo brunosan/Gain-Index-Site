@@ -52,7 +52,6 @@ view = views.Main.extend({
             summary: summary,
             rank: rank,
             tabs: indicators,
-            pin: pin,
             gdp: {
                 year: 2009,
                 value: lookup['gdp'].input({year: 2009}),
@@ -63,6 +62,10 @@ view = views.Main.extend({
                 value: lookup['pop'].input({year: 2009}),
                 label: lookup['pop'].meta('name')
             }
+        }));
+        $('.country-summary', this.el).empty().append(templates.CountrySummary({
+            pin: pin,
+            summary: summary
         }));
 
         this.aboutView = new views.AboutQuadrant({

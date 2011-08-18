@@ -1,7 +1,20 @@
 model = Backbone.Collection.extend({
     model: models.Indicator,
     initialize: function() {
-        _.bindAll(this, 'getGraphData');
+        _.bindAll(this, 'getGraphData', 'buildLookup');
+        this.bind('add', this.buildLookup);
+        this.bind('remove', this.buildLookup);
+        this.buildLookup();
+    },
+    buildLookup: function() {
+        var lookup = this.lookup = {};
+        // Build a look up table for the data.
+        this.each(function(m) {
+            lookup[m.get('name')] = m;
+        });
+    },
+    byName: function(name) {
+        return this.lookup[name];
     },
     getGraphData: function(key, val) {
         var data = this.detect(function(v) {
