@@ -1,0 +1,10 @@
+<ul id='map-years' class='map-selector'>
+  <% _.each(years, function(v) { %>
+      <li><a href='#<%= v.year %>' class='<%= v.klass %>'><%= v.year %></a></li>
+  <% }); %>
+</ul>
+<ul id='map-indicators' class='map-selector'>
+  <% _.each(indicators, function(v) { %>
+      <li><a href='<%= v.id %>' class='<%= v.klass %>'><%= v.name %></a></li>
+  <% }); %>
+</ul>
