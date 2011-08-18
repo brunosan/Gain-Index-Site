@@ -5,42 +5,14 @@ view = views.Main.extend({
         'click .drawer .handle a': 'closeDrawer'
     }, views.Main.prototype.events),
     render: function() {
-        var lookup = {},
-            title = '',
-            summary = {},
-            pin = {},
-            indicators = {};
-            collection = this.model.get('indicators'),
-            meta = collection.model.meta;
-
-        // Build a look up table for the data.
-        // TODO move this to the collection.
-        collection.each(function(m) {
-            lookup[m.get('name')] = m;
-        });
-
-        // The summary information needs to be done manually.
-        _.each(['gain', 'readiness', 'vulnerability'], function(k) {
-            if (!title) title = lookup[k].escape('country');
-            if (lookup.hasOwnProperty(k)) {
-                summary[k] = {
-                    name: meta[k].name,
-                    value: lookup[k].score(),
-                    raw: lookup[k].score({format: false})
-                };
-            }
-        });
-        if (summary.readiness && summary.vulnerability) {
-            pin.x = Math.round((summary.readiness.raw * 80) + 15);
-            pin.y = 80 - Math.round(summary.vulnerability.raw * 80);
-        }
+        var indicators = this.model.get('indicators');
 
         // Generate historical rankings.
         var rank = [];
-        _.each(lookup.gain.get('rank'), function(r, year) {
+        _.each(indicators.byName('gain').get('rank'), function(r, year) {
             rank.push({
                 year: year,
-                rank: lookup.gain.rank({year: year})
+                rank: indicators.byName('gain').rank({year: year})
             });
         });
 
@@ -48,31 +20,29 @@ view = views.Main.extend({
         $(this.el).empty().append(templates.Cabinet());
         // Empty pockets on top.
         $('.top', this.el).empty().append(templates.Country({
-            title: title,
-            summary: summary,
+            title: this.model.meta('name'),
             rank: rank,
-            tabs: indicators,
             gdp: {
                 year: 2009,
-                value: lookup['gdp'].input({year: 2009}),
-                label: lookup['gdp'].meta('name')
+                value: indicators.byName('gdp').input({year: 2009}),
+                label: indicators.byName('gdp').meta('name')
             },
             population: {
                 year: 2009,
-                value: lookup['pop'].input({year: 2009}),
-                label: lookup['pop'].meta('name')
+                value: indicators.byName('pop').input({year: 2009}),
+                label: indicators.byName('pop').meta('name')
             }
         }));
-        $('.country-summary', this.el).empty().append(templates.CountrySummary({
-            pin: pin,
-            summary: summary
-        }));
+
+        new views.CountrySummary({
+            el: $('.country-summary', this.el).last(),
+            model: this.model
+        }).render();
 
         this.aboutView = new views.AboutQuadrant({
             el: $('.prose', this.el),
             model: this.model
         }).render();
-
 
         // Some things fall on the floor.
         $('.floor', this.el).empty().append(templates.DefaultFloor());

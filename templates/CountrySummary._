@@ -7,7 +7,7 @@
 <% }); %>
 </div>
 <div class='chart'>
-  <div class='matrix'>
+  <div class='mini-matrix'>
     <div class='quad tl'></div>
     <div class='quad tr'></div>
     <div class='quad br'></div>
