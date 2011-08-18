@@ -20,34 +20,38 @@ var put = function(config, db, doc, callback) {
     });
 };
 
-
-var sqliteIndicators = [
-    'gain',
-    'gain_delta',
-    'vulnerability',
-    'vulnerability_delta',
-    'readiness',
-    'readiness_delta'
-];
+var sqliteIndicators = {
+    // indicator: [range, offset]
+    'gain': [100, 0],
+    'gain_delta': [1, -0.5],
+    'vulnerability': [1, 0],
+    'vulnerability_delta': [1, -0.5],
+    'readiness': [1, 0],
+    'readiness_delta': [1, -0.5]
+};
 
 var sqlitePut = function(db, doc, callback) {
     // We only want certain indicators in sqlite.
-    if (sqliteIndicators.indexOf(doc.name) == -1) {
+    if (sqliteIndicators[doc.name] == undefined) {
         return callback(null);
     }
 
-    var data = doc.values;
-    var stmt = 'INSERT INTO data VALUES (';
+    var data = doc.values,
+        meta = sqliteIndicators[doc.name],
+        stmt = 'INSERT INTO data VALUES (?, ?',
+        args = [];
 
-    // TODO use proper placeholder instead of manually assembling this string.
-    stmt += '"' + doc.name + '"';
-    stmt += ',"' + doc.ISO3 + '"';
+    args.push(doc.name);
+    args.push(doc.ISO3);
+
     for (var i = 1995; i <= 2010; i++) {
-        stmt += ", " + (parseInt(data[i] * 100) ? parseInt(data[i] * 100) : 0);
+        stmt += ', ?';
+        var v = parseInt((data[i] - meta[1]) / meta[0] * 100) || 0
+        args.push(v);
     }
     stmt += ')';
 
-    db.run(stmt, function(err) {
+    db.run(stmt, args, function(err) {
         callback(err);
     });
 }
