@@ -1,5 +1,17 @@
 <h3><%= title %><h3/>
-<div><%= content %></div>
 <div class='more'><a href='/ranking/<%= indicator %>'>More</a></div>
-<h4><%= title %> over time </h4>
-<div class='graph'></div>
+<div class='description'>
+  <%= description %>
+</div>
+<div class='chart'>
+  <h4><%= title %> over time </h4>
+  <div class='graph'></div>
+</div>
+<div class='source'>
+  <h4>Source</h4>
+  <ul>
+  <% _.each(source, function(source) { %>
+      <li><a href='<%= source.link %>'><%= source.name %></a></li>
+  <% }); %>
+  </ul>
+</div>

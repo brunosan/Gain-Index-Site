@@ -42,7 +42,7 @@ model = Backbone.Model.extend({
     },
     meta: function(key) {
         // TODO: Why do some indicators not have an id? Should we always use 'name'?
-        return Backbone.Model.escapeHTML(model.meta[this.id || this.get('name')][key] || '');
+        return model.meta[this.id || this.get('name')][key] || '';
     },
     format: function(value, meta) {
         if (_.isUndefined(value)) {
@@ -603,11 +603,11 @@ model.meta = {
         "component": "sensitivity",
         "source": [
         {
-            "name": "World Development Indicators",
+            "name": "World Development Indicators - Physicians (per 1,000 people)",
             "link": "http://data.worldbank.org/indicator/SH.MED.PHYS.ZS"
         },
         {
-            "name": "World Development Indicators",
+            "name": "World Development Indicators - Nurses and midwives (per 1,000 people)",
             "link": "http://data.worldbank.org/indicator/SH.MED.NUMW.P3"
         }
         ]

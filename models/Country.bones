@@ -11,7 +11,7 @@ model = Backbone.Model.extend({
         this.set({indicators: indicators}, {silent : true});
     },
     meta: function(key) {
-        return Backbone.Model.escapeHTML(model.meta[this.id][key] || '');
+        return model.meta[this.id][key] || '';
     }
 });
 

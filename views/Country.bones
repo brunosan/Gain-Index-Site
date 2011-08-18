@@ -95,8 +95,9 @@ view = views.Main.extend({
         var data = this.model.get('indicators').getGraphData('name', ind);
         $('.drawer .content', this.el).empty().append(templates.CountryDrawer({
             title: model.meta('name'),
-            content: model.meta('description'),
-            indicator: model.get('name')
+            description: model.meta('description'),
+            indicator: model.get('name'),
+            source: model.meta('source') || []
         }));
 
         if (data && data.length > 1) {
