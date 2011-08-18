@@ -1,0 +1,6 @@
+mkdir node_modules
+cd node_modules
+tar -xzf ../node-mapnik-osx-x64-0.5.3-r3148.tar.gz
+cd ..
+npm install
+rm -r node_modules/tilelive-mapnik/node_modules/mapnik # This sucks but I'm lazy
