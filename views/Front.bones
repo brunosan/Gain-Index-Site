@@ -1,4 +1,8 @@
 view = views.Main.extend({
+    events: {
+        'click #map-years li a': 'yearClick',
+        'click #map-indicator li a': 'indicatorClick'
+    },
     render: function() {
         // Approach the cabinet.
         $(this.el).empty().append(templates.Cabinet());
@@ -78,14 +82,14 @@ view = views.Main.extend({
         });
 
         $('#map', this.el).append(templates.MapInterface(locals));
+        return this;
     },
     initMap: function(options) {
-        // TODO find a better place to stash the current year and current
-        // indicator for our click handlers.
+        // TODO find a better place to stash the current year, current
+        // indicator and tilejson for our click handlers.
         this.currentIndicator = options.indicator;
         this.currentYear = options.year;
-
-        var tilejson = {
+        this.tilejson = {
             tilejson: '1.0.0',
             scheme: 'tms',
             tiles: ['http://localhost:3001/1.0.0/'+ options.indicator+'-'+options.year+'/{z}/{x}/{y}.png'],
@@ -96,16 +100,16 @@ view = views.Main.extend({
         };
 
         var mm = com.modestmaps,
-            m = new mm.Map('map', new wax.mm.connector(tilejson), new mm.Point(635,490));
+            m = new mm.Map('map', new wax.mm.connector(this.tilejson), new mm.Point(635,490));
 
-        wax.mm.fullscreen(m, tilejson).appendTo(m.parent);
+        wax.mm.fullscreen(m, this.tilejson).appendTo(m.parent);
 
         var tooltip = wax.tooltip;
         tooltip.prototype.click = function(feature, context, index) {
             // TODO open drawer.
             window.location = '/country/' + $(feature).data('iso');
         }
-        wax.mm.interaction(m, tilejson, {callbacks: new tooltip });
+        wax.mm.interaction(m, this.tilejson, {callbacks: new tooltip });
 
         m.setCenterZoom(new mm.Location(39, -98), 2);
         return m;
@@ -115,9 +119,9 @@ view = views.Main.extend({
             indicator = options.indicator || this.currentIndicator;
 
         // TODO localhost won't do here...
-        tilejson.tiles[0] = 'http://localhost:3001/1.0.0/' + indicator + '-' + year + '/{z}/{x}/{y}.png';
-        tilejson.grids[0] = 'http://localhost:3001/1.0.0/' + indicator + '-' + year + '/{z}/{x}/{y}.grid.json';
-        this.map.setProvider(new wax.mm.connector(tilejson));
+        this.tilejson.tiles[0] = 'http://localhost:3001/1.0.0/' + indicator + '-' + year + '/{z}/{x}/{y}.png';
+        this.tilejson.grids[0] = 'http://localhost:3001/1.0.0/' + indicator + '-' + year + '/{z}/{x}/{y}.grid.json';
+        this.map.setProvider(new wax.mm.connector(this.tilejson));
     },
     yearClick: function(ev) {
         var e = $(ev.currentTarget);
