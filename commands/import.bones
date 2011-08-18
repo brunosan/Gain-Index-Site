@@ -3,8 +3,7 @@ var path = require('path');
 var csv = require('csv'),
     exec = require('child_process').exec,
     _ = require('underscore')._,
-    request = require('request'),
-    sqlite3 = require('sqlite3');
+    request = require('request');
 
 var put = function(config, db, doc, callback) {
     request.put({
@@ -19,42 +18,6 @@ var put = function(config, db, doc, callback) {
         callback(err, doc);
     });
 };
-
-var sqliteIndicators = {
-    // indicator: [range, offset]
-    'gain': [100, 0],
-    'gain_delta': [1, -0.5],
-    'vulnerability': [1, 0],
-    'vulnerability_delta': [1, -0.5],
-    'readiness': [1, 0],
-    'readiness_delta': [1, -0.5]
-};
-
-var sqlitePut = function(db, doc, callback) {
-    // We only want certain indicators in sqlite.
-    if (sqliteIndicators[doc.name] == undefined) {
-        return callback(null);
-    }
-
-    var data = doc.values,
-        meta = sqliteIndicators[doc.name],
-        stmt = 'INSERT INTO data VALUES (?, ?',
-        args = [];
-
-    args.push(doc.name);
-    args.push(doc.ISO3);
-
-    for (var i = 1995; i <= 2010; i++) {
-        stmt += ', ?';
-        var v = parseInt((data[i] - meta[1]) / meta[0] * 100) || 0
-        args.push(v);
-    }
-    stmt += ')';
-
-    db.run(stmt, args, function(err) {
-        callback(err);
-    });
-}
 
 /**
  * Formats UNIX time to YYYY-MM-DD HH:MM
@@ -197,26 +160,6 @@ command.prototype.initialize = function(options) {
                 });
             });
 
-            actions.push(function(next) {
-                var dbfile = config.files + '/indicators.sqlite';
-                sqlitedb = new sqlite3.Database(dbfile, sqlite3.OPEN_READWRITE, function(err) {
-                    err && errors.push(err);
-                    next();
-                });
-            });
-
-            // Write records to SQLite
-            actions.push(function(next) {
-                var counter = _.after(_(records).size(), next);
-
-                _(records).each(function(record) {
-                    sqlitePut(sqlitedb, record, function(err){
-                        err && errors.push(err);
-                        counter();
-                    });
-                });
-            });
-
             _(actions).reduceRight(_.wrap, next)();
         };
     }
@@ -228,7 +171,6 @@ command.prototype.initialize = function(options) {
         return function(next) {
             var actions = [];
             var records = {};
-            var sqlitedb;
 
             actions.push(processCSV(source + '/score.csv', function(v, i) {
                 var record = new Record(v, category, name);
@@ -301,27 +243,6 @@ command.prototype.initialize = function(options) {
                     });
                 });
 
-            });
-
-
-            actions.push(function(next) {
-                var dbfile = config.files + '/indicators.sqlite';
-                sqlitedb = new sqlite3.Database(dbfile, sqlite3.OPEN_READWRITE, function(err) {
-                    err && errors.push(err);
-                    next();
-                });
-            });
-
-            // Write records to SQLite
-            actions.push(function(next) {
-                var counter = _.after(_(records).size(), next);
-
-                _(records).each(function(record) {
-                    sqlitePut(sqlitedb, record, function(err){
-                        err && errors.push(err);
-                        counter();
-                    });
-                });
             });
 
             _(actions).reduceRight(_.wrap, next)();
