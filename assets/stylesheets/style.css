@@ -706,6 +706,7 @@ table.data tr.active {
     height: 135px;
     width: 320px;
     }
+    .drawer .country-summary .map,
     .featured .country-summary .map {
       display: none;
       }
