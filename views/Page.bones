@@ -1,5 +1,9 @@
 view = views.Document.extend({
     className: 'document page page-inner clearfix',
+    initialize: function(options) {
+        _.bindAll(this, 'render', 'attach');
+        this.render().trigger('attach');
+    },
     attach: function() {
         if (!Bones.user || !Bones.user.authenticated) {
             return this;
@@ -8,6 +12,17 @@ view = views.Document.extend({
             model: this.model,
             display: this
         }));
-        return this;
+    },
+    render: function(options) {
+        if (options && options.editable) {
+            $(this.el).empty().append(templates.AdminPage(
+                this.model.renderer()
+            ));
+        } else {
+            $(this.el).empty().append(templates.Page(
+                this.model.renderer()
+            ));
+        }
+        return this.renderEditControl();
     }
 });
