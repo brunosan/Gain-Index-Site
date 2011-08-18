@@ -87,32 +87,27 @@ view = views.Main.extend({
     },
     openDrawer: function(ev) {
         $('table.data tr').removeClass('active');
-        var ind = $(ev.currentTarget).attr('id').substr(10);;
-        if (!ind) return;
+        var ind = $(ev.currentTarget).attr('id').substr(10),
+            model = this.model.get('indicators').byName(ind);
+        if (!model) return;
         $(ev.currentTarget).addClass('active');
 
-        var collection = this.model.get('indicators');
-        var data = collection.getGraphData('name', ind);
+        var data = this.model.get('indicators').getGraphData('name', ind);
+        $('.drawer .content', this.el).empty().append(templates.CountryDrawer({
+            title: model.meta('name'),
+            content: model.meta('description'),
+            indicator: model.get('name')
+        }));
 
-        var collection = this.model.get('indicators');
-        var meta = collection.model.meta[ind];
-        if (meta != undefined) {
-            $('.drawer .content', this.el).empty().append(templates.CountryDrawer({
-                title: meta.name,
-                content: meta.description,
-                indicator: meta.id
-            }));
-
-            if (data && data.length > 1) {
-                new views.Bigline({
-                    el: $('.drawer .content .graph', this.el),
-                    data: data
-                })
-            } else {
-                $('.drawer .content .graph', this.el).hide();
-            }
-            $('.drawer', this.el).addClass('open');
+        if (data && data.length > 1) {
+            new views.Bigline({
+                el: $('.drawer .content .graph', this.el),
+                data: data
+            })
+        } else {
+            $('.drawer .content .graph', this.el).hide();
         }
+        $('.drawer', this.el).addClass('open');
         return false;
     },
     closeDrawer: function() {
