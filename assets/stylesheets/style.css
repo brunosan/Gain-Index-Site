@@ -160,6 +160,7 @@ a:hover {
     #header .navigation li a.about.active { background-position: -265px -130px; width: 75px;}
     #header .navigation li a.about.active:hover { background-position: -265px -130px; width: 75px;}
     #header .navigation li a.about:hover { background-position: -265px -175px; width: 75px;}
+
 #header .org {
   position: absolute;
   left: 850px;
