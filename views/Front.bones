@@ -39,12 +39,6 @@ view = views.Main.extend({
                 pin: pin
             }));
         });
-        _.each([this.model.featuredFirst, this.model.featuredSecond], function(model) {
-            new views.AboutQuadrant({
-                el: $('.featured' + models.Country.meta[model.get('id')].name.toLowerCase(), that.el),
-                model: model
-            }).render();
-        });
  
         // Some things fall on the floor.
         $('.floor', this.el).empty().append(templates.DefaultFloor());
