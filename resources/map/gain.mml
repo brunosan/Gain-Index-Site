@@ -1,0 +1,34 @@
+{
+  "_center": {
+    "lat": 33.376412351246586,
+    "lon": 65.21484374999997,
+    "zoom": 5
+  },
+  "_format": "png",
+  "interactivity": {
+    "layer": "gain",
+    "fields": [ "iso_a3", "admin" ]
+  },
+  "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+  "Stylesheet": [
+    "style.mss"
+  ],
+  "Layer": [
+    {
+      "Datasource": {
+        "file": "layers/countries.sqlite",
+        "table": "(SELECT countries.*, data.'<%= year %>' as factor FROM countries LEFT JOIN indicators.data ON countries.iso_a3 = data.ISO3 WHERE data.NAME = '<%= indicator %>')",
+        "attachdb": "indicators@../../files/indicators.sqlite",
+        "key_field": "",
+        "extend": "",
+        "type": "sqlite"
+      },
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "id": "gain",
+      "name": "gain",
+      "class": "",
+      "geometry": "polygon"
+    }
+  ],
+  "_legend": "<div class='overlay-legend'>\n<div class='title'>GaIn Score Scale: 2010</div>\n<div class='scale'>\n  <ul class='labels'>\n    <li><span style='background:url(/home/mapbox/tilemill/files/data/gain/diagonal_pic.png);'></span>No Score</li>\n    <li><span style='background:#FF7178;'></span><40</li>\n    <li><span style='background:#FF9CA1;'></span>40-47</li>\n    <li><span style='background:#FFCBCD;'></span>47-54</li>\n    <li><span style='background:#C6C6C6;'></span>54-62</li>\n    <li><span style='background:#BEDEEF;'></span>62-69</li>\n    <li><span style='background:#9FD6F1;'></span>69-76</li>\n    <li><span style='background:#45B5E3;'></span>76=<</li>\n  </ul>\n</div>\n\n<style type='text/css'>\n  .wax-legend .overlay-legend {\n    padding-top: 10px;\n    border-top: 1px solid #cccccc;\n    }\n  .wax-legend .title {\n    text-align: center;\n    margin-bottom: 8px;\n    font-size: 16px;\n    }\n  .wax-legend .scale ul {\n    margin: 0;\n    padding: 0;\n    float: left;\n    list-style: none;\n    }\n  .wax-legend .scale ul li {\n    display: block;\n    float: left;\n    width: 65px;\n    margin-bottom: 5px;\n    text-align: center;\n    font-size: 90%;\n    }\n  .wax-legend ul.labels li span {\n    height: 14px;\n    width: 65px;\n    }\n  .wax-legend ul li span {\n    display: block;\n    float: left;\n    }\n  .wax-legend a {\n    color: #bdddea;\n    }\n</style>"
+}

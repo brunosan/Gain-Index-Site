@@ -1,0 +1,13 @@
+<div class='content'>
+  <h3>About</h3>
+  <ul>
+  <li>Overview</li>
+  <li>Methodology</li>
+  <li>Matrix</li>
+  <li>Consultation</li>
+  </ul>
+</div>
+<div class='search content'>
+  <input class='textfield' name='search' type='textfield' />
+  <input class='button' name='search-submit' type='submit' value='Go' />
+</div>
