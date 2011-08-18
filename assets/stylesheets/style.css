@@ -5,6 +5,7 @@
 
 body {
   background-color: #1d354c;
+  color: #434343;
   }
 
 /*** Typography ***/
@@ -27,13 +28,14 @@ h1,h2,h3,h4,h5 {
   
 h2 {
   font-size: 28px;
-  margin-left: 15px;
+  margin-left: 20px;
   padding: 15px 0 15px 0;
 }
 
 h3 {
   font-size: 20px;
-  margin-bottom: 15px;
+  padding: 15px 0 15px 0;
+  margin-left: 20px;
 }
 
 h4 {
@@ -51,6 +53,7 @@ p {
   font-size: 14px;
   line-height: 1.5;
   color: #434343;
+  margin: 0 20px 0 20px;
 }
 
 .caption {
@@ -114,7 +117,7 @@ a:hover {
 
 #header .tagline {
   position: absolute;
-  left: 120px;
+  left: 100px;
   top: 15px;
   font-family: 'HelveticaNeue-Bold', "HelveticaNeueBold", Helvetica, Arial, sans-serif;  
   font-size: 12px;
@@ -142,18 +145,21 @@ a:hover {
       background-repeat: no-repeat;
       }
     #header .navigation li a.map { background-position: 0px -85px;}
-    #header .navigation li a.map.active { background-position: 0px -175px;}
+    #header .navigation li a.map.active { background-position: 0px -130px;}
+    #header .navigation li a.map.active:hover { background-position: 0px -130px;}
     #header .navigation li a.map:hover { background-position: 0px -175px;}
     #header .navigation li a.rank { background-position: -75px -85px; width: 90px;}
-    #header .navigation li a.rank.active { background-position: -75px -175px; width: 90px;}
+    #header .navigation li a.rank.active { background-position: -75px -130px; width: 90px;}
+    #header .navigation li a.rank.active:hover { background-position: -75px -130px; width: 90px;}
     #header .navigation li a.rank:hover { background-position: -75px -175px; width: 90px;}
     #header .navigation li a.matrix { background-position: -175px -85px; width: 80px;}
-    #header .navigation li a.matrix.active { background-position: -175px -175px; width: 80px;}
+    #header .navigation li a.matrix.active { background-position: -175px -130px; width: 80px;}
+    #header .navigation li a.matrix.active:hover { background-position: -175px -130px; width: 80px;}
     #header .navigation li a.matrix:hover { background-position: -175px -175px; width: 80px;}
     #header .navigation li a.about { background-position: -265px -85px; width: 75px;}
-    #header .navigation li a.about.active { background-position: -265px -175px; width: 75px;}
+    #header .navigation li a.about.active { background-position: -265px -130px; width: 75px;}
+    #header .navigation li a.about.active:hover { background-position: -265px -130px; width: 75px;}
     #header .navigation li a.about:hover { background-position: -265px -175px; width: 75px;}
-
 #header .org {
   position: absolute;
   left: 850px;
@@ -462,7 +468,7 @@ table.data tbody tr {
 
 .front .mission {
   background-color: #ebebeb;
-  padding: 10px;
+  padding: 0;
   }
 
 /**
@@ -575,20 +581,23 @@ table.data tr.active {
 .country-summary {
   float: left;
   width: 625px;
-  padding: 10px 0px 10px 10px;
+  }
+  .country-summary h3{
+  margin-left: 10px;
+  float: left;
   }
   .country-summary > div {
     float: left;
     border-color: #c6c6c6;
     border-style: solid;
-    border-width: 0px;
+    border-width: 0  1px 0 0;
     }
   .country-summary div.stats {
     width: 175px;
     border-width: 1px 0px 1px 1px;
-    -moz-border-radius: 3px 0px 0px 3px;
-    -webkit-border-radius: 3px 0px 0px 3px;
-    border-radius: 3px 0px 0px 3px;
+    -moz-border-radius: 4px 0px 0px 4px;
+    -webkit-border-radius: 4px 0px 0px 4px;
+    border-radius: 4px 0px 0px 4px;
     }
     .country-summary div.stats > div {
       text-align: center;
@@ -630,14 +639,18 @@ table.data tr.active {
 .featured div.stats div.country-summary {
     border-color: #c6c6c6;
     border-style: solid;
+    -moz-border-radius: 4px 0 0 4px;
+    -webkit-border-radius: 4px 0 0 4px;
+    border-radius: 4px 0 0 4px;
     border-width: 1px 0px 1px 1px;
-    margin: 10px 0px 10px 10px;
+    margin: 0px 0px 10px 10px;
     width: 614px;
     background-color: #fff;
-    padding: 10px 0px 0px 10px;
   }
 .featured div.country-summary div.description {
     width: 300px;
+    margin: 0 10px 0 10px;
+    float: left;
   }
 .featured div.country-summary div.chart {
     float: left;
@@ -662,6 +675,13 @@ table.data tr.active {
   }
 .featured div.country-summary div.gain {
     border-width: 0px;
+    text-align: center;
+  }
+
+.featured div.country-summary div.gain div.gainnumber {
+    font-size: 34px;
+    font-weight: bold;
+    text-align: center;
   }
 
 .country-profile .tab-wrapper,
@@ -725,6 +745,15 @@ table.data tr.active {
 /** 
  * Rankings page
  */
+ 
+a.sort {
+ font-family: 'HelveticaNeue', Helvetica, Arial, sans-serif;
+ font-weight: normal;
+  font-style: italic;
+  font-size: 12px;
+  color: #434343;
+}
+
 .ranking {
   background-color: #ebebeb;
   }
@@ -733,11 +762,14 @@ table.data tr.active {
   float: left;
   }
 .ranking ul.indices li a {
+text-align: center;
   font-family: 'AlternateGothicLTNo3Regular',"HelveticaNeueBoldCondensed", "HelveticaNeue-Bold-Condensed", "Arial Narrow", "Arial", sans-serif;
-  color: #000;
+  color: #434343;
+  font-size: 18px;
   text-transform: uppercase;
+  text-shadow: 0 1px rgba(255,255,255,.5);
   float: left;
-  width: 120px;
+  width: auto;
   padding: 0px 20px;
   margin-left: 10px;
   line-height: 30px;
@@ -746,6 +778,7 @@ table.data tr.active {
   -webkit-border-radius: 3px 3px 0px 0px;
   border-radius: 3px 3px 0px 0px;
   }
+  
 .ranking ul.indices li a.active {
   background-color: #fff;
   }
@@ -768,7 +801,8 @@ table.data tr.active {
     .ranking .categories ul li a {
       color: #fff;
       text-transform: uppercase;
-      font-size: 11px;
+      font-size: 10px;
+      font-weight: bold;
       padding: 0 5px;
       display: block;
       line-height: 20px;

@@ -10,7 +10,7 @@
         <% _.each(summary.countryInfo, function(stat, klass) { %>
           <div class='<%= klass %>'>
             <%= stat.name %>
-            <%= stat.value %>
+            <div class='gainnumber'><%= stat.value %></div>
           </div>
           <% if (stat.name == 'gain') { %>
             <div class='chart'>
