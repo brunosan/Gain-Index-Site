@@ -494,7 +494,7 @@ table.data tbody tr {
     display: block;
     position: absolute;
     top: 25px;
-    right: 8px;
+    left: 208px;
     }
     .wax-fullscreen-map {
       position:fixed !important;
@@ -506,11 +506,15 @@ table.data tbody tr {
       bottom:0;
       z-index:999999999999;
       }
-    .wax-tooltip {
-      position: absolute;
-      bottom: 50px;
-      right: 25px;
-      }
+  .wax-tooltip {
+    background-color: rgba(100, 100, 100, 0.7);
+    color: #fff;
+    padding: 5px;
+    display: block;
+    position: absolute;
+    top: 25px;
+      right: 8px;
+    }
 
 .front #carousel {
   height: 155px;
