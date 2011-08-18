@@ -19,7 +19,7 @@ view = views.AdminTableRow.extend({
     },
     edit: function() {
         var path = this.options.table.options.path;
-        this.route(path(this.model.get('id') + '/edit'));
+        Backbone.history.navigate(path(this.model.get('id') + '/edit'), true);
         this.options.table.close();
     }
 });
