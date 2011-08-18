@@ -1,3 +1,5 @@
+var fs = require('fs');
+
 command = Bones.Command.extend();
 
 command.description = 'uninstall databases';
@@ -7,6 +9,7 @@ command.prototype.initialize = function(plugin) {
     plugin.config.databases.split(':').forEach(function(dbName) {
         command.uninstallDB(plugin, dbName);
     });
+    fs.unlink('files/indicators.sqlite');
 };
 
 command.prototype.uninstallDB = function(plugin, dbName) {

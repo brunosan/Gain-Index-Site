@@ -80,7 +80,8 @@ command.description = 'import data';
 
 command.prototype.initialize = function(options) {
     var config = options.config,
-        errors = [];
+        errors = [],
+        sqlitedb;
 
 
     // constructor for record class that handles
@@ -368,6 +369,24 @@ command.prototype.initialize = function(options) {
                     });
                 }
             });
+    });
+
+    actions.push(function(next) {
+        request.get({
+            uri: 'http://' +
+                config.couchHost + ':' +
+                config.couchPort + '/' +
+                'gain_data/_changes',
+        }, function(err, response, body) {
+            var body = JSON.parse(body);
+            sqlitedb.run('DELETE FROM last_seq', function(err) {
+                if (err) throw err;
+                sqlitedb.run('INSERT INTO last_seq VALUES (?)', [ body.last_seq ], function(err) {
+                    if (err) throw err;
+                    next();
+                });
+            })
+        });
     });
 
     // Once we've built the file list import them asyncronously.

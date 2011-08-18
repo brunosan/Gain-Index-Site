@@ -45,6 +45,7 @@ command.prototype.initialize = function(plugin) {
         stmt += ')';
 
         db.run(stmt);
+        db.run('CREATE TABLE IF NOT EXISTS last_seq (id INTEGER)');
         console.log('Installed SQLite database');
     });
 };
