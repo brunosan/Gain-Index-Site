@@ -6,6 +6,7 @@
   <link rel='shortcut icon' href='images/favicon.ico' type='image/x-icon' />
 
   <script src='/assets/bones/vendor.js?<%= version %>'></script>
+  <script src='/assets/bones/wax.js?<%= version %>'></script>
   <script src='/assets/bones/core.js?<%= version %>'></script>
   <script src='/assets/bones/views.js?<%= version %>'></script>
   <script src='/assets/bones/routers.js?<%= version %>'></script>
