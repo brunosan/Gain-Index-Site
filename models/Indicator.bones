@@ -17,29 +17,10 @@ model = Backbone.Model.extend({
         if (!options.format) {
             return value;
         }
-        if (_.isUndefined(value)) {
-            return '-';
-        }
-        var pad = function(num, fill) {
-            var num = num.toString(),
-                parts = num.split('.'),
-                length = 0;
-            if (parts[1]) {
-                length = parts[1].length;
-            } else {
-                num += '.';
-            }
-            while (length < fill) { num += '0'; length++;};
-            return num;
-        };
-        var formatFloat = function(value, decimals) {
-            var f = Math.pow(10, decimals);
-            return pad(Math.round(value * f) / f, decimals);
-        };
         if (value > 1.0) {
-            return formatFloat(value, 1);
+            return this.format(value, {format: 'number', decimals: 1});
         }
-        return formatFloat(value, 3);
+        return this.format(value, {format: 'number', decimals: 3});
     },
     input: function(options) {
         options = this.optionDefaults(options);
@@ -63,12 +44,12 @@ model = Backbone.Model.extend({
         // TODO: Why do some indicators not have an id? Should we always use 'name'?
         return Backbone.Model.escapeHTML(model.meta[this.id || this.get('name')][key] || '');
     },
-    format: function(value) {
+    format: function(value, meta) {
         if (_.isUndefined(value)) {
             return '-';
         }
         // TODO: Why do some indicators not have an id? Should we always use 'name'?
-        var meta = model.meta[this.id || this.get('name')];
+        meta = meta || model.meta[this.id || this.get('name')];
         if (this.formats[meta.format]) {
             value = this.formats[meta.format](value, meta);
         }
