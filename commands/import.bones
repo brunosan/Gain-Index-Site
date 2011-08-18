@@ -21,7 +21,21 @@ var put = function(config, db, doc, callback) {
 };
 
 
+var sqliteIndicators = [
+    'gain',
+    'gain_delta',
+    'vulnerability',
+    'vulnerability_delta',
+    'readiness',
+    'readiness_delta'
+];
+
 var sqlitePut = function(db, doc, callback) {
+    // We only want certain indicators in sqlite.
+    if (sqliteIndicators.indexOf(doc.name) == -1) {
+        return callback(null);
+    }
+
     var data = doc.values;
     var stmt = 'INSERT INTO data VALUES (';
 
@@ -173,6 +187,26 @@ command.prototype.initialize = function(options) {
 
                 _(records).each(function(record) {
                     put(config, 'data', record, function(err, doc){
+                        err && errors.push(err);
+                        counter();
+                    });
+                });
+            });
+
+            actions.push(function(next) {
+                var dbfile = config.files + '/indicators.sqlite';
+                sqlitedb = new sqlite3.Database(dbfile, sqlite3.OPEN_READWRITE, function(err) {
+                    err && errors.push(err);
+                    next();
+                });
+            });
+
+            // Write records to SQLite
+            actions.push(function(next) {
+                var counter = _.after(_(records).size(), next);
+
+                _(records).each(function(record) {
+                    sqlitePut(sqlitedb, record, function(err){
                         err && errors.push(err);
                         counter();
                     });
