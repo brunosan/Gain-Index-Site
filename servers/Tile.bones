@@ -11,6 +11,8 @@ server = Bones.Server.extend({
     initializeRoutes: function() {
         _.bindAll(this, 'load', 'tile', 'grid', 'layer', 'status');
 
+        this.enable('jsonp callback');
+
         this.param('tileset', this.load);
 
         // x.0.0 endpoints.
@@ -103,6 +105,6 @@ server = Bones.Server.extend({
 
     // Layer endpoint.
     layer: function(req, res, next) {
-        res.send(res.model.toJSON());
+        res.send(res.model.tilejson());
     }
 });

@@ -506,6 +506,11 @@ table.data tbody tr {
       bottom:0;
       z-index:999999999999;
       }
+    .wax-tooltip {
+      position: absolute;
+      bottom: 50px;
+      right: 25px;
+      }
 
 .front #carousel {
   height: 155px;
