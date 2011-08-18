@@ -5,23 +5,14 @@ view = views.Main.extend({
         'click .drawer .handle a': 'closeDrawer'
     }, views.Main.prototype.events),
     render: function() {
-        var lookup = {},
-            indicators = {};
-            collection = this.model.get('indicators'),
-            meta = collection.model.meta;
-
-        // Build a look up table for the data.
-        // TODO move this to the collection.
-        collection.each(function(m) {
-            lookup[m.get('name')] = m;
-        });
+        var indicators = this.model.get('indicators');
 
         // Generate historical rankings.
         var rank = [];
-        _.each(lookup.gain.get('rank'), function(r, year) {
+        _.each(indicators.byName('gain').get('rank'), function(r, year) {
             rank.push({
                 year: year,
-                rank: lookup.gain.rank({year: year})
+                rank: indicators.byName('gain').rank({year: year})
             });
         });
 
@@ -31,16 +22,15 @@ view = views.Main.extend({
         $('.top', this.el).empty().append(templates.Country({
             title: this.model.meta('name'),
             rank: rank,
-            tabs: indicators,
             gdp: {
                 year: 2009,
-                value: lookup['gdp'].input({year: 2009}),
-                label: lookup['gdp'].meta('name')
+                value: indicators.byName('gdp').input({year: 2009}),
+                label: indicators.byName('gdp').meta('name')
             },
             population: {
                 year: 2009,
-                value: lookup['pop'].input({year: 2009}),
-                label: lookup['pop'].meta('name')
+                value: indicators.byName('pop').input({year: 2009}),
+                label: indicators.byName('pop').meta('name')
             }
         }));
 
