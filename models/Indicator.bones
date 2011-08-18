@@ -32,9 +32,9 @@ model = Backbone.Model.extend({
             while (length < fill) { num += '0'; length++;};
             return num;
         };
-        var formatFloat = function(value, precision) {
-            var f = Math.pow(10, precision);
-            return pad(Math.round(value * f) / f, precision);
+        var formatFloat = function(value, decimals) {
+            var f = Math.pow(10, decimals);
+            return pad(Math.round(value * f) / f, decimals);
         };
         if (value > 1.0) {
             return formatFloat(value, 1);
@@ -42,9 +42,12 @@ model = Backbone.Model.extend({
         return formatFloat(value, 3);
     },
     input: function(options) {
-        // TODO: formatting.
         options = this.optionDefaults(options);
-        return this.get('input')[options.year];
+        var value = this.get('input')[options.year];
+        if (!options.format) {
+            return value;
+        }
+        return this.format(value);
     },
     // TODO: assumes a maximum rank of 142, determine actual maximum.
     rank: function(options) {
@@ -57,7 +60,34 @@ model = Backbone.Model.extend({
         return "<div class='rank-number' style='background-color: #" + color + ";'>" + value.desc + '</div>';
     },
     meta: function(key) {
-        return Backbone.Model.escapeHTML(model.meta[this.id][key] || '');
+        // TODO: Why do some indicators not have an id? Should we always use 'name'?
+        return Backbone.Model.escapeHTML(model.meta[this.id || this.get('name')][key] || '');
+    },
+    format: function(value) {
+        if (_.isUndefined(value)) {
+            return '-';
+        }
+        // TODO: Why do some indicators not have an id? Should we always use 'name'?
+        var meta = model.meta[this.id || this.get('name')];
+        if (this.formats[meta.format]) {
+            value = this.formats[meta.format](value, meta);
+        }
+        if (meta.unit) {
+            return meta.unit.replace('%', value);
+        }
+        return value;
+    },
+    formats: {
+        // From StackOverflow http://is.gd/sR4ygY
+        number: function(n, meta) {
+            var c = isNaN(meta.decimals) ? 0 : Math.abs(meta.decimals),
+                d = ',',
+                t = '.',
+                sign = (n < 0) ? '-' : '',
+                i = parseInt(n = Math.abs(n).toFixed(c)) + '',
+                j = ((j = i.length) > 3) ? j % 3 : 0;
+                return sign + (j ? i.substr(0, j) + t : '') + i.substr(j).replace(/(\d{3})(?=\d)/g, "$1" + t) + (c ? d + Math.abs(n - i).toFixed(c).slice(2) : ''); 
+        }
     }
 });
 
@@ -673,6 +703,18 @@ model.meta = {
         "source1": null,
         "source2": null,
         "source3": null
+    },
+    "gdp": {
+        "id": "gdp",
+        "name": "GDP per capita PPP",
+        "format": "number",
+        "decimals": "2",
+        "unit": "USD %"
+    },
+    "pop": {
+        "id": "pop",
+        "name": "Population, total",
+        "format": "number"
     }
 };
 
