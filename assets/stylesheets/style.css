@@ -322,6 +322,25 @@ a:hover {
     background-color: #fff;
     }
 
+#footer .search {
+  }
+  #footer .search input {
+    padding: 5px 10px;
+    background-color: #fff;
+    border-radius: 2px;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    }
+  #footer .search input.textfield {
+    -moz-box-shadow: inset 0px 0px 3px #000;
+    -webkit-box-shadow: inset 0px 0px 3px #000;
+    box-shadow: inset 0px 0px 3px #000;
+    background-color: #fff;
+    }
+  #footer .search input.button {
+    background-color: #fff;
+    }
+
 /**
  * tabs
  */
