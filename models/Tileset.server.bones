@@ -6,26 +6,28 @@ var fs = require('fs'),
 
 require('tilelive-mapnik').registerProtocols(tilelive);
 
-var xml = '';
+// In-process cache of the Mapnik XML template we generate, and the localized
+// MML we use to do so..
+var mapCache = '';
 
 models.Tileset.prototype.sync = function(method, model, options) {
     if (method != 'read') return options.error('Method not supported: ' + method);
 
     var actions = [],
-        base = path.normalize(__dirname + '/../resources/map/'),
-        map = {};
+        base = path.normalize(__dirname + '/../resources/map/');
 
     // TODO make mml filename attribute on the model.
     var filename = 'gain.mml';
 
     // Only do the intialization if we're uncached.
-    if (!xml) {
+    if (!mapCache) {
+        mapCache = {};
         // First, load and parse the mml.
         actions.push(function(next) {
             fs.readFile(path.join(base, filename), 'utf8', function(err, data) {
                 if (err) return options.error(err);
 
-                map.mml = JSON.parse(data);
+                mapCache.mml = JSON.parse(data);
                 next();
             });
         });
@@ -33,13 +35,13 @@ models.Tileset.prototype.sync = function(method, model, options) {
         // Localize our mml.
         actions.push(function(next) {
             millstone.resolve({
-                mml: map.mml,
+                mml: mapCache.mml,
                 base: base,
                 cache: path.normalize(__dirname + '/../files/cache')
             }, function(err, resolved) {
                 if (err) return options.error(err);
 
-                map.mml = resolved;
+                mapCache.mml = resolved;
                 next();
             });
         });
@@ -48,10 +50,10 @@ models.Tileset.prototype.sync = function(method, model, options) {
         actions.push(function(next) {
             new carto.Renderer({
                 filename: filename,
-            }).render(map.mml, function(err, output) {
+            }).render(mapCache.mml, function(err, output) {
                 if (err) return options.error(err);
 
-                xml = output;
+                mapCache.xml = output;
                 next();
             });
         });
@@ -59,11 +61,7 @@ models.Tileset.prototype.sync = function(method, model, options) {
 
     // Attach the tilelive source to our model.
     actions.push(function(next) {
-        map.xml = _.template(xml, {
-            year: model.get('year'),
-            indicator: model.get('indicator')
-        });
-
+        // Setup the basic map "uri" for mapnik.
         var uri = {
             protocol: 'mapnik:',
             slashes: true,
@@ -72,12 +70,17 @@ models.Tileset.prototype.sync = function(method, model, options) {
             // This is used as a cache key.
             pathname: path.join('resources/map', model.get('indicator') +'-'+ model.get('year') + '.xml'),
             query: {
-                updated: map.mml._updated,
+                //updated: map.mml._updated,
                 bufferSize: 256
             },
-            xml: map.xml,
-            mml: map.mml
         };
+
+        // Merge in the XML and MML from our cache.
+        uri.xml = _.template(mapCache.xml, {
+            year: model.get('year'),
+            indicator: model.get('indicator')
+        });
+        uri.mml = mapCache.mml;
 
         tilelive.load(uri, function(err, source) {
             if (err) return options.error(err);
@@ -88,6 +91,6 @@ models.Tileset.prototype.sync = function(method, model, options) {
     });
 
     _(actions).reduceRight(_.wrap, function() {
-        options.success(map);
+        options.success();
     })();
 }
