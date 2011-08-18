@@ -84,9 +84,7 @@ model.meta = {
         "index": "readiness",
         "sector": null,
         "component": "economic",
-        "source1": "http://www.heritage.org/index/explore",
-        "source2": null,
-        "source3": null
+        "source": ["http://www.heritage.org/index/explore"]
     },
     "coast_area": {
         "id": "coast_area",
@@ -99,9 +97,7 @@ model.meta = {
         "index": "vulnerability",
         "sector": "infrastructure",
         "component": "exposure",
-        "source1": "cait.wri.org/cait-va.php?page=valand5m&mode=view",
-        "source2": null,
-        "source3": null
+        "source": ["cait.wri.org/cait-va.php?page=valand5m&mode=view"]
     },
     "coast_popn": {
         "id": "coast_popn",
@@ -114,9 +110,7 @@ model.meta = {
         "index": "vulnerability",
         "sector": "infrastructure",
         "component": "sensitivity",
-        "source1": "http://cait.wri.org/cait-va.php?page=vapop5m&mode=view",
-        "source2": null,
-        "source3": null
+        "source": ["http://cait.wri.org/cait-va.php?page=vapop5m&mode=view"]
     },
     "corruption": {
         "id": "corruption",
@@ -129,9 +123,7 @@ model.meta = {
         "index": "readiness",
         "sector": null,
         "component": "governance",
-        "source1": "http://info.worldbank.org/governance/wgi/sc_country.asp",
-        "source2": null,
-        "source3": null
+        "source": ["http://info.worldbank.org/governance/wgi/sc_country.asp"]
     },
     "D-Ppt": {
         "id": "D-Ppt",
@@ -144,9 +136,7 @@ model.meta = {
         "index": "vulnerability",
         "sector": "water",
         "component": "exposure",
-        "source1": "http://www.cru.uea.ac.uk/cru/data/precip/",
-        "source2": null,
-        "source3": null
+        "source": ["http://www.cru.uea.ac.uk/cru/data/precip/"]
     },
     "D-Temp": {
         "id": "D-Temp",
@@ -159,9 +149,7 @@ model.meta = {
         "index": "vulnerability",
         "sector": "water",
         "component": "exposure",
-        "source1": "http://www.cru.uea.ac.uk/cru/data/temperature/",
-        "source2": null,
-        "source3": null
+        "source": ["http://www.cru.uea.ac.uk/cru/data/temperature/"]
     },
     "daly": {
         "id": "daly",
@@ -174,9 +162,7 @@ model.meta = {
         "index": "vulnerability",
         "sector": "health",
         "component": "exposure",
-        "source1": "http://www.globalizationandhealth.com/content/4/1/9",
-        "source2": null,
-        "source3": null
+        "source": ["http://www.globalizationandhealth.com/content/4/1/9"]
     },
     "energy_access": {
         "id": "energy_access",
@@ -189,9 +175,7 @@ model.meta = {
         "index": "vulnerability",
         "sector": "infrastructure",
         "component": "exposure",
-        "source1": "http://cait.wri.org/cait-va.php?page=vaelectricity&mode=view",
-        "source2": null,
-        "source3": null
+        "source": ["http://cait.wri.org/cait-va.php?page=vaelectricity&mode=view"]
     },
     "energy_sensit": {
         "id": "energy_sensit",
@@ -204,9 +188,10 @@ model.meta = {
         "index": "vulnerability",
         "sector": "infrastructure",
         "component": "sensitivity",
-        "source1": "http://data.worldbank.org/indicator/EG.IMP.CONS.ZS",
-        "source2": "http://data.worldbank.org/indicator/EG.ELC.HYRO.ZS",
-        "source3": null
+        "source": [
+            "http://data.worldbank.org/indicator/EG.IMP.CONS.ZS",
+            "http://data.worldbank.org/indicator/EG.ELC.HYRO.ZS"
+        ]
     },
     "enrollment": {
         "id": "enrollment",
@@ -219,9 +204,7 @@ model.meta = {
         "index": "readiness",
         "sector": null,
         "component": "social",
-        "source1": "http://data.worldbank.org/indicator/SE.TER.ENRR",
-        "source2": null,
-        "source3": null
+        "source": ["http://data.worldbank.org/indicator/SE.TER.ENRR"]
     },
     "external": {
         "id": "external",
@@ -234,9 +217,7 @@ model.meta = {
         "index": "vulnerability",
         "sector": "health",
         "component": "sensitivity",
-        "source1": "http://data.worldbank.org/indicator/SH.XPD.EXTR.ZS",
-        "source2": null,
-        "source3": null
+        "source": ["http://data.worldbank.org/indicator/SH.XPD.EXTR.ZS"]
     },
     "finan": {
         "id": "finan",
@@ -249,9 +230,7 @@ model.meta = {
         "index": "readiness",
         "sector": null,
         "component": "economic",
-        "source1": "http://www.heritage.org/index/explore",
-        "source2": null,
-        "source3": null
+        "source": ["http://www.heritage.org/index/explore"]
     },
     "fiscal": {
         "id": "fiscal",
@@ -264,9 +243,7 @@ model.meta = {
         "index": "readiness",
         "sector": null,
         "component": "economic",
-        "source1": "http://www.heritage.org/index/explore",
-        "source2": null,
-        "source3": null
+        "source": ["http://www.heritage.org/index/explore"]
     },
     "food_capacity": {
         "id": "food_capacity",
@@ -279,9 +256,11 @@ model.meta = {
         "index": "vulnerability",
         "sector": "food",
         "component": "capacity",
-        "source1": "http://data.worldbank.org/indicator/AG.CON.FERT.ZS",
-        "source2": "http://data.worldbank.org/indicator/AG.LND.TRAC.ZS",
-        "source3": "http://data.worldbank.org/indicator/AG.LND.IRIG.AG.ZS"
+        "source": [
+            "http://data.worldbank.org/indicator/AG.CON.FERT.ZS",
+            "http://data.worldbank.org/indicator/AG.LND.TRAC.ZS",
+            "http://data.worldbank.org/indicator/AG.LND.IRIG.AG.ZS"
+        ]
     },
     "gdp": {
         "id": "gdp",
@@ -293,10 +272,7 @@ model.meta = {
         "unit": "%s [PPP]",
         "index": null,
         "sector": null,
-        "component": null,
-        "source1": null,
-        "source2": null,
-        "source3": null
+        "component": null
     },
     "gov_spend": {
         "id": "gov_spend",
@@ -309,9 +285,7 @@ model.meta = {
         "index": "readiness",
         "sector": null,
         "component": "economic",
-        "source1": "http://data.worldbank.org/indicator/AG.CON.FERT.ZS",
-        "source2": null,
-        "source3": null
+        "source": ["http://data.worldbank.org/indicator/AG.CON.FERT.ZS"]
     },
     "health_disease": {
         "id": "health_disease",
@@ -324,9 +298,7 @@ model.meta = {
         "index": "vulnerability",
         "sector": "health",
         "component": "exposure",
-        "source1": "http://apps.who.int/ghodata/?vid=99001#",
-        "source2": null,
-        "source3": null
+        "source": ["http://apps.who.int/ghodata/?vid=99001#"]
     },
     "imports": {
         "id": "imports",
@@ -339,9 +311,7 @@ model.meta = {
         "index": "vulnerability",
         "sector": "food",
         "component": "sensitivity",
-        "source1": "FAO",
-        "source2": null,
-        "source3": null
+        "source": ["FAO"]
     },
     "invest": {
         "id": "invest",
@@ -354,9 +324,7 @@ model.meta = {
         "index": "readiness",
         "sector": null,
         "component": "economic",
-        "source1": "http://www.heritage.org/index/explore",
-        "source2": null,
-        "source3": null
+        "source": ["http://www.heritage.org/index/explore"]
     },
     "labor": {
         "id": "labor",
@@ -369,9 +337,7 @@ model.meta = {
         "index": "readiness",
         "sector": null,
         "component": "social",
-        "source1": "http://www.heritage.org/index/explore",
-        "source2": null,
-        "source3": null
+        "source": ["http://www.heritage.org/index/explore"]
     },
     "life": {
         "id": "life",
@@ -384,9 +350,7 @@ model.meta = {
         "index": "vulnerability",
         "sector": "health",
         "component": "capacity",
-        "source1": "http://data.worldbank.org/indicator/SP.DYN.LE00.IN",
-        "source2": null,
-        "source3": null
+        "source": ["http://data.worldbank.org/indicator/SP.DYN.LE00.IN"]
     },
     "malnutr": {
         "id": "malnutr",
@@ -399,9 +363,7 @@ model.meta = {
         "index": "vulnerability",
         "sector": "food",
         "component": "capacity",
-        "source1": "WHO",
-        "source2": null,
-        "source3": null
+        "source": ["WHO"]
     },
     "matern": {
         "id": "matern",
@@ -414,9 +376,7 @@ model.meta = {
         "index": "vulnerability",
         "sector": "health",
         "component": "capacity",
-        "source1": "http://data.worldbank.org/indicator/SH.MMR.RISK.ZS",
-        "source2": null,
-        "source3": null
+        "source": ["http://data.worldbank.org/indicator/SH.MMR.RISK.ZS"]
     },
     "mobiles": {
         "id": "mobiles",
@@ -429,9 +389,7 @@ model.meta = {
         "index": "readiness",
         "sector": null,
         "component": "social",
-        "source1": "http://data.worldbank.org/indicator/IT.CEL.SETS.P2",
-        "source2": null,
-        "source3": null
+        "source": ["http://data.worldbank.org/indicator/IT.CEL.SETS.P2"]
     },
     "monetary": {
         "id": "monetary",
@@ -444,9 +402,7 @@ model.meta = {
         "index": "readiness",
         "sector": null,
         "component": "economic",
-        "source1": "http://www.heritage.org/index/explore",
-        "source2": null,
-        "source3": null
+        "source": ["http://www.heritage.org/index/explore"]
     },
     "non_violence": {
         "id": "non_violence",
@@ -459,9 +415,7 @@ model.meta = {
         "index": "readiness",
         "sector": null,
         "component": "governance",
-        "source1": "http://info.worldbank.org/governance/wgi/index.asp",
-        "source2": null,
-        "source3": null
+        "source": ["http://info.worldbank.org/governance/wgi/index.asp"]
     },
     "pop": {
         "id": "pop",
@@ -473,10 +427,7 @@ model.meta = {
         "unit": null,
         "index": null,
         "sector": null,
-        "component": null,
-        "source1": null,
-        "source2": null,
-        "source3": null
+        "component": null
     },
     "road_floods": {
         "id": "road_floods",
@@ -489,9 +440,7 @@ model.meta = {
         "index": "vulnerability",
         "sector": "infrastructure",
         "component": "exposure",
-        "source1": "CRED & WB Stats for area",
-        "source2": null,
-        "source3": null
+        "source": ["CRED & WB Stats for area"]
     },
     "road_paved": {
         "id": "road_paved",
@@ -504,9 +453,10 @@ model.meta = {
         "index": "vulnerability",
         "sector": "infrastructure",
         "component": "sensitivity",
-        "source1": "http://data.worldbank.org/indicator/IS.ROD.PAVE.ZS",
-        "source2": "http://data.worldbank.org/indicator/SP.RUR.TOTL",
-        "source3": null
+        "source": [
+            "http://data.worldbank.org/indicator/IS.ROD.PAVE.ZS",
+            "http://data.worldbank.org/indicator/SP.RUR.TOTL"
+        ]
     },
     "rural_popn": {
         "id": "rural_popn",
@@ -519,9 +469,7 @@ model.meta = {
         "index": "vulnerability",
         "sector": "food",
         "component": "sensitivity",
-        "source1": "http://data.worldbank.org/indicator/SP.POP.TOTL",
-        "source2": null,
-        "source3": null
+        "source": ["http://data.worldbank.org/indicator/SP.POP.TOTL"]
     },
     "rule_of_law": {
         "id": "rule_of_law",
@@ -534,9 +482,7 @@ model.meta = {
         "index": "readiness",
         "sector": null,
         "component": "social",
-        "source1": "http://info.worldbank.org/governance/wgi/sc_country.asp",
-        "source2": null,
-        "source3": null
+        "source": ["http://info.worldbank.org/governance/wgi/sc_country.asp"]
     },
     "sanit": {
         "id": "sanit",
@@ -549,9 +495,7 @@ model.meta = {
         "index": "vulnerability",
         "sector": "water",
         "component": "capacity",
-        "source1": "http://data.worldbank.org/indicator/SH.STA.ACSN",
-        "source2": null,
-        "source3": null
+        "source": ["http://data.worldbank.org/indicator/SH.STA.ACSN"]
     },
     "staff": {
         "id": "staff",
@@ -564,9 +508,10 @@ model.meta = {
         "index": "vulnerability",
         "sector": "health",
         "component": "sensitivity",
-        "source1": "http://data.worldbank.org/indicator/SH.MED.PHYS.ZS",
-        "source2": "http://data.worldbank.org/indicator/SH.MED.NUMW.P3",
-        "source3": null
+        "source": [
+            "http://data.worldbank.org/indicator/SH.MED.PHYS.ZS",
+            "http://data.worldbank.org/indicator/SH.MED.NUMW.P3"
+        ]
     },
     "trade": {
         "id": "trade",
@@ -579,9 +524,7 @@ model.meta = {
         "index": "readiness",
         "sector": null,
         "component": "economic",
-        "source1": "http://www.heritage.org/index/explore",
-        "source2": null,
-        "source3": null
+        "source": ["http://www.heritage.org/index/explore"]
     },
     "voice_accountability": {
         "id": "voice_accountability",
@@ -594,9 +537,7 @@ model.meta = {
         "index": "readiness",
         "sector": null,
         "component": "governance",
-        "source1": "http://info.worldbank.org/governance/wgi/sc_country.asp",
-        "source2": null,
-        "source3": null
+        "source": ["http://info.worldbank.org/governance/wgi/sc_country.asp"]
     },
     "water_access": {
         "id": "water_access",
@@ -609,9 +550,7 @@ model.meta = {
         "index": "vulnerability",
         "sector": "water",
         "component": "capacity",
-        "source1": "http://data.worldbank.org/indicator/SH.H2O.SAFE.ZS",
-        "source2": null,
-        "source3": null
+        "source": ["http://data.worldbank.org/indicator/SH.H2O.SAFE.ZS"]
     },
     "water_disease": {
         "id": "water_disease",
@@ -624,9 +563,7 @@ model.meta = {
         "index": "vulnerability",
         "sector": "water",
         "component": "sensitivity",
-        "source1": "WHO",
-        "source2": null,
-        "source3": null
+        "source": ["WHO"]
     },
     "water_use": {
         "id": "water_use",
@@ -639,9 +576,7 @@ model.meta = {
         "index": "vulnerability",
         "sector": "water",
         "component": "sensitivity",
-        "source1": "http://www.fao.org/nr/water/aquastat/data/query/index.html?lang=en",
-        "source2": null,
-        "source3": null
+        "source": ["http://www.fao.org/nr/water/aquastat/data/query/index.html?lang=en"]
     },
     "yield_cv": {
         "id": "yield_cv",
@@ -654,9 +589,7 @@ model.meta = {
         "index": "vulnerability",
         "sector": "food",
         "component": "exposure",
-        "source1": "http://data.worldbank.org/indicator/AG.YLD.CREL.KG",
-        "source2": null,
-        "source3": null
+        "source": ["http://data.worldbank.org/indicator/AG.YLD.CREL.KG"]
     },
     "yld_proj": {
         "id": "yld_proj",
@@ -669,9 +602,7 @@ model.meta = {
         "index": "vulnerability",
         "sector": "food",
         "component": "exposure",
-        "source1": "http://www.cgdev.org/content/publications/detail/1424986",
-        "source2": null,
-        "source3": null
+        "source": ["http://www.cgdev.org/content/publications/detail/1424986"]
     },
     "governance": {
         "id": "governance",
@@ -683,10 +614,7 @@ model.meta = {
         "unit": null,
         "index": "readiness",
         "sector": null,
-        "component": "governance",
-        "source1": null,
-        "source2": null,
-        "source3": null
+        "component": "governance"
     },
     "economic": {
         "id": "economic",
@@ -698,10 +626,7 @@ model.meta = {
         "unit": null,
         "index": "readiness",
         "sector": null,
-        "component": "economic",
-        "source1": null,
-        "source2": null,
-        "source3": null
+        "component": "economic"
     },
     "social": {
         "id": "social",
@@ -713,10 +638,7 @@ model.meta = {
         "unit": null,
         "index": "readiness",
         "sector": null,
-        "component": "social",
-        "source1": null,
-        "source2": null,
-        "source3": null
+        "component": "social"
     },
     "exposure": {
         "id": "exposure",
@@ -728,10 +650,7 @@ model.meta = {
         "unit": null,
         "index": "vulnerability",
         "sector": null,
-        "component": "exposure",
-        "source1": null,
-        "source2": null,
-        "source3": null
+        "component": "exposure"
     },
     "sensitivity": {
         "id": "sensitivity",
@@ -743,10 +662,7 @@ model.meta = {
         "unit": null,
         "index": "vulnerability",
         "sector": null,
-        "component": "sensitivity",
-        "source1": null,
-        "source2": null,
-        "source3": null
+        "component": "sensitivity"
     },
     "capacity": {
         "id": "capacity",
@@ -758,10 +674,7 @@ model.meta = {
         "unit": null,
         "index": "vulnerability",
         "sector": null,
-        "component": "capacity",
-        "source1": null,
-        "source2": null,
-        "source3": null
+        "component": "capacity"
     },
     "water": {
         "id": "water",
@@ -773,10 +686,7 @@ model.meta = {
         "unit": null,
         "index": "vulnerability",
         "sector": "water",
-        "component": null,
-        "source1": null,
-        "source2": null,
-        "source3": null
+        "component": null
     },
     "food": {
         "id": "food",
@@ -788,10 +698,7 @@ model.meta = {
         "unit": null,
         "index": "vulnerability",
         "sector": "food",
-        "component": null,
-        "source1": null,
-        "source2": null,
-        "source3": null
+        "component": null
     },
     "health": {
         "id": "health",
@@ -803,10 +710,7 @@ model.meta = {
         "unit": null,
         "index": "vulnerability",
         "sector": "health",
-        "component": null,
-        "source1": null,
-        "source2": null,
-        "source3": null
+        "component": null
     },
     "infrastructure": {
         "id": "infrastructure",
@@ -818,10 +722,7 @@ model.meta = {
         "unit": null,
         "index": "vulnerability",
         "sector": "infrastructure",
-        "component": null,
-        "source1": null,
-        "source2": null,
-        "source3": null
+        "component": null
     },
     "vulnerability": {
         "id": "vulnerability",
@@ -833,10 +734,7 @@ model.meta = {
         "unit": null,
         "index": "vulnerability",
         "sector": null,
-        "component": null,
-        "source1": null,
-        "source2": null,
-        "source3": null
+        "component": null
     },
     "readiness": {
         "id": "readiness",
@@ -848,10 +746,7 @@ model.meta = {
         "unit": null,
         "index": "readiness",
         "sector": null,
-        "component": null,
-        "source1": null,
-        "source2": null,
-        "source3": null
+        "component": null
     },
     "gain": {
         "id": "gain",
@@ -863,10 +758,7 @@ model.meta = {
         "unit": null,
         "index": "gain",
         "sector": null,
-        "component": null,
-        "source1": null,
-        "source2": null,
-        "source3": null
+        "component": null
     }
 };
 
