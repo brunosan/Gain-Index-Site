@@ -25,7 +25,10 @@ models.Tileset.prototype.sync = function(method, model, options) {
         // First, load and parse the mml.
         actions.push(function(next) {
             fs.readFile(path.join(base, filename), 'utf8', function(err, data) {
-                if (err) return options.error(err);
+                if (err) {
+                  mapCache = false;
+                  return options.error(err);
+                }
 
                 mapCache.mml = JSON.parse(data);
                 next();
@@ -39,7 +42,10 @@ models.Tileset.prototype.sync = function(method, model, options) {
                 base: base,
                 cache: path.normalize(__dirname + '/../files/cache')
             }, function(err, resolved) {
-                if (err) return options.error(err);
+                if (err) {
+                  mapCache = false;
+                  return options.error(err);
+                }
 
                 mapCache.mml = resolved;
                 next();
@@ -51,7 +57,10 @@ models.Tileset.prototype.sync = function(method, model, options) {
             new carto.Renderer({
                 filename: filename,
             }).render(mapCache.mml, function(err, output) {
-                if (err) return options.error(err);
+                if (err)  {
+                  mapCache = false;
+                  return options.error(err);
+                }
 
                 mapCache.xml = output;
                 next();
