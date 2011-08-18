@@ -14,9 +14,6 @@ view = views.Main.extend({
         $('.featured.countries', this.el).empty();
         var that = this;
         _.each([this.model.featuredFirst, this.model.featuredSecond], function(model) {
-            var summary = {},
-                pin = {},
-                indicators = model.get('indicators');
             $('.featured .countries', that.el).append(
                 templates.FeaturedFront({name: model.meta('name')})
             );
@@ -24,28 +21,8 @@ view = views.Main.extend({
                 el: $('.featured .prose', that.el).last(),
                 model: model
             }).render();
-            _.each(['gain', 'readiness', 'vulnerability'], function(k) {
-                var indicator = indicators.byName(k);
-                if (indicator) {
-                    summary[k] = {
-                        name: indicator.meta('name'),
-                        value: indicator.score(),
-                        raw: indicator.score({format: false})
-                    };
-                }
-            });
-            if (summary.readiness && summary.vulnerability) {
-                pin.x = Math.round((summary.readiness.raw * 80) + 15);
-                pin.y = 80 - Math.round(summary.vulnerability.raw * 80);
-            }
-            $('.featured .country-summary', that.el).last().append(templates.CountrySummary({
-                summary: summary,
-                pin: pin
-            }));
-        });
-        _.each([this.model.featuredFirst, this.model.featuredSecond], function(model) {
-            new views.AboutQuadrant({
-                el: $('.featured' + models.Country.meta[model.get('id')].name.toLowerCase(), that.el),
+            new views.CountrySummary({
+                el: $('.featured .country-summary', that.el).last(),
                 model: model
             }).render();
         });

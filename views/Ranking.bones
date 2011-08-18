@@ -93,6 +93,15 @@ view = views.Main.extend({
             countryId: id
         }));
 
+        (new models.Country({id: id})).fetch({
+            success: function(model) {
+                new views.CountrySummary({
+                    el: $('.drawer .content .country-summary', this.el),
+                    model: model
+                }).render();
+            }
+        });
+
         if (data.length > 1) {
             new views.Bigline({
                 el:$('.drawer .content .graph', this.el),
