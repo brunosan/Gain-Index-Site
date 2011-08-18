@@ -19,7 +19,7 @@ view = views.Document.extend({
         $(this.el).empty().append(templates.Cabinet());
 
         if (options && options.editable) {
-            $('.top', this.el).empty().append(templates.AdminPage(
+            $(this.el).empty().append(templates.AdminPage(
                 this.model.renderer()
             ));
         } else {
