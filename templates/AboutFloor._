@@ -2,7 +2,7 @@
   <h3>About</h3>
   <div id='about-nav-container'>
     <ul id='about-nav'>
-      <li><a class='overview' href='/about/overview'> Overview </a></li>
+      <li><a class='overview' href='/about'> Overview </a></li>
       <li><a class='methodology' href='/about/methodology'> Methodology </a></li>
       <li><a class='matrix' href='/about/matrix'> Matrix </a></li>
       <li><a class='consultation' href='/about/consultation'> Consultation </a></li>

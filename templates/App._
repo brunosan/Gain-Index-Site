@@ -27,7 +27,7 @@
       <li><a  class='map exact' href='/'>Map</a></li>
       <li><a  class='rank' href='/ranking'>Rankings</a></li>
       <li><a  class='matrix' href='/matrix'>Matrix</a></li>
-      <li><a  class='about' href='/about/overview'>About</a></li>
+      <li><a  class='about' href='/about'>About</a></li>
     </ul>
     <div class='org'><a href='http://globalai.org'>Global Adaptaion Institute</a></div>
   </div></div>
