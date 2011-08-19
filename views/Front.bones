@@ -19,7 +19,6 @@ view = views.Main.extend({
         $('.top', this.el).empty().append(templates.Front());
 
         // Featured countries
-        $('.featured.countries', this.el).empty();
         var that = this;
         this.model.each(function(model) {
             $('.featured .countries', that.el).append(
