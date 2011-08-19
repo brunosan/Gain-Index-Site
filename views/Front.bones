@@ -31,7 +31,11 @@ view = views.Main.extend({
         });
  
         // Some things fall on the floor.
-        $('.floor', this.el).empty().append(templates.DefaultFloor());
+        var gain = new models.Indicator({id: 'gain'});
+        $('.floor', this.el).empty().append(templates.RankingFloor({
+            title: gain.meta('name'),
+            content: gain.meta('description')
+        }));
 
         return this;
     },
@@ -128,13 +132,16 @@ view = views.Main.extend({
         // Tear indicator id out of class...
         _.each(e.attr('class').split(' '), function(v) {
             if (v.slice(0, 10) === 'indicator-') {
-                indicator = v.slice(10);
+                indicator = new models.Indicator({id:  v.slice(10)});;
             }
         });
-        this.swapMap({indicator: indicator});
+        this.swapMap({indicator: indicator.id});
 
-        // todo swap out 'floor' contents as well....
-        $('.floor', this.el).empty().append(templates.DefaultFloor());
+        // Rebuild the floor with the new indicator's info.
+        $('.floor', this.el).empty().append(templates.RankingFloor({
+            title: indicator.meta('name'),
+            content: indicator.meta('description')
+        }));
 
         return false;
     },
