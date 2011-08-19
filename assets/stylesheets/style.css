@@ -473,6 +473,7 @@ table.data tbody tr {
 /**
  * Front page
  */
+ 
 .front #map {
   height: 490px;
   width: 640px;
@@ -483,30 +484,16 @@ table.data tbody tr {
     position: absolute;
     float: left;
     padding: 0px 5px;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    border-radius: 5px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
     background-color: rgba(100, 100, 100, 0.7);
     }
   .front #map-indicators {
     top: 10px;
     }
-  .front #map #play { 
-  position: absolute;
-    bottom: 10px;
-    left: 10px;
-    display: block;
-    width: 30px;
-    height: 30px;
-    text-indent: -9999px;
-    -webkit-border-radius: 4px;
-    -moz-border-radius: 4px;
-    border-radius: 4px;
-    background-color: rgba(100, 100, 100, 0.7);
-  }
   
   .front #map-years {
-    left: 50px;
     bottom: 10px;
     }
   .front .map-selector li {
@@ -517,6 +504,14 @@ table.data tbody tr {
       padding: 5px;
       display: block;
       }
+      .front .map-selector li a:hover {
+      background-color: rgba(70, 70, 70, 0.7);
+      }
+       .front .map-selector li:first-child {
+       -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+       }
     .front .map-selector li a.selected {
       background-color: rgba(0, 0, 0, 0.7);
       }
@@ -554,9 +549,13 @@ table.data tbody tr {
     }
 
 .front #carousel {
+  -moz-box-shadow:5px 0px -20px #000;
+  -webkit-box-shadow:0px 0px 20px #000;
+  box-shadow:0px -20px 5px #000;
   height: 155px;
   background-color: #ebebeb;
-  border-top: 2px solid #ccc
+  position: relative;
+  z-index: 2;
   }
 
   .front #carousel .content li {
