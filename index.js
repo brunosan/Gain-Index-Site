@@ -10,7 +10,6 @@ var bones = require('bones');
 require('./commands/import');
 require('./views/App');
 require('./views/Main');
-require('./views/Main.server');
 
 bones.load(__dirname);
 

@@ -45,7 +45,11 @@ view = views.Main.extend({
         }).render();
 
         // Some things fall on the floor.
-        $('.floor', this.el).empty().append(templates.DefaultFloor());
+        var gain = new models.Indicator({id: 'gain'});
+        $('.floor', this.el).empty().append(templates.DefaultFloor({
+            title: gain.meta('name'),
+            content: gain.meta('description')
+        }));
 
         if (this.tableView == undefined) {
             this.tableView = new views.CountryTable({
@@ -88,17 +92,33 @@ view = views.Main.extend({
     openDrawer: function(ev) {
         $('table.data tr').removeClass('active');
         var ind = $(ev.currentTarget).attr('id').substr(10),
-            model = this.model.get('indicators').byName(ind);
-        if (!model) return;
+            indicator = this.model.get('indicators').byName(ind),
+            country = this.model;
+        if (!indicator) return;
         $(ev.currentTarget).addClass('active');
 
         var data = this.model.get('indicators').getGraphData('name', ind);
         $('.drawer .content', this.el).empty().append(templates.CountryDrawer({
-            title: model.meta('name'),
-            description: model.meta('description'),
-            indicator: model.get('name'),
-            source: model.meta('source') || []
+            title: indicator.meta('name'),
+            description: indicator.meta('description'),
+            indicator: indicator.get('name'),
+            source: indicator.meta('source') || []
         }));
+
+        // Lazy load 5 similar countries.
+        var el = this.el;
+        (new models.IndicatorSummary(
+            {id: indicator.get('name')}, {years: [indicator.get('currentYear')]}
+        )).fetch({
+            success: function(summary) {
+                $('.drawer .similar-countries', el).empty().append(
+                    templates.SimilarCountries({
+                        title: indicator.meta('name'),
+                        similar: summary.similar(country.get('id'), 5)
+                    })
+                );
+            }
+        });
 
         if (data && data.length > 1) {
             new views.Bigline({

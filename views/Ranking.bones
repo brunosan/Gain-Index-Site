@@ -60,9 +60,10 @@ view = views.Main.extend({
         }).render();
 
         // Some things fall on the floor.
-        $('.floor', this.el).empty().append(templates.RankingFloor({
+        $('.floor', this.el).empty().append(templates.CorrectionFloor({
             title: this.model.get('subject').meta('name'),
-            content: '<p>' + this.model.get('subject').meta('description') + '</p>'
+            content: this.model.get('subject').meta('description'),
+            isCorrected: false
         }));
         return this;
     },
@@ -80,36 +81,19 @@ view = views.Main.extend({
     },
     openDrawer: function(ev) {
         $('table.data tr').removeClass('active');
-        var meta = models.Country.meta;
-        var id = $(ev.currentTarget).attr('id').substr(8);
-        if (!id || !meta[id]) return;
         $(ev.currentTarget).addClass('active');
 
-        var data = this.model.get('indicators').getGraphData('ISO3', id);
+        var meta = models.Country.meta;
+        var id = $(ev.currentTarget).attr('id').substr(8);
 
-        $('.drawer .content', this.el).empty().append(templates.RankingDrawer({
-            countryName: meta[id].name,
-            indicatorName: this.model.get('subject').meta('name'),
-            countryId: id
-        }));
+        if (!id || !meta[id]) return;
 
-        (new models.Country({id: id})).fetch({
-            success: function(model) {
-                new views.CountrySummary({
-                    el: $('.drawer .content .country-summary', this.el),
-                    model: model
-                }).render();
-            }
+        new views.CountryDetailDrawer({
+            el: $('.drawer', this.el),
+            model:new models.Country({id: id}),
+            indicator: this.model.get('subject')
         });
 
-        if (data.length > 1) {
-            new views.Bigline({
-                el:$('.drawer .content .graph', this.el),
-                data:data
-            });
-        } else {
-            $('.drawer .content .graph', this.el).hide();
-        }
         $('.drawer', this.el).addClass('open');
         return false;
     },
