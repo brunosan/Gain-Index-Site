@@ -75,6 +75,74 @@ a:hover {
 }
 
 /**
+ * Tabs
+ */
+ul.tabs.level-1 li a {
+  text-align: center;
+  font-family: 'AlternateGothicLTNo3Regular',"HelveticaNeueBoldCondensed", "HelveticaNeue-Bold-Condensed", "Arial Narrow", "Arial", sans-serif;
+  color: #434343;
+  font-size: 18px;
+  text-transform: uppercase;
+  text-shadow: 0 1px rgba(255,255,255,.5);
+  float: left;
+  width: auto;
+  padding: 0px 20px;
+  margin-left: 10px;
+  line-height: 30px;
+  background-color: #c6c6c6;
+  -moz-border-radius: 3px 3px 0px 0px;
+  -webkit-border-radius: 3px 3px 0px 0px;
+  border-radius: 3px 3px 0px 0px;
+  }
+ul.tabs li a.active {
+  background-color: #fff;
+  }
+.tab-wrapper .tab-wrapper {
+  background-color: #fff;
+  padding: 10px 10px;
+  clear: left;
+  }
+  ul.tabs.level-2 {
+    float: left;
+    padding: 0px 0px;
+    margin-right: 10px;
+    }
+    ul.tabs.level-2 li {
+      float: left;
+      margin-right: 1px;
+      }
+    ul.tabs.level-2 li a {
+      color: #fff;
+      text-transform: uppercase;
+      font-size: 10px;
+      font-weight: bold;
+      padding: 0 5px;
+      display: block;
+      line-height: 20px;
+      background-color: #c6c6c6;
+      border-bottom: 1px solid #a8a8a8;
+      }
+    ul.tabs.level-2 li:first-child a {
+      -moz-border-radius-topleft: 3px;
+      -moz-border-radius-bottomleft: 3px;
+      -webkit-border-top-left-radius: 3px;
+      -webkit-border-bottom-left-radius: 3px;
+      border-top-left-radius: 3px;
+      border-bottom-left-radius: 3px;
+      }
+    ul.tabs.level-2 li:last-child a {
+      -moz-border-radius-topright: 3px;
+      -moz-border-radius-bottomright: 3px;
+      -webkit-border-top-right-radius: 3px;
+      -webkit-border-bottom-right-radius: 3px;
+      border-top-right-radius: 3px;
+      border-bottom-right-radius: 3px;
+      }
+    ul.tabs.level-2 li a.active {
+      background-color: #a8a8a8;
+      }
+
+/**
  * Header styles
  */
 #header {
@@ -411,7 +479,6 @@ table.data tbody tr {
 /**
  * Front page
  */
- 
 .front #map {
   height: 490px;
   width: 640px;
@@ -775,10 +842,6 @@ table.data tr.active {
   padding-left: 10px;
 }
 
-.country-profile .rankings tr.years th {
-}
-
-
 .drawer .content .graph {
   height: 256px;
   width: 256px;
@@ -805,85 +868,16 @@ table.data tr.active {
 /** 
  * Rankings page
  */
- 
 a.sort {
  font-family: 'HelveticaNeue', Helvetica, Arial, sans-serif;
  font-weight: normal;
   font-style: italic;
   font-size: 12px;
   color: #434343;
-}
-
+  }
 .ranking {
   background-color: #ebebeb;
   }
-ul.tabs.level-1 li a {
-  text-align: center;
-  font-family: 'AlternateGothicLTNo3Regular',"HelveticaNeueBoldCondensed", "HelveticaNeue-Bold-Condensed", "Arial Narrow", "Arial", sans-serif;
-  color: #434343;
-  font-size: 18px;
-  text-transform: uppercase;
-  text-shadow: 0 1px rgba(255,255,255,.5);
-  float: left;
-  width: auto;
-  padding: 0px 20px;
-  margin-left: 10px;
-  line-height: 30px;
-  background-color: #c6c6c6;
-  -moz-border-radius: 3px 3px 0px 0px;
-  -webkit-border-radius: 3px 3px 0px 0px;
-  border-radius: 3px 3px 0px 0px;
-  }
-  
-ul.tabs li a.active {
-  background-color: #fff;
-  }
-
-.tab-wrapper .tab-wrapper {
-  background-color: #fff;
-  padding: 10px 10px;
-  clear: left;
-  }
-
-  ul.tabs.level-2 {
-    float: left;
-    padding: 0px 0px;
-    margin-right: 10px;
-    }
-    ul.tabs.level-2 li {
-      float: left;
-      margin-right: 1px;
-      }
-    ul.tabs.level-2 li a {
-      color: #fff;
-      text-transform: uppercase;
-      font-size: 10px;
-      font-weight: bold;
-      padding: 0 5px;
-      display: block;
-      line-height: 20px;
-      background-color: #c6c6c6;
-      border-bottom: 1px solid #a8a8a8;
-      }
-    ul.tabs.level-2 li:first-child a {
-      -moz-border-radius-topleft: 3px;
-      -moz-border-radius-bottomleft: 3px;
-      -webkit-border-top-left-radius: 3px;
-      -webkit-border-bottom-left-radius: 3px;
-      border-top-left-radius: 3px;
-      border-bottom-left-radius: 3px;
-      }
-    ul.tabs.level-2 li:last-child a {
-      -moz-border-radius-topright: 3px;
-      -moz-border-radius-bottomright: 3px;
-      -webkit-border-top-right-radius: 3px;
-      -webkit-border-bottom-right-radius: 3px;
-      border-top-right-radius: 3px;
-      border-bottom-right-radius: 3px;
-      }
-    ul.tabs.level-2 li a.active {
-      background-color: #a8a8a8;
-      }
 .ranking table.data th,
 .ranking table.data td {
   padding: 0px 10px;
