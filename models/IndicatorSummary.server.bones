@@ -27,7 +27,7 @@ models.IndicatorSummary.prototype.sync = function(method, model, options) {
         _.each(Object.keys(data), function(k) {
             _.each(res.rows, function(row) {
                 var doc = row.doc;
-                if (!doc[k]) return;
+                if (!doc[k] || !doc['ISO3']) return;
                 data[k][doc['ISO3']] = data[k][doc['ISO3']] || {};
                 _.each(model.options.years, function(year) {
                     data[k][doc['ISO3']][year] = doc[k][year];
