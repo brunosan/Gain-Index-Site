@@ -19,15 +19,18 @@ models.IndicatorSummary.prototype.sync = function(method, model, options) {
             include_docs: true
         }, function(err, res) {
         if (err) return options.error(err);
-        var data = {};
-        _.each(res.rows, function(row) {
-            var doc = row.doc,
-                country = data[doc['ISO3']] = {};
-            _.each(['values', 'input', 'rank'], function(k) {
+        var data = {
+            'values': {},
+            'input': {},
+            'rank': {}
+        };
+        _.each(Object.keys(data), function(k) {
+            _.each(res.rows, function(row) {
+                var doc = row.doc;
                 if (!doc[k]) return;
-                country[k] = {};
+                data[k][doc['ISO3']] = data[k][doc['ISO3']] || {};
                 _.each(model.options.years, function(year) {
-                    country[k][year] = doc[k][year];
+                    data[k][doc['ISO3']][year] = doc[k][year];
                 });
             });
         });
