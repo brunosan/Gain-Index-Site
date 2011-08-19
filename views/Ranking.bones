@@ -60,11 +60,24 @@ view = views.Main.extend({
         }).render();
 
         // Some things fall on the floor.
-        $('.floor', this.el).empty().append(templates.CorrectionFloor({
-            title: this.model.get('subject').meta('name'),
-            content: this.model.get('subject').meta('description'),
-            isCorrected: false
-        }));
+        //
+        // TODO not happy at all with how complex this is, nor with the fact
+        // fact that I've got a hardcoded list of indicators here and totally
+        // rely on the assumption that corrected indicators are afixed with a
+        // `_delta`.
+        var template = templates.DefaultFloor;
+        var corrections = ['gain', 'gain_delta', 'readiness', 'readiness_delta', 'vulnerability', 'vulnerability_delta']
+        var subject = this.model.get('subject');
+        var locals = {
+            title: subject.meta('name'),
+            content: subject.meta('description'),
+        };
+
+        if (_.indexOf(corrections, subject.id) != -1) {
+            template = templates.CorrectionFloor;
+            locals.isCorrected = subject.id.slice(-6) == '_delta';
+        }
+        $('.floor', this.el).empty().append(template(locals));
         return this;
     },
     attach: function() {

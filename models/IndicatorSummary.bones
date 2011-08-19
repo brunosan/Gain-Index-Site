@@ -25,9 +25,15 @@ model = Backbone.Model.extend({
     // -------------------------------------------
     list: function(aspect, year) {
         if (!this.get(aspect)) return [];
+        // TODO figure out a way to push this formatting logic into Indicator.bones.
+        var id = aspect == 'values' ? {format: 'number', decimals: 3} : this.get('id');
         return _.map(this.get(aspect), function(v, k) {
             if (models.Country.meta[k] && models.Country.meta[k]['name'])
-                return {'ISO3': k, 'name': models.Country.meta[k]['name'], 'value': v[year]};
+                return {
+                    'ISO3': k,
+                    'name': models.Country.meta[k]['name'],
+                    'value': models.Indicator.format(v[year], id)
+                };
         }).sort(function(a, b) {
             return b.value - a.value;
         });
