@@ -10,5 +10,6 @@ model = Backbone.Model.extend({
         _.each(this.options.years, function(year) {
             url += '&years[]=' + encodeURIComponent(year);
         });
+        return url;
     }
 });
