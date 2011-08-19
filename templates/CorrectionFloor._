@@ -1,0 +1,12 @@
+<div class='content'>
+  <h3><%= title %></h3>
+  <p><%= content %></p>
+  <div class='correction-control'>
+  <% if (isCorrected) { %>
+    <p><%= title %>, corrected for GDP.</p>
+    <input type='button' value='Remove GDP correction' />
+  <% } else { %>
+    <input type='button' value='Correct for GDP' />
+  <% } %>
+  </div>
+</div>
