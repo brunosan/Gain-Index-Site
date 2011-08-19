@@ -8,6 +8,7 @@ router = Backbone.Router.extend({
         '/ranking/readiness/:id': 'ranking',
         '/ranking/vulnerability/:id': 'ranking',
         '/download': 'download',
+        '/matrix': 'matrix',
         '/about/:id': 'page',
         '/about/:id/edit': 'pageEditor'
     },
@@ -81,6 +82,9 @@ router = Backbone.Router.extend({
             edit && view.edit();
         });
         
+    },
+    matrix: function() {
+        this.send(views.Matrix);
     },
     send: function(view) {
         var options = arguments.length > 1 ? arguments[1] : {};
