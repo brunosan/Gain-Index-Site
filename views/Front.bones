@@ -4,6 +4,11 @@ view = views.Main.extend({
         'click #map-indicators li a': 'indicatorClick',
         'click .featured': 'featureClick'
     },
+    initialize: function(options) {
+        _.bindAll(this, 'render'); 
+        this.model.bind('add', this.render, this);
+        views.Main.prototype.initialize.call(this, options);
+    },
     render: function() {
         // Approach the cabinet.
         $(this.el).empty().append(templates.Cabinet());
@@ -14,8 +19,7 @@ view = views.Main.extend({
         // Featured countries
         $('.featured.countries', this.el).empty();
         var that = this;
-        this.collection = this.model;
-        this.collection.each(function(model) {
+        this.model.each(function(model) {
             $('.featured .countries', that.el).append(
                 templates.FeaturedFront({name: model.meta('name')})
             );
