@@ -23,15 +23,18 @@ view = views.Main.extend({
         var that = this;
         this.model.each(function(model) {
             $('.featured .countries', that.el).append(
-                templates.FeaturedFront({name: model.meta('name')})
+                templates.FeaturedFront({
+                    name: model.meta('name'),
+                    iso: model.meta('id')
+                })
             );
             new views.AboutQuadrant({
                 el: $('.featured .prose', that.el).last(),
-                model: model
+                model: model,
             }).render();
             new views.CountrySummary({
                 el: $('.featured .country-summary', that.el).last(),
-                model: model
+                model: model,
             }).render();
         });
  
@@ -98,6 +101,7 @@ view = views.Main.extend({
         });
 
         $('#map', this.el).append(templates.MapInterface(locals));
+
         return this;
     },
     initMap: function(options) {
