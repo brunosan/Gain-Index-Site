@@ -220,7 +220,7 @@ a:hover {
   }
 #cabinet .top {
   float: left;
-  width: 635px;
+  width: 640px;
   background-color: #fff;
   -moz-box-shadow: 0px -20px 20px #000;
   -webkit-box-shadow: 0px -20px 20px #000;
@@ -655,10 +655,11 @@ table.data tr.active {
   margin-top: 5px;
   }
 .country-profile div.background-info {
-  width: 50%;
+  width: 290px;
   float: left;
+  margin-left: 20px;
   }
-
+  
 .country-summary {
   float: left;
   width: 625px;
