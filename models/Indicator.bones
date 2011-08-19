@@ -137,8 +137,8 @@ model.meta = {
             "link": "http://info.worldbank.org/governance/wgi/sc_country.asp"
         }]
     },
-    "D-Ppt": {
-        "id": "D-Ppt",
+    "d-Ppt": {
+        "id": "d-Ppt",
         "name": "Precipitation change",
         "description": "Projected change in precipitation by the end of the 21st century",
         "format": "number",
@@ -153,8 +153,8 @@ model.meta = {
             "link": "http://www.cru.uea.ac.uk/cru/data/precip/"
         }]
     },
-    "D-Temp": {
-        "id": "D-Temp",
+    "d-Temp": {
+        "id": "d-Temp",
         "name": "Temperature change",
         "description": "Projected change in temperature by the end of the 21st century",
         "format": "number",
