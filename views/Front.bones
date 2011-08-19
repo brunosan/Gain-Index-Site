@@ -25,7 +25,7 @@ view = views.Main.extend({
             $('.featured .countries', that.el).append(
                 templates.FeaturedFront({
                     name: model.meta('name'),
-                    iso: model.meta('id')
+                    iso: model.meta('ISO3')
                 })
             );
             new views.AboutQuadrant({
