@@ -1,7 +1,7 @@
 // Document view
 // -------------
 // Base class, not meant for direct use.
-view = Backbone.View.extend({
+view = views.Main.extend({
     className: 'inner',
     events: _.extend({
         'click a.save': 'save',
@@ -28,10 +28,6 @@ view = Backbone.View.extend({
     },
     render: function() {
         return this.renderEditControl();
-    },
-    attach: function() {
-        // no-op.
-        return;
     },
     save: function(e) {
         e.preventDefault();
