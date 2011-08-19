@@ -31,7 +31,6 @@ models.IndicatorSummary.prototype.sync = function(method, model, options) {
                 });
             });
         });
-        console.log(JSON.stringify(data, null, 4));
         options.success(data);
     });
 };
