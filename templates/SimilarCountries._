@@ -2,7 +2,7 @@
 <table class='similar'>
   <tr>
     <th>Country</th>
-    <th><%= title %></th>
+    <th>Score</th>
   </tr>
 <% _.each(similar, function(country) { %>
   <tr id="country.id">

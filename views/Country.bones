@@ -63,7 +63,7 @@ view = views.Main.extend({
     attach: function() {
         if (this.tableView == undefined) {
             this.tableView = new views.CountryTable({
-                el: $('table.data', this.el),
+                el: $('table#country-data', this.el),
                 collection: this.model.get('indicators')
             });
         }
@@ -113,7 +113,6 @@ view = views.Main.extend({
             success: function(summary) {
                 $('.drawer .similar-countries', el).empty().append(
                     templates.SimilarCountries({
-                        title: indicator.meta('name'),
                         similar: summary.similar(country.get('id'), 5)
                     })
                 );
