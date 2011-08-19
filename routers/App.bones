@@ -60,12 +60,10 @@ router = Backbone.Router.extend({
         fetcher.fetch(function() {
             router.send(views.Download, {model: model});
         });
-
     },
     page: function(id, edit) {
         var router = this;
         var fetcher = this.fetcher();
-
         var model = new models.Page({id: id}, {
             route: '/about/' + id,
             editRoute: '/about/' + id + '/edit'
@@ -75,7 +73,6 @@ router = Backbone.Router.extend({
         fetcher.fetch(function() {
             router.send(views.Page, {model: model});
         });
-
     },
     matrix: function() {
         this.send(views.Matrix);
