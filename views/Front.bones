@@ -27,7 +27,7 @@ view = views.Main.extend({
                     iso: model.meta('ISO3')
                 })
             );
-            new views.AboutQuadrant({
+            new views.AboutQuadrantShort({
                 el: $('.featured .prose', that.el).last(),
                 model: model,
             }).render();
