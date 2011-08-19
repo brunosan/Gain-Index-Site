@@ -10,7 +10,7 @@
       <td><%= v.rank %></td>
       <td><%= v.name %></td>
       <td><div class='income-group <%= v.incomeClass%>'><%= v.income%></div></td>
-      <td><div class='graph'></div><%= v.score%></td>
+      <td><div class='graph-wrapper'><div class='graph'></div></div><%= v.score%></td>
     </tr>
   <% }); %>
 </tbody>

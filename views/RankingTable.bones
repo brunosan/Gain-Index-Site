@@ -40,20 +40,25 @@ view = Backbone.View.extend({
         return this;
     },
     attach: function() {
-        var collection = this.collection;
+        var collection = this.collection, el = this.el;
 
-        // iterate over all rows, if they have a div.graph setup the chart
-        $('tr', this.el).each(function() {
-            var graph = $('.graph', this);
-            if (graph.length == 0) return;
+        // Iterate over all rows, if they have a div.graph setup the chart.
+        // This is delayed to make the page appear faster.
+        $('tr .graph', this.el).hide();
+        setTimeout(function() {
+            $('tr', el).each(function() {
+                var graph = $('.graph', this);
+                if (graph.length == 0) return;
 
-            var id = $(this).attr('id').substr(8);
-            if (!id) return;
+                var id = $(this).attr('id').substr(8);
+                if (!id) return;
 
-            var data = collection.getGraphData('ISO3', id);
+                var data = collection.getGraphData('ISO3', id);
 
-            new views.Sparkline({el: graph, data: data});
-        });
+                new views.Sparkline({el: graph, data: data});
+            });
+            $('.graph', el).fadeIn(1000);
+        }, 100);
     },
     sortAlpha: function() {
         this.collection.comparator = function(model) {

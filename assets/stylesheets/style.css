@@ -919,10 +919,13 @@ text-align: center;
 .ranking table.data td {
   padding: 0px 10px;
   }
-.ranking table.data div.graph {
-  float: left;
+.ranking table.data .graph-wrapper,
+.ranking table.data .graph {
   height: 20px;
   width: 80px;
+  }
+.ranking table.data .graph-wrapper {
+  float: left;
   margin-top: 5px;
   }
 
