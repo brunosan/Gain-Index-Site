@@ -1,9 +1,5 @@
 view = views.Document.extend({
     className: 'document page page-inner clearfix',
-    initialize: function(options) {
-        _.bindAll(this, 'render', 'attach');
-        this.render().trigger('attach');
-    },
     attach: function() {
         if (!Bones.user || !Bones.user.authenticated) {
             return this;
@@ -15,7 +11,6 @@ view = views.Document.extend({
         return this;
     },
     render: function(options) {
-
         // Approach the cabinet.
         $(this.el).empty().append(templates.Cabinet());
 
@@ -28,10 +23,8 @@ view = views.Document.extend({
                 this.model.renderer()
             ));
         }
-
         // Some things fall on the floor.
         $('.floor', this.el).empty().append(templates.AboutFloor());
-        
         return this;
     }
 });
