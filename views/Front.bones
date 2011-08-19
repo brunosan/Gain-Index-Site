@@ -1,7 +1,9 @@
 view = views.Main.extend({
     events: {
+        'click .drawer .handle a.handle': 'closeDrawer',
         'click #map-years li a': 'yearClick',
-        'click #map-indicators li a': 'indicatorClick'
+        'click #map-indicators li a': 'indicatorClick',
+        'click .featured': 'featureClick'
     },
     render: function() {
         // Approach the cabinet.
@@ -13,7 +15,8 @@ view = views.Main.extend({
         // Featured countries
         $('.featured.countries', this.el).empty();
         var that = this;
-        _.each([this.model.featuredFirst, this.model.featuredSecond], function(model) {
+        this.collection = this.model;
+        this.collection.each(function(model) {
             $('.featured .countries', that.el).append(
                 templates.FeaturedFront({name: model.meta('name')})
             );
@@ -31,6 +34,17 @@ view = views.Main.extend({
         $('.floor', this.el).empty().append(templates.DefaultFloor());
 
         return this;
+    },
+    featureClick: function() {
+        if (Bones.user.authenticated) {
+            new views.AdminPopupFrontFeature({
+                title: 'Change featured countries on front page',
+                documentType: 'front',
+                pathPrefix: '/front/',
+                model: new models.Front({id: 'front'}),
+                collection: this.model
+            });
+        }
     },
     attach: function() {
         var indicator = 'gain',
@@ -79,10 +93,10 @@ view = views.Main.extend({
 
         wax.mm.fullscreen(m, this.tilejson).appendTo(m.parent);
 
-        var tooltip = wax.tooltip;
+        var tooltip = wax.tooltip,
+            view = this;
         tooltip.prototype.click = function(feature, context, index) {
-            // TODO open drawer.
-            window.location = '/country/' + $(feature).data('iso');
+            return view.openDrawer($(feature).data('iso'));
         }
         wax.mm.interaction(m, this.tilejson, {callbacks: new tooltip });
 
@@ -118,6 +132,22 @@ view = views.Main.extend({
             }
         });
         this.swapMap({indicator: indicator});
+
+        // todo swap out 'floor' contents as well....
+        $('.floor', this.el).empty().append(templates.DefaultFloor());
+
+        return false;
+    },
+    openDrawer: function(iso3) {
+        new views.CountryDetailDrawer({
+            el: $('.drawer', this.el),
+            model:new models.Country({id: iso3}),
+            indicator: new models.Indicator({id: this.currentIndicator})
+        });
+        $('.drawer', this.el).addClass('open');
+    },
+    closeDrawer: function() {
+        $('.drawer', this.el).removeClass('open');
         return false;
     }
 });
