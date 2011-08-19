@@ -10,7 +10,6 @@ view = views.Main.extend({
     initialize: function(options) {
         views.Main.prototype.initialize.apply(this, arguments);
         _.bindAll(this, 'render', 'attach', 'save', 'cancel');
-        this.render().trigger('attach');
     },
     panel: null,
     edit: function() {
