@@ -6,7 +6,7 @@
   <div class='country-summary'>
   </div>
 
-  <div class='prose'><p>Ei dicam partem accusamus vel, tale laoreet duo ei. Noster labitur mei ei. Cum iuvaret abhorreant ei. Cibo dolorum cum cu, nec in habemus torquatos, ad pro paulo commodo probatus.</p></div>
+  <p class='prose'>Ei dicam partem accusamus vel, tale laoreet duo ei. Noster labitur mei ei. Cum iuvaret abhorreant ei. Cibo dolorum cum cu, nec in habemus torquatos, ad pro paulo commodo probatus.</p>
 
   <% if (_(rank).size()) { %>
   <div class='rankings'>

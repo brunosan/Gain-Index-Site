@@ -1,7 +1,7 @@
 view = views.Main.extend({
     events: {
         'click #map-years li a': 'yearClick',
-        'click #map-indicator li a': 'indicatorClick'
+        'click #map-indicators li a': 'indicatorClick'
     },
     render: function() {
         // Approach the cabinet.
@@ -44,17 +44,15 @@ view = views.Main.extend({
             if (i == year) {
                 item.klass += ' selected';
             }
-            // todo 'first', 'last' classes
             locals.years.push(item);
         }
 
         _.each(['gain', 'readiness', 'vulnerability'], function(id) {
             // TODO grab info from the schema.
-            var item = {name: id, id: id};
+            var item = {name: id, id: id, klass: 'indicator-'+id};
             if (indicator == id) {
                 item.klass += ' selected';
             }
-            // todo 'first', 'last' classes
             locals.indicators.push(item);
         });
 
@@ -69,8 +67,8 @@ view = views.Main.extend({
         this.tilejson = {
             tilejson: '1.0.0',
             scheme: 'tms',
-            tiles: ['http://localhost:3001/1.0.0/'+ options.indicator+'-'+options.year+'/{z}/{x}/{y}.png'],
-            grids: ['http://localhost:3001/1.0.0/'+ options.indicator+'-'+options.year+'/{z}/{x}/{y}.grid.json'],
+            tiles: ['http://'+ location.hostname +':3001/1.0.0/'+ options.indicator+'-'+options.year+'/{z}/{x}/{y}.png'],
+            grids: ['http://'+ location.hostname +':3001/1.0.0/'+ options.indicator+'-'+options.year+'/{z}/{x}/{y}.grid.json'],
             formatter: function(options, data) {
                 return '<span data-iso="' + data.iso_a3 + '">' + data.admin + '</span>';
             }
@@ -95,9 +93,8 @@ view = views.Main.extend({
         var year = options.year || this.currentYear,
             indicator = options.indicator || this.currentIndicator;
 
-        // TODO localhost won't do here...
-        this.tilejson.tiles[0] = 'http://localhost:3001/1.0.0/' + indicator + '-' + year + '/{z}/{x}/{y}.png';
-        this.tilejson.grids[0] = 'http://localhost:3001/1.0.0/' + indicator + '-' + year + '/{z}/{x}/{y}.grid.json';
+        this.tilejson.tiles[0] = 'http://'+ location.hostname +':3001/1.0.0/' + indicator + '-' + year + '/{z}/{x}/{y}.png';
+        this.tilejson.grids[0] = 'http://'+ location.hostname +':3001/1.0.0/' + indicator + '-' + year + '/{z}/{x}/{y}.grid.json';
         this.map.setProvider(new wax.mm.connector(this.tilejson));
     },
     yearClick: function(ev) {
@@ -108,12 +105,18 @@ view = views.Main.extend({
         return false;
     },
     indicatorClick: function(ev) {
-        var e = $(ev.currentTarget);
+        var e = $(ev.currentTarget),
+            indicator = '';
+
         e.parents('ul').find('a').removeClass('selected')
         e.addClass('selected');
-        // TODO tear indicator id out of class...
-        console.log(e.attr('class'));
-        var indicator = 'foo';
+
+        // Tear indicator id out of class...
+        _.each(e.attr('class').split(' '), function(v) {
+            if (v.slice(0, 10) === 'indicator-') {
+                indicator = v.slice(10);
+            }
+        });
         this.swapMap({indicator: indicator});
         return false;
     }
