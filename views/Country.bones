@@ -45,7 +45,11 @@ view = views.Main.extend({
         }).render();
 
         // Some things fall on the floor.
-        $('.floor', this.el).empty().append(templates.DefaultFloor());
+        var gain = new models.Indicator({id: 'gain'});
+        $('.floor', this.el).empty().append(templates.DefaultFloor({
+            title: gain.meta('name'),
+            content: gain.meta('description')
+        }));
 
         if (this.tableView == undefined) {
             this.tableView = new views.CountryTable({

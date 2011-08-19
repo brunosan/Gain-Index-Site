@@ -60,9 +60,10 @@ view = views.Main.extend({
         }).render();
 
         // Some things fall on the floor.
-        $('.floor', this.el).empty().append(templates.RankingFloor({
+        $('.floor', this.el).empty().append(templates.CorrectionFloor({
             title: this.model.get('subject').meta('name'),
-            content: '<p>' + this.model.get('subject').meta('description') + '</p>'
+            content: this.model.get('subject').meta('description'),
+            isCorrected: false
         }));
         return this;
     },
