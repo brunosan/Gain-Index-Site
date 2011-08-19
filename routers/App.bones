@@ -9,8 +9,7 @@ router = Backbone.Router.extend({
         '/ranking/vulnerability/:id': 'ranking',
         '/download': 'download',
         '/matrix': 'matrix',
-        '/about/:id': 'page',
-        '/about/:id/edit': 'pageEditor'
+        '/about/:id': 'page'
     },
     front: function() {
         var router = this;
@@ -52,9 +51,6 @@ router = Backbone.Router.extend({
             router.send(views.Ranking, {model: ranking});
         });
     },
-    pageEditor: function(id) {
-        this.page(id, true);
-    },
     download: function() {
         var router = this;
         var fetcher = this.fetcher();
@@ -77,11 +73,9 @@ router = Backbone.Router.extend({
 
         fetcher.push(model);
         fetcher.fetch(function() {
-            var view = new views.Page({model: model});
             router.send(views.Page, {model: model});
-            edit && view.edit();
         });
-        
+
     },
     matrix: function() {
         this.send(views.Matrix);
