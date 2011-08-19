@@ -1,7 +1,7 @@
 var request = require('request');
 
 models.Ranking.prototype.sync = function(method, model, options) {
-    if (method != 'read') error('Unsupported method');
+    if (method != 'read') options.error('Unsupported method');
 
     var config = Bones.plugin.config;
 
