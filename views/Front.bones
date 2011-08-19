@@ -89,7 +89,7 @@ view = views.Main.extend({
         };
 
         var mm = com.modestmaps,
-            m = new mm.Map('map', new wax.mm.connector(this.tilejson), new mm.Point(635,490));
+            m = new mm.Map('map', new wax.mm.connector(this.tilejson), new mm.Point(640,490));
 
         wax.mm.fullscreen(m, this.tilejson).appendTo(m.parent);
 
