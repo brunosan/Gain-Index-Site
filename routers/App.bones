@@ -64,10 +64,7 @@ router = Backbone.Router.extend({
     page: function(id, edit) {
         var router = this;
         var fetcher = this.fetcher();
-        var model = new models.Page({id: id}, {
-            route: '/about/' + id,
-            editRoute: '/about/' + id + '/edit'
-        });
+        var model = new models.Page({id: id});
 
         fetcher.push(model);
         fetcher.fetch(function() {
