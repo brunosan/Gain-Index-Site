@@ -44,7 +44,6 @@ view = views.Main.extend({
             if (i == year) {
                 item.klass += ' selected';
             }
-            // todo 'first', 'last' classes
             locals.years.push(item);
         }
 
@@ -54,7 +53,6 @@ view = views.Main.extend({
             if (indicator == id) {
                 item.klass += ' selected';
             }
-            // todo 'first', 'last' classes
             locals.indicators.push(item);
         });
 
