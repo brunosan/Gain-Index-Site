@@ -25,7 +25,7 @@ view = views.Main.extend({
             $('.featured .countries', that.el).append(
                 templates.FeaturedFront({name: model.meta('name')})
             );
-            new views.AboutQuadrant({
+            new views.AboutQuadrantShort({
                 el: $('.featured .prose', that.el).last(),
                 model: model
             }).render();
