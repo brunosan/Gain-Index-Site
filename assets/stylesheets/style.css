@@ -930,6 +930,13 @@ text-align: center;
   }
 
 /**
+ * Matrix section
+ */
+.top .matrix {
+  height: 400px;
+  }
+
+/**
  * Bones-admin : popups.
  */
 
