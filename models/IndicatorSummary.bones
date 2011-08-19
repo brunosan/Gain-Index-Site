@@ -5,6 +5,8 @@ model = Backbone.Model.extend({
         this.options = options;
         if (!this.options.years) throw new Error('Year parameter is required');
     },
+    // Finds similar countries
+    // -----------------------
     similar: function(iso3, count, aspect, year) {
         aspect = aspect || 'values';
         year = year || _.last(this.options.years);
@@ -19,7 +21,8 @@ model = Backbone.Model.extend({
         }
         return result;
     },
-    // List a specific aspect in descending order.
+    // Lists a specific aspect in descending order
+    // -------------------------------------------
     list: function(aspect, year) {
         if (!this.get(aspect)) return [];
         return _.map(this.get(aspect), function(v, k) {

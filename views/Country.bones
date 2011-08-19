@@ -101,6 +101,7 @@ view = views.Main.extend({
             source: indicator.meta('source') || []
         }));
 
+        // Lazy load 5 similar countries.
         var el = this.el;
         (new models.IndicatorSummary(
             {id: indicator.get('name')}, {years: [indicator.get('currentYear')]}
