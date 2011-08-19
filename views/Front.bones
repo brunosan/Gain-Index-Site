@@ -184,7 +184,7 @@ view = views.Main.extend({
         new views.CountryDetailDrawer({
             el: $('.drawer', this.el),
             model:new models.Country({id: iso3}),
-            indicator: new models.Indicator({id: this.currentIndicator})
+            indicator: new models.Indicator({id: this.map.get('indicator')})
         });
         $('.drawer', this.el).addClass('open');
     },
