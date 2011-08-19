@@ -2,4 +2,5 @@
   <h3><%= name %></h3>
   <div class='prose'></div>
   <div class='country-summary'></div>
+  <a href='/country/<%= iso %>' class='more'>Read more </a>
 </div>

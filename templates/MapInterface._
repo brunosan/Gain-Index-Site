@@ -3,7 +3,6 @@
       <li><a href='#<%= v.year %>' class='button <%= v.klass %>'><%= v.year %></a></li>
   <% }); %>
 </ul>
-<div id='play'></div>
 <ul id='map-indicators' class='map-selector button'>
   <% _.each(indicators, function(v) { %>
       <li><a href='#<%= v.id %>' class='<%= v.klass %>'><%= v.name %></a></li>
