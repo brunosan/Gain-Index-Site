@@ -132,11 +132,18 @@ view = views.Main.extend({
             }
         });
         this.swapMap({indicator: indicator});
+
+        // todo swap out 'floor' contents as well....
+        $('.floor', this.el).empty().append(templates.DefaultFloor());
+
         return false;
     },
     openDrawer: function(iso3) {
-        // TODO load model, run view...
-        console.log(iso3);
+        new views.CountryDetailDrawer({
+            el: $('.drawer', this.el),
+            model:new models.Country({id: iso3}),
+            indicator: new models.Indicator({id: this.currentIndicator})
+        });
         $('.drawer', this.el).addClass('open');
     },
     closeDrawer: function() {
