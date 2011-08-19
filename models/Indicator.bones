@@ -44,33 +44,42 @@ model = Backbone.Model.extend({
         // TODO: Why do some indicators not have an id? Should we always use 'name'?
         return model.meta[this.id || this.get('name')][key] || '';
     },
-    format: function(value, meta) {
-        if (_.isUndefined(value)) {
-            return '-';
-        }
+    format: function(value, format) {
         // TODO: Why do some indicators not have an id? Should we always use 'name'?
-        meta = meta || model.meta[this.id || this.get('name')];
-        if (this.formats[meta.format]) {
-            value = this.formats[meta.format](value, meta);
-        }
-        if (meta.unit) {
-            return meta.unit.replace('%s', value);
-        }
-        return value;
-    },
-    formats: {
-        // From StackOverflow http://is.gd/sR4ygY
-        number: function(n, meta) {
-            var c = isNaN(meta.decimals) ? 0 : Math.abs(meta.decimals),
-                d = '.',
-                t = ',',
-                sign = (n < 0) ? '-' : '',
-                i = parseInt(n = Math.abs(n).toFixed(c)) + '',
-                j = ((j = i.length) > 3) ? j % 3 : 0;
-                return sign + (j ? i.substr(0, j) + t : '') + i.substr(j).replace(/(\d{3})(?=\d)/g, "$1" + t) + (c ? d + Math.abs(n - i).toFixed(c).slice(2) : ''); 
-        }
+        format = format || (this.id || this.get('name'));
+        return model.format(value, format);
     }
 });
+
+// Formats a value
+// ---------------
+// value - value to format
+// format - a format object describing the format or an id identifying an indicator.
+model.format = function(value, format) {
+    var meta = _.isObject(format) ? format : model.meta[format];
+    if (_.isUndefined(meta)) return value;
+    if (_.isUndefined(value)) return '-';
+    if (model.formats[meta.format]) {
+        value = model.formats[meta.format](value, meta);
+    }
+    if (meta.unit) {
+        return meta.unit.replace('%s', value);
+    }
+    return value;
+};
+
+model.formats = {
+    // From StackOverflow http://is.gd/sR4ygY
+    number: function(n, meta) {
+        var c = isNaN(meta.decimals) ? 0 : Math.abs(meta.decimals),
+            d = '.',
+            t = ',',
+            sign = (n < 0) ? '-' : '',
+            i = parseInt(n = Math.abs(n).toFixed(c)) + '',
+            j = ((j = i.length) > 3) ? j % 3 : 0;
+            return sign + (j ? i.substr(0, j) + t : '') + i.substr(j).replace(/(\d{3})(?=\d)/g, "$1" + t) + (c ? d + Math.abs(n - i).toFixed(c).slice(2) : ''); 
+    }
+};
 
 model.meta = {
     "business": {

@@ -113,7 +113,6 @@ view = views.Main.extend({
             success: function(summary) {
                 $('.drawer .similar-countries', el).empty().append(
                     templates.SimilarCountries({
-                        title: indicator.meta('name'),
                         similar: summary.similar(country.get('id'), 5)
                     })
                 );
