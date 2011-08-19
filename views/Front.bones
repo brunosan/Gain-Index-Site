@@ -67,8 +67,8 @@ view = views.Main.extend({
         this.tilejson = {
             tilejson: '1.0.0',
             scheme: 'tms',
-            tiles: ['http://localhost:3001/1.0.0/'+ options.indicator+'-'+options.year+'/{z}/{x}/{y}.png'],
-            grids: ['http://localhost:3001/1.0.0/'+ options.indicator+'-'+options.year+'/{z}/{x}/{y}.grid.json'],
+            tiles: ['http://'+ location.hostname +':3001/1.0.0/'+ options.indicator+'-'+options.year+'/{z}/{x}/{y}.png'],
+            grids: ['http://'+ location.hostname +':3001/1.0.0/'+ options.indicator+'-'+options.year+'/{z}/{x}/{y}.grid.json'],
             formatter: function(options, data) {
                 return '<span data-iso="' + data.iso_a3 + '">' + data.admin + '</span>';
             }
@@ -93,9 +93,8 @@ view = views.Main.extend({
         var year = options.year || this.currentYear,
             indicator = options.indicator || this.currentIndicator;
 
-        // TODO localhost won't do here...
-        this.tilejson.tiles[0] = 'http://localhost:3001/1.0.0/' + indicator + '-' + year + '/{z}/{x}/{y}.png';
-        this.tilejson.grids[0] = 'http://localhost:3001/1.0.0/' + indicator + '-' + year + '/{z}/{x}/{y}.grid.json';
+        this.tilejson.tiles[0] = 'http://'+ location.hostname +':3001/1.0.0/' + indicator + '-' + year + '/{z}/{x}/{y}.png';
+        this.tilejson.grids[0] = 'http://'+ location.hostname +':3001/1.0.0/' + indicator + '-' + year + '/{z}/{x}/{y}.grid.json';
         this.map.setProvider(new wax.mm.connector(this.tilejson));
     },
     yearClick: function(ev) {
@@ -118,7 +117,6 @@ view = views.Main.extend({
                 indicator = v.slice(10);
             }
         });
-        console.log(indicator);
         this.swapMap({indicator: indicator});
         return false;
     }
