@@ -3,7 +3,7 @@ view = views.Main.extend({
         _.bindAll(this, 'render', 'attach');
         this.options = this.options || {};
         this.options.tab = options.index || 'vulnerability';
-        this.options.structure = options.structure || 'components';
+        this.options.structure = options.structure || 'sectors';
 
         var tree = {};
         _.each(this.collection.model.meta, function(field) {

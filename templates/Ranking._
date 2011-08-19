@@ -1,26 +1,28 @@
 <div class='ranking'>
   <h2>Country Rankings</h2>
-  <ul class='indices'>
-    <li><a href='/ranking' class='exact'>GaIn™</a></li>
-    <li><a href='/ranking/vulnerability'>Vulnerability</a></li>
-    <li><a href='/ranking/readiness'>Readiness</a></li>
-  </ul>
-  <div class='categories'>
+  <div class='tab-wrapper clearfix'>
+    <ul class='tabs level-1'>
+      <li><a href='/ranking' class='exact'>GaIn™</a></li>
+      <li><a href='/ranking/vulnerability'>Vulnerability</a></li>
+      <li><a href='/ranking/readiness'>Readiness</a></li>
+    </ul>
     <% if (active.path) { %>
-    <ul>
-      <li><a href='<%= active.path %>' class='exact'><%= active.name %></a></li>
-    </ul>
-    <% } %>
-	 	<ul>
-      <% _.each(sectors, function(sector) { %>
-        <li><a href='<%= sector.path %>'><%= sector.name %></a></li>
-      <% }); %>
-    </ul>
-    <ul>
-      <% _.each(components, function(component) { %>
-        <li><a href='<%= component.path %>'><%= component.name %></a></li>
-      <% }); %>
-    </ul>
+    <div class='tab-wrapper clearfix'>
+      <ul class='tabs level-2'>
+        <li><a href='<%= active.path %>' class='exact'><%= active.name %></a></li>
+      </ul>
+      <% } %>
+      <ul class='tabs level-2'>
+        <% _.each(sectors, function(sector) { %>
+          <li><a href='<%= sector.path %>'><%= sector.name %></a></li>
+        <% }); %>
+      </ul>
+      <ul class='tabs level-2'>
+        <% _.each(components, function(component) { %>
+          <li><a href='<%= component.path %>'><%= component.name %></a></li>
+        <% }); %>
+      </ul>
+    </div>
   </div>
   <table class='data'></table>
 </div>

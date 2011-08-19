@@ -74,16 +74,6 @@ a:hover {
  text-decoration: none;
 }
 
-.tabs li a {
-  font-family: 'AlternateGothicLTNo3Regular',"HelveticaNeueBoldCondensed", "HelveticaNeue-Bold-Condensed", "Arial Narrow", "Arial", sans-serif;
-  font-weight: 100;
-  font-size: 18px; 
-  color: #434343;
-  text-decoration: none;
-  text-transform: uppercase;
-  text-shadow: 0 1px rgba(255, 255, 255, 0.5);
-}
-
 /**
  * Header styles
  */
@@ -343,58 +333,6 @@ a:hover {
     }
   #footer .search input.button {
     background-color: #fff;
-    }
-
-/**
- * tabs
- */
-.tab-wrapper ul.tabs {
-  background-color: #ebebeb;
-  width: 625px;
-  float: left;
-  height: 30px;
-  padding: 0px 0px 0px 10px;
-  }
-  .tab-wrapper ul.tabs li {
-    float: left;
-    padding: 0px 5px;
-    margin-right: 5px;
-    line-height: 30px;
-    -moz-border-radius: 3px 3px 0px 0px;
-    -webkit-border-radius: 0px 3px 0px 0px;
-    border-radius: 3px 3px 0px 0px;
-    background-color: #c6c6c6;
-    }
-    .tab-wrapper ul.tabs li > div {
-      float: left;
-      }
-    .tab-wrapper ul.tabs li.active {
-      background-color: #fff;
-      }
-
-.tab-wrapper ul.tabs ul.options {
-  display: none;
-  }
-.tab-wrapper ul.tabs li.active ul.options {
-  margin: 5px 0px 0px 10px;
-  display: block;
-  float: right;
-  line-height: 30px;
-  -moz-border-radius: 3px;
-  -webkit-border-radius: 3px;
-  border-radius: 3px;
-  }
-  .tab-wrapper ul.tabs li ul.options li {
-    margin-right: 1px;
-    line-height: 20px;
-    -moz-border-radius: 0px;
-    -webkit-border-radius: 0px;
-    border-radius: 0px;
-    background-color: #c6c6c6;
-    }
-
-  .tab-wrapper ul.tabs li ul.options li.active {
-    background-color: #ebebeb;
     }
 
 /**
@@ -787,7 +725,7 @@ table.data tr.active {
     text-align: center;
   }
 
-.country-profile .tab-wrapper,
+.country-profile .details,
 .country-profile .rankings {
   background-color: #ebebeb;
 }
@@ -879,11 +817,7 @@ a.sort {
 .ranking {
   background-color: #ebebeb;
   }
-.ranking ul.indices {
-  width: 100%;
-  float: left;
-  }
-.ranking ul.indices li a {
+ul.tabs.level-1 li a {
   text-align: center;
   font-family: 'AlternateGothicLTNo3Regular',"HelveticaNeueBoldCondensed", "HelveticaNeue-Bold-Condensed", "Arial Narrow", "Arial", sans-serif;
   color: #434343;
@@ -901,26 +835,26 @@ a.sort {
   border-radius: 3px 3px 0px 0px;
   }
   
-.ranking ul.indices li a.active {
+ul.tabs li a.active {
   background-color: #fff;
   }
 
-.ranking .categories {
+.tab-wrapper .tab-wrapper {
   background-color: #fff;
-  float: left;
-  width: 615px;
   padding: 10px 10px;
+  clear: left;
   }
-  .ranking .categories ul {
+
+  ul.tabs.level-2 {
     float: left;
     padding: 0px 0px;
     margin-right: 10px;
     }
-    .ranking .categories ul li {
+    ul.tabs.level-2 li {
       float: left;
       margin-right: 1px;
       }
-    .ranking .categories ul li a {
+    ul.tabs.level-2 li a {
       color: #fff;
       text-transform: uppercase;
       font-size: 10px;
@@ -931,7 +865,7 @@ a.sort {
       background-color: #c6c6c6;
       border-bottom: 1px solid #a8a8a8;
       }
-    .ranking .categories ul li:first-child a {
+    ul.tabs.level-2 li:first-child a {
       -moz-border-radius-topleft: 3px;
       -moz-border-radius-bottomleft: 3px;
       -webkit-border-top-left-radius: 3px;
@@ -939,7 +873,7 @@ a.sort {
       border-top-left-radius: 3px;
       border-bottom-left-radius: 3px;
       }
-    .ranking .categories ul li:last-child a {
+    ul.tabs.level-2 li:last-child a {
       -moz-border-radius-topright: 3px;
       -moz-border-radius-bottomright: 3px;
       -webkit-border-top-right-radius: 3px;
@@ -947,7 +881,7 @@ a.sort {
       border-top-right-radius: 3px;
       border-bottom-right-radius: 3px;
       }
-    .ranking .categories ul li a.active {
+    ul.tabs.level-2 li a.active {
       background-color: #a8a8a8;
       }
 .ranking table.data th,
