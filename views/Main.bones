@@ -14,7 +14,7 @@ view = Backbone.View.extend({
             activePath == $(a).attr('href') && $(a).addClass('active');
         });
         $('a:not(.exact)').each(function(i, a) {
-            (activePath.indexOf($(a).attr('href')) != -1) && $(a).addClass('active');
+            (activePath.indexOf($(a).attr('href')) == 0) && $(a).addClass('active');
         });
     },
     // Initializes global drawer events
