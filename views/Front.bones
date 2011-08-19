@@ -1,5 +1,6 @@
 view = views.Main.extend({
     events: {
+        'click .drawer .handle a.handle': 'closeDrawer',
         'click #map-years li a': 'yearClick',
         'click #map-indicators li a': 'indicatorClick'
     },
@@ -79,10 +80,10 @@ view = views.Main.extend({
 
         wax.mm.fullscreen(m, this.tilejson).appendTo(m.parent);
 
-        var tooltip = wax.tooltip;
+        var tooltip = wax.tooltip,
+            view = this;
         tooltip.prototype.click = function(feature, context, index) {
-            // TODO open drawer.
-            window.location = '/country/' + $(feature).data('iso');
+            return view.openDrawer($(feature).data('iso'));
         }
         wax.mm.interaction(m, this.tilejson, {callbacks: new tooltip });
 
@@ -118,6 +119,15 @@ view = views.Main.extend({
             }
         });
         this.swapMap({indicator: indicator});
+        return false;
+    },
+    openDrawer: function(iso3) {
+        // TODO load model, run view...
+        console.log(iso3);
+        $('.drawer', this.el).addClass('open');
+    },
+    closeDrawer: function() {
+        $('.drawer', this.el).removeClass('open');
         return false;
     }
 });
