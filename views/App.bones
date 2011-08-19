@@ -78,24 +78,23 @@ view.prototype.events = {
 // Routes a click event
 // --------------------
 view.prototype.routeClick = function(ev) {
-    start();
     if (_.size(window.currentKeys)) {
         return true;
     }
     var href = $(ev.currentTarget).get(0).getAttribute('href', 2);
-    if (href) return this.route($(ev.currentTarget).get(0).getAttribute('href', 2));
+    if (href) return view.route($(ev.currentTarget).get(0).getAttribute('href', 2));
     return true;
 };
 
 // Routes a path
 // -------------
-view.prototype.route = function(path) {
-    var view = this;
+view.route = function(path) {
+    start();
     if (path.charAt(0) === '/') {
         var matched = _.any(Backbone.history.handlers, function(handler) {
             if (handler.route.test(path)) {
                 Backbone.history.navigate(path, true);
-                view.scrollTop();
+                scrollTop();
                 return true;
             }
         });
@@ -106,7 +105,7 @@ view.prototype.route = function(path) {
 
 // Scroll top FF, IE, Chrome safe
 // ------------------------------
-view.prototype.scrollTop = function() {
+var scrollTop = function() {
     if ($('body').scrollTop()) {
         $('body').animate({scrollTop: 0});
         return;

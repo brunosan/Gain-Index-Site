@@ -8,7 +8,7 @@ view = views.AdminLogin.augment({
             if (authenticated != model.authenticated) {
                 authenticated = model.authenticated;
                 var path = location.pathname + location.search;
-                Backbone.history.navigate(path, true);
+                views.App.route(path);
             }
         });
         parent.call(this, options);
