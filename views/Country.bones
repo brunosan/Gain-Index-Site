@@ -63,7 +63,7 @@ view = views.Main.extend({
     attach: function() {
         if (this.tableView == undefined) {
             this.tableView = new views.CountryTable({
-                el: $('table.data', this.el),
+                el: $('table#country-data', this.el),
                 collection: this.model.get('indicators')
             });
         }
