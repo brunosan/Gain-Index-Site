@@ -2,7 +2,3 @@
   <h3>The Global Adaptation Index™</h3>
   <p>The Global Adaptation Index™ (GaIn™) exposes countries' vulnerabilities to climate change and opportunities to improve resilience. It aims to help businesses and the public sector to better prioritize investments for a more efficient response to the immediate global challenges ahead.</p>
 </div>
-<div class='search content'>
-  <input class='textfield' name='search' type='textfield' />
-  <input class='button' name='search-submit' type='submit' value='Go' />
-</div>
