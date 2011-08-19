@@ -847,6 +847,24 @@ table.data tr.active {
   width: 256px;
   }
 
+.floor .correction-control {
+  border-top: 1px solid #ccc;
+  padding-top: 20px;
+  margin-top: 20px;
+  }
+  .floor .correction-control p {
+    font-style: italic;
+    }
+  .floor .correction-control input {
+    padding: 0px 5px;
+    text-transform: uppercase;
+    color: #fff;
+    background: #000;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    }
+
 /** 
  * Rankings page
  */

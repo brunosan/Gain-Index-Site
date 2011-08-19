@@ -1,0 +1,13 @@
+<h4>Similar Countries</h4>
+<table class='similar'>
+  <tr>
+    <th>Country</th>
+    <th><%= title %></th>
+  </tr>
+<% _.each(similar, function(country) { %>
+  <tr id="country.id">
+    <td><a href='/country/<%= country['ISO3'] %>'><%= country.name %></a></td>
+    <td><%= country.value %></td>
+  </tr>
+<% }); %>
+</table>
