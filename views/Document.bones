@@ -9,24 +9,23 @@ view = views.Main.extend({
     }, Backbone.View.prototype.events),
     initialize: function(options) {
         views.Main.prototype.initialize.apply(this, arguments);
-        _.bindAll(this, 'render', 'attach', 'save', 'cancel');
+        _.bindAll(this, 'render', 'attach', 'save', 'cancel', 'edit');
+        Bones.user && Bones.user.bind('auth:status', this.edit);
     },
     panel: null,
-    edit: function() {
-        (this.panel && this.panel.edit());
-    },
-    // Run after document view has rendered.
-    renderEditControl: function() {
-        if (Bones.user.authenticated) {
-            this.panel = new views.AdminDocument({model: this.model, display: this});
-            $(this.el).addClass('show-status');
-            $(this.el).prepend(this.panel.el);
-            $('.main', this.el).append(templates.AdminActionsPanel());
-        }
-        return this;
-    },
     render: function() {
         return this.renderEditControl();
+    },
+    edit: function() {
+        if (Bones.user && Bones.user.authenticated) {
+            Bones.admin.setPanel(new views.AdminDocument({
+                model: this.model,
+                display: this
+            }));
+        }
+        else {
+            Bones.admin.setPanel();
+        }
     },
     save: function(e) {
         e.preventDefault();

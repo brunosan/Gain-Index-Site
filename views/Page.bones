@@ -16,15 +16,5 @@ view = views.Document.extend({
         // Some things fall on the floor.
         $('.floor', this.el).empty().append(templates.AboutFloor());
         return this;
-    },
-    attach: function() {
-        if (!Bones.user || !Bones.user.authenticated) {
-            return this;
-        }
-        Bones.admin.setPanel(new views.AdminDocument({
-            model: this.model,
-            display: this
-        }));
-        return this;
     }
 });
