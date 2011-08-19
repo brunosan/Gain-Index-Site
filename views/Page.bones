@@ -12,6 +12,7 @@ view = views.Document.extend({
             model: this.model,
             display: this
         }));
+        return this;
     },
     render: function(options) {
 
