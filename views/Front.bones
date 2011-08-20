@@ -18,6 +18,31 @@ view = views.Main.extend({
         // Empty pockets on top.
         $('.top', this.el).empty().append(templates.Front());
 
+        var topBottom = [];
+        // For best and worst indicators list. 
+        // @TODO move fetch to router?
+        // @TODO add to DOM.
+        (new models.IndicatorSummary(
+            {id: 'gain'}, {years: [2009]}
+        )).fetch({
+            success: function(summary) {
+                var list = summary.list('values', 2009);
+                // Hash-like access.
+                var i = 0; while (topBottom.length < 5) {
+                    // Make sure value is a number; '-' exists as some values.
+                    !isNaN(parseFloat(list[i].value)) 
+                      && topBottom.push(list[i]);
+                    i++;
+                }
+                var i = 1; while (topBottom.length < 10) {
+                    !isNaN(parseFloat(list[list.length - i].value)) 
+                      && topBottom.push(list[list.length - i]);
+                    i++;
+                }
+                topBottom.sort(function(a, b) { return b.value - a.value} );
+            }
+        });
+
         // Featured countries
         $('.featured.countries', this.el).empty();
         var that = this;
