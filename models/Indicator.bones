@@ -124,7 +124,7 @@ model.meta = {
         "sector": "infrastructure",
         "component": "exposure",
         "source": [{
-            "name": "cait.wri.org",
+            "name": "World Resources Institute",
             "link": "http://cait.wri.org/cait-va.php?page=valand5m&mode=view"
         }]
     },
@@ -139,7 +139,7 @@ model.meta = {
         "sector": "infrastructure",
         "component": "sensitivity",
         "source": [{
-            "name": "cait.wri.org",
+            "name": "World Resources Institute",
             "link": "http://cait.wri.org/cait-va.php?page=vapop5m&mode=view"
         }]
     },
@@ -169,7 +169,7 @@ model.meta = {
         "sector": "water",
         "component": "exposure",
         "source": [{
-            "name": "www.cru.uea.ac.uk",
+            "name": "Climate Reserach Unit",
             "link": "http://www.cru.uea.ac.uk/cru/data/precip/"
         }]
     },
@@ -184,7 +184,7 @@ model.meta = {
         "sector": "water",
         "component": "exposure",
         "source": [{
-            "name": "www.cru.uea.ac.uk",
+            "name": "Climate Research Unit",
             "link": "http://www.cru.uea.ac.uk/cru/data/temperature/"
         }]
     },
@@ -199,7 +199,7 @@ model.meta = {
         "sector": "health",
         "component": "exposure",
         "source": [{
-            "name": "www.globalizationandhealth.com",
+            "name": "Globalization and Health",
             "link": "http://www.globalizationandhealth.com/content/4/1/9"
         }]
     },
@@ -214,7 +214,7 @@ model.meta = {
         "sector": "infrastructure",
         "component": "exposure",
         "source": [{
-            "name": "cait.wri.org",
+            "name": "World Resources Institute",
             "link": "http://cait.wri.org/cait-va.php?page=vaelectricity&mode=view"
         }]
     },
@@ -361,7 +361,7 @@ model.meta = {
         "sector": "health",
         "component": "exposure",
         "source": [{
-            "name": "apps.who.int",
+            "name": "World Health Organization",
             "link": "http://apps.who.int/ghodata/?vid=99001#"
         }]
     },
@@ -531,12 +531,7 @@ model.meta = {
         {
             "name": "World Development Indicators",
             "link": "http://data.worldbank.org/indicator/IS.ROD.PAVE.ZS"
-        },
-        {
-            "name": "World Development Indicators",
-            "link": "http://data.worldbank.org/indicator/SP.RUR.TOTL"
-        }
-        ]
+        }]
     },
     "rural_popn": {
         "id": "rural_popn",
@@ -550,8 +545,13 @@ model.meta = {
         "component": "sensitivity",
         "source": [{
             "name": "World Development Indicators",
+            "link": "http://data.worldbank.org/indicator/SP.RUR.TOTL"
+        }, 
+        {
+            "name": "World Development Indicators",
             "link": "http://data.worldbank.org/indicator/SP.POP.TOTL"
-        }]
+        }
+        ]
     },
     "rule_of_law": {
         "id": "rule_of_law",
@@ -586,7 +586,7 @@ model.meta = {
     "staff": {
         "id": "staff",
         "name": "Health workers per capita",
-        "description": "Number of medical workers per 1000 people",
+        "description": "Number of medical workers per 1000 people (calculated as (2 x physicians) + nurses)",
         "format": "number",
         "decimals": "2",
         "unit": null,
@@ -640,7 +640,6 @@ model.meta = {
         "description": "Percent population with access to improved water supply",
         "format": "number",
         "decimals": "1",
-
         "unit": "%s %",
         "index": "vulnerability",
         "sector": "water",
@@ -673,7 +672,7 @@ model.meta = {
         "sector": "water",
         "component": "sensitivity",
         "source": [{
-            "name": "www.fao.org",
+            "name": "UN Food and Agriculture Organization",
             "link": "http://www.fao.org/nr/water/aquastat/data/query/index.html?lang=en"
         }]
     },
@@ -703,7 +702,7 @@ model.meta = {
         "sector": "food",
         "component": "exposure",
         "source": [{
-            "name": "www.cgdev.org",
+            "name": "Center for Global Development",
             "link": "http://www.cgdev.org/content/publications/detail/1424986"
         }]
     },

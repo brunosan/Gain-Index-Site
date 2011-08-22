@@ -85,9 +85,13 @@ view = views.Main.extend({
     },
     attach: function() {
         var indicator = 'gain',
-            year = 2010;
+            year = 2010,
+            view = this;
 
-        this.map = this.initMap({indicator: indicator, year: year}); 
+        this.map = new models.Map({year: year, indicator: indicator});
+        this.map.featureClick = function(feature, context, index) {
+            return view.openDrawer($(feature).data('iso'));
+        }
 
         // Any time the maps' indicator changes rebuild the floor with the new
         // indicator's info.
@@ -127,52 +131,6 @@ view = views.Main.extend({
         $('#map', this.el).append(templates.MapInterface(locals));
 
         return this;
-    },
-    initMap: function(options) {
-        var year = options.year,
-            indicator = options.indicator;
-
-        var tilejson = {
-            tilejson: '1.0.0',
-            scheme: 'tms',
-            tiles: ['http://'+ location.hostname +':3001/1.0.0/'+ indicator+'-'+year+'/{z}/{x}/{y}.png'],
-            grids: ['http://'+ location.hostname +':3001/1.0.0/'+ indicator+'-'+year+'/{z}/{x}/{y}.grid.json'],
-            formatter: function(options, data) {
-                return '<span data-iso="' + data.iso_a3 + '">' + data.admin + '</span>';
-            }
-        };
-
-        var mm = com.modestmaps,
-            m = new mm.Map('map', new wax.mm.connector(tilejson), new mm.Point(640,490));
-
-        // Add fullscreen laters...
-        //wax.mm.fullscreen(m, tilejson).appendTo(m.parent);
-
-        var tooltip = wax.tooltip,
-            view = this;
-        tooltip.prototype.click = function(feature, context, index) {
-            return view.openDrawer($(feature).data('iso'));
-        }
-        wax.mm.interaction(m, tilejson, {callbacks: new tooltip });
-
-        m.setCenterZoom(new mm.Location(39, -98), 2);
-
-        var map = new Backbone.Model({ 
-            year: year,
-            indicator: indicator
-        });
-
-        // Bind to the change event of the map model so that any time the year
-        // or indicator is changed we automatically update the map.
-        map.bind('change', function() {
-            var ind = map.get('indicator'),
-                y = map.get('year');
-
-            tilejson.tiles[0] = 'http://'+ location.hostname +':3001/1.0.0/' + ind + '-' + y + '/{z}/{x}/{y}.png';
-            tilejson.grids[0] = 'http://'+ location.hostname +':3001/1.0.0/' + ind + '-' + y + '/{z}/{x}/{y}.grid.json';
-            m.setProvider(new wax.mm.connector(tilejson));
-        })
-        return map
     },
     yearClick: function(ev) {
         var e = $(ev.currentTarget);
