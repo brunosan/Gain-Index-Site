@@ -21,6 +21,7 @@
         </li>
     </ul>
   </div>
+  <div class='button green clearfix'><a href='/ranking'> View Full Rankings </a></div>
   <h3> Global Adaptation Index™ Country Rankings</h3>
   <div class='ranking clearfix'>
   </div>
