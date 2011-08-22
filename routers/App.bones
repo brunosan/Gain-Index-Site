@@ -77,9 +77,11 @@ router = Backbone.Router.extend({
         return this.page('overview');
     },
     page: function(id) {
-        var router = this;
-        var fetcher = this.fetcher();
-        var model = new models.Page({id: id});
+        // TODO: we shouldn't need to clean out fragments from requests.
+        var id = id.split('#').shift(),
+            router = this,
+            fetcher = this.fetcher(),
+            model = new models.Page({id: id});
 
         fetcher.push(model);
         fetcher.fetch(function(err) {
