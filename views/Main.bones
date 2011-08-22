@@ -23,10 +23,12 @@ view = Backbone.View.extend({
         _.each(['floor', 'drawer'], function(sel) {
             $(window).scroll(function() {
                 window.drawerTop = window.drawerTop || $('#cabinet .floor').offset().top;
-                var top = window.drawerTop;
-                var el = $('#cabinet .' + sel);
+                var top = window.drawerTop,
+                    el = $('#cabinet .' + sel),
+                    offset = $('#cabinet .top').offset();
+                if (!offset) return;
                 var range = $('#cabinet .top').outerHeight()
-                            + $('#cabinet .top').offset().top
+                            + offset.top
                             - el.outerHeight();
                 var pos = $(this).scrollTop();
                 if (pos > top) {
