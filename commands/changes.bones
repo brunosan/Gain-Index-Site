@@ -8,13 +8,14 @@ command.prototype.initialize = function(options) {
         schema += ", '" + i + "' INTEGER";
     }
 
+    // [offset, multiplier]
     var sqliteIndicators = {
-        'gain': [100, 0],
-        'gain_delta': [1, -0.5],
-        'vulnerability': [1, 0],
-        'vulnerability_delta': [1, -0.5],
-        'readiness': [1, 0],
-        'readiness_delta': [1, -0.5]
+        'gain': [0, 1],
+        'gain_delta': [0.5, 100],
+        'vulnerability': [-1, -100],
+        'vulnerability_delta': [0.5, 100],
+        'readiness': [0, 100],
+        'readiness_delta': [0.5, 100]
     };
 
     couch_sqlite({
@@ -31,7 +32,7 @@ command.prototype.initialize = function(options) {
                     values[i] = 0;
                 }
                 else {
-                    values[i] = parseInt((doc.values[i] - sqliteIndicators[doc.name][1]) / sqliteIndicators[doc.name][0] * 100) || 0;
+                    values[i] = parseInt((doc.values[i] + sqliteIndicators[doc.name][0]) * sqliteIndicators[doc.name][1]) || 0;
                 }
             }
             values.name = doc.name;
