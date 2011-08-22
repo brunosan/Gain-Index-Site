@@ -73,6 +73,24 @@ a:hover {
  color: #81db4b; 	
  text-decoration: none;
 }
+/**
+ * Icons.
+ */
+.icon-outlook {
+  height: 15px;
+  width: 15px;
+  text-indent: -9999px;
+  background-image: url('../images/sprite.png');
+  background-repeat: no-repeat;
+  }
+
+  .icon-outlook-up { background-position: 0px -430px; }
+  .icon-outlook-down { background-position: 0px -410px; }
+  /**
+   * TODO: get a new icon for the '=' sign.
+   */
+  .icon-outlook-same { background-position: 0px -345px;  }
+
 
 /**
  * Tabs
@@ -882,15 +900,10 @@ a.sort {
 .ranking table.data td {
   padding: 0px 10px;
   }
-.ranking table.data .graph-wrapper,
-.ranking table.data .graph {
-  height: 20px;
-  width: 80px;
-  }
-.ranking table.data .graph-wrapper {
+.ranking table.data .icon-outlook {
   float: left;
   margin-top: 5px;
-  }
+}
 
 /**
  * Matrix section

@@ -7,22 +7,21 @@
       <li><a href='/ranking/readiness'>Readiness</a></li>
     </ul>
     <% if (active.path) { %>
-    <div class='tab-wrapper clearfix'>
-      <ul class='tabs level-2'>
-        <li><a href='<%= active.path %>' class='exact'><%= active.name %></a></li>
-      </ul>
-      <% } %>
-      <ul class='tabs level-2'>
-        <% _.each(sectors, function(sector) { %>
-          <li><a href='<%= sector.path %>'><%= sector.name %></a></li>
-        <% }); %>
-      </ul>
-      <ul class='tabs level-2'>
-        <% _.each(components, function(component) { %>
-          <li><a href='<%= component.path %>'><%= component.name %></a></li>
-        <% }); %>
-      </ul>
-    </div>
+      <div class='tab-wrapper clearfix'>
+        <ul class='tabs level-2'>
+          <li><a href='<%= active.path %>' class='exact'><%= active.name %></a></li>
+        </ul>
+    <% } %>
+    <ul class='tabs level-2'>
+      <% _.each(sectors, function(sector) { %>
+        <li><a href='<%= sector.path %>'><%= sector.name %></a></li>
+      <% }); %>
+    </ul>
+    <ul class='tabs level-2'>
+      <% _.each(components, function(component) { %>
+        <li><a href='<%= component.path %>'><%= component.name %></a></li>
+      <% }); %>
+    </ul>
   </div>
   <table class='data'></table>
 </div>
