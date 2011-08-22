@@ -7,7 +7,7 @@ view = views.Main.extend({
         'click .featured': 'featureClick'
     },
     initialize: function(options) {
-        _.bindAll(this, 'render'); 
+        _.bindAll(this, 'render', 'renderFloor'); 
         this.collection.bind('add', this.render);
         views.Main.prototype.initialize.call(this, options);
     },
@@ -52,16 +52,7 @@ view = views.Main.extend({
                 model: model
             });
         });
- 
-        // Some things fall on the floor.
-        var gain = new models.Indicator({id: 'gain'});
-        $('.floor', this.el).empty().append(templates.CorrectionFloor({
-            title: gain.meta('name'),
-            content: gain.meta('description'),
-            isCorrected: false,
-            href: {apply: '#', remove: '#'}
-        }));
-
+        this.renderFloor('gain');
         return this;
     },
     featureClick: function() {
@@ -87,21 +78,7 @@ view = views.Main.extend({
 
         // Any time the maps' indicator changes rebuild the floor with the new
         // indicator's info.
-        this.map.bind('change:indicator', function(model) {
-            var id = model.get('indicator'),
-                corrected = id.slice(-6) == '_delta';
-
-            // Don't show the definition for delta...
-            id = (corrected ? id.slice(0, -6) : id);
-
-            var indicator = new models.Indicator({id: id});
-            $('.floor', this.el).empty().append(templates.CorrectionFloor({
-                title: indicator.meta('name'),
-                content: indicator.meta('description'),
-                isCorrected: corrected,
-                href: {apply: '#', remove: '#'}
-            }));
-        });
+        this.map.bind('change:indicator', this.renderFloor);
 
         var locals = {indicators: [], years: []};
         for (var i = 1995; i <= 2010; i++) {
@@ -124,6 +101,22 @@ view = views.Main.extend({
         $('#map', this.el).append(templates.MapInterface(locals));
 
         return this;
+    },
+    renderFloor: function(id) {
+        id = _.isObject(id) ? id.get('indicator') : id;
+        var indicator = new models.Indicator({id: id});
+        var locals = {
+            title: indicator.meta('name'),
+            content: indicator.meta('description'),
+            correction: {
+                caption: 'Countries of the world by ' + indicator.meta('name'),
+                href: '#',
+                title: indicator.isCorrection() ?
+                    'Remove GDP correction' :
+                    'Correct for GDP'
+            }
+        };
+        $('.floor', this.el).empty().append(templates.CorrectionFloor(locals));
     },
     yearClick: function(ev) {
         var e = $(ev.currentTarget);
