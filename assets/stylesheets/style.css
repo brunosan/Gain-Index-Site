@@ -440,6 +440,71 @@ table.data tbody tr {
   }
 
 /**
+ * Country summary generic styles
+ * PLEASE put page specific styles in the respective pages. 
+ */
+.country-summary {
+  float: left;
+  }
+  .country-summary h3{
+    margin-left: 10px;
+    float: left;
+    }
+  .country-summary div.gain{
+    float:left;
+    text-align: center;
+    width: 115px;
+    border-style: solid;
+    border-color: #c6c6c6;
+    border-width: 0px 1px 0px 1px;
+    }
+    .country-summary div.gain .name {
+      font-weight: bold;
+      }
+    .country-summary div.gain .value {
+      display: block;
+      font-weight: bold;
+      font-size: 30px;
+      line-height: 40px;
+      }
+    .country-summary div.gain .outlook {
+      color: #666;
+      }
+    .country-summary div.gain .icon-outlook {
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      }
+  .country-summary div.chart {
+    float: right;
+    height: 110px;
+    width: 125px;
+    }
+    .country-summary div.chart .mini-matrix {
+      margin: 10px 0px 0px 10px;
+      }
+  .country-summary div.vulnerability {
+    float: right;
+    text-align: center;
+    line-height: 30px;
+    width: 125px;
+    border-color: #c6c6c6;
+    border-style: solid;
+    border-width: 1px 0px 1px 0px;
+    }
+  .country-summary div.readiness {
+    float: right;
+    text-align: center;
+    line-height: 30px;
+    height: 20px;
+    width: 125px;
+    }
+  .country-summary .map {
+    border-width: 1px 0px 1px 1px;
+    height: 135px;
+    width: 320px;
+    }
+/**
  * Small Matrix
  */
 .mini-matrix {
@@ -608,14 +673,16 @@ table.data tbody tr {
   webkit-border-radius: 5px 0px 0px 5px;
   }
   .front .featured .country .info {
-    width: 298px;
+    width: 380px;
     float: left;
     }
   .front .featured .country-summary {
+    width: 242px;
     float: right;
     }
-  .front .featured .country-summary .stats {
-    height: 175px;
+  .front .featured .country-summary .gain {
+    height: 125px;
+    padding-top: 50px;
     }
 
 /**
@@ -734,99 +801,6 @@ table.data tr.active {
   width: 625px;
   }
 
-.country-summary {
-  float: left;
-  }
-  .country-summary h3{
-  margin-left: 10px;
-  float: left;
-  }
-  .country-summary > div {
-    float: left;
-    }
-  .country-summary div.stats {
-    width: 175px;
-    border-style: solid;
-    border-color: #c6c6c6;
-    border-width: 0px 1px 0px 1px;
-    }
-    .country-summary div.stats > div {
-      text-align: center;
-      }
-    .country-summary div.gain {
-      float:left;
-      text-align: center;
-      height: 95px;
-      width: 174px;
-      }
-    .country-summary div.gain .name {
-      font-weight: bold;
-    }
-    .country-summary div.gain .outlook {
-      color: gray;
-      text-align: right;
-      padding-right: 30px;
-    }
-    .country-summary div.gain .icon-outlook {
-      float: right;
-      margin-left: 5px;
-    }
-    .country-summary div.gain .value {
-      display: block;
-      font-weight: bold;
-      font-size: 50px;
-      margin: 10px 10px;
-    }
-    .country-summary div.readiness {
-      float: left;
-      height: 20px;
-      width: 175px;
-      border-color: #c6c6c6;
-      border-style: solid;
-      border-width: 1px 0px 1px 0px;
-      }
-    .country-summary div.vulnerability {
-      float: left;
-      height: 20px;
-      width: 174px;
-      }
-  .country-summary div.chart {
-    height: 135px;
-    width: 125px;
-    }
-    .country-summary div.chart .mini-matrix {
-      margin: 25px 0px 0px 10px;
-      }
-  .country-summary .map {
-    border-width: 1px 0px 1px 1px;
-    height: 135px;
-    width: 320px;
-    }
-
-
-.featured div.stats div.country-summary {
-    border-color: #c6c6c6;
-    border-style: solid;
-    -moz-border-radius: 4px 0 0 4px;
-    -webkit-border-radius: 4px 0 0 4px;
-    border-radius: 4px 0 0 4px;
-    border-width: 1px 0px 1px 1px;
-    margin: 0px 0px 10px 10px;
-    width: 614px;
-    background-color: #fff;
-  }
-.featured div.country-summary div.description {
-    width: 300px;
-    margin: 0 10px 0 10px;
-    float: left;
-  }
-.featured div.country-summary div.chart .mini-matrix {
-    margin: 5px 0 0 5px;
-  }
-.featured div.country-summary div.gain {
-    border-width: 0px;
-    text-align: center;
-  }
 
 .country-profile .details,
 .country-profile .rankings {

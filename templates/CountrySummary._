@@ -1,15 +1,11 @@
-<div class='stats'>
-<% _.each(summary, function(stat, klass) { %>
-  <div class='<%= klass %>'>
-      <span class='name'><%= stat.name %></span>
-      <span class='value'><%= stat.value %></span>
-      <% if (stat.outlook) { %>
-        <div class='outlook'>Future Outlook:
-           <div class='icon-outlook icon-outlook-<%= stat.outlook %>'></div>
-        </div>
-      <% } %>
-  </div>
-<% }); %>
+<div class='gain'>
+    <span class='name'><%= data.gain.name %></span>
+    <span class='value'><%= data.gain.value %></span>
+    <% if (data.gain.outlook) { %>
+      <div class='outlook'>Outlook:
+         <div class='icon-outlook icon-outlook-<%= data.gain.outlook %>'></div>
+      </div>
+    <% } %>
 </div>
 <div class='chart'>
   <div class='mini-matrix'>
@@ -20,4 +16,10 @@
     <div class='pin' style='top: <%= pin.y %>px; left: <%= pin.x %>px;'></div>
   </div>
 </div>
+<% _.each(['vulnerability', 'readiness'], function(stat) { %>
+  <div class='<%= stat%>'>
+      <span class='name'><%= data[stat].name %></span>
+      <span class='value'><%= data[stat].value %></span>
+  </div>
+<% }); %>
 <% if (map) { %><div class='map'></div><% } %>
