@@ -61,6 +61,10 @@ view = views.Main.extend({
         return this;
     },
     attach: function() {
+
+        this.map = new models.Map({year: 2010, indicator: 'gain'},
+          {el: $('.country-summary .map', this.el)[0], width: 321, height: 135});
+
         if (this.tableView == undefined) {
             this.tableView = new views.CountryTable({
                 el: $('table#country-data', this.el),
