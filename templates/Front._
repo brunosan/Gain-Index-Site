@@ -21,7 +21,7 @@
         </li>
     </ul>
   </div>
-  <div class='rankings'>
+  <div class='ranking clearfix'>
   </div>
   <div class='featured'>
     <h3>Featured Countries</h3>

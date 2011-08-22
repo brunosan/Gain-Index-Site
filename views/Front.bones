@@ -26,7 +26,7 @@ view = views.Main.extend({
         var list = _.reject(ranking.list('values', 2009), function(v) { return isNaN(parseFloat(v.value)) });
         rankTop = list.slice(0, 5);
         rankBottom = list.slice(list.length - 5, list.length);
-        $('.rankings', this.el).empty().append(
+        $('.ranking', this.el).empty().append(
             templates.RankingTopBottom({
                 top: rankTop,
                 bottom: rankBottom,

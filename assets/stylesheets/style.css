@@ -925,6 +925,25 @@ a.sort {
 }
 
 /**
+ * Featured ranking, front page
+ */
+.front .ranking table.data {
+  width: 50%;
+  float: left;
+  clear: none;
+  table-layout: auto;
+  }
+  .front .ranking table.data th {
+    font-weight: normal;
+    font-style: italic;
+  }
+  .front .ranking .rank-number {
+    float: left;
+    margin: 3px 10px 0px 0px
+  }
+
+
+/**
  * Matrix section
  */
 .top .matrix {
