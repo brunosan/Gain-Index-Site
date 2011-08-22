@@ -742,7 +742,7 @@ model.meta = {
     "exposure": {
         "id": "exposure",
         "name": "Exposure",
-        "description": "Component analyzing the probability of climate related hazards",
+        "description": "Component analyzing the probability of climate-related hazards",
         "format": "number",
         "decimals": "3",
         "unit": null,
