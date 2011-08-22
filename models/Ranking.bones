@@ -14,5 +14,24 @@ model = Backbone.Model.extend({
             indicators: indicators.sortByRank({silent: true}),
             subject: subject
         }, {silent : true});
+    },
+    path: function() {
+        return model.path(this.id);
     }
 });
+
+// Generates the user facing paths for each ranking
+// ------------------------------------------------
+model.path = function(id) {
+    if (id == 'gain') {
+        return '/ranking';
+    }
+    var meta = models.Indicator.meta;
+    if (!meta[id]) {
+        return '/';
+    }
+    if (meta[id].index && meta[meta[id].index].index != meta[id].index) {
+        return '/ranking/' + meta[id].index + '/' + id;
+    }
+    return '/ranking/' + id;
+};

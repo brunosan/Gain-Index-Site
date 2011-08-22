@@ -1,7 +1,7 @@
 view = views.Main.extend({
     events: _.extend({
         'click .drawer .handle a.handle': 'closeDrawer',
-        'click table.data tr': 'openDrawer',
+        'click table.data tr': 'openDrawer'
     }, views.Main.prototype.events),
     render: function() {
         var data = [],
@@ -9,7 +9,8 @@ view = views.Main.extend({
             components = {},
             title = '',
             collection = this.model.get('indicators'),
-            meta = collection.model.meta;
+            meta = collection.model.meta,
+            path = models.Ranking.path;
 
         // Arrange our metadata.
         if (!meta[this.model.get('id')]) {
@@ -17,20 +18,20 @@ view = views.Main.extend({
         }
         var id = this.model.get('id');
         var active = (id == 'gain') ? {} : {
-            path: '/ranking/' + meta[id].index,
+            path: path(meta[id].index),
             name: meta[meta[id].index].name
         };
         _.each(meta, function(v) {
             if (v.index == meta[id].index) {
                 if (v.sector) {
                     sectors[v.sector] = {
-                        path: '/ranking/' + v.index + '/' + v.sector,
+                        path: path(v.index),
                         name: meta[v.sector].name
                     };
                 }
                 if (v.component) {
                     components[v.component] = {
-                        path: '/ranking/' + v.index + '/' + v.component,
+                        path: path(v.index),
                         name: meta[v.component].name
                     };
                 }
@@ -59,25 +60,7 @@ view = views.Main.extend({
             collection: this.model.get('indicators')
         }).render();
 
-        // Some things fall on the floor.
-        //
-        // TODO not happy at all with how complex this is, nor with the fact
-        // fact that I've got a hardcoded list of indicators here and totally
-        // rely on the assumption that corrected indicators are afixed with a
-        // `_delta`.
-        var template = templates.DefaultFloor;
-        var corrections = ['gain', 'gain_delta', 'readiness', 'readiness_delta', 'vulnerability', 'vulnerability_delta']
-        var subject = this.model.get('subject');
-        var locals = {
-            title: subject.meta('name'),
-            content: subject.meta('description'),
-        };
-
-        if (_.indexOf(corrections, subject.id) != -1) {
-            template = templates.CorrectionFloor;
-            locals.isCorrected = subject.id.slice(-6) == '_delta';
-        }
-        $('.floor', this.el).empty().append(template(locals));
+        this.renderFloor();
         return this;
     },
     attach: function() {
@@ -90,6 +73,32 @@ view = views.Main.extend({
             });
         }
         return this;
+    },
+    renderFloor: function() {
+        var template = templates.DefaultFloor;
+        var subject = this.model.get('subject');
+        var locals = {
+            title: subject.meta('name'),
+            content: subject.meta('description'),
+        };
+        if (subject.hasCorrection() || subject.isCorrection()) {
+            var path = models.Ranking.path(subject.uncorrected());
+            template = templates.CorrectionFloor;
+            if (subject.isCorrection()) {
+                locals.correction = {
+                    caption: 'World wide ranking by ' + subject.meta('name') + ', corrected for GDP',
+                    href: path,
+                    title: 'Remove GDP correction'
+                };
+            } else {
+                locals.correction = {
+                    caption: 'World wide ranking by ' + subject.meta('name'),
+                    href: path + '/delta',
+                    title: 'Correct for GDP'
+                };
+            }
+        }
+        $('.floor', this.el).empty().append(template(locals));
     },
     openDrawer: function(ev) {
         $('table.data tr').removeClass('active');

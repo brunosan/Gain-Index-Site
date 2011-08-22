@@ -3,7 +3,7 @@ view = views.Main.extend({
         'click .drawer .handle a.handle': 'closeDrawer',
         'click #map-years li a': 'yearClick',
         'click #map-indicators li a': 'indicatorClick',
-        'click .floor .correction-control input': 'toggleCorrection',
+        'click .floor .correction-control a': 'toggleCorrection',
         'click .featured': 'featureClick'
     },
     initialize: function(options) {
@@ -58,7 +58,8 @@ view = views.Main.extend({
         $('.floor', this.el).empty().append(templates.CorrectionFloor({
             title: gain.meta('name'),
             content: gain.meta('description'),
-            isCorrected: false
+            isCorrected: false,
+            href: {apply: '#', remove: '#'}
         }));
 
         return this;
@@ -97,7 +98,8 @@ view = views.Main.extend({
             $('.floor', this.el).empty().append(templates.CorrectionFloor({
                 title: indicator.meta('name'),
                 content: indicator.meta('description'),
-                isCorrected: corrected 
+                isCorrected: corrected,
+                href: {apply: '#', remove: '#'}
             }));
         });
 
@@ -156,6 +158,7 @@ view = views.Main.extend({
         } else {
             this.map.set({indicator: indicator + '_delta'});
         }
+        return false;
     },
     openDrawer: function(iso3) {
         new views.CountryDetailDrawer({

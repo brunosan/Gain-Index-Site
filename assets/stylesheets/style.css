@@ -891,7 +891,7 @@ table.data tr.active {
   .floor .correction-control p {
     font-style: italic;
     }
-  .floor .correction-control input {
+  .floor .correction-control a {
     padding: 0px 5px;
     text-transform: uppercase;
     color: #fff;
