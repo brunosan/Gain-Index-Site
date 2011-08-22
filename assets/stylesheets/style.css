@@ -940,6 +940,12 @@ a.sort {
     float: left;
     margin: 3px 10px 0px 0px
   }
+  .front .ranking .ranktop .rank-number {
+    background-color: #68B5DF;
+  }
+  .front .ranking .rankbottom .rank-number {
+    background-color: #FD7A7D;
+  }
 
 
 /**
