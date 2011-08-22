@@ -111,7 +111,13 @@ view = views.Main.extend({
             title: indicator.meta('name'),
             description: indicator.meta('description'),
             indicator: indicator.get('name'),
-            source: indicator.meta('source') || []
+            source: indicator.meta('source') || [],
+            // We're assuming that all indicators are assigned to either a
+            // component or a sector.
+            methodologyHash:
+                (indicator.meta('component') || indicator.meta('sector')) ?
+                'scoringindicators' :
+                indicator.get('name')
         }));
 
         // Lazy load 5 similar countries.
