@@ -39,7 +39,7 @@ model = Backbone.Model.extend({
     // TODO: assumes a maximum rank of 142, determine actual maximum.
     rank: function(options) {
         options = this.optionDefaults(options);
-        var value = this.get('rank')[options.year];
+        var value = this.get('rank') ? this.get('rank')[options.year] : undefined;
         if (!options.format || _.isUndefined(value)) {
             return value;
         }
