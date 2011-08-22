@@ -1,0 +1,33 @@
+<table class='data'>
+<thead>
+<tr>
+<th> Top 5 Countries </th>
+<th> Score </th>
+</tr>
+</thead>
+<tbody>
+<% _.each(top, function(v, k) { %>
+<tr>
+<td> <%= k+1 %> <span class='country-name'> <a href='/country/<%= v.ISO3 %>'> <%= v.name %> </a> </span> </td>
+<td> <%= v.value %> </td>
+</tr>
+<% }); %>
+</tbody>
+</table>
+
+<table class='data'>
+<thead>
+<tr>
+<th> Bottom 5 Countries </th>
+<th> Score </th>
+</tr>
+</thead>
+<tbody>
+<% _.each(bottom, function(v, k) { %>
+<tr>
+<td> <%= k+1 %> <span class='country-name'> <a href='/country/<%= v.ISO3 %>'> <%= v.name %> </a> </span> </td>
+<td> <%= v.value %> </td>
+</tr>
+<% }); %>
+</tbody>
+</table>

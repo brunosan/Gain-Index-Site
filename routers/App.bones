@@ -26,7 +26,13 @@ router = Backbone.Router.extend({
             fetcher.push(featuredSecond);
             fetcher.fetch(function() {
                 var collection = new models.Countries([featuredFirst, featuredSecond]);
-                router.send(views.Front, {model: collection});
+                // Reset fetcher
+                var fetcher = router.fetcher();
+                var ranking = new models.IndicatorSummary({id: 'gain'}, {years: [2009]});
+                fetcher.push(ranking);
+                fetcher.fetch(function() {
+                    router.send(views.Front, {model: ranking, collection: collection});
+                });
             });
         });
     },
