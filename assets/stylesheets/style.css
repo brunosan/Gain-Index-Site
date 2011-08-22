@@ -296,6 +296,7 @@ ul.tabs li a.active {
  font-weight: normal;
  display: block;
  font-size: 12px;
+ padding-right: 5px;
 }
 
 #footer1 .search {
