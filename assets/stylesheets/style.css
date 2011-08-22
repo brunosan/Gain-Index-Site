@@ -25,11 +25,11 @@ h1,h2,h3,h4,h5 {
   font-weight: 100;
   color: #434343;
   }
-  
+   
 h2 {
   font-size: 28px;
-  margin-left: 20px;
-  padding: 15px 0 15px 0;
+  padding: 15px 0 15px 20px;
+  border-bottom: #c6c6c6 1px solid;
 }
 
 h3 {
@@ -638,9 +638,12 @@ table.data tbody tr {
 
 .front #carousel {
     height: 155px;
-  background-color: #ebebeb;
+    background-color: #ebebeb;
    }
-
+  .front #carousel h2{
+    border-bottom: 0px;
+    }
+    
   .front #carousel .content li {
     display: none;
     }
@@ -948,6 +951,9 @@ a.sort {
   padding: 15px 20px;
   }
 
+/** About section **/
+
+#about
 /**
  * About section navigation
  */
