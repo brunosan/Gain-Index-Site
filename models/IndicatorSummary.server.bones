@@ -29,7 +29,7 @@ models.IndicatorSummary.prototype.sync = function(method, model, options) {
                 var doc = row.doc;
                 if (!doc[k] || !doc['ISO3']) return;
                 data[k][doc['ISO3']] = data[k][doc['ISO3']] || {};
-                _.each(model.options.years, function(year) {
+                _.each(model.get('years'), function(year) {
                     data[k][doc['ISO3']][year] = doc[k][year];
                 });
             });

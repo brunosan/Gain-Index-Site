@@ -16,7 +16,9 @@ router = Backbone.Router.extend({
         var router = this;
         var fetcher = this.fetcher();
         var feature = new models.Front({id: 'front'});
+        var ranking = new models.IndicatorSummary({id: 'gain', years: [2009]});
         fetcher.push(feature);
+        fetcher.push(ranking);
         fetcher.fetch(function() {
             var featuredFirst = new models.Country({id: feature.get('featuredFirst')});
             var featuredSecond = new models.Country({id: feature.get('featuredSecond')});
@@ -26,7 +28,9 @@ router = Backbone.Router.extend({
             fetcher.push(featuredSecond);
             fetcher.fetch(function() {
                 var collection = new models.Countries([featuredFirst, featuredSecond]);
-                router.send(views.Front, {model: collection});
+                fetcher.fetch(function() {
+                    router.send(views.Front, {model: ranking, collection: collection});
+                });
             });
         });
     },
@@ -36,7 +40,8 @@ router = Backbone.Router.extend({
         var country = new models.Country({id: id});
 
         fetcher.push(country);
-        fetcher.fetch(function() {
+        fetcher.fetch(function(err) {
+            if (err) return router.error(err);
             router.send(views.Country, {model: country});
         });
     },
@@ -49,7 +54,8 @@ router = Backbone.Router.extend({
         var ranking = new models.Ranking({id: id});
 
         fetcher.push(ranking);
-        fetcher.fetch(function() {
+        fetcher.fetch(function(err) {
+            if (err) return router.error(err);
             router.send(views.Ranking, {model: ranking});
         });
     },
@@ -72,12 +78,16 @@ router = Backbone.Router.extend({
         var model = new models.Page({id: id});
 
         fetcher.push(model);
-        fetcher.fetch(function() {
+        fetcher.fetch(function(err) {
+            if (err) return router.error(err);
             router.send(views.Page, {model: model});
         });
     },
     matrix: function() {
         this.send(views.Matrix);
+    },
+    error: function(error) {
+        this.send(views.Error, _.isArray(error) ? error.shift() : error);
     },
     send: function(view) {
         var options = arguments.length > 1 ? arguments[1] : {};
@@ -92,11 +102,17 @@ router = Backbone.Router.extend({
             push: function(item) { models.push(item) },
             fetch: function(callback) {
                 if (!models.length) return callback();
-                var _done = _.after(models.length, callback);
+                var errors = [];
+                var _done = _.after(models.length, function() {
+                    callback(errors.length ? errors : null);
+                });
                 _.each(models, function(model) {
                     model.fetch({
                         success: _done,
-                        error: _done
+                        error: function(error) {
+                            errors.push(error);
+                            _done();
+                        }
                     });
                 });
             }
