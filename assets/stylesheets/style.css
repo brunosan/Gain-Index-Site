@@ -25,11 +25,11 @@ h1,h2,h3,h4,h5 {
   font-weight: 100;
   color: #434343;
   }
-  
+   
 h2 {
   font-size: 28px;
-  margin-left: 20px;
-  padding: 15px 0 15px 0;
+  padding: 15px 0 15px 20px;
+  border-bottom: #c6c6c6 1px solid;
 }
 
 h3 {
@@ -54,6 +54,19 @@ h4 {
   font-size: 10px;
   color: #434343;
 }
+  .button.green {
+    color: #fff;
+    background-color: #8AD35E;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px; 
+    padding: 5px;
+    width: 110px;
+    float: right;
+    margin: 10px 10px 0 0;
+  }
+    .button.green a {
+      color: #fff;
+    }
 
 p {
   font-family: 'HelveticaNeue-Normal', "HelveticaNeueNormal", Helvetica, Arial, sans-serif;
@@ -635,15 +648,13 @@ table.data tbody tr {
     }
 
 .front #carousel {
-  -moz-box-shadow:5px 0px -20px #000;
-  -webkit-box-shadow:0px 0px 20px #000;
-  box-shadow:0px -20px 5px #000;
-  height: 155px;
-  background-color: #ebebeb;
-  position: relative;
-  z-index: 2;
-  }
-
+    height: 155px;
+    background-color: #ebebeb;
+   }
+  .front #carousel h2{
+    border-bottom: 0px;
+    }
+    
   .front #carousel .content li {
     display: none;
     }
@@ -903,6 +914,34 @@ a.sort {
 }
 
 /**
+ * Featured ranking, front page
+ */
+.front .ranking table.data {
+  width: 50%;
+  float: left;
+  clear: none;
+  table-layout: auto;
+  }
+  .front .ranking table.data th {
+    font-weight: normal;
+    font-style: italic;
+  }
+  .front .ranking table.data tr:hover {
+    background: transparent
+  }
+  .front .ranking .rank-number {
+    float: left;
+    margin: 3px 10px 0px 0px
+  }
+  .front .ranking .ranktop .rank-number {
+    background-color: #68B5DF;
+  }
+  .front .ranking .rankbottom .rank-number {
+    background-color: #FD7A7D;
+  }
+
+
+/**
  * Matrix section
  */
 .top .matrix {
@@ -933,6 +972,9 @@ a.sort {
   padding: 15px 20px;
   }
 
+/** About section **/
+
+#about
 /**
  * About section navigation
  */
@@ -946,25 +988,39 @@ a.sort {
   font-family: 'AlternateGothicLTNo3Regular',"HelveticaNeueBoldCondensed","HelveticaNeue-Bold-Condensed","Arial Narrow","Arial",sans-serif;
   text-transform: uppercase;
   }
+  
 #about-nav-container a {
   display: block;
   padding: 3px;
+  margin-bottom: 10px;
   width: 160px;
   background-color: transparent;
-  color: #000;
-  padding-left: 20px
+  padding-left: 30px
   }
 #about-nav-container a:link, #about-nav a:visited {
-  color: #000;
   text-decoration: none;
   }
+
+#about-nav-container a.nav-overview {background: url('../images/sprite.png') 5px -920px no-repeat;}
+#about-nav-container a.nav-methodology {background: url('../images/sprite.png') 5px -957px no-repeat;}
+#about-nav-container a.nav-matrix {background: url('../images/sprite.png') 5px -990px no-repeat;}
+#about-nav-container a.nav-consultation {background: url('../images/sprite.png') 5px -1025px no-repeat;}
+
 #about-nav-container a:hover,
 #about-nav-container a:active {
   background-color: #fff;
-  color: #000;
+  color: #434343;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
+  border-radius: 4px;
   }
+  
+#about-nav-container a.active {
+  background-color: #fff;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}
 
 /*-----------------------
   Markup free clearing
