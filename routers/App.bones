@@ -36,7 +36,8 @@ router = Backbone.Router.extend({
         var country = new models.Country({id: id});
 
         fetcher.push(country);
-        fetcher.fetch(function() {
+        fetcher.fetch(function(err) {
+            if (err) return router.error(err);
             router.send(views.Country, {model: country});
         });
     },
@@ -79,6 +80,9 @@ router = Backbone.Router.extend({
     matrix: function() {
         this.send(views.Matrix);
     },
+    error: function(error) {
+        this.send(views.Error, _.isArray(error) ? error.shift() : error);
+    },
     send: function(view) {
         var options = arguments.length > 1 ? arguments[1] : {};
         var v = new view(options);
@@ -92,11 +96,17 @@ router = Backbone.Router.extend({
             push: function(item) { models.push(item) },
             fetch: function(callback) {
                 if (!models.length) return callback();
-                var _done = _.after(models.length, callback);
+                var errors = [];
+                var _done = _.after(models.length, function() {
+                    callback(errors.length ? errors : null);
+                });
                 _.each(models, function(model) {
                     model.fetch({
                         success: _done,
-                        error: _done
+                        error: function(error) {
+                            errors.push(error);
+                            _done();
+                        }
                     });
                 });
             }

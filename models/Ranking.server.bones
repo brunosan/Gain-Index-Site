@@ -17,6 +17,7 @@ models.Ranking.prototype.sync = function(method, model, options) {
         if (err) return options.error(err);
 
         var results = JSON.parse(body);
+        if (!results.rows || !results.rows.length) results.error = new Error('Not found');
       
         if (results.error) {
             return options.error(results.error);
