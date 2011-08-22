@@ -278,9 +278,9 @@ ul.tabs li a.active {
  float: left;
  width: 630px;
  height: 20px;
- background: #1d354c url('../images/sprite.png') 5px -860px no-repeat;
+ background: #1d354c url('../images/sprite.png') 10px -860px no-repeat;
  color: white;
- text-indent: 25px;
+ text-indent: 35px;
  margin: 15px 0px 15px 0px;
  padding: 5px;
  border-radius: 4px;
@@ -288,7 +288,7 @@ ul.tabs li a.active {
  -webkit-border-radius: 4px;
 }
 
-  #footer1 a:hover {background: #21405d url('../images/sprite.png') 5px -860px no-repeat;}
+  #footer1 a:hover {background: #21405d url('../images/sprite.png') 10px -860px no-repeat;}
 
 #footer1 a.downloadbutton .description {
  float: right;
@@ -296,6 +296,7 @@ ul.tabs li a.active {
  font-weight: normal;
  display: block;
  font-size: 12px;
+ padding-right: 5px;
 }
 
 #footer1 .search {
@@ -310,7 +311,9 @@ ul.tabs li a.active {
     -webkit-border-radius: 4px;
     }
   #footer1 .search input.textfield {
-    width: 230px;
+    background: url('../images/sprite.png') 5px -627px no-repeat;
+    padding-left: 25px;
+    width: 210px;
     -moz-box-shadow: inset 0px 0px 4px #000;
     -webkit-box-shadow: inset 0px 0px 4px #000;
     box-shadow: inset 0px 0px 4px #000;
@@ -1000,7 +1003,9 @@ a.sort {
  * Matrix section
  */
 .top .matrix {
-  height: 400px;
+  height: 675px;
+  width: 640px;
+  background: url('../images/matrix_placeholder.png');
   }
 
 /**
