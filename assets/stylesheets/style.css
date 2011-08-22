@@ -732,24 +732,43 @@ table.data tr.active {
       }
     .country-summary div.gain {
       float:left;
-      height: 135px;
-      width: 89px;
+      text-align: center;
+      height: 95px;
+      width: 174px;
       border-color: #c6c6c6;
       border-style: solid;
       border-width: 0px 1px 0px 0px;
       }
-    .country-summary div.readiness {
+    .country-summary div.gain .name {
+      font-weight: bold;
+    }
+    .country-summary div.gain .outlook {
+      color: gray;
+      text-align: right;
+      padding-right: 30px;
+    }
+    .country-summary div.gain .icon-outlook {
       float: right;
-      height: 59px;
-      width: 85px;
+      margin-left: 5px;
+    }
+    .country-summary div.gain .value {
+      display: block;
+      font-weight: bold;
+      font-size: 50px;
+      margin: 10px 10px;
+    }
+    .country-summary div.readiness {
+      float: left;
+      height: 20px;
+      width: 174px;
       border-color: #c6c6c6;
       border-style: solid;
       border-width: 0px 0px 1px 0px;
       }
     .country-summary div.vulnerability {
-      float: right;
-      height: 60px;
-      width: 85px;
+      float: left;
+      height: 20px;
+      width: 174px;
       }
   .country-summary div.chart {
     border-width: 1px 0px 1px 1px;
