@@ -16,7 +16,9 @@ router = Backbone.Router.extend({
         var router = this;
         var fetcher = this.fetcher();
         var feature = new models.Front({id: 'front'});
+        var ranking = new models.IndicatorSummary({id: 'gain'}, {years: [2009]});
         fetcher.push(feature);
+        fetcher.push(ranking);
         fetcher.fetch(function() {
             var featuredFirst = new models.Country({id: feature.get('featuredFirst')});
             var featuredSecond = new models.Country({id: feature.get('featuredSecond')});
@@ -26,7 +28,9 @@ router = Backbone.Router.extend({
             fetcher.push(featuredSecond);
             fetcher.fetch(function() {
                 var collection = new models.Countries([featuredFirst, featuredSecond]);
-                router.send(views.Front, {model: collection});
+                fetcher.fetch(function() {
+                    router.send(views.Front, {model: ranking, collection: collection});
+                });
             });
         });
     },

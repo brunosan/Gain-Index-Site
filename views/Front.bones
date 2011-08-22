@@ -8,7 +8,7 @@ view = views.Main.extend({
     },
     initialize: function(options) {
         _.bindAll(this, 'render'); 
-        this.model.bind('add', this.render, this);
+        this.collection.bind('add', this.render);
         views.Main.prototype.initialize.call(this, options);
     },
     render: function() {
@@ -18,34 +18,25 @@ view = views.Main.extend({
         // Empty pockets on top.
         $('.top', this.el).empty().append(templates.Front());
 
-        var topBottom = [];
-        // For best and worst indicators list. 
-        // @TODO move fetch to router?
-        // @TODO add to DOM.
-        (new models.IndicatorSummary(
-            {id: 'gain'}, {years: [2009]}
-        )).fetch({
-            success: function(summary) {
-                var list = summary.list('values', 2009);
-                // Hash-like access.
-                var i = 0; while (topBottom.length < 5) {
-                    // Make sure value is a number; '-' exists as some values.
-                    !isNaN(parseFloat(list[i].value)) 
-                      && topBottom.push(list[i]);
-                    i++;
-                }
-                var i = 1; while (topBottom.length < 10) {
-                    !isNaN(parseFloat(list[list.length - i].value)) 
-                      && topBottom.push(list[list.length - i]);
-                    i++;
-                }
-                topBottom.sort(function(a, b) { return b.value - a.value} );
-            }
-        });
+        // Top / Bottom indicators
+        var rankTop = [],
+            rankBottom = [];
+        var ranking = this.model;
+        // Toss out non-numeric values like '-'
+        var list = _.reject(ranking.list('values', 2009), function(v) { return isNaN(parseFloat(v.value)) });
+        rankTop = list.slice(0, 5);
+        rankBottom = list.slice(list.length - 5, list.length);
+        $('.rankings', this.el).empty().append(
+            templates.RankingTopBottom({
+                top: rankTop,
+                bottom: rankBottom,
+                length: list.length
+            })
+        );
 
         // Featured countries
         var that = this;
-        this.model.each(function(model) {
+        this.collection.each(function(model) {
             $('.featured .countries', that.el).append(
                 templates.FeaturedFront({
                     name: model.meta('name'),
@@ -79,7 +70,7 @@ view = views.Main.extend({
                 documentType: 'front',
                 pathPrefix: '/front/',
                 model: new models.Front({id: 'front'}),
-                collection: this.model
+                collection: this.collection
             });
         }
     },
