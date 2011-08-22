@@ -21,15 +21,19 @@ command.prototype.initialize = function(options) {
         sqlite: options.config.files + '/indicators.sqlite',
         table: 'data',
         schema: schema,
-        keys: ['NAME', 'ISO3'],
         map: function(doc) {
             if (doc._id.indexOf('/api/Indicator') !== 0 || !sqliteIndicators[doc.name]) {
                 return false;
             }
             var values = {};
-            _(doc.values).each(function(value, key) {
-                values[key] = parseInt((value - sqliteIndicators[doc.name][1]) / sqliteIndicators[doc.name][0] * 100) || 0;
-            })
+            for (var i = 1995; i <= 2010; i++) {
+                if (!doc.values[i]) {
+                    values[i] = 0;
+                }
+                else {
+                    values[i] = parseInt((doc.values[i] - sqliteIndicators[doc.name][1]) / sqliteIndicators[doc.name][0] * 100) || 0;
+                }
+            }
             values.name = doc.name;
             values.ISO3 = doc.ISO3;
             return values;

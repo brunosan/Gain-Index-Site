@@ -89,7 +89,6 @@ view = views.Main.extend({
                 collection: this.model.get('indicators')
             });
         }
-        this.tableView.attach();
         return this;
     },
     openDrawer: function(ev) {

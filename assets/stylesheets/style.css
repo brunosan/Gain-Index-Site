@@ -73,16 +73,92 @@ a:hover {
  color: #81db4b; 	
  text-decoration: none;
 }
+/**
+ * Icons.
+ */
+.icon-outlook {
+  height: 15px;
+  width: 15px;
+  text-indent: -9999px;
+  background-image: url('../images/sprite.png');
+  background-repeat: no-repeat;
+  }
 
-.tabs li a {
+  .icon-outlook-up { background-position: 0px -430px; }
+  .icon-outlook-down { background-position: 0px -410px; }
+  /**
+   * TODO: get a new icon for the '=' sign.
+   */
+  .icon-outlook-same { background-position: 0px -345px;  }
+
+
+/**
+ * Tabs
+ */
+ul.tabs.level-1 li a {
+  text-align: center;
   font-family: 'AlternateGothicLTNo3Regular',"HelveticaNeueBoldCondensed", "HelveticaNeue-Bold-Condensed", "Arial Narrow", "Arial", sans-serif;
-  font-weight: 100;
-  font-size: 18px; 
   color: #434343;
-  text-decoration: none;
+  font-size: 18px;
   text-transform: uppercase;
-  text-shadow: 0 1px rgba(255, 255, 255, 0.5);
-}
+  text-shadow: 0 1px rgba(255,255,255,.5);
+  float: left;
+  width: auto;
+  padding: 0px 20px;
+  margin-left: 10px;
+  line-height: 30px;
+  background-color: #c6c6c6;
+  -moz-border-radius: 3px 3px 0px 0px;
+  -webkit-border-radius: 3px 3px 0px 0px;
+  border-radius: 3px 3px 0px 0px;
+  }
+ul.tabs li a.active {
+  background-color: #fff;
+  }
+.tab-wrapper .tab-wrapper {
+  background-color: #fff;
+  padding: 10px 10px;
+  clear: left;
+  }
+  ul.tabs.level-2 {
+    float: left;
+    padding: 0px 0px;
+    margin-right: 10px;
+    }
+    ul.tabs.level-2 li {
+      float: left;
+      margin-right: 1px;
+      }
+    ul.tabs.level-2 li a {
+      color: #fff;
+      text-transform: uppercase;
+      font-size: 10px;
+      font-weight: bold;
+      padding: 0 5px;
+      display: block;
+      line-height: 20px;
+      background-color: #c6c6c6;
+      border-bottom: 1px solid #a8a8a8;
+      }
+    ul.tabs.level-2 li:first-child a {
+      -moz-border-radius-topleft: 3px;
+      -moz-border-radius-bottomleft: 3px;
+      -webkit-border-top-left-radius: 3px;
+      -webkit-border-bottom-left-radius: 3px;
+      border-top-left-radius: 3px;
+      border-bottom-left-radius: 3px;
+      }
+    ul.tabs.level-2 li:last-child a {
+      -moz-border-radius-topright: 3px;
+      -moz-border-radius-bottomright: 3px;
+      -webkit-border-top-right-radius: 3px;
+      -webkit-border-bottom-right-radius: 3px;
+      border-top-right-radius: 3px;
+      border-bottom-right-radius: 3px;
+      }
+    ul.tabs.level-2 li a.active {
+      background-color: #a8a8a8;
+      }
 
 /**
  * Header styles
@@ -346,58 +422,6 @@ a:hover {
     }
 
 /**
- * tabs
- */
-.tab-wrapper ul.tabs {
-  background-color: #ebebeb;
-  width: 625px;
-  float: left;
-  height: 30px;
-  padding: 0px 0px 0px 10px;
-  }
-  .tab-wrapper ul.tabs li {
-    float: left;
-    padding: 0px 5px;
-    margin-right: 5px;
-    line-height: 30px;
-    -moz-border-radius: 3px 3px 0px 0px;
-    -webkit-border-radius: 0px 3px 0px 0px;
-    border-radius: 3px 3px 0px 0px;
-    background-color: #c6c6c6;
-    }
-    .tab-wrapper ul.tabs li > div {
-      float: left;
-      }
-    .tab-wrapper ul.tabs li.active {
-      background-color: #fff;
-      }
-
-.tab-wrapper ul.tabs ul.options {
-  display: none;
-  }
-.tab-wrapper ul.tabs li.active ul.options {
-  margin: 5px 0px 0px 10px;
-  display: block;
-  float: right;
-  line-height: 30px;
-  -moz-border-radius: 3px;
-  -webkit-border-radius: 3px;
-  border-radius: 3px;
-  }
-  .tab-wrapper ul.tabs li ul.options li {
-    margin-right: 1px;
-    line-height: 20px;
-    -moz-border-radius: 0px;
-    -webkit-border-radius: 0px;
-    border-radius: 0px;
-    background-color: #c6c6c6;
-    }
-
-  .tab-wrapper ul.tabs li ul.options li.active {
-    background-color: #ebebeb;
-    }
-
-/**
  * Data tables
  */
 table.data {
@@ -473,7 +497,6 @@ table.data tbody tr {
 /**
  * Front page
  */
- 
 .front #map {
   height: 490px;
   width: 640px;
@@ -704,24 +727,43 @@ table.data tr.active {
       }
     .country-summary div.gain {
       float:left;
-      height: 135px;
-      width: 89px;
+      text-align: center;
+      height: 95px;
+      width: 174px;
       border-color: #c6c6c6;
       border-style: solid;
       border-width: 0px 1px 0px 0px;
       }
-    .country-summary div.readiness {
+    .country-summary div.gain .name {
+      font-weight: bold;
+    }
+    .country-summary div.gain .outlook {
+      color: gray;
+      text-align: right;
+      padding-right: 30px;
+    }
+    .country-summary div.gain .icon-outlook {
       float: right;
-      height: 59px;
-      width: 85px;
+      margin-left: 5px;
+    }
+    .country-summary div.gain .value {
+      display: block;
+      font-weight: bold;
+      font-size: 50px;
+      margin: 10px 10px;
+    }
+    .country-summary div.readiness {
+      float: left;
+      height: 20px;
+      width: 174px;
       border-color: #c6c6c6;
       border-style: solid;
       border-width: 0px 0px 1px 0px;
       }
     .country-summary div.vulnerability {
-      float: right;
-      height: 60px;
-      width: 85px;
+      float: left;
+      height: 20px;
+      width: 174px;
       }
   .country-summary div.chart {
     border-width: 1px 0px 1px 1px;
@@ -782,7 +824,7 @@ table.data tr.active {
     text-align: center;
   }
 
-.country-profile .tab-wrapper,
+.country-profile .details,
 .country-profile .rankings {
   background-color: #ebebeb;
 }
@@ -832,10 +874,6 @@ table.data tr.active {
   padding-left: 10px;
 }
 
-.country-profile .rankings tr.years th {
-}
-
-
 .drawer .content .graph {
   height: 256px;
   width: 256px;
@@ -862,102 +900,24 @@ table.data tr.active {
 /** 
  * Rankings page
  */
- 
 a.sort {
  font-family: 'HelveticaNeue', Helvetica, Arial, sans-serif;
  font-weight: normal;
   font-style: italic;
   font-size: 12px;
   color: #434343;
-}
-
+  }
 .ranking {
   background-color: #ebebeb;
   }
-.ranking ul.indices {
-  width: 100%;
-  float: left;
-  }
-.ranking ul.indices li a {
-  text-align: center;
-  font-family: 'AlternateGothicLTNo3Regular',"HelveticaNeueBoldCondensed", "HelveticaNeue-Bold-Condensed", "Arial Narrow", "Arial", sans-serif;
-  color: #434343;
-  font-size: 18px;
-  text-transform: uppercase;
-  text-shadow: 0 1px rgba(255,255,255,.5);
-  float: left;
-  width: auto;
-  padding: 0px 20px;
-  margin-left: 10px;
-  line-height: 30px;
-  background-color: #c6c6c6;
-  -moz-border-radius: 3px 3px 0px 0px;
-  -webkit-border-radius: 3px 3px 0px 0px;
-  border-radius: 3px 3px 0px 0px;
-  }
-  
-.ranking ul.indices li a.active {
-  background-color: #fff;
-  }
-
-.ranking .categories {
-  background-color: #fff;
-  float: left;
-  width: 615px;
-  padding: 10px 10px;
-  }
-  .ranking .categories ul {
-    float: left;
-    padding: 0px 0px;
-    margin-right: 10px;
-    }
-    .ranking .categories ul li {
-      float: left;
-      margin-right: 1px;
-      }
-    .ranking .categories ul li a {
-      color: #fff;
-      text-transform: uppercase;
-      font-size: 10px;
-      font-weight: bold;
-      padding: 0 5px;
-      display: block;
-      line-height: 20px;
-      background-color: #c6c6c6;
-      border-bottom: 1px solid #a8a8a8;
-      }
-    .ranking .categories ul li:first-child a {
-      -moz-border-radius-topleft: 3px;
-      -moz-border-radius-bottomleft: 3px;
-      -webkit-border-top-left-radius: 3px;
-      -webkit-border-bottom-left-radius: 3px;
-      border-top-left-radius: 3px;
-      border-bottom-left-radius: 3px;
-      }
-    .ranking .categories ul li:last-child a {
-      -moz-border-radius-topright: 3px;
-      -moz-border-radius-bottomright: 3px;
-      -webkit-border-top-right-radius: 3px;
-      -webkit-border-bottom-right-radius: 3px;
-      border-top-right-radius: 3px;
-      border-bottom-right-radius: 3px;
-      }
-    .ranking .categories ul li a.active {
-      background-color: #a8a8a8;
-      }
 .ranking table.data th,
 .ranking table.data td {
   padding: 0px 10px;
   }
-.ranking table.data .graph-wrapper,
-.ranking table.data .graph {
-  height: 20px;
-  width: 80px;
-  }
-.ranking table.data .graph-wrapper {
+.ranking table.data .icon-outlook {
   float: left;
   margin-top: 5px;
-  }
+}
 
 /**
  * Matrix section

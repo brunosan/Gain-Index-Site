@@ -27,16 +27,19 @@
     </table>
   </div>
   <% } %>
-  <div class='tab-wrapper'>
-    <ul class='tabs'>
-      <li class='active'><div><a href='#vulnerability' class='vulnerability'>Vulnerability</a></div>
-        <ul class='options'>
-          <li class='active'><a href='#vulnerability/component' class='vulnerability components'>Component</a></li>
+  <div class='details'>
+    <div class='tab-wrapper clearfix'>
+      <ul class='tabs level-1'>
+        <li><a href='#vulnerability' class='vulnerability'>Vulnerability</a></li>
+        <li><a href='#readiness' class='readiness'>Readiness</a></li>
+      </ul>
+      <div class='tab-wrapper clearfix'>
+        <ul class='tabs level-2'>
           <li><a href='#vulnerability/sector' class='vulnerability sectors'>Sector</a></li>
+          <li><a href='#vulnerability/component' class='vulnerability components'>Component</a></li>
         </ul>
-      </li>
-      <li><a href='#readiness' class='readiness'>Readiness</a></li>
-    </ul>
+      </div>
+    </div>
     <div id='tab' class='tab-content'>
       <table id='country-data' class='data'></table>
     </div>

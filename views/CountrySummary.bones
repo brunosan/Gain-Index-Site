@@ -11,6 +11,9 @@ view = Backbone.View.extend({
                     value: indicator.score(),
                     raw: indicator.score({format: false})
                 };
+                if (k === 'gain') {
+                    summary[k].outlook = indicator.outlook();
+                }
             }
         });
         if (summary.readiness && summary.vulnerability) {

@@ -1,8 +1,13 @@
 <div class='stats'>
 <% _.each(summary, function(stat, klass) { %>
   <div class='<%= klass %>'>
-      <%= stat.name %>
-      <%= stat.value %>
+      <span class='name'><%= stat.name %></span>
+      <span class='value'><%= stat.value %></span>
+      <% if (stat.outlook) { %>
+        <div class='outlook'>Future Outlook:
+           <div class='icon-outlook icon-outlook-<%= stat.outlook %>'></div>
+        </div>
+      <% } %>
   </div>
 <% }); %>
 </div>

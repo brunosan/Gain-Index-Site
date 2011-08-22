@@ -22,6 +22,12 @@ model = Backbone.Model.extend({
         }
         return this.format(value, {format: 'number', decimals: 3});
     },
+    outlook: function(options) {
+        var diff = this.score() - this.score({year: this.get('currentYear') - 1});
+        if (diff >= 0.5) return 'up';
+        if (diff <= -0.5) return 'down';
+        return 'same';
+    },
     input: function(options) {
         options = this.optionDefaults(options);
         var value = this.get('input')[options.year];
@@ -69,6 +75,8 @@ model.format = function(value, format) {
 };
 
 model.formats = {
+    // Number with or without decimals, signed or unsigned
+    // ---------------------------------------------------
     // From StackOverflow http://is.gd/sR4ygY
     number: function(n, meta) {
         var c = isNaN(meta.decimals) ? 0 : Math.abs(meta.decimals),
@@ -78,6 +86,14 @@ model.formats = {
             i = parseInt(n = Math.abs(n).toFixed(c)) + '',
             j = ((j = i.length) > 3) ? j % 3 : 0;
             return sign + (j ? i.substr(0, j) + t : '') + i.substr(j).replace(/(\d{3})(?=\d)/g, "$1" + t) + (c ? d + Math.abs(n - i).toFixed(c).slice(2) : ''); 
+    },
+    // A real number between -1 and 1, will be converted to a percentage
+    // -----------------------------------------------------------------
+    percent: function(n, meta) {
+        if (_.isNumber(n)) {
+            return this.number(n * 100.0, meta);
+        }
+        return '-';
     }
 };
 
@@ -88,7 +104,6 @@ model.meta = {
         "description": "Index of economic freedom: business freedom subcomponent",
         "format": "number",
         "decimals": "1",
-        "percent_convert": null,
         "unit": null,
         "index": "readiness",
         "sector": null,
@@ -104,13 +119,12 @@ model.meta = {
         "description": "Land less than 5 meters above sea-level",
         "format": "number",
         "decimals": "2",
-        "percent_convert": "n",
         "unit": "%s %",
         "index": "vulnerability",
         "sector": "infrastructure",
         "component": "exposure",
         "source": [{
-            "name": "cait.wri.org",
+            "name": "World Resources Institute",
             "link": "http://cait.wri.org/cait-va.php?page=valand5m&mode=view"
         }]
     },
@@ -118,15 +132,14 @@ model.meta = {
         "id": "coast_popn",
         "name": "Coastal population",
         "description": "Population living less than 5 meters above sea-level",
-        "format": "number",
+        "format": "percent",
         "decimals": "2",
-        "percent_convert": "y",
         "unit": "%s %",
         "index": "vulnerability",
         "sector": "infrastructure",
         "component": "sensitivity",
         "source": [{
-            "name": "cait.wri.org",
+            "name": "World Resources Institute",
             "link": "http://cait.wri.org/cait-va.php?page=vapop5m&mode=view"
         }]
     },
@@ -136,7 +149,6 @@ model.meta = {
         "description": "World governance indicator: control of corruption component",
         "format": "number",
         "decimals": "2",
-        "percent_convert": null,
         "unit": null,
         "index": "readiness",
         "sector": null,
@@ -150,15 +162,14 @@ model.meta = {
         "id": "d-Ppt",
         "name": "Precipitation change",
         "description": "Projected change in precipitation by the end of the 21st century",
-        "format": "number",
+        "format": "percent",
         "decimals": "2",
-        "percent_convert": "y",
         "unit": "%s %",
         "index": "vulnerability",
         "sector": "water",
         "component": "exposure",
         "source": [{
-            "name": "www.cru.uea.ac.uk",
+            "name": "Climate Reserach Unit",
             "link": "http://www.cru.uea.ac.uk/cru/data/precip/"
         }]
     },
@@ -168,13 +179,12 @@ model.meta = {
         "description": "Projected change in temperature by the end of the 21st century",
         "format": "number",
         "decimals": "1",
-        "percent_convert": null,
         "unit": "°C",
         "index": "vulnerability",
         "sector": "water",
         "component": "exposure",
         "source": [{
-            "name": "www.cru.uea.ac.uk",
+            "name": "Climate Research Unit",
             "link": "http://www.cru.uea.ac.uk/cru/data/temperature/"
         }]
     },
@@ -182,15 +192,14 @@ model.meta = {
         "id": "daly",
         "name": "Disability adjusted life years",
         "description": "Percent increase in DALY due to climate change in the late 21st century",
-        "format": "number",
+        "format": "percent",
         "decimals": "2",
-        "percent_convert": "y",
         "unit": "%s %",
         "index": "vulnerability",
         "sector": "health",
         "component": "exposure",
         "source": [{
-            "name": "www.globalizationandhealth.com",
+            "name": "Globalization and Health",
             "link": "http://www.globalizationandhealth.com/content/4/1/9"
         }]
     },
@@ -200,13 +209,12 @@ model.meta = {
         "description": "Percent population with access to electricity",
         "format": "number",
         "decimals": "1",
-        "percent_convert": "n",
         "unit": "%s %",
         "index": "vulnerability",
         "sector": "infrastructure",
         "component": "exposure",
         "source": [{
-            "name": "cait.wri.org",
+            "name": "World Resources Institute",
             "link": "http://cait.wri.org/cait-va.php?page=vaelectricity&mode=view"
         }]
     },
@@ -214,9 +222,8 @@ model.meta = {
         "id": "energy_sensit",
         "name": "Energy sensitivity",
         "description": "Percent of energy derived from hydroelectric and imported power",
-        "format": "number",
+        "format": "percent",
         "decimals": "0",
-        "percent_convert": "y",
         "unit": "%s %",
         "index": "vulnerability",
         "sector": "infrastructure",
@@ -238,7 +245,6 @@ model.meta = {
         "description": "Percent enrollment tertiary education",
         "format": "number",
         "decimals": "2",
-        "percent_convert": "n",
         "unit": "%s %",
         "index": "readiness",
         "sector": null,
@@ -254,7 +260,6 @@ model.meta = {
         "description": "Total expendature on external resources for health",
         "format": "number",
         "decimals": "2",
-        "percent_convert": "n",
         "unit": "%s %",
         "index": "vulnerability",
         "sector": "health",
@@ -270,7 +275,6 @@ model.meta = {
         "description": "Index of economic freedom: fiancial freedom subcomponent",
         "format": "number",
         "decimals": "1",
-        "percent_convert": null,
         "unit": null,
         "index": "readiness",
         "sector": null,
@@ -286,7 +290,6 @@ model.meta = {
         "description": "Index of economic freedom: fiscal freedom subcomponent",
         "format": "number",
         "decimals": "1",
-        "percent_convert": null,
         "unit": null,
         "index": "readiness",
         "sector": null,
@@ -302,7 +305,6 @@ model.meta = {
         "description": "Average of 2 best scores between use of fertilizers, mechanization and irrigation",
         "format": "number",
         "decimals": "2",
-        "percent_convert": null,
         "unit": null,
         "index": "vulnerability",
         "sector": "food",
@@ -328,7 +330,6 @@ model.meta = {
         "description": "Gross domestic product per capita",
         "format": "number",
         "decimals": "2",
-        "percent_convert": null,
         "unit": "%s [PPP]",
         "index": null,
         "sector": null,
@@ -340,7 +341,6 @@ model.meta = {
         "description": "Index of economic freedom: goverment spending subcomponent",
         "format": "number",
         "decimals": "1",
-        "percent_convert": null,
         "unit": null,
         "index": "readiness",
         "sector": null,
@@ -354,15 +354,14 @@ model.meta = {
         "id": "health_disease",
         "name": "Disease mortality",
         "description": "Percentage mortality due to infectious diseases",
-        "format": "number",
+        "format": "percent",
         "decimals": "2",
-        "percent_convert": "y",
         "unit": "%s %",
         "index": "vulnerability",
         "sector": "health",
         "component": "exposure",
         "source": [{
-            "name": "apps.who.int",
+            "name": "World Health Organization",
             "link": "http://apps.who.int/ghodata/?vid=99001#"
         }]
     },
@@ -370,9 +369,8 @@ model.meta = {
         "id": "imports",
         "name": "Food import dependency",
         "description": "Proportion of cereal consumption derived from external sources",
-        "format": "number",
+        "format": "percent",
         "decimals": "0",
-        "percent_convert": "y",
         "unit": "%s %",
         "index": "vulnerability",
         "sector": "food",
@@ -385,7 +383,6 @@ model.meta = {
         "description": "Index of economic freedom: investment freedom subcomponent",
         "format": "number",
         "decimals": "1",
-        "percent_convert": null,
         "unit": null,
         "index": "readiness",
         "sector": null,
@@ -401,7 +398,6 @@ model.meta = {
         "description": "Index of economic freedom: labor freedom subcomponent",
         "format": "number",
         "decimals": "1",
-        "percent_convert": null,
         "unit": null,
         "index": "readiness",
         "sector": null,
@@ -417,7 +413,6 @@ model.meta = {
         "description": "Life expectancy at birth",
         "format": "number",
         "decimals": "1",
-        "percent_convert": null,
         "unit": null,
         "index": "vulnerability",
         "sector": "health",
@@ -433,7 +428,6 @@ model.meta = {
         "description": "Percent of under 5 year-olds with low weight for their height",
         "format": "number",
         "decimals": "1",
-        "percent_convert": "n",
         "unit": "%s %",
         "index": "vulnerability",
         "sector": "food",
@@ -446,7 +440,6 @@ model.meta = {
         "description": "Lifetime risk of maternal death",
         "format": "number",
         "decimals": "2",
-        "percent_convert": "n",
         "unit": "%s %",
         "index": "vulnerability",
         "sector": "health",
@@ -462,7 +455,6 @@ model.meta = {
         "description": "Mobile cellular subscriptions (per 100 people)",
         "format": "number",
         "decimals": "2",
-        "percent_convert": null,
         "unit": null,
         "index": "readiness",
         "sector": null,
@@ -478,7 +470,6 @@ model.meta = {
         "description": "Index of economic freedom: monetary freedom subcomponent",
         "format": "number",
         "decimals": "1",
-        "percent_convert": null,
         "unit": null,
         "index": "readiness",
         "sector": null,
@@ -494,7 +485,6 @@ model.meta = {
         "description": "World governance indicator: political stability and non-violence component",
         "format": "number",
         "decimals": "2",
-        "percent_convert": null,
         "unit": null,
         "index": "readiness",
         "sector": null,
@@ -510,7 +500,6 @@ model.meta = {
         "description": "Total population",
         "format": "number",
         "decimals": "0",
-        "percent_convert": null,
         "unit": null,
         "index": null,
         "sector": null,
@@ -522,7 +511,6 @@ model.meta = {
         "description": "Frequency of floods divided by land area",
         "format": "number",
         "decimals": "2",
-        "percent_convert": null,
         "unit": null,
         "index": "vulnerability",
         "sector": "infrastructure",
@@ -535,7 +523,6 @@ model.meta = {
         "description": "Percentage of paved roads",
         "format": "number",
         "decimals": "2",
-        "percent_convert": "n",
         "unit": "%s %",
         "index": "vulnerability",
         "sector": "infrastructure",
@@ -544,12 +531,7 @@ model.meta = {
         {
             "name": "World Development Indicators",
             "link": "http://data.worldbank.org/indicator/IS.ROD.PAVE.ZS"
-        },
-        {
-            "name": "World Development Indicators",
-            "link": "http://data.worldbank.org/indicator/SP.RUR.TOTL"
-        }
-        ]
+        }]
     },
     "rural_popn": {
         "id": "rural_popn",
@@ -557,15 +539,19 @@ model.meta = {
         "description": "Percent of population in rural livelihoods",
         "format": "number",
         "decimals": "2",
-        "percent_convert": "n",
         "unit": "%s %",
         "index": "vulnerability",
         "sector": "food",
         "component": "sensitivity",
         "source": [{
             "name": "World Development Indicators",
+            "link": "http://data.worldbank.org/indicator/SP.RUR.TOTL"
+        }, 
+        {
+            "name": "World Development Indicators",
             "link": "http://data.worldbank.org/indicator/SP.POP.TOTL"
-        }]
+        }
+        ]
     },
     "rule_of_law": {
         "id": "rule_of_law",
@@ -573,7 +559,6 @@ model.meta = {
         "description": "World governance indicator: rule of law component",
         "format": "number",
         "decimals": "2",
-        "percent_convert": null,
         "unit": null,
         "index": "readiness",
         "sector": null,
@@ -589,7 +574,6 @@ model.meta = {
         "description": "Percent population with access to improved sanitation",
         "format": "number",
         "decimals": "1",
-        "percent_convert": "n",
         "unit": "%s %",
         "index": "vulnerability",
         "sector": "water",
@@ -602,10 +586,9 @@ model.meta = {
     "staff": {
         "id": "staff",
         "name": "Health workers per capita",
-        "description": "Number of medical workers per 1000 people",
+        "description": "Number of medical workers per 1000 people (calculated as (2 x physicians) + nurses)",
         "format": "number",
         "decimals": "2",
-        "percent_convert": null,
         "unit": null,
         "index": "vulnerability",
         "sector": "health",
@@ -627,7 +610,6 @@ model.meta = {
         "description": "Index of economic freedom: trade freedom subcomponent",
         "format": "number",
         "decimals": "1",
-        "percent_convert": null,
         "unit": null,
         "index": "readiness",
         "sector": null,
@@ -643,7 +625,6 @@ model.meta = {
         "description": "World governance indicator: voice and accountability component",
         "format": "number",
         "decimals": "2",
-        "percent_convert": null,
         "unit": null,
         "index": "readiness",
         "sector": null,
@@ -659,7 +640,6 @@ model.meta = {
         "description": "Percent population with access to improved water supply",
         "format": "number",
         "decimals": "1",
-        "percent_convert": "n",
         "unit": "%s %",
         "index": "vulnerability",
         "sector": "water",
@@ -675,7 +655,6 @@ model.meta = {
         "description": "Deaths due to water borne diseases in under 5 year-olds",
         "format": "number",
         "decimals": "0",
-        "percent_convert": null,
         "unit": null,
         "index": "vulnerability",
         "sector": "water",
@@ -688,13 +667,12 @@ model.meta = {
         "description": "Percent of total internal and external water withdrawn for all uses ",
         "format": "number",
         "decimals": "2",
-        "percent_convert": "n",
         "unit": "%s %",
         "index": "vulnerability",
         "sector": "water",
         "component": "sensitivity",
         "source": [{
-            "name": "www.fao.org",
+            "name": "UN Food and Agriculture Organization",
             "link": "http://www.fao.org/nr/water/aquastat/data/query/index.html?lang=en"
         }]
     },
@@ -704,7 +682,6 @@ model.meta = {
         "description": "Coefficient of variation of annual cereal yield ",
         "format": "number",
         "decimals": "2",
-        "percent_convert": null,
         "unit": null,
         "index": "vulnerability",
         "sector": "food",
@@ -720,13 +697,12 @@ model.meta = {
         "description": "Projected impact of climate change on agricultural yields",
         "format": "number",
         "decimals": "2",
-        "percent_convert": "n",
         "unit": "%s %",
         "index": "vulnerability",
         "sector": "food",
         "component": "exposure",
         "source": [{
-            "name": "www.cgdev.org",
+            "name": "Center for Global Development",
             "link": "http://www.cgdev.org/content/publications/detail/1424986"
         }]
     },
@@ -736,7 +712,6 @@ model.meta = {
         "description": "Component measuring national stability, governmental responsiveness and corruption ",
         "format": "number",
         "decimals": "3",
-        "percent_convert": null,
         "unit": null,
         "index": "readiness",
         "sector": null,
@@ -748,7 +723,6 @@ model.meta = {
         "description": "Component measuring economic stability, growth and governmental regulation",
         "format": "number",
         "decimals": "3",
-        "percent_convert": null,
         "unit": null,
         "index": "readiness",
         "sector": null,
@@ -760,7 +734,6 @@ model.meta = {
         "description": "Component measuring the society's awareness and understanding of climate risks and their belief that changes will increase adaptation capacity",
         "format": "number",
         "decimals": "3",
-        "percent_convert": null,
         "unit": null,
         "index": "readiness",
         "sector": null,
@@ -772,7 +745,6 @@ model.meta = {
         "description": "Component analyzing the probability of climate related hazards",
         "format": "number",
         "decimals": "3",
-        "percent_convert": null,
         "unit": null,
         "index": "vulnerability",
         "sector": null,
@@ -784,7 +756,6 @@ model.meta = {
         "description": "Component measuring the potential severity of the impacts of climate-related threats",
         "format": "number",
         "decimals": "3",
-        "percent_convert": null,
         "unit": null,
         "index": "vulnerability",
         "sector": null,
@@ -796,7 +767,6 @@ model.meta = {
         "description": "Component measuring the availability of economic, social and institutional resources to cope with and adapt to the impacts of climate change",
         "format": "number",
         "decimals": "3",
-        "percent_convert": null,
         "unit": null,
         "index": "vulnerability",
         "sector": null,
@@ -808,7 +778,6 @@ model.meta = {
         "description": "Sector measuring a nation's current and future ability to provide clean water",
         "format": "number",
         "decimals": "3",
-        "percent_convert": null,
         "unit": null,
         "index": "vulnerability",
         "sector": "water",
@@ -820,7 +789,6 @@ model.meta = {
         "description": "Sector measuring the nation's food production, nutrition and rural population",
         "format": "number",
         "decimals": "3",
-        "percent_convert": null,
         "unit": null,
         "index": "vulnerability",
         "sector": "food",
@@ -832,7 +800,6 @@ model.meta = {
         "description": "Sector measuring a nation's ability to provide health services against several mortality statistics",
         "format": "number",
         "decimals": "3",
-        "percent_convert": null,
         "unit": null,
         "index": "vulnerability",
         "sector": "health",
@@ -844,7 +811,6 @@ model.meta = {
         "description": "Sector analyzing three direct factors impacting human well-being in the face of climate change: coasts, energy and transportation",
         "format": "number",
         "decimals": "3",
-        "percent_convert": null,
         "unit": null,
         "index": "vulnerability",
         "sector": "infrastructure",
@@ -856,7 +822,6 @@ model.meta = {
         "description": "Vulnerability meausres a country's exposure, sensitivity and ability to cope with climate related hazards, as well as accounting for the overall status of food, water, health and infrastructure within the nation",
         "format": "number",
         "decimals": "3",
-        "percent_convert": null,
         "unit": null,
         "index": "vulnerability",
         "sector": null,
@@ -868,7 +833,6 @@ model.meta = {
         "description": "Readiness measures the ability of a country's private and public sectors to leverage resources effectively towards increasing resiliency to climate change",
         "format": "number",
         "decimals": "3",
-        "percent_convert": null,
         "unit": null,
         "index": "readiness",
         "sector": null,
@@ -880,12 +844,23 @@ model.meta = {
         "description": "The Global Adaptation Index™ (GaIn™) exposes countries' vulnerabilities to climate change and opportunities to improve resilience. It aims to help businesses and the public sector to better prioritize investments for a more efficient response to the immediate global challenges ahead.",
         "format": "number",
         "decimals": "1",
-        "percent_convert": null,
+        "unit": null,
+        "index": "gain",
+        "sector": null,
+        "component": null
+    },
+    "gain_delta": {
+        "id": "gain_delta",
+        "name": "GaIn™, corrected for GDP",
+        "description": "The Global Adaptation Index™ (GaIn™) exposes countries' vulnerabilities to climate change and opportunities to improve resilience. It aims to help businesses and the public sector to better prioritize investments for a more efficient response to the immediate global challenges ahead.",
+        "format": "number",
+        "decimals": "1",
         "unit": null,
         "index": "gain",
         "sector": null,
         "component": null
     }
+
 };
 
 // Color utilities

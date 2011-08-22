@@ -87,19 +87,12 @@ router = Backbone.Router.extend({
     },
     fetcher: function() {
         var models = [];
-        var fetched = 0;
-        var done = function(callback) {
-            return function() {
-                if (++fetched == models.length) {
-                    callback();
-                }
-            }
-        };
+
         return {
             push: function(item) { models.push(item) },
             fetch: function(callback) {
                 if (!models.length) return callback();
-                var _done = done(callback);
+                var _done = _.after(models.length, callback);
                 _.each(models, function(model) {
                     model.fetch({
                         success: _done,

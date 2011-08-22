@@ -61,6 +61,10 @@ view = views.Main.extend({
         return this;
     },
     attach: function() {
+
+        this.map = new models.Map({year: 2010, indicator: 'gain'},
+          {el: $('.country-summary .map', this.el)[0], width: 321, height: 135});
+
         if (this.tableView == undefined) {
             this.tableView = new views.CountryTable({
                 el: $('table#country-data', this.el),
@@ -70,23 +74,27 @@ view = views.Main.extend({
         this.tableView.attach();
         return this;
     },
+    activeLinks: function() {
+        views.Main.prototype.activeLinks.apply(this, arguments);
+        $('ul.tabs.level-1 .' + this.tableView.options.tab).addClass('active');
+        $('ul.tabs.level-2 .' + this.tableView.options.structure).addClass('active');
+    },
     selectTab: function(ev) {
         var e = $(ev.currentTarget);
 
-        $('ul.tabs li.active', this.el).removeClass('active');
-        e.parents('li').addClass('active');
-        e.parents('div:first').siblings('ul').find('li:first').addClass('active');
-        
         this.tableView.options.tab = 'vulnerability';
-        this.tableView.options.structure = 'components';
+        this.tableView.options.structure = 'sectors';
         if (e.hasClass('readiness')) {
+            this.tableView.options.structure = 'components';
             this.tableView.options.tab = 'readiness';
         }
-        if (e.hasClass('sectors')) {
-            this.tableView.options.structure = 'sectors';
+        if (e.hasClass('components')) {
+            this.tableView.options.structure = 'components';
         }
+        this.tableView.options.tab == 'readiness' ? $('ul.tabs.level-2').hide() : $('ul.tabs.level-2').show();
 
         this.tableView.render().attach();
+        this.activeLinks();
         return false;
     },
     openDrawer: function(ev) {
