@@ -709,7 +709,7 @@ model.meta = {
     "governance": {
         "id": "governance",
         "name": "Governance",
-        "description": "Component measuring national stability, governmental responsiveness and corruption ",
+        "description": "Component measuring national stability, governmental responsiveness and corruption",
         "format": "number",
         "decimals": "3",
         "unit": null,

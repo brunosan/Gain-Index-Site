@@ -355,13 +355,30 @@ ul.tabs li a.active {
     }
   #cabinet .floor .more,
   #cabinet .drawer .more {
-    margin: 5px 0px 10px;
+    float: right;
+    margin: 10px 0px 0px 0px;
     padding: 5px;
-    background: #ebebeb;
+    background-color: #8ad35e;
     border-radius: 3px;
     -moz-border-radius: 3px;
     -webkit-border-radius: 3px;
     }
+    #cabinet .floor .more a,
+    #cabinet .drawer .more a {
+      color: #fff;
+      }
+
+
+  #cabinet .drawer .country-summary {
+    border: 1px solid #c6c6c6;
+    border-radius: 5px;
+    moz-border-radius: 5px;
+    webkit-border-radius: 5px;
+    }
+    #cabinet .drawer .country-summary .gain {
+      width: 132px;
+      border-left: 0px;
+      }
 
 #cabinet .floor {
   position: absolute;
@@ -458,6 +475,7 @@ table.data tbody tr {
  * PLEASE put page specific styles in the respective pages. 
  */
 .country-summary {
+  height: 160px;
   float: left;
   }
   .country-summary h3{
@@ -468,6 +486,8 @@ table.data tbody tr {
     float:left;
     text-align: center;
     width: 115px;
+    height: 130px;
+    padding-top: 30px;
     border-style: solid;
     border-color: #c6c6c6;
     border-width: 0px 1px 0px 1px;
@@ -498,25 +518,18 @@ table.data tbody tr {
       margin: 10px 0px 0px 10px;
       }
   .country-summary div.vulnerability {
-    float: right;
     text-align: center;
-    line-height: 30px;
+    line-height: 25px;
     width: 125px;
     border-color: #c6c6c6;
     border-style: solid;
     border-width: 1px 0px 1px 0px;
     }
   .country-summary div.readiness {
-    float: right;
     text-align: center;
-    line-height: 30px;
+    line-height: 25px;
     height: 20px;
     width: 125px;
-    }
-  .country-summary .map {
-    border-width: 1px 0px 1px 1px;
-    height: 135px;
-    width: 320px;
     }
 /**
  * Small Matrix
@@ -674,8 +687,7 @@ table.data tbody tr {
 .front .featured { padding-left: 10px; }
 .front .featured .country {
   float: left;
-  width: 100%;
-  height: 175px;
+  width: 629px;
   border-color: #c6c6c6;
   border-width: 1px 0px 1px 1px;
   border-style: solid;
@@ -692,10 +704,7 @@ table.data tbody tr {
     width: 242px;
     float: right;
     }
-  .front .featured .country-summary .gain {
-    height: 125px;
-    padding-top: 50px;
-    }
+
 
 /**
  * Download page
@@ -810,37 +819,49 @@ table.data tr.active {
   margin-left: 20px;
   }
 .country-profile .country-summary {
-  width: 625px;
+  width: 629px;
+  height: 160px;
+  border-style: solid;
+  border-color: #c6c6c6;
+  border-width: 1px 0px 1px 1px;
+  border-radius: 5px 0px 0px 5px;
+  margin-left: 10px;
   }
-
-
-.country-profile .details,
-.country-profile .rankings {
-  background-color: #ebebeb;
-}
-
+  .country-profile .country-summary .gain {
+    width: 177px;
+    border-left: 0px;
+    }
+  .country-profile .country-summary .chart {
+    float: left;
+    }
+  .country-profile .country-summary .map {
+    border-left:1px solid #c6c6c6;
+    float: right;
+    }
 .country-profile h3 {
   line-height: 16px;
   padding: 0 0 10px 0;
-}
+  }
+.country-profile .details,
+.country-profile .rankings {
+  background-color: #ebebeb;
+  }
 .country-profile .rankings {
   padding: 10px 0 20px 0px;
   font-size: 11px;
-}
-
-.country-profile .rankings table {
-  margin-left: 10px;
-  border: 1px solid #c6c6c6;
-  border-right: none;
-  width: 625px;
-}
-
-.country-profile .rankings th,
-.country-profile .rankings td {
-  border-bottom: 1px solid #c6c6c6;
-  padding: 5px 0;
-  text-align: center;
-}
+  }
+  .country-profile .rankings table {
+    margin-left: 10px;
+    border: 1px solid #c6c6c6;
+    border-right: none;
+    width: 625px;
+    }
+  .country-profile .rankings th,
+  .country-profile .rankings td {
+    border-bottom: 1px solid #c6c6c6;
+    padding: 5px 0;
+    text-align: center;
+    }
 .rank-number {
   width: 22px;
   line-height: 19px;
