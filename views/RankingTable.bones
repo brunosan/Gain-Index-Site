@@ -9,7 +9,7 @@ view = Backbone.View.extend({
         // it's time to re-render.
         var view = this;
         this.collection.bind('reset', function() {
-            view.render().attach();
+            view.render();
         });
     },
     render: function() {
@@ -27,6 +27,7 @@ view = Backbone.View.extend({
                         .replace(/[^a-zA-Z0-9]+/gi, '-'),
                     iso3: model.get('ISO3'),
                     score: model.score(),
+                    outlook: model.outlook(),
                     rank: model.rank()
                 });
             }
@@ -38,27 +39,6 @@ view = Backbone.View.extend({
         // Conserve previously active table rows.
         previousId && $('tr#' + previousId).addClass('active');
         return this;
-    },
-    attach: function() {
-        var collection = this.collection, el = this.el;
-
-        // Iterate over all rows, if they have a div.graph setup the chart.
-        // This is delayed to make the page appear faster.
-        $('tr .graph', this.el).hide();
-        setTimeout(function() {
-            $('tr', el).each(function() {
-                var graph = $('.graph', this);
-                if (graph.length == 0) return;
-
-                var id = $(this).attr('id').substr(8);
-                if (!id) return;
-
-                var data = collection.getGraphData('ISO3', id);
-
-                new views.Sparkline({el: graph, data: data});
-            });
-            $('.graph', el).fadeIn(1000);
-        }, 100);
     },
     sortAlpha: function() {
         this.collection.comparator = function(model) {

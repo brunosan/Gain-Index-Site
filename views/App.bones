@@ -32,6 +32,15 @@ var adminSetup = _.once(function() {
     Bones.user.status();
 });
 
+// Sets up country search form in footer
+// -------------------------------------
+var searchSetup = _.once(function() {
+    var view = new views.CountrySearch({
+        model: new models.CountrySearch()
+    });
+    view.render();
+});
+
 // Sets up key tracking on client
 // ------------------------------
 // TODO: should we use Bones.currentKeys?
@@ -61,6 +70,7 @@ view = Backbone.View.extend({
     initialize: function() {
         this.render();
         if (!Bones.server) {
+            searchSetup();
             adminSetup();
             keyTracking();
         }

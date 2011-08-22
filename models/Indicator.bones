@@ -22,6 +22,12 @@ model = Backbone.Model.extend({
         }
         return this.format(value, {format: 'number', decimals: 3});
     },
+    outlook: function(options) {
+        var diff = this.score() - this.score({year: this.get('currentYear') - 1});
+        if (diff >= 0.5) return 'up';
+        if (diff <= -0.5) return 'down';
+        return 'same';
+    },
     input: function(options) {
         options = this.optionDefaults(options);
         var value = this.get('input')[options.year];
@@ -885,7 +891,20 @@ model.meta = {
         "index": "gain",
         "sector": null,
         "component": null
+    },
+    "gain_delta": {
+        "id": "gain_delta",
+        "name": "GaIn™, corrected for GDP",
+        "description": "The Global Adaptation Index™ (GaIn™) exposes countries' vulnerabilities to climate change and opportunities to improve resilience. It aims to help businesses and the public sector to better prioritize investments for a more efficient response to the immediate global challenges ahead.",
+        "format": "number",
+        "decimals": "1",
+        "percent_convert": null,
+        "unit": null,
+        "index": "gain",
+        "sector": null,
+        "component": null
     }
+
 };
 
 // Color utilities

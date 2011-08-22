@@ -9,6 +9,7 @@ model = Backbone.Model.extend({
     initialize: function(attributes, options) {
         var indicators = new models.Indicators(attributes.indicators);
         this.set({indicators: indicators}, {silent : true});
+        model.meta[this.id] && this.set(model.meta[this.id], {silent: true});
     },
     meta: function(key) {
         return model.meta[this.id][key] || '';
