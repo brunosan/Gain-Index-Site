@@ -116,7 +116,7 @@ view = views.Main.extend({
         // Lazy load 5 similar countries.
         var el = this.el;
         (new models.IndicatorSummary(
-            {id: indicator.get('name')}, {years: [indicator.get('currentYear')]}
+            {id: indicator.get('name'), years: [indicator.get('currentYear')]}
         )).fetch({
             success: function(summary) {
                 $('.drawer .similar-countries', el).empty().append(
