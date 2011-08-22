@@ -36,14 +36,20 @@
   <div id='page' class='limiter clearfix'>
     <div id='main'><%= main %></div>
   </div>
-  <div id='footer'>
+  <div id='footer1'>
     <div class='limiter'>
-      Download Data Download GaIn™ scores and indicators between 1995 and 2010 in CSV format.
+      <a class='downloadbutton button' href='/download'>Download Data 
+      	<span class="description">Download GaIn™ scores and indicators between 1995 and 2010 in CSV format.</span>
+      </a>
       <div id='country-search' class='search content'>
         <input class='textfield' name='search' type='textfield' />
         <input class='button' name='submit' type='submit' value='Go' />
       </div>
     </div>
+  </div>
+  <div id='footer2'>
+  	<div class='limiter'>
+  	</div>
   </div>
   <script><%= startup %></script>
 </body>

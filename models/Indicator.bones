@@ -39,7 +39,7 @@ model = Backbone.Model.extend({
     // TODO: assumes a maximum rank of 142, determine actual maximum.
     rank: function(options) {
         options = this.optionDefaults(options);
-        var value = this.get('rank')[options.year];
+        var value = this.get('rank') ? this.get('rank')[options.year] : undefined;
         if (!options.format || _.isUndefined(value)) {
             return value;
         }
@@ -54,6 +54,33 @@ model = Backbone.Model.extend({
         // TODO: Why do some indicators not have an id? Should we always use 'name'?
         format = format || (this.id || this.get('name'));
         return model.format(value, format);
+    },
+    // Determines whether this indicator has a GDP corrected version
+    // -------------------------------------------------------------
+    hasCorrection: function() {
+        return !_.isUndefined(model.meta[(this.id || this.get('name')) + '_delta']);
+    },
+    // Determines whether this indicator is corrected for GDP
+    // ------------------------------------------------------
+    isCorrection: function() {
+        return (this.id || this.get('name')).slice(-6) == '_delta';
+    },
+    // Retrieves the corrected/uncorrected name for this indicator
+    // -----------------------------------------------------------
+    // Only for indicators where isCorrection() || hasCorrection() == true
+    toggleCorrection: function() {
+        if (this.isCorrection()) {
+            return (this.id || this.get('name')).slice(0, -6);
+        } else {
+            return (this.id || this.get('name')) + '_delta';
+        }
+    },
+    // Retrieves the uncorrected version for this indicator
+    // ----------------------------------------------------
+    // Only for indicators where isCorrection() || hasCorrection() == true
+    uncorrected: function() {
+        if (this.hasCorrection()) return (this.id || this.get('name'));
+        return this.toggleCorrection();
     }
 });
 
@@ -819,11 +846,22 @@ model.meta = {
     "vulnerability": {
         "id": "vulnerability",
         "name": "Vulnerability",
-        "description": "Vulnerability meausres a country's exposure, sensitivity and ability to cope with climate related hazards, as well as accounting for the overall status of food, water, health and infrastructure within the nation",
+        "description": "Vulnerability measures a country's exposure, sensitivity and ability to cope with climate related hazards, as well as accounting for the overall status of food, water, health and infrastructure within the nation",
         "format": "number",
         "decimals": "3",
         "unit": null,
         "index": "vulnerability",
+        "sector": null,
+        "component": null
+    },
+    "vulnerability_delta": {
+        "id": "vulnerability_delta",
+        "name": "Vulnerability, corrected for GDP",
+        "description": "Vulnerability measures a country's exposure, sensitivity and ability to cope with climate related hazards, as well as accounting for the overall status of food, water, health and infrastructure within the nation",
+        "format": "number",
+        "decimals": "3",
+        "unit": null,
+        "index": "vulnerability_delta",
         "sector": null,
         "component": null
     },
@@ -835,6 +873,17 @@ model.meta = {
         "decimals": "3",
         "unit": null,
         "index": "readiness",
+        "sector": null,
+        "component": null
+    },
+    "readiness_delta": {
+        "id": "readiness_delta",
+        "name": "Readiness, corrected for GDP",
+        "description": "Readiness measures the ability of a country's private and public sectors to leverage resources effectively towards increasing resiliency to climate change",
+        "format": "number",
+        "decimals": "3",
+        "unit": null,
+        "index": "readiness_delta",
         "sector": null,
         "component": null
     },
@@ -860,7 +909,6 @@ model.meta = {
         "sector": null,
         "component": null
     }
-
 };
 
 // Color utilities

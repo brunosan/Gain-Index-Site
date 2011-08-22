@@ -4,6 +4,7 @@ router = Backbone.Router.extend({
         '/' : 'front',
         '/country/:id': 'country',
         '/ranking': 'rankingDefault',
+        '/ranking/delta/:id': 'rankingDelta',
         '/ranking/:id': 'ranking',
         '/ranking/readiness/:id': 'ranking',
         '/ranking/vulnerability/:id': 'ranking',
@@ -44,6 +45,9 @@ router = Backbone.Router.extend({
             if (err) return router.error(err);
             router.send(views.Country, {model: country});
         });
+    },
+    rankingDelta: function(id) {
+        return this.ranking((id || 'gain') + '_delta');
     },
     rankingDefault: function(id) {
         return this.ranking('gain');

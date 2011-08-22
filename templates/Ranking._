@@ -2,9 +2,15 @@
   <h2>Country Rankings</h2>
   <div class='tab-wrapper clearfix'>
     <ul class='tabs level-1'>
-      <li><a href='/ranking' class='exact'>GaIn™</a></li>
-      <li><a href='/ranking/vulnerability'>Vulnerability</a></li>
-      <li><a href='/ranking/readiness'>Readiness</a></li>
+      <% if (!delta) { %>
+        <li><a href='/ranking' class='exact'>GaIn™</a></li>
+        <li><a href='/ranking/vulnerability'>Vulnerability</a></li>
+        <li><a href='/ranking/readiness'>Readiness</a></li>
+      <% } else { %>
+          <li><a href='/ranking/delta/gain'>GaIn™</a></li>
+          <li><a href='/ranking/delta/vulnerability'>Vulnerability</a></li>
+          <li><a href='/ranking/delta/readiness'>Readiness</a></li>
+      <% } %>
     </ul>
     <% if (active.path) { %>
       <div class='tab-wrapper clearfix'>
