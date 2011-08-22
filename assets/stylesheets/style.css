@@ -354,13 +354,30 @@ ul.tabs li a.active {
     }
   #cabinet .floor .more,
   #cabinet .drawer .more {
-    margin: 5px 0px 10px;
+    float: right;
+    margin: 10px 0px 0px 0px;
     padding: 5px;
-    background: #ebebeb;
+    background-color: #8ad35e;
     border-radius: 3px;
     -moz-border-radius: 3px;
     -webkit-border-radius: 3px;
     }
+    #cabinet .floor .more a,
+    #cabinet .drawer .more a {
+      color: #fff;
+      }
+
+
+  #cabinet .drawer .country-summary {
+    border: 1px solid #c6c6c6;
+    border-radius: 5px;
+    moz-border-radius: 5px;
+    webkit-border-radius: 5px;
+    }
+    #cabinet .drawer .country-summary .gain {
+      width: 132px;
+      border-left: 0px;
+      }
 
 #cabinet .floor {
   position: absolute;
