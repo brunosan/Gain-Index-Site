@@ -1,5 +1,4 @@
 view = views.Document.extend({
-    className: 'document page page-inner clearfix',
     render: function(options) {
         // Approach the cabinet.
         $(this.el).empty().append(templates.Cabinet());

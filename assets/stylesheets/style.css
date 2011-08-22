@@ -87,6 +87,18 @@ a:hover {
  color: #81db4b; 	
  text-decoration: none;
 }
+
+/**
+ * Plain lists in documents.
+ */
+.document ul {
+  padding-top: 15px;
+}
+.document ul li {
+  margin: 0 20px;
+  list-style: circle inside;
+  }
+
 /**
  * Icons.
  */
