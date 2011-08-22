@@ -23,7 +23,7 @@
 <body>
   <div id='feedbacktab'><div class='button'>Feedback</div></div>
   <div id='header'><div class='limiter'>
-    <h2><a class='logo' href='/'>GaIn</a></h2>
+    <h1><a class='logo' href='/'>GaIn</a></h1>
     <div class='tagline'>The Global Adaptation Index</div>
     <ul class='navigation'>
       <li><a  class='map exact' href='/'>Map</a></li>

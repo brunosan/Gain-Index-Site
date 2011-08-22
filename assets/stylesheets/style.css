@@ -25,7 +25,7 @@ h1,h2,h3,h4,h5 {
   font-weight: 100;
   color: #434343;
   }
-   
+    
 h2 {
   font-size: 28px;
   padding: 15px 0 15px 20px;
@@ -34,7 +34,7 @@ h2 {
 
 h3 {
   font-size: 20px;
-  padding: 15px 0 15px 0;
+  padding-top: 15px;
   margin-left: 20px;
 }
 
@@ -75,6 +75,7 @@ p {
   line-height: 1.5;
   color: #434343;
   margin: 0 20px 0 20px;
+  padding-top: 15px;
 }
 
 a {
@@ -189,12 +190,12 @@ ul.tabs li a.active {
   position: relative;
   clear: both;
   }
-#header h2,
+#header h1,
 #header .navigation {
   float: left;
   height: 60px
   }
-  #header h2 a.logo {
+  #header h1 a.logo {
     display: block;
     position: absolute;
     top:15px;
@@ -320,7 +321,7 @@ ul.tabs li a.active {
   position: absolute;
   z-index: -1;
   left: 50%;
-  margin-left: -165px;
+  margin-left: -160px;
   top: 20px;
   width: 320px;
   background: #fff;
@@ -333,7 +334,7 @@ ul.tabs li a.active {
   }
 #cabinet .drawer.open {
   left: 50%;
-  margin-left: 180px;
+  margin-left: 160px;
   }
   #cabinet .drawer.open h3 {
   margin-left: 0px;
@@ -367,7 +368,7 @@ ul.tabs li a.active {
   z-index: -1;
   top: 20px;
   left: 50%;
-  margin-left: 180px;
+  margin-left: 160px;
   width: 320px;
   background: #ebebeb;
   border-radius: 0px 3px 3px 0px;
@@ -977,8 +978,8 @@ a.sort {
   width: 200px;
   }
 #about-nav-container ul {
+  padding: 15px 0 0 0;
   margin-left: 20px;
-  padding-left: 0;
   list-style-type: none;
   font-family: 'AlternateGothicLTNo3Regular',"HelveticaNeueBoldCondensed","HelveticaNeue-Bold-Condensed","Arial Narrow","Arial",sans-serif;
   text-transform: uppercase;
