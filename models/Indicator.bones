@@ -736,7 +736,7 @@ model.meta = {
     "governance": {
         "id": "governance",
         "name": "Governance",
-        "description": "Component measuring national stability, governmental responsiveness and corruption ",
+        "description": "Component measuring national stability, governmental responsiveness and corruption",
         "format": "number",
         "decimals": "3",
         "unit": null,
@@ -769,7 +769,7 @@ model.meta = {
     "exposure": {
         "id": "exposure",
         "name": "Exposure",
-        "description": "Component analyzing the probability of climate related hazards",
+        "description": "Component analyzing the probability of climate-related hazards",
         "format": "number",
         "decimals": "3",
         "unit": null,
