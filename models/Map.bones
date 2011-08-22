@@ -8,6 +8,7 @@ model = Backbone.Model.extend({
             tilejson = this.tilejson(),
             tooltip = wax.tooltip;
 
+        options = options || {};
 
         // Setup the map and add it to the model.
         // NOTE: the maps default element, width and height, etc.. can be overridden.
