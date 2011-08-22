@@ -20,4 +20,4 @@
     <div class='pin' style='top: <%= pin.y %>px; left: <%= pin.x %>px;'></div>
   </div>
 </div>
-<div class='map'></div>
+<% if (map) { %><div class='map'></div><% } %>

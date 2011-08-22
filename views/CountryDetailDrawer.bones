@@ -27,7 +27,7 @@ view = Backbone.View.extend({
         new views.CountrySummary({
             el: $('.content .country-summary', this.el),
             model: this.model
-        }).render();
+        });
 
         var data = this.model.get('indicators').getGraphData('name', this.indicator.id);
         if (data.length > 1) {

@@ -1,8 +1,13 @@
 view = Backbone.View.extend({
+    initialize: function(options) {
+        this.map = options.map || false;
+        this.render();
+    },
     render: function() {
         var summary = {},
             pin = {},
             indicators = this.model.get('indicators');
+
         _.each(['gain', 'readiness', 'vulnerability'], function(k) {
             var indicator = indicators.byName(k);
             if (indicator) {
@@ -22,7 +27,8 @@ view = Backbone.View.extend({
         }
         $(this.el).append(templates.CountrySummary({
             summary: summary,
-            pin: pin
+            pin: pin,
+            map: this.map
         }));
         return this;
     }
