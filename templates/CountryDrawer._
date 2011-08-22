@@ -1,4 +1,4 @@
-<div class='more'><a href='/ranking/<%= indicator %>'>More</a></div>
+<div class='more'><a href='/about/methodology#<%= methodologyHash %>'>More</a></div>
 <h3><%= title %><h3/>
 <div class='description'>
   <%= description %>
