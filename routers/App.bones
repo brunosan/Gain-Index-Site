@@ -50,7 +50,8 @@ router = Backbone.Router.extend({
         var ranking = new models.Ranking({id: id});
 
         fetcher.push(ranking);
-        fetcher.fetch(function() {
+        fetcher.fetch(function(err) {
+            if (err) return router.error(err);
             router.send(views.Ranking, {model: ranking});
         });
     },
@@ -73,7 +74,8 @@ router = Backbone.Router.extend({
         var model = new models.Page({id: id});
 
         fetcher.push(model);
-        fetcher.fetch(function() {
+        fetcher.fetch(function(err) {
+            if (err) return router.error(err);
             router.send(views.Page, {model: model});
         });
     },
