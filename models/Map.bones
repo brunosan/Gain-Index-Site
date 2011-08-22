@@ -10,7 +10,12 @@ model = Backbone.Model.extend({
 
 
         // Setup the map and add it to the model.
-        var m = new mm.Map('map', new wax.mm.connector(tilejson), new mm.Point(640,490));
+        // NOTE: the maps default element, width and height can be overridden.
+        var elem = options.el || 'map',
+            width = options.width || 640,
+            height = options.height || 490;
+
+        var m = new mm.Map(elem, new wax.mm.connector(tilejson), new mm.Point(width, height));
         this.set({map: m}, {silent: true});
 
         // Add fullscreen laters...
