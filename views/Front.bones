@@ -26,7 +26,16 @@ view = views.Main.extend({
         var list = _.reject(ranking.list('values', 2009), function(v) { return isNaN(parseFloat(v.value)) });
         rankTop = list.slice(0, 5);
         rankBottom = list.slice(list.length - 5, list.length);
-        $('.rankings', this.el).empty().append(
+        // Names are extra long, also, format score
+        _.map(rankTop, function(value) {
+            value.name = value.name.replace('The', '');
+            value.value = value.value.substr(0, value.value.length-2);
+        });
+        _.map(rankBottom, function(value) {
+            value.name = value.name.replace('The', '');
+            value.value = value.value.substr(0, value.value.length-2);
+        });
+        $('.ranking', this.el).empty().append(
             templates.RankingTopBottom({
                 top: rankTop,
                 bottom: rankBottom,
@@ -45,12 +54,12 @@ view = views.Main.extend({
             );
             new views.AboutQuadrantShort({
                 el: $('.featured .prose', that.el).last(),
-                model: model,
+                model: model
             }).render();
             new views.CountrySummary({
                 el: $('.featured .country-summary', that.el).last(),
-                model: model,
-            }).render();
+                model: model
+            });
         });
  
         // Some things fall on the floor.
