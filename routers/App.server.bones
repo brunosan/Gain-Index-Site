@@ -12,7 +12,7 @@ routers.App.prototype.send = function(view, options) {
         // Any options that is a model or collection will have it's title
         // declared. Use this to re-hydrate it.
         if (v.constructor.title != undefined) {
-            o += JSON.stringify(k) + ': new models.'+ v.constructor.title +'('+ JSON.stringify(options[k]) +'),';
+            o += JSON.stringify(k) + ': new models.'+ v.constructor.title +'('+ JSON.stringify(options[k]) + '),';
         } else {
             o += JSON.stringify(k) + ':' + JSON.stringify(options[k]) +',';
         }

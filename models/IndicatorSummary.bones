@@ -2,14 +2,17 @@
 // -----------------------------------------------------
 model = Backbone.Model.extend({
     initialize: function(attrs, options) {
-        this.options = options;
-        if (!this.options.years) throw new Error('Year parameter is required');
+        options = options || {};
+        // Look for years in options, this is where it gets passed in by the
+        // /api router.
+        !this.get('years') && this.set({years: options.years, silent: true});
+        if (!this.get('years')) throw new Error('Year parameter is required');
     },
     // Finds similar countries
     // -----------------------
     similar: function(iso3, count, aspect, year) {
         aspect = aspect || 'values';
-        year = year || _.last(this.options.years);
+        year = year || _.last(this.get('years'));
         var result = [],
             similar = this.list(aspect, year),
             pos = _.indexOf(_.pluck(similar, 'ISO3'), iso3);
@@ -40,7 +43,7 @@ model = Backbone.Model.extend({
     },
     url: function() {
         var url = '/api/IndicatorSummary/' + encodeURIComponent(this.get('id')) + '?';
-        _.each(this.options.years, function(year) {
+        _.each(this.get('years'), function(year) {
             url += '&years[]=' + encodeURIComponent(year);
         });
         return url;
