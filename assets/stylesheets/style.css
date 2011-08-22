@@ -484,7 +484,6 @@ table.data tbody tr {
       margin: 10px 0px 0px 10px;
       }
   .country-summary div.vulnerability {
-    float: right;
     text-align: center;
     line-height: 30px;
     width: 125px;
@@ -493,7 +492,6 @@ table.data tbody tr {
     border-width: 1px 0px 1px 0px;
     }
   .country-summary div.readiness {
-    float: right;
     text-align: center;
     line-height: 30px;
     height: 20px;
@@ -799,36 +797,43 @@ table.data tr.active {
   }
 .country-profile .country-summary {
   width: 625px;
+  height: 160px;
+  border-style: solid;
+  border-color: #c6c6c6;
+  border-width: 1px 0px 1px 1px;
+  border-radius: 5px 0px 0px 5px;
+  margin-left: 10px;
   }
-
-
-.country-profile .details,
-.country-profile .rankings {
-  background-color: #ebebeb;
-}
-
+  .country-profile .country-summary .chart {
+    float: left;
+    }
+  .country-profile .country-summary .map {
+    float: right;
+    }
 .country-profile h3 {
   line-height: 16px;
   padding: 0 0 10px 0;
-}
+  }
+.country-profile .details,
+.country-profile .rankings {
+  background-color: #ebebeb;
+  }
 .country-profile .rankings {
   padding: 10px 0 20px 0px;
   font-size: 11px;
-}
-
-.country-profile .rankings table {
-  margin-left: 10px;
-  border: 1px solid #c6c6c6;
-  border-right: none;
-  width: 625px;
-}
-
-.country-profile .rankings th,
-.country-profile .rankings td {
-  border-bottom: 1px solid #c6c6c6;
-  padding: 5px 0;
-  text-align: center;
-}
+  }
+  .country-profile .rankings table {
+    margin-left: 10px;
+    border: 1px solid #c6c6c6;
+    border-right: none;
+    width: 625px;
+    }
+  .country-profile .rankings th,
+  .country-profile .rankings td {
+    border-bottom: 1px solid #c6c6c6;
+    padding: 5px 0;
+    text-align: center;
+    }
 .rank-number {
   width: 22px;
   line-height: 19px;

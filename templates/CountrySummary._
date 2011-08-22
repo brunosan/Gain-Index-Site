@@ -15,11 +15,11 @@
     <div class='quad bl'></div>
     <div class='pin' style='top: <%= pin.y %>px; left: <%= pin.x %>px;'></div>
   </div>
-</div>
 <% _.each(['vulnerability', 'readiness'], function(stat) { %>
   <div class='<%= stat%>'>
       <span class='name'><%= data[stat].name %></span>
       <span class='value'><%= data[stat].value %></span>
   </div>
 <% }); %>
+</div>
 <% if (map) { %><div class='map'></div><% } %>
