@@ -21,7 +21,6 @@ command.prototype.initialize = function(options) {
         sqlite: options.config.files + '/indicators.sqlite',
         table: 'data',
         schema: schema,
-        keys: ['NAME', 'ISO3'],
         map: function(doc) {
             if (doc._id.indexOf('/api/Indicator') !== 0 || !sqliteIndicators[doc.name]) {
                 return false;
