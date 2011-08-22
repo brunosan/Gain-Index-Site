@@ -25,7 +25,7 @@
 <tbody>
 <% _.each(bottom, function(v, k) { %>
 <tr>
-<td> <%= k+1 %> <span class='country-name'> <a href='/country/<%= v.ISO3 %>'> <%= v.name %> </a> </span> </td>
+<td> <%= length - (4-k) %> <span class='country-name'> <a href='/country/<%= v.ISO3 %>'> <%= v.name %> </a> </span> </td>
 <td> <%= v.value %> </td>
 </tr>
 <% }); %>
