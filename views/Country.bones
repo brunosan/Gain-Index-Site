@@ -36,8 +36,9 @@ view = views.Main.extend({
 
         new views.CountrySummary({
             el: $('.country-summary', this.el).last(),
-            model: this.model
-        }).render();
+            model: this.model,
+            map: true
+        });
 
         this.aboutView = new views.AboutQuadrant({
             el: $('.prose', this.el),

@@ -54,12 +54,12 @@ view = views.Main.extend({
             );
             new views.AboutQuadrantShort({
                 el: $('.featured .prose', that.el).last(),
-                model: model,
+                model: model
             }).render();
             new views.CountrySummary({
                 el: $('.featured .country-summary', that.el).last(),
-                model: model,
-            }).render();
+                model: model
+            });
         });
  
         // Some things fall on the floor.

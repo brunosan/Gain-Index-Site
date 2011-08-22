@@ -589,9 +589,34 @@ table.data tbody tr {
     }
 
 .front .mission {
+  clear: left;
   background-color: #ebebeb;
   padding: 0;
   }
+
+.front .featured { padding-left: 10px; }
+.front .featured .country {
+  float: left;
+  width: 100%;
+  height: 175px;
+  border-color: #c6c6c6;
+  border-width: 1px 0px 1px 1px;
+  border-style: solid;
+  margin-bottom: 10px;
+  border-radius: 5px 0px 0px 5px;
+  moz-border-radius: 5px 0px 0px 5px;
+  webkit-border-radius: 5px 0px 0px 5px;
+  }
+  .front .featured .country .info {
+    width: 298px;
+    float: left;
+    }
+  .front .featured .country-summary {
+    float: right;
+    }
+  .front .featured .country-summary .stats {
+    height: 175px;
+    }
 
 /**
  * Download page
@@ -705,10 +730,12 @@ table.data tr.active {
   float: left;
   margin-left: 20px;
   }
-  
+.country-profile .country-summary {
+  width: 625px;
+  }
+
 .country-summary {
   float: left;
-  width: 625px;
   }
   .country-summary h3{
   margin-left: 10px;
@@ -716,16 +743,12 @@ table.data tr.active {
   }
   .country-summary > div {
     float: left;
-    border-color: #c6c6c6;
-    border-style: solid;
-    border-width: 0  1px 0 0;
     }
   .country-summary div.stats {
     width: 175px;
-    border-width: 1px 0px 1px 1px;
-    -moz-border-radius: 4px 0px 0px 4px;
-    -webkit-border-radius: 4px 0px 0px 4px;
-    border-radius: 4px 0px 0px 4px;
+    border-style: solid;
+    border-color: #c6c6c6;
+    border-width: 0px 1px 0px 1px;
     }
     .country-summary div.stats > div {
       text-align: center;
@@ -735,9 +758,6 @@ table.data tr.active {
       text-align: center;
       height: 95px;
       width: 174px;
-      border-color: #c6c6c6;
-      border-style: solid;
-      border-width: 0px 1px 0px 0px;
       }
     .country-summary div.gain .name {
       font-weight: bold;
@@ -760,10 +780,10 @@ table.data tr.active {
     .country-summary div.readiness {
       float: left;
       height: 20px;
-      width: 174px;
+      width: 175px;
       border-color: #c6c6c6;
       border-style: solid;
-      border-width: 0px 0px 1px 0px;
+      border-width: 1px 0px 1px 0px;
       }
     .country-summary div.vulnerability {
       float: left;
@@ -771,7 +791,6 @@ table.data tr.active {
       width: 174px;
       }
   .country-summary div.chart {
-    border-width: 1px 0px 1px 1px;
     height: 135px;
     width: 125px;
     }
@@ -783,10 +802,8 @@ table.data tr.active {
     height: 135px;
     width: 320px;
     }
-    .drawer .country-summary .map,
-    .featured .country-summary .map {
-      display: none;
-      }
+
+
 .featured div.stats div.country-summary {
     border-color: #c6c6c6;
     border-style: solid;
@@ -803,26 +820,8 @@ table.data tr.active {
     margin: 0 10px 0 10px;
     float: left;
   }
-.featured div.country-summary div.chart {
-    float: left;
-    height: 100%;
-      border-color: #c6c6c6;
-      border-style: solid;
-      border-width: 0px 0px 0px 1px;
-  }
 .featured div.country-summary div.chart .mini-matrix {
     margin: 5px 0 0 5px;
-  }
-.featured div.country-summary div.readiness, 
-.featured div.country-summary div.vulnerability {
-    width: 100%;
-    height: 30px;
-      border-color: #c6c6c6;
-      border-style: solid;
-      border-width: 0px 0px 1px 0px;
-  }
-.featured div.country-summary div.readiness {
-    border-width: 0px;
   }
 .featured div.country-summary div.gain {
     border-width: 0px;
