@@ -263,18 +263,75 @@ ul.tabs li a.active {
   text-indent: -9999px;
   }
 
-/**
- * Footer styles
- */
-#footer {
- height: 100px;
+/*** Top Footer styles ***/
+#footer1 {
+ height: 60px;
  font-size: 20px;
  background-color: #11202C;
  -moz-box-shadow: 0px 0px 20px #000;
  -webkit-box-shadow: 0px 0px 20px #000;
  box-shadow: 0px 0px 20px #000;
+ border-bottom: #1d354c 1px solid;
  }
 
+#footer1 a {
+ float: left;
+ width: 630px;
+ height: 20px;
+ background: #1d354c url('../images/sprite.png') 5px -860px no-repeat;
+ color: white;
+ text-indent: 25px;
+ margin: 15px 0px 15px 0px;
+ padding: 5px;
+ border-radius: 4px;
+ -moz-border-radius: 4px;
+ -webkit-border-radius: 4px;
+}
+
+  #footer1 a:hover {background: #21405d url('../images/sprite.png') 5px -860px no-repeat;}
+
+#footer1 a.downloadbutton .description {
+ float: right;
+ text-transform: none;
+ font-weight: normal;
+ display: block;
+ font-size: 12px;
+}
+
+#footer1 .search {
+ margin: 15px 0px 15px 20px;
+ float: left;
+  }
+  #footer1 .search input {
+    padding: 5px 10px;
+    background-color: #fff;
+    border-radius: 4px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    }
+  #footer1 .search input.textfield {
+    width: 230px;
+    -moz-box-shadow: inset 0px 0px 4px #000;
+    -webkit-box-shadow: inset 0px 0px 4px #000;
+    box-shadow: inset 0px 0px 4px #000;
+    background-color: #fff;
+    }
+  #footer1 .search input.button {
+    margin-left: 8px;
+    color: #fff;
+    -webkit-box-shadow: 0 1px 0 0 black;
+    -moz-box-shadow: 0 1px 0 0 black;
+    box-shadow: 0 1px 0 0 black;
+    background-color: #1d354c;
+    }
+  #footer1 .search input.button:hover {background-color: #21405d;}
+  
+/*** Bottom Footer Styles ***/
+
+#footer2 {
+ height: 40px;
+ background-color: #11202C;
+ }
 /** Feedback tab **/
 
 #feedbacktab {
@@ -293,12 +350,12 @@ ul.tabs li a.active {
   z-index: 2;
 }
 
-#feedbacktab:hover {
-  background-color: #5a2;
+#feedbacktab .button {
+  color: white;
 }
 
-#feedbacktab h4{
-  color: white;
+#feedbacktab:hover {
+  background-color: #94eb60;
 }
 
 /**
@@ -430,25 +487,6 @@ ul.tabs li a.active {
     }
 
   .floor .search input.button {
-    background-color: #fff;
-    }
-
-#footer .search {
-  }
-  #footer .search input {
-    padding: 5px 10px;
-    background-color: #fff;
-    border-radius: 2px;
-    -moz-border-radius: 2px;
-    -webkit-border-radius: 2px;
-    }
-  #footer .search input.textfield {
-    -moz-box-shadow: inset 0px 0px 3px #000;
-    -webkit-box-shadow: inset 0px 0px 3px #000;
-    box-shadow: inset 0px 0px 3px #000;
-    background-color: #fff;
-    }
-  #footer .search input.button {
     background-color: #fff;
     }
 
