@@ -17,21 +17,17 @@ view = views.Main.extend({
             return this;
         }
         var id = this.model.get('id');
-        var active = (id == 'gain') ? {} : {
-            path: path(meta[id].index),
-            name: meta[meta[id].index].name
-        };
         _.each(meta, function(v) {
             if (v.index == meta[id].index) {
                 if (v.sector) {
                     sectors[v.sector] = {
-                        path: path(v.index),
+                        path: path(v.sector),
                         name: meta[v.sector].name
                     };
                 }
                 if (v.component) {
                     components[v.component] = {
-                        path: path(v.index),
+                        path: path(v.component),
                         name: meta[v.component].name
                     };
                 }
@@ -43,6 +39,10 @@ view = views.Main.extend({
         };
         components = _.sortBy(components, comparator);
         sectors = _.sortBy(sectors, comparator);
+        var active = (components.length + sectors.length) > 1 ? {
+            path: path(meta[id].index),
+            name: meta[meta[id].index].name
+        } : {};
 
         // Approach the cabinet.
         $(this.el).empty().append(templates.Cabinet());
@@ -52,7 +52,8 @@ view = views.Main.extend({
             indicatorName: this.model.get('subject').meta('name'),
             active: active,
             sectors: sectors,
-            components: components
+            components: components,
+            delta: this.model.get('subject').isCorrection()
         }));
 
         this.tableView = new views.RankingTable({
@@ -86,14 +87,14 @@ view = views.Main.extend({
             template = templates.CorrectionFloor;
             if (subject.isCorrection()) {
                 locals.correction = {
-                    caption: 'World wide ranking by ' + subject.meta('name') + ', corrected for GDP',
-                    href: path,
+                    caption: 'World wide ranking by ' + subject.meta('name'),
+                    href: path == '/ranking/gain' ? '/ranking' : path,
                     title: 'Remove GDP correction'
                 };
             } else {
                 locals.correction = {
                     caption: 'World wide ranking by ' + subject.meta('name'),
-                    href: path + '/delta',
+                    href: path.replace('/ranking', '/ranking/delta'),
                     title: 'Correct for GDP'
                 };
             }

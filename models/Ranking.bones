@@ -23,15 +23,17 @@ model = Backbone.Model.extend({
 // Generates the user facing paths for each ranking
 // ------------------------------------------------
 model.path = function(id) {
-    if (id == 'gain') {
-        return '/ranking';
-    }
     var meta = models.Indicator.meta;
     if (!meta[id]) {
         return '/';
     }
-    if (meta[id].index && meta[meta[id].index].index != meta[id].index) {
-        return '/ranking/' + meta[id].index + '/' + id;
+    var base = '/ranking/';
+    if (id.slice(-6) == '_delta') {
+        base = '/ranking/delta/';
+        id = id.slice(0, -6);
     }
-    return '/ranking/' + id;
+    if (meta[id].index && (id != meta[id].index)) {
+        return base + meta[id].index + '/' + id;
+    }
+    return base + id;
 };

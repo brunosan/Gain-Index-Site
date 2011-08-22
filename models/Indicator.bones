@@ -861,7 +861,7 @@ model.meta = {
         "format": "number",
         "decimals": "3",
         "unit": null,
-        "index": "vulnerability",
+        "index": "vulnerability_delta",
         "sector": null,
         "component": null
     },
@@ -883,7 +883,7 @@ model.meta = {
         "format": "number",
         "decimals": "3",
         "unit": null,
-        "index": "readiness",
+        "index": "readiness_delta",
         "sector": null,
         "component": null
     },
