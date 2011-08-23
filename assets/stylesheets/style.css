@@ -110,14 +110,21 @@ ul {
   }
 
 /**
- * Plain lists in documents.
+ * Documents.
  */
 .document ul {
   padding-top: 15px;
 }
 .document ul li {
   margin: 0 20px;
-  list-style: circle inside;
+  list-style: disc inside;
+  }
+.document h2 {
+  margin-bottom: 15px;
+  margin-left: -15px;
+  margin-right: -15px;
+  padding-left: 15px;
+  padding-right: 15px;
   }
 
 /**
