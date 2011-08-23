@@ -15,7 +15,7 @@ view = Backbone.View.extend({
                 e.preventDefault();
                 views.App.route('/country/' + ui.item.value);
             },
-            position: { at: "left top", my: 'left bottom' }
+            position: { at: "left bottom", my: 'left top' }
         });
     },
     events: {
@@ -33,10 +33,10 @@ view = Backbone.View.extend({
             return reg.test(o.get('ISO3')) || reg.test(o.get('name'));
         });
 
-        results = _(results).first(10);
+        results = _(results).first(3);
 
         return _(results).map(function(o) { 
             return { label: o.get('name'), value: o.get('ISO3') } 
-        }).reverse();
+        });
     }
 });
