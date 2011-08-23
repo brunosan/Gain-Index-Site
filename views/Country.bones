@@ -62,9 +62,19 @@ view = views.Main.extend({
         return this;
     },
     attach: function() {
+        var coords = (this.model.meta('coords'));
 
-        this.map = new models.Map({year: 2010, indicator: 'gain'},
-          {el: $('.country-summary .map', this.el)[0], width: 320, height: 160});
+        this.map = new models.Map({year: 2010, indicator: 'gain'}, {
+            el: $('.country-summary .map', this.el)[0],
+            width: 315,
+            height: 160,
+            lon: coords[0],
+            lat: coords[1]
+        });
+        this.map.featureClick = function(feature, context, index) {
+            var iso = $(feature).data('iso');
+            return window.location = '/country/'+ iso;
+        }
 
         if (this.tableView == undefined) {
             this.tableView = new views.CountryTable({
@@ -135,9 +145,11 @@ view = views.Main.extend({
         });
 
         if (data && data.length > 1) {
+            var rawData = this.model.get('indicators').getRawGraphData('name', ind);
             new views.Bigline({
                 el: $('.drawer .content .graph', this.el),
-                data: data
+                data: data,
+                rawData: rawData
             })
         } else {
             $('.drawer .content .graph', this.el).hide();

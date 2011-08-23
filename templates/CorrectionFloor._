@@ -1,7 +1,9 @@
 <div class='content'>
-  <h3><%= title %></h3>
-  <p><%= content %></p>
-  <div class='correction-control'>
+  <div class='description container'>
+    <h3><%= title %></h3>
+    <p><%= content %></p>
+  </div>
+  <div class='correction-control container'>
   <p><%= correction.caption %></p>
   <a href='<%= correction.href %>'><%= correction.title %></a>
   </div>

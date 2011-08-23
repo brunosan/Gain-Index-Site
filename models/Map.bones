@@ -13,8 +13,8 @@ model = Backbone.Model.extend({
         var elem = options.el || 'map',
             width = options.width || 640,
             height = options.height || 490,
-            lat = options.lat || -98,
-            lon = options.lon || 39,
+            lat = options.lat || 39,
+            lon = options.lon || -98,
             z = options.z || 2;
 
         var mm = com.modestmaps,
@@ -34,7 +34,7 @@ model = Backbone.Model.extend({
         };
         wax.mm.interaction(m, tilejson, {callbacks: this.tooltip });
 
-        m.setCenterZoom(new mm.Location(lon, lat), z);
+        m.setCenterZoom(new mm.Location(lat, lon), z);
 
         // Bind to the change event of the map model so that any time the year
         // or indicator is changed we automatically update the map.
@@ -49,7 +49,9 @@ model = Backbone.Model.extend({
             scheme: 'tms',
             tiles: ['http://'+ location.host+'/tiles/1.0.0/'+ ind +'-'+ y +'/{z}/{x}/{y}.png'],
             grids: ['http://'+ location.host+'/tiles/1.0.0/'+ ind +'-'+ y +'/{z}/{x}/{y}.grid.json'],
-            formatter: this.featureHover
+            formatter: this.featureHover,
+            minzoom: 1,
+            maxzoom: 6
         };
     },
     updateMap: function() {
@@ -60,8 +62,14 @@ model = Backbone.Model.extend({
         m.setProvider(new wax.mm.connector(tilejson));
     },
     featureHover: function(options, data) {
-        var ind = this.get('indicator');
-        var val = models.Indicator.format(data.factor_raw, ind);
+        if (data.factor_raw === undefined) {
+            var val = "Not evaluated";
+        } else if (data.factor_raw === 0) {
+            var val = "No GaIn&trade; score";
+        } else {
+            var ind = this.get('indicator');
+            var val = models.Indicator.format(data.factor_raw, ind);
+        }
         
         return '<span data-iso="' + data.iso_a3 + '">' + data.admin + ': '+ val +'</span>';
     },

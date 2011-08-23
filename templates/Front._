@@ -1,25 +1,25 @@
 <div class='front'>
   <div id='map'></div>
   <div id='carousel'>
-    <div class='item'>
+    <div class='item container'>
       <div class='overview active'>
         <h2>Discover Improvement Opportunities</h2>
         <p>Assess where the greatest needs and opportunities for improving resilience to climate change exist. Explore GaIn Rankings</p>
       </div>
     </div>
-    <div class='item'>
+    <div class='item container'>
       <div class='overview'>
         <h2>Measuring What Matters</h2>
         <p>We continuously monitor and analyze 38 indicators for 192 countries to assess climate change related vulnerabilities and readiness for improvement.</p>
       </div>
     </div>
-    <div class='item'>
+    <div class='item container'>
       <div class='overview'>
         <h2>Rigorous and Evolving</h2>
         <p>The Global Adaptation Index has been designed by industry experts and is improved under a continuous open review process. See our methodology.</p>
       </div>
     </div>
-    <div class='item'>
+    <div class='item container'>
       <div class='overview'>
         <h2>It's Open: Analyse and Republish</h2>
         <p>Download, analyze and republish GaIn data under and open Creative Commons license.</p>
@@ -27,14 +27,14 @@
     </div>
   </div>
   <div class='button green clearfix'><a href='/ranking'> View Full Rankings </a></div>
-  <h3> Global Adaptation Index™ Country Rankings</h3>
+  <h3 class='container'> Global Adaptation Index™ Country Rankings</h3>
   <div class='ranking clearfix'>
   </div>
-  <div class='featured'>
+  <div class='featured container'>
     <h3>Featured Countries</h3>
     <div class='countries'></div>
   </div>
-  <div class='mission'>
+  <div class='mission container'>
     <h3>About the Global Adaptation Institute</h3>
     <p class='prose'>The Global Adaptation Institute is a non-profit environmental organization guided by a vision of building resilience againts climate change and other global forces as a key component to sustainable development. Our mission is to enhance the world's understanding of the urgency for adaptation to climate change and other global forces through private and public investments for developing countries.</p>
   </div>
