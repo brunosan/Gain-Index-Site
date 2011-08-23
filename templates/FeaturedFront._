@@ -1,5 +1,5 @@
 <div class='country'>
-  <div class='info'>
+  <div class='info container'>
     <h3><a href='/country/<%= iso %>'><%= name %></a></h3>
     <p class='prose'></p>
   </div>

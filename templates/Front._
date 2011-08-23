@@ -1,6 +1,6 @@
 <div class='front'>
   <div id='map'></div>
-  <div id='carousel'>
+  <div id='carousel' class='container'>
     <div class='item'>
       <div class='overview active'>
         <h2>Discover Improvement Opportunities</h2>
@@ -27,14 +27,14 @@
     </div>
   </div>
   <div class='button green clearfix'><a href='/ranking'> View Full Rankings </a></div>
-  <h3> Global Adaptation Index™ Country Rankings</h3>
+  <h3 class='container'> Global Adaptation Index™ Country Rankings</h3>
   <div class='ranking clearfix'>
   </div>
-  <div class='featured'>
+  <div class='featured container'>
     <h3>Featured Countries</h3>
     <div class='countries'></div>
   </div>
-  <div class='mission'>
+  <div class='mission container'>
     <h3>About the Global Adaptation Institute</h3>
     <p class='prose'>The Global Adaptation Institute is a non-profit environmental organization guided by a vision of building resilience againts climate change and other global forces as a key component to sustainable development. Our mission is to enhance the world's understanding of the urgency for adaptation to climate change and other global forces through private and public investments for developing countries.</p>
   </div>
