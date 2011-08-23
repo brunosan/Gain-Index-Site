@@ -362,7 +362,7 @@ ul.tabs li a.active {
 /*** Bottom Footer Styles ***/
 
 #footer2 {
- height: 40px;
+ height: 150px;
  background-color: #11202C;
  }
 /** Feedback tab **/
@@ -429,6 +429,7 @@ ul.tabs li a.active {
 #cabinet .top {
   float: left;
   width: 640px;
+  min-height: 500px;
   background-color: #fff;
   -moz-box-shadow: 0px -20px 20px #000;
   -webkit-box-shadow: 0px -20px 20px #000;
@@ -1104,7 +1105,10 @@ background: url('../images/sprite.png') 82px -370px;
 .ranking table.data .icon-outlook {
   float: left;
   margin-top: 5px;
-}
+  }
+.ranking .tab-wrapper .tab-wrapper {
+  height: 20px;
+  }
 
 /**
  * Featured ranking, front page

@@ -1,5 +1,5 @@
 <thead><tr>
-  <th><a class='sort label rank' href='#sort-rank'>Rank</a></th>
+  <th><a class='sort label rank activeSort' href='#sort-rank'>Rank</a></th>
   <th><a class='sort label alpha' href='#sort-alpha'>Country</a></th>
   <th><a class='sort label income' href='#sort-income'>Income group</a></th>
   <th></th>

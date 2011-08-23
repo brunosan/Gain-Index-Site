@@ -1,7 +1,7 @@
 <div class='ranking'>
   <h2>Country Rankings</h2>
-  <p>Rank countries by GaIn™, vulnerability, readiness, and other scores.</p>
-  <p class='label'>Indicators show latest available data as of June 2011</p>
+  <p>Rank countries by GaIn™, Vulnerability and Readiness.</p>
+  <p class='label'>Latest available data as of June 2011</p>
   <div class='tab-wrapper clearfix'>
     <ul class='tabs level-1'>
       <% if (!delta) { %>
@@ -14,22 +14,23 @@
           <li><a href='/ranking/delta/readiness'>Readiness</a></li>
       <% } %>
     </ul>
+    <div class='tab-wrapper clearfix'>
     <% if (active.path) { %>
-      <div class='tab-wrapper clearfix'>
-        <ul class='tabs level-2'>
-          <li><a href='<%= active.path %>' class='exact'><%= active.name %></a></li>
-        </ul>
+      <ul class='tabs level-2'>
+        <li><a href='<%= active.path %>' class='exact'><%= active.name %></a></li>
+      </ul>
     <% } %>
-    <ul class='tabs level-2'>
+      <ul class='tabs level-2'>
       <% _.each(sectors, function(sector) { %>
         <li><a href='<%= sector.path %>'><%= sector.name %></a></li>
       <% }); %>
-    </ul>
-    <ul class='tabs level-2'>
+      </ul>
+      <ul class='tabs level-2'>
       <% _.each(components, function(component) { %>
         <li><a href='<%= component.path %>'><%= component.name %></a></li>
       <% }); %>
-    </ul>
+      </ul>
+    </div>
   </div>
   <table class='data'></table>
 </div>
