@@ -137,6 +137,7 @@ view = views.Main.extend({
         e.parents('ul').find('a').removeClass('selected');
 
         this.map.set({year:e.addClass('selected').text()});
+        this.noDrawer = true;
         return false;
     },
     indicatorClick: function(ev) {
@@ -153,6 +154,7 @@ view = views.Main.extend({
             }
         });
         this.map.set({indicator: indicator});
+        this.noDrawer = true;
         return false;
     },
     toggleCorrection: function() {
@@ -168,6 +170,14 @@ view = views.Main.extend({
         return false;
     },
     openDrawer: function(iso3) {
+        // Neither stopPropagation() nor preventDefault() seem to have effect
+        // when the click is over the map. So we use this `noDrawer` flag to
+        // stop the drawer from opening. This only works because it appears
+        // that our click handers fire before the drawer get's opened.
+        if (this.noDrawer != undefined) {
+            delete this.noDrawer;
+            return;
+        }
         new views.CountryDetailDrawer({
             el: $('.drawer', this.el),
             model:new models.Country({id: iso3}),
