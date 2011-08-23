@@ -24,34 +24,34 @@ h1,h2,h3,h4,h5 {
   font-family: 'AlternateGothicLTNo3Regular',"HelveticaNeueBoldCondensed", "HelveticaNeue-Bold-Condensed", "Arial Narrow", "Arial", sans-serif;
   font-weight: 100;
   color: #434343;
+  padding-top: 15px;
+  padding-bottom: 15px;
   }
     
 h2 {
   font-size: 28px;
-  padding: 15px 0 15px 20px;
   border-bottom: #c6c6c6 1px solid;
 }
 
 h3 {
   font-size: 20px;
-  padding-top: 15px;
-  margin-left: 20px;
 }
 
 h4 {
   font-weight: normal;
   font-size: 18px;
-  padding-top: 15px;
-  margin-left: 20px;
   }
 
 .drawer h4 {
   font-family: 'HelveticaNeue', Helvetica, Arial, sans-serif;
   font-style: italic;
   font-size: 12px;
-  padding-top: 0;
-  margin-left: 0;
   color: #434343;
+  }
+
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
   }
 
 .label {
@@ -90,8 +90,7 @@ p {
   font-size: 14px;
   line-height: 1.5;
   color: #434343;
-  margin: 0 20px 0 20px;
-  padding-top: 15px;
+  padding: 0 0 15px 0;
 }
 
 a {
@@ -521,10 +520,6 @@ ul.tabs li a.active {
       bottom: 0;
       }
 
-  #cabinet .floor .content {
-    padding: 0px 20px 20px 20px;
-    }
-
   #cabinet .floor .more {
     background: #fff;
     }
@@ -805,7 +800,6 @@ table.data tbody tr {
 .front .mission {
   clear: left;
   background-color: #ebebeb;
-  padding: 0;
   }
 
 .front .featured { padding-left: 10px; }
@@ -821,11 +815,11 @@ table.data tbody tr {
   webkit-border-radius: 5px 0px 0px 5px;
   }
   .front .featured .country .info {
-    width: 380px;
+    width: 350px;
     float: left;
     }
   .front .featured .country-summary {
-    width: 242px;
+    width: 249px;
     float: right;
     }
 
@@ -1043,8 +1037,7 @@ tbody tr.active:hover {
 
 .floor .correction-control {
   border-top: 1px solid #ccc;
-  padding-top: 20px;
-  margin-top: 20px;
+  padding: 15px;
   }
   .floor .correction-control p {
     font-style: italic;
