@@ -76,6 +76,7 @@ view = Backbone.View.extend({
     },
     initialize: function() {
         if (!Bones.server) {
+            start();
             feedbackSetup();
             searchSetup();
             adminSetup();
@@ -104,7 +105,6 @@ view.prototype.routeClick = function(ev) {
 // Routes a path
 // -------------
 view.route = function(path) {
-    start();
     if (path.charAt(0) === '/') {
         var matched = _.any(Backbone.history.handlers, function(handler) {
             if (handler.route.test(path)) {
