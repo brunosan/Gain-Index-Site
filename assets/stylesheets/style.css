@@ -130,7 +130,8 @@ a:hover {
   /**
    * TODO: get a new icon for the '=' sign.
    */
-  .icon-outlook-same { background-image: none; }
+  .icon-outlook-same { background-position: 0px -387px; }
+  table .icon-outlook-same { background-image: none; }
 
 
 /**
@@ -600,8 +601,8 @@ table.data tbody tr {
       }
     .country-summary div.gain .icon-outlook {
       display: inline-block;
-      width: 10px;
-      height: 10px;
+      width: 15px;
+      height: 15px;
       }
   .country-summary div.chart {
     float: right;

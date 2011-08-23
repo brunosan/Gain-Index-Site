@@ -26,14 +26,14 @@
      inkscape:pageopacity="1"
      inkscape:pageshadow="2"
      inkscape:zoom="1"
-     inkscape:cx="322.86853"
-     inkscape:cy="1694.9505"
+     inkscape:cx="287.52429"
+     inkscape:cy="1637.5093"
      inkscape:document-units="px"
-     inkscape:current-layer="layer9"
-     showgrid="true"
+     inkscape:current-layer="layer3"
+     showgrid="false"
      inkscape:window-width="1280"
      inkscape:window-height="684"
-     inkscape:window-x="1"
+     inkscape:window-x="126"
      inkscape:window-y="0"
      inkscape:window-maximized="0"
      showguides="false"
@@ -1797,7 +1797,7 @@
        transform="translate(0,-1.7851561e-5)" />
   </g>
   <g
-     style="display:none"
+     style="display:inline"
      inkscape:label="country page"
      id="layer3"
      inkscape:groupmode="layer"
@@ -12047,7 +12047,7 @@
        transform="translate(0,-147.63782)" />
   </g>
   <g
-     style="display:inline"
+     style="display:none"
      inkscape:label="matrix"
      id="layer9"
      inkscape:groupmode="layer">
@@ -26446,7 +26446,7 @@
          id="path17987"
          inkscape:connector-curvature="0" />
       <rect
-         style="color:#000000;fill:#969696;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+         style="color:#000000;fill:#8c8c8c;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
          id="rect17623"
          width="95"
          height="25.000002"
@@ -26850,7 +26850,7 @@
        id="text9011-0-1-6-2-6-4"
        y="173.23587"
        x="623.46991"
-       style="font-size:12px;font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:end;text-decoration:none;line-height:120.00000477%;letter-spacing:0px;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:end;baseline-shift:baseline;color:#000000;fill:#434343;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Helvetica Neue;-inkscape-font-specification:Helvetica Neue Italic"
+       style="font-size:12px;font-style:italic;font-variant:normal;font-weight:bold;font-stretch:normal;text-indent:0;text-align:end;text-decoration:none;line-height:120.00000477%;letter-spacing:0px;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:end;baseline-shift:baseline;color:#000000;fill:#434343;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Helvetica Neue;-inkscape-font-specification:Helvetica Neue Bold Italic"
        xml:space="preserve"
        inkscape:export-filename="/Users/saman/graphics/gaIn/renders/country_indicator.png"
        inkscape:export-xdpi="90"
@@ -27049,6 +27049,30 @@
        inkscape:export-filename="/Users/saman/graphics/gaIn/renders/country_indicator.png"
        inkscape:export-xdpi="90"
        inkscape:export-ydpi="90" />
+    <rect
+       style="color:#000000;fill:#94eb60;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       id="rect8486"
+       width="440"
+       height="35"
+       x="-440"
+       y="159.99988"
+       transform="scale(-1,1)" />
+    <rect
+       style="color:#000000;fill:#ebebeb;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       id="rect8488"
+       width="98.700073"
+       height="61"
+       x="-204"
+       y="445.99988"
+       transform="translate(0,2.6171874e-6)" />
+    <rect
+       y="445.99988"
+       x="-204"
+       height="61"
+       width="98.700073"
+       id="rect8490"
+       style="color:#000000;fill:#ebebeb;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       transform="translate(0,2.6171874e-6)" />
   </g>
   <g
      style="display:none"
