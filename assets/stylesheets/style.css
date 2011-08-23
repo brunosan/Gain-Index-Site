@@ -357,6 +357,26 @@ ul.tabs li a.active {
  }
 /** Feedback tab **/
 
+#feedbacktab {
+  position: fixed;
+  color: white:hover;
+  width: 300px;
+  margin-right: 20px;
+  right: 0px;
+  height: 250px;
+  bottom: -220px;
+  z-index: 2;
+	-webkit-transition:all 0.3s ease-in-out;
+	-moz-transition:all 0.3s ease-in-out;
+	-o-transition:all 0.3s ease-in-out;
+	-ms-transition:all 0.3s ease-in-out;
+	-transition:all 0.3s ease-in-out;
+}
+
+#feedbacktab.open {
+  bottom: 0px;
+}
+
 #feedbacktab .content {
   clear: both;
   display: block;
@@ -367,15 +387,7 @@ ul.tabs li a.active {
   -webkit-border-radius: 4px 0px 0px 0px;
 
 }
-#feedbacktab {
-  position: fixed;
-  color: white;
-  width: 300px;
-  margin-right: 20px;
-  right: 0px;
-  bottom: 0px;
-  z-index: 2;
-}
+
 
 #feedbacktab .button {
   float: right;
@@ -389,7 +401,7 @@ ul.tabs li a.active {
   cursor: pointer;
 }
 
-#feedbacktab:hover .button { 
+#feedbacktab .button:hover {
   background-color: #94eb60;
 }
 

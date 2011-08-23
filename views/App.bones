@@ -42,9 +42,8 @@ var searchSetup = _.once(function() {
 });
 
 var feedbackSetup = _.once(function() {
-    $('#feedbacktab .content').hide();
     $('#feedbacktab .button').click(function() {
-        $('#feedbacktab .content').toggle('slide', {direction: 'down'});
+        $('#feedbacktab').toggleClass('open');
     })
 });
 
