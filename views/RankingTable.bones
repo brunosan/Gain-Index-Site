@@ -7,10 +7,8 @@ view = Backbone.View.extend({
     initialize: function() {
         // "Reset" is fired when the collection is sorted. When that happens
         // it's time to re-render.
-        var view = this;
-        this.collection.bind('reset', function() {
-            view.render();
-        });
+        _.bindAll(this, 'render');
+        this.collection.bind('reset', this.render);
     },
     render: function() {
         var data = [],
@@ -40,15 +38,19 @@ view = Backbone.View.extend({
         previousId && $('tr#' + previousId).addClass('active');
         return this;
     },
-    sortAlpha: function() {
+    sortAlpha: function(ev) {
         this.collection.comparator = function(model) {
             return model.get('country');
         };
         this.collection.sort();
+        $('a.sort.label').removeClass('activeSort');
+        $('a.sort.label.alpha').addClass('activeSort');
         return false;
     },
     sortRank: function(ev) {
         this.collection.sortByRank();
+        $('a.sort.label').removeClass('activeSort');
+        $('a.sort.label.rank').addClass('activeSort');
         return false;
     },
     sortIncome: function(ev) {
@@ -61,6 +63,8 @@ view = Backbone.View.extend({
             return Infinity;
         };
         this.collection.sort();
+        $('a.sort.label').removeClass('activeSort');
+        $('a.sort.label.income').addClass('activeSort');
         return false;
     }
 });
