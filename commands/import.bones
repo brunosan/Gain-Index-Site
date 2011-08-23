@@ -115,6 +115,7 @@ command.prototype.initialize = function(options) {
                 // store just the values for use in the reduce function.
                 var values = _(records).pluck('values');
 
+                // build a concrete list of years that have values.
                 var years = _(values).chain()
                     .map(function(r) { return _(r).keys(); })
                     .flatten()
@@ -122,18 +123,21 @@ command.prototype.initialize = function(options) {
                     .sort()
                     .value();
 
+                // build a sorted array of values for each year.
                 var sorted = _(years).reduce(function(memo, year) {
                     memo[year] = _(values).chain()
                         .pluck(year)
                         .without(null, undefined)
-                        .uniq()
+                        .uniq() // multiple countries can share the same rank
                         .sort()
                         .value() || [];
                     return memo;
                 }, {});
 
+                // Determine the rank for a value both from the front and the back
+                // of the sorted value array for each year.
                 function reduceRank(memo, value, year) {
-                    var index = _(sorted[year]).indexOf(value, true);
+                    var index = _(sorted[year]).indexOf(value);
                     if (~index) {
                         var rank = {};
                         rank.asc = index + 1;
