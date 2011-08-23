@@ -1,12 +1,10 @@
+
+
 // Map
 // -------
 model = Backbone.Model.extend({
     initialize: function(attr, options) {
-        _.bindAll(this, 'tilejson', 'updateMap');
-
-        var mm = com.modestmaps,
-            tilejson = this.tilejson(),
-            tooltip = wax.tooltip;
+        _.bindAll(this, 'tilejson', 'updateMap', 'featureHover');
 
         options = options || {};
 
@@ -19,17 +17,22 @@ model = Backbone.Model.extend({
             lon = options.lon || 39,
             z = options.z || 2;
 
+        var mm = com.modestmaps,
+            tilejson = this.tilejson();
+
         var m = new mm.Map(elem, new wax.mm.connector(tilejson), new mm.Point(width, height));
         this.set({map: m}, {silent: true});
 
         // Add fullscreen laters...
         //wax.mm.fullscreen(m, tilejson).appendTo(m.parent);
 
+        // Setup our tool tip.
+        this.tooltip = new wax.tooltip();
         var that = this;
-        tooltip.prototype.click = function(feature, context, index) {
+        this.tooltip.click = function(feature, context, index) {
             that.featureClick(feature, context, index);
         };
-        wax.mm.interaction(m, tilejson, {callbacks: new tooltip });
+        wax.mm.interaction(m, tilejson, {callbacks: this.tooltip });
 
         m.setCenterZoom(new mm.Location(lon, lat), z);
 
@@ -46,19 +49,23 @@ model = Backbone.Model.extend({
             scheme: 'tms',
             tiles: ['http://'+ location.hostname +':3001/1.0.0/'+ ind +'-'+ y +'/{z}/{x}/{y}.png'],
             grids: ['http://'+ location.hostname +':3001/1.0.0/'+ ind +'-'+ y +'/{z}/{x}/{y}.grid.json'],
-            formatter: function(options, data) {
-                return '<span data-iso="' + data.iso_a3 + '">' + data.admin + '</span>';
-            }
+            formatter: this.featureHover
         };
     },
     updateMap: function() {
         var tilejson = this.tilejson();
             m = this.get('map');
 
+        wax.mm.interaction(m, tilejson, {callbacks: this.tooltip});
         m.setProvider(new wax.mm.connector(tilejson));
+    },
+    featureHover: function(options, data) {
+        var ind = this.get('indicator');
+        var val = models.Indicator.format(data.factor_raw, ind);
+        
+        return '<span data-iso="' + data.iso_a3 + '">' + data.admin + ': '+ val +'</span>';
     },
     featureClick: function(feature, context, index) {
         // no-op.
-        //return view.openDrawer($(feature).data('iso'));
     }
 });
