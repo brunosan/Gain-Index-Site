@@ -5,6 +5,6 @@
   </div>
   <div class='correction-control container'>
   <p><%= correction.caption %></p>
-  <a href='<%= correction.href %>'><%= correction.title %></a>
+  <a class='button' href='<%= correction.href %>'><%= correction.title %></a>
   </div>
 </div>
