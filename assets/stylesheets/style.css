@@ -39,12 +39,20 @@ h3 {
 }
 
 h4 {
+  font-weight: normal;
+  font-size: 18px;
+  padding-top: 15px;
+  margin-left: 20px;
+  }
+
+.drawer h4 {
   font-family: 'HelveticaNeue', Helvetica, Arial, sans-serif;
   font-style: italic;
-  font-weight: normal;
   font-size: 12px;
+  padding-top: 0;
+  margin-left: 0;
   color: #434343;
-}
+  }
 
 .button {
   font-size: 10px;
