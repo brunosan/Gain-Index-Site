@@ -11,7 +11,8 @@ router = Backbone.Router.extend({
         '/download': 'download',
         '/matrix': 'matrix',
         '/about': 'overview',
-        '/about/:id': 'page'
+        '/about/:id': 'page',
+        '/.*': 'error'
     },
     front: function() {
         var router = this;

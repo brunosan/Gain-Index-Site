@@ -116,6 +116,7 @@ view = views.Main.extend({
                 var win = $(window);
                 var el = $(qs);
                 var winPos = win.scrollTop() + win.height();
+                if (!el.offset()) return false;
                 var elPos = el.offset().top + el.height();
                 return winPos > elPos;
             }
