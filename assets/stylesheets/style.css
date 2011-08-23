@@ -113,10 +113,10 @@ ul {
  * Documents.
  */
 .document ul {
-  padding-top: 15px;
+  padding-bottom: 15px;
 }
 .document ul li {
-  margin: 0 20px;
+  margin: 0 5px;
   list-style: disc inside;
   }
 .document h2 {
@@ -903,21 +903,21 @@ table.data {
   background: #fff;
   }
   
-thead {
+table.data thead {
   border-bottom: 1px solid #c6c6c6;
 }
 
-tbody tr.active {
+table.data tbody tr.active {
   cursor: pointer;
   background:#ebebeb;
   }
 
-tbody tr:hover {
+table.data tbody tr:hover {
   cursor: pointer;
   background:#f5f5f5;
 }
 
-tbody tr.active:hover {
+table.data tbody tr.active:hover {
   cursor: pointer;
   background:#ebebeb;
 }
@@ -1011,7 +1011,7 @@ tbody tr.active:hover {
   padding: 0 0 20px 0px;
   font-size: 11px;
   }
-  .country-profile .rankings table {
+  .country-profile table.ranking-history {
     margin-left: 10px;
     border: 1px solid #c6c6c6;
     border-right: none;
@@ -1021,8 +1021,8 @@ tbody tr.active:hover {
     -webkit-border-radius: 4px 0px 0px 4px;
     border-radius: 4px 0px 0px 4px;
     }
-  .country-profile .rankings th,
-  .country-profile .rankings td {
+  .country-profile table.ranking-history th,
+  .country-profile table.ranking-history td {
     border-bottom: 1px solid #c6c6c6;
     padding: 5px 0;
     text-align: center;
@@ -1071,11 +1071,40 @@ tbody tr.active:hover {
   padding-bottom: 15px;
   }
 
+/* CountryDrawer._ styling */
 .drawer .indicator-time,
 .drawer .source,
 .drawer .similar-countries {
   border-top: 1px solid #ccc;
   }
+.drawer .source ul {
+  padding-bottom: 15px;
+  }
+.drawer .source ul li {
+  margin: 0 5px;
+  list-style: disc inside;
+  }
+.drawer table.similar {
+  width: 100%;
+  }
+  .drawer table.similar td {
+    padding-top: 3px;
+    padding-bottom: 3px;
+  }
+  .drawer table.similar th {
+    padding-top: 15px;
+    padding-bottom: 3px;
+    font-weight: normal;
+    font-style: italic;
+    text-align: left;
+    border-bottom: 1px solid #aaa;
+    }
+    .drawer table.similar td {
+      border-bottom: 1px solid #ddd;
+      }
+    .drawer table.similar td.first {
+      border-right: 1px solid #ddd;
+      }
 .floor .correction-control {
   border-top: 1px solid #ccc;
   padding: 15px;
@@ -1095,7 +1124,8 @@ tbody tr.active:hover {
   .floor .correction-control a:hover {
   background: #8C8C8C;
   }
-  
+
+
 /** 
  * Rankings page
  */

@@ -138,7 +138,8 @@ view = views.Main.extend({
             success: function(summary) {
                 $('.drawer .similar-countries', el).empty().append(
                     templates.SimilarCountries({
-                        similar: summary.similar(country.get('id'), 5)
+                        similar: summary.similar(country.get('id'), 5),
+                        title: indicator.meta('name')
                     })
                 );
             }
