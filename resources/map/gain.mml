@@ -7,7 +7,7 @@
   "_format": "png",
   "interactivity": {
     "layer": "gain",
-    "fields": [ "iso_a3", "admin" ]
+    "fields": [ "iso_a3", "admin", "factor_raw"]
   },
   "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
   "Stylesheet": [
@@ -18,7 +18,7 @@
     {
       "Datasource": {
         "file": "layers/countries.sqlite",
-        "table": "(SELECT countries.*, data.'<%= year %>' as factor FROM countries LEFT JOIN indicators.data ON countries.iso_a3 = data.ISO3 AND data.NAME = '<%= indicator %>')",
+        "table": "(SELECT countries.*, data.'<%= year %>' as factor, data.'<%= year %>_raw' as factor_raw FROM countries LEFT JOIN indicators.data ON countries.iso_a3 = data.ISO3 AND data.NAME = '<%= indicator %>')",
         "attachdb": "indicators@../../files/indicators.sqlite",
         "key_field": "",
         "extend": "",
