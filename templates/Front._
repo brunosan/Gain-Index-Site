@@ -26,12 +26,12 @@
       </div>
     </div>
   </div>
-  <div class='button green clearfix'><a href='/ranking'> View Full Rankings </a></div>
+  <a class='button green clearfix' href='/ranking'> View Full Rankings </a>
   <h3 class='container'> Global Adaptation Index™ Country Rankings</h3>
   <div class='ranking clearfix'>
   </div>
+  <h3 class='container'>Featured Countries</h3>
   <div class='featured container'>
-    <h3>Featured Countries</h3>
     <div class='countries'></div>
   </div>
   <div class='mission container'>
