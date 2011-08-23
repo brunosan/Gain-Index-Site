@@ -145,9 +145,11 @@ view = views.Main.extend({
         });
 
         if (data && data.length > 1) {
+            var rawData = this.model.get('indicators').getRawGraphData('name', ind);
             new views.Bigline({
                 el: $('.drawer .content .graph', this.el),
-                data: data
+                data: data,
+                rawData: rawData
             })
         } else {
             $('.drawer .content .graph', this.el).hide();
