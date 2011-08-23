@@ -75,7 +75,6 @@ view = Backbone.View.extend({
         this.el = $('body');
     },
     initialize: function() {
-        this.render();
         if (!Bones.server) {
             feedbackSetup();
             searchSetup();
