@@ -886,7 +886,6 @@ table.data tbody tr {
  */
 table.data {
   background: #fff;
-  border-top: 1px solid #c6c6c6;
   }
   
 thead {
@@ -917,6 +916,27 @@ tbody tr.active:hover {
 .country-profile p.label {
  padding: 10px 0 0 0;
 }
+
+.country-profile .country-summary div.gain .name {
+ font-weight: bold;
+}
+.country-profile .country-summary div.gain .value {
+ display: block;
+ font-weight: bold;
+ font-size: 48px;
+ line-height: 42px;
+}
+
+.country-summary div.gain {
+ padding-top: 35px;
+ height: 125px;
+ }
+ 
+.country-summary div.gain .outlook {
+      margin-top: 5px;
+      color: #666;
+      }
+
 .country-profile .tab-content {
   background-color: #fff;
   }
@@ -930,6 +950,8 @@ tbody tr.active:hover {
   }
 
 .country-profile tr.section {
+  font-size: 14px;
+  font-weight: bold;
   border-bottom: 1px solid #c6c6c6;
   line-height: 40px;
   }
@@ -1051,14 +1073,14 @@ tbody tr.active:hover {
  .ranking {background-color: #ebebeb;}
 
 .ranking p {
- margin-bottom: 15px;
+margin-top: 15px;
  }
 
 .ranking p.label {
  position: absolute;
- left: 410px;
+ left: 430px;
  top: 85px;
- width: 200px;
+ width: 180px;
  line-height: 120%;
  text-align: right;
  }
@@ -1216,6 +1238,7 @@ background: url('../images/sprite.png') 82px -370px;
     padding: 0 0 20px 0;
     margin-top: 160px;
     font-size: 135px;
+    line-height: 80px;
   }
 
   .error-page .message {
