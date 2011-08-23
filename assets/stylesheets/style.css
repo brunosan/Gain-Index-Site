@@ -739,6 +739,29 @@ table.data tbody tr {
     display: block;
     }
 
+   #carousel-nav {
+      position: absolute;
+      z-index: 100;
+      top: 500px;
+      right: 325px;
+      width: 110px;
+   }
+
+   #carousel-nav a {
+     background: transparent url('http://localhost:3000/assets/gain/images/sprite.png') no-repeat;
+     background-position: -20px -660px;
+     display: block;
+     width: 15px;
+     height: 15px;
+     text-indent: -99999px;
+     float: left;
+     margin-left: 10px;
+   }
+
+   #carousel-nav a.activeSlide {
+     background-position: 0px -660px;
+   }
+
 .front .mission {
   clear: left;
   background-color: #ebebeb;
