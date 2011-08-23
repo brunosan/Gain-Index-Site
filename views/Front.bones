@@ -109,6 +109,11 @@ view = views.Main.extend({
 
         $('#map', this.el).append(templates.MapInterface(locals));
 
+        $('#carousel').after("<div id='carousel-nav'>").cycle({
+            timeout: 7000,
+            pager: '#carousel-nav'
+        });
+        $('#carousel .overview').fadeIn('normal');
         return this;
     },
     renderFloor: function(id) {
