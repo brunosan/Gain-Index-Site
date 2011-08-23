@@ -1053,7 +1053,12 @@ tbody tr.active:hover {
 .drawer .content .gain {
   border-left: 0;
   }
-
+.drawer .country-info {
+  padding-bottom: 15px;
+  }
+.drawer .indicator-info {
+  border-top: 1px solid #ccc;
+  }
 .floor .correction-control {
   border-top: 1px solid #ccc;
   padding: 15px;
@@ -1075,8 +1080,7 @@ tbody tr.active:hover {
 /** 
  * Rankings page
  */
- 
- .ranking {background-color: #ebebeb;}
+.ranking {background-color: #ebebeb;}
 
 .ranking p {
 margin-top: 15px;
