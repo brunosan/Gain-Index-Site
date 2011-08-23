@@ -23,7 +23,15 @@
   <link rel='stylesheet' href='/assets/bones-admin/style.css?<%= version %>' media='screen' />
 </head>
 <body>
-  <div id='feedbacktab'><div class='button'>Feedback</div></div>
+  <div id='feedbacktab'>
+    <div class='button'>Feedback</div>
+    <div class='content'>
+      <p>Please report any inconsistencies, apparent data errors or leave a general comment using the link below.</p> 
+      <p><a href="mailto:brunosan@globalai.org">Feedback</a></p>
+      <p>Interested in a more in depth review of the GaIn model design?</p>
+      <p><a href="/about/consultation">Participate in our Consultation process</a></p>
+    </div>
+  </div>
   <div id='header'><div class='limiter'>
     <h1><a class='logo' href='/'>GaIn</a></h1>
     <div class='tagline'>The Global Adaptation Index</div>

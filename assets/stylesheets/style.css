@@ -357,27 +357,39 @@ ul.tabs li a.active {
  }
 /** Feedback tab **/
 
+#feedbacktab .content {
+  clear: both;
+  display: block;
+  width: 300px;
+  padding-bottom: 20px;
+  background: #ebebeb;
+  -moz-border-radius: 4px 0px 0px 0px;
+  -webkit-border-radius: 4px 0px 0px 0px;
+
+}
 #feedbacktab {
   position: fixed;
   color: white;
-  background-color: #8ad35e;
+  width: 300px;
+  margin-right: 20px;
   right: 0px;
   bottom: 0px;
-  cursor: pointer;
-  padding: 0 15px 0 15px;
-  line-height: 30px;
-  white-space:nowrap;
-  margin-right: 20px;
-  -moz-border-radius: 4px 4px 0px 0px;
-  -webkit-border-radius: 4px 4px 0px 0px;
   z-index: 2;
 }
 
 #feedbacktab .button {
+  float: right;
+  background-color: #8ad35e;
+  padding: 0 15px 0 15px;
+  width: 50px;
+  line-height: 30px;
+  -moz-border-radius: 4px 4px 0px 0px;
+  -webkit-border-radius: 4px 4px 0px 0px;
   color: #1d354c;
+  cursor: pointer;
 }
 
-#feedbacktab:hover {
+#feedbacktab:hover .button { 
   background-color: #94eb60;
 }
 
@@ -735,10 +747,11 @@ table.data tbody tr {
     border-bottom: 0px;
     }
     
-  .front #carousel .content li {
+  .front #carousel .overview {
     display: none;
     }
-  .front #carousel .content li.active {
+
+  .front #carousel .active {
     display: block;
     }
 

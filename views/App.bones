@@ -41,6 +41,13 @@ var searchSetup = _.once(function() {
     view.render();
 });
 
+var feedbackSetup = _.once(function() {
+    $('#feedbacktab .content').hide();
+    $('#feedbacktab .button').click(function() {
+        $('#feedbacktab .content').toggle('slide', {direction: 'down'});
+    })
+});
+
 // Sets up key tracking on client
 // ------------------------------
 // TODO: should we use Bones.currentKeys?
@@ -70,6 +77,7 @@ view = Backbone.View.extend({
     initialize: function() {
         this.render();
         if (!Bones.server) {
+            feedbackSetup();
             searchSetup();
             adminSetup();
             keyTracking();

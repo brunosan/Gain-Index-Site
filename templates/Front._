@@ -2,7 +2,7 @@
   <div id='map'></div>
   <div id='carousel'>
     <div class='item'>
-      <div class='overview'>
+      <div class='overview active'>
         <h2>Discover Improvement Opportunities</h2>
         <p>Assess where the greatest needs and opportunities for improving resilience to climate change exist. Explore GaIn Rankings</p>
       </div>
