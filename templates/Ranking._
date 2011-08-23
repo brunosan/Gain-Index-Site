@@ -1,5 +1,7 @@
 <div class='ranking'>
   <h2>Country Rankings</h2>
+  <p>Rank countries by GaIn™, vulnerability, readiness, and other scores.</p>
+  <p class='label'>Indicators show latest available data as of June 2011</p>
   <div class='tab-wrapper clearfix'>
     <ul class='tabs level-1'>
       <% if (!delta) { %>
