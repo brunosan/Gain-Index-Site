@@ -389,6 +389,9 @@ ul.tabs li a.active {
   z-index: 1;
   width: 960px;
   }
+.bonesAdminEditing #cabinet {
+  z-index: auto;
+}
 #cabinet .top {
   float: left;
   width: 640px;
