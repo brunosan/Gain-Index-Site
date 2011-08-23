@@ -148,7 +148,7 @@ model.meta = {
         "decimals": "2",
         "unit": "%s %",
         "index": "vulnerability",
-        "sector": "infrastructure",
+        "sector": "infrastruct",
         "component": "exposure",
         "source": [{
             "name": "World Resources Institute",
@@ -163,7 +163,7 @@ model.meta = {
         "decimals": "2",
         "unit": "%s %",
         "index": "vulnerability",
-        "sector": "infrastructure",
+        "sector": "infrastruct",
         "component": "sensitivity",
         "source": [{
             "name": "World Resources Institute",
@@ -238,7 +238,7 @@ model.meta = {
         "decimals": "1",
         "unit": "%s %",
         "index": "vulnerability",
-        "sector": "infrastructure",
+        "sector": "infrastruct",
         "component": "exposure",
         "source": [{
             "name": "World Resources Institute",
@@ -253,7 +253,7 @@ model.meta = {
         "decimals": "0",
         "unit": "%s %",
         "index": "vulnerability",
-        "sector": "infrastructure",
+        "sector": "infrastruct",
         "component": "sensitivity",
         "source": [
         {
@@ -540,7 +540,7 @@ model.meta = {
         "decimals": "2",
         "unit": null,
         "index": "vulnerability",
-        "sector": "infrastructure",
+        "sector": "infrastruct",
         "component": "exposure",
         "source": ["CRED & WB Stats for area"]
     },
@@ -552,7 +552,7 @@ model.meta = {
         "decimals": "2",
         "unit": "%s %",
         "index": "vulnerability",
-        "sector": "infrastructure",
+        "sector": "infrastruct",
         "component": "sensitivity",
         "source": [
         {
@@ -832,8 +832,8 @@ model.meta = {
         "sector": null,
         "component": null
     },
-    "infrastructure": {
-        "id": "infrastructure",
+    "infrastruct": {
+        "id": "infrastruct",
         "name": "Infrastructure",
         "description": "Sector analyzing three direct factors impacting human well-being in the face of climate change: coasts, energy and transportation",
         "format": "number",
