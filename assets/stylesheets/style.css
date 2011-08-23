@@ -26,6 +26,7 @@ h1,h2,h3,h4,h5 {
   color: #434343;
   padding-top: 15px;
   padding-bottom: 15px;
+  clear: left;
   }
     
 h2 {
@@ -45,8 +46,7 @@ h4 {
 .drawer h4 {
   font-family: 'HelveticaNeue', Helvetica, Arial, sans-serif;
   font-style: italic;
-  font-size: 12px;
-  color: #434343;
+  font-size: 13px;
   }
 
 .container {
@@ -566,7 +566,7 @@ table.data tbody tr {
   border-bottom: 1px solid #ebebeb;
   }
 table.data tr.worst {
-  background-color: #ffcccc;
+  background-color: #ffdfdd;
   }
 
 /**
@@ -1051,13 +1051,18 @@ tbody tr.active:hover {
 }
 
 .drawer .content .graph {
-  height: 256px;
-  width: 256px;
+  width: 285px;
+  height: 150px;
   }
 .drawer .content .gain {
   border-left: 0;
   }
-
+.drawer .country-info {
+  padding-bottom: 15px;
+  }
+.drawer .indicator-info {
+  border-top: 1px solid #ccc;
+  }
 .floor .correction-control {
   border-top: 1px solid #ccc;
   padding: 15px;
@@ -1081,8 +1086,7 @@ tbody tr.active:hover {
 /** 
  * Rankings page
  */
- 
- .ranking {background-color: #ebebeb;}
+.ranking {background-color: #ebebeb;}
 
 .ranking p {
 margin-top: 15px;
