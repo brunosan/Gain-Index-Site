@@ -11,6 +11,7 @@
     <div class='graph'></div>
   </div>
 </div>
+<% if (source.length) { %>
 <div class='source container'>
   <h4>Source</h4>
   <ul>
@@ -19,5 +20,6 @@
   <% }); %>
   </ul>
 </div>
+<% } %>
 <div class='similar-countries'>
 </div>
