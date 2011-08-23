@@ -1,5 +1,10 @@
-<div class='more'><a href='/country/<%= countryId %>'>View profile</a></div>
-<h3><%= countryName %></h3>
-<div class='country-summary'></div>
-<h4><%= indicatorName %> over time </h4>
-<div class='graph'></div>
+<div class='country-info container'>
+  <div class='more'><a href='/country/<%= countryId %>'>View profile</a></div>
+  <h3><%= countryName %></h3>
+  <div class='country-summary'></div>
+</div>
+
+<div class='indicator-info container'>
+  <h4><%= indicatorName %> over time </h4>
+  <div class='graph'></div>
+</div>
