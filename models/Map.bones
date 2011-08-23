@@ -47,8 +47,8 @@ model = Backbone.Model.extend({
         return tilejson = {
             tilejson: '1.0.0',
             scheme: 'tms',
-            tiles: ['http://'+ location.hostname +':3001/1.0.0/'+ ind +'-'+ y +'/{z}/{x}/{y}.png'],
-            grids: ['http://'+ location.hostname +':3001/1.0.0/'+ ind +'-'+ y +'/{z}/{x}/{y}.grid.json'],
+            tiles: ['http://'+ location.hostname +':3000/tiles/1.0.0/'+ ind +'-'+ y +'/{z}/{x}/{y}.png'],
+            grids: ['http://'+ location.hostname +':3000/tiles/1.0.0/'+ ind +'-'+ y +'/{z}/{x}/{y}.grid.json'],
             formatter: this.featureHover
         };
     },
