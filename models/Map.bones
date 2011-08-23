@@ -62,8 +62,14 @@ model = Backbone.Model.extend({
         m.setProvider(new wax.mm.connector(tilejson));
     },
     featureHover: function(options, data) {
-        var ind = this.get('indicator');
-        var val = models.Indicator.format(data.factor_raw, ind);
+        if (data.factor_raw === undefined) {
+            var val = "Not evaluated";
+        } else if (data.factor_raw === 0) {
+            var val = "No GaIn&trade; score";
+        } else {
+            var ind = this.get('indicator');
+            var val = models.Indicator.format(data.factor_raw, ind);
+        }
         
         return '<span data-iso="' + data.iso_a3 + '">' + data.admin + ': '+ val +'</span>';
     },

@@ -37,6 +37,7 @@ view = views.Main.extend({
         var branch = this.tree[this.options.tab][this.options.structure],
             meta = this.collection.model.meta
 
+        var scores = {};
         var appendData = function(key, klass) {
             var field = {
                 field: meta[key],
@@ -48,6 +49,12 @@ view = views.Main.extend({
                 field.input = lookup[key].input();
                 field.score = lookup[key].score();
             }
+            // Create new hash to determine worst scores.
+            scores[field.field.id] = {};
+            scores[field.field.id].score = field.score;
+            scores[field.field.id].index = field.field.index;
+            scores[field.field.id].name = field.field.id;
+            
             data.push(field);
         }
 
@@ -60,7 +67,23 @@ view = views.Main.extend({
                 }
             });
         });
-        $(this.el).empty().append(templates.CountryTable({data: data}));
+        // Sort by score, drop 0's.
+        scores = _.filter(scores, function(item) { return (item.score > 0 && item.score < 1); });
+        if (this.options.tab == 'vulnerability') {
+            scores = _.filter(scores, function(item) {return item.score > 0.7 });
+            scores.sort(function(a, b) { return b.score - a.score });
+            scores = scores.slice(0,3);
+        } else {
+            scores = _.filter(scores, function(item) {return item.score < 0.3 });
+            scores.sort(function(a, b) { return a.score - b.score });
+            scores = scores.slice(0,3);
+        }
+        // New hash w/ indicators as keys
+        var worst = {};
+        _.each(scores, function(score) {
+            worst[score.name] = score.score;
+        });
+        $(this.el).empty().append(templates.CountryTable({data: data, worst: worst}));
         return this;
     },
     attach: function() {
