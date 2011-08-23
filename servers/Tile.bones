@@ -1,42 +1,16 @@
 server = Bones.Server.extend({
-    // Necessary to actually instantiate tile server.
-    port:3001,
-
     initialize: function(app) {
+        _.bindAll(this, 'load', 'tile', 'grid', 'layer');
+
         this.config = app.config;
         this.config.header = { 'Cache-Control': 'max-age=' + 60 * 60 };
-        this.initializeRoutes();
-    },
-
-    initializeRoutes: function() {
-        _.bindAll(this, 'load', 'tile', 'grid', 'layer', 'status');
-
-        this.enable('jsonp callback');
 
         this.param('tileset', this.load);
 
         // x.0.0 endpoints.
-        this.get('/:version(1|2).0.0/:tileset/:z/:x/:y.(png|jpg|jpeg)', this.tile);
-        this.get('/:version(1|2).0.0/:tileset/:z/:x/:y.grid.json', this.grid);
-        this.get('/:version(1|2).0.0/:tileset/layer.json', this.layer);
-
-        this.get('/status', this.status);
-    },
-
-    // Basic route for checking the health of the server.
-    status: function(req, res, next) {
-        res.send('TileStream', 200);
-    },
-
-    // Override start. We must call the callback regardless of whether the port
-    // is set or not.
-    start: function(callback) {
-        if (this.port) {
-            this.listen(this.port, callback);
-        } else {
-            callback();
-        }
-        return this;
+        this.get('/tiles/:version(1|2).0.0/:tileset/:z/:x/:y.(png|jpg|jpeg)', this.tile);
+        this.get('/tiles/:version(1|2).0.0/:tileset/:z/:x/:y.grid.json', this.grid);
+        this.get('/tiles/:version(1|2).0.0/:tileset/layer.json', this.layer);
     },
 
     validTilesetID: function(id) {

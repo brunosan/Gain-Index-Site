@@ -1,4 +1,8 @@
 server = servers.Route.augment({
+    initialize: function(parent, app) {
+        parent.call(this, app);
+        this.use(new servers['Tile'](app));
+    },
     initializeAssets: function(parent, app) {
         parent.call(this, app);
         this.get('/assets/bones/wax.js', this.assets.wax);
