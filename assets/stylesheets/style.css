@@ -1040,7 +1040,10 @@ a.sort {
 .ranking table.data .icon-outlook {
   float: left;
   margin-top: 5px;
-}
+  }
+.ranking .tab-wrapper .tab-wrapper {
+  height: 20px;
+  }
 
 /**
  * Featured ranking, front page
