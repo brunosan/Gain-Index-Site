@@ -1,17 +1,19 @@
 <div class='country-profile'>
-  <h2><%= title %></h2>
-  <p class='label'>All numbers are for 2010</p>
-  <div class='background-info left clearfix'><%= gdp.label%> (<%= gdp.year %>): <%= gdp.value %></div>
-  <div class='background-info right clearfix'><%= population.label%> (<%= population.year %>): <%= population.value %></div>
+  <h2 class='container'><%= title %></h2>
+  <div class='info container'>
+    <p class='label'>All numbers are for 2010</p>
+    <div class='background-info left clearfix'><%= gdp.label%> (<%= gdp.year %>): <%= gdp.value %></div>
+    <div class='background-info right clearfix'><%= population.label%> (<%= population.year %>): <%= population.value %></div>
+  </div>
 
   <div class='country-summary'>
   </div>
 
-  <p class='prose'>Ei dicam partem accusamus vel, tale laoreet duo ei. Noster labitur mei ei. Cum iuvaret abhorreant ei. Cibo dolorum cum cu, nec in habemus torquatos, ad pro paulo commodo probatus.</p>
+  <div class='prose container'></div>
 
   <% if (_(rank).size()) { %>
   <div class='rankings'>
-    <h3>GaIn&#8482; Ranking since 1995</h3>
+    <h3 class='container'>GaIn&#8482; Ranking since 1995</h3>
     <table class='data ranking-history'>
       <thead>
         <tr class='years'>
