@@ -735,10 +735,11 @@ table.data tbody tr {
     border-bottom: 0px;
     }
     
-  .front #carousel .content li {
+  .front #carousel .overview {
     display: none;
     }
-  .front #carousel .content li.active {
+
+  .front #carousel .active {
     display: block;
     }
 

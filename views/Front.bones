@@ -109,11 +109,29 @@ view = views.Main.extend({
 
         $('#map', this.el).append(templates.MapInterface(locals));
 
-        $('#carousel').after("<div id='carousel-nav'>").cycle({
-            timeout: 7000,
-            pager: '#carousel-nav'
+        var startedCarousel = false;
+
+        $(window).scroll(function() {
+            function isInView(qs) {
+                var win = $(window);
+                var el = $(qs);
+                var winPos = win.scrollTop() + win.height();
+                var elPos = el.offset().top + el.height();
+                return winPos > elPos;
+            }
+
+            if(!startedCarousel && isInView('#carousel') ) {
+                startedCarousel = true;
+
+                $('#carousel').after("<div id='carousel-nav'>").cycle({
+                    timeout: 7000,
+                    pager: '#carousel-nav'
+                });
+                $('#carousel .overview').fadeIn('normal');
+            }
         });
-        $('#carousel .overview').fadeIn('normal');
+
+
         return this;
     },
     renderFloor: function(id) {
