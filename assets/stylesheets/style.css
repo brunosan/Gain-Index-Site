@@ -39,12 +39,20 @@ h3 {
 }
 
 h4 {
+  font-weight: normal;
+  font-size: 18px;
+  padding-top: 15px;
+  margin-left: 20px;
+  }
+
+.drawer h4 {
   font-family: 'HelveticaNeue', Helvetica, Arial, sans-serif;
   font-style: italic;
-  font-weight: normal;
   font-size: 12px;
+  padding-top: 0;
+  margin-left: 0;
   color: #434343;
-}
+  }
 
 .button {
   font-size: 10px;
@@ -57,8 +65,8 @@ h4 {
   .button.green {
     color: #fff;
     background-color: #8AD35E;
-    -moz-border-radius: 3px;
-    -webkit-border-radius: 3px; 
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px; 
     padding: 5px;
     width: 110px;
     float: right;
@@ -87,6 +95,18 @@ a:hover {
  color: #81db4b; 	
  text-decoration: none;
 }
+
+/**
+ * Plain lists in documents.
+ */
+.document ul {
+  padding-top: 15px;
+}
+.document ul li {
+  margin: 0 20px;
+  list-style: circle inside;
+  }
+
 /**
  * Icons.
  */
@@ -278,9 +298,9 @@ ul.tabs li a.active {
  float: left;
  width: 630px;
  height: 20px;
- background: #1d354c url('../images/sprite.png') 5px -860px no-repeat;
+ background: #1d354c url('../images/sprite.png') 10px -860px no-repeat;
  color: white;
- text-indent: 25px;
+ text-indent: 35px;
  margin: 15px 0px 15px 0px;
  padding: 5px;
  border-radius: 4px;
@@ -288,7 +308,7 @@ ul.tabs li a.active {
  -webkit-border-radius: 4px;
 }
 
-  #footer1 a:hover {background: #21405d url('../images/sprite.png') 5px -860px no-repeat;}
+  #footer1 a:hover {background: #21405d url('../images/sprite.png') 10px -860px no-repeat;}
 
 #footer1 a.downloadbutton .description {
  float: right;
@@ -296,6 +316,7 @@ ul.tabs li a.active {
  font-weight: normal;
  display: block;
  font-size: 12px;
+ padding-right: 5px;
 }
 
 #footer1 .search {
@@ -310,7 +331,9 @@ ul.tabs li a.active {
     -webkit-border-radius: 4px;
     }
   #footer1 .search input.textfield {
-    width: 230px;
+    background: url('../images/sprite.png') 5px -627px no-repeat;
+    padding-left: 25px;
+    width: 210px;
     -moz-box-shadow: inset 0px 0px 4px #000;
     -webkit-box-shadow: inset 0px 0px 4px #000;
     box-shadow: inset 0px 0px 4px #000;
@@ -351,7 +374,7 @@ ul.tabs li a.active {
 }
 
 #feedbacktab .button {
-  color: white;
+  color: #1d354c;
 }
 
 #feedbacktab:hover {
@@ -366,6 +389,9 @@ ul.tabs li a.active {
   z-index: 1;
   width: 960px;
   }
+.bonesAdminEditing #cabinet {
+  z-index: auto;
+}
 #cabinet .top {
   float: left;
   width: 640px;
@@ -1000,7 +1026,9 @@ a.sort {
  * Matrix section
  */
 .top .matrix {
-  height: 400px;
+  height: 675px;
+  width: 640px;
+  background: url('../images/matrix_placeholder.png');
   }
 
 /**
@@ -1029,10 +1057,7 @@ a.sort {
 
 /** About section **/
 
-#about
-/**
- * About section navigation
- */
+/*** About section navigation*/
 #about-nav-container { 
   width: 200px;
   }
@@ -1076,7 +1101,45 @@ a.sort {
   -moz-border-radius: 4px;
   border-radius: 4px;
 }
+/*** Error Page ***/
+.error-page {
+  height: 400px;
+  width: 640px;
+}
 
+  .error-page h2 {
+    color: #fff;
+    text-align: center;
+    border-bottom: 0;
+    padding: 0 0 20px 0;
+    margin-top: 160px;
+    font-size: 135px;
+  }
+
+  .error-page .message {
+    font-size: 35px;
+    color: white;
+    text-align: center;
+  }
+  .error-page a {
+  display: block;
+  font-size: 32px;
+  color: #1d354c;
+  text-align: center;
+  margin: 20px auto 0 auto;
+  background-color: #8AD35E;
+  height: 20px;
+  width: 160px;
+  padding: 5px;
+  font-size: 10px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px; 
+  border-radius: 4px;
+  }
+  
+  .error-page a:hover {
+  background-color: #94eb60;
+  }
 /*-----------------------
   Markup free clearing
   Details: http://perishablepress.com/press/2009/12/06/new-clearfix-hack

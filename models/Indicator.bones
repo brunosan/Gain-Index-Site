@@ -148,7 +148,7 @@ model.meta = {
         "decimals": "2",
         "unit": "%s %",
         "index": "vulnerability",
-        "sector": "infrastructure",
+        "sector": "infrastruct",
         "component": "exposure",
         "source": [{
             "name": "World Resources Institute",
@@ -163,7 +163,7 @@ model.meta = {
         "decimals": "2",
         "unit": "%s %",
         "index": "vulnerability",
-        "sector": "infrastructure",
+        "sector": "infrastruct",
         "component": "sensitivity",
         "source": [{
             "name": "World Resources Institute",
@@ -238,7 +238,7 @@ model.meta = {
         "decimals": "1",
         "unit": "%s %",
         "index": "vulnerability",
-        "sector": "infrastructure",
+        "sector": "infrastruct",
         "component": "exposure",
         "source": [{
             "name": "World Resources Institute",
@@ -253,7 +253,7 @@ model.meta = {
         "decimals": "0",
         "unit": "%s %",
         "index": "vulnerability",
-        "sector": "infrastructure",
+        "sector": "infrastruct",
         "component": "sensitivity",
         "source": [
         {
@@ -540,7 +540,7 @@ model.meta = {
         "decimals": "2",
         "unit": null,
         "index": "vulnerability",
-        "sector": "infrastructure",
+        "sector": "infrastruct",
         "component": "exposure",
         "source": ["CRED & WB Stats for area"]
     },
@@ -552,7 +552,7 @@ model.meta = {
         "decimals": "2",
         "unit": "%s %",
         "index": "vulnerability",
-        "sector": "infrastructure",
+        "sector": "infrastruct",
         "component": "sensitivity",
         "source": [
         {
@@ -742,7 +742,7 @@ model.meta = {
         "unit": null,
         "index": "readiness",
         "sector": null,
-        "component": "governance"
+        "component": null
     },
     "economic": {
         "id": "economic",
@@ -753,7 +753,7 @@ model.meta = {
         "unit": null,
         "index": "readiness",
         "sector": null,
-        "component": "economic"
+        "component": null
     },
     "social": {
         "id": "social",
@@ -764,7 +764,7 @@ model.meta = {
         "unit": null,
         "index": "readiness",
         "sector": null,
-        "component": "social"
+        "component": null
     },
     "exposure": {
         "id": "exposure",
@@ -775,7 +775,7 @@ model.meta = {
         "unit": null,
         "index": "vulnerability",
         "sector": null,
-        "component": "exposure"
+        "component": null
     },
     "sensitivity": {
         "id": "sensitivity",
@@ -786,7 +786,7 @@ model.meta = {
         "unit": null,
         "index": "vulnerability",
         "sector": null,
-        "component": "sensitivity"
+        "component": null
     },
     "capacity": {
         "id": "capacity",
@@ -797,7 +797,7 @@ model.meta = {
         "unit": null,
         "index": "vulnerability",
         "sector": null,
-        "component": "capacity"
+        "component": null
     },
     "water": {
         "id": "water",
@@ -807,7 +807,7 @@ model.meta = {
         "decimals": "3",
         "unit": null,
         "index": "vulnerability",
-        "sector": "water",
+        "sector": null,
         "component": null
     },
     "food": {
@@ -818,7 +818,7 @@ model.meta = {
         "decimals": "3",
         "unit": null,
         "index": "vulnerability",
-        "sector": "food",
+        "sector": null,
         "component": null
     },
     "health": {
@@ -829,18 +829,18 @@ model.meta = {
         "decimals": "3",
         "unit": null,
         "index": "vulnerability",
-        "sector": "health",
+        "sector": null,
         "component": null
     },
-    "infrastructure": {
-        "id": "infrastructure",
+    "infrastruct": {
+        "id": "infrastruct",
         "name": "Infrastructure",
         "description": "Sector analyzing three direct factors impacting human well-being in the face of climate change: coasts, energy and transportation",
         "format": "number",
         "decimals": "3",
         "unit": null,
         "index": "vulnerability",
-        "sector": "infrastructure",
+        "sector": null,
         "component": null
     },
     "vulnerability": {
