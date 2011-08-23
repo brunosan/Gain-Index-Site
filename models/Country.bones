@@ -1414,7 +1414,11 @@ model.meta = {
         "ISO3": "ROU",
         "name": "Romania",
         "oecd_value": "3",
-        "oecd_income": "Upper middle"
+        "oecd_income": "Upper middle",
+        "coords": [
+            24.960938,
+            45.874712
+        ]
     },
     "RUS": {
         "ISO3": "RUS",
