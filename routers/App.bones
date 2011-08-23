@@ -1,6 +1,5 @@
 router = Backbone.Router.extend({
     routes: {
-        '' : 'front',
         '/' : 'front',
         '/country/:id': 'country',
         '/ranking': 'rankingDefault',

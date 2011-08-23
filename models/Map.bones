@@ -49,7 +49,9 @@ model = Backbone.Model.extend({
             scheme: 'tms',
             tiles: ['http://'+ location.host+'/tiles/1.0.0/'+ ind +'-'+ y +'/{z}/{x}/{y}.png'],
             grids: ['http://'+ location.host+'/tiles/1.0.0/'+ ind +'-'+ y +'/{z}/{x}/{y}.grid.json'],
-            formatter: this.featureHover
+            formatter: this.featureHover,
+            minzoom: 1,
+            maxzoom: 6
         };
     },
     updateMap: function() {
