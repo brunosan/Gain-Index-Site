@@ -1,13 +1,17 @@
-<div class='more'><a href='/about/methodology#<%= methodologyHash %>'>More</a></div>
-<h3><%= title %><h3/>
-<div class='description'>
-  <%= description %>
+<div class='indicator-info container'>
+  <div class='more'><a href='/about/methodology#<%= methodologyHash %>'>More</a></div>
+  <h3><%= title %></h3>
+  <div class='description'>
+    <%= description %>
+  </div>
 </div>
-<div class='chart'>
-  <h4><%= title %> over time </h4>
-  <div class='graph'></div>
+<div class='indicator-time container'>
+  <div class='chart'>
+    <h4><%= title %> over time </h4>
+    <div class='graph'></div>
+  </div>
 </div>
-<div class='source'>
+<div class='source container'>
   <h4>Source</h4>
   <ul>
   <% _.each(source, function(source) { %>

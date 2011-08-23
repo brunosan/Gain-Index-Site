@@ -1,13 +1,15 @@
-<h4>Similar Countries</h4>
-<table class='similar'>
-  <tr>
-    <th>Country</th>
-    <th>Score</th>
-  </tr>
-<% _.each(similar, function(country) { %>
-  <tr id="country.id">
-    <td><a href='/country/<%= country['ISO3'] %>'><%= country.name %></a></td>
-    <td><%= country.value %></td>
-  </tr>
-<% }); %>
-</table>
+<h4 class='container'>Similar Countries</h4>
+<div class='similar-listing container'>
+  <table class='similar'>
+    <tr>
+      <th>Country</th>
+      <th>Score</th>
+    </tr>
+  <% _.each(similar, function(country) { %>
+    <tr id="country.id">
+      <td><a href='/country/<%= country['ISO3'] %>'><%= country.name %></a></td>
+      <td><%= country.value %></td>
+    </tr>
+  <% }); %>
+  </table>
+</div>
