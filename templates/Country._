@@ -1,5 +1,6 @@
 <div class='country-profile'>
   <h2><%= title %></h2>
+  <p class='label'>All numbers are for 2010</p>
   <div class='background-info left clearfix'><%= gdp.label%> (<%= gdp.year %>): <%= gdp.value %></div>
   <div class='background-info right clearfix'><%= population.label%> (<%= population.year %>): <%= population.value %></div>
 
