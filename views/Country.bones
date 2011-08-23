@@ -71,6 +71,10 @@ view = views.Main.extend({
             lon: coords[0],
             lat: coords[1]
         });
+        this.map.featureClick = function(feature, context, index) {
+            var iso = $(feature).data('iso');
+            return window.location = '/country/'+ iso;
+        }
 
         if (this.tableView == undefined) {
             this.tableView = new views.CountryTable({
