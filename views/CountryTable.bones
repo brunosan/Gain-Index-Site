@@ -68,7 +68,6 @@ view = views.Main.extend({
                 }
             });
         });
-        var exclude = ['infr'];
         // Sort by score, drop 0's and 1's, drop sectors
         scores = _.filter(scores, function(item) { return ((item.score > 0 && item.score < 1) || item.sector == null); });
         if (this.options.tab == 'vulnerability') {
