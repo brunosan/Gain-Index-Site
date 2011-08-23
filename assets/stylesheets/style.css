@@ -494,10 +494,6 @@ ul.tabs li a.active {
     moz-border-radius: 5px;
     webkit-border-radius: 5px;
     }
-    #cabinet .drawer .country-summary .gain {
-      width: 132px;
-      border-left: 0px;
-      }
 
 #cabinet .floor {
   padding-bottom: 10px;
@@ -566,6 +562,9 @@ table.data thead tr {
 table.data tbody tr {
   border-bottom: 1px solid #ebebeb;
   }
+table.data tr.worst {
+  background-color: #ffcccc;
+  }
 
 /**
  * Country summary generic styles
@@ -579,10 +578,10 @@ table.data tbody tr {
     margin-left: 10px;
     float: left;
     }
-  .country-summary div.gain{
+  .country-summary .gain {
     float:left;
     text-align: center;
-    width: 115px;
+    width: 150px;
     height: 130px;
     padding-top: 30px;
     border-style: solid;
@@ -609,7 +608,7 @@ table.data tbody tr {
   .country-summary div.chart {
     float: right;
     height: 110px;
-    width: 130px;
+    width: 132px;
     }
     .country-summary div.chart .mini-matrix {
       margin: 10px 0px 0px 10px;
@@ -617,7 +616,6 @@ table.data tbody tr {
   .country-summary div.vulnerability {
     text-align: center;
     line-height: 25px;
-    width: 130px;
     border-color: #c6c6c6;
     border-style: solid;
     border-width: 1px 0px 1px 0px;
@@ -824,6 +822,9 @@ table.data tbody tr {
     width: 249px;
     float: right;
     }
+  .front .featured .country-summary .gain {
+    width: 115px;
+    }
 
 
 /**
@@ -980,9 +981,8 @@ tbody tr.active:hover {
   border-radius: 5px 0px 0px 5px;
   margin: 0 0 15px 15px;
   }
-  .country-profile .country-summary .gain {
-    width: 177px;
-    border-left: 0px;
+  .country-profile .country-summary {
+    border-left: 0;
     }
   .country-profile .country-summary .chart {
     float: left;
@@ -1048,6 +1048,9 @@ tbody tr.active:hover {
 .drawer .content .graph {
   height: 256px;
   width: 256px;
+  }
+.drawer .content .gain {
+  border-left: 0;
   }
 
 .floor .correction-control {
