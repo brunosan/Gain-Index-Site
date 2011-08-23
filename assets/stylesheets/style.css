@@ -20,6 +20,7 @@ body {
   font-style: normal;
   }
 
+/* Header styles */
 h1,h2,h3,h4,h5 {
   font-family: 'AlternateGothicLTNo3Regular',"HelveticaNeueBoldCondensed", "HelveticaNeue-Bold-Condensed", "Arial Narrow", "Arial", sans-serif;
   font-weight: 100;
@@ -27,28 +28,25 @@ h1,h2,h3,h4,h5 {
   padding-top: 15px;
   padding-bottom: 15px;
   clear: left;
-  }
-    
+  } 
 h2 {
   font-size: 28px;
   border-bottom: #c6c6c6 1px solid;
-}
-
+  }
 h3 {
   font-size: 20px;
-}
-
+  }
 h4 {
   font-weight: normal;
   font-size: 18px;
   }
-
 .drawer h4 {
   font-family: 'HelveticaNeue', Helvetica, Arial, sans-serif;
   font-style: italic;
   font-size: 13px;
   }
 
+/* Use this class for getting left/right padding */
 .container {
   padding-left: 15px;
   padding-right: 15px;
