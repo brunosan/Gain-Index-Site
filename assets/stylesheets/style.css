@@ -565,6 +565,9 @@ table.data tbody tr {
 table.data tr.worst {
   background-color: #ffdfdd;
   }
+  table.data tr.worst.active {
+    background-color: #e3c6c5;
+    }
 
 /**
  * Country summary generic styles
