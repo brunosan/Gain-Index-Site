@@ -95,17 +95,21 @@ p {
   line-height: 1.5;
   color: #434343;
   padding: 0 0 15px 0;
-}
+  }
 
 a {
   color: #434343;
   text-decoration: none;
-}
+  }
 
 a:hover {
  color: #A8A8A8; 	
  text-decoration: none;
-}
+  }
+
+ul {
+  padding-bottom: 15px;
+  }
 
 /**
  * Plain lists in documents.
@@ -566,7 +570,7 @@ table.data tr.worst {
   background-color: #ffdfdd;
   }
   table.data tr.worst.active {
-    background-color: #e3c6c5;
+    background-color: #f8d3d1;
     }
 
 /**
@@ -1048,17 +1052,23 @@ tbody tr.active:hover {
   padding-left: 10px;
 }
 
-.drawer .content .graph {
-  width: 285px;
-  height: 150px;
+.drawer .content .chart {
+  padding-bottom: 15px;
   }
+  .drawer .content .graph {
+    width: 285px;
+    height: 150px;
+    }
 .drawer .content .gain {
   border-left: 0;
   }
 .drawer .country-info {
   padding-bottom: 15px;
   }
-.drawer .indicator-info {
+
+.drawer .indicator-time,
+.drawer .source,
+.drawer .similar-countries {
   border-top: 1px solid #ccc;
   }
 .floor .correction-control {
