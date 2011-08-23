@@ -504,6 +504,7 @@ ul.tabs li a.active {
   top: 20px;
   left: 50%;
   margin-left: 160px;
+  padding-bottom: 30px;
   width: 320px;
   background: #ebebeb;
   border-radius: 0px 3px 3px 0px;
