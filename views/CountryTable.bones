@@ -54,6 +54,7 @@ view = views.Main.extend({
             scores[field.field.id].score = field.score;
             scores[field.field.id].index = field.field.index;
             scores[field.field.id].name = field.field.id;
+            scores[field.field.id].sector = field.field.sector;
             
             data.push(field);
         }
@@ -67,8 +68,9 @@ view = views.Main.extend({
                 }
             });
         });
-        // Sort by score, drop 0's.
-        scores = _.filter(scores, function(item) { return (item.score > 0 && item.score < 1); });
+        var exclude = ['infr'];
+        // Sort by score, drop 0's and 1's, drop sectors
+        scores = _.filter(scores, function(item) { return ((item.score > 0 && item.score < 1) || item.sector == null); });
         if (this.options.tab == 'vulnerability') {
             scores = _.filter(scores, function(item) {return item.score > 0.7 });
             scores.sort(function(a, b) { return b.score - a.score });
