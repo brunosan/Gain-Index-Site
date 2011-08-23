@@ -429,6 +429,7 @@ ul.tabs li a.active {
 #cabinet .top {
   float: left;
   width: 640px;
+  min-height: 500px;
   background-color: #fff;
   -moz-box-shadow: 0px -20px 20px #000;
   -webkit-box-shadow: 0px -20px 20px #000;
