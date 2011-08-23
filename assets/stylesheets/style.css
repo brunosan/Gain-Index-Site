@@ -149,9 +149,9 @@ ul.tabs.level-1 li a {
   margin-left: 10px;
   line-height: 30px;
   background-color: #c6c6c6;
-  -moz-border-radius: 3px 3px 0px 0px;
-  -webkit-border-radius: 3px 3px 0px 0px;
-  border-radius: 3px 3px 0px 0px;
+  -moz-border-radius: 4px 4px 0px 0px;
+  -webkit-border-radius: 4px 4px 0px 0px;
+  border-radius: 4px 4px 0px 0px;
   }
 ul.tabs li a.active {
   background-color: #fff;
@@ -606,7 +606,7 @@ table.data tbody tr {
   .country-summary div.chart {
     float: right;
     height: 110px;
-    width: 125px;
+    width: 130px;
     }
     .country-summary div.chart .mini-matrix {
       margin: 10px 0px 0px 10px;
@@ -614,7 +614,7 @@ table.data tbody tr {
   .country-summary div.vulnerability {
     text-align: center;
     line-height: 25px;
-    width: 125px;
+    width: 130px;
     border-color: #c6c6c6;
     border-style: solid;
     border-width: 1px 0px 1px 0px;
@@ -912,6 +912,10 @@ tbody tr.active:hover {
 .country-profile {
   background-color: white;
   }
+
+.country-profile p.label {
+ padding: 10px 0 0 0;
+}
 .country-profile .tab-content {
   background-color: #fff;
   }
@@ -920,12 +924,12 @@ tbody tr.active:hover {
   }
 .country-profile tr.index {
   font-weight: bold;
-  border-bottom: 2px solid #c6c6c6;
+  border-bottom: 1px solid #c6c6c6;
   line-height: 40px;
   }
 
 .country-profile tr.section {
-  border-bottom: 2px solid #c6c6c6;
+  border-bottom: 1px solid #c6c6c6;
   line-height: 40px;
   }
 .country-profile th.name,
@@ -941,7 +945,7 @@ tbody tr.active:hover {
 .country-profile div.background-info {
   width: 290px;
   float: left;
-  margin-left: 20px;
+  margin: 10px 0 15px 20px;
   }
 .country-profile .country-summary {
   width: 629px;
@@ -950,7 +954,7 @@ tbody tr.active:hover {
   border-color: #c6c6c6;
   border-width: 1px 0px 1px 1px;
   border-radius: 5px 0px 0px 5px;
-  margin-left: 10px;
+  margin: 0 0 15px 10px;
   }
   .country-profile .country-summary .gain {
     width: 177px;
@@ -965,21 +969,25 @@ tbody tr.active:hover {
     }
 .country-profile h3 {
   line-height: 16px;
-  padding: 0 0 10px 0;
+  padding: 15px 0 15px 0;
   }
 .country-profile .details,
 .country-profile .rankings {
   background-color: #ebebeb;
   }
 .country-profile .rankings {
-  padding: 10px 0 20px 0px;
+  padding: 0 0 20px 0px;
   font-size: 11px;
   }
   .country-profile .rankings table {
     margin-left: 10px;
     border: 1px solid #c6c6c6;
     border-right: none;
-    width: 625px;
+    width: 630px;
+    background-color: #EBEBEB;
+    -moz-border-radius: 4px 0px 0px 4px;
+    -webkit-border-radius: 4px 0px 0px 4px;
+    border-radius: 4px 0px 0px 4px;
     }
   .country-profile .rankings th,
   .country-profile .rankings td {
@@ -987,6 +995,13 @@ tbody tr.active:hover {
     padding: 5px 0;
     text-align: center;
     }
+    
+  
+  .country-profile .rankings tr:hover {
+  background-color: #EBEBEB;
+  cursor: default;
+  }
+
 .rank-number {
   width: 22px;
   line-height: 19px;
@@ -1008,6 +1023,10 @@ tbody tr.active:hover {
   width: 80px;
   text-align: left;
   padding-left: 10px;
+}
+
+.country-profile .prose {
+  margin-bottom: 15px;
 }
 
 .drawer .content .graph {

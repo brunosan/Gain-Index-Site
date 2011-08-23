@@ -40,10 +40,17 @@ model = Backbone.Model.extend({
     rank: function(options) {
         options = this.optionDefaults(options);
         var value = this.get('rank') ? this.get('rank')[options.year] : undefined;
-        if (!options.format || _.isUndefined(value)) {
+                if (!options.format || _.isUndefined(value)) {
             return value;
         }
-        var color = gradientRgb(['#67b6e0', '#fc7b7e'], 142, value.desc);
+
+        if (this.get('category') == 'vulnerability' || this.get('name') == 'vulnerability_delta') {
+            var color = gradientRgb(['#67b6e0', '#fc7b7e'], 142, value.asc);
+        }
+        else {
+            var color = gradientRgb(['#67b6e0', '#fc7b7e'], 142, value.desc);
+        }
+
         return "<div class='rank-number' style='background-color: #" + color + ";'>" + value.desc + '</div>';
     },
     meta: function(key) {

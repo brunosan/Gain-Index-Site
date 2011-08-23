@@ -1,8 +1,8 @@
 <thead><tr>
-    <th class='name'></th>
-    <th class='graph'></th>
-    <th class='raw'></th>
-    <th class='normalized'>Score</th>
+    <th class='name label'>Indicator</th>
+    <th class='graph label'>1995 to 2010</th>
+    <th class='raw label'>Raw</th>
+    <th class='normalized label'>Score</th>
 </tr></thead>
 <tbody>
 <% _.each(data, function(row) { %>
