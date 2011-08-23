@@ -25,7 +25,7 @@ view = Backbone.View.extend({
             pin.x = Math.round((summary.readiness.raw * 80) + 15);
             pin.y = 80 - Math.round(summary.vulnerability.raw * 80);
         }
-        $(this.el).append(templates.CountrySummary({
+        $(this.el).empty().append(templates.CountrySummary({
             data: summary,
             pin: pin,
             map: this.map
