@@ -54,7 +54,7 @@ h4 {
   padding-right: 15px;
   }
   /* Get out of the shadows. */
-  #cabinet .container {
+  .slider .container {
     padding-left: 20px;
     }
 
