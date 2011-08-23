@@ -36,6 +36,20 @@ model = Backbone.Collection.extend({
         }
         return data;
     },
+    getRawGraphData: function(key, val) {
+        var data = this.getGraphData(key, val);
+        var indicator = this.byName(val);
+
+        var origin = _(indicator.get('origin')).reduce(function(m, v, k) {
+            m[v] = m[v] || [];
+            m[v].push(parseInt(k, 10));
+
+            return m;
+        }, {});
+        return _(data).select(function(v) {
+            return _.include(origin.raw, v[0]);
+        });
+    },
     sortByRank: function(options) {
         this.comparator = function(model) {
             var rank = model.rank({format: false});
@@ -44,5 +58,6 @@ model = Backbone.Collection.extend({
         };
         this.sort(options);
         return this;
-    }
+    },
+
 });
