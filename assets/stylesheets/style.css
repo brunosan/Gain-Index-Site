@@ -26,6 +26,7 @@ h1,h2,h3,h4,h5 {
   color: #434343;
   padding-top: 15px;
   padding-bottom: 15px;
+  clear: left;
   }
     
 h2 {
@@ -1046,8 +1047,8 @@ tbody tr.active:hover {
 }
 
 .drawer .content .graph {
-  height: 256px;
-  width: 256px;
+  width: 285px;
+  height: 150px;
   }
 .drawer .content .gain {
   border-left: 0;
