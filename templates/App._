@@ -23,7 +23,7 @@
 </head>
 <body>
   <div id='feedbacktab'>
-    <div class='button'>Feedback</div>
+    <div class='button green'>Feedback</div>
     <div class='content'>
       <p>Please report any inconsistencies, apparent data errors or leave a general comment using the link below.</p> 
       <p><a href="mailto:brunosan@globalai.org">Feedback</a></p>
