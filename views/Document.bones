@@ -4,11 +4,10 @@
 view = views.Main.extend({
     initialize: function(options) {
         views.Main.prototype.initialize.apply(this, arguments);
-        _.bindAll(this, 'edit');
-        Bones.user && Bones.user.bind('auth:status', this.edit);
+        _.bindAll(this, 'setPanel');
+        Bones.user && Bones.user.bind('auth:status', this.setPanel);
     },
-    panel: null,
-    edit: function() {
+    setPanel: function() {
         if (Bones.user && Bones.user.authenticated) {
             Bones.admin.setPanel(new views.AdminDocument({
                 model: this.model,
