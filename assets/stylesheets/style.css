@@ -416,11 +416,11 @@ ul.tabs li a.active {
   display: block;
   width: 300px;
   padding-bottom: 20px;
-  background: #ebebeb;
+  background: #fff;
   -moz-border-radius: 4px 0px 0px 0px;
   -webkit-border-radius: 4px 0px 0px 0px;
-
-}
+  }
+  #feedbacktab .content p { padding: 10px 10px 5px 10px; }
 
 
 #feedbacktab .button {
@@ -690,10 +690,10 @@ table.data tr.worst {
     -webkit-border-radius: 0px 0px 0px 3px;
     border-radius: 0px 0px 0px 3px;
     }
-  .mini-matrix .tl.active { background-color: #F77C80; }
-  .mini-matrix .tr.active { background-color: #94EB60; }
-  .mini-matrix .br.active { background-color: #68B5DF; }
-  .mini-matrix .bl.active { background-color: #F6CD47; }
+  .mini-matrix .tl.active { background-color: #F77C80; } /* red */
+  .mini-matrix .tr.active { background-color: #68B5DF; } /* blue */
+  .mini-matrix .br.active { background-color: #94EB60; } /* green */
+  .mini-matrix .bl.active { background-color: #F6CD47; } /* yellow */
 
   .mini-matrix .pin {
     position: absolute;
