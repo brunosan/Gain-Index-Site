@@ -22,13 +22,15 @@ view = Backbone.View.extend({
     drawerEvents: function() {
         _.each(['floor', 'drawer'], function(sel) {
             $(window).scroll(function() {
-                window.drawerTop = window.drawerTop || $('#cabinet .floor').offset().top;
-                var top = window.drawerTop,
-                    el = $('#cabinet .' + sel),
-                    offset = $('#cabinet .top').offset();
-                if (!offset) return;
-                var range = $('#cabinet .top').outerHeight()
-                            + offset.top
+                var el = $('#cabinet .' + sel),
+                    topOffset = $('#cabinet .top').offset(),
+                    floorOffset = $('#cabinet .floor').offset();
+                if (!topOffset || !floorOffset) return;
+                // Capture drawer position once, will change as it slides down.
+                window.floorTop = window.floorTop || floorOffset.top;
+                var top = window.floorTop,
+                    range = $('#cabinet .top').outerHeight()
+                            + topOffset.top
                             - el.outerHeight();
                 var pos = $(this).scrollTop();
                 if (pos > top) {
