@@ -31,6 +31,7 @@ view = Backbone.View.extend({
         });
 
         var that = this;
+        $('.content .composition-bars', this.el).empty();
         _.each(['Vulnerability', 'Readiness'], function(type) {
             new views.SectorCandyBar({
                 type: type,
