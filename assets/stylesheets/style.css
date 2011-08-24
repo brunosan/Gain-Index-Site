@@ -1367,41 +1367,40 @@ background: url('../images/sprite.png') 82px -370px;
 }
 /*** Error Page ***/
 .error-page {
-  height: 400px;
+  padding-top: 150px;
+  height: 300px;
   width: 640px;
-}
-
+  }
   .error-page h2 {
     color: #fff;
     text-align: center;
     border-bottom: 0;
-    padding: 40px 0 10px 0;
+    padding: 0 0 20px 0;
     font-size: 135px;
-    line-height: 80px;
+    line-height: 60px;
   }
-
   .error-page .message {
     font-size: 35px;
     color: white;
     text-align: center;
   }
   .error-page a {
-  display: block;
-  color: #1d354c;
-  text-align: center;
-  margin: 20px auto 0 auto;
-  background-color: #8AD35E;
-  height: 20px;
-  width: 160px;
-  padding: 5px;
-  -moz-border-radius: 4px;
-  -webkit-border-radius: 4px; 
-  border-radius: 4px;
+    display: block;
+    color: #1d354c;
+    text-align: center;
+    margin: 20px auto 0 auto;
+    background-color: #8AD35E;
+    height: 20px;
+    width: 160px;
+    padding: 5px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
   }
-  
   .error-page a:hover {
-  background-color: #94eb60;
-  }
+    background-color: #94eb60;
+    }
+
 /*-----------------------
   Markup free clearing
   Details: http://perishablepress.com/press/2009/12/06/new-clearfix-hack
