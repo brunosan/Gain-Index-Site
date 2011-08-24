@@ -1,0 +1,2 @@
+<strong><label>Featured: <%= countries%></label></strong>
+<input type='button' value='Edit' class='viewing edit'>

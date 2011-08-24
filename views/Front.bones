@@ -3,13 +3,13 @@ view = views.Main.extend({
         'click .drawer .handle a.handle': 'closeDrawer',
         'click #map-years li a': 'yearClick',
         'click #map-indicators li a': 'indicatorClick',
-        'click .floor .correction-control a': 'toggleCorrection',
-        'click .featured': 'featureClick'
+        'click .floor .correction-control a': 'toggleCorrection'
     },
     initialize: function(options) {
-        _.bindAll(this, 'render', 'renderFloor'); 
+        _.bindAll(this, 'render', 'renderFloor', 'setupPanel');
         this.collection.bind('add', this.render);
         views.Main.prototype.initialize.call(this, options);
+        Bones.user && Bones.user.bind('auth:status', this.setupPanel);
     },
     render: function() {
         // Approach the cabinet.
@@ -64,15 +64,14 @@ view = views.Main.extend({
         this.renderFloor('gain');
         return this;
     },
-    featureClick: function() {
-        if (Bones.user.authenticated) {
-            new views.AdminPopupFrontFeature({
-                title: 'Change featured countries on front page',
-                documentType: 'front',
-                pathPrefix: '/front/',
-                model: new models.Front({id: 'front'}),
-                collection: this.collection
-            });
+    setupPanel: function() {
+        if (Bones.user && Bones.user.authenticated) {
+            Bones.admin.setPanel(
+                new views.AdminFrontFeature({collection: this.collection})
+            );
+        }
+        else {
+            Bones.admin.setPanel();
         }
     },
     attach: function() {
@@ -131,8 +130,7 @@ view = views.Main.extend({
                 $('#carousel .overview').fadeIn('normal');
             }
         });
-
-
+        this.setupPanel();
         return this;
     },
     renderFloor: function(id) {
