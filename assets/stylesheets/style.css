@@ -679,7 +679,7 @@ table.data tr.worst {
     }
   .mini-matrix .tl.active { background-color: #F77C80; } /* red */
   .mini-matrix .tr.active { background-color: #68B5DF; } /* blue */
-  .mini-matrix .br.active { background-color: #94EB60; } /* green */
+  .mini-matrix .br.active { background-color: #A5E184; } /* green */
   .mini-matrix .bl.active { background-color: #F6CD47; } /* yellow */
 
   .mini-matrix .pin {
@@ -839,6 +839,15 @@ table.data tr.worst {
   moz-border-radius: 5px 0px 0px 5px;
   webkit-border-radius: 5px 0px 0px 5px;
   }
+  .front .featured .country h3 {
+  float: left;
+  }
+  .front .featured .country a {
+  width: 75px;
+  float: right;}
+  .front .featured .country .prose {
+  float: left;}
+  
   .front .featured .country .info {
     width: 350px;
     float: left;
@@ -1318,11 +1327,15 @@ background: url('../images/sprite.png') 271px -412px;
 /**
  * Featured ranking, front page
  */
+.front .ranking {
+  background-color: #fff;
+  }
 .front .ranking table.data {
   width: 50%;
   float: left;
   clear: none;
   table-layout: auto;
+  margin-bottom: 10px;
   }
   .front .ranking table.data th {
     font-weight: normal;
