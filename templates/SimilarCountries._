@@ -5,7 +5,7 @@
   </tr>
 <% _.each(similar, function(country) { %>
   <tr id="country.id">
-    <td class='country container'><a href='/country/<%= country['ISO3'] %>'><%= country.name %></a></td>
+    <td class='country container'><div class='nowrap'><a href='/country/<%= country['ISO3'] %>'><%= country.name %></a></div></td>
     <td class='indicator container'><%= country.value %></td>
   </tr>
 <% }); %>
