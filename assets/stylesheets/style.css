@@ -1136,6 +1136,9 @@ table.data tbody tr.active:hover {
 .drawer .similar-countries {
   border-top: 1px solid #ccc;
   }
+  .drawer .similar-countries {
+    height: 175px;
+    }
 .drawer .source ul {
   padding-bottom: 15px;
   }

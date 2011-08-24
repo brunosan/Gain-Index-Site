@@ -132,6 +132,7 @@ view = views.Main.extend({
 
         // Lazy load 5 similar countries.
         var el = this.el;
+        $('.drawer .similar-countries', el).css({opacity: 0});
         (new models.IndicatorSummary(
             {id: indicator.get('name'), years: [indicator.get('currentYear')]}
         )).fetch({
@@ -142,6 +143,7 @@ view = views.Main.extend({
                         title: indicator.meta('name')
                     })
                 );
+                $('.drawer .similar-countries', el).animate({opacity: 1, duration: 250});
             }
         });
 
