@@ -27,16 +27,16 @@
      inkscape:pageshadow="2"
      inkscape:zoom="1"
      inkscape:cx="442.24121"
-     inkscape:cy="942.56605"
+     inkscape:cy="1262.566"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
-     showgrid="false"
+     showgrid="true"
      inkscape:window-width="1280"
      inkscape:window-height="684"
-     inkscape:window-x="147"
+     inkscape:window-x="400"
      inkscape:window-y="0"
      inkscape:window-maximized="0"
-     showguides="false"
+     showguides="true"
      inkscape:guide-bbox="true"
      borderlayer="false"
      inkscape:showpageshadow="false"
@@ -12044,6 +12044,14 @@
        height="10"
        x="50"
        y="534.99988"
+       transform="translate(0,-147.63782)" />
+    <rect
+       style="color:#000000;fill:#8c8c8c;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       id="rect13793"
+       width="160"
+       height="50"
+       x="0"
+       y="579.99988"
        transform="translate(0,-147.63782)" />
   </g>
   <g

@@ -412,7 +412,10 @@ model.meta = {
         "index": "vulnerability",
         "sector": "food",
         "component": "sensitivity",
-        "source": ["FAO"]
+        "source": [{
+            "name": "FAO",
+            "link": "http://example.com"
+        }]
     },
     "invest": {
         "id": "invest",
@@ -469,7 +472,10 @@ model.meta = {
         "index": "vulnerability",
         "sector": "food",
         "component": "capacity",
-        "source": ["WHO"]
+        "source": [{
+            "name": "WHO",
+            "link": "http://example.com"
+        }]
     },
     "matern": {
         "id": "matern",
@@ -552,7 +558,10 @@ model.meta = {
         "index": "vulnerability",
         "sector": "infrastruct",
         "component": "exposure",
-        "source": ["CRED & WB Stats for area"]
+        "source": [{
+            "name": "CRED & WB Stats for area",
+            "link": "http://example.com"
+        }]
     },
     "road_paved": {
         "id": "road_paved",
@@ -696,7 +705,10 @@ model.meta = {
         "index": "vulnerability",
         "sector": "water",
         "component": "sensitivity",
-        "source": ["WHO"]
+        "source": [{
+            "name": "WHO",
+            "link": "http://example.com"
+        }]
     },
     "water_use": {
         "id": "water_use",

@@ -81,7 +81,10 @@ view = views.Main.extend({
 
         this.map = new models.Map({year: year, indicator: indicator});
         this.map.featureClick = function(feature, context, index) {
-            return view.openDrawer($(feature).data('iso'));
+            var iso = $(feature).data('iso');
+            if (iso) {
+              return view.openDrawer($(feature).data('iso'));
+            }
         }
 
         // Any time the maps' indicator changes rebuild the floor with the new
