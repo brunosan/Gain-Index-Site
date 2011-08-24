@@ -35,11 +35,14 @@ view = Backbone.View.extend({
             var series = [data, points];
 
             if (rawData && rawData.length) {
-                rawData.length != data.length && (series[1].label = 'Calculated');
+                if (rawData.length != data.length) {
+                    series[1].label = 'Calculated';
+                    series[1].color = 0;
+                }
                 var rawPoints = {
                     label: "Reported",
                     data: rawData,
-                    color: 2,
+                    color: 1,
                     lines: { show: false },
                     points: { show: true, radius: 1 }
                 };
