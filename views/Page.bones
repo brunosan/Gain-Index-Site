@@ -10,6 +10,7 @@ view = views.Document.extend({
         return this;
     },
     attach: function() {
+        views.Document.prototype.attach.apply(this, arguments);
         // Scroll to the position requested by the hash.
         if (!Bones.server && window.location && window.location.hash) {
             var offset = $(window.location.hash).offset();

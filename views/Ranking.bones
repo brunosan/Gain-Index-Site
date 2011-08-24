@@ -117,6 +117,7 @@ view = views.Main.extend({
         });
 
         $('.drawer', this.el).addClass('open');
+        this.positionDrawer('drawer');
         return false;
     },
     closeDrawer: function() {
