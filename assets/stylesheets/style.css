@@ -100,12 +100,12 @@ p {
   }
 
 a {
-  color: #8AD35E;
+  color: #5A2;
   text-decoration: none;
   }
 
 a:hover {
- color: #94EB60; 	
+ color: #8AD35E; 	
  text-decoration: underline;
   }
 
@@ -535,10 +535,6 @@ ul.tabs li a.active {
         top: 20px;
         bottom: auto;
         }
-
-  #cabinet .floor .more {
-    background: #fff;
-    }
 
 .floor .search {
   padding: 20px 0px;
@@ -1219,6 +1215,10 @@ table.data tbody tr.active:hover {
   color: #8C8C8C;
   }
 .ranking thead tr th a.rank{
+background: url('../images/sprite.png') 35px -370px;
+}
+
+.ranking thead tr th a.rank.activeSort{
 background: url('../images/sprite.png') 35px -370px;
 }
 
