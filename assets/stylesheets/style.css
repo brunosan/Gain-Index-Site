@@ -978,6 +978,7 @@ table.data tbody tr.active:hover {
   border-bottom: 1px solid #ebebeb;
   }
 .country-profile tr.index {
+  font-size: 16px;
   font-weight: bold;
   border-bottom: 1px solid #c6c6c6;
   line-height: 40px;
@@ -1090,7 +1091,8 @@ table.data tbody tr.active:hover {
  * Country page sector graphs
  */
 .country-sector-graph {
-  width: 100px;
+  margin: 10px 15px 0 0;
+  width: 80px;
   height: 10px;
   overflow: hidden;
   background-color: #ccc;
@@ -1104,6 +1106,8 @@ table.data tbody tr.active:hover {
   }
   .country-sector-graph span {
     height: 10px;
+    margin-left: -1px;
+    border-left: 1px solid #fff;
     display: block;
     float: left;
     /*border-left: 1px solid #fff;
