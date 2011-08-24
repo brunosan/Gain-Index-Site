@@ -1100,7 +1100,7 @@ table.data tbody tr.active:hover {
  * Country page sector graphs
  */
 .country-sector-graph {
-  margin: 10px 15px 0 0;
+  margin: 12px 15px 0 0;
   width: 80px;
   height: 10px;
   overflow: hidden;
