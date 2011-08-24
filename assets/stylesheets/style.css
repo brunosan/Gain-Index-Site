@@ -146,9 +146,7 @@ ul {
   /**
    * TODO: get a new icon for the '=' sign.
    */
-  .icon-outlook-same { background-position: 0px -387px; }
-  table .icon-outlook-same { background-image: none; }
-
+  .icon-outlook-same { background-position: 0px -389px; }
 
 /**
  * Tabs
@@ -1218,16 +1216,24 @@ table.data tbody tr.active:hover {
 background: url('../images/sprite.png') 35px -370px;
 }
 
-.ranking thead tr th a.rank.activeSort{
-background: url('../images/sprite.png') 35px -370px;
+.ranking thead tr th a.sort.label.rank.activeSort{
+background: url('../images/sprite.png') 223px -412px;
 }
 
 .ranking thead tr th a.alpha{
 background: url('../images/sprite.png') 50px -370px;
 }
 
+.ranking thead tr th a.sort.label.alpha.activeSort{
+background: url('../images/sprite.png') 239px -412px;
+}
+
 .ranking thead tr th a.income{
 background: url('../images/sprite.png') 82px -370px;
+}
+
+.ranking thead tr th a.sort.label.income.activeSort{
+background: url('../images/sprite.png') 271px -412px;
 }
 
 .ranking p.label: 
