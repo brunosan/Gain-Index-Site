@@ -563,7 +563,6 @@ table.data {
   width: 100%;
   table-layout: fixed;
   clear: left;
-  margin-bottom: 45px;
   }
 table.data tr {
   line-height: 25px;
@@ -680,7 +679,7 @@ table.data tr.worst {
     }
   .mini-matrix .tl.active { background-color: #F77C80; } /* red */
   .mini-matrix .tr.active { background-color: #68B5DF; } /* blue */
-  .mini-matrix .br.active { background-color: #94EB60; } /* green */
+  .mini-matrix .br.active { background-color: #A5E184; } /* green */
   .mini-matrix .bl.active { background-color: #F6CD47; } /* yellow */
 
   .mini-matrix .pin {
@@ -840,6 +839,15 @@ table.data tr.worst {
   moz-border-radius: 5px 0px 0px 5px;
   webkit-border-radius: 5px 0px 0px 5px;
   }
+  .front .featured .country h3 {
+  float: left;
+  }
+  .front .featured .country a {
+  width: 75px;
+  float: right;}
+  .front .featured .country .prose {
+  float: left;}
+  
   .front .featured .country .info {
     width: 350px;
     float: left;
@@ -916,6 +924,10 @@ table.data tr.worst {
 table.data {
   background: #fff;
   }
+  /* full page tables */
+  table.data.full {
+    margin-bottom: 45px;
+    }
   
 table.data thead {
   border-bottom: 1px solid #c6c6c6;
@@ -1040,7 +1052,6 @@ table.data tbody tr.active:hover {
   .country-profile table.ranking-history {
     width: 629px;
     background-color: transparent;
-    margin-bottom: 0;
     }
   .country-profile table.ranking-history th.label {
     border-right: 1px solid #c6c6c6;
