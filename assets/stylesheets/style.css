@@ -866,26 +866,20 @@ table.data tr.worst {
  */
 .download-page {
   background-color: white;
-  color: gray;
-  padding: 20px;
-  font-size: 15px;
   width: 640px;
+  float: left;
 }
-.download-page h2 {
-  font-size: 30px;
-  line-height: 50px;
-  width: 100%;
-  border-bottom: 1px solid #c6c6c6;
-}
+
 .download-page .prose {
-  padding: 10px;
 }
+
 .download-page ul {
   border: 1px solid #c6c6c6;
   padding: 10px;
-   -moz-border-radius: 6px;
-   -webkit-border-radius: 6px;
-   border-radius: 6px;
+  margin: 15px 0 15px 15px;
+   -moz-border-radius: 4px 0 0 4px;
+   -webkit-border-radius: 4px 0 0 4px;
+   border-radius: 4px 0 0 4px;
 }
 
 .download-page li {
@@ -894,28 +888,29 @@ table.data tr.worst {
   margin-left: 20px;
 }
 
-.download-page a.download-icon {
-   background-color: #e6e6e6;
-   display: block;
-   font-size: 20px;
-   font-weight: bold;
-   padding: 15px 0 15px 100px;
-   margin: 20px 0 10px;
-   color: #46ab1a;
-   -moz-border-radius: 3px;
-   -webkit-border-radius: 3px;
-   border-radius: 3px;
-   text-decoration: none;
-   border-bottom: 1px solid #999;
+.download-page a.button {
+  font-family: 'AlternateGothicLTNo3Regular',"HelveticaNeueBoldCondensed", "HelveticaNeue-Bold-Condensed", "Arial Narrow", "Arial", sans-serif;
+  font-weight: normal;
+  font-size: 28px;
+  height: 40px;
+  line-height: 40px;
+  text-indent: 45px;
+  padding: 10px;
+  margin: 0 15px 15px 15px;
+  width:590px;
+  float: left;
+  background: #a5e184 url('../images/sprite.png') 10px -265px no-repeat;
 }
+
 .download-page .timestamp {
-  font-size: 14px;
+  font-family: 'HelveticaNeue', Helvetica, Arial, sans-serif;
   float: right;
+  font-size: 12px;
+  font-weight: normal;
+  text-transform: none;
 }
 
 .download-page a.download-icon:hover {
-   background-color: #eee;
-   border-bottom: 1px solid #aaa;
 }
 
 /**
