@@ -156,6 +156,7 @@ view = views.Main.extend({
             $('.drawer .content .graph', this.el).hide();
         }
         $('.drawer', this.el).addClass('open');
+        this.positionDrawer('drawe');
         return false;
     },
     closeDrawer: function() {
