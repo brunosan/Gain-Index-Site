@@ -687,10 +687,10 @@ table.data tr.worst {
     -webkit-border-radius: 0px 0px 0px 3px;
     border-radius: 0px 0px 0px 3px;
     }
-  .mini-matrix .tl.active { background-color: red; }
-  .mini-matrix .tr.active { background-color: green; }
-  .mini-matrix .br.active { background-color: blue; }
-  .mini-matrix .bl.active { background-color: yellow; }
+  .mini-matrix .tl.active { background-color: #F77C80; }
+  .mini-matrix .tr.active { background-color: #94EB60; }
+  .mini-matrix .br.active { background-color: #68B5DF; }
+  .mini-matrix .bl.active { background-color: #F6CD47; }
 
   .mini-matrix .pin {
     position: absolute;
