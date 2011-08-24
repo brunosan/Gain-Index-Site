@@ -31,11 +31,11 @@ view = Backbone.View.extend({
         });
 
         var that = this;
-        _.each(['Vulnerability', 'Readiness'], function(type) {
+        _.each(['Vulnerability composition', 'Readiness composition'], function(type) {
             new views.SectorCandyBar({
                 type: type,
                 model: that.model,
-                el: $('.content .candybar', that.el)
+                el: $('.content .composition-bars', that.el)
             });
         });
 

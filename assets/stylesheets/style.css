@@ -494,13 +494,13 @@ ul.tabs li a.active {
       width: 75px;
       margin-right: 0px;
       }
-  
-  #cabinet .drawer .country-summary {
-    border: 1px solid #c6c6c6;
-    border-radius: 5px;
-    moz-border-radius: 5px;
-    webkit-border-radius: 5px;
-    }
+
+#cabinet .drawer .country-summary {
+  border: 1px solid #c6c6c6;
+  border-radius: 5px;
+  moz-border-radius: 5px;
+  webkit-border-radius: 5px;
+  }
 
 #cabinet .floor {
   padding-bottom: 10px;
@@ -563,7 +563,6 @@ table.data {
   width: 100%;
   table-layout: fixed;
   clear: left;
-  margin-bottom: 45px;
   }
 table.data tr {
   line-height: 25px;
@@ -680,7 +679,7 @@ table.data tr.worst {
     }
   .mini-matrix .tl.active { background-color: #F77C80; } /* red */
   .mini-matrix .tr.active { background-color: #68B5DF; } /* blue */
-  .mini-matrix .br.active { background-color: #94EB60; } /* green */
+  .mini-matrix .br.active { background-color: #A5E184; } /* green */
   .mini-matrix .bl.active { background-color: #F6CD47; } /* yellow */
 
   .mini-matrix .pin {
@@ -840,6 +839,15 @@ table.data tr.worst {
   moz-border-radius: 5px 0px 0px 5px;
   webkit-border-radius: 5px 0px 0px 5px;
   }
+  .front .featured .country h3 {
+  float: left;
+  }
+  .front .featured .country a {
+  width: 75px;
+  float: right;}
+  .front .featured .country .prose {
+  float: left;}
+  
   .front .featured .country .info {
     width: 350px;
     float: left;
@@ -916,6 +924,10 @@ table.data tr.worst {
 table.data {
   background: #fff;
   }
+  /* full page tables */
+  table.data.full {
+    margin-bottom: 45px;
+    }
   
 table.data thead {
   border-bottom: 1px solid #c6c6c6;
@@ -975,6 +987,7 @@ table.data tbody tr.active:hover {
   border-bottom: 1px solid #ebebeb;
   }
 .country-profile tr.index {
+  font-size: 16px;
   font-weight: bold;
   border-bottom: 1px solid #c6c6c6;
   line-height: 40px;
@@ -1040,7 +1053,6 @@ table.data tbody tr.active:hover {
   .country-profile table.ranking-history {
     width: 629px;
     background-color: transparent;
-    margin-bottom: 0;
     }
   .country-profile table.ranking-history th.label {
     border-right: 1px solid #c6c6c6;
@@ -1088,19 +1100,23 @@ table.data tbody tr.active:hover {
  * Country page sector graphs
  */
 .country-sector-graph {
-  width: 100px;
-  height: 15px;
+  margin: 10px 15px 0 0;
+  width: 80px;
+  height: 10px;
+  overflow: hidden;
   background-color: #ccc;
   float: right;
   }
   .drawer .country-sector-graph {
     float: none;
-    margin: 20px 0px;
+    margin: 0 0 10px 0;
     width: 100%;
     position: relative
   }
   .country-sector-graph span {
-    height: 15px;
+    height: 10px;
+    margin-left: -1px;
+    border-left: 1px solid #fff;
     display: block;
     float: left;
     /*border-left: 1px solid #fff;
@@ -1156,6 +1172,9 @@ table.data tbody tr.active:hover {
   }
   .drawer .similar-countries {
     height: 175px;
+    }
+  .drawer .composition {
+    height: 90px;
     }
 .drawer .source ul {
   padding-bottom: 15px;
@@ -1306,11 +1325,15 @@ background: url('../images/sprite.png') 271px -412px;
 /**
  * Featured ranking, front page
  */
+.front .ranking {
+  background-color: #fff;
+  }
 .front .ranking table.data {
   width: 50%;
   float: left;
   clear: none;
   table-layout: auto;
+  margin-bottom: 10px;
   }
   .front .ranking table.data th {
     font-weight: normal;
