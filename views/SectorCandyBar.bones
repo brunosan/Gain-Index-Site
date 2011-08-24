@@ -1,7 +1,4 @@
 view = Backbone.View.extend({
-    events: {
-        'hover .country-sector-graph span': 'showInfo'
-    },
     initialize: function(options) {
         this.model = options.model;
         this.type = options.type;
@@ -33,8 +30,4 @@ view = Backbone.View.extend({
         }));
         return this;
     },
-    showInfo: function() {
-        //$('.country-sector-graph span > .info', this.el).toggleClass('show');
-        return false;
-    }
 });
