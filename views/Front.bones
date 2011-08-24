@@ -6,8 +6,8 @@ view = views.Main.extend({
         'click .floor .correction-control a': 'toggleCorrection'
     },
     initialize: function(options) {
-        _.bindAll(this, 'render', 'renderFloor', 'setupPanel');
-        this.collection.bind('add', this.render);
+        _.bindAll(this, 'render', 'renderCountryFeature', 'renderFloor', 'setupPanel');
+        this.collection.bind('add', this.renderCountryFeature);
         views.Main.prototype.initialize.call(this, options);
         Bones.user && Bones.user.bind('auth:status', this.setupPanel);
     },
@@ -43,24 +43,7 @@ view = views.Main.extend({
             })
         );
 
-        // Featured countries
-        var that = this;
-        this.collection.each(function(model) {
-            $('.featured .countries', that.el).append(
-                templates.FeaturedFront({
-                    name: model.meta('name'),
-                    iso: model.meta('ISO3')
-                })
-            );
-            new views.AboutQuadrantShort({
-                el: $('.featured .prose', that.el).last(),
-                model: model
-            }).render();
-            new views.CountrySummary({
-                el: $('.featured .country-summary', that.el).last(),
-                model: model
-            });
-        });
+        this.renderCountryFeature();
         this.renderFloor('gain');
         return this;
     },
@@ -135,6 +118,27 @@ view = views.Main.extend({
         });
         this.setupPanel();
         return this;
+    },
+    renderCountryFeature: function() {
+        // Featured countries
+        var that = this;
+        $('.featured .countries', this.el).empty();
+        this.collection.each(function(model) {
+            $('.featured .countries', that.el).append(
+                templates.FeaturedFront({
+                    name: model.meta('name'),
+                    iso: model.meta('ISO3')
+                })
+            );
+            new views.AboutQuadrantShort({
+                el: $('.featured .prose', that.el).last(),
+                model: model
+            }).render();
+            new views.CountrySummary({
+                el: $('.featured .country-summary', that.el).last(),
+                model: model
+            });
+        });
     },
     renderFloor: function(id) {
         id = _.isObject(id) ? id.get('indicator') : id;
