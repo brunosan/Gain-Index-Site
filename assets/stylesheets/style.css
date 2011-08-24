@@ -75,7 +75,7 @@ h4 {
   .button.green {
     display: block;
     color: #fff;
-    background-color: #a5e184;
+    background-color: #68BB37;
     -moz-border-radius: 4px;
     -webkit-border-radius: 4px;
     border-radius: 4px;
@@ -87,7 +87,7 @@ h4 {
   }
   .button:hover{text-decoration: none;}
   .button.green:hover {
-  background-color: #8AD35E;
+  background-color: #5A2;
   }
   
 p {
@@ -100,12 +100,12 @@ p {
   }
 
 a {
-  color: #8AD35E;
+  color: #5A2;
   text-decoration: none;
   }
 
 a:hover {
- color: #5A2; 	
+ color: #4B971E; 	
  text-decoration: underline;
   }
 
@@ -692,7 +692,7 @@ table.data tbody tr {
     }
   .mini-matrix .tl.active { background-color: #F77C80; } /* red */
   .mini-matrix .tr.active { background-color: #68B5DF; } /* blue */
-  .mini-matrix .br.active { background-color: #A5E184; } /* green */
+  .mini-matrix .br.active { background-color: #68BB37; } /* green */
   .mini-matrix .bl.active { background-color: #F6CD47; } /* yellow */
 
   .mini-matrix .pin {
@@ -916,7 +916,7 @@ table.data tbody tr {
   margin: 0 15px 15px 15px;
   width:590px;
   float: left;
-  background: #a5e184 url('../images/sprite.png') 10px -265px no-repeat;
+  background: #68BB37 url('../images/sprite.png') 10px -265px no-repeat;
 }
 
 .download-page .timestamp {
