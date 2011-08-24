@@ -563,7 +563,6 @@ table.data {
   width: 100%;
   table-layout: fixed;
   clear: left;
-  margin-bottom: 45px;
   }
 table.data tr {
   line-height: 25px;
@@ -916,6 +915,10 @@ table.data tr.worst {
 table.data {
   background: #fff;
   }
+  /* full page tables */
+  table.data.full {
+    margin-bottom: 45px;
+    }
   
 table.data thead {
   border-bottom: 1px solid #c6c6c6;
@@ -1040,7 +1043,6 @@ table.data tbody tr.active:hover {
   .country-profile table.ranking-history {
     width: 629px;
     background-color: transparent;
-    margin-bottom: 0;
     }
   .country-profile table.ranking-history th.label {
     border-right: 1px solid #c6c6c6;
