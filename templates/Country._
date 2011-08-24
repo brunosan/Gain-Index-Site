@@ -14,20 +14,22 @@
   <% if (_(rank).size()) { %>
   <div class='rankings'>
     <h3 class='container'>GaIn&#8482; Ranking since 1995</h3>
-    <table class='data ranking-history'>
-      <thead>
-        <tr class='years'>
-          <th class='label'>Year</th>
-          <% _.each(rank, function(rank) { %>  <th><%= rank.year %></th>  <% }); %>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <th class='label'>Ranking</th>
-          <% _.each(rank, function(rank) { %>  <td><%= rank.rank %></td>  <% }); %>
-        </tr>
-      </tbody>
-    </table>
+    <div class='ranking-history-wrapper'>
+      <table class='data ranking-history'>
+        <thead>
+          <tr class='years'>
+            <th class='label'>Year</th>
+            <% _.each(rank, function(rank) { %>  <th><%= rank.year %></th>  <% }); %>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th class='label'>Ranking</th>
+            <% _.each(rank, function(rank) { %>  <td><%= rank.rank %></td>  <% }); %>
+          </tr>
+        </tbody>
+      </table>
+    </div>
   </div>
   <% } %>
   <div class='details'>
