@@ -1095,7 +1095,7 @@ table.data tbody tr.active:hover {
   }
   .drawer .country-sector-graph {
     float: none;
-    margin: 10px 0px;
+    margin: 20px 0px;
     width: 100%;
     position: relative
   }
@@ -1122,14 +1122,12 @@ table.data tbody tr.active:hover {
 
 .country-sector-graph .bar label {
   line-height: 18px;
-  color: white;
   display: none;
   width: 600px;
   position: absolute;
-  top: 25px;
+  top: 20px;
   left: 0;
-  font-size: 16px;
-  background-color: #1A1A1A;
+  font-size: 14px;
   }
 .country-sector-graph .bar:hover label {
   display: block;
