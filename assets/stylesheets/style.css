@@ -486,17 +486,14 @@ ul.tabs li a.active {
     -moz-border-radius: 0px 3px 0px 0px;
     -webkit-border-radius: 0px 3px 0px 0px;
     }
-    
+    #cabinet .indicator-info a.button.green {
+      width: 80px;
+      }
     #cabinet .floor a.button.green,
     #cabinet .drawer a.button.green {
       width: 75px;
       margin-right: 0px;
       }
-
-  #cabinet .indicator-info a.button.green {
-  width: 30px;
-  }
-  
   
   #cabinet .drawer .country-summary {
     border: 1px solid #c6c6c6;
@@ -566,6 +563,7 @@ table.data {
   width: 100%;
   table-layout: fixed;
   clear: left;
+  margin-bottom: 45px;
   }
 table.data tr {
   line-height: 25px;
@@ -1042,6 +1040,7 @@ table.data tbody tr.active:hover {
   .country-profile table.ranking-history {
     width: 629px;
     background-color: transparent;
+    margin-bottom: 0;
     }
   .country-profile table.ranking-history th.label {
     border-right: 1px solid #c6c6c6;
@@ -1141,16 +1140,20 @@ table.data tbody tr.active:hover {
   }
 .drawer table.similar {
   width: 100%;
+  table-layout: fixed;
   }
+  .drawer table.similar th {
+    width: 50%;
+    }
   .drawer table.similar td {
     padding-top: 3px;
     padding-bottom: 3px;
     border-bottom: 1px solid #ddd;
     }
     .drawer table.similar .nowrap {
-      width: 150px;
+      width: 130px;
       }
-  .drawer table.similar td.first {
+  .drawer table.similar td.country {
     border-right: 1px solid #ddd;
     }
   .drawer table.similar th {
