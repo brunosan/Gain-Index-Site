@@ -573,9 +573,6 @@ table.data thead tr {
 table.data tbody tr {
   border-bottom: 1px solid #ebebeb;
   }
-table.data tr.worst {
-  color: #d15659;
-  }
 
 /**
  * Country summary generic styles
