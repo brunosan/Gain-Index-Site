@@ -9,10 +9,10 @@
 </div>
 <div class='chart'>
   <div class='mini-matrix'>
-    <div class='quad tl'></div>
-    <div class='quad tr'></div>
-    <div class='quad br'></div>
-    <div class='quad bl'></div>
+    <div class='quad tl<%= (active =='tl' ? ' active' : '') %>'></div>
+    <div class='quad tr<%= (active =='tr' ? ' active' : '') %>'></div>
+    <div class='quad br<%= (active =='br' ? ' active' : '') %>'></div>
+    <div class='quad bl<%= (active =='bl' ? ' active' : '') %>'></div>
     <div class='pin' style='top: <%= pin.y %>px; left: <%= pin.x %>px;'></div>
   </div>
 <% _.each(['vulnerability', 'readiness'], function(stat) { %>

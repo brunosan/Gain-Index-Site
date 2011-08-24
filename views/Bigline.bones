@@ -17,7 +17,7 @@ view = Backbone.View.extend({
             lines: { lineWidth: 1 },
             shadowSize: 0
         },
-        colors: ['#666', '#f00', '#00f']
+        colors: ['#666', '#d15659', '#d15659']
     },
     render: function(options) {
         var data = options.data;
@@ -34,12 +34,15 @@ view = Backbone.View.extend({
 
             var series = [data, points];
 
-            if (rawData && rawData.length > 1) {
-                series[1].label = 'Calculated';
+            if (rawData && rawData.length) {
+                if (rawData.length != data.length) {
+                    series[1].label = 'Calculated';
+                    series[1].color = 0;
+                }
                 var rawPoints = {
-                    label: "Actual",
+                    label: "Reported",
                     data: rawData,
-                    color: 2,
+                    color: 1,
                     lines: { show: false },
                     points: { show: true, radius: 1 }
                 };

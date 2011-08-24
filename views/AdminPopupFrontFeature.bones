@@ -1,6 +1,3 @@
-// AdminPopupProject
-// --------------
-// Project creation/update popup.
 view = views.AdminPopup.extend({
     events: _.extend({
         'click input[type=submit]': 'submit',
@@ -8,7 +5,6 @@ view = views.AdminPopup.extend({
     initialize: function (options) {
         _.bindAll(this, 'submit');
         this.content = templates.AdminPopupFrontFeature({
-            documentType: this.options.documentType,
             countries: models.Country.meta,
             featuredFirst: this.collection.first().get('id'),
             featuredSecond: this.collection.last().get('id')

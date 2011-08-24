@@ -13,8 +13,8 @@ model = Backbone.Model.extend({
         var elem = options.el || 'map',
             width = options.width || 640,
             height = options.height || 490,
-            lat = options.lat || 39,
-            lon = options.lon || -98,
+            lat = options.lat || 35,
+            lon = options.lon || -8,
             z = options.z || 2;
 
         var mm = com.modestmaps,
@@ -62,16 +62,19 @@ model = Backbone.Model.extend({
         m.setProvider(new wax.mm.connector(tilejson));
     },
     featureHover: function(options, data) {
+        var inlineData= '',
+            val = '';
         if (data.factor_raw === undefined) {
-            var val = "Not evaluated";
+            val = "Not evaluated";
         } else if (data.factor_raw === 0) {
-            var val = "No GaIn&trade; score";
+            val = "No GaIn&trade; score";
         } else {
             var ind = this.get('indicator');
-            var val = models.Indicator.format(data.factor_raw, ind);
+            val = models.Indicator.format(data.factor_raw, ind);
+            inlineData = ' data-iso="' + data.iso_a3 + '"';
         }
         
-        return '<span data-iso="' + data.iso_a3 + '">' + data.admin + ': '+ val +'</span>';
+        return '<span'+ inlineData +'>' + data.admin + ': '+ val +'</span>';
     },
     featureClick: function(feature, context, index) {
         // no-op.
