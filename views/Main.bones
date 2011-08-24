@@ -22,26 +22,32 @@ view = Backbone.View.extend({
     drawerEvents: function() {
         _.each(['floor', 'drawer'], function(sel) {
             $(window).scroll(function() {
-                window.drawerTop = window.drawerTop || $('#cabinet .floor').offset().top;
-                var top = window.drawerTop,
-                    el = $('#cabinet .' + sel),
-                    offset = $('#cabinet .top').offset();
-                if (!offset) return;
+                var drawer = $('#cabinet .' + sel),
+                    topOffset = $('#cabinet .top').offset(),
+                    drawerOffset = $('#cabinet .floor').offset();
+                if (!topOffset || !drawerOffset) return;
+                // Capture drawer position once, will change as it slides down.
+                window.drawerTop = window.drawerTop || drawerOffset.top;
+                // Vertical range we allow the drawer to 'stick' with the window.
+                // This is the bottom border of the top element minus the height
+                // of the drawer, minus the distance of the drawer's top border
+                // to the top element.
                 var range = $('#cabinet .top').outerHeight()
-                            + offset.top
-                            - el.outerHeight();
+                            + topOffset.top
+                            - drawer.outerHeight()
+                            - (window.drawerTop - topOffset.top);
                 var pos = $(this).scrollTop();
-                if (pos > top) {
-                    el.addClass('fixed');
+                if (pos > topOffset.top) {
+                    drawer.addClass('fixed');
                 }
                 else {
-                    el.removeClass('fixed');
+                    drawer.removeClass('fixed');
                 }
                 if (pos > range) {
-                    el.addClass('bottom');
+                    drawer.addClass('bottom');
                 }
                 else {
-                    el.removeClass('bottom');
+                    drawer.removeClass('bottom');
                 }
             });
         });

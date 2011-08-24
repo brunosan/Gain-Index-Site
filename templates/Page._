@@ -7,5 +7,4 @@
   <div class='attribute body'>
     <div class='editable <%= render('id') %> editable-body'><%= render('body') %></div>
   </div>
-    <div class='floor'></div>
 </div>

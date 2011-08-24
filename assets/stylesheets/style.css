@@ -522,7 +522,7 @@ ul.tabs li a.active {
   }
   #cabinet .slider.fixed {
     position: fixed;
-    top: 0;
+    top: 20px;
     }
     #cabinet.front .slider.fixed {
       top: 20px;
