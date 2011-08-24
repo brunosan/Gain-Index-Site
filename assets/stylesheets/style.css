@@ -490,17 +490,14 @@ ul.tabs li a.active {
     -moz-border-radius: 0px 3px 0px 0px;
     -webkit-border-radius: 0px 3px 0px 0px;
     }
-    
+    #cabinet .indicator-info a.button.green {
+      width: 80px;
+      }
     #cabinet .floor a.button.green,
     #cabinet .drawer a.button.green {
       width: 75px;
       margin-right: 0px;
       }
-
-  #cabinet .indicator-info a.button.green {
-  width: 30px;
-  }
-  
   
   #cabinet .drawer .country-summary {
     border: 1px solid #c6c6c6;
