@@ -46,7 +46,7 @@
       </div>
     </div>
     <div id='tab' class='tab-content'>
-      <table id='country-data' class='data'></table>
+      <table id='country-data' class='data full'></table>
     </div>
   </div>
 </div>

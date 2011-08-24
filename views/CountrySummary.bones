@@ -22,9 +22,20 @@ view = Backbone.View.extend({
             }
         });
         if (summary.readiness && summary.vulnerability) {
+            var r = summary.readiness.raw,
+                v = summary.vulnerability.raw;
+
             // Determine which quadrant to highlight.
-            var activeQuad = (summary.vulnerability.raw > 0.5 ? 't' : 'b');
-            activeQuad += (summary.readiness.raw > 0.5 ? 'r' : 'l');
+            // * The turning point for Readiness is 0.52
+            // * The turning point for Vulnerability us 0.31
+            var activeQuad = (v > 0.31 ? 't' : 'b');
+            activeQuad += (r > 0.52 ? 'r' : 'l');
+
+            // The Scale of things here is non-obvious.
+            // * Readiness range accounting for std dev is 0.1 - 0.9
+            // * Vulnerability range accounting for std dev is 0 - 0.6
+            r = (r - 0.1) / 0.8;
+            v = v / 0.6;
 
             // This math depends very heavily on the CSS which is applied to the
             // matrix. We've got the following assumptions.
@@ -35,8 +46,8 @@ view = Backbone.View.extend({
             // * The grid is vertically offset by 0px;
             // * The grid is horizontally offset by 23px;
             // * The containing element is 100px x 90px
-            pin.x = Math.round(summary.readiness.raw * (65 - 10)) + 23;
-            pin.y = (65 - 10) - Math.round(summary.vulnerability.raw * (65 - 10));
+            pin.x = Math.round(r * (65 - 10)) + 23;
+            pin.y = (65 - 10) - Math.round(v * (65 - 10));
         }
         $(this.el).empty().append(templates.CountrySummary({
             data: summary,

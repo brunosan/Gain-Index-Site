@@ -1,0 +1,8 @@
+<%= type %>
+<div class='country-sector-graph clearfix'>
+  <% _.each(data, function(row, name) { %>
+    <span class='sector-graph-<%= name %> hilite bar' style='width:<%= row.percent%>%;'>
+      <label><%= name %><%= row.percent %>%</label>
+    </span>
+      <% }); %>
+</div>
