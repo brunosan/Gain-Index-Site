@@ -6,24 +6,38 @@ view = Backbone.View.extend({
     },
     render: function() {
         var collection = this.model.get('indicators'),
-            data = {},
+            data = [],
             matches = (this.type == 'Vulnerability') ? 
-          ['water', 'food', 'health', 'infrastruct'] : 
-          ['economic', 'governance', 'social'];
-        data.tot = 0;
+              ['water', 'food', 'health', 'infrastruct'] : 
+              ['economic', 'governance', 'social'],
+            totalWidth = 0,
+            total = 0;
+
         collection.each(function(indicator) {
             var id = indicator.get('name');
+            var item = {};
             if (_.indexOf(matches, id) > -1) {
-                data[id] = {};
-                data[id].score = indicator.score();
-                data[id].name = indicator.meta('name');
-                data.tot += parseFloat(data[id].score);
+                item.score = indicator.score();
+                item.name = indicator.meta('name');
+                item.id = id;
+                total += parseFloat(item.score);
+                data.push(item);
             }
         });
         // Calculate percentages based on totals
-        _.each(data, function(sector) { sector.percent = Math.round((parseFloat(sector.score) / data.tot)*100) });
-        // Otherwise it gets iterated over in the template.
-        delete data.tot;
+        _.each(data, function(sector) {
+            sector.percent = Math.round((parseFloat(sector.score) / total)*100); 
+            totalWidth += sector.percent;
+        });
+        var i = -1;
+        while (totalWidth > 100) {
+            if (i < 0) i = data.length - 1;
+            if (data[i].percent > 1) {
+                data[i].percent--;
+                totalWidth--;
+            }
+            i--;
+        }
         $(this.el).append(templates.SectorCandyBar({
             data: data,
             type: this.type
