@@ -2,7 +2,7 @@
   <div class='top'></div>
   <div class='slider floor'></div>
   <div class='slider drawer'>
-    <div class='handle container'><a class='close handle' href='#close'>Close</a></div>
+    <div class='handle container'><a class='close handle' href='#close'></a></div>
     <div class='content'></div>
   </div>
 </div>
