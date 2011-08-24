@@ -1365,8 +1365,7 @@ background: url('../images/sprite.png') 82px -370px;
     color: #fff;
     text-align: center;
     border-bottom: 0;
-    padding: 0 0 20px 0;
-    margin-top: 160px;
+    padding: 40px 0 10px 0;
     font-size: 135px;
     line-height: 80px;
   }
