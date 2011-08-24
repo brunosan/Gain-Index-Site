@@ -1038,28 +1038,38 @@ table.data tbody tr.active:hover {
   padding: 0 0 20px 0px;
   font-size: 11px;
   }
-  .country-profile table.ranking-history {
+
+  .country-profile div.ranking-history-wrapper {
     margin-left: 10px;
-    border: 1px solid #c6c6c6;
-    border-right: none;
-    width: 630px;
-    background-color: #EBEBEB;
+    border-width: 1px 0px 1px 1px;
+    border-color: #c6c6c6;
+    border-style: solid;
     -moz-border-radius: 4px 0px 0px 4px;
     -webkit-border-radius: 4px 0px 0px 4px;
     border-radius: 4px 0px 0px 4px;
     }
+  .country-profile table.ranking-history {
+    width: 629px;
+    background-color: transparent;
+    }
+  .country-profile table.ranking-history th.label {
+    border-right: 1px solid #c6c6c6;
+    }
+  .country-profile table.ranking-history thead tr {
+    border-bottom: 1px solid #c6c6c6;
+    }
+  .country-profile table.ranking-history tbody tr {
+    border-bottom: 0px;
+    }
   .country-profile table.ranking-history th,
   .country-profile table.ranking-history td {
-    border-bottom: 1px solid #c6c6c6;
     padding: 5px 0;
     text-align: center;
     }
-    
-  
   .country-profile .rankings tr:hover {
-  background-color: #EBEBEB;
-  cursor: default;
-  }
+    background-color: #EBEBEB;
+    cursor: default;
+    }
 
 .rank-number {
   width: 22px;
@@ -1156,16 +1166,16 @@ table.data tbody tr.active:hover {
     }
 .drawer .chart .legend {
   float: right;
-  margin-right: 30px;
+  margin-bottom: 10px;
   }
 .drawer .chart .legend .legendLabel {
   font-size: 12px;
   vertical-align: middle;
-  padding-right: 10px;
+  padding-left: 5px;
   }
 .drawer .chart .legend .legendColorBox {
   vertical-align:middle;
-  padding-right: 5px;
+  padding-left: 10px;
   }
 .floor .correction-control {
   border-top: 1px solid #ccc;
