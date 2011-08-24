@@ -2,25 +2,25 @@
   <div id='map'></div>
   <div id='carousel'>
     <div class='item container'>
-      <div class='overview active'>
+      <div class='overview active slide1'>
         <h2>Discover Improvement Opportunities</h2>
-        <p>Assess where the greatest needs and opportunities for improving resilience to climate change exist. Explore GaIn Rankings</p>
+        <p>Assess where the greatest needs and opportunities for improving resilience to climate change exist. <a href='/ranking'>Explore GaIn rankings</a></p>
       </div>
     </div>
     <div class='item container'>
-      <div class='overview'>
+      <div class='overview slide2'>
         <h2>Measuring What Matters</h2>
         <p>We continuously monitor and analyze 38 indicators for 192 countries to assess climate change related vulnerabilities and readiness for improvement.</p>
       </div>
     </div>
     <div class='item container'>
-      <div class='overview'>
+      <div class='overview slide3'>
         <h2>Rigorous and Evolving</h2>
-        <p>The Global Adaptation Index has been designed by industry experts and is improved under a continuous open review process. See our methodology.</p>
+        <p>The Global Adaptation Index has been designed by industry experts and is improved under a continuous open review process. <a href='/about/methodology'>See our methodology.<a/></p>
       </div>
     </div>
     <div class='item container'>
-      <div class='overview'>
+      <div class='overview slide4'>
         <h2>It's Open: Analyse and Republish</h2>
         <p>Download, analyze and republish GaIn data under and open Creative Commons license.</p>
       </div>

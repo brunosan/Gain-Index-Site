@@ -266,7 +266,7 @@ ul.tabs li a.active {
 
 #header .navigation {
   position: absolute;
-  left: 320px;
+  left: 300px;
   top: 10px;
   }
   #header .navigation li {
@@ -634,7 +634,7 @@ table.data tr.worst {
     width: 132px;
     }
     .country-summary div.chart .mini-matrix {
-      margin: 10px 0px 0px 10px;
+      margin: 15px 0px 0px 10px;
       }
   .country-summary div.vulnerability {
     text-align: center;
@@ -656,35 +656,35 @@ table.data tr.worst {
 .mini-matrix {
   position: relative;
   width: 100px;
-  height: 100px;
-  background:url('../images/sprite.png') 0px -445px no-repeat; 
+  height: 90px;
+  background:url('../images/sprite.png') 5px -465px no-repeat; 
   }
   .mini-matrix .quad {
     position: absolute;
     background: #c6c6c6;
-    height: 42px;
-    width: 42px;
+    height: 32px;
+    width: 32px;
     }
   .mini-matrix .tl {
-    top: 0px; left: 15px;
+    top: 0px; left: 23px;
     -moz-border-radius: 3px 0px 0px 0px;
     -webkit-border-radius: 3px 0px 0px 0px;
     border-radius: 3px 0px 0px 0px;
     }
   .mini-matrix .tr {
-    top: 0px; left: 58px;
+    top: 0px; left: 56px;
     -moz-border-radius: 0px 3px 0px 0px;
     -webkit-border-radius: 0px 3px 0px 0px;
     border-radius: 0px 3px 0px 0px;
     }
   .mini-matrix .br {
-    top: 43px; left: 58px;
+    top: 33px; left: 56px;
     -moz-border-radius: 0px 0px 3px 0px;
     -webkit-border-radius: 0px 0px 3px 0px;
     border-radius: 0px 0px 3px 0px;
     }
   .mini-matrix .bl {
-    top: 43px; left: 15px;
+    top: 33px; left: 23px;
     -moz-border-radius: 0px 0px 0px 3px;
     -webkit-border-radius: 0px 0px 0px 3px;
     border-radius: 0px 0px 0px 3px;
@@ -780,7 +780,7 @@ table.data tr.worst {
     display: block;
     position: absolute;
     top: 10px;
-      right: 8px;
+    right: 8px;
     }
 
 .front #carousel {
@@ -789,16 +789,28 @@ table.data tr.worst {
    }
   .front #carousel h2{
     border-bottom: 0px;
+    margin-bottom: 0px;
     }
     
   .front #carousel .overview {
     display: none;
+    height: 140px;
+    margin-top: 15px;
+    margin-right: 30px;
+    padding-left: 160px;
     }
 
   .front #carousel .active {
     display: block;
     }
+  
+  .front #carousel a {font-weight: bold;}
 
+  .front #carousel .slide1 {background:url('../images/sprite.png') -230px -1050px no-repeat; }
+  .front #carousel .slide2 {background:url('../images/sprite.png') -230px -1170px no-repeat; }
+  .front #carousel .slide3 {background:url('../images/sprite.png') -215px -1290px no-repeat; }
+  .front #carousel .slide4 {background:url('../images/sprite.png') -230px -1430px no-repeat; }
+  
    #carousel-nav {
       position: absolute;
       z-index: 100;
@@ -964,7 +976,6 @@ table.data tbody tr.active:hover {
  height: 125px;
  }
 .country-summary div.gain .outlook {
-      margin-top: 5px;
       color: #666;
       }
 
@@ -1072,6 +1083,30 @@ table.data tbody tr.active:hover {
   text-align: left;
   padding-left: 10px;
 }
+
+/**
+ * Country page sector graphs
+ */
+.country-sector-graph {
+  width: 100px;
+  height: 15px;
+  background-color: #ccc;
+  float: right;
+  }
+  .country-sector-graph span {
+    height: 15px;
+    display: block;
+    float: left;
+    border-left: 1px solid #fff;
+    border-right: 1px solid #fff;
+  }
+  .country-sector-graph .hilite {
+    background-color: #8AD35E;
+  }
+  #indicator-vulnerability .country-sector-graph,
+  #indicator-readiness .country-sector-graph {
+    background-color: #8AD35E;
+  }
 
 .drawer .content .chart {
   padding-bottom: 15px;

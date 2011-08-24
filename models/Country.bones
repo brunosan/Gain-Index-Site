@@ -412,7 +412,11 @@ model.meta = {
         "ISO3": "COD",
         "name": "The Democratic Republic of the Congo",
         "oecd_value": "1",
-        "oecd_income": "Low"
+        "oecd_income": "Low",
+        "coords": [
+            21.756270,
+            -4.034790
+        ]
     },
     "CRI": {
         "ISO3": "CRI",
