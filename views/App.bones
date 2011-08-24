@@ -107,6 +107,8 @@ view.route = function(path) {
     if (path.charAt(0) === '/') {
         var matched = _.any(Backbone.history.handlers, function(handler) {
             if (handler.route.test(path)) {
+                // TODO: find a better place to reset panel.
+                Bones.admin.setPanel();
                 Backbone.history.navigate(path, true);
                 scrollTop();
                 return true;

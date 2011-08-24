@@ -138,7 +138,7 @@ model.meta = {
     "business": {
         "id": "business",
         "name": "Business freedom",
-        "description": "Index of economic freedom: business freedom subcomponent",
+        "description": "",
         "format": "number",
         "decimals": "1",
         "unit": null,
@@ -153,7 +153,7 @@ model.meta = {
     "coast_area": {
         "id": "coast_area",
         "name": "Coastal area",
-        "description": "Land less than 5 meters above sea-level",
+        "description": "Percent of land less than 5 meters above sea-level",
         "format": "number",
         "decimals": "2",
         "unit": "%s %",
@@ -168,7 +168,7 @@ model.meta = {
     "coast_popn": {
         "id": "coast_popn",
         "name": "Coastal population",
-        "description": "Population living less than 5 meters above sea-level",
+        "description": "Percent of population living less than 5 meters above sea-level",
         "format": "percent",
         "decimals": "2",
         "unit": "%s %",
@@ -183,7 +183,7 @@ model.meta = {
     "corruption": {
         "id": "corruption",
         "name": "Control of corruption",
-        "description": "World governance indicator: control of corruption component",
+        "description": "",
         "format": "number",
         "decimals": "2",
         "unit": null,
@@ -236,7 +236,7 @@ model.meta = {
         "sector": "health",
         "component": "exposure",
         "source": [{
-            "name": "Globalization and Health",
+            "name": "Globalization and Health article: Adaptation costs for climate change-related cases of diarrhoeal disease, malnutrition, and malaria in 2030, by Kristie L Ebi",
             "link": "http://www.globalizationandhealth.com/content/4/1/9"
         }]
     },
@@ -267,11 +267,11 @@ model.meta = {
         "component": "sensitivity",
         "source": [
         {
-            "name": "World Development Indicators",
+            "name": "World Development Indicators - Energy Imports",
             "link": "http://data.worldbank.org/indicator/EG.IMP.CONS.ZS"
         },
         {
-            "name": "World Development Indicators",
+            "name": "World Development Indicators - Hydroelectric Power",
             "link": "http://data.worldbank.org/indicator/EG.ELC.HYRO.ZS"
         }
         ]
@@ -279,7 +279,7 @@ model.meta = {
     "enrollment": {
         "id": "enrollment",
         "name": "Tertiary education",
-        "description": "Percent enrollment tertiary education",
+        "description": "The ratio of total enrollment, regardless of age, to the population of students enrolled in tertiary educational systems",
         "format": "number",
         "decimals": "2",
         "unit": "%s %",
@@ -294,7 +294,7 @@ model.meta = {
     "external": {
         "id": "external",
         "name": "External dependence",
-        "description": "Total expendature on external resources for health",
+        "description": "Percent of total expendature on health devoted to health funds or services in kind that are provided by entities not part of the country in question",
         "format": "number",
         "decimals": "2",
         "unit": "%s %",
@@ -309,7 +309,7 @@ model.meta = {
     "finan": {
         "id": "finan",
         "name": "Financial freedom",
-        "description": "Index of economic freedom: fiancial freedom subcomponent",
+        "description": "",
         "format": "number",
         "decimals": "1",
         "unit": null,
@@ -324,7 +324,7 @@ model.meta = {
     "fiscal": {
         "id": "fiscal",
         "name": "Fiscal freedom",
-        "description": "Index of economic freedom: fiscal freedom subcomponent",
+        "description": "",
         "format": "number",
         "decimals": "1",
         "unit": null,
@@ -339,7 +339,7 @@ model.meta = {
     "food_capacity": {
         "id": "food_capacity",
         "name": "Food capacity",
-        "description": "Average of 2 best scores between use of fertilizers, mechanization and irrigation",
+        "description": "Average of the 2 best scores between use of fertilizers, mechanization and irrigation in agriculture",
         "format": "number",
         "decimals": "2",
         "unit": null,
@@ -348,15 +348,15 @@ model.meta = {
         "component": "capacity",
         "source": [
         {
-            "name": "World Development Indicators",
+            "name": "World Development Indicators - Fertilizer Consumption (kilograms per hectare of arable land)",
             "link": "http://data.worldbank.org/indicator/AG.CON.FERT.ZS"
         },
         {
-            "name": "World Development Indicators",
+            "name": "World Development Indicators - Agricultural Machinery (tractors per 100 sq. km of arable land)",
             "link": "http://data.worldbank.org/indicator/AG.LND.TRAC.ZS"
         },
         {
-            "name": "World Development Indicators",
+            "name": "World Development Indicators - Agricultural Irrigated Land (percent of total agricultural land)",
             "link": "http://data.worldbank.org/indicator/AG.LND.IRIG.AG.ZS"
         }
         ]
@@ -375,7 +375,7 @@ model.meta = {
     "gov_spend": {
         "id": "gov_spend",
         "name": "Government spending",
-        "description": "Index of economic freedom: goverment spending subcomponent",
+        "description": "",
         "format": "number",
         "decimals": "1",
         "unit": null,
@@ -384,7 +384,7 @@ model.meta = {
         "component": "economic",
         "source": [{
             "name": "World Development Indicators",
-            "link": "http://data.worldbank.org/indicator/AG.CON.FERT.ZS"
+            "link": "http://www.heritage.org/index/explore"
         }]
     },
     "health_disease": {
@@ -405,19 +405,22 @@ model.meta = {
     "imports": {
         "id": "imports",
         "name": "Food import dependency",
-        "description": "Proportion of cereal consumption derived from external sources",
+        "description": "Proportion of cereal consumption obtained from entities not part of the country in question",
         "format": "percent",
         "decimals": "0",
         "unit": "%s %",
         "index": "vulnerability",
         "sector": "food",
         "component": "sensitivity",
-        "source": ["FAO"]
+        "source": [{
+            "name": "FAO",
+            "link": "http://example.com"
+        }]
     },
     "invest": {
         "id": "invest",
         "name": "Investment freedom",
-        "description": "Index of economic freedom: investment freedom subcomponent",
+        "description": "",
         "format": "number",
         "decimals": "1",
         "unit": null,
@@ -432,7 +435,7 @@ model.meta = {
     "labor": {
         "id": "labor",
         "name": "Labor freedom",
-        "description": "Index of economic freedom: labor freedom subcomponent",
+        "description": "",
         "format": "number",
         "decimals": "1",
         "unit": null,
@@ -447,7 +450,7 @@ model.meta = {
     "life": {
         "id": "life",
         "name": "Life expectancy",
-        "description": "Life expectancy at birth",
+        "description": "The number of years a newborn infant would live if prevailing patterns of mortality at the time of its birth were to stay the same throughout its life",
         "format": "number",
         "decimals": "1",
         "unit": null,
@@ -469,12 +472,15 @@ model.meta = {
         "index": "vulnerability",
         "sector": "food",
         "component": "capacity",
-        "source": ["WHO"]
+        "source": [{
+            "name": "WHO",
+            "link": "http://example.com"
+        }]
     },
     "matern": {
         "id": "matern",
         "name": "Maternal mortality",
-        "description": "Lifetime risk of maternal death",
+        "description": "The probability that a 15-year-old female will die eventually from a maternal cause assuming that current levels of fertility and mortality (including maternal mortality) do not change in the future, taking into account competing causes of death",
         "format": "number",
         "decimals": "2",
         "unit": "%s %",
@@ -489,7 +495,7 @@ model.meta = {
     "mobiles": {
         "id": "mobiles",
         "name": "Mobile penetration",
-        "description": "Mobile cellular subscriptions (per 100 people)",
+        "description": "Mobile telephone subscriptions per 100 people to a public mobile telephone service using cellular technology, which provide access to the public switched telephone network (post-paid and prepaid subscriptions are included)",
         "format": "number",
         "decimals": "2",
         "unit": null,
@@ -504,7 +510,7 @@ model.meta = {
     "monetary": {
         "id": "monetary",
         "name": "Monetary freedom",
-        "description": "Index of economic freedom: monetary freedom subcomponent",
+        "description": "",
         "format": "number",
         "decimals": "1",
         "unit": null,
@@ -519,7 +525,7 @@ model.meta = {
     "non_violence": {
         "id": "non_violence",
         "name": "Political stability & non-violence",
-        "description": "World governance indicator: political stability and non-violence component",
+        "description": "",
         "format": "number",
         "decimals": "2",
         "unit": null,
@@ -552,12 +558,15 @@ model.meta = {
         "index": "vulnerability",
         "sector": "infrastruct",
         "component": "exposure",
-        "source": ["CRED & WB Stats for area"]
+        "source": [{
+            "name": "CRED & WB Stats for area",
+            "link": "http://example.com"
+        }]
     },
     "road_paved": {
         "id": "road_paved",
         "name": "Paved roads",
-        "description": "Percentage of paved roads",
+        "description": "Roads surfaced with crushed stone (macadam) and hydrocarbon binder or bituminized agents, with concrete, or with cobblestones, as a percentage of all the country's roads, measured in length",
         "format": "number",
         "decimals": "2",
         "unit": "%s %",
@@ -573,7 +582,7 @@ model.meta = {
     "rural_popn": {
         "id": "rural_popn",
         "name": "Rural population",
-        "description": "Percent of population in rural livelihoods",
+        "description": "Total rural population as a percent of the total population",
         "format": "number",
         "decimals": "2",
         "unit": "%s %",
@@ -581,11 +590,11 @@ model.meta = {
         "sector": "food",
         "component": "sensitivity",
         "source": [{
-            "name": "World Development Indicators",
+            "name": "World Development Indicators - Rural Population",
             "link": "http://data.worldbank.org/indicator/SP.RUR.TOTL"
         }, 
         {
-            "name": "World Development Indicators",
+            "name": "World Development Indicators - Total Population",
             "link": "http://data.worldbank.org/indicator/SP.POP.TOTL"
         }
         ]
@@ -593,7 +602,7 @@ model.meta = {
     "rule_of_law": {
         "id": "rule_of_law",
         "name": "Rule of law",
-        "description": "World governance indicator: rule of law component",
+        "description": "",
         "format": "number",
         "decimals": "2",
         "unit": null,
@@ -607,8 +616,8 @@ model.meta = {
     },
     "sanit": {
         "id": "sanit",
-        "name": "Sanitary water",
-        "description": "Percent population with access to improved sanitation",
+        "name": "Improved sanitation facilities",
+        "description": "The percentage of the population with at least adequate access to excreta disposal facilities that can effectively prevent human, animal, and insect contact with excreta",
         "format": "number",
         "decimals": "1",
         "unit": "%s %",
@@ -623,7 +632,7 @@ model.meta = {
     "staff": {
         "id": "staff",
         "name": "Health workers per capita",
-        "description": "Number of medical workers per 1000 people (calculated as (2 x physicians) + nurses)",
+        "description": "Number of medical workers per 1000 people, based on WDI indicators on Physicians and Nurses and Midwives: Health workers per capita = (2 x Physicians) + Nurses",
         "format": "number",
         "decimals": "2",
         "unit": null,
@@ -644,7 +653,7 @@ model.meta = {
     "trade": {
         "id": "trade",
         "name": "Trade freedom",
-        "description": "Index of economic freedom: trade freedom subcomponent",
+        "description": "",
         "format": "number",
         "decimals": "1",
         "unit": null,
@@ -659,7 +668,7 @@ model.meta = {
     "voice_accountability": {
         "id": "voice_accountability",
         "name": "Voice & accountability",
-        "description": "World governance indicator: voice and accountability component",
+        "description": "",
         "format": "number",
         "decimals": "2",
         "unit": null,
@@ -674,7 +683,7 @@ model.meta = {
     "water_access": {
         "id": "water_access",
         "name": "Water access",
-        "description": "Percent population with access to improved water supply",
+        "description": "The percentage of the population with reasonable access to an adequate amount of water from an improved source, such as a household connection, public standpipe, borehole, protected well or spring, and rainwater collection",
         "format": "number",
         "decimals": "1",
         "unit": "%s %",
@@ -696,7 +705,10 @@ model.meta = {
         "index": "vulnerability",
         "sector": "water",
         "component": "sensitivity",
-        "source": ["WHO"]
+        "source": [{
+            "name": "WHO",
+            "link": "http://example.com"
+        }]
     },
     "water_use": {
         "id": "water_use",
@@ -716,7 +728,7 @@ model.meta = {
     "yield_cv": {
         "id": "yield_cv",
         "name": "Variation of cereal yield",
-        "description": "Coefficient of variation of annual cereal yield ",
+        "description": "Kilograms of cereal yield per hectare of harvested land, including wheat, rice, maize, barley, oats, rye, millet, sorghum, buckwheat, and mixed grains",
         "format": "number",
         "decimals": "2",
         "unit": null,
