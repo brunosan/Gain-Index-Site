@@ -1,7 +1,6 @@
-<div class='country'>
+<div class='country' id='<%= iso %>'>
   <div class='info container'>
-    <h3><%= name %></h3>
-    <a class='button green' href='/country/<%= iso %>'>View profile</a>
+    <h3><a href='/country/'><%= name %></a></h3>
     <div class='prose'></div>
   </div>
   <div class='country-summary'></div>

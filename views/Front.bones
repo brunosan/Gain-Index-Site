@@ -3,7 +3,8 @@ view = views.Main.extend({
         'click .drawer .handle a.handle': 'closeDrawer',
         'click #map-years li a': 'yearClick',
         'click #map-indicators li a': 'indicatorClick',
-        'click .floor .correction-control a': 'toggleCorrection'
+        'click .floor .correction-control a': 'toggleCorrection',
+        'click .featured .country': 'countryClick'
     },
     initialize: function(options) {
         _.bindAll(this, 'render', 'renderCountryFeature', 'renderFloor', 'setupPanel');
@@ -180,6 +181,10 @@ view = views.Main.extend({
         this.map.set({indicator: indicator});
         this.noDrawer = true;
         return false;
+    },
+    countryClick: function(ev) {
+        var path = '/country/' + $(ev.currentTarget).attr('id');
+        return views.App.route(path);
     },
     toggleCorrection: function() {
         // Currently toggling between indicators is as simple as adding or
