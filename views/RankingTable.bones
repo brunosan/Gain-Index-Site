@@ -54,6 +54,9 @@ view = Backbone.View.extend({
         return false;
     },
     sortIncome: function(ev) {
+        // Start with a defined sort order - otherwise successive sorts
+        // by income will yield different results.
+        this.collection.sortByRank();
         var meta = meta = models.Country.meta;
         this.collection.comparator = function(model) {
             var country = meta[model.get('ISO3')];

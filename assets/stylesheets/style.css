@@ -1164,7 +1164,6 @@ table.data tbody tr.active:hover {
     }
 .drawer .chart .legend {
   float: right;
-  margin-bottom: 10px;
   }
 .drawer .chart .legend .legendLabel {
   font-size: 12px;
