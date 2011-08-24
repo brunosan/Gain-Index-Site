@@ -1243,6 +1243,15 @@ background: url('../images/sprite.png') 82px -370px;
 .ranking {
   background-color: #ebebeb;
   }
+.ranking table.data th.rank {
+  width: 60px;
+  }
+.ranking table.data th.income {
+  width: 130px;
+  }
+.ranking table.data th.index {
+  width: 90px;
+  }
 .ranking table.data th,
 .ranking table.data td {
   padding: 0 15px;
