@@ -805,9 +805,9 @@ table.data tr.worst {
   .front #carousel a {font-weight: bold;}
 
   .front #carousel .slide1 {background:url('../images/sprite.png') -230px -1050px no-repeat; }
-  .front #carousel .slide2 {background:url('../images/sprite.png') -230px -1170px no-repeat; }
+  .front #carousel .slide4 {background:url('../images/sprite.png') -230px -1170px no-repeat; }
   .front #carousel .slide3 {background:url('../images/sprite.png') -215px -1290px no-repeat; }
-  .front #carousel .slide4 {background:url('../images/sprite.png') -230px -1430px no-repeat; }
+  .front #carousel .slide2 {background:url('../images/sprite.png') -230px -1430px no-repeat; }
   
    #carousel-nav {
       position: absolute;
