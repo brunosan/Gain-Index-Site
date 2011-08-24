@@ -1,6 +1,6 @@
 <div class='download-page'>
-  <h2>Download Data</h2>
-  <div class='prose'>Download the Global Adaptation Index&#8482;, scores and indicators between 1995 and 2010 as available on this web site in CSV format.</div>
+  <h2 class='container'>Download Data</h2>
+  <div class='prose container'>Download the Global Adaptation Index&#8482;, scores and indicators between 1995 and 2010 as available on this web site in CSV format.</div>
   <ul>
     <li>Global Adaptation Index&#8482;.</li>
     <li>Vulnerability score.</li>
@@ -10,8 +10,8 @@
     <li>Sector Scores: Economic Readiness, Governance, Social Readiness.</li>
     <li>All indicators used to generate GaIn&#8482; and scores.</li>
   </ul>
-  <span class='timestamp'>Last updated on <%= model.getDate() %></span>
-  <a href='/assets/gain/files/<%= model.escape('filename') %>' class='download-icon'>
+  <a href='/assets/gain/files/<%= model.escape('filename') %>' class='container button green'>
       DOWNLOAD (.zip, <%= model.getFileSize() %>)
+      <span class='timestamp'>Last updated on <%= model.getDate() %></span>
   </a>
 </div>
