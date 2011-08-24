@@ -6,7 +6,7 @@
   </div>
 </div>
 <div class='indicator-time container'>
-  <div class='chart'>
+  <div class='chart clearfix'>
     <h4><%= title %> over time </h4>
     <div class='graph'></div>
     <div class='legend'></div>
