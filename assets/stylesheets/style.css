@@ -1053,6 +1053,29 @@ tbody tr.active:hover {
   padding-left: 10px;
 }
 
+/**
+ * Country page sector graphs
+ */
+.country-sector-graph {
+  width: 100px;
+  height: 15px;
+  background-color: #ccc;
+  float: right;
+  }
+  .country-sector-graph span {
+    height: 15px;
+    display: block;
+    float: left;
+    border-left: 1px solid #fff;
+    border-right: 1px solid #fff;
+  }
+  .country-sector-graph .hilite {
+    background-color: #8AD35E;
+  }
+  #indicator-vulnerability .country-sector-graph {
+    background-color: #8AD35E;
+  }
+
 .drawer .content .graph {
   width: 285px;
   height: 150px;

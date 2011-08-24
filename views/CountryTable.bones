@@ -26,6 +26,7 @@ view = views.Main.extend({
         this.tree = tree;
     },
     render: function() {
+        var that = this;
         var lookup = {}, data = [];
 
         // Build a look up table for the data.
@@ -38,6 +39,7 @@ view = views.Main.extend({
             meta = this.collection.model.meta
 
         var scores = {};
+        var sectors = {};
         var appendData = function(key, klass) {
             var field = {
                 field: meta[key],
@@ -55,7 +57,10 @@ view = views.Main.extend({
             scores[field.field.id].index = field.field.index;
             scores[field.field.id].name = field.field.id;
             scores[field.field.id].sector = field.field.sector;
-            
+            if (field.field.component == null && field.field.id != that.options.tab) {
+                sectors[field.field.id] = {};
+                sectors[field.field.id].score = field.score;
+            }
             data.push(field);
         }
 
@@ -68,6 +73,17 @@ view = views.Main.extend({
                 }
             });
         });
+
+        // Calculate the % for each sector and stick onto data.graph
+        var tot = 0;
+        _.each(sectors, function(sector) { tot += parseFloat(sector.score) });
+        _.each(sectors, function(sector) { sector.percent = Math.round((parseFloat(sector.score) / tot)*100) });
+        _.each(data, function(field) {
+            if (field.field.component == null) {
+                field.graph = sectors;
+            }
+        });
+
         // Sort by score, drop 0's and 1's, drop sectors
         scores = _.filter(scores, function(item) { return ((item.score > 0 && item.score < 1) || item.sector == null); });
         if (this.options.tab == 'vulnerability') {
