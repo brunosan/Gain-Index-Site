@@ -1085,6 +1085,21 @@ tbody tr.active:hover {
   .floor .correction-control a:hover {
   background: #8C8C8C;
   }
+
+
+  .drawer .chart .legend {
+    float: right;
+    margin-right: 30px;
+  }
+  .drawer .chart .legend .legendLabel {
+     font-size: 12px;
+     vertical-align: middle;
+     padding-right: 10px;
+  }
+  .drawer .chart .legend .legendColorBox {
+    vertical-align:middle;
+    padding-right: 5px;
+  }
   
 /** 
  * Rankings page

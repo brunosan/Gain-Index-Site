@@ -3,9 +3,16 @@ view = Backbone.View.extend({
         this.render.apply(this, arguments);
     },
     sparklineOptions: {
-        //xaxis: {show: false},
+        xaxis: {
+          tickDecimals: 0
+        },
         //yaxis: {show: false},
         grid: {borderColor: '#ccc'},
+        legend: {
+            show: true,
+            container: '.drawer .chart .legend',
+            noColumns: 4,
+        },
         series: {
             lines: { lineWidth: 1 },
             shadowSize: 0
@@ -20,7 +27,7 @@ view = Backbone.View.extend({
 
             var points = {
                 data: data,
-                color: 0,
+                color: 1,
                 lines: { show: false },
                 points: { show: true, radius: 1 }
             };
@@ -28,11 +35,13 @@ view = Backbone.View.extend({
             var series = [data, points];
 
             if (rawData && rawData.length > 1) {
+                series[1].label = 'Calculated';
                 var rawPoints = {
+                    label: "Actual",
                     data: rawData,
-                    color: 1,
+                    color: 2,
                     lines: { show: false },
-                    points: { show: true, radius: 1, fill: 1 }
+                    points: { show: true, radius: 1 }
                 };
                 series.push(rawPoints);
             }
