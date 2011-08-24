@@ -31,7 +31,7 @@ view = Backbone.View.extend({
         });
 
         var that = this;
-        _.each(['Vulnerability composition', 'Readiness composition'], function(type) {
+        _.each(['Vulnerability', 'Readiness'], function(type) {
             new views.SectorCandyBar({
                 type: type,
                 model: that.model,
