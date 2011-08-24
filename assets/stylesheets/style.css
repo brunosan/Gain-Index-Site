@@ -487,7 +487,7 @@ ul.tabs li a.active {
     -webkit-border-radius: 0px 3px 0px 0px;
     }
     #cabinet .drawer a.close.handle {
-    text-indent: 9999px;
+    text-indent: -9999px;
     margin: 10px 0 0 0;
     float: right;
     display: block;
