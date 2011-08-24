@@ -1092,7 +1092,8 @@ table.data tbody tr.active:hover {
   .country-sector-graph .hilite {
     background-color: #8AD35E;
   }
-  #indicator-vulnerability .country-sector-graph {
+  #indicator-vulnerability .country-sector-graph,
+  #indicator-readiness .country-sector-graph {
     background-color: #8AD35E;
   }
 
