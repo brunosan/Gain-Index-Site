@@ -100,12 +100,12 @@ p {
   }
 
 a {
-  color: #8AD35E;
+  color: #5A2;
   text-decoration: none;
   }
 
 a:hover {
- color: #94EB60; 	
+ color: #8AD35E; 	
  text-decoration: underline;
   }
 
@@ -152,9 +152,7 @@ ul {
   /**
    * TODO: get a new icon for the '=' sign.
    */
-  .icon-outlook-same { background-position: 0px -387px; }
-  table .icon-outlook-same { background-image: none; }
-
+  .icon-outlook-same { background-position: 0px -389px; }
 
 /**
  * Tabs
@@ -541,10 +539,6 @@ ul.tabs li a.active {
         top: 20px;
         bottom: auto;
         }
-
-  #cabinet .floor .more {
-    background: #fff;
-    }
 
 .floor .search {
   padding: 20px 0px;
@@ -1237,12 +1231,24 @@ table.data tbody tr.active:hover {
 background: url('../images/sprite.png') 35px -370px;
 }
 
+.ranking thead tr th a.sort.label.rank.activeSort{
+background: url('../images/sprite.png') 223px -412px;
+}
+
 .ranking thead tr th a.alpha{
 background: url('../images/sprite.png') 50px -370px;
 }
 
+.ranking thead tr th a.sort.label.alpha.activeSort{
+background: url('../images/sprite.png') 239px -412px;
+}
+
 .ranking thead tr th a.income{
 background: url('../images/sprite.png') 82px -370px;
+}
+
+.ranking thead tr th a.sort.label.income.activeSort{
+background: url('../images/sprite.png') 271px -412px;
 }
 
 .ranking p.label: 

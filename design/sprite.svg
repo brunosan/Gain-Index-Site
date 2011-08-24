@@ -25,8 +25,8 @@
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
      inkscape:zoom="1"
-     inkscape:cx="204.85027"
-     inkscape:cy="-124.46971"
+     inkscape:cx="135.573"
+     inkscape:cy="0.66697687"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -41,7 +41,7 @@
      fit-margin-bottom="0"
      inkscape:snap-bbox="true"
      inkscape:snap-nodes="false"
-     showguides="false"
+     showguides="true"
      inkscape:guide-bbox="true">
     <inkscape:grid
        type="xygrid"
@@ -67,7 +67,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -1710,5 +1710,13 @@
        inkscape:export-filename="/Users/saman/Dropbox/work_repos/gai-gain/assets/images/sprite.png"
        inkscape:export-xdpi="90"
        inkscape:export-ydpi="90" />
+    <path
+       inkscape:export-ydpi="90"
+       inkscape:export-xdpi="90"
+       inkscape:export-filename="/Users/saman/Dropbox/work_repos/gai-gain/assets/images/sprite.png"
+       style="color:#000000;fill:#ebebeb;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1.04900002;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       d="m 150,332.36217 13,0 -6.5,9 z"
+       id="path18562"
+       inkscape:connector-curvature="0" />
   </g>
 </svg>
