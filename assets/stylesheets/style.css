@@ -993,7 +993,7 @@ table.data tbody tr.active:hover {
   }
 .country-profile th.name,
 .country-profile td.name {
-  width: 360px;
+  width: 280px;
   padding-left: 15px;
   }
 .country-profile td.graph div.placeholder {
@@ -1093,13 +1093,11 @@ table.data tbody tr.active:hover {
  */
 .country-sector-graph {
   margin: 12px 15px 0 0;
-  width: 80px;
+  width: 70px;
   height: 10px;
   background-color: #ccc;
-  float: right;
   }
   .drawer .country-sector-graph {
-    float: none;
     margin: 0 0 10px 0;
     width: 100%;
     position: relative
