@@ -39,7 +39,7 @@ view = views.Main.extend({
             meta = this.collection.model.meta
 
         var scores = {};
-        var sectors = {};
+        var sectors = [];
         var appendData = function(key, klass) {
             var field = {
                 field: meta[key],
@@ -47,6 +47,7 @@ view = views.Main.extend({
                 raw: null, 
                 normalized: null
             };
+            var sector = {};
             if (lookup[key] != undefined) {
                 field.input = lookup[key].input();
                 field.score = lookup[key].score();
@@ -58,8 +59,9 @@ view = views.Main.extend({
             scores[field.field.id].name = field.field.id;
             scores[field.field.id].sector = field.field.sector;
             if (field.field.component == null && field.field.id != that.options.tab) {
-                sectors[field.field.id] = {};
-                sectors[field.field.id].score = field.score;
+                sector.id = field.field.id;
+                sector.score = field.score;
+                sectors.push(sector);
             }
             data.push(field);
         }
@@ -75,9 +77,19 @@ view = views.Main.extend({
         });
 
         // Calculate the % for each sector and stick onto data.graph
-        var tot = 0;
-        _.each(sectors, function(sector) { tot += parseFloat(sector.score) });
-        _.each(sectors, function(sector) { sector.percent = Math.round((parseFloat(sector.score) / tot)*100) });
+        var total = 0;
+        var totalWidth = 0;
+        _.each(sectors, function(sector) { total += parseFloat(sector.score) });
+        _.each(sectors, function(sector) { sector.percent = Math.round((parseFloat(sector.score) / total)*100) });
+        var i = -1;
+        while (totalWidth > 100) {
+            if (i < 0) i = sectors.length - 1;
+            if (sectors[i].percent > 1) {
+                sectors[i].percent--;
+                totalWidth--;
+            }
+            i--;
+        }
         _.each(data, function(field) {
             if (field.field.component == null) {
                 field.graph = sectors;
