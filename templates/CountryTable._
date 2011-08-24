@@ -16,11 +16,11 @@
     <td class='composition'>
       <% if (row.graph) { %>
         <div class='country-sector-graph'>
-          <% _.each(row.graph, function(sector, name) { %>
-            <% if (row.field.id == name) { %>
-              <span class='sector-graph-<%= name %> hilite'
+          <% _.each(row.graph, function(sector) { %>
+            <% if (row.field.id == sector.id) { %>
+              <span class='sector-graph-<%= sector.id %> hilite'
             <% } else { %>
-              <span class='sector-graph-<%= name %>'
+              <span class='sector-graph-<%= sector.id %>'
             <% } %>
             style='width:<%= sector.percent %>%;'>
             </span>
