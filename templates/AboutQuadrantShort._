@@ -3,7 +3,7 @@
 <%= (ranks.readiness) ? ranks.readiness + ' ' + rankVerb.readiness + ' country' : '' %>
 <%= (ranks.readiness && ranks.vulnerability) ? ' and the ' : '' %>
 <%= (ranks.vulnerability) ? ranks.vulnerability + ' ' + rankVerb.vulnerability + ' country' : '' %>.
-<% if (ranks.gain) { %> <%= country %> is the <%= ranks.gain %> <%= rankVerb.gain %> country in the world for investment in adaptation activities. <% } else { %>
+<% if (ranks.gain) { %> It is the <%= ranks.gain %> <%= rankVerb.gain %> country in the world for investment in adaptation activities. <% } else { %>
 The Global Adaptation Index&#8482; for <%= country %> could not be generated because of missing indicators for <%= missing.join(' and ') %>.
 <% } %>
 </p>
