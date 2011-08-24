@@ -1166,16 +1166,16 @@ table.data tbody tr.active:hover {
     }
 .drawer .chart .legend {
   float: right;
-  margin-right: 30px;
+  margin-bottom: 10px;
   }
 .drawer .chart .legend .legendLabel {
   font-size: 12px;
   vertical-align: middle;
-  padding-right: 10px;
+  padding-left: 5px;
   }
 .drawer .chart .legend .legendColorBox {
   vertical-align:middle;
-  padding-right: 5px;
+  padding-left: 10px;
   }
 .floor .correction-control {
   border-top: 1px solid #ccc;
