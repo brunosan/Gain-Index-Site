@@ -22,29 +22,32 @@ view = Backbone.View.extend({
     drawerEvents: function() {
         _.each(['floor', 'drawer'], function(sel) {
             $(window).scroll(function() {
-                var el = $('#cabinet .' + sel),
+                var drawer = $('#cabinet .' + sel),
                     topOffset = $('#cabinet .top').offset(),
-                    floorOffset = $('#cabinet .floor').offset();
-                if (!topOffset || !floorOffset) return;
+                    drawerOffset = $('#cabinet .floor').offset();
+                if (!topOffset || !drawerOffset) return;
                 // Capture drawer position once, will change as it slides down.
-                window.floorTop = window.floorTop || topOffset.top;
-                var top = window.floorTop,
-                    range = $('#cabinet .top').outerHeight()
+                window.drawerTop = window.drawerTop || drawerOffset.top;
+                // Vertical range we allow the drawer to 'stick' with the window.
+                // This is the bottom border of the top element minus the height
+                // of the drawer, minus the distance of the drawer's top border
+                // to the top element.
+                var range = $('#cabinet .top').outerHeight()
                             + topOffset.top
-                            - el.outerHeight()
-                            - 20;
+                            - drawer.outerHeight()
+                            - (window.drawerTop - topOffset.top);
                 var pos = $(this).scrollTop();
-                if (pos > top) {
-                    el.addClass('fixed');
+                if (pos > topOffset.top) {
+                    drawer.addClass('fixed');
                 }
                 else {
-                    el.removeClass('fixed');
+                    drawer.removeClass('fixed');
                 }
                 if (pos > range) {
-                    el.addClass('bottom');
+                    drawer.addClass('bottom');
                 }
                 else {
-                    el.removeClass('bottom');
+                    drawer.removeClass('bottom');
                 }
             });
         });
