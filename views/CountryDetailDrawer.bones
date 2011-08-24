@@ -35,7 +35,7 @@ view = Backbone.View.extend({
             new views.SectorCandyBar({
                 type: type,
                 model: that.model,
-                el: $('.content .candybar', that.el)
+                el: $('.content .composition-bars', that.el)
             });
         });
 

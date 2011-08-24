@@ -1,7 +1,4 @@
 view = Backbone.View.extend({
-    events: {
-        'hover .country-sector-graph span': 'showInfo'
-    },
     initialize: function(options) {
         this.model = options.model;
         this.type = options.type;
@@ -15,11 +12,12 @@ view = Backbone.View.extend({
           ['economic', 'governance', 'social'];
         data.tot = 0;
         collection.each(function(indicator) {
-            var name = indicator.get('name');
-            if (_.indexOf(matches, name) > -1) {
-                data[name] = {};
-                data[name].score = indicator.score();
-                data.tot += parseFloat(data[name].score);
+            var id = indicator.get('name');
+            if (_.indexOf(matches, id) > -1) {
+                data[id] = {};
+                data[id].score = indicator.score();
+                data[id].name = indicator.meta('name');
+                data.tot += parseFloat(data[id].score);
             }
         });
         // Calculate percentages based on totals
@@ -32,8 +30,4 @@ view = Backbone.View.extend({
         }));
         return this;
     },
-    showInfo: function() {
-        //$('.country-sector-graph span > .info', this.el).toggleClass('show');
-        return false;
-    }
 });

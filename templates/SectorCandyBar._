@@ -1,8 +1,8 @@
-<%= type %>
+<div class='label'><%= type %> composition</div>
 <div class='country-sector-graph clearfix'>
-  <% _.each(data, function(row, name) { %>
-    <span class='sector-graph-<%= name %> hilite bar' style='width:<%= row.percent%>%;'>
-      <label><%= name %><%= row.percent %>%</label>
+  <% _.each(data, function(row, id) { %>
+    <span class='sector-graph-<%= id %> hilite bar' style='width:<%= row.percent%>%;'>
+      <label><%= row.name %>: <%= row.percent %>% of <%=type %></label>
     </span>
       <% }); %>
 </div>

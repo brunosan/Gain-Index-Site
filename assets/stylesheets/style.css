@@ -494,13 +494,13 @@ ul.tabs li a.active {
       width: 75px;
       margin-right: 0px;
       }
-  
-  #cabinet .drawer .country-summary {
-    border: 1px solid #c6c6c6;
-    border-radius: 5px;
-    moz-border-radius: 5px;
-    webkit-border-radius: 5px;
-    }
+
+#cabinet .drawer .country-summary {
+  border: 1px solid #c6c6c6;
+  border-radius: 5px;
+  moz-border-radius: 5px;
+  webkit-border-radius: 5px;
+  }
 
 #cabinet .floor {
   padding-bottom: 10px;
@@ -572,9 +572,6 @@ table.data thead tr {
   }
 table.data tbody tr {
   border-bottom: 1px solid #ebebeb;
-  }
-table.data tr.worst {
-  color: #d15659;
   }
 
 /**
@@ -982,6 +979,7 @@ table.data tbody tr.active:hover {
   border-bottom: 1px solid #ebebeb;
   }
 .country-profile tr.index {
+  font-size: 16px;
   font-weight: bold;
   border-bottom: 1px solid #c6c6c6;
   line-height: 40px;
@@ -1094,19 +1092,22 @@ table.data tbody tr.active:hover {
  * Country page sector graphs
  */
 .country-sector-graph {
-  width: 100px;
-  height: 15px;
+  margin: 12px 15px 0 0;
+  width: 80px;
+  height: 10px;
   background-color: #ccc;
   float: right;
   }
   .drawer .country-sector-graph {
     float: none;
-    margin: 10px 0px;
+    margin: 0 0 10px 0;
     width: 100%;
     position: relative
   }
   .country-sector-graph span {
-    height: 15px;
+    height: 10px;
+    margin-left: -1px;
+    border-left: 1px solid #fff;
     display: block;
     float: left;
     /*border-left: 1px solid #fff;
@@ -1115,6 +1116,9 @@ table.data tbody tr.active:hover {
   .country-sector-graph .hilite {
     background-color: #8AD35E;
   }
+  .drawer .country-sector-graph span:hover {
+    background-color: #62b331;
+    }
   #indicator-vulnerability .country-sector-graph,
   #indicator-readiness .country-sector-graph {
     background-color: #8AD35E;
@@ -1128,14 +1132,12 @@ table.data tbody tr.active:hover {
 
 .country-sector-graph .bar label {
   line-height: 18px;
-  color: white;
   display: none;
-  width: 600px;
+  width: 285px;
   position: absolute;
-  top: 25px;
+  top: -19px;
   left: 0;
-  font-size: 16px;
-  background-color: #1A1A1A;
+  background-color: #fff;
   }
 .country-sector-graph .bar:hover label {
   display: block;
@@ -1164,6 +1166,9 @@ table.data tbody tr.active:hover {
   }
   .drawer .similar-countries {
     height: 175px;
+    }
+  .drawer .composition {
+    height: 90px;
     }
 .drawer .source ul {
   padding-bottom: 15px;
@@ -1314,11 +1319,15 @@ background: url('../images/sprite.png') 271px -412px;
 /**
  * Featured ranking, front page
  */
+.front .ranking {
+  background-color: #fff;
+  }
 .front .ranking table.data {
   width: 50%;
   float: left;
   clear: none;
   table-layout: auto;
+  margin-bottom: 10px;
   }
   .front .ranking table.data th {
     font-weight: normal;
