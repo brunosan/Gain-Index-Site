@@ -1,5 +1,6 @@
 <thead><tr>
     <th class='name label'>Indicator</th>
+    <th class='composition label'>Composition</th>
     <th class='graph label'>1995 to 2010</th>
     <th class='raw label'>Raw</th>
     <th class='normalized label'>Score</th>
@@ -11,7 +12,8 @@
   <% } else { %>
     <tr id='indicator-<%= row.field.id %>' class='<%= row.klass %>'>
   <% } %>
-    <td class='name'><%= row.field.name %>
+    <td class='name'><%= row.field.name %></td>
+    <td class='composition'>
       <% if (row.graph) { %>
         <div class='country-sector-graph'>
           <% _.each(row.graph, function(sector) { %>
