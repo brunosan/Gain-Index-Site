@@ -581,11 +581,8 @@ table.data tbody tr {
   border-bottom: 1px solid #ebebeb;
   }
 table.data tr.worst {
-  background-color: #ffdfdd;
+  color: #d15659;
   }
-  table.data tr.worst.active {
-    background-color: #f8d3d1;
-    }
 
 /**
  * Country summary generic styles
