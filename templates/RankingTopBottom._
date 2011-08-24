@@ -1,32 +1,32 @@
 <table class='data ranktop'>
-<thead>
-<tr>
-<th> Top 5 Countries </th>
-<th> Score </th>
-</tr>
-</thead>
-<tbody>
-<% _.each(top, function(v, k) { %>
-<tr>
-<td> <div class='rank-number'><%= k+1 %></div> <span class='country-name'> <a href='/country/<%= v.ISO3 %>'> <%= v.name %> </a> </span> </td>
-<td> <%= v.value %> </td>
-</tr>
-<% }); %>
-</tbody>
-</table>
-<table class='data rankbottom'>
-<thead>
-<tr>
-<th> Bottom 5 Countries </th>
-<th> Score </th>
-</tr>
-</thead>
-<tbody>
-<% _.each(bottom, function(v, k) { %>
-<tr>
-<td> <div class='rank-number'><%= length - (4-k) %></div> <span class='country-name'> <a href='/country/<%= v.ISO3 %>'> <%= v.name %> </a> </span> </td>
-<td> <%= v.value %> </td>
-</tr>
-<% }); %>
-</tbody>
+  <thead>
+    <tr>
+      <th class='country'> Top 5 Countries </th>
+      <th class='score'> Score </th>
+    </tr>
+  </thead>
+  <tbody>
+    <% _.each(top, function(v, k) { %>
+    <tr>
+      <td class='country'> <div class='rank-number'><%= k+1 %></div> <div class='country-name'> <a href='/country/<%= v.ISO3 %>'> <%= v.name %> </a></div></td>
+      <td class='score'> <%= v.value %> </td>
+    </tr>
+    <% }); %>
+    </tbody>
+  </table>
+  <table class='data rankbottom'>
+    <thead>
+      <tr>
+        <th class='country'> Bottom 5 Countries </th>
+        <th class='score'> Score </th>
+      </tr>
+    </thead>
+    <tbody>
+      <% _.each(bottom, function(v, k) { %>
+      <tr>
+        <td class='country'> <div class='rank-number'><%= length - (4-k) %></div> <div class='country-name'> <a href='/country/<%= v.ISO3 %>'> <%= v.name %> </a></div></td>
+        <td class='score'> <%= v.value %> </td>
+      </tr>
+      <% }); %>
+  </tbody>
 </table>

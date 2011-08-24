@@ -1,4 +1,4 @@
-<div class='content'>
+<div class='content container'>
   <h3>About</h3>
   <div id='about-nav-container'>
     <ul id='about-nav'>

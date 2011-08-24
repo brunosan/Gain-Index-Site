@@ -4,7 +4,7 @@
   <div class='country-summary'></div>
 </div>
 
-<div class='indicator-info container clearfix'>
+<div class='indicator-time container clearfix'>
   <h4><%= indicatorName %> over time </h4>
   <div class='graph'></div>
 </div>

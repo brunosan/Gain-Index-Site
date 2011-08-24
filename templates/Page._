@@ -1,4 +1,4 @@
-<div class ='document page'>
+<div class ='document page container'>
   <div class='attribute name'>
     <h2>
     <span class='editable <%= render('id') %> editable-name'><%= render('name') %></span>

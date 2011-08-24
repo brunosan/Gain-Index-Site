@@ -11,7 +11,21 @@
   <% } else { %>
     <tr id='indicator-<%= row.field.id %>' class='<%= row.klass %>'>
   <% } %>
-    <td class='name'><%= row.field.name %></td>
+    <td class='name'><%= row.field.name %>
+      <% if (row.graph) { %>
+        <div class='country-sector-graph'>
+          <% _.each(row.graph, function(sector, name) { %>
+            <% if (row.field.id == name) { %>
+              <span class='sector-graph-<%= name %> hilite'
+            <% } else { %>
+              <span class='sector-graph-<%= name %>'
+            <% } %>
+            style='width:<%= sector.percent %>%;'>
+            </span>
+          <% }); %>
+        </div>
+      <% } %>
+    </td>
     <td class='graph'><div class='placeholder'></div></td>
     <td class='input'><%= row.input %></td>
     <td class='score'><%= row.score %></td>

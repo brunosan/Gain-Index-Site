@@ -20,6 +20,7 @@ body {
   font-style: normal;
   }
 
+/* Header styles */
 h1,h2,h3,h4,h5 {
   font-family: 'AlternateGothicLTNo3Regular',"HelveticaNeueBoldCondensed", "HelveticaNeue-Bold-Condensed", "Arial Narrow", "Arial", sans-serif;
   font-weight: 100;
@@ -27,28 +28,26 @@ h1,h2,h3,h4,h5 {
   padding-top: 15px;
   padding-bottom: 15px;
   clear: left;
-  }
-    
+  } 
 h2 {
   font-size: 28px;
   border-bottom: #c6c6c6 1px solid;
-}
-
+  margin-bottom: 15px;
+  }
 h3 {
   font-size: 20px;
-}
-
+  }
 h4 {
   font-weight: normal;
   font-size: 18px;
   }
-
 .drawer h4 {
   font-family: 'HelveticaNeue', Helvetica, Arial, sans-serif;
   font-style: italic;
   font-size: 13px;
   }
 
+/* Use this class for getting left/right padding */
 .container {
   padding-left: 15px;
   padding-right: 15px;
@@ -59,7 +58,7 @@ h4 {
     }
 
 .label {
- font-family: 'HelveticaNeue', Helvetica, Arial, sans-serif;
+  font-family: 'HelveticaNeue', Helvetica, Arial, sans-serif;
   font-style: italic;
   font-size: 12px;
   font-weight: normal;
@@ -98,27 +97,37 @@ p {
   line-height: 1.5;
   color: #434343;
   padding: 0 0 15px 0;
-}
+  }
 
 a {
   color: #434343;
   text-decoration: none;
-}
+  }
 
 a:hover {
  color: #A8A8A8; 	
  text-decoration: none;
-}
+  }
+
+ul {
+  padding-bottom: 15px;
+  }
 
 /**
- * Plain lists in documents.
+ * Documents.
  */
 .document ul {
-  padding-top: 15px;
+  padding-bottom: 15px;
 }
 .document ul li {
-  margin: 0 20px;
-  list-style: circle inside;
+  margin: 0 5px;
+  list-style: disc inside;
+  }
+.document h2 {
+  margin-left: -15px;
+  margin-right: -15px;
+  padding-left: 15px;
+  padding-right: 15px;
   }
 
 /**
@@ -515,11 +524,19 @@ ul.tabs li a.active {
     position: fixed;
     top: 0;
     }
+    #cabinet.front .slider.fixed {
+      top: 20px;
+      position: absolute;
+      }
     #cabinet .slider.fixed.bottom {
       position: absolute;
       top: auto;
       bottom: 0;
       }
+      #cabinet.front .slider.fixed.bottom {
+        top: 20px;
+        bottom: auto;
+        }
 
   #cabinet .floor .more {
     background: #fff;
@@ -568,6 +585,9 @@ table.data tbody tr {
 table.data tr.worst {
   background-color: #ffdfdd;
   }
+  table.data tr.worst.active {
+    background-color: #f8d3d1;
+    }
 
 /**
  * Country summary generic styles
@@ -896,21 +916,21 @@ table.data {
   background: #fff;
   }
   
-thead {
+table.data thead {
   border-bottom: 1px solid #c6c6c6;
 }
 
-tbody tr.active {
+table.data tbody tr.active {
   cursor: pointer;
   background:#ebebeb;
   }
 
-tbody tr:hover {
+table.data tbody tr:hover {
   cursor: pointer;
   background:#f5f5f5;
 }
 
-tbody tr.active:hover {
+table.data tbody tr.active:hover {
   cursor: pointer;
   background:#ebebeb;
 }
@@ -926,7 +946,7 @@ tbody tr.active:hover {
  }
 
 .country-profile p.label {
- padding: 10px 0 0 0;
+ padding: 0;
 }
 
 .country-profile .country-summary div.gain .name {
@@ -1006,7 +1026,7 @@ tbody tr.active:hover {
   padding: 0 0 20px 0px;
   font-size: 11px;
   }
-  .country-profile .rankings table {
+  .country-profile table.ranking-history {
     margin-left: 10px;
     border: 1px solid #c6c6c6;
     border-right: none;
@@ -1016,8 +1036,8 @@ tbody tr.active:hover {
     -webkit-border-radius: 4px 0px 0px 4px;
     border-radius: 4px 0px 0px 4px;
     }
-  .country-profile .rankings th,
-  .country-profile .rankings td {
+  .country-profile table.ranking-history th,
+  .country-profile table.ranking-history td {
     border-bottom: 1px solid #c6c6c6;
     padding: 5px 0;
     text-align: center;
@@ -1052,22 +1072,93 @@ tbody tr.active:hover {
   padding-left: 10px;
 }
 
-.drawer .content .graph {
-  width: 285px;
-  height: 150px;
+/**
+ * Country page sector graphs
+ */
+.country-sector-graph {
+  width: 100px;
+  height: 15px;
+  background-color: #ccc;
+  float: right;
   }
+  .country-sector-graph span {
+    height: 15px;
+    display: block;
+    float: left;
+    border-left: 1px solid #fff;
+    border-right: 1px solid #fff;
+  }
+  .country-sector-graph .hilite {
+    background-color: #8AD35E;
+  }
+  #indicator-vulnerability .country-sector-graph,
+  #indicator-readiness .country-sector-graph {
+    background-color: #8AD35E;
+  }
+
+.drawer .content .chart {
+  padding-bottom: 15px;
+  }
+  .drawer .content .graph {
+    width: 285px;
+    height: 150px;
+    }
 .drawer .content .gain {
   border-left: 0;
   }
 .drawer .country-info {
   padding-bottom: 15px;
   }
-.drawer .indicator-info {
+
+/* CountryDrawer._ styling */
+.drawer .indicator-time,
+.drawer .source,
+.drawer .similar-countries {
   border-top: 1px solid #ccc;
+  }
+.drawer .source ul {
+  padding-bottom: 15px;
+  }
+.drawer .source ul li {
+  margin: 0 5px;
+  list-style: disc inside;
+  }
+.drawer table.similar {
+  width: 100%;
+  }
+  .drawer table.similar td {
+    padding-top: 3px;
+    padding-bottom: 3px;
+      border-bottom: 1px solid #ddd;
+  }
+  .drawer table.similar td.first {
+    border-right: 1px solid #ddd;
+    }
+  .drawer table.similar th {
+    padding-top: 15px;
+    padding-bottom: 3px;
+    font-weight: normal;
+    font-style: italic;
+    text-align: left;
+    border-bottom: 1px solid #aaa;
+    }
+.drawer .chart .legend {
+  float: right;
+  margin-right: 30px;
+  }
+.drawer .chart .legend .legendLabel {
+  font-size: 12px;
+  vertical-align: middle;
+  padding-right: 10px;
+  }
+.drawer .chart .legend .legendColorBox {
+  vertical-align:middle;
+  padding-right: 5px;
   }
 .floor .correction-control {
   border-top: 1px solid #ccc;
-  padding: 15px;
+  padding-top: 15px;
+  padding-bottom: 15px;
   }
   .floor .correction-control p {
     font-style: italic;
@@ -1084,15 +1175,11 @@ tbody tr.active:hover {
   .floor .correction-control a:hover {
   background: #8C8C8C;
   }
-  
+
 /** 
  * Rankings page
  */
-.ranking {background-color: #ebebeb;}
-
-.ranking p {
-margin-top: 15px;
- }
+.top .ranking {background-color: #ebebeb;}
 
 .ranking p.label {
  position: absolute;
@@ -1126,8 +1213,21 @@ background: url('../images/sprite.png') 82px -370px;
   }
 .ranking table.data th,
 .ranking table.data td {
-  padding: 0px 10px;
+  padding: 0 15px;
   }
+  .ranking table.data .country-name {
+    white-space: nowrap;
+    width: 200px;
+    overflow: hidden;
+    }
+  .ranking table.data th.score,
+  .ranking table.data td.score {
+    width: 35px;
+    }
+  .ranking table.data th.country,
+  .ranking table.data td.country {
+    padding: 0 0 0 15px;
+    }
 .ranking table.data .icon-outlook {
   float: left;
   margin-top: 5px;
