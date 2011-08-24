@@ -1328,44 +1328,42 @@ background: url('../images/sprite.png') 82px -370px;
   }
 #about-nav-container ul {
   padding: 15px 0 0 0;
-  margin-left: 20px;
   list-style-type: none;
   font-family: 'AlternateGothicLTNo3Regular',"HelveticaNeueBoldCondensed","HelveticaNeue-Bold-Condensed","Arial Narrow","Arial",sans-serif;
   text-transform: uppercase;
   }
-  
+
 #about-nav-container a {
+  font-size: 12px; 
   display: block;
-  padding: 3px;
+  padding: 10px 10px 10px 40px;
   margin-bottom: 10px;
-  width: 160px;
+  width: 230px;
   background-color: transparent;
-  padding-left: 30px
-  }
-#about-nav-container a:link, #about-nav a:visited {
-  text-decoration: none;
+  background-image: url('../images/sprite.png');
+  background-repeat: no-repeat;
   }
 
-#about-nav-container a.nav-overview {background: url('../images/sprite.png') 5px -920px no-repeat;}
-#about-nav-container a.nav-methodology {background: url('../images/sprite.png') 5px -957px no-repeat;}
-#about-nav-container a.nav-matrix {background: url('../images/sprite.png') 5px -990px no-repeat;}
-#about-nav-container a.nav-consultation {background: url('../images/sprite.png') 5px -1025px no-repeat;}
+  #about-nav-container a:link,
+  #about-nav a:visited {
+    text-decoration: none;
+    }
 
-#about-nav-container a:hover,
-#about-nav-container a:active {
-  background-color: #fff;
-  color: #434343;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  border-radius: 4px;
-  }
-  
-#about-nav-container a.active {
-  background-color: #fff;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  border-radius: 4px;
-}
+  #about-nav-container a.nav-overview {background-position: 10px -913px;}
+  #about-nav-container a.nav-methodology {background-position: 10px -950px;}
+  #about-nav-container a.nav-matrix {background-position: 10px -983px;}
+  #about-nav-container a.nav-consultation {background-position: 10px -1017px;}
+
+  #about-nav-container a:hover,
+  #about-nav-container a:active,
+  #about-nav-container a.active {
+    background-color: #fff;
+    color: #434343;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    }
+
 /*** Error Page ***/
 .error-page {
   padding-top: 150px;
