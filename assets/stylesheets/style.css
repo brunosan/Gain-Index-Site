@@ -494,13 +494,13 @@ ul.tabs li a.active {
       width: 75px;
       margin-right: 0px;
       }
-  
-  #cabinet .drawer .country-summary {
-    border: 1px solid #c6c6c6;
-    border-radius: 5px;
-    moz-border-radius: 5px;
-    webkit-border-radius: 5px;
-    }
+
+#cabinet .drawer .country-summary {
+  border: 1px solid #c6c6c6;
+  border-radius: 5px;
+  moz-border-radius: 5px;
+  webkit-border-radius: 5px;
+  }
 
 #cabinet .floor {
   padding-bottom: 10px;
@@ -1091,18 +1091,19 @@ table.data tbody tr.active:hover {
  */
 .country-sector-graph {
   width: 100px;
-  height: 15px;
+  height: 10px;
+  overflow: hidden;
   background-color: #ccc;
   float: right;
   }
   .drawer .country-sector-graph {
     float: none;
-    margin: 10px 0px;
+    margin: 0 0 10px 0;
     width: 100%;
     position: relative
   }
   .country-sector-graph span {
-    height: 15px;
+    height: 10px;
     display: block;
     float: left;
     /*border-left: 1px solid #fff;
@@ -1160,6 +1161,9 @@ table.data tbody tr.active:hover {
   }
   .drawer .similar-countries {
     height: 175px;
+    }
+  .drawer .composition {
+    height: 90px;
     }
 .drawer .source ul {
   padding-bottom: 15px;

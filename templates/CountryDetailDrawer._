@@ -3,7 +3,9 @@
   <h3><%= countryName %></h3>
   <div class='country-summary'></div>
 </div>
-<div class='candybar'></div>
+<div class='composition container'>
+  <div class='composition-bars'></div>
+</div>
 <div class='indicator-time container clearfix'>
   <h4><%= indicatorName %> over time </h4>
   <div class='graph'></div>
