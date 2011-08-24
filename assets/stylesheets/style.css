@@ -1308,11 +1308,15 @@ background: url('../images/sprite.png') 271px -412px;
 /**
  * Featured ranking, front page
  */
+.front .ranking {
+  background-color: #fff;
+  }
 .front .ranking table.data {
   width: 50%;
   float: left;
   clear: none;
   table-layout: auto;
+  margin-bottom: 10px;
   }
   .front .ranking table.data th {
     font-weight: normal;
