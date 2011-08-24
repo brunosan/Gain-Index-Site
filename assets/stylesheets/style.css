@@ -1103,7 +1103,6 @@ table.data tbody tr.active:hover {
   margin: 12px 15px 0 0;
   width: 80px;
   height: 10px;
-  overflow: hidden;
   background-color: #ccc;
   float: right;
   }
@@ -1125,6 +1124,9 @@ table.data tbody tr.active:hover {
   .country-sector-graph .hilite {
     background-color: #8AD35E;
   }
+  .drawer .country-sector-graph span:hover {
+    background-color: #62b331;
+    }
   #indicator-vulnerability .country-sector-graph,
   #indicator-readiness .country-sector-graph {
     background-color: #8AD35E;
@@ -1138,14 +1140,12 @@ table.data tbody tr.active:hover {
 
 .country-sector-graph .bar label {
   line-height: 18px;
-  color: white;
   display: none;
-  width: 600px;
+  width: 285px;
   position: absolute;
-  top: 25px;
+  top: -19px;
   left: 0;
-  font-size: 16px;
-  background-color: #1A1A1A;
+  background-color: #fff;
   }
 .country-sector-graph .bar:hover label {
   display: block;
