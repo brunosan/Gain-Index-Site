@@ -1185,8 +1185,21 @@ background: url('../images/sprite.png') 82px -370px;
   }
 .ranking table.data th,
 .ranking table.data td {
-  padding: 0px 10px;
+  padding: 0 15px;
   }
+  .ranking table.data .country-name {
+    white-space: nowrap;
+    width: 200px;
+    overflow: hidden;
+    }
+  .ranking table.data th.score,
+  .ranking table.data td.score {
+    width: 35px;
+    }
+  .ranking table.data th.country,
+  .ranking table.data td.country {
+    padding: 0 0 0 15px;
+    }
 .ranking table.data .icon-outlook {
   float: left;
   margin-top: 5px;
