@@ -47,16 +47,6 @@ view = views.Main.extend({
         this.renderFloor('gain');
         return this;
     },
-    setupPanel: function() {
-        if (Bones.user && Bones.user.authenticated) {
-            Bones.admin.setPanel(
-                new views.AdminFrontFeature({collection: this.collection})
-            );
-        }
-        else {
-            Bones.admin.setPanel();
-        }
-    },
     attach: function() {
         var indicator = 'gain',
             year = 2010,
@@ -118,6 +108,16 @@ view = views.Main.extend({
         });
         this.setupPanel();
         return this;
+    },
+    setupPanel: function() {
+        if (Bones.user && Bones.user.authenticated) {
+            Bones.admin.setPanel(
+                new views.AdminFrontFeature({collection: this.collection})
+            );
+        }
+        else {
+            Bones.admin.setPanel();
+        }
     },
     renderCountryFeature: function() {
         // Featured countries
