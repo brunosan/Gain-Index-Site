@@ -689,8 +689,8 @@ table.data tr.worst {
     }
   .mini-matrix .tl.active { background-color: red; }
   .mini-matrix .tr.active { background-color: green; }
-  .mini-matrix .lr.active { background-color: blue; }
-  .mini-matrix .ll.active { background-color: yellow; }
+  .mini-matrix .br.active { background-color: blue; }
+  .mini-matrix .bl.active { background-color: yellow; }
 
   .mini-matrix .pin {
     position: absolute;

@@ -22,6 +22,10 @@ view = Backbone.View.extend({
             }
         });
         if (summary.readiness && summary.vulnerability) {
+            // Determine which quadrant to highlight.
+            var activeQuad = (summary.vulnerability.raw > 0.5 ? 't' : 'b');
+            activeQuad += (summary.readiness.raw > 0.5 ? 'r' : 'l');
+
             // This math depends very heavily on the CSS which is applied to the
             // matrix. We've got the following assumptions.
             //
@@ -36,6 +40,7 @@ view = Backbone.View.extend({
         }
         $(this.el).empty().append(templates.CountrySummary({
             data: summary,
+            active: activeQuad,
             pin: pin,
             map: this.map
         }));
