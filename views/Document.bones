@@ -4,10 +4,14 @@
 view = views.Main.extend({
     initialize: function(options) {
         views.Main.prototype.initialize.apply(this, arguments);
-        _.bindAll(this, 'setPanel');
-        Bones.user && Bones.user.bind('auth:status', this.setPanel);
+        _.bindAll(this, 'setupPanel');
+        Bones.user && Bones.user.bind('auth:status', this.setupPanel);
     },
-    setPanel: function() {
+    attach: function() {
+        !Bones.server && this.setupPanel();
+        return this;
+    },
+    setupPanel: function() {
         if (Bones.user && Bones.user.authenticated) {
             Bones.admin.setPanel(new views.AdminDocument({
                 model: this.model,
