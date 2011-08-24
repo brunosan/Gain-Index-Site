@@ -85,7 +85,7 @@ h4 {
     float: right;
     margin: 10px 10px 0 0;
   }
-  
+  .button:hover{text-decoration: none;}
   .button.green:hover {
   background-color: #94EB60;
   }
@@ -100,13 +100,13 @@ p {
   }
 
 a {
-  color: #434343;
+  color: #8AD35E;
   text-decoration: none;
   }
 
 a:hover {
- color: #A8A8A8; 	
- text-decoration: none;
+ color: #94EB60; 	
+ text-decoration: underline;
   }
 
 ul {
@@ -159,6 +159,7 @@ ul.tabs.level-1 li a {
   color: #434343;
   font-size: 18px;
   text-transform: uppercase;
+  text-decoration: none;
   text-shadow: 0 1px rgba(255,255,255,.5);
   float: left;
   width: auto;
@@ -198,6 +199,7 @@ ul.tabs li a.active {
       background-color: #c6c6c6;
       border-bottom: 1px solid #a8a8a8;
       }
+      ul.tabs.level-2 li a:hover {text-decoration: none;}
     ul.tabs.level-2 li:first-child a {
       -moz-border-radius-topleft: 3px;
       -moz-border-radius-bottomleft: 3px;
@@ -484,22 +486,18 @@ ul.tabs li a.active {
     -moz-border-radius: 0px 3px 0px 0px;
     -webkit-border-radius: 0px 3px 0px 0px;
     }
-  #cabinet .floor .more,
-  #cabinet .drawer .more {
-    float: right;
-    margin: 10px 0px 0px 0px;
-    padding: 5px;
-    background-color: #8ad35e;
-    border-radius: 3px;
-    -moz-border-radius: 3px;
-    -webkit-border-radius: 3px;
-    }
-    #cabinet .floor .more a,
-    #cabinet .drawer .more a {
-      color: #fff;
+    
+    #cabinet .floor a.button.green,
+    #cabinet .drawer a.button.green {
+      width: 75px;
+      margin-right: 0px;
       }
 
-
+  #cabinet .indicator-info a.button.green {
+  width: 30px;
+  }
+  
+  
   #cabinet .drawer .country-summary {
     border: 1px solid #c6c6c6;
     border-radius: 5px;
@@ -1217,6 +1215,10 @@ table.data tbody tr.active:hover {
   height: 10px;
 }
 
+.ranking thead tr th a:hover {
+  text-decoration: none;
+  color: #8C8C8C;
+  }
 .ranking thead tr th a.rank{
 background: url('../images/sprite.png') 35px -370px;
 }
