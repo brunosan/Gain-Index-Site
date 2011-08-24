@@ -27,11 +27,12 @@ view = Backbone.View.extend({
                     floorOffset = $('#cabinet .floor').offset();
                 if (!topOffset || !floorOffset) return;
                 // Capture drawer position once, will change as it slides down.
-                window.floorTop = window.floorTop || floorOffset.top;
+                window.floorTop = window.floorTop || topOffset.top;
                 var top = window.floorTop,
                     range = $('#cabinet .top').outerHeight()
                             + topOffset.top
-                            - el.outerHeight();
+                            - el.outerHeight()
+                            - 20;
                 var pos = $(this).scrollTop();
                 if (pos > top) {
                     el.addClass('fixed');
