@@ -410,11 +410,11 @@ ul.tabs li a.active {
   display: block;
   width: 300px;
   padding-bottom: 20px;
-  background: #ebebeb;
+  background: #fff;
   -moz-border-radius: 4px 0px 0px 0px;
   -webkit-border-radius: 4px 0px 0px 0px;
-
-}
+  }
+  #feedbacktab .content p { padding: 10px 10px 5px 10px; }
 
 
 #feedbacktab .button {
