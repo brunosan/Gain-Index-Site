@@ -8,6 +8,7 @@ view = Backbone.View.extend({
     render: function() {
         var view = this,
             meta = models.Country.meta;
+            options = {};
 
         $('.content', this.el).empty().append(templates.CountryDetailDrawer({
             countryName: meta[this.model.id].name,
@@ -27,6 +28,15 @@ view = Backbone.View.extend({
         new views.CountrySummary({
             el: $('.content .country-summary', this.el),
             model: this.model
+        });
+
+        var that = this;
+        _.each(['Vulnerability', 'Readiness'], function(type) {
+            new views.SectorCandyBar({
+                type: type,
+                model: that.model,
+                el: $('.content .candybar', that.el)
+            });
         });
 
         var data = this.model.get('indicators').getGraphData('name', this.indicator.id);
