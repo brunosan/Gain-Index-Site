@@ -524,11 +524,19 @@ ul.tabs li a.active {
     position: fixed;
     top: 0;
     }
+    #cabinet.front .slider.fixed {
+      top: 20px;
+      position: absolute;
+      }
     #cabinet .slider.fixed.bottom {
       position: absolute;
       top: auto;
       bottom: 0;
       }
+      #cabinet.front .slider.fixed.bottom {
+        top: 20px;
+        bottom: auto;
+        }
 
   #cabinet .floor .more {
     background: #fff;

@@ -17,7 +17,7 @@ view = views.Main.extend({
         });
 
         // Approach the cabinet.
-        $(this.el).empty().append(templates.Cabinet());
+        $(this.el).empty().append(templates.Cabinet({klass: 'country'}));
         // Empty pockets on top.
         $('.top', this.el).empty().append(templates.Country({
             title: this.model.meta('name'),

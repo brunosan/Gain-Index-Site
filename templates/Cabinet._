@@ -1,4 +1,4 @@
-<div id='cabinet' class='clearfix'>
+<div id='cabinet' class='<%= klass %> clearfix'>
   <div class='top'></div>
   <div class='slider floor'></div>
   <div class='slider drawer'>
