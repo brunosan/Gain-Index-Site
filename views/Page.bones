@@ -1,7 +1,7 @@
 view = views.Document.extend({
     render: function(options) {
         // Approach the cabinet.
-        $(this.el).empty().append(templates.Cabinet());
+        $(this.el).empty().append(templates.Cabinet({klass: 'page'}));
         $('.top', this.el).empty().append(templates.Page(
             this.model.renderer()
         ));

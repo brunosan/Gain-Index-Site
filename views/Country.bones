@@ -17,7 +17,7 @@ view = views.Main.extend({
         });
 
         // Approach the cabinet.
-        $(this.el).empty().append(templates.Cabinet());
+        $(this.el).empty().append(templates.Cabinet({klass: 'country'}));
         // Empty pockets on top.
         $('.top', this.el).empty().append(templates.Country({
             title: this.model.meta('name'),
@@ -138,7 +138,8 @@ view = views.Main.extend({
             success: function(summary) {
                 $('.drawer .similar-countries', el).empty().append(
                     templates.SimilarCountries({
-                        similar: summary.similar(country.get('id'), 5)
+                        similar: summary.similar(country.get('id'), 5),
+                        title: indicator.meta('name')
                     })
                 );
             }

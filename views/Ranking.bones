@@ -45,7 +45,7 @@ view = views.Main.extend({
         } : {};
 
         // Approach the cabinet.
-        $(this.el).empty().append(templates.Cabinet());
+        $(this.el).empty().append(templates.Cabinet({klass: 'ranking'}));
 
         // Empty pockets on top.
         $('.top', this.el).empty().append(templates.Ranking({
