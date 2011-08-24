@@ -22,8 +22,17 @@ view = Backbone.View.extend({
             }
         });
         if (summary.readiness && summary.vulnerability) {
-            pin.x = Math.round((summary.readiness.raw * 80) + 15);
-            pin.y = 80 - Math.round(summary.vulnerability.raw * 80);
+            // This math depends very heavily on the CSS which is applied to the
+            // matrix. We've got the following assumptions.
+            //
+            // * The grid is made up of 32px x 32px quadrants
+            // * The grid has 1px center lines, so it's 65px across
+            // * The point has a 10px diameter
+            // * The grid is vertically offset by 0px;
+            // * The grid is horizontally offset by 23px;
+            // * The containing element is 100px x 90px
+            pin.x = Math.round(summary.readiness.raw * (65 - 10)) + 23;
+            pin.y = (65 - 10) - Math.round(summary.vulnerability.raw * (65 - 10));
         }
         $(this.el).empty().append(templates.CountrySummary({
             data: summary,
