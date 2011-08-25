@@ -112,7 +112,8 @@ models.Tileset.prototype.sync = function(method, model, options) {
                 pathname: path.join('resources/map', model.get('indicator') +'-'+ model.get('year') + '.xml'),
                 query: {
                     //updated: map.mml._updated,
-                    bufferSize: 256
+                    bufferSize: 0,
+                    metatile: 1,
                 },
             };
 
