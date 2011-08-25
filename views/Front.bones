@@ -23,7 +23,9 @@ view = views.Main.extend({
             rankBottom = [];
         var ranking = this.model;
         // Toss out non-numeric values like '-'
-        var list = _.reject(ranking.list('values', 2009), function(v) { return isNaN(parseFloat(v.value)) });
+        var list = _.reject(ranking.list('values', 2010), function(v) {
+            return isNaN(parseFloat(v.value)) 
+        });
         rankTop = list.slice(0, 5);
         rankBottom = list.slice(list.length - 5, list.length);
         // Names are extra long, also, format score
