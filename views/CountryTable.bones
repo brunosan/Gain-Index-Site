@@ -60,7 +60,7 @@ view = views.Main.extend({
             scores[field.field.id].sector = field.field.sector;
             if (field.field.component == null && field.field.id != that.options.tab) {
                 sector.id = field.field.id;
-                sector.score = field.score;
+                sector.score = !isNaN(parseFloat(field.score)) ? field.score : 0;
                 sectors.push(sector);
             }
             data.push(field);
