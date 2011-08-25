@@ -25,14 +25,14 @@
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
      inkscape:zoom="1"
-     inkscape:cx="34.044176"
-     inkscape:cy="-1207.817"
+     inkscape:cx="237.95362"
+     inkscape:cy="-860.16987"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
      inkscape:window-width="1280"
      inkscape:window-height="703"
-     inkscape:window-x="12"
+     inkscape:window-x="91"
      inkscape:window-y="0"
      inkscape:window-maximized="0"
      fit-margin-top="0"
@@ -1455,5 +1455,13 @@
          inkscape:connector-curvature="0"
          style="fill:#55aa22;fill-opacity:1" />
     </g>
+    <path
+       style="color:#000000;fill:#ff6d67;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       d="m 6.5,812.36217 -6.5,10.99999 13,0 -6.5,-10.99999 z m -0.5,2.99999 1,0 0,4 -1,0 0,-4 z m 0,5 1,0 0,1 -1,0 0,-1 z"
+       id="path8763"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/Users/saman/Dropbox/work_repos/gai-gain/assets/images/sprite.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
   </g>
 </svg>
