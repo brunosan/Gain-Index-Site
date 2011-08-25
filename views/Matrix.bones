@@ -1,6 +1,7 @@
 view = views.Main.extend({
     events: {
-        'click ul.year-selector li a': 'yearSelect'
+        'click ul.year-selector li a': 'yearSelect',
+        'click a.play-button': 'yearsGo'
     },
     render: function() {
         $(this.el).empty().append(templates.Cabinet({klass: 'matrix'}));
@@ -72,20 +73,37 @@ view = views.Main.extend({
 
         return this;
     },
-    yearSelect: function(ev) {
-        var year = $(ev.currentTarget).text();
-        if (this.data[year] == undefined) return true;
-
+    setYear: function(year) {
         var currentData = this.data[year];
         var view = this;
+
+        // TODO make 'a' active...
 
         this.matrix.selectAll("div").data(currentData, function(d) {
                 return view.countryOrder[d.iso];
             }).transition().duration(500)
             .style('bottom', function(d) { return d.y + 'px'; })
             .style('left', function(d) { return d.x + 'px'; });
+    }, 
+    yearSelect: function(ev) {
+        var year = $(ev.currentTarget).text();
+        if (this.data[year] == undefined) return true;
 
+        this.setYear(year);
         return false;
-
+    },
+    yearsGo: function() {
+        var actions = [],
+            view = this;
+        for (var i = 1995; i <= 2010; i++) {
+            (function(y) {
+                actions.push(function(next) {
+                    view.setYear(y);
+                    setTimeout(next, 500);
+                });
+            })(i);
+        }
+        _(actions).reduceRight(_.wrap, function(){ console.log('done')})();
+        return false;
     }
 });

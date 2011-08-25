@@ -1,4 +1,5 @@
 <div class='big-matrix'></div>
+<a href='#play' class='play-button'>Play</a>
 <ul class='year-selector'>
   <% for (var y= 1995; y <= 2010; y++) { %>
     <li><a href='#<%= y %>'><%= y %></a></li>
