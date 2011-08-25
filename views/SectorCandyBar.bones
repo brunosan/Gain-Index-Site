@@ -20,7 +20,7 @@ view = Backbone.View.extend({
                 item.score = !isNaN(parseFloat(indicator.score())) ? indicator.score() : 0;
                 item.name = indicator.meta('name');
                 item.id = id;
-                total += parseFloat(item.score);
+                total += item.score;
                 data.push(item);
             }
         });
