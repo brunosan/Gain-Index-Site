@@ -21,7 +21,10 @@
         "table": "(SELECT countries.*, data.'<%= year %>' as factor, data.'<%= year %>_raw' as factor_raw FROM countries LEFT JOIN indicators.data ON countries.iso_a3 = data.ISO3 AND data.NAME = '<%= indicator %>')",
         "attachdb": "indicators@../../files/indicators.sqlite",
         "key_field": "",
-        "extend": "",
+        "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34",
+        "geometry_table":"countries",
+        "geometry_field":"GEOMETRY",
+        "multiple_geometries":true,
         "id": "gain",
         "project": "gain",
         "type": "sqlite"
