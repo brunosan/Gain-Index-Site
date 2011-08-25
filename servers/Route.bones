@@ -15,7 +15,7 @@ server.prototype.assets.wax = new mirror([
 
 var vendor = servers.Route.prototype.assets.vendor;
 vendor.push(require.resolve('chrono/lib/chrono'));
-
+vendor.push(require.resolve('d3/d3.js'));
 
 server.prototype.assets.all = new mirror([
     server.prototype.assets.vendor,

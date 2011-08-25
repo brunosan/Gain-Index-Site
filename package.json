@@ -18,6 +18,7 @@
     "bones-document": "https://github.com/developmentseed/bones-document/tarball/master",
     "backbone-stash": "= 0.5.0",
     "csv": "https://github.com/wdavidw/node-csv-parser/tarball/9f472a2449e7d47dd901c989fb4af51705b6b1bf",
+    "d3": "= 1.29.5",
     "underscore": "= 1.1.7",
     "request": "https://github.com/mikeal/request/tarball/8bb7f98ba8b78c217552c979811c07f1299318fe",
     "backbone-couch": "= 1.0.0",

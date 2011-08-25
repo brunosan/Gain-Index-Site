@@ -1,1 +1,12 @@
-<div class='matrix'></div>
+<div class='big-matrix'></div>
+<ul class='year-selector'>
+  <% for (var y= 1995; y <= 2010; y++) { %>
+    <li><a href='#<%= y %>'><%= y %></a></li>
+  <% } %>
+</ul>
+<div class='country-selector'>
+  <input type='textfield' value='Add country to highlight' />
+  <input type='button' value="Add" />
+  <div class='active-countries'></div>
+</div>
+<a href=''>Compare more variables with Google</a>

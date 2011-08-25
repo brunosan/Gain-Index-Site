@@ -90,7 +90,19 @@ router = Backbone.Router.extend({
         });
     },
     matrix: function() {
-        this.send(views.Matrix);
+        var router = this;
+        var fetcher = this.fetcher();
+
+        var vuln = new models.Ranking({id: 'vulnerability'});
+        fetcher.push(vuln);
+
+        var ready = new models.Ranking({id: 'readiness'});
+        fetcher.push(ready);
+
+        fetcher.fetch(function(err) {
+            if (err) return router.error(err);
+            router.send(views.Matrix, {readiness: ready, vulnerability: vuln});
+        });
     },
     error: function(error) {
         this.send(views.Error, _.isArray(error) ? error.shift() : error);

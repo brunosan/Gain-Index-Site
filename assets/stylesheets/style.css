@@ -1378,11 +1378,19 @@ background: url('../images/sprite.png') 271px -412px;
 /**
  * Matrix section
  */
-.top .matrix {
+.big-matrix {
+  position:relative;
   height: 675px;
   width: 640px;
-  background: url('../images/matrix_placeholder.png');
   }
+  .big-matrix div.point {
+    position: absolute;
+    }
+ul.year-selector, ul.year-selector li  { float: left; }
+  ul.year-selector li a {
+    float: left;
+    padding: 5px;
+    }
 
 /**
  * Bones-admin : popups.
