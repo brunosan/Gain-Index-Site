@@ -112,7 +112,8 @@ models.Tileset.prototype.sync = function(method, model, options) {
                 pathname: path.join('resources/map', model.get('indicator') +'-'+ model.get('year') + '.xml'),
                 query: {
                     //updated: map.mml._updated,
-                    bufferSize: 256
+                    bufferSize: 0,
+                    metatile: 1,
                 },
             };
 
@@ -122,7 +123,14 @@ models.Tileset.prototype.sync = function(method, model, options) {
                 year: model.get('year'),
                 indicator: model.get('indicator')
             });
+            
+            // http://trac.mapnik.org/wiki/OutputFormats?version=8#PNGQuantization
+            // reduce colors to 50 so that png encoding is faster and the tiles are smaller
+            // if you see color degradation increase c higher, up to 256
+            mml.format = "png8:c=50"
+            
             uri.mml = mml;
+            
 
             tilelive.load(uri, function(err, source) {
                 if (err) return options.error(err);
