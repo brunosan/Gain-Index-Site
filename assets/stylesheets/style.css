@@ -906,6 +906,7 @@ table.data tbody tr {
 }
 
 .download-page a.button {
+  display: block;
   font-family: 'AlternateGothicLTNo3Regular',"HelveticaNeueBoldCondensed", "HelveticaNeue-Bold-Condensed", "Arial Narrow", "Arial", sans-serif;
   font-weight: normal;
   font-size: 28px;
@@ -926,6 +927,14 @@ table.data tbody tr {
   font-weight: normal;
   text-transform: none;
 }
+
+.download-page a.ccbadge {
+  text-indent: 25px;
+  float: left;
+  display: block;
+  background: url('../images/sprite.png') 15px -230px no-repeat;
+  margin-bottom: 15px;
+  }
 
 .download-page a.download-icon:hover {
 }
