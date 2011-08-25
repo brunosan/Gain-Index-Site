@@ -1412,11 +1412,9 @@ background: url('../images/sprite.png') 271px -412px;
   width: 200px;
   }
 #about-nav-container ul {
-  padding: 15px 0 0 0;
+  padding: 0;
   list-style-type: none;
-  font-family: 'AlternateGothicLTNo3Regular',"HelveticaNeueBoldCondensed","HelveticaNeue-Bold-Condensed","Arial Narrow","Arial",sans-serif;
-  text-transform: uppercase;
-  }
+    }
 
 #about-nav-container a {
   display: block;
@@ -1437,16 +1435,21 @@ background: url('../images/sprite.png') 271px -412px;
   #about-nav-container a.nav-methodology {background-position: 10px -950px;}
   #about-nav-container a.nav-matrix {background-position: 10px -983px;}
   #about-nav-container a.nav-consultation {background-position: 10px -1017px;}
+  #about-nav-container a.nav-download {background-position: 10px -1052px;}
 
-  #about-nav-container a:hover,
   #about-nav-container a:active,
-  #about-nav-container a.active {
+  #about-nav-container a.active,
+  #about-nav-container a:hover {
     background-color: #fff;
     color: #434343;
     -webkit-border-radius: 4px;
     -moz-border-radius: 4px;
     border-radius: 4px;
     }
+    
+  #about-nav-container a:hover {
+    background-color: #F5F5F5;
+  }
 
 /*** Error Page ***/
 .error-page {
