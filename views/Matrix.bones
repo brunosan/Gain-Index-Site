@@ -29,7 +29,7 @@ view = views.Main.extend({
             map[i] = {};
         }
 
-        _({readiness: 'x', vulnerability: ['y']}).each(function(axis, series) {
+        _({readiness: 'x', vulnerability: 'y'}).each(function(axis, series) {
             view.options[series].get('indicators').each(function(v) {
                 _(v.get('values')).each(function(d, y) {
                     var iso = v.get('ISO3');
@@ -42,13 +42,15 @@ view = views.Main.extend({
                             iso: iso,
                             name: v.get('country')
                         };
-                        item[series] = d; // format?
 
                         map[y][iso] = item;
                         data[y].push(item);
                     }
 
-                    // The Scale of things here is non-obvious.
+                    // And the original data.
+                    map[y][iso][series] = d;
+
+                    // Then scale things...
                     // * Readiness range accounting for std dev is 0.1 - 0.9
                     // * Vulnerability range accounting for std dev is 0 - 0.6
                     if (series == 'readiness') {
@@ -58,8 +60,8 @@ view = views.Main.extend({
                         // ...and 410 tall
                         d = (d / 0.6) * 410;
                     }
+                    map[y][iso][axis] = Math.round(d);
 
-                    map[y][v.get('ISO3')][axis] = Math.round(d);
                 })
             });
         });
@@ -103,7 +105,6 @@ view = views.Main.extend({
             }).transition().duration(500)
             .style('bottom', function(d) { return d.y + 'px'; })
             .style('left', function(d) { return d.x + 'px'; });
-            // TODO add a class based on quadrant...
     }, 
     yearSelect: function(ev) {
         var year = $(ev.currentTarget).text();
@@ -130,12 +131,26 @@ view = views.Main.extend({
         var data = ev.currentTarget.__data__;
         if ($('.active-countries .country-'+ data.iso, this.el).length) {
             $('.active-countries .country-'+ data.iso, this.el).remove();
-            $(ev.currentTarget).removeClass('active');
+            $(ev.currentTarget)
+              .removeClass('active-tl')
+              .removeClass('active-tr')
+              .removeClass('active-bl')
+              .removeClass('active-br');
         } else {
-            $(ev.currentTarget).addClass('active');
+            this.setPointActive(ev.currentTarget, data);
             $('.active-countries', this.el).append(templates.MatrixPoint(data));
         }
         ev.preventDefault();
+    },
+    // @param el DOM object
+    // @param object with vulnerability and readiness
+    setPointActive: function(el, data) {
+        // Determine which quadrant to highlight.
+        // * The turning point for Readiness is 0.52
+        // * The turning point for Vulnerability us 0.31
+        var quad = (data.vulnerability > 0.31 ? 't' : 'b');
+        quad += (data.readiness > 0.52 ? 'r' : 'l');
+        $(el).addClass('active-' + quad);
     },
     removeCountry: function(ev) {
         var elem = $(ev.currentTarget);
@@ -144,8 +159,11 @@ view = views.Main.extend({
                 var iso = v.slice(8);
                 elem.remove();
                 $('.graph .country-'+iso, this.el)
-                    .parents('.point.active')
-                    .removeClass('active');
+                    .parents('.point')
+                    .removeClass('active-tl')
+                    .removeClass('active-tr')
+                    .removeClass('active-bl')
+                    .removeClass('active-br');
             }
         });
         ev.preventDefault();
