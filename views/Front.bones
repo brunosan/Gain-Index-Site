@@ -89,7 +89,7 @@ view = views.Main.extend({
 
         var startedCarousel = false;
 
-        $(window).scroll(function() {
+        function checkCarousel() {
             function isInView(qs) {
                 var win = $(window);
                 var el = $(qs);
@@ -108,7 +108,10 @@ view = views.Main.extend({
                 });
                 $('#carousel .overview').fadeIn('normal');
             }
-        });
+        }
+        checkCarousel();
+        $(window).scroll(checkCarousel);
+
         this.setupPanel();
         return this;
     },
