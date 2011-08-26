@@ -17,10 +17,10 @@ view = Backbone.View.extend({
             var id = indicator.get('name');
             var item = {};
             if (_.indexOf(matches, id) > -1) {
-                item.score = indicator.score();
+                item.score = !isNaN(parseFloat(indicator.score())) ? indicator.score() : 0;
                 item.name = indicator.meta('name');
                 item.id = id;
-                total += parseFloat(item.score);
+                total += item.score;
                 data.push(item);
             }
         });

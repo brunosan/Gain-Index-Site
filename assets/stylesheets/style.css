@@ -387,11 +387,29 @@ ul.tabs li a.active {
  height: 150px;
  background-color: #11202C;
  }
+ 
+ #footer2 #address{
+ margin-top: 15px;
+ float: left;
+ color: white;
+ }
+ 
+#footer2 .org a {
+  margin-top: 15px;
+  display: block;
+  float: right;
+  left: 850px;
+  top: 10px;
+  width: 110px;
+  height: 40px;
+  background: url('../images/sprite.png') 0px 0px no-repeat;
+  text-indent: -9999px;
+  }
 /** Feedback tab **/
 
 #feedbacktab {
   position: fixed;
-  color: white:hover;
+  color: white;
   width: 300px;
   margin-right: 20px;
   right: 0px;
@@ -611,6 +629,9 @@ table.data tbody tr {
     border-style: solid;
     border-color: #c6c6c6;
     border-width: 0px 1px 0px 1px;
+    -moz-border-radius: 4px 0px 0px 4px;
+    -webkit-border-radius: 4px 0px 0px 4px;
+    border-radius: 4px 0px 0px 4px;
     }
     .country-summary div.gain .name {
       font-weight: bold;
@@ -840,10 +861,9 @@ table.data tbody tr {
   background-color: #ebebeb;
   }
 
-.front .featured { padding-left: 10px; }
 .front .featured .country {
   float: left;
-  width: 629px;
+  width: 624px;
   border-color: #c6c6c6;
   border-width: 1px 0px 1px 1px;
   border-style: solid;
@@ -857,7 +877,6 @@ table.data tbody tr {
     cursor: pointer;
     }
   .front .featured .country a {
-    color: #000;
     }
   .front .featured .country h3 {
   float: left;
@@ -866,7 +885,7 @@ table.data tbody tr {
   float: left;}
   
   .front .featured .country .info {
-    width: 350px;
+    width: 345px;
     float: left;
     }
   .front .featured .country-summary {
@@ -1007,6 +1026,11 @@ table.data tbody tr.active:hover {
 .country-profile tbody tr {
   border-bottom: 1px solid #ebebeb;
   }
+  
+.country-profile tr.worst td.score {
+ background: url('../images/sprite.png') 50px -885px no-repeat;
+}
+
 .country-profile tr.index {
   font-size: 16px;
   font-weight: bold;
@@ -1040,7 +1064,9 @@ table.data tbody tr.active:hover {
   border-style: solid;
   border-color: #c6c6c6;
   border-width: 1px 0px 1px 1px;
-  border-radius: 5px 0px 0px 5px;
+  -moz-border-radius: 4px 0px 0px 4px;
+  -webkit-border-radius: 4px 0px 0px 4px;
+  border-radius: 4px 0px 0px 4px;
   margin: 0 0 15px 15px;
   }
   .country-profile .country-summary {
@@ -1063,7 +1089,7 @@ table.data tbody tr.active:hover {
   }
 
   .country-profile div.ranking-history-wrapper {
-    margin-left: 10px;
+    margin-left: 15px;
     border-width: 1px 0px 1px 1px;
     border-color: #c6c6c6;
     border-style: solid;
@@ -1072,7 +1098,7 @@ table.data tbody tr.active:hover {
     border-radius: 4px 0px 0px 4px;
     }
   .country-profile table.ranking-history {
-    width: 629px;
+    width: 624px;
     background-color: transparent;
     }
   .country-profile table.ranking-history th.label {
@@ -1090,7 +1116,7 @@ table.data tbody tr.active:hover {
     text-align: center;
     }
   .country-profile .rankings tr:hover {
-    background-color: #EBEBEB;
+    background-color: transparent;
     cursor: default;
     }
 
@@ -1271,9 +1297,9 @@ table.data tbody tr.active:hover {
 .ranking p.label {
  position: absolute;
  left: 430px;
- top: 85px;
+ top: 90px;
  width: 180px;
- line-height: 120%;
+ line-height: 150%;
  text-align: right;
  }
 
@@ -1286,24 +1312,13 @@ table.data tbody tr.active:hover {
   text-decoration: none;
   color: #8C8C8C;
   }
-.ranking thead tr th a.rank{
-background: url('../images/sprite.png') 35px -370px;
-}
 
 .ranking thead tr th a.sort.label.rank.activeSort{
 background: url('../images/sprite.png') 223px -412px;
 }
 
-.ranking thead tr th a.alpha{
-background: url('../images/sprite.png') 50px -370px;
-}
-
 .ranking thead tr th a.sort.label.alpha.activeSort{
 background: url('../images/sprite.png') 239px -412px;
-}
-
-.ranking thead tr th a.income{
-background: url('../images/sprite.png') 82px -370px;
 }
 
 .ranking thead tr th a.sort.label.income.activeSort{
@@ -1471,14 +1486,11 @@ background: url('../images/sprite.png') 271px -412px;
   width: 200px;
   }
 #about-nav-container ul {
-  padding: 15px 0 0 0;
+  padding: 0;
   list-style-type: none;
-  font-family: 'AlternateGothicLTNo3Regular',"HelveticaNeueBoldCondensed","HelveticaNeue-Bold-Condensed","Arial Narrow","Arial",sans-serif;
-  text-transform: uppercase;
-  }
+    }
 
 #about-nav-container a {
-  font-size: 12px; 
   display: block;
   padding: 10px 10px 10px 40px;
   margin-bottom: 10px;
@@ -1497,16 +1509,25 @@ background: url('../images/sprite.png') 271px -412px;
   #about-nav-container a.nav-methodology {background-position: 10px -950px;}
   #about-nav-container a.nav-matrix {background-position: 10px -983px;}
   #about-nav-container a.nav-consultation {background-position: 10px -1017px;}
+  #about-nav-container a.nav-download {background-position: 10px -1052px;}
 
-  #about-nav-container a:hover,
   #about-nav-container a:active,
-  #about-nav-container a.active {
+  #about-nav-container a.active,
+  #about-nav-container a:hover {
     background-color: #fff;
     color: #434343;
     -webkit-border-radius: 4px;
     -moz-border-radius: 4px;
     border-radius: 4px;
     }
+   
+  #about-nav-container a:hover {
+    background-color: #F5F5F5;
+  }
+
+  #about-nav-container a.active:hover {
+    background-color: #fff;
+  }
 
 /*** Error Page ***/
 .error-page {
