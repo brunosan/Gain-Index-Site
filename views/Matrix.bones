@@ -1,3 +1,15 @@
+// * Readiness range accounting for std dev is 0.1 - 0.9
+// Our matrix is 580 px wide
+var readinessToX = function(d) {
+    return Math.round(((d - 0.1) / 0.8) * 580);
+};
+
+// * Vulnerability range accounting for std dev is 0 - 0.6
+// ...and 410 tall
+var vulnerabilityToY= function(d) {
+    return Math.round((d / 0.6) * 410);
+};
+
 view = views.Main.extend({
     events: {
         'click ul.year-selector li a': 'yearSelect',
@@ -49,19 +61,6 @@ view = views.Main.extend({
 
                     // And the original data.
                     map[y][iso][series] = d;
-
-                    // Then scale things...
-                    // * Readiness range accounting for std dev is 0.1 - 0.9
-                    // * Vulnerability range accounting for std dev is 0 - 0.6
-                    if (series == 'readiness') {
-                        // Our matrix is 580 px wide
-                        d = ((d - 0.1) / 0.8) * 580;
-                    } else {
-                        // ...and 410 tall
-                        d = (d / 0.6) * 410;
-                    }
-                    map[y][iso][axis] = Math.round(d);
-
                 })
             });
         });
@@ -69,7 +68,7 @@ view = views.Main.extend({
         // Filter out countries without both axis.
         _(data).each(function(val, k) {
             data[k] = _(val).reject(function(v) {
-                return (v.x == undefined || v.y == undefined);
+                return (v.readiness == undefined || v.vulnerability == undefined);
             });
         });
 
@@ -86,8 +85,8 @@ view = views.Main.extend({
         chart.enter().append("div")
             .html(function(d) { return templates.MatrixPoint(d); })
             .attr('class', 'point')
-            .style('bottom', function(d) { return d.y + 'px'; })
-            .style('left', function(d) { return d.x + 'px'; });
+            .style('bottom', function(d) { return vulnerabilityToY(d.vulnerability) + 'px'; })
+            .style('left', function(d) { return readinessToX(d.readiness) + 'px'; });
 
         $('ul.year-selector a.year-2010', this.el).addClass('active');
 
@@ -103,8 +102,38 @@ view = views.Main.extend({
         this.matrix.selectAll("div").data(currentData, function(d) {
                 return view.countryOrder[d.iso];
             }).transition().duration(500)
-            .style('bottom', function(d) { return d.y + 'px'; })
-            .style('left', function(d) { return d.x + 'px'; });
+            .style('bottom', function(d) { return vulnerabilityToY(d.y) + 'px'; })
+            .style('left', function(d) { return readinessToX(d.readiness) + 'px'; })
+            .attrTween('class', function(d, i, a) {
+                var classes = this.className.split(' ');
+                // If the only class is 'point' we're not active and don't
+                // need to transition colors.
+                if (classes.length > 1) {
+                    // If our class won't change as a result of the transition,
+                    // don't bother with this interpolator.
+                    if ('point active-' + view.quadrant(d) != a) {
+                        var xc = parseInt(this.style.getPropertyValue('left').slice(0, -2));
+                        var xt = readinessToX(d.readiness);
+                        var xRange = xt - xc;
+
+                        var yc = parseInt(this.style.getPropertyValue('bottom').slice(0, -2));
+                        var yt = vulnerabilityToY(d.vulnerability);
+                        var yRange = yt - yc;
+                        
+                        return function(n) {
+                            var coords = {
+                                x: (n * xRange) + xc,
+                                y: (n * yRange) + yc
+                            };
+                            var foo = 'point active-' + view.quadrantCoord(coords);
+                            return foo;
+                        };
+                    }
+                }
+
+                // Effectively a no-op. Don't tweak the class at all.
+                return function() { return a; };
+            });
     }, 
     yearSelect: function(ev) {
         var year = $(ev.currentTarget).text();
@@ -137,20 +166,25 @@ view = views.Main.extend({
               .removeClass('active-bl')
               .removeClass('active-br');
         } else {
-            this.setPointActive(ev.currentTarget, data);
+            var quad = this.quadrant(data);
+            $(ev.currentTarget).addClass('active-' + quad);
             $('.active-countries', this.el).append(templates.MatrixPoint(data));
         }
         ev.preventDefault();
     },
-    // @param el DOM object
-    // @param object with vulnerability and readiness
-    setPointActive: function(el, data) {
+    quadrant: function(data) {
         // Determine which quadrant to highlight.
-        // * The turning point for Readiness is 0.52
         // * The turning point for Vulnerability us 0.31
+        // * The turning point for Readiness is 0.52
         var quad = (data.vulnerability > 0.31 ? 't' : 'b');
         quad += (data.readiness > 0.52 ? 'r' : 'l');
-        $(el).addClass('active-' + quad);
+        return quad;
+    },
+    quadrantCoord: function(data) {
+        // Determine which quadrant to highlight, base on Coords.
+        var quad = (data.y > vulnerabilityToY(0.31) ? 't' : 'b');
+        quad += (data.x > readinessToX(0.52) ? 'r' : 'l');
+        return quad;
     },
     removeCountry: function(ev) {
         var elem = $(ev.currentTarget);
