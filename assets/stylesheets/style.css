@@ -1409,6 +1409,14 @@ background: url('../images/sprite.png') 271px -412px;
     }
   .big-matrix .graph div.point {
     position: absolute;
+    width: 10px;
+    height: 10px;
+    border: 3px solid #ebebeb;
+    border-radius: 8px;
+    moz-border-radius: 8px;
+    webkit-border-radius: 8px;
+    background-color: #ccc;
+    text-indent: -9999px;
     }
 
 .big-matrix div.year-controls {
