@@ -1,13 +1,19 @@
-<div class='big-matrix'></div>
-<a href='#play' class='play-button'>Play</a>
-<ul class='year-selector'>
-  <% for (var y= 1995; y <= 2010; y++) { %>
-    <li><a href='#<%= y %>'><%= y %></a></li>
-  <% } %>
-</ul>
+<div class='big-matrix'>
+  <div class='graph'></div>
+  <div class='year-controls'>
+    <a href='#play' class='play-button'>Play</a>
+    <ul class='year-selector'>
+      <% for (var y= 1995; y <= 2010; y++) { %>
+        <li><a href='#<%= y %>' class='year-<%= y %>'><%= y %></a></li>
+      <% } %>
+    </ul>
+  </div>
+</div>
 <div class='country-selector'>
   <input type='textfield' value='Add country to highlight' />
   <input type='button' value="Add" />
   <div class='active-countries'></div>
 </div>
-<a href=''>Compare more variables with Google</a>
+<div class='gapminder'>
+  <a href=''>Compare more variables with Google</a>
+<div>

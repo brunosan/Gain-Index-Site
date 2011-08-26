@@ -1379,19 +1379,67 @@ background: url('../images/sprite.png') 271px -412px;
  * Matrix section
  */
 .big-matrix {
-  position:relative;
-  height: 675px;
+  height: 490px;
   width: 640px;
   }
-  .big-matrix div.point {
+
+  .big-matrix .graph {
+    position:relative;
+    width: 580px;
+    height: 410px;
+    margin-left: 60px;
+    border-style: solid;
+    border-color: #000;
+    border-width: 0px 0px 1px 1px;
+    }
+  .big-matrix .graph div.point {
     position: absolute;
     }
-ul.year-selector, ul.year-selector li  { float: left; }
-  ul.year-selector li a {
-    float: left;
-    padding: 5px;
+
+.big-matrix div.year-controls {
+  float:left;
+  background: #666;
+  color: #fff;
+  margin: 15px;
+  padding: 0px 5px;
+  border-radius: 4px;
+  moz-border-radius: 4px;
+  webkit-border-radius: 4px;
+  }
+.big-matrix div.year-controls,
+.big-matrix ul.year-selector {
+  float: left;
+  padding: 0px;
+  }
+.big-matrix ul.year-selector li  { float: left; }
+
+.big-matrix div.year-controls a.play-button,
+.big-matrix ul.year-selector li a {
+  color: #fff;
+  float: left;
+  padding: 0px 6px;
+  line-height: 25px;
+  font-size: 10px;
+  }
+  .big-matrix ul.year-selector li a.active {
+    background: #000;
     }
 
+.gapminder,
+.country-selector {
+  background-color: #ebebeb;
+  padding: 15px;
+  }
+
+.gapminder a {
+  display: block;
+  padding: 5px;
+  color: #fff;
+  background-color: #8ad35e;
+  border-radius:3px;
+  moz-border-radius:3px;
+  webkit-border-radius:3px;
+  }
 /**
  * Bones-admin : popups.
  */

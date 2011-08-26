@@ -43,7 +43,19 @@ view = views.Main.extend({
                         map[y][iso] = item;
                         data[y].push(item);
                     }
-                    map[y][v.get('ISO3')][axis] = parseInt(d * 600);
+
+                    // The Scale of things here is non-obvious.
+                    // * Readiness range accounting for std dev is 0.1 - 0.9
+                    // * Vulnerability range accounting for std dev is 0 - 0.6
+                    if (series == 'readiness') {
+                        // Our matrix is 580 px wide
+                        d = ((d - 0.1) / 0.8) * 580;
+                    } else {
+                        // ...and 410 tall
+                        d = (d / 0.6) * 410;
+                    }
+
+                    map[y][v.get('ISO3')][axis] = Math.round(d);
                 })
             });
         });
@@ -59,17 +71,19 @@ view = views.Main.extend({
             view.countryOrder[v] = k;
         });
 
-        this.matrix = d3.select('.big-matrix')
-        var foo = this.matrix.selectAll("div")
+        this.matrix = d3.select('.big-matrix .graph')
+        var chart = this.matrix.selectAll("div")
             .data(data['2010'], function(d) {
                 return view.countryOrder[d.iso];
             });
 
-        foo.enter().append("div")
+        chart.enter().append("div")
             .text(function(d) { return d.iso; })
             .attr('class', 'point')
             .style('bottom', function(d) { return d.y + 'px'; })
             .style('left', function(d) { return d.x + 'px'; });
+
+        $('ul.year-selector a.year-2010', this.el).addClass('active');
 
         return this;
     },
@@ -77,7 +91,8 @@ view = views.Main.extend({
         var currentData = this.data[year];
         var view = this;
 
-        // TODO make 'a' active...
+        $('ul.year-selector a', this.el).removeClass('active');
+        $('ul.year-selector a.year-'+ year, this.el).addClass('active');
 
         this.matrix.selectAll("div").data(currentData, function(d) {
                 return view.countryOrder[d.iso];
