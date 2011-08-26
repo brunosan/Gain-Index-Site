@@ -5,7 +5,9 @@ view = views.Main.extend({
     },
     render: function() {
         // Approach the cabinet.
-        $(this.el).empty().append(templates.Download(this));
+        $(this.el).empty().append(templates.Cabinet({klass: 'page'}));
+        $('.top', this.el).empty().append(templates.Download(this));
+        $('.floor', this.el).empty().append(templates.AboutFloor());
         return this;
     },
 });
