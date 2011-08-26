@@ -433,8 +433,8 @@ ul.tabs li a.active {
   width: 300px;
   padding-bottom: 20px;
   background: #fff;
-  -moz-border-radius: 4px 4px 0px 0px;
-  -webkit-border-radius: 4px 4px 0px 0px;
+  -moz-border-radius: 0px 4px 0px 0px;
+  -webkit-border-radius: 4px 0px 0px 0px;
   }
   #feedbacktab .content p { padding: 10px 10px 5px 10px; }
 
@@ -442,6 +442,7 @@ ul.tabs li a.active {
 #feedbacktab .button.green {
   float: right;
   padding: 0 15px 0 15px;
+  margin-right: 0;
   width: 50px;
   margin-top: 0;
   line-height: 30px;
