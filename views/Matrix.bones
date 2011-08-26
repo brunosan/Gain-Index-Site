@@ -112,21 +112,18 @@ view = views.Main.extend({
                     // If our class won't change as a result of the transition,
                     // don't bother with this interpolator.
                     if ('point active-' + view.quadrant(d) != a) {
+
                         var xc = parseInt(this.style.getPropertyValue('left').slice(0, -2));
-                        var xt = readinessToX(d.readiness);
-                        var xRange = xt - xc;
+                        var xRange = readinessToX(d.readiness) - xc;
 
                         var yc = parseInt(this.style.getPropertyValue('bottom').slice(0, -2));
-                        var yt = vulnerabilityToY(d.vulnerability);
-                        var yRange = yt - yc;
+                        var yRange = vulnerabilityToY(d.vulnerability) - yc;
                         
                         return function(n) {
-                            var coords = {
+                            return 'point active-' + view.quadrantCoord({
                                 x: (n * xRange) + xc,
                                 y: (n * yRange) + yc
-                            };
-                            var foo = 'point active-' + view.quadrantCoord(coords);
-                            return foo;
+                            });
                         };
                     }
                 }
@@ -182,6 +179,8 @@ view = views.Main.extend({
     },
     quadrantCoord: function(data) {
         // Determine which quadrant to highlight, base on Coords.
+        // TODO it's unfortuate that we've got these two quad calcuation
+        //      functions, we should be able to consolidate.
         var quad = (data.y > vulnerabilityToY(0.31) ? 't' : 'b');
         quad += (data.x > readinessToX(0.52) ? 'r' : 'l');
         return quad;
