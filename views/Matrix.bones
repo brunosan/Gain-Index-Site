@@ -3,6 +3,7 @@ view = views.Main.extend({
         'click ul.year-selector li a': 'yearSelect',
         'click a.play-button': 'yearsGo',
         'click div.point': 'pointSelect',
+        'click .active-countries span.country': 'removeCountry'
     },
     render: function() {
         $(this.el).empty().append(templates.Cabinet({klass: 'matrix'}));
@@ -131,6 +132,19 @@ view = views.Main.extend({
             $(ev.currentTarget).addClass('active');
             $('.active-countries', this.el).append(templates.MatrixPoint(data));
         }
+        ev.preventDefault();
+    },
+    removeCountry: function(ev) {
+        var elem = $(ev.currentTarget);
+        _(elem.attr('class').split(' ')).each(function(v) {
+            if (v.slice(0,8) === 'country-') {
+                var iso = v.slice(8);
+                elem.remove();
+                $('.graph .country-'+iso, this.el)
+                    .parents('.point.active')
+                    .removeClass('active');
+            }
+        });
         ev.preventDefault();
     }
 });
