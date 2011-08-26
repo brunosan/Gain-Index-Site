@@ -1420,16 +1420,16 @@ background: url('../images/sprite.png') 271px -412px;
     .big-matrix .graph div.point.active {
       background-color: red;
       }
-    .big-matrix .graph div.point .label {
+    .big-matrix .graph div.point .country{
       position: relative;
       }
-      .big-matrix .graph div.point .label {
+      .big-matrix .graph div.point .country {
         position:absolute;
         bottom: 15px;
         left: -10px;
         display: none;
         }
-      .big-matrix .graph div.point:hover .label {
+      .big-matrix .graph div.point:hover .country {
         display: block;
         padding: 0px 5px;
         background: #fff;
@@ -1484,8 +1484,32 @@ background: url('../images/sprite.png') 271px -412px;
   line-height: 30px;
   }
 
-.gapminder,
 .country-selector {
+  float: left;
+  background-color: #ebebeb;
+  padding: 15px;
+  width: 610px;
+  }
+
+.country-selector .active-countries {
+  float: left;
+  padding: 10px 0px;
+  }
+.country-selector .active-countries span.country {
+  display: block;
+  float: left;
+  margin: 0px 10px 10px 0px;
+  padding: 0px 20px 0px 5px;
+  line-height: 30px;
+  background: #a8a8a8;
+  }
+  .country-selector .active-countries span.country a {
+    color: #fff;
+    }
+
+.gapminder {
+  border-top: 1px solid #c6c6c6;
+  clear: left;
   background-color: #ebebeb;
   padding: 15px;
   }

@@ -123,6 +123,14 @@ view = views.Main.extend({
         return false;
     },
     pointSelect: function(ev) {
-        $(ev.currentTarget).toggleClass('active');
+        var data = ev.currentTarget.__data__;
+        if ($('.active-countries .country-'+ data.iso, this.el).length) {
+            $('.active-countries .country-'+ data.iso, this.el).remove();
+            $(ev.currentTarget).removeClass('active');
+        } else {
+            $(ev.currentTarget).addClass('active');
+            $('.active-countries', this.el).append(templates.MatrixPoint(data));
+        }
+        ev.preventDefault();
     }
 });

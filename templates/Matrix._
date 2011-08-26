@@ -10,8 +10,10 @@
   </div>
 </div>
 <div class='country-selector'>
-  <input type='textfield' class='textfield' value='Add country to highlight' />
-  <input type='button' class='button' value="Add" />
+  <div>
+    <input type='textfield' class='textfield' value='Add country to highlight' />
+    <input type='button' class='button' value="Add" />
+  </div>
   <div class='active-countries'></div>
 </div>
 <div class='gapminder'>
