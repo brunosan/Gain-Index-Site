@@ -14,8 +14,10 @@ view = views.Main.extend({
     events: {
         'click ul.year-selector li a': 'yearSelect',
         'click a.play-button': 'yearsGo',
+        'click div.point span.country': 'openDrawer',
+        'click .drawer .handle a.handle': 'closeDrawer',
         'click div.point': 'pointSelect',
-        'click .active-countries span.country': 'removeCountry'
+        'click .active-countries span.country': 'removeCountry',
     },
     render: function() {
         $(this.el).empty().append(templates.Cabinet({klass: 'matrix'}));
@@ -200,5 +202,26 @@ view = views.Main.extend({
             }
         });
         ev.preventDefault();
+    },
+    openDrawer: function(ev) {
+        var elem = $(ev.currentTarget);
+        _(elem.attr('class').split(' ')).each(function(v) {
+            if (v.slice(0,8) === 'country-') {
+                var iso3 = v.slice(8);
+                new views.CountryDetailDrawer({
+                    el: $('.drawer', this.el),
+                    model:new models.Country({id: iso3}),
+                    indicator: new models.Indicator({id: 'gain'})
+                });
+                $('.drawer', this.el).addClass('open');
+            }
+        });
+        return false;
+
+    },
+    closeDrawer: function() {
+        $('.drawer', this.el).removeClass('open');
+        return false;
     }
+
 });
