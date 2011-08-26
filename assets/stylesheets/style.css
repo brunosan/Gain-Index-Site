@@ -1082,6 +1082,13 @@ table.data tbody tr.active:hover {
 .country-profile .rankings {
   background-color: #ebebeb;
   }
+  
+  div.bottomscorelabel {
+    float: right;
+    text-indent: 15px;
+    background: url('../images/sprite.png') 0px -890px no-repeat;
+}
+  
 .country-profile .rankings {
   padding: 0 0 20px 0px;
   font-size: 11px;
@@ -1455,7 +1462,7 @@ background: url('../images/sprite.png') 271px -412px;
   #about-nav-container a.nav-methodology {background-position: 10px -950px;}
   #about-nav-container a.nav-matrix {background-position: 10px -983px;}
   #about-nav-container a.nav-consultation {background-position: 10px -1017px;}
-  #about-nav-container a.nav-reference {background-position: 10px -1017px;}
+  #about-nav-container a.nav-reference {background-position: 10px -1087px;}
   #about-nav-container a.nav-download {background-position: 10px -1052px;}
 
   #about-nav-container a:active,
