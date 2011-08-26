@@ -25,14 +25,14 @@
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
      inkscape:zoom="1"
-     inkscape:cx="187.46903"
-     inkscape:cy="-890.29547"
+     inkscape:cx="365.85829"
+     inkscape:cy="9.6604994"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
      inkscape:window-width="1280"
      inkscape:window-height="703"
-     inkscape:window-x="-87"
+     inkscape:window-x="141"
      inkscape:window-y="0"
      inkscape:window-maximized="0"
      fit-margin-top="0"
@@ -1456,18 +1456,26 @@
          style="fill:#55aa22;fill-opacity:1" />
     </g>
     <path
-       style="color:#000000;fill:#ff6d67;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
-       d="m 6.5,812.36217 -6.5,10.99999 13,0 -6.5,-10.99999 z m -0.5,2.99999 1,0 0,4 -1,0 0,-4 z m 0,5 1,0 0,1 -1,0 0,-1 z"
-       id="path8763"
-       inkscape:connector-curvature="0"
-       inkscape:export-filename="/Users/saman/Dropbox/work_repos/gai-gain/assets/images/sprite.png"
-       inkscape:export-xdpi="90"
-       inkscape:export-ydpi="90" />
-    <path
        style="color:#000000;fill:#434343;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
        d="m 4,982.36217 7,0 0,8.00002 3,-2e-5 -6.5,7.00002 -6.5,-7.00002 3,2e-5 z"
        id="path8463-5"
        inkscape:connector-curvature="0"
-       sodipodi:nodetypes="cccccccc" />
+       sodipodi:nodetypes="cccccccc"
+       inkscape:export-filename="/Users/saman/Dropbox/work_repos/gai-gain/assets/images/sprite.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       sodipodi:type="arc"
+       style="color:#000000;fill:#ff6d67;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       id="path9980"
+       sodipodi:cx="-11.5"
+       sodipodi:cy="818.5"
+       sodipodi:rx="3.5"
+       sodipodi:ry="3.5"
+       d="m -8,818.5 a 3.5,3.5 0 1 1 -7,0 3.5,3.5 0 1 1 7,0 z"
+       transform="matrix(1.1428571,0,0,1.1428571,17.142856,-117.06636)"
+       inkscape:export-filename="/Users/saman/Dropbox/work_repos/gai-gain/assets/images/sprite.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
   </g>
 </svg>
