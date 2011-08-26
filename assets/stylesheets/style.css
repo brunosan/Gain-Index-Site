@@ -1272,11 +1272,14 @@ table.data tbody tr.active:hover {
   border-top: 1px solid #ccc;
   padding-top: 15px;
   padding-bottom: 15px;
+  height: 80px;
   }
   .floor .correction-control p {
     font-style: italic;
     }
   .floor .correction-control a {
+    position: absolute;
+    bottom: 20px;
     padding: 10px;
     line-height: 10px;
     color: #fff;
