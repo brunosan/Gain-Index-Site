@@ -902,7 +902,6 @@ table.data tbody tr {
  */
 .download-page {
   background-color: white;
-  width: 640px;
   float: left;
 }
 
@@ -1272,11 +1271,14 @@ table.data tbody tr.active:hover {
   border-top: 1px solid #ccc;
   padding-top: 15px;
   padding-bottom: 15px;
+  height: 80px;
   }
   .floor .correction-control p {
     font-style: italic;
     }
   .floor .correction-control a {
+    position: absolute;
+    bottom: 20px;
     padding: 10px;
     line-height: 10px;
     color: #fff;
@@ -1578,6 +1580,7 @@ background: url('../images/sprite.png') 271px -412px;
   #about-nav-container a.nav-methodology {background-position: 10px -950px;}
   #about-nav-container a.nav-matrix {background-position: 10px -983px;}
   #about-nav-container a.nav-consultation {background-position: 10px -1017px;}
+  #about-nav-container a.nav-reference {background-position: 10px -1017px;}
   #about-nav-container a.nav-download {background-position: 10px -1052px;}
 
   #about-nav-container a:active,
