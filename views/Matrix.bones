@@ -38,10 +38,12 @@ view = views.Main.extend({
                     }
 
                     if (map[y][iso] == undefined) {
-                        // TODO probably want more than just iso...
                         var item = {
-                            iso: iso
+                            iso: iso,
+                            name: v.get('country')
                         };
+                        item[series] = d; // format?
+
                         map[y][iso] = item;
                         data[y].push(item);
                     }
@@ -62,7 +64,7 @@ view = views.Main.extend({
             });
         });
 
-        // TODO filter out countries without both axis.
+        // Filter out countries without both axis.
         _(data).each(function(val, k) {
             data[k] = _(val).reject(function(v) {
                 return (v.x == undefined || v.y == undefined);
@@ -101,6 +103,7 @@ view = views.Main.extend({
             }).transition().duration(500)
             .style('bottom', function(d) { return d.y + 'px'; })
             .style('left', function(d) { return d.x + 'px'; });
+            // TODO add a class based on quadrant...
     }, 
     yearSelect: function(ev) {
         var year = $(ev.currentTarget).text();
