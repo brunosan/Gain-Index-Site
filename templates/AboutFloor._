@@ -7,6 +7,7 @@
       <li><a class='nav-matrix button' href='/about/matrix'> Matrix </a></li>
       <li><a class='nav-consultation button' href='/about/consultation'> Consultation </a></li>
       <li><a class='nav-download button' href='/download'> Download Data</a></li>
+      <li><a class='nav-reference button' href='/about/reference'> Reference </a></li>
     </ul>
   </div>
 </div>
