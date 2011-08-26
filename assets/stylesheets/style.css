@@ -1419,6 +1419,7 @@ background: url('../images/sprite.png') 271px -412px;
     }
     .big-matrix .graph div.point.active {
       background-color: red;
+      z-index: 1;
       }
     .big-matrix .graph div.point .country{
       position: relative;
@@ -1434,7 +1435,7 @@ background: url('../images/sprite.png') 271px -412px;
         padding: 0px 5px;
         background: #fff;
         border: 2px solid #ebebeb;
-        z-index: 1;
+        z-index: 2;
         }
 
 .big-matrix div.year-controls {
