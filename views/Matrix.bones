@@ -1,7 +1,8 @@
 view = views.Main.extend({
     events: {
         'click ul.year-selector li a': 'yearSelect',
-        'click a.play-button': 'yearsGo'
+        'click a.play-button': 'yearsGo',
+        'click div.point': 'pointSelect',
     },
     render: function() {
         $(this.el).empty().append(templates.Cabinet({klass: 'matrix'}));
@@ -78,7 +79,7 @@ view = views.Main.extend({
             });
 
         chart.enter().append("div")
-            .text(function(d) { return d.iso; })
+            .html(function(d) { return templates.MatrixPoint(d); })
             .attr('class', 'point')
             .style('bottom', function(d) { return d.y + 'px'; })
             .style('left', function(d) { return d.x + 'px'; });
@@ -120,5 +121,8 @@ view = views.Main.extend({
         }
         _(actions).reduceRight(_.wrap, function(){ console.log('done')})();
         return false;
+    },
+    pointSelect: function(ev) {
+        $(ev.currentTarget).toggleClass('active');
     }
 });

@@ -1416,8 +1416,26 @@ background: url('../images/sprite.png') 271px -412px;
     moz-border-radius: 8px;
     webkit-border-radius: 8px;
     background-color: #ccc;
-    text-indent: -9999px;
     }
+    .big-matrix .graph div.point.active {
+      background-color: red;
+      }
+    .big-matrix .graph div.point .label {
+      position: relative;
+      }
+      .big-matrix .graph div.point .label {
+        position:absolute;
+        bottom: 15px;
+        left: -10px;
+        display: none;
+        }
+      .big-matrix .graph div.point:hover .label {
+        display: block;
+        padding: 0px 5px;
+        background: #fff;
+        border: 2px solid #ebebeb;
+        z-index: 1;
+        }
 
 .big-matrix div.year-controls {
   float:left;
@@ -1447,6 +1465,24 @@ background: url('../images/sprite.png') 271px -412px;
   .big-matrix ul.year-selector li a.active {
     background: #000;
     }
+
+.country-selector input.textfield {
+  background: url('../images/sprite.png') 5px -627px no-repeat;
+  background-color: #fff;
+  padding-left: 25px;
+  line-height: 30px;
+  width: 210px;
+  -moz-box-shadow: inset 0px 0px 4px #000;
+  -webkit-box-shadow: inset 0px 0px 4px #000;
+  box-shadow: inset 0px 0px 4px #000;
+  }
+
+.country-selector input.button {
+  margin-left: 10px;
+  padding: 0px 10px;
+  background-color: #fff;
+  line-height: 30px;
+  }
 
 .gapminder,
 .country-selector {
