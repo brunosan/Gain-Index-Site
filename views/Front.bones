@@ -212,12 +212,15 @@ view = views.Main.extend({
             delete this.noDrawer;
             return;
         }
+
+        var view = this;
+
         new views.CountryDetailDrawer({
             el: $('.drawer', this.el),
             model:new models.Country({id: iso3}),
-            indicator: new models.Indicator({id: this.map.get('indicator')})
+            indicator: new models.Indicator({id: this.map.get('indicator')}),
+            callback: function() { $('.drawer', view.el).addClass('open'); }
         });
-        $('.drawer', this.el).addClass('open');
     },
     closeDrawer: function() {
         $('.drawer', this.el).removeClass('open');

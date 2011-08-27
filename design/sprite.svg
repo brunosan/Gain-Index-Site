@@ -25,8 +25,8 @@
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
      inkscape:zoom="1"
-     inkscape:cx="365.85829"
-     inkscape:cy="9.6604994"
+     inkscape:cx="386.68565"
+     inkscape:cy="158.08565"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -1269,17 +1269,10 @@
          style="display:inline"
          transform="translate(-646.57969,-1287.2764)">
         <path
-           sodipodi:nodetypes="cc"
-           inkscape:connector-curvature="0"
-           id="path8802-4-9"
-           d="m 670,1472 5,5"
-           style="color:#000000;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#a8a8a8;stroke-width:2;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
-        <path
-           id="path8800-3-3"
-           transform="translate(646.57969,1289.6386)"
-           d="m 20.40625,173.375 c -3.313708,0 -6,2.68629 -6,6 0,3.31371 2.686292,6 6,6 3.313708,0 6,-2.68629 6,-6 0,-3.31371 -2.686292,-6 -6,-6 z m 0,2 c 2.209139,0 4,1.79086 4,4 0,2.20914 -1.790861,4 -4,4 -2.209139,0 -4,-1.79086 -4,-4 0,-2.20914 1.790861,-4 4,-4 z"
-           style="color:#000000;fill:#a8a8a8;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
-           inkscape:connector-curvature="0" />
+           style="font-size:medium;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:start;text-decoration:none;line-height:normal;letter-spacing:normal;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:start;baseline-shift:baseline;color:#000000;fill:#a8a8a8;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:2;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Sans;-inkscape-font-specification:Sans"
+           d="M 6 550 C 2.686292 550 0 552.68629 0 556 C 0 559.31371 2.686292 562 6 562 C 7.2893293 562 8.4594178 561.56708 9.4375 560.875 L 13.28125 564.71875 L 14.71875 563.28125 L 10.875 559.4375 C 11.567082 558.45942 12 557.28933 12 556 C 12 552.68629 9.313708 550 6 550 z M 6 552 C 8.209139 552 10 553.79086 10 556 C 10 558.20914 8.209139 560 6 560 C 3.790861 560 2 558.20914 2 556 C 2 553.79086 3.790861 552 6 552 z "
+           transform="translate(660.98594,913.01361)"
+           id="path8802-4-9" />
       </g>
     </g>
     <g
@@ -1474,6 +1467,14 @@
        sodipodi:ry="3.5"
        d="m -8,818.5 a 3.5,3.5 0 1 1 -7,0 3.5,3.5 0 1 1 7,0 z"
        transform="matrix(1.1428571,0,0,1.1428571,17.142856,-117.06636)"
+       inkscape:export-filename="/Users/saman/Dropbox/work_repos/gai-gain/assets/images/sprite.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       inkscape:connector-curvature="0"
+       style="font-size:medium;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:start;text-decoration:none;line-height:normal;letter-spacing:normal;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:start;baseline-shift:baseline;color:#000000;fill:#444444;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:2;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Sans;-inkscape-font-specification:Sans"
+       d="m 6,1017.3622 c -3.313708,0 -6,2.6863 -6,6 0,3.3137 2.686292,6 6,6 1.289329,0 2.459417,-0.4329 3.4375,-1.125 l 3.84375,3.8437 1.4375,-1.4375 -3.84375,-3.8437 c 0.692082,-0.9781 1.125,-2.1482 1.125,-3.4375 0,-3.3137 -2.686292,-6 -6,-6 z m 0,2 c 2.209139,0 4,1.7908 4,4 0,2.2091 -1.790861,4 -4,4 -2.209139,0 -4,-1.7909 -4,-4 0,-2.2092 1.790861,-4 4,-4 z"
+       id="path8802-4-9-2"
        inkscape:export-filename="/Users/saman/Dropbox/work_repos/gai-gain/assets/images/sprite.png"
        inkscape:export-xdpi="90"
        inkscape:export-ydpi="90" />

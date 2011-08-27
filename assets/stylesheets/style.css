@@ -433,8 +433,8 @@ ul.tabs li a.active {
   width: 300px;
   padding-bottom: 20px;
   background: #fff;
-  -moz-border-radius: 4px 4px 0px 0px;
-  -webkit-border-radius: 4px 4px 0px 0px;
+  -moz-border-radius: 0px 4px 0px 0px;
+  -webkit-border-radius: 4px 0px 0px 0px;
   }
   #feedbacktab .content p { padding: 10px 10px 5px 10px; }
 
@@ -442,6 +442,7 @@ ul.tabs li a.active {
 #feedbacktab .button.green {
   float: right;
   padding: 0 15px 0 15px;
+  margin-right: 0;
   width: 50px;
   margin-top: 0;
   line-height: 30px;
@@ -1082,6 +1083,13 @@ table.data tbody tr.active:hover {
 .country-profile .rankings {
   background-color: #ebebeb;
   }
+  
+  div.bottomscorelabel {
+    float: right;
+    text-indent: 15px;
+    background: url('../images/sprite.png') 0px -890px no-repeat;
+}
+  
 .country-profile .rankings {
   padding: 0 0 20px 0px;
   font-size: 11px;
@@ -1582,7 +1590,7 @@ background: url('../images/sprite.png') 271px -412px;
   #about-nav-container a.nav-methodology {background-position: 10px -950px;}
   #about-nav-container a.nav-matrix {background-position: 10px -983px;}
   #about-nav-container a.nav-consultation {background-position: 10px -1017px;}
-  #about-nav-container a.nav-reference {background-position: 10px -1017px;}
+  #about-nav-container a.nav-reference {background-position: 10px -1087px;}
   #about-nav-container a.nav-download {background-position: 10px -1052px;}
 
   #about-nav-container a:active,
