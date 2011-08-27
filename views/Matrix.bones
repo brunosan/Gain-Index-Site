@@ -204,16 +204,18 @@ view = views.Main.extend({
         ev.preventDefault();
     },
     openDrawer: function(ev) {
-        var elem = $(ev.currentTarget);
+        var view = this,
+            elem = $(ev.currentTarget);
+
         _(elem.attr('class').split(' ')).each(function(v) {
             if (v.slice(0,8) === 'country-') {
                 var iso3 = v.slice(8);
                 new views.CountryDetailDrawer({
                     el: $('.drawer', this.el),
                     model:new models.Country({id: iso3}),
-                    indicator: new models.Indicator({id: 'gain'})
+                    indicator: new models.Indicator({id: 'gain'}),
+                    callback: function() { $('.drawer', view.el).addClass('open');}
                 });
-                $('.drawer', this.el).addClass('open');
             }
         });
         return false;
