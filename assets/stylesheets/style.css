@@ -1438,16 +1438,26 @@ background: url('../images/sprite.png') 271px -412px;
       }
       .big-matrix .graph div.point .country {
         position:absolute;
-        bottom: 15px;
-        left: -10px;
+        top: 10px;
+        left: -50px;
         display: none;
         }
       .big-matrix .graph div.point:hover .country {
         display: block;
+        width: 100px;
         padding: 0px 5px;
         background: #fff;
         border: 2px solid #ebebeb;
-        z-index: 2;
+        z-index: 200;
+        }
+
+      .big-matrix .graph div.point .country ul {
+        border-top: 1px solid #ebebeb;
+        padding: 0px;
+        }
+      .big-matrix .graph div.point .country ul li {
+        font-style: italic;
+        font-size: 10px;
         }
 
 .big-matrix div.year-controls {

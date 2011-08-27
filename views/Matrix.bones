@@ -63,6 +63,7 @@ view = views.Main.extend({
 
                     // And the original data.
                     map[y][iso][series] = d;
+                    map[y][iso][series +'_display'] = v.score({year: y});
                 })
             });
         });
@@ -167,7 +168,7 @@ view = views.Main.extend({
         } else {
             var quad = this.quadrant(data);
             $(ev.currentTarget).addClass('active-' + quad);
-            $('.active-countries', this.el).append(templates.MatrixPoint(data));
+            $('.active-countries', this.el).append(templates.CountryOption(data));
         }
         ev.preventDefault();
     },
