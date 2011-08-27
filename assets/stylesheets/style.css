@@ -1413,6 +1413,7 @@ background: url('../images/sprite.png') 271px -412px;
     width: 580px;
     height: 410px;
     margin-left: 60px;
+    margin-bottom: 30px;
     border-style: solid;
     border-color: #000;
     border-width: 0px 0px 1px 1px;
