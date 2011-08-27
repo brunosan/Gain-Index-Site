@@ -105,6 +105,7 @@ view = views.Main.extend({
         $('table.data tr').removeClass('active');
         $(ev.currentTarget).addClass('active');
 
+        var view = this;
         var meta = models.Country.meta;
         var id = $(ev.currentTarget).attr('id').substr(8);
 
@@ -113,10 +114,10 @@ view = views.Main.extend({
         new views.CountryDetailDrawer({
             el: $('.drawer', this.el),
             model:new models.Country({id: id}),
-            indicator: this.model.get('subject')
+            indicator: this.model.get('subject'),
+            callback: function() { $('.drawer', view.el).addClass('open');}
         });
 
-        $('.drawer', this.el).addClass('open');
         this.positionDrawer('drawer');
         return false;
     },

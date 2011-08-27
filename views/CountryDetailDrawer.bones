@@ -3,22 +3,22 @@ view = Backbone.View.extend({
         // The country is passed in as `model` and automagically attached to
         // our view, but we need to manually tack on the indictor.
         this.indicator = options.indicator;
-        this.render();
+        this.render(options.callback);
     },
-    render: function() {
+    render: function(callback) {
         var view = this,
             meta = models.Country.meta;
             options = {};
 
-        $('.content', this.el).empty().append(templates.CountryDetailDrawer({
-            countryName: meta[this.model.id].name,
-            indicatorName: this.indicator.meta('name'),
-            countryId: this.model.id
-        }));
-
         this.model.fetch({
             success: function(model) {
+                $('.content', view.el).empty().append(templates.CountryDetailDrawer({
+                    countryName: meta[model.id].name,
+                    indicatorName: view.indicator.meta('name'),
+                    countryId: model.id
+                }));
                 view.attach();
+                if (typeof(callback) == 'function') callback();
             }
         });
         return this;
