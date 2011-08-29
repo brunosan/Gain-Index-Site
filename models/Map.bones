@@ -1,6 +1,6 @@
-
-
 // Map
+// Apologies are due here. This 'model' is very tightly tied to the DOM which
+// renders the map. It needs to be refactors into a view and model.
 // -------
 model = Backbone.Model.extend({
     initialize: function(attr, options) {
@@ -10,18 +10,27 @@ model = Backbone.Model.extend({
 
         // Setup the map and add it to the model.
         // NOTE: the maps default element, width and height, etc.. can be overridden.
-        var elem = options.el || 'map',
+        var el = options.el || document.getElementById('map'),
             width = options.width || 640,
             height = options.height || 490,
             lat = options.lat || 35,
             lon = options.lon || -8,
             z = options.z || 2;
 
+        this.el = el; // Sorry mom!
+
         var mm = com.modestmaps,
             tilejson = this.tilejson();
 
-        var m = new mm.Map(elem, new wax.mm.connector(tilejson), new mm.Point(width, height));
-        this.set({map: m}, {silent: true});
+        var mapEl= $("<div></div>").addClass('map');
+        $(el).append(mapEl);
+
+        var m = new mm.Map(mapEl[0], new wax.mm.connector(tilejson), new mm.Point(width, height));
+        this.set({
+            width: width,
+            height: height
+        }, {silent: true});
+        this.m = m; // Not using set/get to avoid needless comparisons;
 
         // Add fullscreen laters...
         //wax.mm.fullscreen(m, tilejson).appendTo(m.parent);
@@ -55,11 +64,35 @@ model = Backbone.Model.extend({
         };
     },
     updateMap: function() {
-        var tilejson = this.tilejson();
-            m = this.get('map');
+        var mm = com.modestmaps,
+            tilejson = this.tilejson(),
+            coord = this.m.coordinate;
+            el = this.el,
+            width = this.get('width'),
+            height = this.get('height');
 
+        // Mark existing map div for removal.
+        var ind = this.get('indicator'),
+            y = this.get('year');
+        $('.map', el).addClass('obsolete-'+ind+y);
+
+        // Add new element
+        mapEl= $("<div></div>").addClass('map');
+        $('.map:last', el).after(mapEl);
+
+        // Setup new map in new div.
+        var m = new mm.Map(mapEl[0], new wax.mm.connector(tilejson), new mm.Point(width, height));
+        this.m = m;
         wax.mm.interaction(m, tilejson, {callbacks: this.tooltip});
-        m.setProvider(new wax.mm.connector(tilejson));
+        m.coordinate = coord;
+
+        // Once it's drawn, remove the old elements.
+        var cleanUp =  function() { 
+            setTimeout(function(){$('.obsolete-'+ind+y, el).remove();}, 5000);
+            m.removeCallback('drawn', cleanUp);
+        }
+        m.addCallback('drawn', cleanUp);
+        m.draw();
     },
     featureHover: function(options, data) {
         var inlineData= '',

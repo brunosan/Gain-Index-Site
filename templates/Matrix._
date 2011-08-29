@@ -1,4 +1,5 @@
 <div class='big-matrix'>
+  <div class='tooltip'></div>
   <div class='graph'></div>
   <div class='year-controls'>
     <a href='#play' class='play-button'>Play</a>

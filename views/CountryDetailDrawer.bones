@@ -10,6 +10,10 @@ view = Backbone.View.extend({
             meta = models.Country.meta;
             options = {};
 
+        if ($(this.el).hasClass('open')) {
+            $(this.el).addClass('updating');
+        }
+
         this.model.fetch({
             success: function(model) {
                 $('.content', view.el).empty().append(templates.CountryDetailDrawer({
@@ -18,6 +22,10 @@ view = Backbone.View.extend({
                     countryId: model.id
                 }));
                 view.attach();
+
+                $(view.el).removeClass('updating');
+                // if this is always used for the 'open' class we should just
+                // include that here...
                 if (typeof(callback) == 'function') callback();
             }
         });

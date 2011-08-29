@@ -10,14 +10,18 @@ var vulnerabilityToY= function(d) {
     return Math.round((d / 0.6) * 410);
 };
 
+var openTooltips = 0;
+
 view = views.Main.extend({
     events: {
         'click ul.year-selector li a': 'yearSelect',
         'click a.play-button': 'yearsGo',
-        'click div.point span.country': 'openDrawer',
         'click .drawer .handle a.handle': 'closeDrawer',
         'click div.point': 'pointSelect',
-        'click .active-countries span.country': 'removeCountry',
+        'click .active-countries span.country a.remove': 'removeCountry',
+        'click .active-countries span.country a.more': 'openDrawer',
+        'mouseenter div.point': 'pointHover',
+        'mouseleave div.point': 'pointUnhover'
     },
     render: function() {
         $(this.el).empty().append(templates.Cabinet({klass: 'matrix'}));
@@ -63,7 +67,6 @@ view = views.Main.extend({
 
                     // And the original data.
                     map[y][iso][series] = d;
-                    map[y][iso][series +'_display'] = v.score({year: y});
                 })
             });
         });
@@ -189,7 +192,7 @@ view = views.Main.extend({
         return quad;
     },
     removeCountry: function(ev) {
-        var elem = $(ev.currentTarget);
+        var elem = $(ev.currentTarget).parents('span:first');
         _(elem.attr('class').split(' ')).each(function(v) {
             if (v.slice(0,8) === 'country-') {
                 var iso = v.slice(8);
@@ -206,7 +209,7 @@ view = views.Main.extend({
     },
     openDrawer: function(ev) {
         var view = this,
-            elem = $(ev.currentTarget);
+            elem = $(ev.currentTarget).parents('span:first');
 
         _(elem.attr('class').split(' ')).each(function(v) {
             if (v.slice(0,8) === 'country-') {
@@ -225,6 +228,16 @@ view = views.Main.extend({
     closeDrawer: function() {
         $('.drawer', this.el).removeClass('open');
         return false;
+    },
+    pointHover: function(ev) {
+        openTooltips++;
+        $('.tooltip', this.el).empty().append($(ev.currentTarget).html());
+    },
+    pointUnhover: function(ev) {
+        // Decrement our count, dont' fall below 0.
+        openTooltips > 0 && openTooltips--;
+
+        if (openTooltips == 0) $('.tooltip', this.el).empty();
     }
 
 });

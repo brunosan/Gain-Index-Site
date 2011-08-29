@@ -1,0 +1,1 @@
+<span class='country country-<%= iso %>'><a title="More information" href='#more' class='more'><%= name %></a><a href='#remove' class='remove'>Remove</a></span>

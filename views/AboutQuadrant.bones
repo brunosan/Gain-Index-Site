@@ -15,6 +15,10 @@ view = Backbone.View.extend({
 
             data[m.get('name')] = m;
         });
+
+        // If we failed to load any data, we won't have a country, and should
+        // bother rendering anything.
+        if (!country) return;
         
         _.each(['gain', 'readiness', 'vulnerability'], function(k) {
             var value = false;
@@ -44,7 +48,6 @@ view = Backbone.View.extend({
 
             template = template + coords.join('');
         }
-
 
         // Description text based on quadrant.
         $(this.el).empty().append(templates[template]({
