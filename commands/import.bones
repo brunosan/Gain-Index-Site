@@ -129,7 +129,7 @@ command.prototype.initialize = function(options) {
                         .pluck(year)
                         .without(null, undefined)
                         .uniq() // multiple countries can share the same rank
-                        .sort()
+                        .sortBy(parseFloat)
                         .value() || [];
                     return memo;
                 }, {});
