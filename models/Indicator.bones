@@ -26,6 +26,7 @@ model = Backbone.Model.extend({
         var diff = this.score() - this.score({year: this.get('currentYear') - 1});
         if (diff >= 0.5) return 'up';
         if (diff <= -0.5) return 'down';
+        if (_.isNaN(diff)) return 'undefined'
         return 'same';
     },
     input: function(options) {
@@ -915,7 +916,8 @@ model.meta = {
     "gain": {
         "id": "gain",
         "name": "GaIn™",
-        "description": "The Global Adaptation Index™ (GaIn™) exposes countries' vulnerabilities to climate change and opportunities to improve resilience. It aims to help businesses and the public sector to better prioritize investments for a more efficient response to the immediate global challenges ahead.",
+        "description": "The Global Adaptation Index™ (GaIn™) summarizes a country's Vulnerability to climate change and its Readiness to improve resilience.",
+        "description_long": "The Global Adaptation Index™ (GaIn™) exposes countries' vulnerabilities to climate change and opportunities to improve resilience. It aims to help businesses and the public sector to better prioritize investments for a more efficient response to the immediate global challenges ahead.",
         "format": "number",
         "decimals": "1",
         "unit": null,

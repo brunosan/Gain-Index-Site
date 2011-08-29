@@ -663,19 +663,15 @@ table.data tbody tr {
     .country-summary div.chart .mini-matrix {
       margin: 15px 0px 0px 10px;
       }
-  .country-summary div.vulnerability {
+  .country-summary .indicator {
     text-align: center;
-    font-size: 12px;
-    line-height: 25px;
+    line-height: 27px;
+    }
+  .country-summary #indicator-vulnerability {
     border-color: #c6c6c6;
     border-style: solid;
     border-width: 1px 0px 1px 0px;
-    }
-  .country-summary div.readiness {
-    text-align: center;
-    line-height: 25px;
-    height: 20px;
-    width: 125px;
+    line-height: 26px;
     }
 /**
  * Small Matrix
@@ -1042,6 +1038,11 @@ table.data tbody tr.active:hover {
  font-size: 48px;
  line-height: 42px;
 }
+.country-profile .country-summary .gain:hover,
+.country-profile .country-summary .indicator:hover {
+  cursor: pointer;
+  background-color: #F5F5F5;
+  }
 
 .country-summary div.gain {
  padding-top: 35px;
@@ -1638,8 +1639,14 @@ background: url('../images/sprite.png') 271px -412px;
 
   #about-nav-container a.active:hover {
     background-color: #fff;
-  }
-
+    }
+    
+h3#overviewdiagram{
+ background: url('../images/about_illustration.png') center no-repeat;
+ height: 130px;
+ text-indent: -9999px;
+ }
+ 
 /*** Error Page ***/
 .error-page {
   padding-top: 150px;
