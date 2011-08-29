@@ -34,6 +34,7 @@ view = views.Main.extend({
         return this;
     },
     attach: function() {
+        views.Main.prototype.attach.call(this);
         var view = this,
             data = {};
             map = {};

@@ -51,6 +51,7 @@ view = views.Main.extend({
         return this;
     },
     attach: function() {
+        views.Main.prototype.attach.call(this);
         var indicator = 'gain',
             year = 2010,
             view = this;
