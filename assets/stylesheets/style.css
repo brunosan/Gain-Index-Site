@@ -742,6 +742,40 @@ table.data tbody tr {
     top: 0px;
     left: 0px;
     }
+
+  .front #map .zoom-control {
+    position: absolute;
+    top: 50px;
+    left: 10px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    background-color: rgba(100, 100, 100, 0.7);
+    }
+    .front #map .zoom-control a {
+      float: left;
+      line-height: 25px;
+      padding: 0px 10px;
+      color: #fff;
+      }
+
+    .front #map .zoom-control a.zoomin {
+      border-right: 1px solid #666;
+      -webkit-border-radius: 4px 0px 0px 4px;
+      -moz-border-radius: 4px 0px 0px 4px;
+      border-radius: 4px 0px 0px 4px;
+      }
+   .front #map .zoom-control a.zoomout {
+      -webkit-border-radius: 4px 4px 4px 4px;
+      -moz-border-radius: 4px 4px 4px 4px;
+      border-radius: 4px 4px 4px 4px;
+      }
+
+    .front #map .zoom-control a:hover {
+      text-decoration: none;
+      background-color: #666;
+      }
+
   .front #map-indicators,
   .front #map-years {
     left: 10px;

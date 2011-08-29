@@ -55,7 +55,9 @@ view = views.Main.extend({
             year = 2010,
             view = this;
 
-        this.map = new models.Map({year: year, indicator: indicator});
+        this.map = new models.Map({ year: year, indicator: indicator},
+            {controls: ['interaction', 'zoomer']});
+
         this.map.featureClick = function(feature, context, index) {
             var iso = $(feature).data('iso');
             if (iso) {
