@@ -4,26 +4,6 @@ view = views.Main.extend({
         this.options = this.options || {};
         this.options.tab = options.index || 'vulnerability';
         this.options.structure = options.structure || 'sectors';
-
-        var tree = {};
-        _.each(this.collection.model.meta, function(field) {
-            if (field.index && tree[field.index] == undefined) {
-                tree[field.index] = {'components': {}, 'sectors': {}};
-            }
-            if (field.component) {
-                if (tree[field.index].components[field.component] == undefined) {
-                    tree[field.index].components[field.component] = [];
-                }
-                tree[field.index].components[field.component].push(field);
-            }
-            if (field.sector) {
-                if (tree[field.index].sectors[field.sector] == undefined) {
-                    tree[field.index].sectors[field.sector] = [];
-                }
-                tree[field.index].sectors[field.sector].push(field);
-            }
-        });
-        this.tree = tree;
     },
     render: function() {
         var that = this;
@@ -71,7 +51,7 @@ view = views.Main.extend({
             appendData(section, 'section');
             _.each(leaf, function(indicator) {
                 if (indicator.id != section) {
-                    appendData(indicator.id, 'data');
+                    appendData(indicator, 'data');
                 }
             });
         });
@@ -133,3 +113,112 @@ view = views.Main.extend({
         });
     }
 });
+
+
+view.prototype.tree = {
+    "readiness": {
+        "components": {
+            "economic": [
+                "business",
+                "finan",
+                "fiscal",
+                "gov_spend",
+                "invest",
+                "monetary",
+                "trade"
+            ],
+            "governance": [
+                "corruption",
+                "non_violence",
+                "voice_accountability"
+            ],
+            "social": [
+                "enrollment",
+                "labor",
+                "mobiles",
+                "rule_of_law"
+            ]
+        },
+        "sectors": {}
+    },
+    "vulnerability": {
+        "components": {
+            "exposure": [
+                "coast_area",
+                "d-Ppt",
+                "d-Temp",
+                "daly",
+                "energy_access",
+                "health_disease",
+                "road_floods",
+                "yield_cv",
+                "yld_proj"
+            ],
+            "sensitivity": [
+                "coast_popn",
+                "energy_sensit",
+                "external",
+                "imports",
+                "road_paved",
+                "rural_popn",
+                "staff",
+                "water_disease",
+                "water_use"
+            ],
+            "capacity": [
+                "food_capacity",
+                "life",
+                "malnutr",
+                "matern",
+                "sanit",
+                "water_access"
+            ]
+        },
+        "sectors": {
+            "food": [
+                "food_capacity",
+                "imports",
+                "malnutr",
+                "rural_popn",
+                "yield_cv",
+                "yld_proj"
+            ],
+            "water": [
+                "d-Ppt",
+                "d-Temp",
+                "sanit",
+                "water_access",
+                "water_disease",
+                "water_use"
+            ],
+            "health": [
+                "daly",
+                "external",
+                "health_disease",
+                "life",
+                "matern",
+                "staff"
+            ],
+            "infrastruct": [
+                "coast_area",
+                "coast_popn",
+                "energy_access",
+                "energy_sensit",
+                "road_floods",
+                "road_paved"
+            ]
+        }
+    },
+    "vulnerability_delta": {
+        "components": {},
+        "sectors": {}
+    },
+    "readiness_delta": {
+        "components": {},
+        "sectors": {}
+    },
+    "gain": {
+        "components": {},
+        "sectors": {}
+    }
+}
