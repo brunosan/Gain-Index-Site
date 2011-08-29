@@ -64,6 +64,7 @@ view = views.Main.extend({
         return this;
     },
     attach: function() {
+        views.Main.prototype.attach.call(this);
         var coords = (this.model.meta('coords'));
 
         this.map = new models.Map({year: 2010, indicator: 'gain'}, {

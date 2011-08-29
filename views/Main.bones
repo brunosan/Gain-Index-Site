@@ -6,6 +6,18 @@ view = Backbone.View.extend({
         !Bones.server && _.once(this.drawerEvents)();
     },
     attach: function() {
+        var mailto = $('.feedback-email')
+            .attr('href')
+            .split('?')
+            .shift();
+        var info = _.reduce({
+            'subject': 'GaIn - Site feedback',
+            'body': '\n\n\nSent from ' + window.location.href + '\n'
+        }, function(memo, v, k) {
+            memo += memo == '' ? '?' : '&';
+            return memo + k + '=' + encodeURIComponent(v);
+        }, '');
+        $('.feedback-email').attr('href', mailto + info);
         return this;
     },
     activeLinks: function() {
