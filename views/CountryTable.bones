@@ -9,12 +9,6 @@ view = views.Main.extend({
         var that = this;
         var lookup = {}, data = [];
 
-        // Build a look up table for the data.
-        // TODO move this to the collection.
-        this.collection.each(function(m) {
-            lookup[m.get('name')] = m;
-        });
-
         var branch = this.tree[this.options.tab][this.options.structure],
             meta = this.collection.model.meta
 
@@ -28,9 +22,10 @@ view = views.Main.extend({
                 normalized: null
             };
             var sector = {};
-            if (lookup[key] != undefined) {
-                field.input = lookup[key].input();
-                field.score = lookup[key].score();
+            var indicator = that.collection.byName(key);
+            if (indicator != undefined) {
+                field.input = indicator.input();
+                field.score = indicator.score();
             }
             // Create new hash to determine worst scores.
             scores[field.field.id] = {};
