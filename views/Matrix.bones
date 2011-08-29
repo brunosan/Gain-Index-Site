@@ -16,10 +16,10 @@ view = views.Main.extend({
     events: {
         'click ul.year-selector li a': 'yearSelect',
         'click a.play-button': 'yearsGo',
-        'click div.point span.country': 'openDrawer',
         'click .drawer .handle a.handle': 'closeDrawer',
         'click div.point': 'pointSelect',
-        'click .active-countries span.country': 'removeCountry',
+        'click .active-countries span.country a.remove': 'removeCountry',
+        'click .active-countries span.country a.more': 'openDrawer',
         'mouseenter div.point': 'pointHover',
         'mouseleave div.point': 'pointUnhover'
     },
@@ -192,7 +192,7 @@ view = views.Main.extend({
         return quad;
     },
     removeCountry: function(ev) {
-        var elem = $(ev.currentTarget);
+        var elem = $(ev.currentTarget).parents('span:first');
         _(elem.attr('class').split(' ')).each(function(v) {
             if (v.slice(0,8) === 'country-') {
                 var iso = v.slice(8);
@@ -209,7 +209,7 @@ view = views.Main.extend({
     },
     openDrawer: function(ev) {
         var view = this,
-            elem = $(ev.currentTarget);
+            elem = $(ev.currentTarget).parents('span:first');
 
         _(elem.attr('class').split(' ')).each(function(v) {
             if (v.slice(0,8) === 'country-') {
