@@ -1,4 +1,4 @@
-<div class='gain'>
+<div id='indicator-gain' class='gain'>
     <span class='name'><%= data.gain.name %></span>
     <span class='value'><%= data.gain.value %></span>
     <% if (data.gain.outlook) { %>
