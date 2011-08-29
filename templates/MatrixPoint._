@@ -1,7 +1,1 @@
-<span class='country country-<%= iso %>'>
-  <a href='#<%= iso %>'><%= name %></a>
-  <ul>
-    <li>Readiness <%= readiness_display %></li>
-    <li>Vulnerability <%= vulnerability_display %></li>
-  </ul>
-</span>
+<span class='country country-<%= iso %>'><%= name %></span>

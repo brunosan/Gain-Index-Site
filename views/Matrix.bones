@@ -10,6 +10,8 @@ var vulnerabilityToY= function(d) {
     return Math.round((d / 0.6) * 410);
 };
 
+var openTooltips = 0;
+
 view = views.Main.extend({
     events: {
         'click ul.year-selector li a': 'yearSelect',
@@ -18,6 +20,8 @@ view = views.Main.extend({
         'click .drawer .handle a.handle': 'closeDrawer',
         'click div.point': 'pointSelect',
         'click .active-countries span.country': 'removeCountry',
+        'mouseenter div.point': 'pointHover',
+        'mouseleave div.point': 'pointUnhover'
     },
     render: function() {
         $(this.el).empty().append(templates.Cabinet({klass: 'matrix'}));
@@ -63,7 +67,6 @@ view = views.Main.extend({
 
                     // And the original data.
                     map[y][iso][series] = d;
-                    map[y][iso][series +'_display'] = v.score({year: y});
                 })
             });
         });
@@ -225,6 +228,16 @@ view = views.Main.extend({
     closeDrawer: function() {
         $('.drawer', this.el).removeClass('open');
         return false;
+    },
+    pointHover: function(ev) {
+        openTooltips++;
+        $('.tooltip', this.el).empty().append($(ev.currentTarget).html());
+    },
+    pointUnhover: function(ev) {
+        // Decrement our count, dont' fall below 0.
+        openTooltips > 0 && openTooltips--;
+
+        if (openTooltips == 0) $('.tooltip', this.el).empty();
     }
 
 });
