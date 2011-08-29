@@ -1,0 +1,126 @@
+.limiter {
+  width: 960px;
+  margin: 0px auto;
+  }
+  
+body {
+color: black;
+background: white;
+}
+
+/*** Typography ***/
+@font-face {
+  font-family: 'AlternateGothicLTNo3Regular';
+  src: url('../fonts/alternate_gothic-webfont.eot');
+  src: url('../fonts/alternate_gothic-webfont.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/alternate_gothic-webfont.woff') format('woff'),
+    url('../fonts/alternate_gothic-webfont.ttf') format('truetype'),
+    url('../fonts/alternate_gothic-webfont.svg#AlternateGothicLTNo3Regular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  }
+
+/* Header styles */
+h1,h2,h3,h4,h5 {
+  font-family: 'AlternateGothicLTNo3Regular',"HelveticaNeueBoldCondensed", "HelveticaNeue-Bold-Condensed", "Arial Narrow", "Arial", sans-serif;
+  font-weight: 100;
+  color: black;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  clear: left;
+  } 
+h2 {
+  font-size: 28px;
+  border-bottom: #c6c6c6 1px solid;
+  margin-bottom: 15px;
+  }
+h3 {
+  font-size: 20px;
+  border-bottom: 1px solid #ebebeb;
+  margin-bottom: 15px;
+  }
+h4 {
+  font-weight: normal;
+  font-size: 18px;
+  }
+.drawer h4 {
+  font-family: 'HelveticaNeue', Helvetica, Arial, sans-serif;
+  font-style: italic;
+  font-size: 13px;
+  }
+
+p {
+  color: black;
+}
+a {
+color: black;
+text-decoration: none;
+}
+
+/* Header */
+  #header h1 a.logo {
+    display: block;
+    top:15px;
+    left: 10px;
+    text-indent: -9999px;
+    width: 80px;
+    height: 25px;
+    background: url('../images/print_sprite.png') 0px -50px no-repeat;
+    }
+    
+/* Tables */
+
+table.data {
+  width: 100%;
+  table-layout: fixed;
+  clear: left;
+  }
+table.data tr {
+  line-height: 25px;
+  }
+table.data thead tr {
+  text-align: left;
+  }
+table.data tbody tr {
+  border-bottom: 1px solid #ebebeb;
+  }
+
+/*** Outlook*/
+ 
+.icon-outlook {
+  height: 15px;
+  width: 15px;
+  text-indent: -9999px;
+  background-image: url('../images/sprite.png');
+  background-repeat: no-repeat;
+  }
+
+  .icon-outlook-up { background-position: 0px -430px; }
+  .icon-outlook-down { background-position: 0px -410px; }
+  .icon-outlook-same { background-position: 0px -389px; }
+
+  .country-summary div.gain .icon-outlook {
+      display: inline-block;
+      width: 15px;
+      height: 15px;
+      }
+      
+/*** Footer ***/
+#footer2 .limiter {
+margin-top: 15px;
+border-top: #c6c6c6 1px solid;
+}
+
+#address {
+margin-top: 15px;
+}
+  #address a {
+  font-weight: bold;}
+/****** Hidden ******/
+.navigation, #feedbacktab, #bonesAdmin { display: none;}
+
+#map-indicators, #map-years, .zoom-control { display: none;}
+
+.correction-control, .drawer {display: none;}
+
+#footer1{display: none;}

@@ -20,6 +20,9 @@
   <link rel='stylesheet' href='/assets/gain/stylesheets/style.css?<%= version %>' media='screen' />
   <link rel='stylesheet' href='/assets/gain/stylesheets/ui-lightness/jquery-ui-1.8.16.custom.css?<%= version %>' media='screen' />
   <link rel='stylesheet' href='/assets/bones-admin/style.css?<%= version %>' media='screen' />
+  <!--<link rel='stylesheet' href='/assets/gain/stylesheets/print.css?<%= version %>' media='screen' />-->
+  <link rel='stylesheet' href='/assets/gain/stylesheets/print.css?<%= version %>' media='print' />
+
 </head>
 <body>
   <div id='feedbacktab'>
@@ -40,7 +43,7 @@
       <li><a  class='matrix' href='/matrix'>Matrix</a></li>
       <li><a  class='about' href='/about'>About</a></li>
     </ul>
-    <div class='org'><a href='http://globalai.org'>Global Adaptaion Institute</a></div>
+    <div class='org'><a href='http://globalai.org'>Global Adaptation Institute</a></div>
   </div></div>
   <div id='page' class='limiter clearfix'>
     <div id='main'><%= main %></div>

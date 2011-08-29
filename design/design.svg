@@ -25,16 +25,16 @@
      borderopacity="1.0"
      inkscape:pageopacity="1"
      inkscape:pageshadow="2"
-     inkscape:zoom="5.6568542"
-     inkscape:cx="-68.517499"
-     inkscape:cy="1740.3398"
+     inkscape:zoom="1"
+     inkscape:cx="376.95441"
+     inkscape:cy="1715.9954"
      inkscape:document-units="px"
-     inkscape:current-layer="layer9"
-     showgrid="true"
+     inkscape:current-layer="layer11"
+     showgrid="false"
      inkscape:window-width="866"
      inkscape:window-height="619"
-     inkscape:window-x="62"
-     inkscape:window-y="0"
+     inkscape:window-x="134"
+     inkscape:window-y="42"
      inkscape:window-maximized="0"
      showguides="false"
      inkscape:guide-bbox="true"
@@ -12304,7 +12304,7 @@
        transform="translate(0,-147.63782)" />
   </g>
   <g
-     style="display:inline"
+     style="display:none"
      inkscape:label="matrix"
      id="layer9"
      inkscape:groupmode="layer">
@@ -23861,7 +23861,7 @@
          sodipodi:nodetypes="cccccccc" />
     </g>
     <path
-       transform="matrix(0.23333322,0,0,0.23333322,-82.499988,139.83324)"
+       transform="matrix(0.23333322,0,0,0.23333322,-80.499988,139.83324)"
        d="m 135,245 a 30,30 0 1 1 -60,0 30,30 0 1 1 60,0 z"
        sodipodi:ry="30"
        sodipodi:rx="30"
@@ -23885,9 +23885,9 @@
        sodipodi:rx="30"
        sodipodi:ry="30"
        d="m 135,245 a 30,30 0 1 1 -60,0 30,30 0 1 1 60,0 z"
-       transform="matrix(0.13333337,0,0,0.13333337,-71.999988,164.3332)" />
+       transform="matrix(0.13333337,0,0,0.13333337,-69.999988,164.3332)" />
     <path
-       transform="matrix(0.33333333,0,0,0.33333333,-90,143.33321)"
+       transform="matrix(0.33333333,0,0,0.33333333,-92,145.33321)"
        d="m 135,245 a 30,30 0 1 1 -60,0 30,30 0 1 1 60,0 z"
        sodipodi:ry="30"
        sodipodi:rx="30"
@@ -23911,9 +23911,9 @@
        sodipodi:rx="30"
        sodipodi:ry="30"
        d="m 135,245 a 30,30 0 1 1 -60,0 30,30 0 1 1 60,0 z"
-       transform="matrix(0.33333333,0,0,0.33333333,-90,173.33321)" />
+       transform="matrix(0.33333333,0,0,0.33333333,-92,175.33321)" />
     <path
-       transform="matrix(0.18333338,0,0,0.18333338,-74.250019,210.08319)"
+       transform="matrix(0.18333338,0,0,0.18333338,-76.250019,212.08319)"
        d="m 135,245 a 30,30 0 1 1 -60,0 30,30 0 1 1 60,0 z"
        sodipodi:ry="30"
        sodipodi:rx="30"
@@ -23937,9 +23937,9 @@
        sodipodi:rx="30"
        sodipodi:ry="30"
        d="m 135,245 a 30,30 0 1 1 -60,0 30,30 0 1 1 60,0 z"
-       transform="matrix(0.18333338,0,0,0.18333338,-74.250019,180.08319)" />
+       transform="matrix(0.18333338,0,0,0.18333338,-76.250019,182.08319)" />
     <path
-       transform="matrix(0.33333333,0,0,0.33333333,-90,203.33321)"
+       transform="matrix(0.33333333,0,0,0.33333333,-92,205.33321)"
        d="m 135,245 a 30,30 0 1 1 -60,0 30,30 0 1 1 60,0 z"
        sodipodi:ry="30"
        sodipodi:rx="30"
@@ -23963,7 +23963,7 @@
        sodipodi:rx="30"
        sodipodi:ry="30"
        d="m 135,245 a 30,30 0 1 1 -60,0 30,30 0 1 1 60,0 z"
-       transform="matrix(0.18333338,0,0,0.18333338,-74.250019,240.08319)" />
+       transform="matrix(0.18333338,0,0,0.18333338,-76.250019,242.08319)" />
     <path
        inkscape:export-ydpi="90"
        inkscape:export-xdpi="90"
@@ -23976,9 +23976,9 @@
        sodipodi:rx="30"
        sodipodi:ry="30"
        d="m 135,245 a 30,30 0 1 1 -60,0 30,30 0 1 1 60,0 z"
-       transform="matrix(0.33333333,0,0,0.33333333,-90,233.33321)" />
+       transform="matrix(0.33333333,0,0,0.33333333,-92,235.33321)" />
     <path
-       transform="matrix(0.18333338,0,0,0.18333338,-74.250019,270.08319)"
+       transform="matrix(0.18333338,0,0,0.18333338,-76.250019,272.08319)"
        d="m 135,245 a 30,30 0 1 1 -60,0 30,30 0 1 1 60,0 z"
        sodipodi:ry="30"
        sodipodi:rx="30"
@@ -23991,11 +23991,10 @@
        inkscape:export-xdpi="90"
        inkscape:export-ydpi="90" />
     <g
-       id="g8540"
-       transform="translate(-16.999987,0)">
+       id="g8540">
       <path
          transform="matrix(0.23333322,0,0,0.23333322,-100.49999,139.83324)"
-         d="m 135,245 c 0,16.56854 -13.43146,30 -30,30 -16.568542,0 -30,-13.43146 -30,-30 0,-16.56854 13.431458,-30 30,-30 16.56854,0 30,13.43146 30,30 z"
+         d="m 135,245 a 30,30 0 1 1 -60,0 30,30 0 1 1 60,0 z"
          sodipodi:ry="30"
          sodipodi:rx="30"
          sodipodi:cy="245"
@@ -24017,12 +24016,11 @@
          sodipodi:cy="245"
          sodipodi:rx="30"
          sodipodi:ry="30"
-         d="m 135,245 c 0,16.56854 -13.43146,30 -30,30 -16.568542,0 -30,-13.43146 -30,-30 0,-16.56854 13.431458,-30 30,-30 16.56854,0 30,13.43146 30,30 z"
+         d="m 135,245 a 30,30 0 1 1 -60,0 30,30 0 1 1 60,0 z"
          transform="matrix(0.13333337,0,0,0.13333337,-89.999988,164.3332)" />
     </g>
     <g
-       id="g8548"
-       transform="translate(-2.9999849,-1.999998)">
+       id="g8548">
       <path
          inkscape:export-ydpi="90"
          inkscape:export-xdpi="90"
@@ -24051,8 +24049,7 @@
          inkscape:export-ydpi="90" />
     </g>
     <g
-       id="g8544"
-       transform="translate(-2.9999849,-1.999998)">
+       id="g8544">
       <path
          transform="matrix(0.33333333,0,0,0.33333333,-122,145.33321)"
          d="m 135,245 a 30,30 0 1 1 -60,0 30,30 0 1 1 60,0 z"
@@ -24081,8 +24078,7 @@
          transform="matrix(0.18333338,0,0,0.18333338,-106.25002,182.08319)" />
     </g>
     <g
-       id="g8552"
-       transform="translate(-2.9999849,-1.999998)">
+       id="g8552">
       <path
          transform="matrix(0.33333333,0,0,0.33333333,-122,205.33321)"
          d="m 135,245 a 30,30 0 1 1 -60,0 30,30 0 1 1 60,0 z"
@@ -24110,42 +24106,38 @@
          d="m 135,245 a 30,30 0 1 1 -60,0 30,30 0 1 1 60,0 z"
          transform="matrix(0.18333338,0,0,0.18333338,-106.25002,242.08319)" />
     </g>
-    <g
-       id="g8556"
-       transform="translate(-2.9999849,-1.999998)">
-      <path
-         inkscape:export-ydpi="90"
-         inkscape:export-xdpi="90"
-         inkscape:export-filename="/Users/saman/Dropbox/work_repos/gai-gain/assets/images/matrix_placeholder.png"
-         sodipodi:type="arc"
-         style="opacity:0.1;color:#000000;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
-         id="path8536"
-         sodipodi:cx="105"
-         sodipodi:cy="245"
-         sodipodi:rx="30"
-         sodipodi:ry="30"
-         d="m 135,245 a 30,30 0 1 1 -60,0 30,30 0 1 1 60,0 z"
-         transform="matrix(0.33333333,0,0,0.33333333,-122,235.33321)" />
-      <path
-         transform="matrix(0.18333338,0,0,0.18333338,-106.25002,272.08319)"
-         d="m 135,245 a 30,30 0 1 1 -60,0 30,30 0 1 1 60,0 z"
-         sodipodi:ry="30"
-         sodipodi:rx="30"
-         sodipodi:cy="245"
-         sodipodi:cx="105"
-         id="path8538"
-         style="color:#000000;fill:#f9a0a3;fill-opacity:1;fill-rule:nonzero;stroke:#434343;stroke-width:5.45454407;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
-         sodipodi:type="arc"
-         inkscape:export-filename="/Users/saman/Dropbox/work_repos/gai-gain/assets/images/matrix_placeholder.png"
-         inkscape:export-xdpi="90"
-         inkscape:export-ydpi="90" />
-    </g>
+    <path
+       transform="matrix(0.33333333,0,0,0.33333333,-122,235.33321)"
+       d="m 135,245 a 30,30 0 1 1 -60,0 30,30 0 1 1 60,0 z"
+       sodipodi:ry="30"
+       sodipodi:rx="30"
+       sodipodi:cy="245"
+       sodipodi:cx="105"
+       id="path8536"
+       style="opacity:0.1;color:#000000;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       sodipodi:type="arc"
+       inkscape:export-filename="/Users/saman/Dropbox/work_repos/gai-gain/assets/images/matrix_placeholder.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       inkscape:export-ydpi="90"
+       inkscape:export-xdpi="90"
+       inkscape:export-filename="/Users/saman/Dropbox/work_repos/gai-gain/assets/images/matrix_placeholder.png"
+       sodipodi:type="arc"
+       style="color:#000000;fill:#f9a0a3;fill-opacity:1;fill-rule:nonzero;stroke:#434343;stroke-width:5.45454407;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       id="path8538"
+       sodipodi:cx="105"
+       sodipodi:cy="245"
+       sodipodi:rx="30"
+       sodipodi:ry="30"
+       d="m 135,245 a 30,30 0 1 1 -60,0 30,30 0 1 1 60,0 z"
+       transform="matrix(0.18333338,0,0,0.18333338,-106.25002,272.08319)" />
   </g>
   <g
      inkscape:groupmode="layer"
      id="layer11"
      inkscape:label="about"
-     style="display:none">
+     style="display:inline">
     <rect
        style="color:#000000;fill:#898989;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
        id="rect8014"
