@@ -26,6 +26,7 @@ model = Backbone.Model.extend({
         var diff = this.score() - this.score({year: this.get('currentYear') - 1});
         if (diff >= 0.5) return 'up';
         if (diff <= -0.5) return 'down';
+        if (_.isNaN(diff)) return 'undefined'
         return 'same';
     },
     input: function(options) {
