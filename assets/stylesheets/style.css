@@ -1618,8 +1618,14 @@ background: url('../images/sprite.png') 271px -412px;
 
   #about-nav-container a.active:hover {
     background-color: #fff;
-  }
-
+    }
+    
+h3#overviewdiagram{
+ background: url('../images/about_illustration.png') center no-repeat;
+ height: 130px;
+ text-indent: -9999px;
+ }
+ 
 /*** Error Page ***/
 .error-page {
   padding-top: 150px;
