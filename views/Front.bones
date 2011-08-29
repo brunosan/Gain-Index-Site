@@ -87,6 +87,13 @@ view = views.Main.extend({
 
         $('#map', this.el).append(templates.MapInterface(locals));
 
+        $('#carousel').after("<div id='carousel-nav'>").cycle({
+            timeout: 6000,
+            delay: 6000,
+            pager: '#carousel-nav'
+        }).cycle('pause');
+        $('#carousel .overview').fadeIn('normal');
+
         var startedCarousel = false;
 
         function checkCarousel() {
@@ -101,12 +108,7 @@ view = views.Main.extend({
 
             if(!startedCarousel && isInView('#carousel') ) {
                 startedCarousel = true;
-
-                $('#carousel').after("<div id='carousel-nav'>").cycle({
-                    timeout: 7000,
-                    pager: '#carousel-nav'
-                });
-                $('#carousel .overview').fadeIn('normal');
+                $('#carousel').cycle('resume');
             }
         }
         checkCarousel();

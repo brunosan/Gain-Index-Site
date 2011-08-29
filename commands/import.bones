@@ -129,7 +129,7 @@ command.prototype.initialize = function(options) {
                         .pluck(year)
                         .without(null, undefined)
                         .uniq() // multiple countries can share the same rank
-                        .sort()
+                        .sortBy(parseFloat)
                         .value() || [];
                     return memo;
                 }, {});
@@ -166,6 +166,61 @@ command.prototype.initialize = function(options) {
 
             _(actions).reduceRight(_.wrap, next)();
         };
+    }
+
+    /**
+     * Import a composite indicator CSV directory
+     */
+    function importStaticDir(source) {
+        return function(next) {
+            var actions = [];
+            var records = {};
+
+            function reduceScores(memo, v, i) {
+                if (!_.include(['name', 'ISO3'], i)) {
+                    memo[i] = parseFloat(v);
+                }
+                return memo;
+            }
+
+            actions.push(processCSV(source + '/gain.csv', function(v, i) {
+                var record = {};
+                record._id = '/api/Indicator/static-static-' + v.ISO3;
+                record.country = v.name;
+                record.ISO3 = v.ISO3;
+
+                record.gain = parseFloat(v.gain);
+
+                records[record.ISO3] = record;
+            }));
+
+            actions.push(processCSV(source + '/readiness.csv', function(v, i) {
+                if (v.ISO3) {
+                    records[v.ISO3].readiness = _(v).reduce(reduceScores, {});
+                }
+            }));
+
+            actions.push(processCSV(source + '/vulnerability.csv', function(v, i) {
+                if (v.ISO3) {
+                    records[v.ISO3].vulnerability = _(v).reduce(reduceScores, {});
+                }
+            }));
+
+            actions.push(function(next) {
+                var counter = _.after(_(records).size(), next);
+
+                _(records).each(function(record) {
+                    put(config, 'data', record, function(err, doc){
+                        err && errors.push(err);
+
+                        counter();
+                    });
+                });
+
+            });
+
+            _(actions).reduceRight(_.wrap, next)();
+        }
     }
 
     /**
@@ -270,6 +325,11 @@ command.prototype.initialize = function(options) {
             }
         });
     });
+
+
+    actions.push(importStaticDir(__dirname + '/../resources/static'));
+
+
 
     // Zip up and register the file created as ready for download.
     actions.push(function(next) {
