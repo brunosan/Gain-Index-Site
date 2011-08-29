@@ -51,7 +51,7 @@ view = views.Main.extend({
         var gain = new models.Indicator({id: 'gain'});
         $('.floor', this.el).empty().append(templates.DefaultFloor({
             title: gain.meta('name'),
-            content: gain.meta('description')
+            content: gain.meta('description_long')
         }));
 
         if (this.tableView == undefined) {
