@@ -24,7 +24,10 @@ view = views.Main.extend({
             var sector = {};
             var indicator = that.collection.byName(key);
             if (indicator != undefined) {
-                field.input = indicator.input();
+                field.input = '';
+                if (indicator.meta('sector') || indicator.meta('component')) {
+                    field.input = indicator.input();
+                }
                 field.score = indicator.score();
             }
             // Create new hash to determine worst scores.
