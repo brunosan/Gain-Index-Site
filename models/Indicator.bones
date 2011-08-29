@@ -40,8 +40,11 @@ model = Backbone.Model.extend({
     rank: function(options) {
         options = this.optionDefaults(options);
         var value = this.get('rank') ? this.get('rank')[options.year] : undefined;
-                if (!options.format || _.isUndefined(value)) {
+        if (!options.format) {
             return value;
+        }
+        if (_.isUndefined(value)) {
+            return "<div class='rank-number undefined'>&nbsp;</div>";
         }
 
         if (this.get('category') == 'vulnerability' || this.get('name') == 'vulnerability_delta') {
