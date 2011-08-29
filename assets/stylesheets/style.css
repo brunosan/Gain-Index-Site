@@ -1431,22 +1431,24 @@ background: url('../images/sprite.png') 271px -412px;
     }
   .big-matrix .graph div.point {
     position: absolute;
-    width: 10px;
-    height: 10px;
-    border: 3px solid #ebebeb;
-    border-radius: 8px;
-    moz-border-radius: 8px;
-    webkit-border-radius: 8px;
-    background-color: #ccc;
+    width: 15px;
+    height: 15px;
+    background: url('../images/sprite.png') -35px -1135px;
     }
+    .big-matrix .graph div.point:hover {background: url('../images/sprite.png') 0px -1135px;}
     .big-matrix .graph div.point .country {
       display:none;
       }
 
-    .big-matrix .graph div.active-tl { background-color: #F77C80; z-index: 1; } /* red */
-    .big-matrix .graph div.active-tr { background-color: #68B5DF; z-index: 1; } /* blue */
-    .big-matrix .graph div.active-br { background-color: #68BB37; z-index: 1; } /* green */
-    .big-matrix .graph div.active-bl { background-color: #F6CD47; z-index: 1; } /* yellow */
+    .big-matrix .graph div.active-tl { background: url('../images/sprite.png') -35px -1255px; z-index: 1; } /* red */
+    .big-matrix .graph div.active-tr { background: url('../images/sprite.png') -35px -1225px; z-index: 1; } /* blue */
+    .big-matrix .graph div.active-br { background: url('../images/sprite.png') -35px -1165px; z-index: 1;} /* green */
+    .big-matrix .graph div.active-bl { background: url('../images/sprite.png') -35px -1195px; z-index: 1; } /* yellow */
+
+    .big-matrix .graph div.active-tl:hover { background: url('../images/sprite.png') 0px -1255px; z-index: 1; } /* red */
+    .big-matrix .graph div.active-tr:hover { background: url('../images/sprite.png') 0px -1225px; z-index: 1; } /* blue */
+    .big-matrix .graph div.active-br:hover { background: url('../images/sprite.png') 0px -1165px; z-index: 1;} /* green */
+    .big-matrix .graph div.active-bl:hover { background: url('../images/sprite.png') 0px -1195px; z-index: 1; } /* yellow */
 
 .big-matrix .tooltip .country {
   position:absolute;
