@@ -2,6 +2,8 @@ view = views.Main.extend({
     events: _.extend({
         'click ul.tabs li a': 'selectTab',
         'click table.data tr': 'openDrawer',
+        'click .country-summary .gain': 'openDrawer',
+        'click .country-summary .indicator': 'openDrawer',
         'click .drawer .handle a': 'closeDrawer'
     }, views.Main.prototype.events),
     render: function() {
