@@ -17,6 +17,7 @@ model = Backbone.Model.extend({
             lon = options.lon || -8,
             z = options.z || 2;
 
+        this.controls = options.controls || ['interaction'],
         this.el = el; // Sorry mom!
 
         var mm = com.modestmaps,
@@ -41,13 +42,28 @@ model = Backbone.Model.extend({
         this.tooltip.click = function(feature, context, index) {
             that.featureClick(feature, context, index);
         };
-        wax.mm.interaction(m, tilejson, {callbacks: this.tooltip });
+        this.addControls();
 
         m.setCenterZoom(new mm.Location(lat, lon), z);
 
         // Bind to the change event of the map model so that any time the year
         // or indicator is changed we automatically update the map.
         this.bind('change', this.updateMap);
+    },
+    addControls: function() {
+        var model = this;
+        var controls = {
+            interaction: function() {
+                wax.mm.interaction(model.m, model.tilejson(), {callbacks: model.tooltip });
+            },
+            zoomer: function() {
+                $(model.el).append("<div class='zoom-control'></div>");
+                wax.mm.zoomer(model.m).appendTo($('.zoom-control', model.el)[0]);
+            }
+        };
+        _.each(this.controls, function(v) {
+            controls[v]();
+        });
     },
     tilejson: function() {
         var ind = this.get('indicator'),
@@ -83,7 +99,7 @@ model = Backbone.Model.extend({
         // Setup new map in new div.
         var m = new mm.Map(mapEl[0], new wax.mm.connector(tilejson), new mm.Point(width, height));
         this.m = m;
-        wax.mm.interaction(m, tilejson, {callbacks: this.tooltip});
+        this.addControls();
         m.coordinate = coord;
 
         // Once it's drawn, remove the old elements.

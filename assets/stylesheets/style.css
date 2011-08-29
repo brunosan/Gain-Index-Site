@@ -663,19 +663,15 @@ table.data tbody tr {
     .country-summary div.chart .mini-matrix {
       margin: 15px 0px 0px 10px;
       }
-  .country-summary div.vulnerability {
+  .country-summary .indicator {
     text-align: center;
-    font-size: 12px;
-    line-height: 25px;
+    line-height: 27px;
+    }
+  .country-summary #indicator-vulnerability {
     border-color: #c6c6c6;
     border-style: solid;
     border-width: 1px 0px 1px 0px;
-    }
-  .country-summary div.readiness {
-    text-align: center;
-    line-height: 25px;
-    height: 20px;
-    width: 125px;
+    line-height: 26px;
     }
 /**
  * Small Matrix
@@ -746,6 +742,40 @@ table.data tbody tr {
     top: 0px;
     left: 0px;
     }
+
+  .front #map .zoom-control {
+    position: absolute;
+    top: 50px;
+    left: 10px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    background-color: rgba(100, 100, 100, 0.7);
+    }
+    .front #map .zoom-control a {
+      float: left;
+      line-height: 25px;
+      padding: 0px 10px;
+      color: #fff;
+      }
+
+    .front #map .zoom-control a.zoomin {
+      border-right: 1px solid #666;
+      -webkit-border-radius: 4px 0px 0px 4px;
+      -moz-border-radius: 4px 0px 0px 4px;
+      border-radius: 4px 0px 0px 4px;
+      }
+   .front #map .zoom-control a.zoomout {
+      -webkit-border-radius: 4px 4px 4px 4px;
+      -moz-border-radius: 4px 4px 4px 4px;
+      border-radius: 4px 4px 4px 4px;
+      }
+
+    .front #map .zoom-control a:hover {
+      text-decoration: none;
+      background-color: #666;
+      }
+
   .front #map-indicators,
   .front #map-years {
     left: 10px;
@@ -1021,6 +1051,11 @@ table.data tbody tr.active:hover {
  font-size: 48px;
  line-height: 42px;
 }
+.country-profile .country-summary .gain:hover,
+.country-profile .country-summary .indicator:hover {
+  cursor: pointer;
+  background-color: #F5F5F5;
+  }
 
 .country-summary div.gain {
  padding-top: 35px;
