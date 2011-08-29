@@ -16,7 +16,7 @@ view = Backbone.View.extend({
             previousId = $('tr.active', this.el).attr('id');
 
         this.collection.each(function(model) {
-            if (model.rank({format: false}) && meta[model.get('ISO3')]) {
+            if (meta[model.get('ISO3')]) {
                 data.push({
                     name: meta[model.get('ISO3')].name,
                     income: meta[model.get('ISO3')].oecd_income,

@@ -1141,7 +1141,7 @@ table.data tbody tr.active:hover {
   width: 22px;
   line-height: 19px;
   text-align: center;
-  background-color: #abd7ee;
+  background-color: #e2f1f9;
   padding: 0 2px;
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
@@ -1414,6 +1414,7 @@ background: url('../images/sprite.png') 271px -412px;
  * Matrix section
  */
 .big-matrix {
+  position:relative;
   height: 490px;
   width: 640px;
   }
@@ -1438,38 +1439,24 @@ background: url('../images/sprite.png') 271px -412px;
     webkit-border-radius: 8px;
     background-color: #ccc;
     }
+    .big-matrix .graph div.point .country {
+      display:none;
+      }
 
     .big-matrix .graph div.active-tl { background-color: #F77C80; z-index: 1; } /* red */
     .big-matrix .graph div.active-tr { background-color: #68B5DF; z-index: 1; } /* blue */
     .big-matrix .graph div.active-br { background-color: #68BB37; z-index: 1; } /* green */
     .big-matrix .graph div.active-bl { background-color: #F6CD47; z-index: 1; } /* yellow */
 
-    .big-matrix .graph div.point .country{
-      position: relative;
-      }
-      .big-matrix .graph div.point .country {
-        position:absolute;
-        top: 10px;
-        left: -50px;
-        display: none;
-        }
-      .big-matrix .graph div.point:hover .country {
-        display: block;
-        width: 100px;
-        padding: 0px 5px;
-        background: #fff;
-        border: 2px solid #ebebeb;
-        z-index: 200;
-        }
-
-      .big-matrix .graph div.point .country ul {
-        border-top: 1px solid #ebebeb;
-        padding: 0px;
-        }
-      .big-matrix .graph div.point .country ul li {
-        font-style: italic;
-        font-size: 10px;
-        }
+.big-matrix .tooltip .country {
+  position:absolute;
+  top: 10px;
+  right: 10px;
+  padding: 5px 5px;
+  background: #666;
+  color: #fff;
+  z-index: 200;
+  }
 
 .big-matrix div.year-controls {
   float:left;
