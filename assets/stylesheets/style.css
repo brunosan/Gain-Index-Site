@@ -450,10 +450,13 @@ ul.tabs li a.active {
   -moz-border-radius: 0px 4px 0px 0px;
   -webkit-border-radius: 4px 0px 0px 0px;
   }
-  #feedbacktab .content p { padding: 10px 10px 5px 10px; }
+  #feedbacktab .content p { 
+  padding: 10px 10px 5px 10px; 
+  clear: both;
+  }
 
 
-#feedbacktab .button.green {
+#feedbacktab .tab.button.green {
   float: right;
   padding: 0 15px 0 15px;
   margin-right: 0;
@@ -464,6 +467,14 @@ ul.tabs li a.active {
   -webkit-border-radius: 4px 4px 0px 0px;
   color: #1d354c;
   cursor: pointer;
+}
+
+#feedbacktab a.button.green {
+	margin-left: 10px;
+  float: left;
+  width: 100px;
+  clear: both;
+  display: block;
 }
 
 /**
@@ -495,9 +506,9 @@ ul.tabs li a.active {
   top: 20px;
   width: 320px;
   background: #fff;
-  border-radius: 0px 3px 3px 0px;
-  -moz-border-radius: 0px 3px 3px 0px;
-  -webkit-border-radius: 0px 3px 3px 0px;
+  border-radius: 0px 4px 4px 0px;
+  -moz-border-radius: 0px 4px 4px 0px;
+  -webkit-border-radius: 0px 4px 4px 0px;
   transition: margin-left .5s ease;
   -moz-transition: margin-left .5s ease;
   -webkit-transition: margin-left .5s ease;
@@ -519,9 +530,9 @@ ul.tabs li a.active {
     line-height: 40px;
     text-align: right;
     background-color: #ebebeb;
-    border-radius: 0px 3px 0px 0px;
-    -moz-border-radius: 0px 3px 0px 0px;
-    -webkit-border-radius: 0px 3px 0px 0px;
+    border-radius: 0px 4px 0px 0px;
+    -moz-border-radius: 0px 4px 0px 0px;
+    -webkit-border-radius: 0px 4px 0px 0px;
     }
     #cabinet .drawer a.close.handle {
     text-indent: -9999px;
@@ -550,9 +561,9 @@ ul.tabs li a.active {
 
 #cabinet .drawer .country-summary {
   border: 1px solid #c6c6c6;
-  border-radius: 5px;
-  moz-border-radius: 5px;
-  webkit-border-radius: 5px;
+  border-radius: 4px;
+  moz-border-radius: 4px;
+  webkit-border-radius: 4px;
   }
 
 #cabinet .floor {
@@ -564,9 +575,9 @@ ul.tabs li a.active {
   margin-left: 160px;
   width: 320px;
   background: #ebebeb;
-  border-radius: 0px 3px 3px 0px;
-  -moz-border-radius: 0px 3px 3px 0px;
-  -webkit-border-radius: 0px 3px 3px 0px;
+  border-radius: 0px 4px 4px 0px;
+  -moz-border-radius: 0px 4px 4px 0px;
+  -webkit-border-radius: 0px 4px 4px 0px;
   }
   #cabinet .slider.fixed {
     position: fixed;
@@ -859,6 +870,9 @@ table.data tbody tr {
     position: absolute;
     top: 10px;
     right: 8px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
     }
 
 .front #carousel {
