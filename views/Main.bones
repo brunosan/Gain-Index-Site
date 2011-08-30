@@ -29,7 +29,7 @@ view = Backbone.View.extend({
     // --------------------------
     scrollTop: function() {
         var offset = $(window.location.hash).offset();
-        var top = offset ? $(window.location.hash).offset().top : 0;
+        var top = offset ? offset.top : 0;
         // Scroll top FF, IE, Chrome safe
         if ($('body').scrollTop(0)) {
             $('body').scrollTop(top);

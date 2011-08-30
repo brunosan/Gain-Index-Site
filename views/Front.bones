@@ -79,7 +79,7 @@ view = views.Main.extend({
             locals.years.push(item);
         }
 
-        _.each(['gain', 'readiness', 'vulnerability'], function(id) {
+        _.each(['gain™', 'readiness', 'vulnerability'], function(id) {
             // TODO grab info from the schema.
             var item = {name: id, id: id, klass: 'indicator-'+id};
             if (indicator == id) {
