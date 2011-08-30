@@ -55,13 +55,21 @@ view = Backbone.View.extend({
     },
     sortIncome: function(ev) {
         // Start with a defined sort order - otherwise successive sorts
-        // by income will yield different results.
+        // by income will yield different results, though only for countries
+        // with a `null` rank.
         this.collection.sortByRank();
+
         var meta = meta = models.Country.meta;
         this.collection.comparator = function(model) {
             var country = meta[model.get('ISO3')];
             if (country && country.oecd_value) {
-                return country.oecd_value;
+                // Within each income group sort by rank. Ranks will always be
+                // below 1000, so we can just divid by that, and add this to
+                // the oecd_value.
+                var rank = model.rank({format: false});
+                rank = (rank && rank.desc) ?  (rank.desc / 1000) : 0.999;
+
+                return country.oecd_value + rank;
             }
             return Infinity;
         };

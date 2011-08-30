@@ -438,8 +438,12 @@ ul.tabs li a.active {
   -moz-border-radius: 0px 4px 0px 0px;
   -webkit-border-radius: 4px 0px 0px 0px;
   }
-#feedbacktab .content p { padding: 10px 10px 5px 10px; }
 #feedbacktab .button.green {
+  #feedbacktab .content p { 
+  padding: 10px 10px 5px 10px; 
+  clear: both;
+  }
+#feedbacktab .tab.button.green {
   float: right;
   padding: 0 15px 0 15px;
   margin-right: 0;
@@ -451,6 +455,14 @@ ul.tabs li a.active {
   color: #1d354c;
   cursor: pointer;
   }
+
+#feedbacktab a.button.green {
+	margin-left: 10px;
+  float: left;
+  width: 100px;
+  clear: both;
+  display: block;
+}
 
 /**
  * Cabinet and drawer styles
@@ -482,9 +494,9 @@ ul.tabs li a.active {
   top: 20px;
   width: 320px;
   background: #fff;
-  border-radius: 0px 3px 3px 0px;
-  -moz-border-radius: 0px 3px 3px 0px;
-  -webkit-border-radius: 0px 3px 3px 0px;
+  border-radius: 0px 4px 4px 0px;
+  -moz-border-radius: 0px 4px 4px 0px;
+  -webkit-border-radius: 0px 4px 4px 0px;
   transition: margin-left .5s ease;
   -moz-transition: margin-left .5s ease;
   -webkit-transition: margin-left .5s ease;
@@ -496,7 +508,7 @@ ul.tabs li a.active {
   left: 50%;
   margin-left: 160px;
   }
-  #cabinet .drawer.open h3 {
+#cabinet .drawer.open h3 {
   margin-left: 0px;
   }
 #cabinet .drawer .handle {
@@ -504,9 +516,9 @@ ul.tabs li a.active {
   line-height: 40px;
   text-align: right;
   background-color: #ebebeb;
-  border-radius: 0px 3px 0px 0px;
-  -moz-border-radius: 0px 3px 0px 0px;
-  -webkit-border-radius: 0px 3px 0px 0px;
+  border-radius: 0px 4px 0px 0px;
+  -moz-border-radius: 0px 4px 0px 0px;
+  -webkit-border-radius: 0px 4px 0px 0px;
   }
 #cabinet .drawer a.close.handle {
   text-indent: -9999px;
@@ -532,9 +544,9 @@ ul.tabs li a.active {
   }
 #cabinet .drawer .country-summary {
   border: 1px solid #c6c6c6;
-  border-radius: 5px;
-  moz-border-radius: 5px;
-  webkit-border-radius: 5px;
+  border-radius: 4px;
+  moz-border-radius: 4px;
+  webkit-border-radius: 4px;
   }
 #cabinet .floor {
   padding-bottom: 10px;
@@ -545,9 +557,9 @@ ul.tabs li a.active {
   margin-left: 160px;
   width: 320px;
   background: #ebebeb;
-  border-radius: 0px 3px 3px 0px;
-  -moz-border-radius: 0px 3px 3px 0px;
-  -webkit-border-radius: 0px 3px 3px 0px;
+  border-radius: 0px 4px 4px 0px;
+  -moz-border-radius: 0px 4px 4px 0px;
+  -webkit-border-radius: 0px 4px 4px 0px;
   }
 #cabinet .slider.fixed {
   position: fixed;
@@ -734,6 +746,7 @@ table.data tbody tr {
   width: 640px;
   overflow: hidden;
   }
+<<<<<<< HEAD
 .front #map .map {
   position: absolute;
   top: 0px;
@@ -769,7 +782,6 @@ table.data tbody tr {
   text-decoration: none;
   background: transparent url(../images/sprite.png) repeat-x 0 -1570px;
   }
-
 .front #map-indicators,
 .front #map-years {
   left: 10px;

@@ -12,6 +12,10 @@ var vulnerabilityToY= function(d) {
 
 var openTooltips = 0;
 
+// Some closure variables to help with animation.
+var animated = false,
+    currentYear = 2010;
+
 view = views.Main.extend({
     events: {
         'click ul.year-selector li a': 'yearSelect',
@@ -23,6 +27,7 @@ view = views.Main.extend({
         'mouseenter div.point': 'pointHover',
         'mouseleave div.point': 'pointUnhover'
     },
+    pageTitle: "Matrix",
     render: function() {
         $(this.el).empty().append(templates.Cabinet({klass: 'matrix'}));
         var gain = new models.Indicator({id: 'gain'});
@@ -100,6 +105,7 @@ view = views.Main.extend({
         return this;
     },
     setYear: function(year) {
+        currentYear = year;
         var currentData = this.data[year];
         var view = this;
 
@@ -146,18 +152,35 @@ view = views.Main.extend({
         this.setYear(year);
         return false;
     },
-    yearsGo: function() {
+    yearsGo: function(ev) {
+        if (animated == true) {
+          $(ev.currentTarget).removeClass('running');
+          animated = false;
+          return false;
+        }
         var actions = [],
             view = this;
-        for (var i = 1995; i <= 2010; i++) {
+
+        // If we click play from 2010, we really want to start from 1995
+        if (currentYear == 2010) currentYear = 1995;
+        
+        for (var i = currentYear; i <= 2010; i++) {
             (function(y) {
                 actions.push(function(next) {
-                    view.setYear(y);
-                    setTimeout(next, 500);
+                    if (animated) {
+                        view.setYear(y);
+                        setTimeout(next, 500);
+                    }
                 });
             })(i);
         }
-        _(actions).reduceRight(_.wrap, function(){ console.log('done')})();
+
+        $(ev.currentTarget).addClass('running');
+        animated = true;
+        _(actions).reduceRight(_.wrap, function(){
+            $(ev.currentTarget).removeClass('running');
+            animated = false;
+        })();
         return false;
     },
     pointSelect: function(ev) {
