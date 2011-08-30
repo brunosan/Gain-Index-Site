@@ -3,11 +3,6 @@ Map {
 }
 
 #gain {
-  ::outline {
-    line-color: #fff;
-    line-width: 2;
-    line-join: round;
-    }
   [factor>0][factor<22]{ polygon-fill: #FC7B7E; }
   [factor>=22][factor<30]{ polygon-fill: #E6838C; }
   [factor>=30][factor<39]{ polygon-fill: #D18B9A; }
