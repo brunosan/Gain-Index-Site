@@ -5,7 +5,7 @@ view = Backbone.View.extend({
     sparklineOptions: {
         xaxis: {show: false},
         yaxis: {show: false},
-        grid: {borderColor: 'transparent'},
+        grid: { borderWidth: 0 },
         series: {
             lines: { lineWidth: 1 },
             shadowSize: 0
