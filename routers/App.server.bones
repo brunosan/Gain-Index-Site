@@ -41,8 +41,12 @@ routers.App.send = function(view, options, res) {
     });
     o = o.replace(/,$/, '}');
 
+
+    var title = (main.pageTitle ? main.pageTitle + ' | Global Adaptation Index' : 'Global Adaptation Index');
+
     res.send(Bones.plugin.templates.App({
         version: time,
+        title: title,
         main: $(main.el).html(),
         startup: 'Bones.initialize(function(models, views, routers, templates) {'+
                  'new views.' + main.constructor.title +'('+ o +').attach().activeLinks().scrollTop()'+

@@ -23,6 +23,7 @@ view = views.Main.extend({
         'mouseenter div.point': 'pointHover',
         'mouseleave div.point': 'pointUnhover'
     },
+    pageTitle: "Matrix",
     render: function() {
         $(this.el).empty().append(templates.Cabinet({klass: 'matrix'}));
         var gain = new models.Indicator({id: 'gain'});

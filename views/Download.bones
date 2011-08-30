@@ -8,6 +8,7 @@ view = views.Main.extend({
         $(this.el).empty().append(templates.Cabinet({klass: 'page'}));
         $('.top', this.el).empty().append(templates.Download(this));
         $('.floor', this.el).empty().append(templates.AboutFloor());
+        this.pageTitle = 'Download data';
         return this;
     },
 });
