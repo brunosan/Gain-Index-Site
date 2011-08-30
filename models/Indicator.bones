@@ -26,7 +26,7 @@ model = Backbone.Model.extend({
         var diff = this.score() - this.score({year: this.get('currentYear') - 1});
         if (diff >= 0.5) return 'up';
         if (diff <= -0.5) return 'down';
-        if (_.isNaN(diff)) return 'undefined'
+        if (_.isNaN(diff)) return 'undefined';
         return 'same';
     },
     input: function(options) {
@@ -50,8 +50,7 @@ model = Backbone.Model.extend({
 
         if (this.get('category') == 'vulnerability' || this.get('name') == 'vulnerability_delta') {
             var color = gradientRgb(['#67b6e0', '#fc7b7e'], 142, value.asc);
-        }
-        else {
+        } else {
             var color = gradientRgb(['#67b6e0', '#fc7b7e'], 142, value.desc);
         }
 
@@ -121,7 +120,7 @@ model.formats = {
             d = '.',
             t = ',',
             sign = (n < 0) ? '-' : '',
-            i = parseInt(n = Math.abs(n).toFixed(c)) + '',
+            i = parseInt(n = Math.abs(n).toFixed(c), 10) + '',
             j = ((j = i.length) > 3) ? j % 3 : 0;
 
         var val = (j ? i.substr(0, j) + t : '') + i.substr(j).replace(/(\d{3})(?=\d)/g, "$1" + t) + (c ? d + Math.abs(n - i).toFixed(c).slice(2) : ''); 
@@ -1046,7 +1045,7 @@ function rgbToHsl(rgb){
 // http://www.javascripter.net/faq/hextorgb.htm
 function hexToRgb(h) {
     var cutHex = function(h) {
-        return (h.charAt(0)=="#") ? h.substring(1,7):h
+        return (h.charAt(0)=="#") ? h.substring(1,7):h;
     };
     return {
         r: parseInt((cutHex(h)).substring(0,2),16),
@@ -1062,7 +1061,7 @@ function rgbToHex(rgb) {
         if (isNaN(n)) return "00";
         n = Math.max(0,Math.min(n,255));
         return "0123456789ABCDEF".charAt((n-n%16)/16) + "0123456789ABCDEF".charAt(n%16);
-    }
+    };
     return toHex(rgb.r) + toHex(rgb.g) + toHex(rgb.b);
 }
 

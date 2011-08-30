@@ -95,8 +95,12 @@ view.prototype.routeClick = function(ev) {
     if (_.size(window.currentKeys)) {
         return true;
     }
-    var href = $(ev.currentTarget).get(0).getAttribute('href', 2);
-    if (href) return view.route($(ev.currentTarget).get(0).getAttribute('href', 2));
+    // We only route client side if the browser supports push state.
+    // The check here is borrowed from Backbone.
+    if (window.history && window.history.pushState) {
+        var href = $(ev.currentTarget).get(0).getAttribute('href', 2);
+        if (href) return view.route($(ev.currentTarget).get(0).getAttribute('href', 2));
+    }
     return true;
 };
 

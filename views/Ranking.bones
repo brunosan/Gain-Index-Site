@@ -62,6 +62,7 @@ view = views.Main.extend({
         }).render();
 
         this.renderFloor();
+        this.pageTitle = this.model.get('subject').meta('name') + " rankings";
         return this;
     },
     attach: function() {

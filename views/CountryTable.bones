@@ -10,7 +10,7 @@ view = views.Main.extend({
         var lookup = {}, data = [];
 
         var branch = this.tree[this.options.tab][this.options.structure],
-            meta = this.collection.model.meta
+            meta = this.collection.model.meta;
 
         var scores = {};
         var sectors = [];
@@ -42,7 +42,7 @@ view = views.Main.extend({
                 sectors.push(sector);
             }
             data.push(field);
-        }
+        };
 
         appendData(this.options.tab, 'index');
         _.each(branch, function(leaf, section) {
@@ -57,8 +57,8 @@ view = views.Main.extend({
         // Calculate the % for each sector and stick onto data.graph
         var total = 0;
         var totalWidth = 0;
-        _.each(sectors, function(sector) { total += parseFloat(sector.score) });
-        _.each(sectors, function(sector) { sector.percent = Math.round((parseFloat(sector.score) / total)*100) });
+        _.each(sectors, function(sector) { total += parseFloat(sector.score); });
+        _.each(sectors, function(sector) { sector.percent = Math.round((parseFloat(sector.score) / total)*100); });
         var i = -1;
         while (totalWidth > 100) {
             if (i < 0) i = sectors.length - 1;
@@ -77,12 +77,12 @@ view = views.Main.extend({
         // Sort by score, drop 0's and 1's, drop sectors
         scores = _.filter(scores, function(item) { return ((item.score > 0 && item.score < 1) || item.sector == null); });
         if (this.options.tab == 'vulnerability') {
-            scores = _.filter(scores, function(item) {return item.score > 0.7 });
-            scores.sort(function(a, b) { return b.score - a.score });
+            scores = _.filter(scores, function(item) {return item.score > 0.7; });
+            scores.sort(function(a, b) { return b.score - a.score; });
             scores = scores.slice(0,3);
         } else {
-            scores = _.filter(scores, function(item) {return item.score < 0.3 });
-            scores.sort(function(a, b) { return a.score - b.score });
+            scores = _.filter(scores, function(item) {return item.score < 0.3; });
+            scores.sort(function(a, b) { return a.score - b.score; });
             scores = scores.slice(0,3);
         }
         // New hash w/ indicators as keys
@@ -101,7 +101,6 @@ view = views.Main.extend({
             var graph = $('.graph .placeholder', this);
             if (graph.length == 0) return;
 
-            var ind = $(this).attr('id');
             var ind = $(this).attr('id').substr(10);
             if (!ind) return;
 
@@ -219,4 +218,4 @@ view.prototype.tree = {
         "components": {},
         "sectors": {}
     }
-}
+};

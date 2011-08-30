@@ -61,6 +61,7 @@ view = views.Main.extend({
             });
         }
         this.tableView.render();
+        this.pageTitle = this.model.meta('name');
         return this;
     },
     attach: function() {
