@@ -123,11 +123,11 @@ view.route = function(path) {
 // ------------------------------
 var scrollTop = function() {
     if ($('body').scrollTop()) {
-        $('body').animate({scrollTop: 0});
+        $('body').scrollTop(0);
         return;
     }
     if ($('html').scrollTop()) {
-        $('html').animate({scrollTop: 0});
+        $('html').scrollTop(0);
         return;
     }
 };

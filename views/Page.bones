@@ -17,11 +17,11 @@ view = views.Document.extend({
             var top = offset ? $(window.location.hash).offset().top : 0;
             if (top) {
                 if ($('body').scrollTop(0)) {
-                    $('body').animate({scrollTop: top}, {duration: 500});
+                    $('body').scrollTop(top);
                     return this;
                 }
                 if ($('html').scrollTop(0)) {
-                    $('html').animate({scrollTop: top}, {duration: 500});
+                    $('html').scrollTop(top);
                     return this;
                 }
             }
