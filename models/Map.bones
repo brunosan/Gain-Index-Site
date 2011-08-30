@@ -129,6 +129,7 @@ model = Backbone.Model.extend({
             val = "Not evaluated";
         } else if (data.factor_raw === 0) {
             val = "No GaIn&trade; score";
+            inlineData = ' data-iso="' + data.iso_a3 + '"';
         } else {
             var ind = this.get('indicator');
             val = models.Indicator.format(data.factor_raw, ind);
