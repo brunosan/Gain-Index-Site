@@ -321,9 +321,9 @@ ul.tabs li a.active {
 #header .org a {
   display: block;
   position: absolute;
-  left: 850px;
+  left: 810px;
   top: 10px;
-  width: 110px;
+  width: 150px;
   height: 40px;
   background: url('../images/sprite.png') 0px 0px no-repeat;
   text-indent: -9999px;
@@ -412,9 +412,9 @@ ul.tabs li a.active {
   margin-top: 15px;
   display: block;
   float: right;
-  left: 850px;
+  left: 810px;
   top: 10px;
-  width: 110px;
+  width: 150px;
   height: 40px;
   background: url('../images/sprite.png') 0px 0px no-repeat;
   text-indent: -9999px;
