@@ -110,24 +110,10 @@ view.route = function(path) {
                 // TODO: find a better place to reset panel.
                 Bones.admin.setPanel();
                 Backbone.history.navigate(path, true);
-                scrollTop();
                 return true;
             }
         });
         return !matched;
     }
     return true;
-};
-
-// Scroll top FF, IE, Chrome safe
-// ------------------------------
-var scrollTop = function() {
-    if ($('body').scrollTop()) {
-        $('body').scrollTop(0);
-        return;
-    }
-    if ($('html').scrollTop()) {
-        $('html').scrollTop(0);
-        return;
-    }
 };

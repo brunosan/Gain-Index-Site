@@ -6,7 +6,6 @@ view = Backbone.View.extend({
         !Bones.server && _.once(this.drawerEvents)();
     },
     attach: function() {
-        this.scrollToFragment();
         this.feedbackEmail();
         return this;
     },
@@ -26,21 +25,20 @@ view = Backbone.View.extend({
         }, '');
         $('.feedback-email').attr('href', mailto + info);
     },
-    // Scrolls to the position requested by the hash
-    // ---------------------------------------------
-    scrollToFragment: function() {
+    // Scrolls to top or fragment
+    // --------------------------
+    scrollTop: function() {
         var offset = $(window.location.hash).offset();
         var top = offset ? $(window.location.hash).offset().top : 0;
-        if (top) {
-            if ($('body').scrollTop(0)) {
-                $('body').scrollTop(top);
-                return this;
-            }
-            if ($('html').scrollTop(0)) {
-                $('html').scrollTop(top);
-                return this;
-            }
+        // Scroll top FF, IE, Chrome safe
+        if ($('body').scrollTop(0)) {
+            $('body').scrollTop(top);
+            return this;
         }
+        if ($('html').scrollTop(0)) {
+            $('html').scrollTop(top);
+        }
+        return this;
     },
     activeLinks: function() {
         var activePath = window.location.pathname;
@@ -51,6 +49,7 @@ view = Backbone.View.extend({
         $('a:not(.exact)').each(function(i, a) {
             (activePath.indexOf($(a).attr('href')) == 0) && $(a).addClass('active');
         });
+        return this;
     },
     // Initializes global drawer events
     // --------------------------------
