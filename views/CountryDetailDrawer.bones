@@ -55,7 +55,7 @@ view = Backbone.View.extend({
                 data:data
             });
         } else {
-            $('.content .graph', this.el).hide();
+            $('.content .indicator-time', this.el).hide();
         }
     }
 });
