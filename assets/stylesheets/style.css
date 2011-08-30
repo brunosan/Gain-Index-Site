@@ -82,6 +82,7 @@ h4 {
   width: 110px;
   float: right;
   margin: 10px 10px 0 0;
+  text-align: center;
   }
 .button:hover{text-decoration: none;}
 .button.green:hover { background-color: #5A2; }
@@ -348,7 +349,7 @@ ul.tabs li a.active {
   padding-right: 5px;
   }
 #footer1 .search {
-  margin: 15px 0 15px 20px;
+  margin: 15px 0 0 15px;
   float: left;
   }
 #footer1 .search input {
@@ -450,7 +451,7 @@ ul.tabs li a.active {
 #feedbacktab a.button.green {
   margin-left: 10px;
   float: left;
-  width: 100px;
+  width: auto;
   clear: both;
   display: block;
   }

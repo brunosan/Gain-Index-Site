@@ -36,7 +36,7 @@ view = Backbone.View.extend({
         results = _(results).first(3);
 
         return _(results).map(function(o) { 
-            return { label: o.get('name'), value: o.get('ISO3') } 
+            return { label: o.get('name'), value: o.get('ISO3') }
         });
     }
 });
