@@ -39,6 +39,20 @@ view = views.Main.extend({
         return this;
     },
     attach: function() {
+        // IE8 Has a different, and older, way of setting style-y things. So we
+        //  teach it the new hip stuff, what the kids are using.
+        if (CSSStyleDeclaration.prototype.getAttribute) {
+            CSSStyleDeclaration.prototype.getProperty = function(a) {
+                return this.getAttribute(a);
+            };
+            CSSStyleDeclaration.prototype.setProperty = function(a,b) {
+                return this.setAttribute(a,b);
+            };
+            CSSStyleDeclaration.prototype.removeProperty = function(a) {
+                return this.removeAttribute(a);
+            };
+        }
+
         views.Main.prototype.attach.call(this);
         var view = this,
             data = {};
