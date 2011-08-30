@@ -1134,7 +1134,7 @@ table.data tbody tr.active:hover {
   .country-profile .country-summary .chart {
     float: left;
     }
-  .country-profile .country-summary .map {
+  .country-profile .country-summary > .map {
     border-left:1px solid #c6c6c6;
     float: right;
     }
