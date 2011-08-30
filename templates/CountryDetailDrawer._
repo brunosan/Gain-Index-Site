@@ -7,6 +7,6 @@
   <div class='composition-bars'></div>
 </div>
 <div class='indicator-time container clearfix'>
-  <h4><%= indicatorName %> over time </h4>
+  <h4><%= indicatorName %> score over time </h4>
   <div class='graph'></div>
 </div>
