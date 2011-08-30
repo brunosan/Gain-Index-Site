@@ -22,4 +22,4 @@
   </div>
 <% }); %>
 </div>
-<% if (map) { %><div class='map'></div><% } %>
+<% if (map) { %><div class='map-wrapper'></div><% } %>
