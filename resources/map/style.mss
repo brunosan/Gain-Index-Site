@@ -4,7 +4,7 @@ Map {
 
 #gain {
   ::outline {
-    line-color: #e2e0e0;
+    line-color: #fff;
     line-width: 2;
     line-join: round;
     }
