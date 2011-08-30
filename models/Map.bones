@@ -57,8 +57,10 @@ model = Backbone.Model.extend({
                 wax.mm.interaction(model.m, model.tilejson(), {callbacks: model.tooltip });
             },
             zoomer: function() {
-                $(model.el).append("<div class='zoom-control'></div>");
-                wax.mm.zoomer(model.m).appendTo($('.zoom-control', model.el)[0]);
+                if ($('.zoom-control', model.el).length == 0) {
+                    $(model.el).append("<div class='zoom-control'></div>");
+                }
+                wax.mm.zoomer(model.m).appendTo($('.zoom-control', model.el).empty().get(0));
             }
         };
         _.each(this.controls, function(v) {
@@ -87,10 +89,11 @@ model = Backbone.Model.extend({
             width = this.get('width'),
             height = this.get('height');
 
+        // Remove old map.
+        $('.map.obsolete', el).remove();
+
         // Mark existing map div for removal.
-        var ind = this.get('indicator'),
-            y = this.get('year');
-        $('.map', el).addClass('obsolete-'+ind+y);
+        $('.map', el).addClass('obsolete');
 
         // Add new element
         mapEl= $("<div></div>").addClass('map');
@@ -101,13 +104,6 @@ model = Backbone.Model.extend({
         this.m = m;
         this.addControls();
         m.coordinate = coord;
-
-        // Once it's drawn, remove the old elements.
-        var cleanUp =  function() { 
-            setTimeout(function(){$('.obsolete-'+ind+y, el).remove();}, 5000);
-            m.removeCallback('drawn', cleanUp);
-        }
-        m.addCallback('drawn', cleanUp);
         m.draw();
     },
     featureHover: function(options, data) {
