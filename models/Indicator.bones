@@ -871,7 +871,7 @@ model.meta = {
     "vulnerability": {
         "id": "vulnerability",
         "name": "Vulnerability",
-        "description": "Vulnerability measures a country's exposure, sensitivity and ability to cope with climate related hazards, as well as accounting for the overall status of food, water, health and infrastructure within the nation",
+        "description": "Vulnerability measures a country's exposure, sensitivity and ability to cope with climate related hazards, as well as accounting for the overall status of food, water, health and infrastructure within the nation. It displays a score from 0 to 1, calculated by average of its component scores. Lower scores represent better vulnerability scores.",
         "format": "number",
         "decimals": "3",
         "unit": null,
@@ -882,7 +882,7 @@ model.meta = {
     "vulnerability_delta": {
         "id": "vulnerability_delta",
         "name": "Vulnerability, corrected for GDP",
-        "description": "Vulnerability measures a country's exposure, sensitivity and ability to cope with climate related hazards, as well as accounting for the overall status of food, water, health and infrastructure within the nation",
+        "description": "There is a strong negative correlation between a country's GDP and their vulnerability scores. GDP corrected scores first recacluate a vulnerability score based on a country's GDP and then take the difference between this score and the average score of all countries in the same income group. These corrected scores have been intentionally inverted so that higher scores represent better scores.",
         "format": "number",
         "decimals": "3",
         "unit": null,
@@ -893,7 +893,7 @@ model.meta = {
     "readiness": {
         "id": "readiness",
         "name": "Readiness",
-        "description": "Readiness measures the ability of a country's private and public sectors to leverage resources effectively towards increasing resiliency to climate change",
+        "description": "Readiness measures the ability of a country's private and public sectors to leverage resources effectively towards increasing resiliency to climate change. It displays a score from 0 to 1, calculated by a weighted sum of its component scores. Higher scores represent better readiness scores.",
         "format": "number",
         "decimals": "3",
         "unit": null,
@@ -904,7 +904,7 @@ model.meta = {
     "readiness_delta": {
         "id": "readiness_delta",
         "name": "Readiness, corrected for GDP",
-        "description": "Readiness measures the ability of a country's private and public sectors to leverage resources effectively towards increasing resiliency to climate change",
+        "description": "There is a strong positive correlation between a country's GDP and their readiness scores. GDP corrected scores first recacluate a readiness score based on a country's GDP and then take the difference between this score and the average score of all countries in the same income group. Higher scores represent better scores.",
         "format": "number",
         "decimals": "3",
         "unit": null,
@@ -916,7 +916,7 @@ model.meta = {
         "id": "gain",
         "name": "GaIn™",
         "description": "The Global Adaptation Index™ (GaIn™) summarizes a country's Vulnerability to climate change and its Readiness to improve resilience.",
-        "description_long": "The Global Adaptation Index™ (GaIn™) exposes countries' vulnerabilities to climate change and opportunities to improve resilience. It aims to help businesses and the public sector to better prioritize investments for a more efficient response to the immediate global challenges ahead.",
+        "description_long": "The Global Adaptation Index™ (GaIn™) exposes countries' vulnerabilities to climate change and opportunities to improve resilience. It aims to help businesses and the public sector to better prioritize investments for a more efficient response to the immediate global challenges ahead. Scores have been calculated by taking the difference between countries' readiness and vulnerability scores and converting these to a 0 to 100 scale, for ease of communication.",
         "format": "number",
         "decimals": "1",
         "unit": null,
@@ -927,7 +927,7 @@ model.meta = {
     "gain_delta": {
         "id": "gain_delta",
         "name": "GaIn™, corrected for GDP",
-        "description": "The Global Adaptation Index™ (GaIn™) exposes countries' vulnerabilities to climate change and opportunities to improve resilience. It aims to help businesses and the public sector to better prioritize investments for a more efficient response to the immediate global challenges ahead.",
+        "description": "There is a strong positive correlation between a country's GDP and their GaIn™ scores. GDP corrected scores are the sums of countries' corrected readiness and vulnerability scores. Higher scores represent better scores.",
         "format": "number",
         "decimals": "1",
         "unit": null,
