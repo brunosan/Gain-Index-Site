@@ -9,7 +9,7 @@ server = servers.Route.augment({
     }
 });
 server.prototype.assets.wax = new mirror([
-    require.resolve('wax/ext/modestmaps.min'),
+    require.resolve('modestmaps/modestmaps.min'),
     require.resolve('wax/dist/wax.mm')
 ], { type: '.js' });
 

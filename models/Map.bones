@@ -26,7 +26,12 @@ model = Backbone.Model.extend({
         var mapEl= $("<div></div>").addClass('map');
         $(el).append(mapEl);
 
-        var m = new mm.Map(mapEl[0], new wax.mm.connector(tilejson), new mm.Point(width, height));
+        var m = new mm.Map(mapEl[0], new wax.mm.connector(tilejson), new mm.Point(width, height), [
+            new mm.DragHandler,
+            new mm.DoubleClickHandler,
+            new mm.MouseWheelHandler,
+            new mm.TouchHandler
+        ]);
         this.set({
             width: width,
             height: height

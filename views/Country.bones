@@ -68,8 +68,8 @@ view = views.Main.extend({
         var coords = (this.model.meta('coords'));
 
         this.map = new models.Map({year: 2010, indicator: 'gain'}, {
-            el: $('.country-summary .map', this.el)[0],
-            width: 339,
+            el: $('.country-summary .map-wrapper', this.el)[0],
+            width: 340,
             height: 160,
             lon: coords[0],
             lat: coords[1]

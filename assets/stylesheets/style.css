@@ -750,6 +750,7 @@ table.data tbody tr {
   position: relative;
   height: 490px;
   width: 640px;
+  overflow: hidden;
   }
   .front #map .map {
     position: absolute;
@@ -1134,7 +1135,7 @@ table.data tbody tr.active:hover {
   .country-profile .country-summary .chart {
     float: left;
     }
-  .country-profile .country-summary .map {
+  .country-profile .country-summary .map-wrapper {
     border-left:1px solid #c6c6c6;
     float: right;
     }
