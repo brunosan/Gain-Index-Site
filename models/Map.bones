@@ -105,7 +105,18 @@ model = Backbone.Model.extend({
         $('.map:last', el).after(mapEl);
 
         // Setup new map in new div.
-        var m = new mm.Map(mapEl[0], new wax.mm.connector(tilejson), new mm.Point(width, height));
+        var m = new mm.Map(mapEl[0], new wax.mm.connector(tilejson), new mm.Point(width, height), [
+            new mm.DragHandler,
+            new mm.DoubleClickHandler,
+            new mm.MouseWheelHandler,
+            new mm.TouchHandler
+        ]);
+
+        // Link panning and zooming for old and new maps.
+        var om = this.m;
+        m.addCallback('panned', function(map, coords) { om.panBy(coords[0], coords[1]); });
+        m.addCallback('zoomed', function(map, offset) { om.zoomBy(offset); });
+
         this.m = m;
         this.addControls();
         m.coordinate = coord;
