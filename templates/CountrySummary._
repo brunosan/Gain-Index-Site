@@ -13,7 +13,9 @@
     <div class='quad tr<%= (active =='tr' ? ' active' : '') %>'></div>
     <div class='quad br<%= (active =='br' ? ' active' : '') %>'></div>
     <div class='quad bl<%= (active =='bl' ? ' active' : '') %>'></div>
+    <% if (pin) { %>
     <div class='pin' style='top: <%= pin.y %>px; left: <%= pin.x %>px;'></div>
+    <% } %>
   </div>
 <% _.each(['vulnerability', 'readiness'], function(stat) { %>
   <div id='indicator-<%= stat %>' class='indicator'>
