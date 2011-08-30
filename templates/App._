@@ -20,13 +20,16 @@
   <link rel='stylesheet' href='/assets/gain/stylesheets/style.css?<%= version %>' media='screen' />
   <link rel='stylesheet' href='/assets/gain/stylesheets/ui-lightness/jquery-ui-1.8.16.custom.css?<%= version %>' media='screen' />
   <link rel='stylesheet' href='/assets/bones-admin/style.css?<%= version %>' media='screen' />
+  <!--<link rel='stylesheet' href='/assets/gain/stylesheets/print.css?<%= version %>' media='screen' />-->
+  <link rel='stylesheet' href='/assets/gain/stylesheets/print.css?<%= version %>' media='print' />
+
 </head>
 <body>
   <div id='feedbacktab'>
     <div class='button green'>Feedback</div>
     <div class='content'>
       <p>Please report any inconsistencies, apparent data errors or leave a general comment using the link below.</p> 
-      <p><a href="mailto:brunosan@globalai.org">Feedback</a></p>
+      <p><a href="mailto:gain@globalai.org" class='feedback-email'>Feedback</a></p>
       <p>Interested in a more in depth review of the GaIn model design?</p>
       <p><a href="/about/consultation">Participate in our Consultation process</a></p>
     </div>
@@ -40,7 +43,7 @@
       <li><a  class='matrix' href='/matrix'>Matrix</a></li>
       <li><a  class='about' href='/about'>About</a></li>
     </ul>
-    <div class='org'><a href='http://globalai.org'>Global Adaptaion Institute</a></div>
+    <div class='org'><a href='http://globalai.org'>Global Adaptation Institute</a></div>
   </div></div>
   <div id='page' class='limiter clearfix'>
     <div id='main'><%= main %></div>

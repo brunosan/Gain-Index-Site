@@ -8,6 +8,7 @@ view = views.Main.extend({
         Bones.user && Bones.user.bind('auth:status', this.setupPanel);
     },
     attach: function() {
+        views.Main.prototype.attach.call(this);
         !Bones.server && this.setupPanel();
         return this;
     },

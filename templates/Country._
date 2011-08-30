@@ -43,7 +43,7 @@
           <li><a href='#vulnerability/sector' class='vulnerability sectors'>Sector</a></li>
           <li><a href='#vulnerability/component' class='vulnerability components'>Component</a></li>
         </ul>
-        <div class='bottomscorelabel label'>Denotes bottom three scores</div>
+        <div class='bottomscorelabel label'>Denotes lowest scores</div>
       </div>
     </div>
     <div id='tab' class='tab-content'>
