@@ -92,6 +92,7 @@ view = views.Main.extend({
         views.Main.prototype.activeLinks.apply(this, arguments);
         $('ul.tabs.level-1 .' + this.tableView.options.tab).addClass('active');
         $('ul.tabs.level-2 .' + this.tableView.options.structure).addClass('active');
+        return this;
     },
     selectTab: function(ev) {
         var e = $(ev.currentTarget);

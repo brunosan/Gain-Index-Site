@@ -6,6 +6,12 @@ view = Backbone.View.extend({
         !Bones.server && _.once(this.drawerEvents)();
     },
     attach: function() {
+        this.feedbackEmail();
+        return this;
+    },
+    // Sets up feedback email href
+    // ---------------------------
+    feedbackEmail: function() {
         var mailto = $('.feedback-email')
             .attr('href')
             .split('?')
@@ -18,6 +24,20 @@ view = Backbone.View.extend({
             return memo + k + '=' + encodeURIComponent(v);
         }, '');
         $('.feedback-email').attr('href', mailto + info);
+    },
+    // Scrolls to top or fragment
+    // --------------------------
+    scrollTop: function() {
+        var offset = $(window.location.hash).offset();
+        var top = offset ? $(window.location.hash).offset().top : 0;
+        // Scroll top FF, IE, Chrome safe
+        if ($('body').scrollTop(0)) {
+            $('body').scrollTop(top);
+            return this;
+        }
+        if ($('html').scrollTop(0)) {
+            $('html').scrollTop(top);
+        }
         return this;
     },
     activeLinks: function() {
@@ -29,6 +49,7 @@ view = Backbone.View.extend({
         $('a:not(.exact)').each(function(i, a) {
             (activePath.indexOf($(a).attr('href')) == 0) && $(a).addClass('active');
         });
+        return this;
     },
     // Initializes global drawer events
     // --------------------------------

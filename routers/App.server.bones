@@ -28,7 +28,7 @@ routers.App.send = function(view, options, res) {
     // Execute the main view.
     var main = new view(options);
     main.render();
-    
+
     var o = '{el: $("#main"),';
     _.each(options, function(v, k) {
         // Any options that is a model or collection will have it's title
@@ -45,7 +45,7 @@ routers.App.send = function(view, options, res) {
         version: time,
         main: $(main.el).html(),
         startup: 'Bones.initialize(function(models, views, routers, templates) {'+
-                 'new views.' + main.constructor.title +'('+ o +').attach().activeLinks()'+
+                 'new views.' + main.constructor.title +'('+ o +').attach().activeLinks().scrollTop()'+
                  '});'
     }));
 };
