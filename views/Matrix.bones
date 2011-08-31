@@ -116,6 +116,15 @@ view = views.Main.extend({
 
         $('ul.year-selector a.year-2010', this.el).addClass('active');
 
+
+        var search = $('.country-selector input[name=country]', this.el),
+            searchTitle = search.attr('title');
+
+        search
+            .blur(function() { search.val() === '' && search.val(searchTitle);  })
+            .focus(function() { search.val() === searchTitle && search.val('');  })
+            .blur();
+
         return this;
     },
     setYear: function(year) {

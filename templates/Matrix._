@@ -12,7 +12,7 @@
 </div>
 <div class='country-selector'>
   <div>
-    <input type='textfield' class='textfield' value='Add country to highlight' />
+    <input name='country' type='textfield' class='textfield' title='Add country to highlight' />
     <input type='button' class='button' value="Add" />
   </div>
   <div class='active-countries'></div>
