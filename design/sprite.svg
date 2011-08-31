@@ -27,9 +27,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:zoom="2"
-     inkscape:cx="168.29942"
-     inkscape:cy="35.793967"
+     inkscape:zoom="2.8284271"
+     inkscape:cx="-31.007756"
+     inkscape:cy="1252.7462"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="true"
@@ -78,16 +78,16 @@
      inkscape:groupmode="layer"
      id="layer2"
      inkscape:label="gray"
-     sodipodi:insensitive="true"
      transform="translate(1.4e-5,160.00001)"
-     style="display:none">
+     style="display:none"
+     sodipodi:insensitive="true">
     <rect
-       style="opacity:0.5;color:#000000;fill:#e6e6e6;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       style="opacity:0.5;color:#000000;fill:#333333;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
        id="rect8186"
        width="340"
-       height="1730"
+       height="1805"
        x="0"
-       y="-85.000008" />
+       y="-160.00002" />
   </g>
   <g
      inkscape:label="Layer 1"
@@ -99,7 +99,7 @@
        inkscape:export-ydpi="90"
        inkscape:export-xdpi="90"
        inkscape:export-filename="/Users/saman/Dropbox/work_repos/gai-gain/assets/images/sprite.png"
-       y="-72.637817"
+       y="-97.637817"
        x="0"
        height="35"
        width="65"
@@ -115,7 +115,7 @@
        width="75"
        height="35"
        x="265"
-       y="-72.637817"
+       y="-97.637817"
        inkscape:export-filename="/Users/saman/Dropbox/work_repos/gai-gain/assets/images/sprite.png"
        inkscape:export-xdpi="90"
        inkscape:export-ydpi="90" />
@@ -123,7 +123,7 @@
        inkscape:export-ydpi="90"
        inkscape:export-xdpi="90"
        inkscape:export-filename="/Users/saman/Dropbox/work_repos/gai-gain/assets/images/sprite.png"
-       y="-72.637817"
+       y="-97.637817"
        x="75"
        height="35"
        width="90"
@@ -135,7 +135,7 @@
        inkscape:export-ydpi="90"
        inkscape:export-xdpi="90"
        inkscape:export-filename="/Users/saman/Dropbox/work_repos/gai-gain/assets/images/sprite.png"
-       y="-72.637817"
+       y="-97.637817"
        x="175"
        height="35"
        width="80"
@@ -147,7 +147,7 @@
        inkscape:export-ydpi="90"
        inkscape:export-xdpi="90"
        inkscape:export-filename="/Users/saman/Dropbox/work_repos/gai-gain/assets/images/sprite.png"
-       y="17.362175"
+       y="12.362175"
        x="265"
        height="35"
        width="75"
@@ -159,7 +159,7 @@
        inkscape:export-ydpi="90"
        inkscape:export-xdpi="90"
        inkscape:export-filename="/Users/saman/Dropbox/work_repos/gai-gain/assets/images/sprite.png"
-       y="17.362175"
+       y="12.362175"
        x="0"
        height="35"
        width="65"
@@ -175,7 +175,7 @@
        width="90"
        height="35"
        x="75"
-       y="17.362175"
+       y="12.362175"
        inkscape:export-filename="/Users/saman/Dropbox/work_repos/gai-gain/assets/images/sprite.png"
        inkscape:export-xdpi="90"
        inkscape:export-ydpi="90" />
@@ -187,7 +187,7 @@
        width="80"
        height="35"
        x="175"
-       y="17.362175"
+       y="12.362175"
        inkscape:export-filename="/Users/saman/Dropbox/work_repos/gai-gain/assets/images/sprite.png"
        inkscape:export-xdpi="90"
        inkscape:export-ydpi="90" />
@@ -195,7 +195,7 @@
        inkscape:export-ydpi="90"
        inkscape:export-xdpi="90"
        inkscape:export-filename="/Users/saman/Dropbox/work_repos/gai-gain/assets/images/sprite.png"
-       y="-27.637825"
+       y="-47.637825"
        x="0"
        height="35"
        width="65"
@@ -205,7 +205,7 @@
        ry="4" />
     <g
        style="fill:#11202c;fill-opacity:1;display:inline"
-       transform="translate(-320,-37.637708)"
+       transform="translate(-320,-57.637708)"
        id="g6110"
        inkscape:export-filename="/Users/saman/Dropbox/work_repos/gai-gain/assets/images/sprite.png"
        inkscape:export-xdpi="90"
@@ -228,14 +228,14 @@
     <text
        sodipodi:linespacing="120%"
        id="text6118"
-       y="-5.1353226"
+       y="-25.135323"
        x="29"
        style="font-size:15px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-indent:0;text-align:start;text-decoration:none;line-height:120.00000477%;letter-spacing:0px;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:start;baseline-shift:baseline;color:#000000;fill:#11202c;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Alternate Gothic LT No3;-inkscape-font-specification:Alternate Gothic LT No3 Bold"
        xml:space="preserve"
        inkscape:export-filename="/Users/saman/Dropbox/work_repos/gai-gain/assets/images/sprite.png"
        inkscape:export-xdpi="90"
        inkscape:export-ydpi="90"><tspan
-         y="-5.1353226"
+         y="-25.135323"
          x="29"
          id="tspan6120"
          sodipodi:role="line">MAP</tspan></text>
@@ -247,7 +247,7 @@
        width="75"
        height="35"
        x="265"
-       y="-27.637825"
+       y="-47.637825"
        inkscape:export-filename="/Users/saman/Dropbox/work_repos/gai-gain/assets/images/sprite.png"
        inkscape:export-xdpi="90"
        inkscape:export-ydpi="90" />
@@ -255,7 +255,7 @@
        inkscape:export-ydpi="90"
        inkscape:export-xdpi="90"
        inkscape:export-filename="/Users/saman/Dropbox/work_repos/gai-gain/assets/images/sprite.png"
-       y="-27.637825"
+       y="-47.637825"
        x="75"
        height="35"
        width="90"
@@ -267,7 +267,7 @@
        inkscape:export-ydpi="90"
        inkscape:export-xdpi="90"
        inkscape:export-filename="/Users/saman/Dropbox/work_repos/gai-gain/assets/images/sprite.png"
-       y="-27.637825"
+       y="-47.637825"
        x="175"
        height="35"
        width="80"
@@ -277,7 +277,7 @@
        ry="4" />
     <g
        style="fill:#11202c;fill-opacity:1;display:inline"
-       transform="translate(-301,-37.637708)"
+       transform="translate(-301,-57.637708)"
        id="g6128"
        inkscape:export-filename="/Users/saman/Dropbox/work_repos/gai-gain/assets/images/sprite.png"
        inkscape:export-xdpi="90"
@@ -310,7 +310,7 @@
     </g>
     <g
        style="fill:#11202c;fill-opacity:1;display:inline"
-       transform="translate(-335,-36.637828)"
+       transform="translate(-335,-56.637828)"
        id="g6140"
        inkscape:export-filename="/Users/saman/Dropbox/work_repos/gai-gain/assets/images/sprite.png"
        inkscape:export-xdpi="90"
@@ -342,7 +342,7 @@
     </g>
     <g
        style="fill:#11202c;fill-opacity:1;display:inline"
-       transform="translate(-325,-36.637828)"
+       transform="translate(-325,-56.637828)"
        id="g6152"
        inkscape:export-filename="/Users/saman/Dropbox/work_repos/gai-gain/assets/images/sprite.png"
        inkscape:export-xdpi="90"
@@ -381,14 +381,14 @@
     <path
        inkscape:connector-curvature="0"
        id="path6167"
-       d="m 282.5,-17.637704 c -4.14214,0 -7.5,3.357864 -7.5,7.5 0,4.142132 3.35786,7.500002 7.5,7.500002 4.14214,0 7.5,-3.35787 7.5,-7.500002 0,-4.142136 -3.35786,-7.5 -7.5,-7.5 z m -0.0312,3.125 c 0.568,9e-6 1.03025,0.05876 1.40625,0.21875 0.38399,0.152008 0.70549,0.361758 0.9375,0.59375 0.23199,0.232008 0.37274,0.478007 0.46875,0.75 0.10399,0.264007 0.15624,0.518007 0.15625,0.75 -10e-6,0.384006 -0.0523,0.689506 -0.15625,0.9375 -0.096,0.248005 -0.19176,0.449005 -0.34375,0.625 -0.14401,0.176005 -0.31601,0.340755 -0.5,0.46875 -0.17601,0.120004 -0.34,0.247004 -0.5,0.375 -0.16,0.120004 -0.3095,0.246254 -0.4375,0.40625 -0.12,0.160003 -0.18675,0.385003 -0.21875,0.625002 l 0,0.4375 -1.625,0 0,-0.53125 c 0.024,-0.343999 0.0835,-0.642998 0.1875,-0.875002 0.112,-0.231996 0.231,-0.433746 0.375,-0.59375 0.144,-0.167995 0.30875,-0.286245 0.46875,-0.40625 0.16,-0.119995 0.3015,-0.254995 0.4375,-0.375 0.136,-0.119995 0.2325,-0.262244 0.3125,-0.40625 0.088,-0.143994 0.133,-0.315244 0.125,-0.53125 0,-0.367993 -0.0973,-0.636493 -0.28125,-0.8125 -0.176,-0.175993 -0.39875,-0.249993 -0.71875,-0.25 -0.216,7e-6 -0.43375,0.03701 -0.59375,0.125 -0.152,0.08001 -0.271,0.199757 -0.375,0.34375 -0.096,0.136007 -0.17075,0.276757 -0.21875,0.46875 -0.048,0.184006 -0.0625,0.377756 -0.0625,0.59375 l -1.75,0 c 0.008,-0.431994 0.0515,-0.827493 0.1875,-1.1875 0.144,-0.359993 0.34575,-0.642242 0.59375,-0.90625 0.256,-0.263992 0.55425,-0.480992 0.90625,-0.625 0.36,-0.151991 0.77875,-0.218741 1.21875,-0.21875 z m -1,6.906252 1.90625,0 0,1.84375 -1.90625,0 0,-1.84375 z"
+       d="m 282.5,-37.637704 c -4.14214,0 -7.5,3.357864 -7.5,7.5 0,4.142132 3.35786,7.500002 7.5,7.500002 4.14214,0 7.5,-3.35787 7.5,-7.500002 0,-4.142136 -3.35786,-7.5 -7.5,-7.5 z m -0.0312,3.125 c 0.568,9e-6 1.03025,0.05876 1.40625,0.21875 0.38399,0.152008 0.70549,0.361758 0.9375,0.59375 0.23199,0.232008 0.37274,0.478007 0.46875,0.75 0.10399,0.264007 0.15624,0.518007 0.15625,0.75 -10e-6,0.384006 -0.0523,0.689506 -0.15625,0.9375 -0.096,0.248005 -0.19176,0.449005 -0.34375,0.625 -0.14401,0.176005 -0.31601,0.340755 -0.5,0.46875 -0.17601,0.120004 -0.34,0.247004 -0.5,0.375 -0.16,0.120004 -0.3095,0.246254 -0.4375,0.40625 -0.12,0.160003 -0.18675,0.385003 -0.21875,0.625002 l 0,0.4375 -1.625,0 0,-0.53125 c 0.024,-0.343999 0.0835,-0.642998 0.1875,-0.875002 0.112,-0.231996 0.231,-0.433746 0.375,-0.59375 0.144,-0.167995 0.30875,-0.286245 0.46875,-0.40625 0.16,-0.119995 0.3015,-0.254995 0.4375,-0.375 0.136,-0.119995 0.2325,-0.262244 0.3125,-0.40625 0.088,-0.143994 0.133,-0.315244 0.125,-0.53125 0,-0.367993 -0.0973,-0.636493 -0.28125,-0.8125 -0.176,-0.175993 -0.39875,-0.249993 -0.71875,-0.25 -0.216,7e-6 -0.43375,0.03701 -0.59375,0.125 -0.152,0.08001 -0.271,0.199757 -0.375,0.34375 -0.096,0.136007 -0.17075,0.276757 -0.21875,0.46875 -0.048,0.184006 -0.0625,0.377756 -0.0625,0.59375 l -1.75,0 c 0.008,-0.431994 0.0515,-0.827493 0.1875,-1.1875 0.144,-0.359993 0.34575,-0.642242 0.59375,-0.90625 0.256,-0.263992 0.55425,-0.480992 0.90625,-0.625 0.36,-0.151991 0.77875,-0.218741 1.21875,-0.21875 z m -1,6.906252 1.90625,0 0,1.84375 -1.90625,0 0,-1.84375 z"
        style="color:#000000;fill:#11202c;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
        inkscape:export-filename="/Users/saman/Dropbox/work_repos/gai-gain/assets/images/sprite.png"
        inkscape:export-xdpi="90"
        inkscape:export-ydpi="90" />
     <g
        style="fill:#11202c;fill-opacity:1;display:inline"
-       transform="translate(-320,7.362296)"
+       transform="translate(-320,2.362296)"
        id="g6169"
        inkscape:export-filename="/Users/saman/Dropbox/work_repos/gai-gain/assets/images/sprite.png"
        inkscape:export-xdpi="90"
@@ -410,7 +410,7 @@
     </g>
     <g
        style="fill:#11202c;fill-opacity:1;display:inline"
-       transform="translate(-301,7.362296)"
+       transform="translate(-301,2.362296)"
        id="g6177"
        inkscape:export-filename="/Users/saman/Dropbox/work_repos/gai-gain/assets/images/sprite.png"
        inkscape:export-xdpi="90"
@@ -443,7 +443,7 @@
     </g>
     <g
        style="fill:#ffffff;fill-opacity:1;display:inline"
-       transform="translate(-335,8.362176)"
+       transform="translate(-335,3.362176)"
        id="g6189"
        inkscape:export-filename="/Users/saman/Dropbox/work_repos/gai-gain/assets/images/sprite.png"
        inkscape:export-xdpi="90"
@@ -476,20 +476,20 @@
     <text
        sodipodi:linespacing="120%"
        id="text6201"
-       y="39.864693"
+       y="34.864693"
        x="29"
        style="font-size:15px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-indent:0;text-align:start;text-decoration:none;line-height:120.00000477%;letter-spacing:0px;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:start;baseline-shift:baseline;color:#000000;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Alternate Gothic LT No3;-inkscape-font-specification:Alternate Gothic LT No3 Bold"
        xml:space="preserve"
        inkscape:export-filename="/Users/saman/Dropbox/work_repos/gai-gain/assets/images/sprite.png"
        inkscape:export-xdpi="90"
        inkscape:export-ydpi="90"><tspan
-         y="39.864693"
+         y="34.864693"
          x="29"
          id="tspan6203"
          sodipodi:role="line">MAP</tspan></text>
     <g
        style="fill:#ffffff;fill-opacity:1;display:inline"
-       transform="translate(-325,8.362176)"
+       transform="translate(-325,3.362176)"
        id="g6205"
        inkscape:export-filename="/Users/saman/Dropbox/work_repos/gai-gain/assets/images/sprite.png"
        inkscape:export-xdpi="90"
@@ -528,14 +528,14 @@
     <path
        inkscape:connector-curvature="0"
        id="path6219"
-       d="m 282.5,27.36231 c -4.14214,0 -7.5,3.35786 -7.5,7.5 0,4.14212 3.35786,7.49999 7.5,7.49999 4.14214,0 7.5,-3.35787 7.5,-7.49999 0,-4.14214 -3.35786,-7.5 -7.5,-7.5 z m -0.0312,3.125 c 0.568,10e-6 1.03025,0.0588 1.40625,0.21875 0.38399,0.15201 0.70549,0.36176 0.9375,0.59375 0.23199,0.23201 0.37274,0.47801 0.46875,0.75 0.10399,0.26401 0.15624,0.51801 0.15625,0.75 -10e-6,0.384 -0.0523,0.6895 -0.15625,0.9375 -0.096,0.248 -0.19176,0.449 -0.34375,0.625 -0.14401,0.176 -0.31601,0.34075 -0.5,0.46875 -0.17601,0.12 -0.34,0.24699 -0.5,0.37499 -0.16,0.12 -0.3095,0.24625 -0.4375,0.40625 -0.12,0.16 -0.18675,0.385 -0.21875,0.625 l 0,0.4375 -1.625,0 0,-0.53125 c 0.024,-0.344 0.0835,-0.643 0.1875,-0.875 0.112,-0.232 0.231,-0.43374 0.375,-0.59374 0.144,-0.168 0.30875,-0.28625 0.46875,-0.40625 0.16,-0.12 0.3015,-0.255 0.4375,-0.375 0.136,-0.12 0.2325,-0.26225 0.3125,-0.40625 0.088,-0.144 0.133,-0.31525 0.125,-0.53125 0,-0.36799 -0.0973,-0.63649 -0.28125,-0.8125 -0.176,-0.17599 -0.39875,-0.24999 -0.71875,-0.25 -0.216,10e-6 -0.43375,0.037 -0.59375,0.125 -0.152,0.08 -0.271,0.19976 -0.375,0.34375 -0.096,0.13601 -0.17075,0.27676 -0.21875,0.46875 -0.048,0.184 -0.0625,0.37775 -0.0625,0.59375 l -1.75,0 c 0.008,-0.432 0.0515,-0.82749 0.1875,-1.1875 0.144,-0.35999 0.34575,-0.64224 0.59375,-0.90625 0.256,-0.26399 0.55425,-0.48099 0.90625,-0.625 0.36,-0.15199 0.77875,-0.21874 1.21875,-0.21875 z m -1,6.90624 1.90625,0 0,1.84375 -1.90625,0 0,-1.84375 z"
+       d="m 282.5,22.36231 c -4.14214,0 -7.5,3.35786 -7.5,7.5 0,4.14212 3.35786,7.49999 7.5,7.49999 4.14214,0 7.5,-3.35787 7.5,-7.49999 0,-4.14214 -3.35786,-7.5 -7.5,-7.5 z m -0.0312,3.125 c 0.568,10e-6 1.03025,0.0588 1.40625,0.21875 0.38399,0.15201 0.70549,0.36176 0.9375,0.59375 0.23199,0.23201 0.37274,0.47801 0.46875,0.75 0.10399,0.26401 0.15624,0.51801 0.15625,0.75 -10e-6,0.384 -0.0523,0.6895 -0.15625,0.9375 -0.096,0.248 -0.19176,0.449 -0.34375,0.625 -0.14401,0.176 -0.31601,0.34075 -0.5,0.46875 -0.17601,0.12 -0.34,0.24699 -0.5,0.37499 -0.16,0.12 -0.3095,0.24625 -0.4375,0.40625 -0.12,0.16 -0.18675,0.385 -0.21875,0.625 l 0,0.4375 -1.625,0 0,-0.53125 c 0.024,-0.344 0.0835,-0.643 0.1875,-0.875 0.112,-0.232 0.231,-0.43374 0.375,-0.59374 0.144,-0.168 0.30875,-0.28625 0.46875,-0.40625 0.16,-0.12 0.3015,-0.255 0.4375,-0.375 0.136,-0.12 0.2325,-0.26225 0.3125,-0.40625 0.088,-0.144 0.133,-0.31525 0.125,-0.53125 0,-0.36799 -0.0973,-0.63649 -0.28125,-0.8125 -0.176,-0.17599 -0.39875,-0.24999 -0.71875,-0.25 -0.216,10e-6 -0.43375,0.037 -0.59375,0.125 -0.152,0.08 -0.271,0.19976 -0.375,0.34375 -0.096,0.13601 -0.17075,0.27676 -0.21875,0.46875 -0.048,0.184 -0.0625,0.37775 -0.0625,0.59375 l -1.75,0 c 0.008,-0.432 0.0515,-0.82749 0.1875,-1.1875 0.144,-0.35999 0.34575,-0.64224 0.59375,-0.90625 0.256,-0.26399 0.55425,-0.48099 0.90625,-0.625 0.36,-0.15199 0.77875,-0.21874 1.21875,-0.21875 z m -1,6.90624 1.90625,0 0,1.84375 -1.90625,0 0,-1.84375 z"
        style="color:#000000;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
        inkscape:export-filename="/Users/saman/Dropbox/work_repos/gai-gain/assets/images/sprite.png"
        inkscape:export-xdpi="90"
        inkscape:export-ydpi="90" />
     <g
        id="g6309"
-       transform="translate(-320,-82.637697)"
+       transform="translate(-320,-107.6377)"
        style="fill:#ffffff;fill-opacity:1;display:inline"
        inkscape:export-filename="/Users/saman/Dropbox/work_repos/gai-gain/assets/images/sprite.png"
        inkscape:export-xdpi="90"
@@ -559,7 +559,7 @@
        xml:space="preserve"
        style="font-size:15px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-indent:0;text-align:start;text-decoration:none;line-height:120.00000477%;letter-spacing:0px;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:start;baseline-shift:baseline;color:#000000;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Alternate Gothic LT No3;-inkscape-font-specification:Alternate Gothic LT No3 Bold"
        x="29"
-       y="-50.135319"
+       y="-75.135315"
        id="text6317"
        sodipodi:linespacing="120%"
        inkscape:export-filename="/Users/saman/Dropbox/work_repos/gai-gain/assets/images/sprite.png"
@@ -568,10 +568,10 @@
          sodipodi:role="line"
          id="tspan6319"
          x="29"
-         y="-50.135319">MAP</tspan></text>
+         y="-75.135315">MAP</tspan></text>
     <g
        id="g6327"
-       transform="translate(-301,-82.637697)"
+       transform="translate(-301,-107.6377)"
        style="fill:#ffffff;fill-opacity:1;display:inline"
        inkscape:export-filename="/Users/saman/Dropbox/work_repos/gai-gain/assets/images/sprite.png"
        inkscape:export-xdpi="90"
@@ -604,7 +604,7 @@
     </g>
     <g
        id="g6339"
-       transform="translate(-335,-81.637817)"
+       transform="translate(-335,-106.63782)"
        style="fill:#ffffff;fill-opacity:1;display:inline"
        inkscape:export-filename="/Users/saman/Dropbox/work_repos/gai-gain/assets/images/sprite.png"
        inkscape:export-xdpi="90"
@@ -636,7 +636,7 @@
     </g>
     <g
        id="g6351"
-       transform="translate(-325,-81.637817)"
+       transform="translate(-325,-106.63782)"
        style="fill:#ffffff;fill-opacity:1;display:inline"
        inkscape:export-filename="/Users/saman/Dropbox/work_repos/gai-gain/assets/images/sprite.png"
        inkscape:export-xdpi="90"
@@ -674,7 +674,7 @@
     </g>
     <path
        style="color:#000000;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
-       d="m 282.5,-62.637699 c -4.14214,0 -7.5,3.35787 -7.5,7.5 0,4.142139 3.35786,7.500003 7.5,7.500003 4.14214,0 7.5,-3.357864 7.5,-7.500003 0,-4.14213 -3.35786,-7.5 -7.5,-7.5 z m -0.0312,3.125 c 0.568,10e-6 1.03025,0.0588 1.40625,0.21875 0.38399,0.15201 0.70549,0.36176 0.9375,0.59375 0.23199,0.23201 0.37274,0.47801 0.46875,0.75 0.10399,0.26401 0.15624,0.51801 0.15625,0.75 -10e-6,0.38401 -0.0523,0.68951 -0.15625,0.9375 -0.096,0.24801 -0.19176,0.44901 -0.34375,0.625 -0.14401,0.17601 -0.31601,0.34076 -0.5,0.46875 -0.17601,0.12001 -0.34,0.24701 -0.5,0.375 -0.16,0.12001 -0.3095,0.24626 -0.4375,0.40625 -0.12,0.16001 -0.18675,0.38501 -0.21875,0.625 l 0,0.4375 -1.625,0 0,-0.53125 c 0.024,-0.34399 0.0835,-0.64299 0.1875,-0.875 0.112,-0.23199 0.231,-0.43374 0.375,-0.59375 0.144,-0.16799 0.30875,-0.28624 0.46875,-0.40625 0.16,-0.11999 0.3015,-0.25499 0.4375,-0.375 0.136,-0.11999 0.2325,-0.26224 0.3125,-0.40625 0.088,-0.14399 0.133,-0.31524 0.125,-0.53125 0,-0.36799 -0.0973,-0.63649 -0.28125,-0.8125 -0.176,-0.17599 -0.39875,-0.24999 -0.71875,-0.25 -0.216,10e-6 -0.43375,0.037 -0.59375,0.125 -0.152,0.08 -0.271,0.19976 -0.375,0.34375 -0.096,0.13601 -0.17075,0.27676 -0.21875,0.46875 -0.048,0.18401 -0.0625,0.37776 -0.0625,0.59375 l -1.75,0 c 0.008,-0.43199 0.0515,-0.82749 0.1875,-1.1875 0.144,-0.35999 0.34575,-0.64224 0.59375,-0.90625 0.256,-0.26399 0.55425,-0.48099 0.90625,-0.625 0.36,-0.15199 0.77875,-0.21874 1.21875,-0.21875 z m -1,6.906253 1.90625,0 0,1.84375 -1.90625,0 0,-1.84375 z"
+       d="m 282.5,-87.637699 c -4.14214,0 -7.5,3.35787 -7.5,7.5 0,4.142139 3.35786,7.500003 7.5,7.500003 4.14214,0 7.5,-3.357864 7.5,-7.500003 0,-4.14213 -3.35786,-7.5 -7.5,-7.5 z m -0.0312,3.125 c 0.568,1e-5 1.03025,0.0588 1.40625,0.21875 0.38399,0.15201 0.70549,0.36176 0.9375,0.59375 0.23199,0.23201 0.37274,0.47801 0.46875,0.75 0.10399,0.26401 0.15624,0.51801 0.15625,0.75 -10e-6,0.38401 -0.0523,0.68951 -0.15625,0.9375 -0.096,0.24801 -0.19176,0.44901 -0.34375,0.625 -0.14401,0.17601 -0.31601,0.34076 -0.5,0.46875 -0.17601,0.12001 -0.34,0.24701 -0.5,0.375 -0.16,0.12001 -0.3095,0.24626 -0.4375,0.40625 -0.12,0.16001 -0.18675,0.38501 -0.21875,0.625 l 0,0.4375 -1.625,0 0,-0.53125 c 0.024,-0.34399 0.0835,-0.64299 0.1875,-0.875 0.112,-0.23199 0.231,-0.43374 0.375,-0.59375 0.144,-0.16799 0.30875,-0.28624 0.46875,-0.40625 0.16,-0.11999 0.3015,-0.25499 0.4375,-0.375 0.136,-0.11999 0.2325,-0.26224 0.3125,-0.40625 0.088,-0.14399 0.133,-0.31524 0.125,-0.53125 0,-0.36799 -0.0973,-0.63649 -0.28125,-0.8125 -0.176,-0.17599 -0.39875,-0.24999 -0.71875,-0.25 -0.216,1e-5 -0.43375,0.037 -0.59375,0.125 -0.152,0.08 -0.271,0.19976 -0.375,0.34375 -0.096,0.13601 -0.17075,0.27676 -0.21875,0.46875 -0.048,0.18401 -0.0625,0.37776 -0.0625,0.59375 l -1.75,0 c 0.008,-0.43199 0.0515,-0.82749 0.1875,-1.1875 0.144,-0.35999 0.34575,-0.64224 0.59375,-0.90625 0.256,-0.26399 0.55425,-0.48099 0.90625,-0.625 0.36,-0.15199 0.77875,-0.21874 1.21875,-0.21875 z m -1,6.906253 1.90625,0 0,1.84375 -1.90625,0 0,-1.84375 z"
        id="path6365"
        inkscape:connector-curvature="0"
        inkscape:export-filename="/Users/saman/Dropbox/work_repos/gai-gain/assets/images/sprite.png"
@@ -702,7 +702,7 @@
     </g>
     <g
        id="g8001"
-       transform="translate(0,-80.031295)"
+       transform="translate(160,-130.0313)"
        inkscape:export-filename="/Users/saman/Dropbox/work_repos/gai-gain/assets/images/sprite.png"
        inkscape:export-xdpi="90"
        inkscape:export-ydpi="90">
@@ -826,7 +826,7 @@
          style="font-size:medium;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:start;text-decoration:none;line-height:normal;letter-spacing:normal;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:start;baseline-shift:baseline;color:#000000;fill:#ebebeb;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:2;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Sans;-inkscape-font-specification:Sans" />
     </g>
     <path
-       transform="matrix(0.13333337,0,0,0.13333337,-10.000003,163.6955)"
+       transform="matrix(0.16666667,0,0,0.16666667,-12.5,154.52884)"
        d="m 135,245 a 30,30 0 1 1 -60,0 30,30 0 1 1 60,0 z"
        sodipodi:ry="30"
        sodipodi:rx="30"
@@ -1549,7 +1549,7 @@
        transform="translate(-2.499972,-72.500025)">
       <path
          transform="matrix(0.25,0,0,0.25,18.749972,1116.1122)"
-         d="m 135,245 c 0,16.56854 -13.43146,30 -30,30 -16.568542,0 -30,-13.43146 -30,-30 0,-16.56854 13.431458,-30 30,-30 16.56854,0 30,13.43146 30,30 z"
+         d="m 135,245 a 30,30 0 1 1 -60,0 30,30 0 1 1 60,0 z"
          sodipodi:ry="30"
          sodipodi:rx="30"
          sodipodi:cy="245"
@@ -1571,7 +1571,7 @@
          sodipodi:cy="245"
          sodipodi:rx="30"
          sodipodi:ry="30"
-         d="m 135,245 c 0,16.56854 -13.43146,30 -30,30 -16.568542,0 -30,-13.43146 -30,-30 0,-16.56854 13.431458,-30 30,-30 16.56854,0 30,13.43146 30,30 z"
+         d="m 135,245 a 30,30 0 1 1 -60,0 30,30 0 1 1 60,0 z"
          transform="matrix(0.16666594,0,0,0.16666594,27.500034,1136.529)" />
     </g>
     <g
@@ -1583,7 +1583,7 @@
        inkscape:export-ydpi="90">
       <path
          transform="matrix(0.24999988,0,0,0.24999988,-101.74999,136.24991)"
-         d="m 135,245 c 0,16.56854 -13.43146,30 -30,30 -16.568542,0 -30,-13.43146 -30,-30 0,-16.56854 13.431458,-30 30,-30 16.56854,0 30,13.43146 30,30 z"
+         d="m 135,245 a 30,30 0 1 1 -60,0 30,30 0 1 1 60,0 z"
          sodipodi:ry="30"
          sodipodi:rx="30"
          sodipodi:cy="245"
@@ -1605,7 +1605,7 @@
          sodipodi:cy="245"
          sodipodi:rx="30"
          sodipodi:ry="30"
-         d="m 135,245 c 0,16.56854 -13.43146,30 -30,30 -16.568542,0 -30,-13.43146 -30,-30 0,-16.56854 13.431458,-30 30,-30 16.56854,0 30,13.43146 30,30 z"
+         d="m 135,245 a 30,30 0 1 1 -60,0 30,30 0 1 1 60,0 z"
          transform="matrix(0.15,0,0,0.15,-91.249986,160.74987)" />
     </g>
     <g
@@ -1626,11 +1626,11 @@
          sodipodi:cy="245"
          sodipodi:rx="30"
          sodipodi:ry="30"
-         d="m 135,245 c 0,16.56854 -13.43146,30 -30,30 -16.568542,0 -30,-13.43146 -30,-30 0,-16.56854 13.431458,-30 30,-30 16.56854,0 30,13.43146 30,30 z"
+         d="m 135,245 a 30,30 0 1 1 -60,0 30,30 0 1 1 60,0 z"
          transform="matrix(0.25,0,0,0.25,-113.25,195.74988)" />
       <path
          transform="matrix(0.16666544,0,0,0.16666544,-104.49989,216.16684)"
-         d="m 135,245 c 0,16.56854 -13.43146,30 -30,30 -16.568542,0 -30,-13.43146 -30,-30 0,-16.56854 13.431458,-30 30,-30 16.56854,0 30,13.43146 30,30 z"
+         d="m 135,245 a 30,30 0 1 1 -60,0 30,30 0 1 1 60,0 z"
          sodipodi:ry="30"
          sodipodi:rx="30"
          sodipodi:cy="245"
@@ -1651,7 +1651,7 @@
        inkscape:export-ydpi="90">
       <path
          transform="matrix(0.25,0,0,0.25,-115.75,168.24988)"
-         d="m 135,245 c 0,16.56854 -13.43146,30 -30,30 -16.568542,0 -30,-13.43146 -30,-30 0,-16.56854 13.431458,-30 30,-30 16.56854,0 30,13.43146 30,30 z"
+         d="m 135,245 a 30,30 0 1 1 -60,0 30,30 0 1 1 60,0 z"
          sodipodi:ry="30"
          sodipodi:rx="30"
          sodipodi:cy="245"
@@ -1673,7 +1673,7 @@
          sodipodi:cy="245"
          sodipodi:rx="30"
          sodipodi:ry="30"
-         d="m 135,245 c 0,16.56854 -13.43146,30 -30,30 -16.568542,0 -30,-13.43146 -30,-30 0,-16.56854 13.431458,-30 30,-30 16.56854,0 30,13.43146 30,30 z"
+         d="m 135,245 a 30,30 0 1 1 -60,0 30,30 0 1 1 60,0 z"
          transform="matrix(0.16666711,0,0,0.16666711,-107.00005,188.66643)" />
     </g>
     <g
@@ -1685,7 +1685,7 @@
        inkscape:export-ydpi="90">
       <path
          transform="matrix(0.25,0,0,0.25,-113.25,225.74988)"
-         d="m 135,245 c 0,16.56854 -13.43146,30 -30,30 -16.568542,0 -30,-13.43146 -30,-30 0,-16.56854 13.431458,-30 30,-30 16.56854,0 30,13.43146 30,30 z"
+         d="m 135,245 a 30,30 0 1 1 -60,0 30,30 0 1 1 60,0 z"
          sodipodi:ry="30"
          sodipodi:rx="30"
          sodipodi:cy="245"
@@ -1707,7 +1707,7 @@
          sodipodi:cy="245"
          sodipodi:rx="30"
          sodipodi:ry="30"
-         d="m 135,245 c 0,16.56854 -13.43146,30 -30,30 -16.568542,0 -30,-13.43146 -30,-30 0,-16.56854 13.431458,-30 30,-30 16.56854,0 30,13.43146 30,30 z"
+         d="m 135,245 a 30,30 0 1 1 -60,0 30,30 0 1 1 60,0 z"
          transform="matrix(0.16666667,0,0,0.16666667,-104.50002,246.16653)" />
     </g>
     <g
@@ -1728,11 +1728,11 @@
          sodipodi:cy="245"
          sodipodi:rx="30"
          sodipodi:ry="30"
-         d="m 135,245 c 0,16.56854 -13.43146,30 -30,30 -16.568542,0 -30,-13.43146 -30,-30 0,-16.56854 13.431458,-30 30,-30 16.56854,0 30,13.43146 30,30 z"
+         d="m 135,245 a 30,30 0 1 1 -60,0 30,30 0 1 1 60,0 z"
          transform="matrix(0.25,0,0,0.25,-113.25,255.74988)" />
       <path
          transform="matrix(0.16666667,0,0,0.16666667,-104.50002,276.16653)"
-         d="m 135,245 c 0,16.56854 -13.43146,30 -30,30 -16.568542,0 -30,-13.43146 -30,-30 0,-16.56854 13.431458,-30 30,-30 16.56854,0 30,13.43146 30,30 z"
+         d="m 135,245 a 30,30 0 1 1 -60,0 30,30 0 1 1 60,0 z"
          sodipodi:ry="30"
          sodipodi:rx="30"
          sodipodi:cy="245"
