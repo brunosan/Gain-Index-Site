@@ -882,7 +882,7 @@ model.meta = {
     "vulnerability_delta": {
         "id": "vulnerability_delta",
         "name": "Vulnerability, corrected for GDP",
-        "description": "There is a strong negative correlation between a country's GDP and their vulnerability scores. GDP corrected scores first recacluate a vulnerability score based on a country's GDP and then take the difference between this score and the average score of all countries in the same income group. These corrected scores have been intentionally inverted so that higher scores represent better scores.",
+        "description": "There is a strong negative correlation between a country's GDP and their vulnerability scores. GDP corrected scores first recacluate a vulnerability score based on a country's GDP and then take the difference between the country's actual vulnerability score and the corrected score. These corrected scores have been intentionally inverted so that higher scores represent better scores.",
         "format": "number",
         "decimals": "3",
         "unit": null,
@@ -904,7 +904,7 @@ model.meta = {
     "readiness_delta": {
         "id": "readiness_delta",
         "name": "Readiness, corrected for GDP",
-        "description": "There is a strong positive correlation between a country's GDP and their readiness scores. GDP corrected scores first recacluate a readiness score based on a country's GDP and then take the difference between this score and the average score of all countries in the same income group. Higher scores represent better scores.",
+        "description": "There is a strong positive correlation between a country's GDP and their readiness scores. GDP corrected scores first recacluate a readiness score based on a country's GDP and then take the difference between this score and the actual readiness score of the country. Higher scores represent better scores.",
         "format": "number",
         "decimals": "3",
         "unit": null,
