@@ -1334,6 +1334,10 @@ div.bottomscorelabel {
   color: #8C8C8C;
   }
 
+.ranking thead tr th a.sort.label.rank   { background: url('../images/sprite.png') 221px -412px; }
+.ranking thead tr th a.sort.label.alpha  { background: url('../images/sprite.png') 238px -412px; }
+.ranking thead tr th a.sort.label.income { background: url('../images/sprite.png') 269px -412px; }
+
 .ranking thead tr th a.sort.label.rank.activeSort   { background: url('../images/sprite.png') 31px -412px; }
 .ranking thead tr th a.sort.label.alpha.activeSort  { background: url('../images/sprite.png') 48px -412px; }
 .ranking thead tr th a.sort.label.income.activeSort { background: url('../images/sprite.png') 79px -412px; }
