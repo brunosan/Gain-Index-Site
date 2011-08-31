@@ -871,7 +871,7 @@ model.meta = {
     "vulnerability": {
         "id": "vulnerability",
         "name": "Vulnerability",
-        "description": "Vulnerability measures a country's exposure, sensitivity and ability to cope with climate related hazards, as well as accounting for the overall status of food, water, health and infrastructure within the nation. It displays a score from 0 to 1, calculated by average of its component scores. Lower scores represent lower vulnerability.",
+        "description": "Vulnerability measures a country's exposure, sensitivity and ability to cope with climate related hazards, as well as accounting for the overall status of food, water, health and infrastructure within the nation",
         "format": "number",
         "decimals": "3",
         "unit": null,
@@ -882,7 +882,7 @@ model.meta = {
     "vulnerability_delta": {
         "id": "vulnerability_delta",
         "name": "Vulnerability, corrected for GDP",
-        "description": "There is a strong negative correlation between a country's GDP and their vulnerability scores. GDP corrected scores first recacluate a vulnerability score based on a country's GDP and then take the difference between the country's actual vulnerability score and the corrected score. These corrected scores have been intentionally inverted so that higher scores represent better scores.",
+        "description": "GDP corrected vulnerability scores represent how far the actual vulnerability score of a country is from its expected readiness score based on its income level",
         "format": "number",
         "decimals": "3",
         "unit": null,
@@ -893,7 +893,7 @@ model.meta = {
     "readiness": {
         "id": "readiness",
         "name": "Readiness",
-        "description": "Readiness measures the ability of a country's private and public sectors to leverage resources effectively towards increasing resiliency to climate change. It displays a score from 0 to 1, calculated by a weighted sum of its component scores. Higher scores represent better readiness scores.",
+        "description": "Readiness measures the ability of a country's private and public sectors to leverage resources effectively towards increasing resiliency to climate change",
         "format": "number",
         "decimals": "3",
         "unit": null,
@@ -904,7 +904,7 @@ model.meta = {
     "readiness_delta": {
         "id": "readiness_delta",
         "name": "Readiness, corrected for GDP",
-        "description": "There is a strong positive correlation between a country's GDP and their readiness scores. GDP corrected scores first recacluate a readiness score based on a country's GDP and then take the difference between this score and the actual readiness score of the country. Higher scores represent better scores.",
+        "description": "GDP corrected readiness scores represent how far the actual readiness score of a country is from its expected readiness score based on its income level",
         "format": "number",
         "decimals": "3",
         "unit": null,
