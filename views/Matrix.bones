@@ -72,13 +72,13 @@ view = views.Main.extend({
                 _(v.get('values')).each(function(d, y) {
                     var iso = v.get('ISO3');
                     if (countries[iso] == undefined) {
-                      countries[iso] = iso;
+                      countries[iso] = new models.Country({id: iso});
                     }
 
                     if (map[y][iso] == undefined) {
                         var item = {
                             iso: iso,
-                            name: v.get('country')
+                            name: countries[iso].meta('name')
                         };
 
                         map[y][iso] = item;
