@@ -1,13 +1,13 @@
-// * Readiness range accounting for std dev is 0.1 - 0.9
+// * Readiness range is 0 - 0.85
 // Our matrix is 580 px wide
 var readinessToX = function(d) {
-    return Math.round(((d - 0.1) / 0.8) * 580);
+    return Math.round(((d - .1) / 0.85) * 580);
 };
 
-// * Vulnerability range accounting for std dev is 0 - 0.6
+// * Vulnerability range 0 - 0.7
 // ...and 410 tall
 var vulnerabilityToY= function(d) {
-    return Math.round((d / 0.6) * 410);
+    return Math.round(((d - 0.1) / 0.7) * 410);
 };
 
 var openTooltips = 0;
