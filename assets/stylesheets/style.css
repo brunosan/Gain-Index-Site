@@ -275,7 +275,8 @@ ul.tabs li a.active {
   font-weight: bold;
   line-height: 1.2;
   width: 100px;
-  color: #5a2;
+  color: #6ad42a; /*Boosted contrast to define off the dark blue*/
+  text-shadow: 0 -1px 0 rgba(0,0,0,0.9);
   }
 #header .navigation {
   position: absolute;
@@ -1510,6 +1511,18 @@ div.bottomscorelabel {
   float: left;
   padding: 0;
   }
+  .big-matrix div.year-controls a.play-button {
+    background: transparent url(../images/sprite.png) 5px -1300px;
+    display: block;
+    float: left;
+    width: 20px;
+    height: 20px;
+    text-indent: -999em;
+    margin-top: 3px;
+    }
+  .big-matrix div.year-controls a.play-button.running {
+    background-position: 5px -1325px;
+    }
 .big-matrix ul.year-selector li  { float: left; }
 
 .big-matrix div.year-controls a.play-button,
@@ -1570,13 +1583,13 @@ div.bottomscorelabel {
     color: #fff;
     }
     .country-selector .active-countries span.country a.remove {
-      background: transparent url(../images/sprite.png) 0 -1278px;
+      background: transparent url(../images/sprite.png) 0 -1275px;
       display: block;
-      width: 17px;
-      height: 17px;
+      width: 20px;
+      height: 20px;
       position: absolute;
-      right: 10px;
-      top: 7px;
+      right: 5px;
+      top: 5px;
       text-indent: -999em;
       }
 
