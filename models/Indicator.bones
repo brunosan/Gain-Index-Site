@@ -871,7 +871,7 @@ model.meta = {
     "vulnerability": {
         "id": "vulnerability",
         "name": "Vulnerability",
-        "description": "Vulnerability measures a country's exposure, sensitivity and ability to cope with climate related hazards, as well as accounting for the overall status of food, water, health and infrastructure within the nation. It displays a score from 0 to 1, calculated by average of its component scores. Lower scores represent better vulnerability scores.",
+        "description": "Vulnerability measures a country's exposure, sensitivity and ability to cope with climate related hazards, as well as accounting for the overall status of food, water, health and infrastructure within the nation. It displays a score from 0 to 1, calculated by average of its component scores. Lower scores represent lower vulnerability.",
         "format": "number",
         "decimals": "3",
         "unit": null,

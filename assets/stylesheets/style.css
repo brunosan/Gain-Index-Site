@@ -275,7 +275,8 @@ ul.tabs li a.active {
   font-weight: bold;
   line-height: 1.2;
   width: 100px;
-  color: #5a2;
+  color: #fff;
+  text-shadow: 0 -1px 0 rgba(0,0,0,0.9);
   }
 #header .navigation {
   position: absolute;
@@ -507,6 +508,14 @@ li.ui-menu-item a.ui-corner-all {
   }
 .bonesAdminEditing #cabinet {
   z-index: auto;
+  }
+#bonesAdminPopup {
+  z-index: 25!important;
+  }
+#bonesAdminPopup .header h2 {
+  font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
+  color: white;
+  line-height: 1px;
   }
 #cabinet .top {
   float: left;
@@ -1451,14 +1460,14 @@ div.bottomscorelabel {
  */
 .big-matrix {
   position:relative;
-  height: 490px;
+  height: 430px;
   width: 640px;
   }
 
 .big-matrix .graph {
   position:relative;
   width: 580px;
-  height: 410px;
+  height: 350px;
   margin-left: 60px;
   margin-bottom: 30px;
   border-style: solid;
@@ -1508,15 +1517,27 @@ div.bottomscorelabel {
 .big-matrix div.year-controls,
 .big-matrix ul.year-selector {
   float: left;
-  padding: 0;
+  padding: 0 3px;
   }
+  .big-matrix div.year-controls a.play-button {
+    background: transparent url(../images/sprite.png) 5px -1300px;
+    display: block;
+    float: left;
+    width: 20px;
+    height: 20px;
+    text-indent: -999em;
+    margin-top: 5px;
+    }
+  .big-matrix div.year-controls a.play-button.running {
+    background-position: 5px -1325px;
+    }
 .big-matrix ul.year-selector li  { float: left; }
 
 .big-matrix div.year-controls a.play-button,
 .big-matrix ul.year-selector li a {
   color: #fff;
   float: left;
-  padding: 0 6px;
+  padding: 2px 5px;
   line-height: 25px;
   font-size: 10px;
   font-weight: bold;
@@ -1570,13 +1591,13 @@ div.bottomscorelabel {
     color: #fff;
     }
     .country-selector .active-countries span.country a.remove {
-      background: transparent url(../images/sprite.png) 0 -1278px;
+      background: transparent url(../images/sprite.png) 0 -1275px;
       display: block;
-      width: 17px;
-      height: 17px;
+      width: 20px;
+      height: 20px;
       position: absolute;
-      right: 10px;
-      top: 7px;
+      right: 5px;
+      top: 5px;
       text-indent: -999em;
       }
 
