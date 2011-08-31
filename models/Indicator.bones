@@ -915,8 +915,8 @@ model.meta = {
     "gain": {
         "id": "gain",
         "name": "GaIn™",
-        "description": "The Global Adaptation Index™ (GaIn™) summarizes a country's Vulnerability to climate change and its Readiness to improve resilience.",
-        "description_long": "The Global Adaptation Index™ (GaIn™) exposes countries' vulnerabilities to climate change and opportunities to improve resilience. It aims to help businesses and the public sector to better prioritize investments for a more efficient response to the immediate global challenges ahead.",
+        "description": "The Global Adaptation Index™ (GaIn™) summarizes a country's Vulnerability to climate change and other global challenges on the one hand and its Readiness to improve resilience on the other hand.",
+        "description_long": "The Global Adaptation Index™ (GaIn™) summarizes a country's Vulnerability to climate change and other global challenges on the one hand and its Readiness to improve resilience on the other hand. It aims to help businesses and the public sector to better prioritize investments for a more efficient response to the immediate global challenges ahead.",
         "format": "number",
         "decimals": "1",
         "unit": null,
