@@ -28,6 +28,10 @@ view = views.Main.extend({
         'mouseleave div.point': 'pointUnhover'
     },
     pageTitle: "Matrix",
+    initialize: function(options) {
+        _.bindAll(this, 'pointSelect', 'removeCountry');
+        views.Main.prototype.initialize.call(this, options);
+    },
     render: function() {
         $(this.el).empty().append(templates.Cabinet({klass: 'matrix'}));
         var gain = new models.Indicator({id: 'gain'});
@@ -66,6 +70,7 @@ view = views.Main.extend({
             countries = {};
 
         this.countryOrder = {};
+
         this.data = data;
 
         for (var i = 1995; i <= 2010; i++) {
@@ -122,14 +127,38 @@ view = views.Main.extend({
 
         $('ul.year-selector a.year-2010', this.el).addClass('active');
 
+        // Create a collection to manage the selected countries.
+        this.selected = new Backbone.Collection();
 
-        var search = $('.country-selector input[name=country]', this.el),
-            searchTitle = search.attr('title');
+        // Bind the transformation of the DOM to the events of this
+        // collection.
+        this.selected.bind('add', function(model) {
+            var target = $('.graph .country-'+ model.id, view.el).parents('.point');
+            var label = $('.active-countries .country-'+ model.id, view.el);
+            var data = target.get(0).__data__;
 
-        search
-            .blur(function() { search.val() === '' && search.val(searchTitle);  })
-            .focus(function() { search.val() === searchTitle && search.val('');  })
-            .blur();
+            var quad = view.quadrant(data);
+            $(target).addClass('active-' + quad);
+            $('.active-countries', this.el).append(templates.CountryOption(data));
+        });
+        this.selected.bind('remove', function(model) {
+            var target = $('.graph .country-'+ model.id, view.el).parents('.point');
+            var label = $('.active-countries .country-'+ model.id, view.el);
+
+            label.remove();
+
+            target.removeClass('active-tl')
+                .removeClass('active-tr')
+                .removeClass('active-bl')
+                .removeClass('active-br');
+        });
+
+        (new views.CountrySelect({
+            model: new models.CountrySearch(),
+            selected: this.selected,
+            resultLimit: 10
+        })).render();
+
 
         return this;
     },
@@ -214,18 +243,15 @@ view = views.Main.extend({
     },
     pointSelect: function(ev) {
         var data = ev.currentTarget.__data__;
-        if ($('.active-countries .country-'+ data.iso, this.el).length) {
-            $('.active-countries .country-'+ data.iso, this.el).remove();
-            $(ev.currentTarget)
-              .removeClass('active-tl')
-              .removeClass('active-tr')
-              .removeClass('active-bl')
-              .removeClass('active-br');
+        var country = this.selected.find(function(m) {
+            return m.get('ISO3') === data.iso;
+        });
+
+        if (country) {
+            this.selected.remove(country);
         } else {
-            var quad = this.quadrant(data);
-            $(ev.currentTarget).addClass('active-' + quad);
-            $('.active-countries', this.el).append(templates.CountryOption(data));
-        }
+            this.selected.add([new models.Country({id: data.iso})]);
+         }
         ev.preventDefault();
     },
     quadrant: function(data) {
@@ -245,19 +271,17 @@ view = views.Main.extend({
         return quad;
     },
     removeCountry: function(ev) {
+        var isoRegex = /country-(\w{3})/;
+
         var elem = $(ev.currentTarget).parents('span:first');
-        _(elem.attr('class').split(' ')).each(function(v) {
-            if (v.slice(0,8) === 'country-') {
-                var iso = v.slice(8);
-                elem.remove();
-                $('.graph .country-'+iso, this.el)
-                    .parents('.point')
-                    .removeClass('active-tl')
-                    .removeClass('active-tr')
-                    .removeClass('active-bl')
-                    .removeClass('active-br');
-            }
-        });
+        var matches = isoRegex.exec(elem.attr('class'));
+
+        if (matches && matches[1]) {
+            var country = this.selected.find(function(m) {
+                return m.get('ISO3') === matches[1];
+            });
+            this.selected.remove(country);
+        }
         ev.preventDefault();
     },
     openDrawer: function(ev) {
