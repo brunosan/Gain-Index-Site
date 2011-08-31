@@ -509,6 +509,14 @@ li.ui-menu-item a.ui-corner-all {
 .bonesAdminEditing #cabinet {
   z-index: auto;
   }
+#bonesAdminPopup {
+  z-index: 25!important;
+  }
+#bonesAdminPopup .header h2 {
+  font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
+  color: white;
+  line-height: 1px;
+  }
 #cabinet .top {
   float: left;
   width: 640px;
