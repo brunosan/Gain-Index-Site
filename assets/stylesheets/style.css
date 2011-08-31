@@ -1509,7 +1509,7 @@ div.bottomscorelabel {
 .big-matrix div.year-controls,
 .big-matrix ul.year-selector {
   float: left;
-  padding: 0;
+  padding: 0 3px;
   }
   .big-matrix div.year-controls a.play-button {
     background: transparent url(../images/sprite.png) 5px -1300px;
@@ -1529,7 +1529,7 @@ div.bottomscorelabel {
 .big-matrix ul.year-selector li a {
   color: #fff;
   float: left;
-  padding: 2px 6px;
+  padding: 2px 5px;
   line-height: 25px;
   font-size: 10px;
   font-weight: bold;
