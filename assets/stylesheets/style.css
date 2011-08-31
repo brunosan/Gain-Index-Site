@@ -387,6 +387,33 @@ ul.tabs li a.active {
   margin-left: 5px;
   }
 #footer1 .search input.button:hover {background-color: #21405d;}
+/*Autocomplete*/
+/*Autocomplete Dropdown*/
+.ui-autocomplete {
+  background: #fff;
+  margin: 3px 5px 5px;
+  width: 185px;
+  padding: 4px 0px;
+  z-index: 9999;
+  }
+li.ui-menu-item a {
+  display: block;
+  border: 0px;
+  color: #333;
+  }
+li.ui-menu-item a.ui-corner-all {
+  padding: 4px 10px;
+  border: 0px;
+  cursor: pointer;
+  background-color: transparent;
+  font-weight: normal;
+  z-index: 100;
+  }
+.ui-menu .ui-menu-item a.ui-state-hover,
+.ui-menu .ui-menu-item a.ui-state-active {
+  background: #ebebeb;
+  }
+
 /*** Bottom Footer Styles ***/
 #footer2 {
   height: 150px;
@@ -616,7 +643,7 @@ table.data {
 table.data tr td{
   line-height: 25px;
   }
-table.data thead tr {
+table.data thead tr td {
   text-align: left;
   }
 table.data tbody tr td {
@@ -1003,17 +1030,17 @@ table.data thead {
   }
 table.data tbody tr.active td{
   cursor: pointer;
-  background: #ebebeb;
+  background-color: #ebebeb;
   }
 table.data tbody tr td:hover,
 table.data tbody tr:hover {
   cursor: pointer;
-  background: #f5f5f5;
+  background-color: #f5f5f5;
   }
 table.data tbody tr.active td:hover,
 table.data tbody tr.active:hover {
   cursor: pointer;
-  background: #ebebeb;
+  background-color: #ebebeb;
   }
 /**
  * Country pages
@@ -1055,7 +1082,9 @@ table.data tbody tr.active:hover {
   border-bottom: 1px solid #ebebeb;
   }
 .country-profile tr.worst td.score {
-  background: url('../images/sprite.png') 50px -885px no-repeat;
+  background-image: url('../images/sprite.png');
+  background-repeat: no-repeat;
+  background-position: 50px -885px;
   }
 .country-profile tr.index td{
   font-size: 16px;
@@ -1528,13 +1557,28 @@ div.bottomscorelabel {
   display: block;
   float: left;
   margin: 0 10px 10px 0;
-  padding: 0 20px 0 5px;
+  padding: 0 35px 0 10px;
   line-height: 30px;
   background: #a8a8a8;
+  border-top: 2px solid #888;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  position: relative;
   }
-.country-selector .active-countries span.country a {
-  color: #fff;
-  }
+  .country-selector .active-countries span.country a {
+    color: #fff;
+    }
+    .country-selector .active-countries span.country a.remove {
+      background: transparent url(../images/sprite.png) 0 -1278px;
+      display: block;
+      width: 17px;
+      height: 17px;
+      position: absolute;
+      right: 10px;
+      top: 7px;
+      text-indent: -999em;
+      }
 
 .gapminder {
   border-top: 1px solid #c6c6c6;
