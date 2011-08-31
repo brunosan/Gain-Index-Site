@@ -132,7 +132,7 @@ view = views.Main.extend({
             methodologyHash:
                 (indicator.meta('component') || indicator.meta('sector')) ?
                 'scoringindicators' :
-                indicator.get('name')
+                indicator.meta('index')
         }));
 
         // Lazy load 5 similar countries.
