@@ -51,7 +51,12 @@ h4 {
 
 p {
   color: black;
+  margin-bottom: 10px;
 }
+
+p:last-child {
+  margin-bottom: 0px;
+  }
 a {
 color: black;
 text-decoration: none;
@@ -104,10 +109,12 @@ table.data {
   width: 100%;
   table-layout: fixed;
   clear: left;
+  font-size: 12px;
   }
 table.data tr {
-  line-height: 20px;
+  line-height: 16px;
   }
+  
 table.data thead tr {
   text-align: left;
   border-bottom: 1px solid #ebebeb;
@@ -118,7 +125,7 @@ table.data tbody tr {
 
 table.data tr.section { 
   font-weight: bold;
-  line-height: 30px;
+  line-height: 16px;
   }
 
 table.data tr.index td.name { 
@@ -131,9 +138,6 @@ table.data tr.index td.name {
   font-size: 28px;
   }
 
-table.data tr.index td.score {
-
-}
 .rank-number { 
   width: 20px; 
   padding: 0 5px;
@@ -141,25 +145,9 @@ table.data tr.index td.score {
   -webkit-border-radius: 4px;
   border-radius: 4px;
   text-align: center;}
-  
 
-/*** Table Tabs ***/
-
-/*** Outlook*/
- 
-.icon-outlook {
-  height: 15px;
-  width: 15px;
-  text-indent: -9999px;
-  background-image: url('../images/sprite.png');
-  background-repeat: no-repeat;
-  }
-
-  .icon-outlook-up { background-position: 0px -430px; }
-  .icon-outlook-down { background-position: 0px -410px; }
-  .icon-outlook-same { background-position: 0px -389px; }
-
-  .country-summary div.gain .icon-outlook {
+/*** Outlook ***/
+ .country-summary div.gain .icon-outlook {
       display: inline-block;
       width: 15px;
       height: 15px;

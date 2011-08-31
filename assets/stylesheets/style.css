@@ -1346,9 +1346,9 @@ div.bottomscorelabel {
   color: #8C8C8C;
   }
 
-.ranking thead tr th a.sort.label.rank.activeSort   { background: url('../images/sprite.png') 223px -412px; }
-.ranking thead tr th a.sort.label.alpha.activeSort  { background: url('../images/sprite.png') 239px -412px; }
-.ranking thead tr th a.sort.label.income.activeSort { background: url('../images/sprite.png') 271px -412px; }
+.ranking thead tr th a.sort.label.rank.activeSort   { background: url('../images/sprite.png') 31px -412px; }
+.ranking thead tr th a.sort.label.alpha.activeSort  { background: url('../images/sprite.png') 48px -412px; }
+.ranking thead tr th a.sort.label.income.activeSort { background: url('../images/sprite.png') 79px -412px; }
 .ranking p.label: 
 .ranking {
   background-color: #ebebeb;
