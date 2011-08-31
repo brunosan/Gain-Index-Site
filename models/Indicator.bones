@@ -927,7 +927,7 @@ model.meta = {
     "gain_delta": {
         "id": "gain_delta",
         "name": "GaIn™, corrected for GDP",
-        "description": "There is a strong positive correlation between a country's GDP and their GaIn™ scores. GDP corrected scores are the sums of countries' corrected readiness and vulnerability scores. Higher scores represent better scores.",
+        "description": "GDP corrected scores are the sums of countries' corrected readiness and vulnerability scores",
         "format": "number",
         "decimals": "1",
         "unit": null,
