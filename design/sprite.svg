@@ -27,9 +27,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1"
-     inkscape:cx="166.98214"
-     inkscape:cy="1485.4669"
+     inkscape:zoom="2.8284271"
+     inkscape:cx="-31.007756"
+     inkscape:cy="1252.7462"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="true"
@@ -826,7 +826,7 @@
          style="font-size:medium;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:start;text-decoration:none;line-height:normal;letter-spacing:normal;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:start;baseline-shift:baseline;color:#000000;fill:#ebebeb;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:2;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Sans;-inkscape-font-specification:Sans" />
     </g>
     <path
-       transform="matrix(0.13333337,0,0,0.13333337,-10.000003,163.6955)"
+       transform="matrix(0.16666667,0,0,0.16666667,-12.5,154.52884)"
        d="m 135,245 a 30,30 0 1 1 -60,0 30,30 0 1 1 60,0 z"
        sodipodi:ry="30"
        sodipodi:rx="30"
