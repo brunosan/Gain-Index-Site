@@ -155,10 +155,10 @@ view = views.Main.extend({
                     // don't bother with this interpolator.
                     if ('point active-' + view.quadrant(d) != a) {
 
-                        var xc = parseInt(this.style.getPropertyValue('left').slice(0, -2));
+                        var xc = parseInt(this.style.left.slice(0, -2));
                         var xRange = readinessToX(d.readiness) - xc;
 
-                        var yc = parseInt(this.style.getPropertyValue('bottom').slice(0, -2));
+                        var yc = parseInt(this.style.bottom.slice(0, -2));
                         var yRange = vulnerabilityToY(d.vulnerability) - yc;
                         
                         return function(n) {
