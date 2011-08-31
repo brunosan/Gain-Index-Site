@@ -144,7 +144,7 @@ view = views.Main.extend({
         this.matrix.selectAll("div").data(currentData, function(d) {
                 return view.countryOrder[d.iso];
             }).transition().duration(500)
-            .style('bottom', function(d) { return vulnerabilityToY(d.y) + 'px'; })
+            .style('bottom', function(d) { return vulnerabilityToY(d.vulnerability) + 'px'; })
             .style('left', function(d) { return readinessToX(d.readiness) + 'px'; })
             .attrTween('class', function(d, i, a) {
                 var classes = this.className.split(' ');
