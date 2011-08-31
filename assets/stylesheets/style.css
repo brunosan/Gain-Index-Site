@@ -245,7 +245,7 @@ ul.tabs li a.active {
   -webkit-box-shadow: 0 0 20px #000;
   box-shadow: 0 0 20px #000;
   position: relative;
-  z-index: 2;
+  z-index: 20;
   }
 #header .limiter {
   position: relative;
@@ -415,7 +415,6 @@ ul.tabs li a.active {
   width: 300px;
   right: 20px;
   bottom: 0;
-  z-index: 2;
   -webkit-transition: all 0.3s ease-in-out;
   -moz-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
@@ -449,6 +448,9 @@ ul.tabs li a.active {
   position: relative;
   display: none;
   }
+#feedbacktab.open {
+  z-index: 20;
+  }
 #feedbacktab.open .content{
   display: block;
   }
@@ -473,7 +475,7 @@ ul.tabs li a.active {
  */
 #cabinet {
   position: relative;
-  z-index: 1;
+  z-index: 15;
   width: 960px;
   }
 .bonesAdminEditing #cabinet {
@@ -731,14 +733,11 @@ table.data tbody tr td {
 
 .mini-matrix .pin {
   position: absolute;
-  background-color: #666;
+  background: transparent url(../images/sprite.png) no-repeat 0 -348px;
   top: 43px;
   left: 43px;
   width: 10px;
   height: 10px;
-  -moz-border-radius: 5px;
-  -webkit-border-radius: 5px;
-  border-radius: 5px;
   }
 
 /**
