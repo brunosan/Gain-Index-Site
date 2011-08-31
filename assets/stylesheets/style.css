@@ -733,11 +733,11 @@ table.data tbody tr td {
 
 .mini-matrix .pin {
   position: absolute;
-  background: transparent url(../images/sprite.png) no-repeat 0 -348px;
+  background: transparent url(../images/sprite.png) no-repeat 0 -1135px;
   top: 43px;
   left: 43px;
-  width: 10px;
-  height: 10px;
+  width: 15px;
+  height: 15px;
   }
 
 /**
