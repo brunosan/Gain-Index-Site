@@ -18,7 +18,6 @@
 
   <link rel='stylesheet' href='/assets/gain/stylesheets/reset.css?<%= version %>' media='all' />
   <link rel='stylesheet' href='/assets/gain/stylesheets/style.css?<%= version %>' media='screen' />
-  <link rel='stylesheet' href='/assets/gain/stylesheets/ui-lightness/jquery-ui-1.8.16.custom.css?<%= version %>' media='screen' />
   <link rel='stylesheet' href='/assets/bones-admin/style.css?<%= version %>' media='screen' />
   <link rel='stylesheet' href='/assets/gain/stylesheets/print.css?<%= version %>' media='print' />
 
