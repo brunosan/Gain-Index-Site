@@ -27,9 +27,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:zoom="11.313708"
-     inkscape:cx="9.4705364"
-     inkscape:cy="316.03044"
+     inkscape:zoom="0.70710678"
+     inkscape:cx="66.039079"
+     inkscape:cy="1394.3683"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="true"
@@ -80,7 +80,7 @@
      id="layer2"
      inkscape:label="gray"
      transform="translate(1.4e-5,160.00001)"
-     style="display:none"
+     style="display:inline"
      sodipodi:insensitive="true">
     <rect
        style="opacity:0.5;color:#000000;fill:#333333;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"

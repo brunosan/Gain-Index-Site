@@ -8,21 +8,9 @@ color: black;
 background: white;
 }
 
-/*** Typography ***/
-@font-face {
-  font-family: 'AlternateGothicLTNo3Regular';
-  src: url('../fonts/alternate_gothic-webfont.eot');
-  src: url('../fonts/alternate_gothic-webfont.eot?#iefix') format('embedded-opentype'),
-    url('../fonts/alternate_gothic-webfont.woff') format('woff'),
-    url('../fonts/alternate_gothic-webfont.ttf') format('truetype'),
-    url('../fonts/alternate_gothic-webfont.svg#AlternateGothicLTNo3Regular') format('svg');
-  font-weight: normal;
-  font-style: normal;
-  }
-
 /* Header styles */
 h1,h2,h3,h4,h5 {
-  font-family: 'AlternateGothicLTNo3Regular',"HelveticaNeueBoldCondensed", "HelveticaNeue-Bold-Condensed", "Arial Narrow", "Arial", sans-serif;
+  font-family: "HelveticaNeueBoldCondensed", "HelveticaNeue-Bold-Condensed", "Arial Narrow", "Arial", sans-serif;
   font-weight: 100;
   color: black;
   padding-top: 15px;
@@ -91,7 +79,7 @@ text-decoration: none;
     }
   #header .tagline { 
   position: absolute;
-  left: 100px;
+  left: 130px;
   top: 15px;
   width: 110px;
   }
@@ -129,7 +117,7 @@ table.data tr.section {
   }
 
 table.data tr.index td.name { 
-  font-family: 'AlternateGothicLTNo3Regular',"HelveticaNeueBoldCondensed", "HelveticaNeue-Bold-Condensed", "Arial Narrow", "Arial", sans-serif;
+  font-family: "HelveticaNeueBoldCondensed", "HelveticaNeue-Bold-Condensed", "Arial Narrow", "Arial", sans-serif;
   font-size: 20px;
   padding-bottom: 15px;
   font-weight: 100;
@@ -203,7 +191,7 @@ margin-bottom: 0px;
 /** Ranking Page ***/
 ul.tabs.level-1 a { display: none;}
 ul.tabs.level-1 a.exact.active { 
-  font-family: 'AlternateGothicLTNo3Regular',"HelveticaNeueBoldCondensed", "HelveticaNeue-Bold-Condensed", "Arial Narrow", "Arial", sans-serif;
+  font-family: "HelveticaNeueBoldCondensed", "HelveticaNeue-Bold-Condensed", "Arial Narrow", "Arial", sans-serif;
   font-size: 20px;
   padding-bottom: 15px;
   font-weight: 100;

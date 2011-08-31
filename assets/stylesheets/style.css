@@ -760,11 +760,11 @@ table.data tbody tr td {
 
 .mini-matrix .pin {
   position: absolute;
-  background: transparent url(../images/sprite.png) no-repeat 0 -348px;
+  background: transparent url(../images/sprite.png) no-repeat 0 -1135px;
   top: 43px;
   left: 43px;
-  width: 10px;
-  height: 10px;
+  width: 15px;
+  height: 15px;
   }
 
 /**
@@ -1373,6 +1373,10 @@ div.bottomscorelabel {
   text-decoration: none;
   color: #8C8C8C;
   }
+
+.ranking thead tr th a.sort.label.rank   { background: url('../images/sprite.png') 221px -412px; }
+.ranking thead tr th a.sort.label.alpha  { background: url('../images/sprite.png') 238px -412px; }
+.ranking thead tr th a.sort.label.income { background: url('../images/sprite.png') 269px -412px; }
 
 .ranking thead tr th a.sort.label.rank.activeSort   { background: url('../images/sprite.png') 31px -412px; }
 .ranking thead tr th a.sort.label.alpha.activeSort  { background: url('../images/sprite.png') 48px -412px; }
