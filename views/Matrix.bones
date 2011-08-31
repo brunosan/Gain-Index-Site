@@ -52,6 +52,12 @@ view = views.Main.extend({
                 return this.removeAttribute(a);
             };
         }
+        // Shim up `getComputedStyle` for IE8 as well.
+        if (window.getComputedStyle == undefined) {
+            window.getComputedStyle = function(x) {
+                return { getPropertyValue: function(p) { return x.p } };
+            }
+        }
 
         views.Main.prototype.attach.call(this);
         var view = this,
