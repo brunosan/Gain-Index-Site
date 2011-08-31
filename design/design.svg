@@ -25,16 +25,16 @@
      borderopacity="1.0"
      inkscape:pageopacity="1"
      inkscape:pageshadow="2"
-     inkscape:zoom="1"
-     inkscape:cx="240.45962"
-     inkscape:cy="1819.663"
+     inkscape:zoom="0.5"
+     inkscape:cx="83.9043"
+     inkscape:cy="1034.9117"
      inkscape:document-units="px"
      inkscape:current-layer="layer11"
      showgrid="false"
      inkscape:window-width="999"
      inkscape:window-height="640"
-     inkscape:window-x="247"
-     inkscape:window-y="214"
+     inkscape:window-x="118"
+     inkscape:window-y="0"
      inkscape:window-maximized="0"
      showguides="false"
      inkscape:guide-bbox="true"
@@ -24163,339 +24163,326 @@
        id="path9044"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="ccccc" />
+    <rect
+       y="115.95198"
+       x="0"
+       height="709.99988"
+       width="640"
+       id="rect9001"
+       style="color:#000000;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       inkscape:export-filename="/Users/saman/graphics/gaIn/renders/map.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <rect
+       inkscape:export-ydpi="90"
+       inkscape:export-xdpi="90"
+       inkscape:export-filename="/Users/saman/graphics/gaIn/renders/map.png"
+       y="259.952"
+       x="0"
+       height="1"
+       width="640"
+       id="rect8779"
+       style="color:#000000;fill:#c6c6c6;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+    <flowRoot
+       inkscape:export-ydpi="90"
+       inkscape:export-xdpi="90"
+       inkscape:export-filename="/Users/saman/graphics/gaIn/renders/map.png"
+       transform="translate(-892,4.4195)"
+       style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:start;text-decoration:none;line-height:150%;letter-spacing:0px;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:start;baseline-shift:baseline;color:#000000;fill:#434343;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Helvetica Neue;-inkscape-font-specification:Helvetica Neue"
+       id="flowRoot10277"
+       xml:space="preserve"><flowRegion
+         id="flowRegion10279"><rect
+           style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:start;text-decoration:none;line-height:150%;letter-spacing:0px;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:start;baseline-shift:baseline;color:#000000;fill:#434343;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Helvetica Neue;-inkscape-font-specification:Helvetica Neue"
+           y="135"
+           x="1027"
+           height="346.53247"
+           width="485"
+           id="rect10281" /></flowRegion><flowPara
+         id="flowPara10283">The Readiness Matrix illustrates the comparative resilience of countries. The vertical axis measures the relative vulnerability of countries. The horizontal axis measures to what degree a country is prepared to deal with climatic and environmental changes.</flowPara><flowPara
+         id="flowPara10285" /><flowPara
+         id="flowPara10287" /></flowRoot>    <path
+       inkscape:connector-curvature="0"
+       id="rect6390-65-3-3-1"
+       d="m 48,315.95198 0,0.5 0,26.5 26.5,0 0.5,0 0,-23 c 0,-2.216 -1.784,-4 -4,-4 z m -28,28 0,23 c 0,2.216 1.784,4 4,4 l 23,0 0,-0.5 0,-26.5 -26.5,0 z m 28,0 0,26.5 0,0.5 23,0 c 2.216,0 4,-1.784 4,-4 l 0,-23 -0.5,0 z"
+       style="color:#000000;fill:#c6c6c6;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       sodipodi:nodetypes="cccccssccssccccccccssccc" />
+    <path
+       inkscape:connector-curvature="0"
+       style="color:#000000;fill:#ff7c80;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       d="m 24,315.95198 c -2.216,0 -4,1.784 -4,4 l 0,23 27,0 0,-27 z"
+       id="rect6390-6-7-2-8-1"
+       sodipodi:nodetypes="sscccs" />
+    <text
+       sodipodi:linespacing="120%"
+       id="text10476"
+       y="291.952"
+       x="20"
+       style="font-size:20px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-indent:0;text-align:start;text-decoration:none;line-height:120.00000477%;letter-spacing:0px;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:start;baseline-shift:baseline;color:#000000;fill:#434343;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Alternate Gothic LT No3;-inkscape-font-specification:Alternate Gothic LT No3 Bold"
+       xml:space="preserve"
+       inkscape:export-filename="/Users/saman/graphics/gaIn/renders/country_indicator.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"><tspan
+         y="291.952"
+         x="20"
+         id="tspan10478"
+         sodipodi:role="line">Red, or Upper Left Quadrant</tspan></text>
+    <flowRoot
+       xml:space="preserve"
+       id="flowRoot10499"
+       style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:start;text-decoration:none;line-height:150%;letter-spacing:0px;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:start;baseline-shift:baseline;color:#000000;fill:#434343;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Helvetica Neue;-inkscape-font-specification:Helvetica Neue"
+       transform="translate(-942,174.4195)"
+       inkscape:export-filename="/Users/saman/graphics/gaIn/renders/map.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"><flowRegion
+         id="flowRegion10501"><rect
+           id="rect10503"
+           width="535"
+           height="176.53249"
+           x="1027"
+           y="135"
+           style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:start;text-decoration:none;line-height:150%;letter-spacing:0px;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:start;baseline-shift:baseline;color:#000000;fill:#434343;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Helvetica Neue;-inkscape-font-specification:Helvetica Neue" /></flowRegion><flowPara
+         id="flowPara10509">A country with a high exposure to climatic change, but a low level of readiness, has both a great need for investment and innovations to improve readiness and a great urgency for action.</flowPara><flowPara
+         id="flowPara10516" /><flowPara
+         id="flowPara10518" /></flowRoot>    <path
+       inkscape:connector-curvature="0"
+       id="path10755"
+       d="m 34,140.95198 c -2.216,0 -4,1.784 -4,4 l 0,38 0.5,0 41.5,0 0,-41.5 0,-0.5 -38,0 z"
+       style="color:#000000;fill:#ff7c80;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+    <path
+       inkscape:connector-curvature="0"
+       id="path10753"
+       d="m 73,140.95198 0,0.5 0,41.5 41.5,0 0.5,0 0,-38 c 0,-2.216 -1.784,-4 -4,-4 l -38,0 z"
+       style="color:#000000;fill:#68b5df;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+    <path
+       inkscape:connector-curvature="0"
+       id="path10751"
+       d="m 30,183.95198 0,38 c 0,2.216 1.784,4 4,4 l 38,0 0,-0.5 0,-41.5 -41.5,0 -0.5,0 z"
+       style="color:#000000;fill:#f6cd47;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+    <path
+       inkscape:connector-curvature="0"
+       id="rect6390-3"
+       d="m 73,183.95198 0,41.5 0,0.5 38,0 c 2.216,0 4,-1.784 4,-4 l 0,-38 -0.5,0 -41.5,0 z"
+       style="color:#000000;fill:#68bb37;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
     <g
-       transform="translate(0,-546.4102)"
        style="display:inline"
-       id="g5485">
-      <rect
-         inkscape:export-ydpi="90"
-         inkscape:export-xdpi="90"
-         inkscape:export-filename="/Users/saman/graphics/gaIn/renders/map.png"
-         style="color:#000000;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
-         id="rect9001"
-         width="640"
-         height="709.99988"
-         x="0"
-         y="662.36218" />
-      <rect
-         style="color:#000000;fill:#c6c6c6;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
-         id="rect8779"
-         width="640"
-         height="1"
-         x="0"
-         y="806.36218"
-         inkscape:export-filename="/Users/saman/graphics/gaIn/renders/map.png"
-         inkscape:export-xdpi="90"
-         inkscape:export-ydpi="90" />
-      <flowRoot
-         xml:space="preserve"
-         id="flowRoot10277"
-         style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:start;text-decoration:none;line-height:150%;letter-spacing:0px;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:start;baseline-shift:baseline;color:#000000;fill:#434343;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Helvetica Neue;-inkscape-font-specification:Helvetica Neue"
-         transform="translate(-892,550.8297)"
-         inkscape:export-filename="/Users/saman/graphics/gaIn/renders/map.png"
-         inkscape:export-xdpi="90"
-         inkscape:export-ydpi="90"><flowRegion
-           id="flowRegion10279"><rect
-             id="rect10281"
-             width="485"
-             height="346.53247"
-             x="1027"
-             y="135"
-             style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:start;text-decoration:none;line-height:150%;letter-spacing:0px;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:start;baseline-shift:baseline;color:#000000;fill:#434343;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Helvetica Neue;-inkscape-font-specification:Helvetica Neue" /></flowRegion><flowPara
-           id="flowPara10283">The Readiness Matrix illustrates the comparative resilience of countries. The vertical axis measures the relative vulnerability of countries. The horizontal axis measures to what degree a country is prepared to deal with climatic and environmental changes.</flowPara><flowPara
-           id="flowPara10285" /><flowPara
-           id="flowPara10287" /></flowRoot>      <path
-         sodipodi:nodetypes="cccccssccssccccccccssccc"
-         style="color:#000000;fill:#c6c6c6;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
-         d="m 48,862.36218 0,0.5 0,26.5 26.5,0 0.5,0 0,-23 c 0,-2.216 -1.784,-4 -4,-4 z m -28,28 0,23 c 0,2.216 1.784,4 4,4 l 23,0 0,-0.5 0,-26.5 -26.5,0 z m 28,0 0,26.5 0,0.5 23,0 c 2.216,0 4,-1.784 4,-4 l 0,-23 -0.5,0 z"
-         id="rect6390-65-3-3-1"
-         inkscape:connector-curvature="0" />
-      <path
-         sodipodi:nodetypes="sscccs"
-         id="rect6390-6-7-2-8-1"
-         d="m 24,862.36218 c -2.216,0 -4,1.784 -4,4 l 0,23 27,0 0,-27 z"
-         style="color:#000000;fill:#ff7c80;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
-         inkscape:connector-curvature="0" />
+       transform="translate(-115,5.95198)"
+       id="g6192-9">
+      <g
+         id="g5305-9-8"
+         transform="translate(-540,-155)">
+        <g
+           inkscape:export-ydpi="90"
+           inkscape:export-xdpi="90"
+           inkscape:export-filename="/Users/saman/graphics/gaIn/renders/country_indicator.png"
+           transform="matrix(0.45384482,0,0,0.45384482,383.19215,104.05377)"
+           id="g5381-4-5" />
+        <g
+           inkscape:export-ydpi="90"
+           inkscape:export-xdpi="90"
+           inkscape:export-filename="/Users/saman/graphics/gaIn/renders/country_indicator.png"
+           transform="matrix(0,0.45384482,-0.45384482,0,954.44575,-41.80785)"
+           id="g5381-6-6-1"
+           style="display:inline" />
+      </g>
       <text
          inkscape:export-ydpi="90"
          inkscape:export-xdpi="90"
          inkscape:export-filename="/Users/saman/graphics/gaIn/renders/country_indicator.png"
          xml:space="preserve"
-         style="font-size:20px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-indent:0;text-align:start;text-decoration:none;line-height:120.00000477%;letter-spacing:0px;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:start;baseline-shift:baseline;color:#000000;fill:#434343;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Alternate Gothic LT No3;-inkscape-font-specification:Alternate Gothic LT No3 Bold"
-         x="20"
-         y="838.36218"
-         id="text10476"
-         sodipodi:linespacing="120%"><tspan
+         style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:center;text-decoration:none;line-height:120.00000477%;letter-spacing:0px;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:middle;baseline-shift:baseline;color:#000000;fill:#434343;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Arial;-inkscape-font-specification:Arial"
+         x="-192.53857"
+         y="138.12402"
+         id="text6202-0-8-23-4"
+         sodipodi:linespacing="120%"
+         transform="matrix(0,-1,1,0,0,0)"><tspan
            sodipodi:role="line"
-           id="tspan10478"
-           x="20"
-           y="838.36218">Red, or Upper Left Quadrant</tspan></text>
-      <flowRoot
-         inkscape:export-ydpi="90"
-         inkscape:export-xdpi="90"
-         inkscape:export-filename="/Users/saman/graphics/gaIn/renders/map.png"
-         transform="translate(-942,720.8297)"
-         style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:start;text-decoration:none;line-height:150%;letter-spacing:0px;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:start;baseline-shift:baseline;color:#000000;fill:#434343;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Helvetica Neue;-inkscape-font-specification:Helvetica Neue"
-         id="flowRoot10499"
-         xml:space="preserve"><flowRegion
-           id="flowRegion10501"><rect
-             style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:start;text-decoration:none;line-height:150%;letter-spacing:0px;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:start;baseline-shift:baseline;color:#000000;fill:#434343;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Helvetica Neue;-inkscape-font-specification:Helvetica Neue"
-             y="135"
-             x="1027"
-             height="176.53249"
-             width="535"
-             id="rect10503" /></flowRegion><flowPara
-           id="flowPara10509">A country with a high exposure to climatic change, but a low level of readiness, has both a great need for investment and innovations to improve readiness and a great urgency for action.</flowPara><flowPara
-           id="flowPara10516" /><flowPara
-           id="flowPara10518" /></flowRoot>      <g
-         transform="translate(250.48291,-82.1875)"
-         id="g10734">
-        <path
-           inkscape:connector-curvature="0"
-           id="path10755"
-           d="m -216.48291,769.54968 c -2.216,0 -4,1.784 -4,4 l 0,38 0.5,0 41.5,0 0,-41.5 0,-0.5 -38,0 z"
-           style="color:#000000;fill:#ff7c80;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
-        <path
-           inkscape:connector-curvature="0"
-           id="path10753"
-           d="m -177.48291,769.54968 0,0.5 0,41.5 41.5,0 0.5,0 0,-38 c 0,-2.216 -1.784,-4 -4,-4 l -38,0 z"
-           style="color:#000000;fill:#68b5df;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
-        <path
-           inkscape:connector-curvature="0"
-           id="path10751"
-           d="m -220.48291,812.54968 0,38 c 0,2.216 1.784,4 4,4 l 38,0 0,-0.5 0,-41.5 -41.5,0 -0.5,0 z"
-           style="color:#000000;fill:#f6cd47;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
-        <path
-           inkscape:connector-curvature="0"
-           id="rect6390-3"
-           d="m -177.48291,812.54968 0,41.5 0,0.5 38,0 c 2.216,0 4,-1.784 4,-4 l 0,-38 -0.5,0 -41.5,0 z"
-           style="color:#000000;fill:#68bb37;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
-        <g
-           style="display:inline"
-           transform="translate(-365.48291,634.54968)"
-           id="g6192-9">
-          <g
-             id="g5305-9-8"
-             transform="translate(-540,-155)">
-            <g
-               inkscape:export-ydpi="90"
-               inkscape:export-xdpi="90"
-               inkscape:export-filename="/Users/saman/graphics/gaIn/renders/country_indicator.png"
-               transform="matrix(0.45384482,0,0,0.45384482,383.19215,104.05377)"
-               id="g5381-4-5" />
-            <g
-               inkscape:export-ydpi="90"
-               inkscape:export-xdpi="90"
-               inkscape:export-filename="/Users/saman/graphics/gaIn/renders/country_indicator.png"
-               transform="matrix(0,0.45384482,-0.45384482,0,954.44575,-41.80785)"
-               id="g5381-6-6-1"
-               style="display:inline" />
-          </g>
-          <text
-             inkscape:export-ydpi="90"
-             inkscape:export-xdpi="90"
-             inkscape:export-filename="/Users/saman/graphics/gaIn/renders/country_indicator.png"
-             xml:space="preserve"
-             style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:center;text-decoration:none;line-height:120.00000477%;letter-spacing:0px;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:middle;baseline-shift:baseline;color:#000000;fill:#434343;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Arial;-inkscape-font-specification:Arial"
-             x="-192.53857"
-             y="138.12402"
-             id="text6202-0-8-23-4"
-             sodipodi:linespacing="120%"
-             transform="matrix(0,-1,1,0,0,0)"><tspan
-               sodipodi:role="line"
-               id="tspan6204-8-5-9-6"
-               x="-192.53857"
-               y="138.12402">Vulnerability</tspan></text>
-          <text
-             sodipodi:linespacing="120%"
-             id="text6206-0-8-3-0"
-             y="232.2417"
-             x="147.28418"
-             style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:start;text-decoration:none;line-height:120.00000477%;letter-spacing:0px;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:start;baseline-shift:baseline;color:#000000;fill:#434343;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Arial;-inkscape-font-specification:Arial"
-             xml:space="preserve"
-             inkscape:export-filename="/Users/saman/graphics/gaIn/renders/country_indicator.png"
-             inkscape:export-xdpi="90"
-             inkscape:export-ydpi="90"><tspan
-               y="232.2417"
-               x="147.28418"
-               id="tspan6208-5-8-5-2"
-               sodipodi:role="line">Readiness</tspan></text>
-          <g
-             style="fill:#333333;fill-opacity:1;display:inline"
-             id="g6210-5-4-4-0"
-             transform="translate(-537.53418,-146.38232)"
-             inkscape:export-filename="/Users/saman/graphics/gaIn/renders/country_indicator.png"
-             inkscape:export-xdpi="90"
-             inkscape:export-ydpi="90">
-            <path
-               sodipodi:nodetypes="cccccccccccccccc"
-               style="font-size:medium;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:start;text-decoration:none;line-height:normal;letter-spacing:normal;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:start;baseline-shift:baseline;color:#000000;fill:#434343;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Sans;-inkscape-font-specification:Sans"
-               d="m 801.96875,174.625 -2.5,5 2,0 0,14 1,0 0,-14 2,0 z m 86.5,88 0,2 -24,0 0,1 24,0 0,2 5,-2.5 z"
-               transform="translate(-127.46582,111.38232)"
-               id="path6212-8-3-7-6"
-               inkscape:connector-curvature="0" />
-          </g>
-        </g>
-      </g>
-      <path
-         inkscape:connector-curvature="0"
-         id="path10821"
-         d="m 48,982.3622 0,0.5 0,26.5 26.5,0 0.5,0 0,-23 c 0,-2.216 -1.784,-4 -4,-4 z"
-         style="color:#000000;fill:#c6c6c6;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
-      <path
-         inkscape:connector-curvature="0"
-         id="path10819"
-         d="m 20,1010.3622 0,23 c 0,2.216 1.784,4 4,4 l 23,0 0,-0.5 0,-26.5 -26.5,0 z"
-         style="color:#000000;fill:#f6cd47;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
-      <path
-         inkscape:connector-curvature="0"
-         id="path10766"
-         d="m 48,1010.3622 0,26.5 0,0.5 23,0 c 2.216,0 4,-1.784 4,-4 l 0,-23 -0.5,0 z"
-         style="color:#000000;fill:#c6c6c6;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
-      <path
-         inkscape:connector-curvature="0"
-         style="color:#000000;fill:#c6c6c6;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
-         d="m 24,982.3622 c -2.216,0 -4,1.784 -4,4 l 0,23 27,0 0,-27 z"
-         id="path10768"
-         sodipodi:nodetypes="sscccs" />
+           id="tspan6204-8-5-9-6"
+           x="-192.53857"
+           y="138.12402">Vulnerability</tspan></text>
       <text
          sodipodi:linespacing="120%"
-         id="text10770"
-         y="958.36218"
-         x="20"
-         style="font-size:20px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-indent:0;text-align:start;text-decoration:none;line-height:120.00000477%;letter-spacing:0px;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:start;baseline-shift:baseline;color:#000000;fill:#434343;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Alternate Gothic LT No3;-inkscape-font-specification:Alternate Gothic LT No3 Bold"
+         id="text6206-0-8-3-0"
+         y="232.2417"
+         x="147.28418"
+         style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:start;text-decoration:none;line-height:120.00000477%;letter-spacing:0px;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:start;baseline-shift:baseline;color:#000000;fill:#434343;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Arial;-inkscape-font-specification:Arial"
          xml:space="preserve"
          inkscape:export-filename="/Users/saman/graphics/gaIn/renders/country_indicator.png"
          inkscape:export-xdpi="90"
          inkscape:export-ydpi="90"><tspan
-           y="958.36218"
-           x="20"
-           id="tspan10772"
-           sodipodi:role="line">Yellow, or Lower Left Quadrant</tspan></text>
-      <flowRoot
-         xml:space="preserve"
-         id="flowRoot10774"
-         style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:start;text-decoration:none;line-height:150%;letter-spacing:0px;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:start;baseline-shift:baseline;color:#000000;fill:#434343;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Helvetica Neue;-inkscape-font-specification:Helvetica Neue"
-         transform="translate(-942,840.8297)"
-         inkscape:export-filename="/Users/saman/graphics/gaIn/renders/map.png"
+           y="232.2417"
+           x="147.28418"
+           id="tspan6208-5-8-5-2"
+           sodipodi:role="line">Readiness</tspan></text>
+      <g
+         style="fill:#333333;fill-opacity:1;display:inline"
+         id="g6210-5-4-4-0"
+         transform="translate(-537.53418,-146.38232)"
+         inkscape:export-filename="/Users/saman/graphics/gaIn/renders/country_indicator.png"
          inkscape:export-xdpi="90"
-         inkscape:export-ydpi="90"><flowRegion
-           id="flowRegion10776"><rect
-             id="rect10778"
-             width="535"
-             height="176.53249"
-             x="1027"
-             y="135"
-             style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:start;text-decoration:none;line-height:150%;letter-spacing:0px;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:start;baseline-shift:baseline;color:#000000;fill:#434343;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Helvetica Neue;-inkscape-font-specification:Helvetica Neue" /></flowRegion><flowPara
-           id="flowPara10784">A country that has both low vulnerability and low ability to adapt faces few immediate challenges and therefore has more time to improve the ability to cope. There are likely specific, profitable opportunities for the government, international organizations and the private sector to intervene.</flowPara><flowPara
-           id="flowPara10813" /><flowPara
-           id="flowPara10815" /></flowRoot>      <g
-         transform="translate(0,-240)"
-         id="g10830">
+         inkscape:export-ydpi="90">
         <path
-           style="color:#000000;fill:#68b5df;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
-           d="m 48,1352.3622 0,0.5 0,26.5 26.5,0 0.5,0 0,-23 c 0,-2.216 -1.784,-4 -4,-4 z"
-           id="path10544"
+           sodipodi:nodetypes="cccccccccccccccc"
+           style="font-size:medium;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:start;text-decoration:none;line-height:normal;letter-spacing:normal;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:start;baseline-shift:baseline;color:#000000;fill:#434343;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Sans;-inkscape-font-specification:Sans"
+           d="m 801.96875,174.625 -2.5,5 2,0 0,14 1,0 0,-14 2,0 z m 86.5,88 0,2 -24,0 0,1 24,0 0,2 5,-2.5 z"
+           transform="translate(-127.46582,111.38232)"
+           id="path6212-8-3-7-6"
            inkscape:connector-curvature="0" />
-        <path
-           style="color:#000000;fill:#c6c6c6;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
-           d="m 20,1380.3622 0,23 c 0,2.216 1.784,4 4,4 l 23,0 0,-0.5 0,-26.5 -26.5,0 z"
-           id="path10542"
-           inkscape:connector-curvature="0" />
-        <path
-           style="color:#000000;fill:#c6c6c6;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
-           d="m 48,1380.3622 0,26.5 0,0.5 23,0 c 2.216,0 4,-1.784 4,-4 l 0,-23 -0.5,0 z"
-           id="path10520"
-           inkscape:connector-curvature="0" />
-        <path
-           sodipodi:nodetypes="sscccs"
-           id="path10522"
-           d="m 24,1352.3622 c -2.216,0 -4,1.784 -4,4 l 0,23 27,0 0,-27 z"
-           style="color:#000000;fill:#c6c6c6;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
-           inkscape:connector-curvature="0" />
-        <flowRoot
-           inkscape:export-ydpi="90"
-           inkscape:export-xdpi="90"
-           inkscape:export-filename="/Users/saman/graphics/gaIn/renders/map.png"
-           transform="translate(-942,1210.8297)"
-           style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:start;text-decoration:none;line-height:150%;letter-spacing:0px;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:start;baseline-shift:baseline;color:#000000;fill:#434343;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Helvetica Neue;-inkscape-font-specification:Helvetica Neue"
-           id="flowRoot10524"
-           xml:space="preserve"><flowRegion
-             id="flowRegion10526"><rect
-               style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:start;text-decoration:none;line-height:150%;letter-spacing:0px;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:start;baseline-shift:baseline;color:#000000;fill:#434343;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Helvetica Neue;-inkscape-font-specification:Helvetica Neue"
-               y="135"
-               x="1027"
-               height="156.53249"
-               width="535"
-               id="rect10528" /></flowRegion><flowPara
-             id="flowPara10762">These countries are on the road to responding effectively (high level of readiness), but the remaining needs are greater, as is the urgency to act (high exposure). Because the country has shown an ability to raise its level of readiness, the private sector is more likely than in the red quadrant to participate in the effort to improve the ability to adapt.</flowPara></flowRoot>        <text
-           inkscape:export-ydpi="90"
-           inkscape:export-xdpi="90"
-           inkscape:export-filename="/Users/saman/graphics/gaIn/renders/country_indicator.png"
-           xml:space="preserve"
-           style="font-size:20px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-indent:0;text-align:start;text-decoration:none;line-height:120.00000477%;letter-spacing:0px;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:start;baseline-shift:baseline;color:#000000;fill:#434343;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Alternate Gothic LT No3;-inkscape-font-specification:Alternate Gothic LT No3 Bold"
-           x="20"
-           y="1328.3622"
-           id="text10536"
-           sodipodi:linespacing="120%"><tspan
-             sodipodi:role="line"
-             id="tspan10538"
-             x="20"
-             y="1328.3622">Blue, or Upper Right Quadrant</tspan></text>
-        <path
-           inkscape:connector-curvature="0"
-           id="path10786"
-           d="m 48,1492.3622 0,0.5 0,26.5 26.5,0 0.5,0 0,-23 c 0,-2.216 -1.784,-4 -4,-4 z"
-           style="color:#000000;fill:#c6c6c6;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
-        <path
-           inkscape:connector-curvature="0"
-           id="path10788"
-           d="m 20,1520.3622 0,23 c 0,2.216 1.784,4 4,4 l 23,0 0,-0.5 0,-26.5 -26.5,0 z"
-           style="color:#000000;fill:#c6c6c6;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
-        <path
-           inkscape:connector-curvature="0"
-           id="path10790"
-           d="m 48,1520.3622 0,26.5 0,0.5 23,0 c 2.216,0 4,-1.784 4,-4 l 0,-23 -0.5,0 z"
-           style="color:#000000;fill:#68bb37;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
-        <path
-           inkscape:connector-curvature="0"
-           style="color:#000000;fill:#c6c6c6;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
-           d="m 24,1492.3622 c -2.216,0 -4,1.784 -4,4 l 0,23 27,0 0,-27 z"
-           id="path10792"
-           sodipodi:nodetypes="sscccs" />
-        <flowRoot
-           xml:space="preserve"
-           id="flowRoot10794"
-           style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:start;text-decoration:none;line-height:150%;letter-spacing:0px;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:start;baseline-shift:baseline;color:#000000;fill:#434343;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Helvetica Neue;-inkscape-font-specification:Helvetica Neue"
-           transform="translate(-942,1350.8297)"
-           inkscape:export-filename="/Users/saman/graphics/gaIn/renders/map.png"
-           inkscape:export-xdpi="90"
-           inkscape:export-ydpi="90"><flowRegion
-             id="flowRegion10796"><rect
-               id="rect10798"
-               width="535"
-               height="166.53249"
-               x="1027"
-               y="135"
-               style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:start;text-decoration:none;line-height:150%;letter-spacing:0px;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:start;baseline-shift:baseline;color:#000000;fill:#434343;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Helvetica Neue;-inkscape-font-specification:Helvetica Neue" /></flowRegion><flowPara
-             id="flowPara10802">In countries with low vulnerability but a high ability to adapt, some adaptation challenges may still exist, but these countries require the least help. They are already well along the road to responding effectively to sudden climatic or environmental changes.</flowPara><flowPara
-             id="flowPara10825" /><flowPara
-             id="flowPara10827" /></flowRoot>        <text
-           sodipodi:linespacing="120%"
-           id="text10804"
-           y="1468.3622"
-           x="20"
-           style="font-size:20px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-indent:0;text-align:start;text-decoration:none;line-height:120.00000477%;letter-spacing:0px;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:start;baseline-shift:baseline;color:#000000;fill:#434343;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Alternate Gothic LT No3;-inkscape-font-specification:Alternate Gothic LT No3 Bold"
-           xml:space="preserve"
-           inkscape:export-filename="/Users/saman/graphics/gaIn/renders/country_indicator.png"
-           inkscape:export-xdpi="90"
-           inkscape:export-ydpi="90"><tspan
-             y="1468.3622"
-             x="20"
-             id="tspan10806"
-             sodipodi:role="line">Green, or Lower Right Quadrant</tspan></text>
       </g>
     </g>
+    <path
+       style="color:#000000;fill:#c6c6c6;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       d="m 48,435.952 0,0.5 0,26.5 26.5,0 0.5,0 0,-23 c 0,-2.216 -1.784,-4 -4,-4 z"
+       id="path10821"
+       inkscape:connector-curvature="0" />
+    <path
+       style="color:#000000;fill:#f6cd47;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       d="m 20,463.952 0,23 c 0,2.216 1.784,4 4,4 l 23,0 0,-0.5 0,-26.5 -26.5,0 z"
+       id="path10819"
+       inkscape:connector-curvature="0" />
+    <path
+       style="color:#000000;fill:#c6c6c6;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       d="m 48,463.952 0,26.5 0,0.5 23,0 c 2.216,0 4,-1.784 4,-4 l 0,-23 -0.5,0 z"
+       id="path10766"
+       inkscape:connector-curvature="0" />
+    <path
+       sodipodi:nodetypes="sscccs"
+       id="path10768"
+       d="m 24,435.952 c -2.216,0 -4,1.784 -4,4 l 0,23 27,0 0,-27 z"
+       style="color:#000000;fill:#c6c6c6;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       inkscape:connector-curvature="0" />
+    <text
+       inkscape:export-ydpi="90"
+       inkscape:export-xdpi="90"
+       inkscape:export-filename="/Users/saman/graphics/gaIn/renders/country_indicator.png"
+       xml:space="preserve"
+       style="font-size:20px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-indent:0;text-align:start;text-decoration:none;line-height:120.00000477%;letter-spacing:0px;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:start;baseline-shift:baseline;color:#000000;fill:#434343;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Alternate Gothic LT No3;-inkscape-font-specification:Alternate Gothic LT No3 Bold"
+       x="20"
+       y="411.952"
+       id="text10770"
+       sodipodi:linespacing="120%"><tspan
+         sodipodi:role="line"
+         id="tspan10772"
+         x="20"
+         y="411.952">Yellow, or Lower Left Quadrant</tspan></text>
+    <flowRoot
+       inkscape:export-ydpi="90"
+       inkscape:export-xdpi="90"
+       inkscape:export-filename="/Users/saman/graphics/gaIn/renders/map.png"
+       transform="translate(-942,294.4195)"
+       style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:start;text-decoration:none;line-height:150%;letter-spacing:0px;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:start;baseline-shift:baseline;color:#000000;fill:#434343;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Helvetica Neue;-inkscape-font-specification:Helvetica Neue"
+       id="flowRoot10774"
+       xml:space="preserve"><flowRegion
+         id="flowRegion10776"><rect
+           style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:start;text-decoration:none;line-height:150%;letter-spacing:0px;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:start;baseline-shift:baseline;color:#000000;fill:#434343;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Helvetica Neue;-inkscape-font-specification:Helvetica Neue"
+           y="135"
+           x="1027"
+           height="176.53249"
+           width="535"
+           id="rect10778" /></flowRegion><flowPara
+         id="flowPara10784">A country that has both low vulnerability and low ability to adapt faces few immediate challenges and therefore has more time to improve the ability to cope. There are likely specific, profitable opportunities for the government, international organizations and the private sector to intervene.</flowPara><flowPara
+         id="flowPara10813" /><flowPara
+         id="flowPara10815" /></flowRoot>    <path
+       style="color:#000000;fill:#68b5df;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       d="m 48,565.952 0,0.5 0,26.5 26.5,0 0.5,0 0,-23 c 0,-2.216 -1.784,-4 -4,-4 z"
+       id="path10544"
+       inkscape:connector-curvature="0" />
+    <path
+       style="color:#000000;fill:#c6c6c6;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       d="m 20,593.952 0,23 c 0,2.216 1.784,4 4,4 l 23,0 0,-0.5 0,-26.5 -26.5,0 z"
+       id="path10542"
+       inkscape:connector-curvature="0" />
+    <path
+       style="color:#000000;fill:#c6c6c6;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       d="m 48,593.952 0,26.5 0,0.5 23,0 c 2.216,0 4,-1.784 4,-4 l 0,-23 -0.5,0 z"
+       id="path10520"
+       inkscape:connector-curvature="0" />
+    <path
+       sodipodi:nodetypes="sscccs"
+       id="path10522"
+       d="m 24,565.952 c -2.216,0 -4,1.784 -4,4 l 0,23 27,0 0,-27 z"
+       style="color:#000000;fill:#c6c6c6;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       inkscape:connector-curvature="0" />
+    <flowRoot
+       inkscape:export-ydpi="90"
+       inkscape:export-xdpi="90"
+       inkscape:export-filename="/Users/saman/graphics/gaIn/renders/map.png"
+       transform="translate(-942,424.4195)"
+       style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:start;text-decoration:none;line-height:150%;letter-spacing:0px;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:start;baseline-shift:baseline;color:#000000;fill:#434343;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Helvetica Neue;-inkscape-font-specification:Helvetica Neue"
+       id="flowRoot10524"
+       xml:space="preserve"><flowRegion
+         id="flowRegion10526"><rect
+           style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:start;text-decoration:none;line-height:150%;letter-spacing:0px;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:start;baseline-shift:baseline;color:#000000;fill:#434343;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Helvetica Neue;-inkscape-font-specification:Helvetica Neue"
+           y="135"
+           x="1027"
+           height="156.53249"
+           width="535"
+           id="rect10528" /></flowRegion><flowPara
+         id="flowPara10762">These countries are on the road to responding effectively (high level of readiness), but the remaining needs are greater, as is the urgency to act (high exposure). Because the country has shown an ability to raise its level of readiness, the private sector is more likely than in the red quadrant to participate in the effort to improve the ability to adapt.</flowPara></flowRoot>    <text
+       inkscape:export-ydpi="90"
+       inkscape:export-xdpi="90"
+       inkscape:export-filename="/Users/saman/graphics/gaIn/renders/country_indicator.png"
+       xml:space="preserve"
+       style="font-size:20px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-indent:0;text-align:start;text-decoration:none;line-height:120.00000477%;letter-spacing:0px;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:start;baseline-shift:baseline;color:#000000;fill:#434343;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Alternate Gothic LT No3;-inkscape-font-specification:Alternate Gothic LT No3 Bold"
+       x="20"
+       y="541.95197"
+       id="text10536"
+       sodipodi:linespacing="120%"><tspan
+         sodipodi:role="line"
+         id="tspan10538"
+         x="20"
+         y="541.95197">Blue, or Upper Right Quadrant</tspan></text>
+    <path
+       inkscape:connector-curvature="0"
+       id="path10786"
+       d="m 48,705.952 0,0.5 0,26.5 26.5,0 0.5,0 0,-23 c 0,-2.216 -1.784,-4 -4,-4 z"
+       style="color:#000000;fill:#c6c6c6;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+    <path
+       inkscape:connector-curvature="0"
+       id="path10788"
+       d="m 20,733.952 0,23 c 0,2.216 1.784,4 4,4 l 23,0 0,-0.5 0,-26.5 -26.5,0 z"
+       style="color:#000000;fill:#c6c6c6;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+    <path
+       inkscape:connector-curvature="0"
+       id="path10790"
+       d="m 48,733.952 0,26.5 0,0.5 23,0 c 2.216,0 4,-1.784 4,-4 l 0,-23 -0.5,0 z"
+       style="color:#000000;fill:#68bb37;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+    <path
+       inkscape:connector-curvature="0"
+       style="color:#000000;fill:#c6c6c6;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       d="m 24,705.952 c -2.216,0 -4,1.784 -4,4 l 0,23 27,0 0,-27 z"
+       id="path10792"
+       sodipodi:nodetypes="sscccs" />
+    <flowRoot
+       xml:space="preserve"
+       id="flowRoot10794"
+       style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:start;text-decoration:none;line-height:150%;letter-spacing:0px;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:start;baseline-shift:baseline;color:#000000;fill:#434343;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Helvetica Neue;-inkscape-font-specification:Helvetica Neue"
+       transform="translate(-942,564.4195)"
+       inkscape:export-filename="/Users/saman/graphics/gaIn/renders/map.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"><flowRegion
+         id="flowRegion10796"><rect
+           id="rect10798"
+           width="535"
+           height="166.53249"
+           x="1027"
+           y="135"
+           style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:start;text-decoration:none;line-height:150%;letter-spacing:0px;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:start;baseline-shift:baseline;color:#000000;fill:#434343;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Helvetica Neue;-inkscape-font-specification:Helvetica Neue" /></flowRegion><flowPara
+         id="flowPara10802">In countries with low vulnerability but a high ability to adapt, some adaptation challenges may still exist, but these countries require the least help. They are already well along the road to responding effectively to sudden climatic or environmental changes.</flowPara><flowPara
+         id="flowPara10825" /><flowPara
+         id="flowPara10827" /></flowRoot>    <text
+       sodipodi:linespacing="120%"
+       id="text10804"
+       y="681.95197"
+       x="20"
+       style="font-size:20px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-indent:0;text-align:start;text-decoration:none;line-height:120.00000477%;letter-spacing:0px;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:start;baseline-shift:baseline;color:#000000;fill:#434343;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Alternate Gothic LT No3;-inkscape-font-specification:Alternate Gothic LT No3 Bold"
+       xml:space="preserve"
+       inkscape:export-filename="/Users/saman/graphics/gaIn/renders/country_indicator.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"><tspan
+         y="681.95197"
+         x="20"
+         id="tspan10806"
+         sodipodi:role="line">Green, or Lower Right Quadrant</tspan></text>
     <text
        inkscape:export-ydpi="90"
        inkscape:export-xdpi="90"
@@ -24747,7 +24734,7 @@
        width="15"
        height="60"
        x="-45"
-       y="789.99988"
+       y="799.99988"
        rx="0"
        ry="0" />
     <g
@@ -25270,6 +25257,171 @@
         </g>
       </g>
     </g>
+    <path
+       sodipodi:nodetypes="cccccssccssccccccccssccc"
+       style="color:#000000;fill:#c6c6c6;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       d="m -352,809.99988 0,0.5 0,26.5 26.5,0 0.5,0 0,-23 c 0,-2.216 -1.784,-4 -4,-4 z m -28,28 0,23 c 0,2.216 1.784,4 4,4 l 23,0 0,-0.5 0,-26.5 -26.5,0 z m 28,0 0,26.5 0,0.5 23,0 c 2.216,0 4,-1.784 4,-4 l 0,-23 -0.5,0 z"
+       id="path8684"
+       inkscape:connector-curvature="0" />
+    <path
+       sodipodi:nodetypes="sscccs"
+       id="path8686"
+       d="m -376,809.99988 c -2.216,0 -4,1.784 -4,4 l 0,23 27,0 0,-27 z"
+       style="color:#000000;fill:#ff7c80;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       inkscape:connector-curvature="0" />
+    <path
+       style="color:#000000;fill:#ff7c80;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       d="m -361,644.99988 c -2.216,0 -4,1.784 -4,4 l 0,38 0.5,0 41.5,0 0,-41.5 0,-0.5 -38,0 z"
+       id="path8688"
+       inkscape:connector-curvature="0" />
+    <path
+       style="color:#000000;fill:#68b5df;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       d="m -322,644.99988 0,0.5 0,41.5 41.5,0 0.5,0 0,-38 c 0,-2.216 -1.784,-4 -4,-4 l -38,0 z"
+       id="path8690"
+       inkscape:connector-curvature="0" />
+    <path
+       style="color:#000000;fill:#f6cd47;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       d="m -365,687.99988 0,38 c 0,2.216 1.784,4 4,4 l 38,0 0,-0.5 0,-41.5 -41.5,0 -0.5,0 z"
+       id="path8692"
+       inkscape:connector-curvature="0" />
+    <path
+       style="color:#000000;fill:#68bb37;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       d="m -322,687.99988 0,41.5 0,0.5 38,0 c 2.216,0 4,-1.784 4,-4 l 0,-38 -0.5,0 -41.5,0 z"
+       id="path8694"
+       inkscape:connector-curvature="0" />
+    <g
+       id="g8696"
+       transform="translate(-510,509.99988)"
+       style="display:inline">
+      <g
+         transform="translate(-540,-155)"
+         id="g8698">
+        <g
+           id="g8700"
+           transform="matrix(0.45384482,0,0,0.45384482,383.19215,104.05377)"
+           inkscape:export-filename="/Users/saman/graphics/gaIn/renders/country_indicator.png"
+           inkscape:export-xdpi="90"
+           inkscape:export-ydpi="90" />
+        <g
+           style="display:inline"
+           id="g8702"
+           transform="matrix(0,0.45384482,-0.45384482,0,954.44575,-41.80785)"
+           inkscape:export-filename="/Users/saman/graphics/gaIn/renders/country_indicator.png"
+           inkscape:export-xdpi="90"
+           inkscape:export-ydpi="90" />
+      </g>
+      <text
+         transform="matrix(0,-1,1,0,0,0)"
+         sodipodi:linespacing="120%"
+         id="text8704"
+         y="138.12402"
+         x="-192.53857"
+         style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:center;text-decoration:none;line-height:120.00000477%;letter-spacing:0px;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:middle;baseline-shift:baseline;color:#000000;fill:#434343;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Arial;-inkscape-font-specification:Arial"
+         xml:space="preserve"
+         inkscape:export-filename="/Users/saman/graphics/gaIn/renders/country_indicator.png"
+         inkscape:export-xdpi="90"
+         inkscape:export-ydpi="90"><tspan
+           y="138.12402"
+           x="-192.53857"
+           id="tspan8706"
+           sodipodi:role="line">Vulnerability</tspan></text>
+      <text
+         inkscape:export-ydpi="90"
+         inkscape:export-xdpi="90"
+         inkscape:export-filename="/Users/saman/graphics/gaIn/renders/country_indicator.png"
+         xml:space="preserve"
+         style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:start;text-decoration:none;line-height:120.00000477%;letter-spacing:0px;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:start;baseline-shift:baseline;color:#000000;fill:#434343;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Arial;-inkscape-font-specification:Arial"
+         x="147.28418"
+         y="232.2417"
+         id="text8708"
+         sodipodi:linespacing="120%"><tspan
+           sodipodi:role="line"
+           id="tspan8710"
+           x="147.28418"
+           y="232.2417">Readiness</tspan></text>
+      <g
+         inkscape:export-ydpi="90"
+         inkscape:export-xdpi="90"
+         inkscape:export-filename="/Users/saman/graphics/gaIn/renders/country_indicator.png"
+         transform="translate(-537.53418,-146.38232)"
+         id="g8712"
+         style="fill:#333333;fill-opacity:1;display:inline">
+        <path
+           inkscape:connector-curvature="0"
+           id="path8714"
+           transform="translate(-127.46582,111.38232)"
+           d="m 801.96875,174.625 -2.5,5 2,0 0,14 1,0 0,-14 2,0 z m 86.5,88 0,2 -24,0 0,1 24,0 0,2 5,-2.5 z"
+           style="font-size:medium;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:start;text-decoration:none;line-height:normal;letter-spacing:normal;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:start;baseline-shift:baseline;color:#000000;fill:#434343;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Sans;-inkscape-font-specification:Sans"
+           sodipodi:nodetypes="cccccccccccccccc" />
+      </g>
+    </g>
+    <g
+       id="g8740"
+       transform="translate(0,70)">
+      <path
+         style="color:#000000;fill:#c6c6c6;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+         d="m -352,859.9999 0,0.5 0,26.5 26.5,0 0.5,0 0,-23 c 0,-2.216 -1.784,-4 -4,-4 z"
+         id="path8716"
+         inkscape:connector-curvature="0" />
+      <path
+         style="color:#000000;fill:#f6cd47;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+         d="m -380,887.9999 0,23 c 0,2.216 1.784,4 4,4 l 23,0 0,-0.5 0,-26.5 -26.5,0 z"
+         id="path8718"
+         inkscape:connector-curvature="0" />
+      <path
+         style="color:#000000;fill:#c6c6c6;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+         d="m -352,887.9999 0,26.5 0,0.5 23,0 c 2.216,0 4,-1.784 4,-4 l 0,-23 -0.5,0 z"
+         id="path8720"
+         inkscape:connector-curvature="0" />
+      <path
+         sodipodi:nodetypes="sscccs"
+         id="path8722"
+         d="m -376,859.9999 c -2.216,0 -4,1.784 -4,4 l 0,23 27,0 0,-27 z"
+         style="color:#000000;fill:#c6c6c6;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+         inkscape:connector-curvature="0" />
+    </g>
+    <path
+       inkscape:connector-curvature="0"
+       id="path8724"
+       d="m -352,1049.9999 0,0.5 0,26.5 26.5,0 0.5,0 0,-23 c 0,-2.216 -1.784,-4 -4,-4 z"
+       style="color:#000000;fill:#68b5df;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+    <path
+       inkscape:connector-curvature="0"
+       id="path8726"
+       d="m -380,1077.9999 0,23 c 0,2.216 1.784,4 4,4 l 23,0 0,-0.5 0,-26.5 -26.5,0 z"
+       style="color:#000000;fill:#c6c6c6;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+    <path
+       inkscape:connector-curvature="0"
+       id="path8728"
+       d="m -352,1077.9999 0,26.5 0,0.5 23,0 c 2.216,0 4,-1.784 4,-4 l 0,-23 -0.5,0 z"
+       style="color:#000000;fill:#c6c6c6;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+    <path
+       inkscape:connector-curvature="0"
+       style="color:#000000;fill:#c6c6c6;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       d="m -376,1049.9999 c -2.216,0 -4,1.784 -4,4 l 0,23 27,0 0,-27 z"
+       id="path8730"
+       sodipodi:nodetypes="sscccs" />
+    <path
+       style="color:#000000;fill:#c6c6c6;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       d="m -352,1169.9999 0,0.5 0,26.5 26.5,0 0.5,0 0,-23 c 0,-2.216 -1.784,-4 -4,-4 z"
+       id="path8732"
+       inkscape:connector-curvature="0" />
+    <path
+       style="color:#000000;fill:#c6c6c6;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       d="m -380,1197.9999 0,23 c 0,2.216 1.784,4 4,4 l 23,0 0,-0.5 0,-26.5 -26.5,0 z"
+       id="path8734"
+       inkscape:connector-curvature="0" />
+    <path
+       style="color:#000000;fill:#68bb37;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       d="m -352,1197.9999 0,26.5 0,0.5 23,0 c 2.216,0 4,-1.784 4,-4 l 0,-23 -0.5,0 z"
+       id="path8736"
+       inkscape:connector-curvature="0" />
+    <path
+       sodipodi:nodetypes="sscccs"
+       id="path8738"
+       d="m -376,1169.9999 c -2.216,0 -4,1.784 -4,4 l 0,23 27,0 0,-27 z"
+       style="color:#000000;fill:#c6c6c6;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       inkscape:connector-curvature="0" />
   </g>
   <g
      inkscape:groupmode="layer"
