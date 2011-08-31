@@ -1,12 +1,12 @@
+.page-break { page-break-before: always; }
 .limiter {
   width: 960px;
   margin: 0px auto;
   }
-  
 body {
-color: black;
-background: white;
-}
+  color: black;
+  background: white;
+  }
 
 /* Header styles */
 h1,h2,h3,h4,h5 {
@@ -160,7 +160,6 @@ th.country {text-indent: 5px;}
   .front .ranking table.data.ranktop {
    border-right: #EBEBEB 1px solid;
  } 
-
   .front .ranking table.data th {
     font-weight: normal;
     font-style: italic;
@@ -174,19 +173,14 @@ th.country {text-indent: 5px;}
   }
 
 /*** Country Page ***/
-
-.country-profile ul.tabs.level-1 a { display: none;}
-
 .prose.container {margin-top: 20px;}
 #indicator-readiness { margin-bottom: 20px;}
-
 table.data.ranking-history {
-margin-bottom: 20px;
-}
-
+  margin-bottom: 20px;
+  }
 .rankings h3 {
-margin-bottom: 0px;
-}
+  margin-bottom: 0px;
+  }
 
 /** Ranking Page ***/
 ul.tabs.level-1 a { display: none;}
@@ -198,10 +192,8 @@ ul.tabs.level-1 a.exact.active {
   margin-top: 15px;
   display: block;
   font-size: 28px;
-  border-bottom: #c6c6c6 1px solid;}
-
-ul.tabs.level-2 li a { display: none;}
-
+  border-bottom: #c6c6c6 1px solid;
+  }
 ul.tabs.level-2 a.active {
   font-family: 'AlternateGothicLTNo3Regular',"HelveticaNeueBoldCondensed", "HelveticaNeue-Bold-Condensed", "Arial Narrow", "Arial", sans-serif;
   font-size: 20px;
@@ -211,25 +203,24 @@ ul.tabs.level-2 a.active {
   display: block;
   font-size: 28px;
   border-bottom: #c6c6c6 1px solid;
-}
+  }
 
 /*** Footer ***/
 #footer2 .limiter {
-margin-top: 15px;
-border-top: #c6c6c6 1px solid;
-}
+  margin-top: 15px;
+  border-top: #c6c6c6 1px solid;
+  }
 
 #address {
-margin-top: 15px;
-}
+  margin-top: 15px;
+  }
   #address a {
-  font-weight: bold;}
+    font-weight: bold;
+    }
 /****** Hidden ******/
-
+ul.tabs.level-2 li a { display: none; }
+.country-profile ul.tabs.level-1 a { display: none; }
 .slider .content.container h3, #overviewdiagram, .bottomscorelabel, #carousel, .button,.navigation, #feedbacktab, #bonesAdmin, #carousel-nav, .overview a { display: none;}
-
 #map-indicators, #map-years, .zoom-control { display: none;}
-
 .correction-control, .drawer {display: none;}
-
 #footer1{display: none;}
