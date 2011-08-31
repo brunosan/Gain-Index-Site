@@ -1452,14 +1452,14 @@ div.bottomscorelabel {
  */
 .big-matrix {
   position:relative;
-  height: 490px;
+  height: 430px;
   width: 640px;
   }
 
 .big-matrix .graph {
   position:relative;
   width: 580px;
-  height: 410px;
+  height: 350px;
   margin-left: 60px;
   margin-bottom: 30px;
   border-style: solid;

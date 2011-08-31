@@ -4,10 +4,10 @@ var readinessToX = function(d) {
     return Math.round(((d - .1) / 0.85) * 580);
 };
 
-// * Vulnerability range 0 - 0.7
-// ...and 410 tall
+// * Vulnerability range 0.1 - 0.6
+// ...and 350 tall
 var vulnerabilityToY= function(d) {
-    return Math.round(((d - 0.1) / 0.7) * 410);
+    return Math.round(((d - 0.1) / 0.6) * 350);
 };
 
 var openTooltips = 0;
