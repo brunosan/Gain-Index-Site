@@ -1,13 +1,15 @@
-// * Readiness range is 0 - 0.85
+// * Readiness range is 0.1 - 0.85
 // Our matrix is 580 px wide
+// Points are 15px by 15px
 var readinessToX = function(d) {
-    return Math.round(((d - .1) / 0.85) * 580);
+    return Math.round(((d - 0.1) / 0.8) * 580) - 8;
 };
 
 // * Vulnerability range 0.1 - 0.6
 // ...and 350 tall
+// Points are 15px by 15px
 var vulnerabilityToY= function(d) {
-    return Math.round(((d - 0.1) / 0.6) * 350);
+    return Math.round(((d - 0.1) / 0.6) * 350) - 8;
 };
 
 var openTooltips = 0;
