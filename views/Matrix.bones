@@ -18,6 +18,52 @@ var openTooltips = 0;
 var animated = false,
     currentYear = 2010;
 
+var quadrant = function(data) {
+    // Determine which quadrant to highlight.
+    // * The turning point for Vulnerability us 0.31
+    // * The turning point for Readiness is 0.52
+    var quad = (data.vulnerability > 0.31 ? 't' : 'b');
+    quad += (data.readiness > 0.52 ? 'r' : 'l');
+    return quad;
+};
+
+var quadrantCoord = function(data) {
+    // Determine which quadrant to highlight, base on Coords.
+    // TODO it's unfortuate that we've got these two quad calcuation
+    //      functions, we should be able to consolidate.
+    var quad = (data.y > vulnerabilityToY(0.31) ? 't' : 'b');
+    quad += (data.x > readinessToX(0.52) ? 'r' : 'l');
+    return quad;
+};
+
+var classTween = function(d, i, a) {
+    var classes = this.className.split(' ');
+    // If the only class is 'point' we're not active and don't
+    // need to transition colors.
+    if (classes.length > 1) {
+        // If our class won't change as a result of the transition,
+        // don't bother with this interpolator.
+        if ('point active-' + quadrant(d) != a) {
+
+            var xc = parseInt(this.style.left.slice(0, -2));
+            var xRange = readinessToX(d.readiness) - xc;
+
+            var yc = parseInt(this.style.bottom.slice(0, -2));
+            var yRange = vulnerabilityToY(d.vulnerability) - yc;
+            
+            return function(n) {
+                return 'point active-' + quadrantCoord({
+                    x: (n * xRange) + xc,
+                    y: (n * yRange) + yc
+                });
+            };
+        }
+    }
+
+    // Effectively a no-op. Don't tweak the class at all.
+    return function() { return a; };
+}
+
 view = views.Main.extend({
     events: {
         'click ul.year-selector li a': 'yearSelect',
@@ -71,8 +117,6 @@ view = views.Main.extend({
             map = {};
             countries = {};
 
-        this.countryOrder = {};
-
         this.data = data;
 
         for (var i = 1995; i <= 2010; i++) {
@@ -111,15 +155,9 @@ view = views.Main.extend({
             });
         });
 
-        _(countries).chain().keys().sort().each(function(v, k) {
-            view.countryOrder[v] = k;
-        });
-
         this.matrix = d3.select('.big-matrix .graph')
         var chart = this.matrix.selectAll("div")
-            .data(data['2010'], function(d) {
-                return view.countryOrder[d.iso];
-            });
+            .data(data['2010'], function(d) { return d.iso });
 
         chart.enter().append("div")
             .html(function(d) { return templates.MatrixPoint(d); })
@@ -139,7 +177,7 @@ view = views.Main.extend({
             var label = $('.active-countries .country-'+ model.id, view.el);
             var data = target.get(0).__data__;
 
-            var quad = view.quadrant(data);
+            var quad = quadrant(data);
             $(target).addClass('active-' + quad);
             $('.active-countries', this.el).append(templates.CountryOption(data));
         });
@@ -164,45 +202,26 @@ view = views.Main.extend({
 
         return this;
     },
-    setYear: function(year) {
-        currentYear = year;
-        var currentData = this.data[year];
-        var view = this;
+    setYear: function(year, next) {
+        var currentData = this.data[year],
+            count = currentData.length,
+            n = 0;
 
-        $('ul.year-selector a', this.el).removeClass('active');
-        $('ul.year-selector a.year-'+ year, this.el).addClass('active');
+        // Update the currenYear closure
+        currentYear = parseInt(year);
 
-        this.matrix.selectAll("div").data(currentData, function(d) {
-                return view.countryOrder[d.iso];
-            }).transition().duration(500)
+        this.matrix.selectAll("div").data(currentData, function(d) { return d.iso })
+            .transition().duration(500)
             .style('bottom', function(d) { return vulnerabilityToY(d.vulnerability) + 'px'; })
             .style('left', function(d) { return readinessToX(d.readiness) + 'px'; })
-            .attrTween('class', function(d, i, a) {
-                var classes = this.className.split(' ');
-                // If the only class is 'point' we're not active and don't
-                // need to transition colors.
-                if (classes.length > 1) {
-                    // If our class won't change as a result of the transition,
-                    // don't bother with this interpolator.
-                    if ('point active-' + view.quadrant(d) != a) {
-
-                        var xc = parseInt(this.style.left.slice(0, -2));
-                        var xRange = readinessToX(d.readiness) - xc;
-
-                        var yc = parseInt(this.style.bottom.slice(0, -2));
-                        var yRange = vulnerabilityToY(d.vulnerability) - yc;
-                        
-                        return function(n) {
-                            return 'point active-' + view.quadrantCoord({
-                                x: (n * xRange) + xc,
-                                y: (n * yRange) + yc
-                            });
-                        };
-                    }
+            .attrTween('class', classTween)
+            .each('end', function() {
+                n++;
+                if (n == count) {
+                    $('ul.year-selector a', this.el).removeClass('active');
+                    $('ul.year-selector a.year-'+ year, this.el).addClass('active');
+                    next && next();
                 }
-
-                // Effectively a no-op. Don't tweak the class at all.
-                return function() { return a; };
             });
     }, 
     yearSelect: function(ev) {
@@ -213,31 +232,34 @@ view = views.Main.extend({
         return false;
     },
     yearsGo: function(ev) {
+        // If the animation has been paused, bail.
         if (animated == true) {
           $(ev.currentTarget).removeClass('running');
           animated = false;
           return false;
         }
+
+        // If we click play from 2010, we really want to start from 1995
+        if (currentYear == 2010) currentYear = 1994;
+
         var actions = [],
             view = this;
 
-        // If we click play from 2010, we really want to start from 1995
-        if (currentYear == 2010) currentYear = 1995;
-        
-        for (var i = currentYear; i <= 2010; i++) {
+        actions.push(function(next) {
+            $(ev.currentTarget).addClass('running');
+            animated = true;
+            next();
+        });
+
+        for (var i = (currentYear + 1); i <= 2010; i++) {
             (function(y) {
                 actions.push(function(next) {
-                    if (animated) {
-                        view.setYear(y);
-                        setTimeout(next, 500);
-                    }
+                    if (animated) { view.setYear(y, next) }
                 });
             })(i);
         }
 
-        $(ev.currentTarget).addClass('running');
-        animated = true;
-        _(actions).reduceRight(_.wrap, function(){
+        _(actions).reduceRight(_.wrap, function() {
             $(ev.currentTarget).removeClass('running');
             animated = false;
         })();
@@ -256,22 +278,7 @@ view = views.Main.extend({
          }
         ev.preventDefault();
     },
-    quadrant: function(data) {
-        // Determine which quadrant to highlight.
-        // * The turning point for Vulnerability us 0.31
-        // * The turning point for Readiness is 0.52
-        var quad = (data.vulnerability > 0.31 ? 't' : 'b');
-        quad += (data.readiness > 0.52 ? 'r' : 'l');
-        return quad;
-    },
-    quadrantCoord: function(data) {
-        // Determine which quadrant to highlight, base on Coords.
-        // TODO it's unfortuate that we've got these two quad calcuation
-        //      functions, we should be able to consolidate.
-        var quad = (data.y > vulnerabilityToY(0.31) ? 't' : 'b');
-        quad += (data.x > readinessToX(0.52) ? 'r' : 'l');
-        return quad;
-    },
+
     removeCountry: function(ev) {
         var isoRegex = /country-(\w{3})/;
 
