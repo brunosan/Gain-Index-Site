@@ -111,7 +111,10 @@ ul {
   overflow: hidden;
   width: 200px;
   }
-
+img.left {
+  float: left;
+  margin: 5px 15px 15px 0;
+  }
 /**
  * Documents.
  */
@@ -1460,6 +1463,7 @@ div.bottomscorelabel {
  * Matrix section
  */
 .big-matrix {
+  background: transparent url(../images/matrix-underlay.png) no-repeat 20px 0;
   position:relative;
   height: 430px;
   width: 640px;
@@ -1509,7 +1513,7 @@ div.bottomscorelabel {
   background: transparent url(../images/sprite.png) repeat-x 0 -1570px;
   color: #fff;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.9);
-  margin: 15px;
+  margin: 20px 15px 15px;
   padding: 0 5px;
   border-radius: 4px;
   moz-border-radius: 4px;
@@ -1561,7 +1565,7 @@ div.bottomscorelabel {
   box-shadow: inset 0 0 4px #000;
   }
 .country-selector input.button {
-  margin-left: 10px;
+  margin-left: 5px;
   padding: 5px 10px;
   background-color: #fff;
   }
@@ -1578,7 +1582,7 @@ div.bottomscorelabel {
 .country-selector .active-countries span.country {
   display: block;
   float: left;
-  margin: 0 10px 10px 0;
+  margin: 0 5px 10px 0;
   padding: 0 35px 0 10px;
   line-height: 30px;
   background: #a8a8a8;
@@ -1610,12 +1614,12 @@ div.bottomscorelabel {
   }
 .gapminder a {
   display: block;
-  padding: 5px;
-  color: #fff;
-  background-color: #8ad35e;
-  border-radius:3px;
-  moz-border-radius:3px;
-  webkit-border-radius:3px;
+  padding: 5px 5px 5px 35px;
+  color: white;
+  background: #8AD35E url(../images/sprite.png) no-repeat -315px -975px;
+  border-radius: 3px;
+  moz-border-radius: 3px;
+  webkit-border-radius: 3px;
   }
 /**
  * Bones-admin : popups.

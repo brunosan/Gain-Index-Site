@@ -53,8 +53,14 @@ model = Backbone.Collection.extend({
     sortByRank: function(options) {
         this.comparator = function(model) {
             var rank = model.rank({format: false});
-            if (rank) return rank.desc;
-            return Infinity;
+            var desc = (rank && rank.desc) || 999;
+
+            // Use the country code as a secondary
+            // sort field.
+            return [
+                ('000' + desc).slice(-3),
+                model.get('ISO3')
+            ].join('');
         };
         this.sort(options);
         return this;

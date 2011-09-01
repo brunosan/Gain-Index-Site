@@ -871,7 +871,7 @@ model.meta = {
     "vulnerability": {
         "id": "vulnerability",
         "name": "Vulnerability",
-        "description": "A country's GaIn™ score is composed of a Vulnerability score and a Readiness score. Vulnerability measures a country's exposure, sensitivity and ability to cope with climate related hazards, as well as accounting for the overall status of food, water, health and infrastructure within the nation. It displays a score from 0 to 1, calculated by average of its component scores. Lower scores represent lower vulnerability.",
+        "description": "A country's GaIn™ score is composed of a Vulnerability score and a Readiness score. Vulnerability measures a country's exposure, sensitivity and ability to cope with climate related hazards, as well as accounting for the overall status of food, water, health and infrastructure within the nation.",
         "format": "number",
         "decimals": "3",
         "unit": null,
@@ -882,7 +882,7 @@ model.meta = {
     "vulnerability_delta": {
         "id": "vulnerability_delta",
         "name": "Vulnerability, corrected for GDP",
-        "description": "A country's GaIn™ score is very closely correlated to its GDP per capita. By correcting for GDP a country's Vulnerability score relative to countries of a similar GDP is revealed. A negative value means a country has a lower Vulnerability score than other countries of a similar GDP. A positive value means a country has a higher score.",
+        "description": "GDP corrected Vulnerability scores represent how far the actual Vulnerability score of a country is from its expected Vulnerability score based on its GD.",
         "format": "number",
         "decimals": "3",
         "unit": null,
@@ -893,7 +893,7 @@ model.meta = {
     "readiness": {
         "id": "readiness",
         "name": "Readiness",
-        "description": "A country's GaIn™ score is composed of a Vulnerability score and a Readiness score. Readiness measures the ability of a country's private and public sectors to leverage resources effectively towards increasing resiliency to climate change. It displays a score from 0 to 1, calculated by a weighted sum of its component scores. Higher scores represent better readiness scores.",
+        "description": "A country's GaIn™ score is composed of a Vulnerability score and a Readiness score. Readiness measures the ability of a country's private and public sectors to leverage resources effectively towards increasing resiliency to climate change and other global challenges.",
         "format": "number",
         "decimals": "3",
         "unit": null,
@@ -904,7 +904,7 @@ model.meta = {
     "readiness_delta": {
         "id": "readiness_delta",
         "name": "Readiness, corrected for GDP",
-        "description": "A country's GaIn™ score is very closely correlated to its GDP per capita. By correcting for GDP a country's Readiness score relative to countries of a similar GDP is revealed. A negative value means a country has a lower Readiness score than other countries of a similar GDP. A positive value means a country has a higher score.",
+        "description": "GDP corrected Readiness scores represent how far the actual Readiness score of a country is from its expected score based on its GDP.",
         "format": "number",
         "decimals": "3",
         "unit": null,
@@ -927,7 +927,7 @@ model.meta = {
     "gain_delta": {
         "id": "gain_delta",
         "name": "GaIn™, corrected for GDP",
-        "description": "A country's GaIn™ score is very closely correlated to its GDP per capita. By correcting for GDP a country's GaIn score relative to countries of a similar GDP is revealed. A negative value means a country has a lower GaIn score than other countries of a similar GDP. A positive value means a country has a higher score.",
+        "description": "GDP corrected GaIn™ scores represent how far the actual GaIn™ score of a country is from its expected score based on its GDP. GDP corrected GaIn™ scores are the sums of a country's GDP corrected Readiness and Vulnerability scores.",
         "format": "number",
         "decimals": "1",
         "unit": null,
