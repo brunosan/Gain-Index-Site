@@ -929,7 +929,7 @@ model.meta = {
         "name": "GaIn™, corrected for GDP",
         "description": "GDP corrected GaIn™ scores represent how far the actual GaIn™ score of a country is from its expected score based on its GDP. A positive value means a country has a higher GaIn™ score than other countries of a similar GDP. A negative value means a country has a lower score.",
         "format": "number",
-        "decimals": "1",
+        "decimals": "2",
         "unit": null,
         "index": "gain",
         "sector": null,
