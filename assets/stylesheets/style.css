@@ -1570,7 +1570,7 @@ div.bottomscorelabel {
   font-weight: bold;
   }
 .big-matrix ul.year-selector li a:hover,
-.big-matrix ul.year-selector li a.active {
+.big-matrix ul.year-selector li a.selected {
   background: transparent url(../images/sprite.png) repeat-x 0 -1570px;
   text-decoration: none;
   }

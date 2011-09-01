@@ -186,7 +186,6 @@ view = views.Main.extend({
             .style('bottom', function(d) { return vulnerabilityToY(d.vulnerability) + 'px'; })
             .style('left', function(d) { return readinessToX(d.readiness) + 'px'; });
 
-        $('ul.year-selector a.year-2010', this.el).addClass('active');
 
         // Create a collection to manage the selected countries.
         this.selected = new Backbone.Collection();
@@ -220,7 +219,7 @@ view = views.Main.extend({
             resultLimit: 10
         })).render();
 
-
+        $('ul.year-selector a.year-2010', this.el).addClass('selected');
         return this;
     },
     setYear: function(year, next) {
@@ -240,8 +239,8 @@ view = views.Main.extend({
             .each('end', function() {
                 n++;
                 if (n == count) {
-                    $('ul.year-selector a', this.el).removeClass('active');
-                    $('ul.year-selector a.year-'+ year, this.el).addClass('active');
+                    $('ul.year-selector a', this.el).removeClass('selected');
+                    $('ul.year-selector a.year-'+ year, this.el).addClass('selected');
                     next && next();
                 }
             });
