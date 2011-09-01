@@ -71,7 +71,13 @@ var classTween = function(d, i, a) {
 
 var pixelTween = function(axis) {
     return  function(d, i, a) {
-        var a = (a ? parseInt(a.slice(0, -2)) : 0);
+        // IE8 seems to forget things you try to teach it.
+        if (a == null) {
+            var plane = (axis == 'vulnerability' ? 'bottom' : 'left');
+            a = this.style[plane];
+        }
+
+        var a = parseInt(a.slice(0, -2));
         var b = valToCoord[axis](d[axis]);
         b -= a;
         return function(t) { return Math.round(a + b * t) + 'px'; };
