@@ -974,7 +974,7 @@ function _gradientHsl(from, to, max, pos) {
     from = hexToHsl(from);
     to = hexToHsl(to);
     var result = {};
-    _.each(Object.keys(from), function(k) {
+    _.each(_.keys(from), function(k) {
         result[k] = _gradientComponent(from[k], to[k], max, pos);
     });
     return hslToHex(result);
@@ -984,7 +984,7 @@ function _gradientRgb(from, to, max, pos) {
     from = hexToRgb(from);
     to = hexToRgb(to);
     var result = {};
-    _.each(Object.keys(from), function(k) {
+    _.each(_.keys(from), function(k) {
         result[k] = _gradientComponent(from[k], to[k], max, pos);
     });
     return rgbToHex(result);
