@@ -1103,7 +1103,7 @@ table.data tbody tr.active:hover {
 .country-profile tr.worst td.score {
   background-image: url('../images/sprite.png');
   background-repeat: no-repeat;
-  background-position: 50px -885px;
+  background-position: 43px -885px;
   }
 .country-profile th.score {
   width: 60px;
