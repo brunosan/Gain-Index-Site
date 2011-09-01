@@ -105,8 +105,8 @@ view = views.Main.extend({
         $(this.el).empty().append(templates.Cabinet({klass: 'matrix'}));
         var gain = new models.Indicator({id: 'gain'});
         $('.floor', this.el).empty().append(templates.DefaultFloor({
-            title: gain.meta('name'),
-            content: gain.meta('description_long')
+            title: 'The Readiness Matrix',
+            content: templates.MatrixFloorText()
         }));
         $('.top', this.el).empty().append(templates.Matrix());
         return this;
