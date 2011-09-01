@@ -212,8 +212,8 @@ ul.tabs li a.active {
       padding: 0 5px;
       display: block;
       line-height: 20px;
-      background-color: #c6c6c6;
-      border-bottom: 1px solid #a8a8a8;
+      background-color: #b5b5b5;
+      border-bottom: 1px solid #8C8C8C;
       }
       ul.tabs.level-2 li a:hover {text-decoration: none;}
     ul.tabs.level-2 li:first-child a {
@@ -233,8 +233,8 @@ ul.tabs li a.active {
       border-bottom-right-radius: 3px;
       }
     ul.tabs.level-2 li a.active {
-      border-top: 1px solid #8C8C8C;
-      background-color: #a8a8a8;
+      border-top: 1px solid #737373;
+      background-color: #8e8e8e;
       line-height: 19px;
       }
 
