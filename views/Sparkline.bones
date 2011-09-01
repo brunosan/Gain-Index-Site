@@ -10,7 +10,7 @@ view = Backbone.View.extend({
             lines: { lineWidth: 1 },
             shadowSize: 0
         },
-        colors: ['#ebebeb', '#C6C6C6', '#d15659']
+        colors: ['#ebebeb', '#666', '#666']
     },
     render: function(options) {
         var data = options.data;

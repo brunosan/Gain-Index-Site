@@ -13,7 +13,7 @@ model = Backbone.Model.extend({
         var el = options.el || document.getElementById('map'),
             width = options.width || 640,
             height = options.height || 490,
-            lat = options.lat || 35,
+            lat = options.lat || 15,
             lon = options.lon || -8,
             z = options.z || 2;
 

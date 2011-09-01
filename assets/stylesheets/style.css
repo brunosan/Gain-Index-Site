@@ -1409,6 +1409,7 @@ div.bottomscorelabel {
 .ranking table.data th,
 .ranking table.data td {
   padding: 0 15px;
+  text-align: left;
   }
 .ranking table.data th.score,
 .ranking table.data td.score {

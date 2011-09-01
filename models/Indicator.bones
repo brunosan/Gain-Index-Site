@@ -761,7 +761,7 @@ model.meta = {
     "governance": {
         "id": "governance",
         "name": "Governance",
-        "description": "Component measuring national stability, governmental responsiveness and corruption",
+        "description": "The Governance component summarizes national stability, governmental responsiveness and corruption.",
         "format": "number",
         "decimals": "3",
         "unit": null,
@@ -772,7 +772,7 @@ model.meta = {
     "economic": {
         "id": "economic",
         "name": "Economic readiness",
-        "description": "Component measuring economic stability, growth and governmental regulation",
+        "description": "The Economic component summarizes economic stability, growth and governmental regulation.",
         "format": "number",
         "decimals": "3",
         "unit": null,
@@ -783,7 +783,7 @@ model.meta = {
     "social": {
         "id": "social",
         "name": "Social readiness",
-        "description": "Component measuring the society's awareness and understanding of climate risks and their belief that changes will increase adaptation capacity",
+        "description": "The Social component summarizes the society's awareness and understanding of climate risks and their belief that changes will increase adaptation capacity.",
         "format": "number",
         "decimals": "3",
         "unit": null,
@@ -794,7 +794,7 @@ model.meta = {
     "exposure": {
         "id": "exposure",
         "name": "Exposure",
-        "description": "Component analyzing the probability of climate-related hazards",
+        "description": "The Exposure component summarizes the probability of climate-related hazards.",
         "format": "number",
         "decimals": "3",
         "unit": null,
@@ -805,7 +805,7 @@ model.meta = {
     "sensitivity": {
         "id": "sensitivity",
         "name": "Sensitivity",
-        "description": "Component measuring the potential severity of the impacts of climate-related threats",
+        "description": "The Sensitivity component summarizes the potential severity of the impacts of climate-related threats.",
         "format": "number",
         "decimals": "3",
         "unit": null,
@@ -816,7 +816,7 @@ model.meta = {
     "capacity": {
         "id": "capacity",
         "name": "Capacity",
-        "description": "Component measuring the availability of economic, social and institutional resources to cope with and adapt to the impacts of climate change",
+        "description": "The Capacity component summarizes the availability of economic, social and institutional resources to cope with and adapt to the impacts of climate change.",
         "format": "number",
         "decimals": "3",
         "unit": null,
@@ -827,7 +827,7 @@ model.meta = {
     "water": {
         "id": "water",
         "name": "Water",
-        "description": "Sector measuring a nation's current and future ability to provide clean water",
+        "description": "The Water score summarizes a country's current and future ability to provide clean water.",
         "format": "number",
         "decimals": "3",
         "unit": null,
@@ -838,7 +838,7 @@ model.meta = {
     "food": {
         "id": "food",
         "name": "Food",
-        "description": "Sector measuring the nation's food production, nutrition and rural population",
+        "description": "The Food score summarizes a country's food production, nutrition and rural population.",
         "format": "number",
         "decimals": "3",
         "unit": null,
@@ -849,7 +849,7 @@ model.meta = {
     "health": {
         "id": "health",
         "name": "Health",
-        "description": "Sector measuring a nation's ability to provide health services against several mortality statistics",
+        "description": "The Health score summarizes a country's ability to provide health services against several mortality statistics.",
         "format": "number",
         "decimals": "3",
         "unit": null,
@@ -860,7 +860,7 @@ model.meta = {
     "infrastruct": {
         "id": "infrastruct",
         "name": "Infrastructure",
-        "description": "Sector analyzing three direct factors impacting human well-being in the face of climate change: coasts, energy and transportation",
+        "description": "The Infrastructure score summarizes three factors impacting human well-being in the face of climate change: coasts, energy and transportation.",
         "format": "number",
         "decimals": "3",
         "unit": null,
@@ -871,7 +871,7 @@ model.meta = {
     "vulnerability": {
         "id": "vulnerability",
         "name": "Vulnerability",
-        "description": "Vulnerability measures a country's exposure, sensitivity and ability to cope with climate related hazards, as well as accounting for the overall status of food, water, health and infrastructure within the nation",
+        "description": "A country's GaIn™ score is composed of a Vulnerability score and a Readiness score. Vulnerability measures a country's exposure, sensitivity and ability to cope with climate related hazards, as well as accounting for the overall status of food, water, health and infrastructure within the nation.",
         "format": "number",
         "decimals": "3",
         "unit": null,
@@ -882,7 +882,7 @@ model.meta = {
     "vulnerability_delta": {
         "id": "vulnerability_delta",
         "name": "Vulnerability, corrected for GDP",
-        "description": "GDP corrected vulnerability scores represent how far the actual vulnerability score of a country is from its expected readiness score based on its income level",
+        "description": "GDP corrected Vulnerability scores represent how far the actual Vulnerability score of a country is from its expected Vulnerability score based on its GDP.  A positive value means a country has a higher Vulnerability score than other countries of a similar GDP. A negative value means a country has a lower score.",
         "format": "number",
         "decimals": "3",
         "unit": null,
@@ -893,7 +893,7 @@ model.meta = {
     "readiness": {
         "id": "readiness",
         "name": "Readiness",
-        "description": "Readiness measures the ability of a country's private and public sectors to leverage resources effectively towards increasing resiliency to climate change",
+        "description": "A country's GaIn™ score is composed of a Vulnerability score and a Readiness score. Readiness measures the ability of a country's private and public sectors to leverage resources effectively towards increasing resiliency to climate change and other global challenges.",
         "format": "number",
         "decimals": "3",
         "unit": null,
@@ -904,7 +904,7 @@ model.meta = {
     "readiness_delta": {
         "id": "readiness_delta",
         "name": "Readiness, corrected for GDP",
-        "description": "GDP corrected readiness scores represent how far the actual readiness score of a country is from its expected readiness score based on its income level",
+        "description": "GDP corrected Readiness scores represent how far the actual Readiness score of a country is from its expected score based on its GDP. A positive value means a country has a higher Readiness score than other countries of a similar GDP. A negative value means a country has a lower score.",
         "format": "number",
         "decimals": "3",
         "unit": null,
@@ -915,8 +915,8 @@ model.meta = {
     "gain": {
         "id": "gain",
         "name": "GaIn™",
-        "description": "The Global Adaptation Index™ (GaIn™) summarizes a country's Vulnerability to climate change and its Readiness to improve resilience.",
-        "description_long": "The Global Adaptation Index™ (GaIn™) exposes countries' vulnerabilities to climate change and opportunities to improve resilience. It aims to help businesses and the public sector to better prioritize investments for a more efficient response to the immediate global challenges ahead.",
+        "description": "The Global Adaptation Index™ (GaIn™) captures a country's Vulnerability to climate change and other global challenges on the one hand and its Readiness to improve resilience on the other hand.",
+        "description_long": "The Global Adaptation Index™ (GaIn™) summarizes a country's Vulnerability to climate change and other global challenges on the one hand and its Readiness to improve resilience on the other hand. It aims to help businesses and the public sector to better prioritize investments for a more efficient response to the immediate global challenges ahead.",
         "format": "number",
         "decimals": "1",
         "unit": null,
@@ -927,7 +927,7 @@ model.meta = {
     "gain_delta": {
         "id": "gain_delta",
         "name": "GaIn™, corrected for GDP",
-        "description": "GDP corrected scores are the sums of countries' corrected readiness and vulnerability scores",
+        "description": "GDP corrected GaIn™ scores represent how far the actual GaIn™ score of a country is from its expected score based on its GDP. A positive value means a country has a higher GaIn™ score than other countries of a similar GDP. A negative value means a country has a lower score.",
         "format": "number",
         "decimals": "1",
         "unit": null,
