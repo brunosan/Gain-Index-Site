@@ -366,11 +366,11 @@ model.meta = {
     },
     "gdp": {
         "id": "gdp",
-        "name": "GDP per capita",
+        "name": "GDP (PPP) per capita",
         "description": "Gross domestic product per capita",
         "format": "number",
         "decimals": "2",
-        "unit": "%s [PPP]",
+        "unit": "%s USD",
         "index": null,
         "sector": null,
         "component": null

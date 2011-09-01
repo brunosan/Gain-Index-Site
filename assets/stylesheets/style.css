@@ -192,7 +192,7 @@ ul.tabs li a.active {
   }
 .tab-wrapper .tab-wrapper {
   background-color: #fff;
-  padding: 10px 10px;
+  padding: 10px 15px 10px 10px;
   clear: left;
   }
   ul.tabs.level-2 {
@@ -212,8 +212,8 @@ ul.tabs li a.active {
       padding: 0 5px;
       display: block;
       line-height: 20px;
-      background-color: #c6c6c6;
-      border-bottom: 1px solid #a8a8a8;
+      background-color: #b5b5b5;
+      border-bottom: 1px solid #8C8C8C;
       }
       ul.tabs.level-2 li a:hover {text-decoration: none;}
     ul.tabs.level-2 li:first-child a {
@@ -233,8 +233,8 @@ ul.tabs li a.active {
       border-bottom-right-radius: 3px;
       }
     ul.tabs.level-2 li a.active {
-      border-top: 1px solid #8C8C8C;
-      background-color: #a8a8a8;
+      border-top: 1px solid #737373;
+      background-color: #8e8e8e;
       line-height: 19px;
       }
 
@@ -426,6 +426,11 @@ li.ui-menu-item a.ui-corner-all {
 #footer2 #address{
   margin-top: 15px;
   float: left;
+  color: white;
+  }
+  
+  #footer2 #address a {
+  font-weight: bold;
   color: white;
   }
 #footer2 .org a {
@@ -888,11 +893,14 @@ table.data tbody tr td {
   background: transparent url(../images/sprite.png) repeat-x 0 -1570px;
   color: #fff;
   text-shadow: 0 -1px 0 rgba(0,0,0,0.9);
-  padding: 5px;
+  padding: 5px 10px;
   display: block;
   position: absolute;
   top: 10px;
   right: 8px;
+  border-radius: 4px;
+  moz-border-radius: 4px;
+  webkit-border-radius: 4px;
   }
 .front #carousel {
   height: 155px;
@@ -1036,7 +1044,9 @@ table.data {
   table.data.full {
     margin-bottom: 45px;
     }
-  
+table tr {
+  text-align: left;
+  }
 table.data thead {
   border-bottom: 1px solid #c6c6c6;
   }
@@ -1063,9 +1073,6 @@ table.data tbody tr.active:hover {
 .country-profile div.prose {
   clear: both;
  }
-.country-profile p.label {
-  padding: 0;
-  }
 .country-profile .country-summary div.gain .name {
   font-weight: bold;
   }
@@ -1098,6 +1105,12 @@ table.data tbody tr.active:hover {
   background-repeat: no-repeat;
   background-position: 50px -885px;
   }
+.country-profile th.score {
+  width: 60px;
+  }
+.country-profile th.raw {
+  width: 70px;
+  }
 .country-profile tr.index td{
   font-size: 16px;
   font-weight: bold;
@@ -1114,6 +1127,9 @@ table.data tbody tr.active:hover {
 .country-profile td.name {
   width: 280px;
   padding-left: 15px;
+  }
+.country-profile th.graph {
+  width: 100px;
   }
 .country-profile td.graph div.placeholder {
   height: 20px;
@@ -1152,7 +1168,7 @@ table.data tbody tr.active:hover {
 div.bottomscorelabel {
   float: right;
   text-indent: 15px;
-  background: url('../images/sprite.png') 0px -890px no-repeat;
+  background: url('../images/sprite.png') 0px -891px no-repeat;
   }
 .country-profile .rankings {
   padding: 0 0 20px 0;
@@ -1404,24 +1420,29 @@ div.bottomscorelabel {
   width: 130px;
   }
 .ranking table.data th.index {
-  width: 90px;
+  width: 75px;
   }
 .ranking table.data th,
 .ranking table.data td {
   padding: 0 15px;
   text-align: left;
+  font-weight: normal;
   }
-.ranking table.data th.score,
-.ranking table.data td.score {
+  .ranking table.data th.score,
+  .ranking table.data td.score {
+    padding-left: 0;
+    }
+.ranking table.data th.outlook {
+  width: 65px;
+  }
+.ranking table.data th.score {
   width: 35px;
   }
-.ranking table.data th.country,
-.ranking table.data td.country {
+.ranking table.data th.country {
   padding: 0 0 0 15px;
   }
 .ranking table.data .icon-outlook {
-  float: left;
-  margin-top: 5px;
+  margin: 5px 0 0 15px;
   }
 .ranking .tab-wrapper .tab-wrapper {
   height: 20px;
@@ -1617,10 +1638,20 @@ div.bottomscorelabel {
   padding: 5px 5px 5px 35px;
   color: white;
   background: #8AD35E url(../images/sprite.png) no-repeat -315px -975px;
+  text-transform: uppercase;
+  font-size: 10px;
+  font-weight: bold;
   border-radius: 3px;
   moz-border-radius: 3px;
   webkit-border-radius: 3px;
   }
+  
+  .gapminder a:hover {
+  text-decoration: none;
+  background-color: #5A2;
+  }
+  
+
 /**
  * Bones-admin : popups.
  */

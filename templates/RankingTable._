@@ -2,7 +2,8 @@
   <th class='rank'><a class='sort label rank activeSort' href='#sort-rank'>Rank</a></th>
   <th class='alpha'><a class='sort label alpha' href='#sort-alpha'>Country</a></th>
   <th class='income'><a class='sort label income' href='#sort-income'>Income group</a></th>
-  <th class='index'></th>
+  <th class='outlook'>Outlook</th>
+  <th class='index'>Score</th>
 </tr></thead>
 <tbody>
   <% _.each(rows, function(v, k) { %>
@@ -10,7 +11,8 @@
       <td><%= v.rank %></td>
       <td><%= v.name %></td>
       <td><div class='income-group <%= v.incomeClass%>'><%= v.income%></div></td>
-      <td><div class='icon-outlook icon-outlook-<%= v.outlook %>'></div><%= v.score%></td>
+      <td><div class='icon-outlook icon-outlook-<%= v.outlook %>'></div></td>
+      <td><%= v.score%></td>
     </tr>
   <% }); %>
 </tbody>
