@@ -34,8 +34,8 @@ view = Backbone.View.extend({
 
                 // The Scale of things here is non-obvious.
                 // * Readiness range with .52 as the center is 0.14 - 0.9 
-                // * Vulnerability range with .31 as the center is -0.02 - 0.6
-                r = (r - 0.1) / 0.76;
+                // * Vulnerability range with .31 as the center is 0.02 - 0.6
+                r = (r - 0.14) / 0.76;
                 v = (v - 0.02) / 0.62;
 
                 // This math depends very heavily on the CSS which is applied to the

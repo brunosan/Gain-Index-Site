@@ -64,6 +64,27 @@ var classTween = function(d, i, a) {
     return function() { return a; };
 }
 
+var pixelTween = function(axis) {
+    // Sorry for this.
+    var valToCoord = {
+      vulnerability: vulnerabilityToY,
+      readiness: readinessToX
+    }
+
+    return  function(d, i, a) {
+        // IE8 seems to forget things you try to teach it.
+        if (a == null) {
+            var plane = (axis == 'vulnerability' ? 'bottom' : 'left');
+            a = this.style[plane];
+        }
+
+        var a = parseInt(a.slice(0, -2));
+        var b = valToCoord[axis](d[axis]);
+        b -= a;
+        return function(t) { return Math.round(a + b * t) + 'px'; };
+    };
+};
+
 view = views.Main.extend({
     events: {
         'click ul.year-selector li a': 'yearSelect',
@@ -84,8 +105,8 @@ view = views.Main.extend({
         $(this.el).empty().append(templates.Cabinet({klass: 'matrix'}));
         var gain = new models.Indicator({id: 'gain'});
         $('.floor', this.el).empty().append(templates.DefaultFloor({
-            title: gain.meta('name'),
-            content: gain.meta('description_long')
+            title: 'The Readiness Matrix',
+            content: templates.MatrixFloorText()
         }));
         $('.top', this.el).empty().append(templates.Matrix());
         return this;
@@ -165,7 +186,6 @@ view = views.Main.extend({
             .style('bottom', function(d) { return vulnerabilityToY(d.vulnerability) + 'px'; })
             .style('left', function(d) { return readinessToX(d.readiness) + 'px'; });
 
-        $('ul.year-selector a.year-2010', this.el).addClass('active');
 
         // Create a collection to manage the selected countries.
         this.selected = new Backbone.Collection();
@@ -199,27 +219,28 @@ view = views.Main.extend({
             resultLimit: 10
         })).render();
 
-
+        $('ul.year-selector a.year-2010', this.el).addClass('selected');
         return this;
     },
     setYear: function(year, next) {
         var currentData = this.data[year],
             count = currentData.length,
-            n = 0;
+            n = 0,
+            dur = ($.browser.msie ? 2000 : 500);
 
         // Update the currenYear closure
         currentYear = parseInt(year);
 
         this.matrix.selectAll("div").data(currentData, function(d) { return d.iso })
-            .transition().duration(500)
-            .style('bottom', function(d) { return vulnerabilityToY(d.vulnerability) + 'px'; })
-            .style('left', function(d) { return readinessToX(d.readiness) + 'px'; })
+            .transition().duration(dur)
+            .styleTween('bottom', pixelTween('vulnerability'))
+            .styleTween('left', pixelTween('readiness'))
             .attrTween('class', classTween)
             .each('end', function() {
                 n++;
                 if (n == count) {
-                    $('ul.year-selector a', this.el).removeClass('active');
-                    $('ul.year-selector a.year-'+ year, this.el).addClass('active');
+                    $('ul.year-selector a', this.el).removeClass('selected');
+                    $('ul.year-selector a.year-'+ year, this.el).addClass('selected');
                     next && next();
                 }
             });
