@@ -1073,9 +1073,6 @@ table.data tbody tr.active:hover {
 .country-profile div.prose {
   clear: both;
  }
-.country-profile p.label {
-  padding: 0;
-  }
 .country-profile .country-summary div.gain .name {
   font-weight: bold;
   }
