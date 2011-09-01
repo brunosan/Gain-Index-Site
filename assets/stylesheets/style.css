@@ -1422,8 +1422,7 @@ div.bottomscorelabel {
   padding: 0 0 0 15px;
   }
 .ranking table.data .icon-outlook {
-  float: left;
-  margin-top: 5px;
+  margin: 5px 0 0 15px;
   }
 .ranking .tab-wrapper .tab-wrapper {
   height: 20px;
