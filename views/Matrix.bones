@@ -219,13 +219,14 @@ view = views.Main.extend({
     setYear: function(year, next) {
         var currentData = this.data[year],
             count = currentData.length,
-            n = 0;
+            n = 0,
+            dur = ($.browser.msie ? 2000 : 500);
 
         // Update the currenYear closure
         currentYear = parseInt(year);
 
         this.matrix.selectAll("div").data(currentData, function(d) { return d.iso })
-            .transition().duration(500)
+            .transition().duration(dur)
             .styleTween('bottom', pixelTween('vulnerability'))
             .styleTween('left', pixelTween('readiness'))
             .attrTween('class', classTween)
