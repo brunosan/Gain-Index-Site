@@ -12,11 +12,6 @@ var vulnerabilityToY= function(d) {
     return Math.round(((d - 0.1) / 0.6) * 350) - 8;
 };
 
-var valToCoord = {
-  vulnerability: vulnerabilityToY,
-  readiness: readinessToX
-}
-
 var openTooltips = 0;
 
 // Some closure variables to help with animation.
@@ -70,6 +65,12 @@ var classTween = function(d, i, a) {
 }
 
 var pixelTween = function(axis) {
+    // Sorry for this.
+    var valToCoord = {
+      vulnerability: vulnerabilityToY,
+      readiness: readinessToX
+    }
+
     return  function(d, i, a) {
         // IE8 seems to forget things you try to teach it.
         if (a == null) {
