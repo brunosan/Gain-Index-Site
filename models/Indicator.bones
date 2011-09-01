@@ -882,7 +882,7 @@ model.meta = {
     "vulnerability_delta": {
         "id": "vulnerability_delta",
         "name": "Vulnerability, corrected for GDP",
-        "description": "GDP corrected Vulnerability scores represent how far the actual Vulnerability score of a country is from its expected Vulnerability score based on its GDP.",
+        "description": "GDP corrected Vulnerability scores represent how far the actual Vulnerability score of a country is from its expected Vulnerability score based on its GDP.  A positive value means a country has a higher Vulnerability score than other countries of a similar GDP. A negative value means a country has a lower score.",
         "format": "number",
         "decimals": "3",
         "unit": null,
@@ -904,7 +904,7 @@ model.meta = {
     "readiness_delta": {
         "id": "readiness_delta",
         "name": "Readiness, corrected for GDP",
-        "description": "GDP corrected Readiness scores represent how far the actual Readiness score of a country is from its expected score based on its GDP.",
+        "description": "GDP corrected Readiness scores represent how far the actual Readiness score of a country is from its expected score based on its GDP. A positive value means a country has a higher Readiness score than other countries of a similar GDP. A negative value means a country has a lower score.",
         "format": "number",
         "decimals": "3",
         "unit": null,
@@ -927,7 +927,7 @@ model.meta = {
     "gain_delta": {
         "id": "gain_delta",
         "name": "GaIn™, corrected for GDP",
-        "description": "GDP corrected GaIn™ scores represent how far the actual GaIn™ score of a country is from its expected score based on its GDP. GDP corrected GaIn™ scores are the sums of a country's GDP corrected Readiness and Vulnerability scores.",
+        "description": "GDP corrected GaIn™ scores represent how far the actual GaIn™ score of a country is from its expected score based on its GDP. A positive value means a country has a higher GaIn™ score than other countries of a similar GDP. A negative value means a country has a lower score.",
         "format": "number",
         "decimals": "1",
         "unit": null,
