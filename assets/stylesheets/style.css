@@ -456,6 +456,7 @@ li.ui-menu-item a.ui-corner-all {
   -o-transition: all 0.3s ease-in-out;
   -ms-transition: all 0.3s ease-in-out;
   -transition: all 0.3s ease-in-out;
+  z-index: 21;
   }
 #feedbacktab .tab.button.green {
   padding: 0 15px 0 15px;
