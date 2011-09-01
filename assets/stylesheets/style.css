@@ -1036,7 +1036,9 @@ table.data {
   table.data.full {
     margin-bottom: 45px;
     }
-  
+table tr {
+  text-align: left;
+  }
 table.data thead {
   border-bottom: 1px solid #c6c6c6;
   }
@@ -1114,6 +1116,9 @@ table.data tbody tr.active:hover {
 .country-profile td.name {
   width: 280px;
   padding-left: 15px;
+  }
+.country-profile th.graph {
+  width: 100px;
   }
 .country-profile td.graph div.placeholder {
   height: 20px;
