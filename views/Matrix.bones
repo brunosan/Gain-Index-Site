@@ -12,6 +12,11 @@ var vulnerabilityToY= function(d) {
     return Math.round(((d - 0.1) / 0.6) * 350) - 8;
 };
 
+var valToCoord = {
+  vulnerability: vulnerabilityToY,
+  readiness: readinessToX
+}
+
 var openTooltips = 0;
 
 // Some closure variables to help with animation.
@@ -63,6 +68,15 @@ var classTween = function(d, i, a) {
     // Effectively a no-op. Don't tweak the class at all.
     return function() { return a; };
 }
+
+var pixelTween = function(axis) {
+    return  function(d, i, a) {
+        var a = (a ? parseInt(a.slice(0, -2)) : 0);
+        var b = valToCoord[axis](d[axis]);
+        b -= a;
+        return function(t) { return Math.round(a + b * t) + 'px'; };
+    };
+};
 
 view = views.Main.extend({
     events: {
@@ -212,8 +226,8 @@ view = views.Main.extend({
 
         this.matrix.selectAll("div").data(currentData, function(d) { return d.iso })
             .transition().duration(500)
-            .style('bottom', function(d) { return vulnerabilityToY(d.vulnerability) + 'px'; })
-            .style('left', function(d) { return readinessToX(d.readiness) + 'px'; })
+            .styleTween('bottom', pixelTween('vulnerability'))
+            .styleTween('left', pixelTween('readiness'))
             .attrTween('class', classTween)
             .each('end', function() {
                 n++;
