@@ -3,7 +3,7 @@
     <th class='composition label'>Composition</th>
     <th class='graph label'>1995 to 2010</th>
     <th class='raw label'>Raw</th>
-    <th class='normalized label'>Score</th>
+    <th class='score label'>Score</th>
 </tr></thead>
 <tbody>
 <% _.each(data, function(row) { %>
