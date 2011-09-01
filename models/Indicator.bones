@@ -882,7 +882,7 @@ model.meta = {
     "vulnerability_delta": {
         "id": "vulnerability_delta",
         "name": "Vulnerability, corrected for GDP",
-        "description": "GDP corrected Vulnerability scores represent how far the actual Vulnerability score of a country is from its expected Vulnerability score based on its GD.",
+        "description": "GDP corrected Vulnerability scores represent how far the actual Vulnerability score of a country is from its expected Vulnerability score based on its GDP.",
         "format": "number",
         "decimals": "3",
         "unit": null,
