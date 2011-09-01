@@ -456,6 +456,7 @@ li.ui-menu-item a.ui-corner-all {
   -o-transition: all 0.3s ease-in-out;
   -ms-transition: all 0.3s ease-in-out;
   -transition: all 0.3s ease-in-out;
+  z-index: 21;
   }
 #feedbacktab .tab.button.green {
   padding: 0 15px 0 15px;
@@ -1103,7 +1104,7 @@ table.data tbody tr.active:hover {
 .country-profile tr.worst td.score {
   background-image: url('../images/sprite.png');
   background-repeat: no-repeat;
-  background-position: 50px -885px;
+  background-position: 43px -885px;
   }
 .country-profile th.score {
   width: 60px;
@@ -1637,7 +1638,7 @@ div.bottomscorelabel {
   display: block;
   padding: 5px 5px 5px 35px;
   color: white;
-  background: #8AD35E url(../images/sprite.png) no-repeat -315px -975px;
+  background: #68BB37 url(../images/sprite.png) no-repeat -315px -975px;
   text-transform: uppercase;
   font-size: 10px;
   font-weight: bold;

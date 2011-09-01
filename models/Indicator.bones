@@ -219,7 +219,7 @@ model.meta = {
         "description": "Projected change in temperature by the end of the 21st century",
         "format": "number",
         "decimals": "1",
-        "unit": "°C",
+        "unit": "%s °C",
         "index": "vulnerability",
         "sector": "water",
         "component": "exposure",
