@@ -1410,13 +1410,15 @@ div.bottomscorelabel {
 .ranking table.data td {
   padding: 0 15px;
   text-align: left;
+  font-weight: normal;
+  }  
+.ranking table.data th.outlook {
+  width: 65px;
   }
-.ranking table.data th.score,
-.ranking table.data td.score {
+.ranking table.data th.score {
   width: 35px;
   }
-.ranking table.data th.country,
-.ranking table.data td.country {
+.ranking table.data th.country {
   padding: 0 0 0 15px;
   }
 .ranking table.data .icon-outlook {
