@@ -154,6 +154,9 @@ view = views.Main.extend({
 
         if (data && data.length > 1) {
             var rawData = this.model.get('indicators').getRawGraphData('name', ind);
+            if (rawData.length) {
+                $('.lastReported', el).empty().append('Most recent reported data from ' + _(rawData).last()[0]);
+            }
             new views.Bigline({
                 el: $('.drawer .content .graph', this.el),
                 data: data,

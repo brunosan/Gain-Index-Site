@@ -39,6 +39,7 @@ view = Backbone.View.extend({
                     series[1].label = 'Calculated';
                     series[1].color = 0;
                 }
+
                 var rawPoints = {
                     label: "Reported",
                     data: rawData,

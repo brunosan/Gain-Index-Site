@@ -14,6 +14,13 @@ view = Backbone.View.extend({
     },
     render: function(options) {
         var data = options.data;
+        var rawData = options.rawData || [];
+
+        // if rawData has no valid points, consider
+        // data the authoritive source to render the
+        // point.
+        rawData = _.size(rawData) ? rawData : data;
+
         if (data && data.length > 1) {
             var last = data.length -1;
             var baseline = [
@@ -21,7 +28,7 @@ view = Backbone.View.extend({
                 [data[last][0], data[0][1]]
             ];
             var end = {
-                data: [[data[last][0], data[last][1]]],
+                data: _(rawData).rest(-1),
                 lines: {show:false},
                 points: { show:true, radius: 1 }
             };

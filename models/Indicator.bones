@@ -37,7 +37,6 @@ model = Backbone.Model.extend({
         }
         return this.format(value);
     },
-    // TODO: assumes a maximum rank of 142, determine actual maximum.
     rank: function(options) {
         options = this.optionDefaults(options);
         var value = this.get('rank') ? this.get('rank')[options.year] : undefined;
@@ -48,10 +47,11 @@ model = Backbone.Model.extend({
             return "<div class='rank-number undefined'>&nbsp;</div>";
         }
 
+        var totalRanks = value.asc + value.desc;
         if (this.get('category') == 'vulnerability' || this.get('name') == 'vulnerability_delta') {
-            var color = gradientRgb(['#67b6e0', '#fc7b7e'], 142, value.asc);
+            var color = gradientRgb(['#67b6e0', '#fc7b7e'], totalRanks, value.asc);
         } else {
-            var color = gradientRgb(['#67b6e0', '#fc7b7e'], 142, value.desc);
+            var color = gradientRgb(['#67b6e0', '#fc7b7e'], totalRanks, value.desc);
         }
 
         return "<div class='rank-number' style='background-color: #" + color + ";'>" + value.desc + '</div>';
@@ -929,7 +929,7 @@ model.meta = {
         "name": "GaIn™, corrected for GDP",
         "description": "GDP corrected GaIn™ scores represent how far the actual GaIn™ score of a country is from its expected score based on its GDP. A positive value means a country has a higher GaIn™ score than other countries of a similar GDP. A negative value means a country has a lower score.",
         "format": "number",
-        "decimals": "1",
+        "decimals": "2",
         "unit": null,
         "index": "gain",
         "sector": null,
@@ -974,7 +974,7 @@ function _gradientHsl(from, to, max, pos) {
     from = hexToHsl(from);
     to = hexToHsl(to);
     var result = {};
-    _.each(Object.keys(from), function(k) {
+    _.each(_.keys(from), function(k) {
         result[k] = _gradientComponent(from[k], to[k], max, pos);
     });
     return hslToHex(result);
@@ -984,7 +984,7 @@ function _gradientRgb(from, to, max, pos) {
     from = hexToRgb(from);
     to = hexToRgb(to);
     var result = {};
-    _.each(Object.keys(from), function(k) {
+    _.each(_.keys(from), function(k) {
         result[k] = _gradientComponent(from[k], to[k], max, pos);
     });
     return rgbToHex(result);

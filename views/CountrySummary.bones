@@ -11,13 +11,21 @@ view = Backbone.View.extend({
         _.each(['gain', 'readiness', 'vulnerability'], function(k) {
             var indicator = indicators.byName(k);
             if (indicator) {
-                summary[k] = {
-                    name: indicator.meta('name'),
-                    value: indicator.score(),
-                    raw: indicator.score({format: false})
-                };
                 if (k === 'gain') {
-                    summary[k].outlook = indicator.outlook();
+                    summary[k] = {
+                        name: indicator.meta('name') + ' rank',
+                        value: (indicator.rank({format: false}) || {}).desc,
+                        score: indicator.score(),
+                        outlook: indicator.outlook(),
+                        raw: indicator.score({format: false})
+                    };
+                }
+                else {
+                    summary[k] = {
+                        name: indicator.meta('name'),
+                        value: indicator.score(),
+                        raw: indicator.score({format: false})
+                    };
                 }
             }
         });
@@ -34,8 +42,8 @@ view = Backbone.View.extend({
 
                 // The Scale of things here is non-obvious.
                 // * Readiness range with .52 as the center is 0.14 - 0.9 
-                // * Vulnerability range with .31 as the center is -0.02 - 0.6
-                r = (r - 0.1) / 0.76;
+                // * Vulnerability range with .31 as the center is 0.02 - 0.6
+                r = (r - 0.14) / 0.76;
                 v = (v - 0.02) / 0.62;
 
                 // This math depends very heavily on the CSS which is applied to the

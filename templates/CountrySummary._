@@ -1,7 +1,8 @@
 <div id='indicator-gain' class='gain'>
     <span class='name'><%= data.gain.name %></span>
-    <span class='value'><%= data.gain.value %></span>
-    <% if (data.gain.outlook) { %>
+    <% if (data.gain.value) { %>
+      <span class='value'><%= data.gain.value %></span>
+      <div class='score'>Score: <span class='score'><%= data.gain.score %></span></div>
       <div class='outlook'>Outlook:
          <div class='icon-outlook icon-outlook-<%= data.gain.outlook %>'><%= data.gain.outlook %></div>
       </div>

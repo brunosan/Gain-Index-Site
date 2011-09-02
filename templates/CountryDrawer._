@@ -8,6 +8,7 @@
 <div class='indicator-time container'>
   <div class='chart clearfix'>
     <h4><%= title %> score over time </h4>
+    <h3 class='lastReported'></h3>
     <div class='graph'></div>
     <div class='legend'></div>
   </div>
