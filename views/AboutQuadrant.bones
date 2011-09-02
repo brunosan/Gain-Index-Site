@@ -42,7 +42,7 @@ view = Backbone.View.extend({
 
         if (!missing.length && !this.templateName) {
             var coords = [
-                data.vulnerability.score({format: false}) > 0.5 ? 'Top' : 'Bottom',
+                data.vulnerability.score({format: false}) < 0.5 ? 'Top' : 'Bottom',
                 data.readiness.score({format: false}) > 0.5 ? 'Right' : 'Left'
             ];
 
