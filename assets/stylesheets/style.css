@@ -45,7 +45,11 @@ h4 {
   font-style: italic;
   font-size: 13px;
   }
-
+.drawer h3 {
+  font-family: 'HelveticaNeue', Helvetica, Arial, sans-serif;
+  font-style: italic;
+  font-size: 11px;
+}
 /* Use this class for getting left/right padding */
 .container {
   padding-left: 15px;
