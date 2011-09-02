@@ -11,13 +11,21 @@ view = Backbone.View.extend({
         _.each(['gain', 'readiness', 'vulnerability'], function(k) {
             var indicator = indicators.byName(k);
             if (indicator) {
-                summary[k] = {
-                    name: indicator.meta('name'),
-                    value: indicator.score(),
-                    raw: indicator.score({format: false})
-                };
                 if (k === 'gain') {
-                    summary[k].outlook = indicator.outlook();
+                    summary[k] = {
+                        name: indicator.meta('name') + ' rank',
+                        value: (indicator.rank({format: false}) || {}).desc,
+                        score: indicator.score(),
+                        outlook: indicator.outlook(),
+                        raw: indicator.score({format: false})
+                    };
+                }
+                else {
+                    summary[k] = {
+                        name: indicator.meta('name'),
+                        value: indicator.score(),
+                        raw: indicator.score({format: false})
+                    };
                 }
             }
         });
