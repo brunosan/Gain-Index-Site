@@ -37,6 +37,11 @@ model = Backbone.Collection.extend({
         return data;
     },
     getRawGraphData: function(key, val) {
+        // TODO: cleaner API.
+        // This most likely causes the getGraphData to
+        // be generated twice, and we should consider
+        // improving this if the cost is too great.
+        //     - AR.
         var data = this.getGraphData(key, val);
         var indicator = this.byName(val);
 
