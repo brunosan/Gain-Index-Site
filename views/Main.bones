@@ -56,9 +56,9 @@ view = Backbone.View.extend({
     drawerEvents: function() {
         var view = this;
         _.each(['floor', 'drawer'], function(sel) {
-            $(window).scroll(function() {
+            $(window).scroll(_.throttle(function() {
                 view.positionDrawer(sel);
-            });
+            }, 50));
         });
     },
     positionDrawer: function(sel) {
