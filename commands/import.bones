@@ -106,9 +106,11 @@ command.prototype.initialize = function(options) {
             var records = {};
 
             actions.push(processCSV(source, function(v, i) {
-                var record = new Record(v, category, name);
-                record.values = _(v).reduce(reduceValues, {});
-                records[record.ISO3] = record;
+                if (v.ISO3) {
+                    var record = new Record(v, category, name);
+                    record.values = _(v).reduce(reduceValues, {});
+                    records[record.ISO3] = record;
+                }
             }));
 
             actions.push(function(next) {
@@ -184,14 +186,16 @@ command.prototype.initialize = function(options) {
             }
 
             actions.push(processCSV(source + '/gain.csv', function(v, i) {
-                var record = {};
-                record._id = '/api/Indicator/static-static-' + v.ISO3;
-                record.country = v.name;
-                record.ISO3 = v.ISO3;
+                if (v.ISO3) {
+                    var record = {};
+                    record._id = '/api/Indicator/static-static-' + v.ISO3;
+                    record.country = v.name;
+                    record.ISO3 = v.ISO3;
 
-                record.gain = parseFloat(v.gain);
+                    record.gain = parseFloat(v.gain);
 
-                records[record.ISO3] = record;
+                    records[record.ISO3] = record;
+                }
             }));
 
             actions.push(processCSV(source + '/readiness.csv', function(v, i) {
@@ -232,36 +236,54 @@ command.prototype.initialize = function(options) {
             var records = {};
 
             actions.push(processCSV(source + '/score.csv', function(v, i) {
-                var record = new Record(v, category, name);
-                record.values = _(v).reduce(reduceValues, {});
-                records[record.ISO3] = record;
+                if (v.ISO3) {
+                    var record = new Record(v, category, name);
+                    record.values = _(v).reduce(reduceValues, {});
+                    records[record.ISO3] = record;
+                }
             }));
 
             actions.push(processCSV(source + '/input.csv', function(v, i) {
-                var record = new Record(v, category, name);
-                records[record.ISO3] = records[record.ISO3] || record;
-                records[record.ISO3].input = _(v).reduce(reduceValues, {});
+                if (v.ISO3) {
+                    var record = new Record(v, category, name);
+                    records[record.ISO3] = records[record.ISO3] || record;
+                    records[record.ISO3].input = _(v).reduce(reduceValues, {});
+                }
             }));
 
             var raw = {};
             actions.push(processCSV(source + '/raw.csv', function(v, i) {
-                var record = new Record(v, category, name);
-                raw[record.ISO3] = _(v).reduce(reduceValues, {});
+                if (v.ISO3) {
+                    var record = new Record(v, category, name);
+                    raw[record.ISO3] = _(v).reduce(reduceValues, {});
+                }
             }));
 
-            var raw0 = {};
-            actions.push(processCSV(source + '/raw0.csv', function(v, i) {
-                var record = new Record(v, category, name);
-                raw0[record.ISO3] = _(v).reduce(reduceValues, {});
-            }));
+            // Import all of the Raw0/Raw01/Raw02/Raw03 files into a 
+            // single raw hash we use to check for the presence of a 
+            // year's value.
+            var rawX = {};
+            var processRawX = function(filename) {
+                return processCSV(source + '/' + filename, function(v, i) {
+                    if (v.ISO3) {
+                        var record = new Record(v, category, name);
+                        rawX[record.ISO3] = rawX[record.ISO3] || record;
+                        _.extend(rawX[record.ISO3], _(v).reduce(reduceValues, {}));
+                    }
+                });
+            }
 
+            actions.push(processRawX('raw0.csv'));
+            actions.push(processRawX('raw01.csv'));
+            actions.push(processRawX('raw02.csv'));
+            actions.push(processRawX('raw02.csv'));
 
             // interpolated/extrapolated
             actions.push(function(next) {
                 var counter = _.after(_(records).size(), next);
                 _(records).each(function(record, iso3) {
                     records[iso3].origin = _(record.input).reduce(function(memo, value, year) {
-                        if (raw0[iso3] && raw0[iso3][year] === value) {
+                        if (rawX[iso3] && rawX[iso3][year] !== undefined) {
                             memo[year] = 'raw';
                         } else if (raw[iso3] && raw[iso3][year] === value) {
                             memo[year] = 'assumed';
