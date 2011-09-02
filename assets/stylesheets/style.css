@@ -586,6 +586,12 @@ li.ui-menu-item a.ui-corner-all {
 #cabinet .drawer a.close.handle:hover {
   background: transparent url(../images/sprite.png) no-repeat 0 -605px;
   }
+
+#cabinet .indicator-time .lastReported {
+  padding: 0;
+  float: right;
+}
+
 #cabinet .indicator-info a.button.green {
   width: 80px;
   }
