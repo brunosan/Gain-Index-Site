@@ -37,7 +37,6 @@ model = Backbone.Model.extend({
         }
         return this.format(value);
     },
-    // TODO: assumes a maximum rank of 142, determine actual maximum.
     rank: function(options) {
         options = this.optionDefaults(options);
         var value = this.get('rank') ? this.get('rank')[options.year] : undefined;
@@ -48,10 +47,11 @@ model = Backbone.Model.extend({
             return "<div class='rank-number undefined'>&nbsp;</div>";
         }
 
+        var totalRanks = value.asc + value.desc;
         if (this.get('category') == 'vulnerability' || this.get('name') == 'vulnerability_delta') {
-            var color = gradientRgb(['#67b6e0', '#fc7b7e'], 142, value.asc);
+            var color = gradientRgb(['#67b6e0', '#fc7b7e'], totalRanks, value.asc);
         } else {
-            var color = gradientRgb(['#67b6e0', '#fc7b7e'], 142, value.desc);
+            var color = gradientRgb(['#67b6e0', '#fc7b7e'], totalRanks, value.desc);
         }
 
         return "<div class='rank-number' style='background-color: #" + color + ";'>" + value.desc + '</div>';
