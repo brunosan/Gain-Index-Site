@@ -53,5 +53,5 @@ view = views.AdminPopup.extend({
             error: Bones.admin.error
         });
         return false;
-    },
+    }
 });
