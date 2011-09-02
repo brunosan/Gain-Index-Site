@@ -14,17 +14,17 @@ model = models.Document.extend({
                 'type': 'string',
                 'title': 'Featured',
                 'required': true,
-                'minlength': 1,
+                'minlength': 1
             },
             'featuredSecond': {
                 'type': 'string',
                 'title': 'Featured',
                 'required': true,
-                'minlength': 1,
+                'minlength': 1
             }
         }
     },
     url: function() {
         return '/api/Front/' + encodeURIComponent(this.id);
-    },
+    }
 });
