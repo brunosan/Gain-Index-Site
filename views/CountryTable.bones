@@ -105,8 +105,9 @@ view = views.Main.extend({
             if (!ind) return;
 
             var data = collection.getGraphData('name', ind);
+            var rawData = collection.getRawGraphData('name', ind);
 
-            new views.Sparkline({el: graph, data: data});
+            new views.Sparkline({el: graph, data: data, rawData: rawData});
         });
     }
 });
