@@ -1,6 +1,6 @@
 view = views.AdminPopup.extend({
     events: _.extend({
-        'click input[type=submit]': 'submit',
+        'click input[type=submit]': 'submit'
     }, views.AdminPopup.prototype.events),
     initialize: function (options) {
         _.bindAll(this, 'submit');
