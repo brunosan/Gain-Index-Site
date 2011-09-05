@@ -4,7 +4,7 @@ view = Backbone.View.extend({
         this.el = $('#country-search');
     },
     initialize: function() {
-        _.bind(this, 'search', 'filter', 'select', 'submit');
+        _.bind(this, 'search', 'filter', 'select', 'submit', 'trigger');
         this.options.resultLimit = this.options.resultLimit || 3;
 
         var that = this;
@@ -40,6 +40,11 @@ view = Backbone.View.extend({
     select: function(ui) {
         this.active = ui.item;
         $('input[name=search]', this.el).val(this.active.label);
+        this.trigger(ui.item.value);
+    },
+    trigger: function(id) {
+       views.App.route('/country/' + id);
+       $('input[name=search]', this.el).val('');
     },
     submit: function(e) {
         e.preventDefault();
@@ -48,8 +53,7 @@ view = Backbone.View.extend({
             this.active = _(results).first();
         }
         if (this.active) {
-            views.App.route('/country/' + this.active.value);
-            $('input[name=search]', this.el).val('');
+            this.trigger(this.active.value);
         }
         return false;
     },
