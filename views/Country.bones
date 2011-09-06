@@ -72,8 +72,7 @@ view = views.Main.extend({
             el: $('.country-summary .map-wrapper', this.el)[0],
             width: 340,
             height: 160,
-            lon: coords[0],
-            lat: coords[1]
+            extent: coords 
         });
         this.map.featureClick = function(feature, context, index) {
             var iso = $(feature).data('iso');
