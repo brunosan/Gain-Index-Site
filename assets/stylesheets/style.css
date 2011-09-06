@@ -557,7 +557,7 @@ li.ui-menu-item a.ui-corner-all {
   -webkit-transition: margin-left .5s ease;
   }
 #cabinet .drawer.updating .content {
-  opacity:0.25;
+  opacity: 0.25;
   }
 #cabinet .drawer.open {
   left: 50%;
