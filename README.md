@@ -26,6 +26,11 @@ After cloning the repository / downloading the tarball:
 The application will refuse to install if it detects existing databases. To
 install anew, run `./index.js uninstall` first.
 
+Updating libmapnik2 / libmapnik2-dev
+------------------------------------
+
+As a result of the issue dicussed in the requirements ("Modern version of libsqlite3") if you upgrade libmapnik2 you must [rebuild the sqlite plugin](https://github.com/springmeyer/sqlite3-mapnik) and then rebuild node_modules
+
 
 Uninstalling
 ------------
