@@ -217,6 +217,15 @@ ul.tabs.level-2 a.active {
   #address a {
     font-weight: bold;
     }
+
+/****** Page break avoiding ******/
+.description {
+  page-break-before: always;
+  }
+.document h2 {
+  page-break-after: avoid;
+  }
+
 /****** Hidden ******/
 ul.tabs.level-2 li a { display: none; }
 .country-profile ul.tabs.level-1 a { display: none; }
