@@ -141,7 +141,7 @@ model.meta = {
     "business": {
         "id": "business",
         "name": "Business freedom",
-        "description"Individual’s right to create, operate, and close an enterprise without interference from the state",
+        "description": "Individual’s right to create, operate, and close an enterprise without interference from the state",
         "format": "number",
         "decimals": "0",
         "unit": null,
@@ -156,7 +156,7 @@ model.meta = {
     "coast_area": {
         "id": "coast_area",
         "name": "Coastal area",
-        "description": "Percent of land less than 5 meters above sea-level.",
+        "description": "Percent of land less than 5 meters above sea-level",
         "format": "number",
         "decimals": "2",
         "unit": "%s %",
