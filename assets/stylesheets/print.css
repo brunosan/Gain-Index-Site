@@ -222,11 +222,20 @@ ul.tabs.level-2 a.active {
   moz-border-radius: 4px;
   webkit-border-radius: 4px;
   }
-
+.front #map {
+  position: relative;
+  overflow: hidden;
+  }
+.front #map .map {
+  position: absolute;
+  top: 0;
+  left: 0;
+  }
 /****** Front page ******/
 .front #map,
 .front .map {
   width: 960px!important;
+  height: 320px!important;
   }
 
 /****** Country Section ******/
