@@ -52,8 +52,10 @@
       	<span class="description">Download GaIn™ scores and indicators between 1995 and 2010 in CSV format.</span>
       </a>
       <div id='country-search' class='search content'>
-        <input class='textfield' name='search' title='Search for a country'/>
-        <input class='button' name='submit' type='submit' value='Go' />
+        <form>
+          <input class='textfield' name='search' title='Search for a country'/>
+          <input class='button' name='submit' type='submit' value='Go' />
+        </form>
       </div>
     </div>
   </div>

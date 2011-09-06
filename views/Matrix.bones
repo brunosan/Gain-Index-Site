@@ -190,6 +190,12 @@ view = views.Main.extend({
         // Create a collection to manage the selected countries.
         this.selected = new Backbone.Collection();
 
+        this.available = _(data).chain()
+            .map(function(d) { return _(d).pluck('iso'); })
+            .flatten()
+            .uniq()
+            .value();
+
         // Bind the transformation of the DOM to the events of this
         // collection.
         this.selected.bind('add', function(model) {
@@ -216,6 +222,7 @@ view = views.Main.extend({
         (new views.CountrySelect({
             model: new models.CountrySearch(),
             selected: this.selected,
+            available: this.available,
             resultLimit: 10
         })).render();
 

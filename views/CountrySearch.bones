@@ -4,10 +4,12 @@ view = Backbone.View.extend({
         this.el = $('#country-search');
     },
     initialize: function() {
-        _.bind(this, 'search', 'filter', 'select');
+        _.bind(this, 'search', 'filter', 'select', 'submit', 'trigger');
         this.options.resultLimit = this.options.resultLimit || 3;
 
         var that = this;
+
+        this.active = null;
 
         var search = $('input[name=search]', this.el),
             searchTitle = search.attr('title');
@@ -20,22 +22,40 @@ view = Backbone.View.extend({
 
         search.autocomplete({
             source: function(request, response) {
+                that.active = null;
                 response(that.search(request.term));
                 return false;
             },
             select: function(e, ui) {
                 e.preventDefault();
                 that.select(ui);
-                search.val('');
             },
             position: { at: "left bottom", my: 'left top' }
         });
     },
     events: {
-        'click input[name=submit]': 'search'
+        'click input[name=submit]': 'submit',
+        'submit form': 'submit'
     },
     select: function(ui) {
-        views.App.route('/country/' + ui.item.value);
+        this.active = ui.item;
+        $('input[name=search]', this.el).val(this.active.label);
+        this.trigger(ui.item.value);
+    },
+    trigger: function(id) {
+       views.App.route('/country/' + id);
+       $('input[name=search]', this.el).val('');
+    },
+    submit: function(e) {
+        e.preventDefault();
+        if (!this.active) {
+            var results = this.search($('input[name=search]', this.el).val());
+            this.active = _(results).first();
+        }
+        if (this.active) {
+            this.trigger(this.active.value);
+        }
+        return false;
     },
     filter: function(results) {
         return _(results).first(this.options.resultLimit);
