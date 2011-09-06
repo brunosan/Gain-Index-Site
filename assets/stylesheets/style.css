@@ -162,8 +162,8 @@ img.left {
   text-indent: -9999px;
   background: transparent url(../images/sprite.png) no-repeat 0 0;
   }
-  .icon-outlook-up    { background-position: 0 -430px; }
-  .icon-outlook-down  { background-position: 0 -410px; }
+  .icon-outlook-up    { background-position: 0 -1365px; }
+  .icon-outlook-down  { background-position: 0 -1345px; }
   .icon-outlook-same  { background-position: 0 -389px; }
 
 /**
