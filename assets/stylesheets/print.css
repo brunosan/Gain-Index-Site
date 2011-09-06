@@ -86,7 +86,6 @@ a {
   }
 
 /* Tables */
-
 table {
   width: 100%;
   font-size: 12px;
@@ -130,6 +129,79 @@ table tr.index td.name {
   -webkit-border-radius: 4px;
   border-radius: 4px;
   text-align: center;}
+
+
+/*** Matrix Section ***/
+  .big-matrix {
+    background: transparent url(../images/matrix-underlay.png) no-repeat 20px 0;
+    position:relative;
+    height: 430px;
+    width: 640px;
+    }
+  .big-matrix .graph {
+    position:relative;
+    width: 580px;
+    height: 350px;
+    margin-left: 60px;
+    margin-bottom: 30px;
+    border-style: solid;
+    border-color: #000;
+    border-width: 0 0 1px 1px;
+    }
+  .big-matrix .graph div.point {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background: transparent url(../images/sprite.png) no-repeat -35px -1135px;
+    }
+  .big-matrix .graph div.point:hover {background: transparent url(../images/sprite.png) no-repeat 0 -1135px;}
+  .big-matrix .graph div.point .country { display: none; }
+
+  .big-matrix .graph div.active-tl { background: url('../images/sprite.png') -35px -1255px; z-index: 1; } /* red */
+  .big-matrix .graph div.active-tr { background: url('../images/sprite.png') -35px -1225px; z-index: 1; } /* blue */
+  .big-matrix .graph div.active-br { background: url('../images/sprite.png') -35px -1165px; z-index: 1;} /* green */
+  .big-matrix .graph div.active-bl { background: url('../images/sprite.png') -35px -1195px; z-index: 1; } /* yellow */
+
+  .big-matrix .graph div.active-tl:hover { background: url('../images/sprite.png') 0 -1255px; z-index: 1; } /* red */
+  .big-matrix .graph div.active-tr:hover { background: url('../images/sprite.png') 0 -1225px; z-index: 1; } /* blue */
+  .big-matrix .graph div.active-br:hover { background: url('../images/sprite.png') 0 -1165px; z-index: 1;} /* green */
+  .big-matrix .graph div.active-bl:hover { background: url('../images/sprite.png') 0 -1195px; z-index: 1; } /* yellow */
+
+  .big-matrix .tooltip .country {
+    position:absolute;
+    top: 10px;
+    right: 10px;
+    padding: 5px 5px;
+    background: #666;
+    color: #fff;
+    z-index: 200;
+    }
+  .big-matrix div.year-controls {
+    float: left;
+    background: #666;
+    color: #fff;
+    margin: 20px 0 20px 60px;
+    padding: 0 5px;
+    }
+  .big-matrix div.year-controls,
+  .big-matrix ul.year-selector {
+    float: left;
+    padding: 0 3px;
+    }
+  .big-matrix ul.year-selector li  { float: left; }
+  .big-matrix ul.year-selector li a {
+    color: #fff;
+    float: left;
+    padding: 2px 5px;
+    line-height: 25px;
+    font-size: 10px;
+    font-weight: bold;
+    }
+  .big-matrix ul.year-selector li a:hover,
+  .big-matrix ul.year-selector li a.selected {
+    background: #000;
+    text-decoration: none;
+    }
 
 /*** Outlook ***/
  .country-summary div.gain .icon-outlook {
@@ -333,8 +405,23 @@ ul.tabs.level-2 a.active {
   }
 
 /****** Hidden ******/
-ul.tabs.level-2 li a { display: none; }
-.country-profile ul.tabs.level-1 a { display: none; }
-.slider .content.container h3, #overviewdiagram, .bottomscorelabel, #carousel, .button,.navigation, #feedbacktab, #bonesAdmin, #carousel-nav, .overview a { display: none;}
-#map-indicators, #map-years, .zoom-control { display: none;}
-#footer1{display: none;}
+.slider .content.container h3,
+#overviewdiagram,
+.bottomscorelabel,
+#carousel,
+.button,
+.navigation,
+#feedbacktab,
+#bonesAdmin,
+#carousel-nav,
+#footer1,
+#map-years,
+.zoom-control,
+.country-selector,
+.gapminder,
+.overview a,
+a.play-button,
+.country-profile ul.tabs.level-1 a,
+ul.tabs.level-2 li a {
+  display: none;
+  }
