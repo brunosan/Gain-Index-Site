@@ -35,7 +35,6 @@ h4 {
   font-style: italic;
   font-size: 13px;
   }
-
 p {
   color: black;
   margin-bottom: 10px;
@@ -47,7 +46,6 @@ a {
   color: black;
   text-decoration: none;
   }
-
 .label { 
   font-style: italic;
   font-weight: normal;
@@ -60,13 +58,11 @@ a {
   width: 960px;
   height: 60px;
   margin: 0px auto 20px auto;
-}
-
+  }
 #header .limiter {
   position: relative;
   clear: both;
   }
-  
   #header h1 a.logo {
   font-size: 56px;
   display: block;
@@ -83,23 +79,20 @@ a {
   top: 15px;
   width: 110px;
   }
-
-  
   #header .org {
   float: right;
   text-align: right;
   top: 15px;
-    }
+  }
 
 /* Tables */
 
 table.data {
   width: 100%;
-  table-layout: fixed;
-  clear: left;
   font-size: 12px;
   }
 table.data tr {
+  width: 100%;
   line-height: 16px;
   }
 table.data thead tr {
@@ -256,7 +249,6 @@ ul.tabs.level-2 a.active {
 .country-profile .info {
   top: 60px;
   }
-
 .country-profile .map-wrapper {
   float: left;
   width: 340px;
