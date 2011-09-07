@@ -1247,8 +1247,13 @@ div.bottomscorelabel {
   margin: 12px 15px 0 0;
   width: 70px;
   height: 10px;
-  background-color: #ccc;
   }
+  .country-sector-graph.empty {
+    background-color: #ccc;
+    }
+  .details .country-sector-graph {
+    background-color: #ccc;
+    }
   .drawer .country-sector-graph {
     margin: 0 0 10px 0;
     width: 100%;
