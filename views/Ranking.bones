@@ -82,7 +82,7 @@ view = views.Main.extend({
         var subject = this.model.get('subject');
         var locals = {
             title: subject.meta('name'),
-            content: subject.get('id') == 'gain' ? templates.GaInFloorText() : subject.meta('description'),
+            content: subject.get('id') == 'gain' ? templates.GaInFloorText() : subject.meta('description')
         };
         if (subject.hasCorrection() || subject.isCorrection()) {
             var path = models.Ranking.path(subject.uncorrected());
@@ -91,12 +91,14 @@ view = views.Main.extend({
                 locals.correction = {
                     caption: 'World wide ranking by ' + subject.meta('name'),
                     href: path == '/ranking/gain' ? '/ranking' : path,
+                    methodology: '<a class="button methodology" href="/about/methodology#' + subject.meta('name').toLowerCase() + '">Methodology</a>',
                     title: 'Remove GDP correction'
                 };
             } else {
                 locals.correction = {
                     caption: 'World wide ranking by ' + subject.meta('name'),
                     href: path.replace('/ranking', '/ranking/delta'),
+                    methodology: '<a class="button methodology" href="/about/methodology#' + subject.meta('name').toLowerCase() + '">Methodology</a>',
                     title: 'Correct for GDP'
                 };
             }
@@ -115,11 +117,12 @@ view = views.Main.extend({
 
         new views.CountryDetailDrawer({
             el: $('.drawer', this.el),
-            model:new models.Country({id: id}),
+            model: new models.Country({id: id}),
             indicator: this.model.get('subject'),
-            callback: function() { $('.drawer', view.el).addClass('open');}
+            callback: function() {
+                $('.drawer', view.el).addClass('open');
+            }
         });
-
         this.positionDrawer('drawer');
         return false;
     },

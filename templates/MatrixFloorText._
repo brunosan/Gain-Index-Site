@@ -1,3 +1,35 @@
-The Readiness Matrix illustrates the comparative resilience of countries. The vertical axis measures the relative vulnerability of countries. The horizontal axis measures to what degree a country is prepared to deal with climatic and environmental changes.</p>
-<p><em>This interactive matrix works best in a <a href="http://www.google.com/chrome">modern web browser</a></em>.<p>
-<p><a href='/about/matrix' class='button green'>Read more</a></p>
+<a href='/about/matrix' class='button methodology'>Read more</a>
+<p>The Readiness Matrix illustrates the comparative resilience of countries. The vertical axis measures the relative vulnerability of countries. The horizontal axis measures to what degree a country is prepared to deal with climatic and environmental changes.</p>
+
+<div class='interactive clearfix'>
+  <div class='mini-matrix'>
+    <div class='quad tl'>
+      <div class='matrix-overlay quad-tl'>
+      A country with a high exposure to climatic change, but a low level of readiness, has both a great need for investment and innovations to improve readiness and a great urgency for action.
+      </div>
+    </div>
+    <div class='quad tr'>
+      <div class='matrix-overlay quad-tr'>
+      These countries are on the road to responding effectively (high level of readiness), but there remaining needs are greater. The private sector is more likely to participate here in an effort to improve the ability to adapt.
+      </div>
+    </div>
+    <div class='quad bl'>
+      <div class='matrix-overlay quad-bl'>
+      Low vulnerability and low ability, these countries have few immediate challenges and therefore more time to improve ability. There are likely inticing opportunities for public and private sectors to intervene.
+      </div>
+    </div>
+    <div class='quad br'>
+      <div class='matrix-overlay quad-br'>
+        Adaptation challenges may still exist, but these countries require the least help. They respond the most effectively against sudden climatic or environmental changes.
+      </div>
+    </div>
+  </div>
+  <ul class='mini-matrix-links'>
+    <li><a class='tl' href='#'>Upper Left Quadrant</a></li>
+    <li><a class='tr' href='#'>Upper Right Quadrant</a></li>
+    <li><a class='bl' href='#'>Lower Left Quadrant</a></li>
+    <li><a class='br' href='#'>Lower Right Quadrant</a></li>
+  </ul>
+</div>
+
+<p><em>This interactive matrix works best in a <a href='http://www.google.com/chrome'>modern web browser</a></em>.</p>
