@@ -551,6 +551,17 @@ model.meta = {
         "sector": null,
         "component": null
     },
+    "reporting": {
+        "id": "reporting",
+        "name": "Reporting level",
+        "description": "The reporting frequency of all indicators.",
+        "format": "number",
+        "decimals": "0",
+        "unit": "%s %",
+        "index": null,
+        "sector": null,
+        "component": null
+    },
     "road_floods": {
         "id": "road_floods",
         "name": "Road flooding",
@@ -916,7 +927,6 @@ model.meta = {
         "id": "gain",
         "name": "GaIn™",
         "description": "The Global Adaptation Index™ (GaIn™) captures a country's Vulnerability to climate change and other global challenges on the one hand and its Readiness to improve resilience on the other hand.",
-        "description_long": "The Global Adaptation Index™ (GaIn™) summarizes a country's Vulnerability to climate change and other global challenges on the one hand and its Readiness to improve resilience on the other hand. It aims to help businesses and the public sector to better prioritize investments for a more efficient response to the immediate global challenges ahead.",
         "format": "number",
         "decimals": "1",
         "unit": null,

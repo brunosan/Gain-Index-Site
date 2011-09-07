@@ -20,9 +20,11 @@ view = views.Main.extend({
 
         // Approach the cabinet.
         $(this.el).empty().append(templates.Cabinet({klass: 'country'}));
+        var reporting = indicators.byName('reporting').input({year: 2009, format: false});
         // Empty pockets on top.
         $('.top', this.el).empty().append(templates.Country({
             title: this.model.meta('name'),
+            reporting: Math.round(reporting * 100),
             rank: rank,
             gdp: {
                 year: 2009,
@@ -51,7 +53,7 @@ view = views.Main.extend({
         var gain = new models.Indicator({id: 'gain'});
         $('.floor', this.el).empty().append(templates.DefaultFloor({
             title: gain.meta('name'),
-            content: gain.meta('description_long')
+            content: templates.GaInFloorText()
         }));
 
         if (this.tableView == undefined) {

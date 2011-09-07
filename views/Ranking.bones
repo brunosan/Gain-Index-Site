@@ -82,7 +82,7 @@ view = views.Main.extend({
         var subject = this.model.get('subject');
         var locals = {
             title: subject.meta('name'),
-            content: subject.meta('description_long') || subject.meta('description')
+            content: subject.get('id') == 'gain' ? templates.GaInFloorText() : subject.meta('description')
         };
         if (subject.hasCorrection() || subject.isCorrection()) {
             var path = models.Ranking.path(subject.uncorrected());
