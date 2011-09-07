@@ -65,6 +65,7 @@
   	  <div class='org'><a href='http://globalai.org'>Global Adaptaion Institute</a></div>
   	</div>
   </div>
+  <script><%= config %></script>
   <script><%= startup %></script>
 </body>
 </html>
