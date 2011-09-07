@@ -551,6 +551,17 @@ model.meta = {
         "sector": null,
         "component": null
     },
+    "reporting": {
+        "id": "reporting",
+        "name": "Reporting level",
+        "description": "The reporting frequency of all indicators.",
+        "format": "number",
+        "decimals": "0",
+        "unit": "%s %",
+        "index": null,
+        "sector": null,
+        "component": null
+    },
     "road_floods": {
         "id": "road_floods",
         "name": "Road flooding",

@@ -887,6 +887,14 @@ ul.mini-matrix-links {
   font-size: 11px;
   line-height: 17px
   }
+.browser {
+  background: white;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  padding: 10px;
+  margin-top: 10px;
+  }
 /**
  * Front page
  */
