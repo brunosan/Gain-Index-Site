@@ -162,8 +162,8 @@ img.left {
   text-indent: -9999px;
   background: transparent url(../images/sprite.png) no-repeat 0 0;
   }
-  .icon-outlook-up    { background-position: 0 -430px; }
-  .icon-outlook-down  { background-position: 0 -410px; }
+  .icon-outlook-up    { background-position: 0 -1365px; }
+  .icon-outlook-down  { background-position: 0 -1345px; }
   .icon-outlook-same  { background-position: 0 -389px; }
 
 /**
@@ -182,7 +182,7 @@ ul.tabs.level-1 li a {
   float: left;
   width: auto;
   padding: 0 20px;
-  background-color: #c6c6c6;
+  background-color: #dadada;
   text-align: center;
   font-family: 'AlternateGothicLTNo3Regular','HelveticaNeueBoldCondensed', 'HelveticaNeue-Bold-Condensed', 'Arial Narrow', 'Arial', sans-serif;
   color: #434343;
@@ -237,8 +237,8 @@ ul.tabs li a.active {
       border-bottom-right-radius: 3px;
       }
     ul.tabs.level-2 li a.active {
-      border-top: 1px solid #737373;
-      background-color: #8e8e8e;
+      border-top: 1px solid #555;
+      background-color: #767676;
       line-height: 19px;
       }
 
@@ -557,7 +557,7 @@ li.ui-menu-item a.ui-corner-all {
   -webkit-transition: margin-left .5s ease;
   }
 #cabinet .drawer.updating .content {
-  opacity:0.25;
+  opacity: 0.25;
   }
 #cabinet .drawer.open {
   left: 50%;

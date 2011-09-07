@@ -13,7 +13,7 @@
    height="1600"
    id="svg6367"
    version="1.1"
-   inkscape:version="0.48.1 r9760"
+   inkscape:version="0.48.0 r9654"
    sodipodi:docname="sprite.svg"
    inkscape:export-filename="/Users/tristen/devseed/gai-gain/assets/images/sprite.png"
    inkscape:export-xdpi="90"
@@ -27,16 +27,16 @@
      borderopacity="1.0"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1"
-     inkscape:cx="49.297566"
-     inkscape:cy="1569.3576"
+     inkscape:zoom="16"
+     inkscape:cx="7.3864007"
+     inkscape:cy="219.07623"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
-     showgrid="false"
-     inkscape:window-width="1265"
-     inkscape:window-height="716"
-     inkscape:window-x="68"
-     inkscape:window-y="24"
+     showgrid="true"
+     inkscape:window-width="980"
+     inkscape:window-height="728"
+     inkscape:window-x="259"
+     inkscape:window-y="0"
      inkscape:window-maximized="0"
      fit-margin-top="0"
      fit-margin-left="0"
@@ -71,7 +71,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -2036,5 +2036,21 @@
          inkscape:connector-curvature="0"
          sodipodi:nodetypes="cccccccsccccsccccccccccccccccccccsccccccccscccscccscccscccssccscssccscccscscscccccsssccccccccccccsccccsccccccccccccccccscccsccccccccccscccscscccscsccccccscsccccccssccccccccccscccscccsccsccccccccccsccscsccccccccccsccccccscsccsccscccccccccccccsccccsccccccccccccccccccccsccccccccccccccccccsccscsccccccccccsccccccscsccsccsccccccccccssccccccccccccccccsssccccccccccccccccccscccscccsccccccscscccscccsccccccccsscccccsccccccssscccccccccccccscsccccsccccccccscc" />
     </g>
+    <path
+       inkscape:connector-curvature="0"
+       id="path7530-4"
+       d="m 0.017013,1192.403 13,0 -6.5,9 z"
+       style="color:#000000;fill:#b6423c;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1.04900002;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       inkscape:export-filename="/Users/saman/Dropbox/work_repos/gai-gain/assets/images/sprite.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       style="color:#000000;fill:#3b942b;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1.04900002000000003;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       d="m 0.017013,1221.403 13,0 -6.5,-9 z"
+       id="path9222-2"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/Users/saman/Dropbox/work_repos/gai-gain/assets/images/sprite.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
   </g>
 </svg>

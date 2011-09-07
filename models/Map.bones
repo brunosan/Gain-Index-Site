@@ -15,7 +15,8 @@ model = Backbone.Model.extend({
             height = options.height || 490,
             lat = options.lat || 15,
             lon = options.lon || -8,
-            z = options.z || 2;
+            z = options.z || 2,
+            extent = options.extent || false;
 
         this.controls = options.controls || ['interaction'],
         this.el = el; // Sorry mom!
@@ -49,7 +50,14 @@ model = Backbone.Model.extend({
         };
         this.addControls();
 
-        m.setCenterZoom(new mm.Location(lat, lon), z);
+        if (!extent) {
+            m.setCenterZoom(new mm.Location(lat, lon), z);
+        } else {
+            m.setExtent([
+                new mm.Location(extent[1], extent[0]),
+                new mm.Location(extent[3], extent[2])
+            ]);
+        }
 
         // Bind to the change event of the map model so that any time the year
         // or indicator is changed we automatically update the map.
