@@ -5,7 +5,7 @@
     <div class='background-info right clearfix'><%= population.label%> (<%= population.year %>): <%= population.value %></div>
   </div>
 
-  <div class='country-summary'>
+  <div class='country-summary clearfix'>
   </div>
 
   <div class='prose container'></div>
