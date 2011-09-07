@@ -341,11 +341,7 @@ command.prototype.initialize = function(options) {
             basename: 'data' 
         });
 
-        couch.db.dbDel(function(err) {
-            //err && errors.push(err);
-            //console.log('Deleted data');
-            next();
-        });
+        couch.db.dbDel(next);
     });
 
     
