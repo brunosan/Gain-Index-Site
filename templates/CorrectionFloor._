@@ -1,10 +1,11 @@
 <div class='content'>
   <div class='description container'>
+    <%= correction.methodology %>
     <h3><%= title %></h3>
     <p><%= content %></p>
   </div>
   <div class='correction-control container'>
   <p><%= correction.caption %></p>
-  <a class='button' href='<%= correction.href %>'><%= correction.title %></a>
+  <a class='button green' href='<%= correction.href %>'><%= correction.title %></a>
   </div>
 </div>
