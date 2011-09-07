@@ -333,6 +333,45 @@ command.prototype.initialize = function(options) {
 
     var actions = [];
 
+    actions.push(function(next) {
+        var couch = require('backbone-couch')({
+            host: config.couchHost,
+            port: config.couchPort,
+            name: config.couchPrefix + '_data',
+            basename: 'data' 
+        });
+
+        couch.db.dbDel(next);
+    });
+
+    
+    actions.push(function(next) {
+        var dir = [process.cwd(), 'design-docs', 'data'].join('/');
+
+        try {
+            if (fs.statSync(dir).isDirectory) {
+                var designDocs = _(fs.readdirSync(dir)).map(function(val) {
+                    return dir + '/' + val;
+                });
+            }
+        } catch (err) {   }
+
+        var couch = require('backbone-couch')({
+            host: config.couchHost,
+            port: config.couchPort,
+            name: config.couchPrefix + '_data',
+            basename: 'data' 
+        });
+
+        couch.install(function(err) {
+            err && errors.push(err);
+            console.log('Created data');
+            designDocs && couch.db.putDesignDocs(designDocs);
+            next();
+        });
+    });
+
+
     // Build a list of files to import by crawling the resources hierarchy.
     // Currently this is a blocking operation.
     var categories = ['gain', 'indicators', 'readiness', 'vulnerability'];

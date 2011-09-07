@@ -59,3 +59,9 @@ to be specified:
 
     ./index.js --host=[host]
 
+
+Staging server
+--------------
+
+* App is located in /var/www/nodeapp
+* To roll out, `sudo -i`, then `su nodeapp`, then from /var/www/nodeapp do `git pull`.  You'll need the passphrase.

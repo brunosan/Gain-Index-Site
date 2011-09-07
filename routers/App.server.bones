@@ -41,13 +41,20 @@ routers.App.send = function(view, options, res) {
     });
     o = o.replace(/,$/, '}');
 
+    var mapHosts = [];
+    // Only use multiple map hosts if in production mode.
+    if (process.env.NODE_ENV == 'production') {
+        mapHosts = Bones.plugin.config.mapHosts;
+    }
 
     var title = (main.pageTitle ? main.pageTitle + ' | Global Adaptation Index' : 'Global Adaptation Index');
-
     res.send(Bones.plugin.templates.App({
         version: time,
         title: title,
         main: $(main.el).html(),
+        config: 'Bones.plugin = Bones.plugin || {};  Bones.plugin.config = {' +
+            'mapHosts: "' + mapHosts + '"' +
+        '};',
         startup: 'Bones.initialize(function(models, views, routers, templates) {'+
                  'new views.' + main.constructor.title +'('+ o +').attach().activeLinks().scrollTop()'+
                  '});'
