@@ -88,6 +88,24 @@ h4 {
   margin: 10px 10px 0 0;
   text-align: center;
   }
+.button.methodology {
+  display: block;
+  color: white;
+  background-color: #b5b5b5;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  line-height: 10px;
+  width: auto;
+  position: absolute;
+  right: 13px;
+  top: 0px;
+  margin: 13px 0 0 0;
+  text-align: center;
+  padding: 8px;
+  }
+.correction-control a { width: auto!important; }
+.button.methodology:hover { background: #A8A8A8; }
 .button:hover{text-decoration: none;}
 .button.green:hover { background-color: #5A2; }
   
@@ -140,18 +158,18 @@ img.left {
   margin-bottom: 15px;
   }
 .document table td {
-  background-color: #f5f5f5;
+  background-color: #d8ecf7;
   border: 1px solid #fff;
   padding: 5px 15px;
   vertical-align: middle;
   }
-  .document table td.water          { background-color: #f0f0f0;}
-  .document table td.health         { background-color: #ebebeb;}
-  .document table td.infrastructure { background-color: #e5e5e5;}
-  .document table td.sensitivity    { background-color: #ededed;}
-  .document table td.capacity       { background-color: #e5e5e5;}
-  .document table td.governance     { background-color: #ededed;}
-  .document table td.social         { background-color: #e5e5e5;}
+  .document table td.water          { background-color: #d8ecf7;}
+  .document table td.health         { background-color: #aed7ee;}
+  .document table td.infrastructure { background-color: #92cae8;}
+  .document table td.sensitivity    { background-color: #aed7ee;}
+  .document table td.capacity       { background-color: #92CAE8;}
+  .document table td.governance     { background-color: #aed7ee;}
+  .document table td.social         { background-color: #92cae8;}
 
 /**
  * Icons.
@@ -522,6 +540,7 @@ li.ui-menu-item a.ui-corner-all {
 .bonesAdminEditing #cabinet {
   z-index: auto;
   }
+#bonesAdminGrowl,
 #bonesAdminPopup {
   z-index: 25!important;
   }
@@ -565,6 +584,7 @@ li.ui-menu-item a.ui-corner-all {
   }
   #cabinet .drawer.open h3 {
   margin-left: 0;
+  padding-right: 105px;
   }
 #cabinet .drawer .handle {
   height: 40px;
@@ -781,10 +801,74 @@ table.data tbody tr td {
   -webkit-border-radius: 0 0 0 3px;
   border-radius: 0 0 0 3px;
   }
-.mini-matrix .tl.active { background-color: #F77C80; } /* red */
-.mini-matrix .tr.active { background-color: #68B5DF; } /* blue */
-.mini-matrix .br.active { background-color: #68BB37; } /* green */
-.mini-matrix .bl.active { background-color: #F6CD47; } /* yellow */
+.mini-matrix div {
+  -moz-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+  }
+.matrix-overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 290px;
+  height: 175px;
+  opacity: 0.80;
+  -moz-opacity: 0.80;
+  filter:alpha(opacity=80);
+  padding: 10px;
+  font-size: 14px;
+  z-index: 100;
+  color: #222;
+  }
+.interactive .matrix-overlay {
+  display: none;
+  }
+.quad-tl{
+  background-color: #F77C80;
+  top: 0; 
+  left: 61px;
+  width: 284px;
+  height: 206px;
+  }
+.quad-tr {
+  background-color: #68B5DF;
+  top: 0;
+  left: 364px;
+  width: 256px;
+  height: 205px;
+  }
+.quad-br {
+  background-color: #68BB37;
+  top: 225px;
+  left: 365px;
+  width: 255px;
+  height: 105px;
+  }
+.quad-bl { 
+  background-color: #F6CD47;
+  top: 225px;
+  left: 61px;
+  width: 284px;
+  height: 105px;
+  }
+
+.interactive .mini-matrix .tl:hover,
+.mini-matrix .tl.active {
+  background-color: #F77C80;
+  } /* red */
+.interactive .mini-matrix .tr:hover,
+.mini-matrix .tr.active {
+  background-color: #68B5DF;
+  } /* blue */
+.interactive .mini-matrix .br:hover,
+.mini-matrix .br.active {
+  background-color: #68BB37;
+  } /* green */
+.interactive .mini-matrix .bl:hover,
+.mini-matrix .bl.active {
+  background-color: #F6CD47;
+  } /* yellow */
 
 .mini-matrix .pin {
   position: absolute;
@@ -794,7 +878,15 @@ table.data tbody tr td {
   width: 15px;
   height: 15px;
   }
-
+.interactive .mini-matrix {
+  float: left;
+  width: 100px;
+  }
+ul.mini-matrix-links {
+  float: left;
+  font-size: 11px;
+  line-height: 17px
+  }
 /**
  * Front page
  */
@@ -1247,8 +1339,13 @@ div.bottomscorelabel {
   margin: 12px 15px 0 0;
   width: 70px;
   height: 10px;
-  background-color: #ccc;
   }
+  .country-sector-graph.empty {
+    background-color: #ccc;
+    }
+  .details .country-sector-graph {
+    background-color: #ccc;
+    }
   .drawer .country-sector-graph {
     margin: 0 0 10px 0;
     width: 100%;
@@ -1372,18 +1469,6 @@ div.bottomscorelabel {
   }
 .floor .correction-control p {
   font-style: italic;
-  }
-.floor .correction-control a {
-  position: absolute;
-  bottom: 15px;
-  right: 15px;
-  padding: 10px;
-  line-height: 10px;
-  color: #fff;
-  background: #A8A8A8;
-  -moz-border-radius: 4px;
-  -webkit-border-radius: 4px;
-  border-radius: 4px;
   }
 .floor .correction-control a:hover {
   background: #8C8C8C;
