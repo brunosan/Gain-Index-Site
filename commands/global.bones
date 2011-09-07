@@ -46,6 +46,12 @@ Bones.Command.options['databases'] = {
     'default': 'users:data'
 }
 
+Bones.Command.options['mapHosts'] = {
+    'title': 'mapHosts=[a,b,c]',
+    'description': 'Comma-separated string of subdomain hostnames to use for serving map tiles',
+    'default': ''
+}
+
 /**
  * Callback used to initialize the server for certain commands.
  */

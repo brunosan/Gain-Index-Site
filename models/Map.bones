@@ -82,13 +82,25 @@ model = Backbone.Model.extend({
     },
     tilejson: function() {
         var ind = this.get('indicator'),
-            y = this.get('year');
+            y = this.get('year'),
+            tiles = [],
+            grids = [];
+        var mapHosts = Bones.plugin.config.mapHosts.length ? Bones.plugin.config.mapHosts.split(',') : [];
+        if (mapHosts.length) {
+            _.each(mapHosts, function(subdomain) {
+                tiles.push('http://'+ subdomain + '.' + location.host+'/tiles/1.0.0/'+ ind +'-'+ y +'/{z}/{x}/{y}.png');
+                grids.push('http://'+ subdomain + '.' + location.host+'/tiles/1.0.0/'+ ind +'-'+ y +'/{z}/{x}/{y}.grid.json');
+            });
+        } else {
+            tiles.push('http://'+ location.host+'/tiles/1.0.0/'+ ind +'-'+ y +'/{z}/{x}/{y}.png');
+            grids.push('http://'+ location.host+'/tiles/1.0.0/'+ ind +'-'+ y +'/{z}/{x}/{y}.grid.json');
+        }
 
         return tilejson = {
             tilejson: '1.0.0',
             scheme: 'tms',
-            tiles: ['http://'+ location.host+'/tiles/1.0.0/'+ ind +'-'+ y +'/{z}/{x}/{y}.png'],
-            grids: ['http://'+ location.host+'/tiles/1.0.0/'+ ind +'-'+ y +'/{z}/{x}/{y}.grid.json'],
+            tiles: tiles,
+            grids: grids,
             formatter: this.featureHover,
             minzoom: 1,
             maxzoom: 6
