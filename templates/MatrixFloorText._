@@ -31,5 +31,6 @@
     <li><a class='br' href='#'>Lower Right Quadrant</a></li>
   </ul>
 </div>
-
-<p><em>This interactive matrix works best in a <a href='http://www.google.com/chrome'>modern web browser</a></em>.</p>
+<div class='browser'>
+  This interactive matrix works best in a <a href='http://www.google.com/chrome'>modern web browser</a>.
+</div>

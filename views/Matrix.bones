@@ -97,7 +97,8 @@ view = views.Main.extend({
         'mouseleave div.point': 'pointUnhover',
         'mouseenter .interactive .quad': 'quadrantHover',
         'mouseleave .interactive .quad': 'quadrantUnhover',
-        'click .mini-matrix-links a': 'hoverRelatedQuad'
+        'mouseenter .mini-matrix-links a': 'hoverRelatedQuad',
+        'mouseleave .mini-matrix-links a': 'unHoverRelatedQuad'
     },
     pageTitle: "Matrix",
     initialize: function(options) {
@@ -374,5 +375,8 @@ view = views.Main.extend({
         }
         $('.big-matrix', this.el).append(associatedQuad.html());
         associatedQuad.addClass('active');
+    },
+    unHoverRelatedQuad: function() {
+        $('.big-matrix .matrix-overlay').remove();
     }
 });
