@@ -104,6 +104,9 @@ h4 {
   text-align: center;
   padding: 8px;
   }
+.indicator-info .button.methodology {
+  top: 40px;
+  }
 .correction-control a { width: auto!important; }
 .button.methodology:hover { background: #A8A8A8; }
 .button:hover{text-decoration: none;}
@@ -174,15 +177,15 @@ img.left {
 /**
  * Icons.
  */
-.icon-outlook {
+.icon-trend {
   height: 15px;
   width: 15px;
   text-indent: -9999px;
   background: transparent url(../images/sprite.png) no-repeat 0 0;
   }
-  .icon-outlook-up    { background-position: 0 -1365px; }
-  .icon-outlook-down  { background-position: 0 -1345px; }
-  .icon-outlook-same  { background-position: 0 -389px; }
+  .icon-trend-up    { background-position: 0 -1365px; }
+  .icon-trend-down  { background-position: 0 -1345px; }
+  .icon-trend-same  { background-position: 0 -389px; }
 
 /**
  * Tabs
@@ -399,9 +402,6 @@ ul.tabs li a.active {
   background: transparent url(../images/sprite.png) no-repeat 7px -627px;
   padding-left: 25px;
   width: 195px;
-  -moz-box-shadow: inset 0 0 4px #000;
-  -webkit-box-shadow: inset 0 0 4px #000;
-  box-shadow: inset 0 0 4px #000;
   background-color: #fff;
   }
 #footer1 .search input.button {
@@ -732,10 +732,10 @@ table.data tbody tr td {
   font-size: 30px;
   line-height: 40px;
   }
-.country-summary div.gain .outlook {
+.country-summary div.gain .trend {
   color: #666;
   }
-.country-summary div.gain .icon-outlook {
+.country-summary div.gain .icon-trend {
   display: inline-block;
   width: 15px;
   height: 15px;
@@ -817,9 +817,9 @@ table.data tbody tr td {
   -moz-opacity: 0.80;
   filter:alpha(opacity=80);
   padding: 10px;
-  font-size: 14px;
   z-index: 100;
   color: #222;
+  font-weight: bold;
   }
 .interactive .matrix-overlay {
   display: none;
@@ -1202,7 +1202,7 @@ table.data tbody tr.active:hover {
   padding-top: 35px;
   height: 125px;
   }
-.country-summary div.gain .outlook {
+.country-summary div.gain .trend {
   color: #666;
   }
 .country-profile .tab-content {
@@ -1409,6 +1409,7 @@ div.bottomscorelabel {
   border-left: 0;
   }
 .drawer .country-info {
+  position: relative;
   padding-bottom: 15px;
   }
 
@@ -1536,7 +1537,7 @@ div.bottomscorelabel {
   .ranking table.data td.score {
     padding-left: 0;
     }
-.ranking table.data th.outlook {
+.ranking table.data th.trend {
   width: 65px;
   }
 .ranking table.data th.score {
@@ -1545,7 +1546,7 @@ div.bottomscorelabel {
 .ranking table.data th.country {
   padding: 0 0 0 15px;
   }
-.ranking table.data .icon-outlook {
+.ranking table.data .icon-trend {
   margin: 5px 0 0 15px;
   }
 .ranking .tab-wrapper .tab-wrapper {
@@ -1588,12 +1589,15 @@ div.bottomscorelabel {
  * Matrix section
  */
 .big-matrix {
-  background: transparent url(../images/matrix-underlay.png) no-repeat 20px 0;
   position:relative;
   height: 430px;
   width: 640px;
   }
-
+.big-matrix img {
+  position: absolute;
+  left: 20px;
+  top: 0;
+  }
 .big-matrix .graph {
   position:relative;
   width: 580px;
@@ -1685,9 +1689,9 @@ div.bottomscorelabel {
   line-height: 30px;
   height: 30px;
   width: 210px;
-  -moz-box-shadow: inset 0 0 4px #000;
-  -webkit-box-shadow: inset 0 0 4px #000;
-  box-shadow: inset 0 0 4px #000;
+  -moz-box-shadow: inset 0 0 4px #666;
+  -webkit-box-shadow: inset 0 0 4px #666;
+  box-shadow: inset 0 0 4px #666;
   }
 .country-selector input.button {
   margin-left: 5px;

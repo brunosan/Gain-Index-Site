@@ -22,7 +22,7 @@ model = Backbone.Model.extend({
         }
         return this.format(value, {format: 'number', decimals: 3});
     },
-    outlook: function(options) {
+    trend: function(options) {
         var diff = this.score() - this.score({year: this.get('currentYear') - 1});
         if (diff >= 0.5) return 'up';
         if (diff <= -0.5) return 'down';

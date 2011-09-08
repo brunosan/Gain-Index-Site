@@ -25,7 +25,7 @@ view = Backbone.View.extend({
                         .replace(/[^a-zA-Z0-9]+/gi, '-'),
                     iso3: model.get('ISO3'),
                     score: model.score(),
-                    outlook: model.outlook(),
+                    trend: model.trend(),
                     rank: model.rank()
                 });
             }

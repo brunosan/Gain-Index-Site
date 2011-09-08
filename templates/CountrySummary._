@@ -3,8 +3,8 @@
     <% if (data.gain.value) { %>
       <span class='value'><%= data.gain.value %></span>
       <div class='score'>Score: <span class='score'><%= data.gain.score %></span></div>
-      <div class='outlook'>Outlook:
-         <div class='icon-outlook icon-outlook-<%= data.gain.outlook %>'><%= data.gain.outlook %></div>
+      <div class='trend'>Trend:
+         <div class='icon-trend icon-trend-<%= data.gain.trend %>'><%= data.gain.trend %></div>
       </div>
     <% } %>
 </div>
