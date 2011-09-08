@@ -27,7 +27,7 @@ After cloning the repository / downloading the tarball:
 The application will refuse to install if it detects existing databases. To
 install anew, run `./index.js uninstall` first.
 
-NOTE: When installing on OSX, you must close your terminal (or re-source .profile) after the first step, then open a new terminal and run `npm install` as explained above.
+NOTE: When installing on OSX, you must close your terminal (or re-source .profile / .bash_profile) after you install Mapnik, then open a new terminal and run `npm install` as explained above.  The reason is that Mapnik contains the correct sqlite libraries, and otherwise the OSX libraries will be used when running npm install, which will result in a later error when you run ./index.js changes.
 
 Updating libmapnik2 / libmapnik2-dev
 ------------------------------------
