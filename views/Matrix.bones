@@ -20,10 +20,10 @@ var animated = false,
 
 var quadrant = function(data) {
     // Determine which quadrant to highlight.
-    // * The turning point for Vulnerability us 0.31
-    // * The turning point for Readiness is 0.52
-    var quad = (data.vulnerability > 0.31 ? 't' : 'b');
-    quad += (data.readiness > 0.52 ? 'r' : 'l');
+    // * The turning point for Vulnerability us 0.30
+    // * The turning point for Readiness is 0.63
+    var quad = (data.vulnerability > 0.30 ? 't' : 'b');
+    quad += (data.readiness > 0.63 ? 'r' : 'l');
     return quad;
 };
 
@@ -31,8 +31,8 @@ var quadrantCoord = function(data) {
     // Determine which quadrant to highlight, base on Coords.
     // TODO it's unfortuate that we've got these two quad calcuation
     //      functions, we should be able to consolidate.
-    var quad = (data.y > vulnerabilityToY(0.31) ? 't' : 'b');
-    quad += (data.x > readinessToX(0.52) ? 'r' : 'l');
+    var quad = (data.y > vulnerabilityToY(0.30) ? 't' : 'b');
+    quad += (data.x > readinessToX(0.63) ? 'r' : 'l');
     return quad;
 };
 
