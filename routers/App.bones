@@ -112,6 +112,7 @@ router = Backbone.Router.extend({
         var v = new view(options);
         $('#page').empty().append(v.el);
         v.render().attach().activeLinks().scrollTop();
+        _gaq && _gaq.push(['_trackPageview']);
         document.title =  (v.pageTitle ? v.pageTitle + ' | Global Adaptation Index' : 'Global Adaptation Index');
     },
     fetcher: function() {

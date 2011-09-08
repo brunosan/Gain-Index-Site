@@ -1,6 +1,6 @@
 <div class='country' id='<%= iso %>'>
   <div class='info container'>
-    <h3><a href='/country/'><%= name %></a></h3>
+    <h3><a href='/country/<%= path %>'><%= name %></a></h3>
     <div class='prose'></div>
   </div>
   <div class='country-summary'></div>

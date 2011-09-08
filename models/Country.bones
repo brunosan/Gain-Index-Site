@@ -7,12 +7,25 @@ model = Backbone.Model.extend({
         return resp;
     },
     initialize: function(attributes, options) {
+        // Translate a country name to id, for nice urls.
+        if (attributes.id && !model.meta.hasOwnProperty(attributes.id) && attributes.id.length > 3) {
+            this.set({id: this.pathToId(attributes.id)});
+        }
         var indicators = new models.Indicators(attributes.indicators);
         this.set({indicators: indicators}, {silent : true});
         model.meta[this.id] && this.set(model.meta[this.id], {silent: true});
     },
     meta: function(key) {
         return model.meta[this.id][key] || '';
+    },
+    nameToPath: function(name) {
+        return model.nameToPath(name);
+    },
+    pathToId: function(path) {
+        return model.pathToId(path);
+    },
+    idToPath: function(id) {
+        return model.idToPath(id);
     }
 });
 
@@ -20,6 +33,20 @@ model = Backbone.Model.extend({
 Backbone.Model.escapeHTML = function(string) {
     return string.replace(/&(?!\w+;|#\d+;|#x[\da-f]+;)/gi, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#x27').replace(/\//g,'&#x2F;');
 };
+
+model.idToPath = function(id) {
+    var name = _.detect(model.meta, function(country) { return country.ISO3 == id; }).name;
+    return this.nameToPath(name);
+}
+
+model.nameToPath = function(name) {
+    return name.toLowerCase().replace(/[^a-zA-Z0-9]+/gi, '-')
+}
+
+model.pathToId = function(path) {
+        var that = this;
+        return _.detect(model.meta, function(country) { return that.nameToPath(country.name) == path; }).ISO3;
+}
 
 model.meta = {
     "AFG": {
