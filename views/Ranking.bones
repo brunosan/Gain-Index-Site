@@ -82,7 +82,11 @@ view = views.Main.extend({
         var subject = this.model.get('subject');
         var locals = {
             title: subject.meta('name'),
-            content: subject.get('id') == 'gain' ? templates.GaInFloorText() : subject.meta('description')
+            content: subject.get('id') == 'gain' ? templates.GaInFloorText() : subject.meta('description'),
+            methodologyHash:
+                (subject.meta('component') || subject.meta('sector')) ?
+                'scoringindicators' :
+                subject.meta('index')
         };
         if (subject.hasCorrection() || subject.isCorrection()) {
             var path = models.Ranking.path(subject.uncorrected());
@@ -91,14 +95,20 @@ view = views.Main.extend({
                 locals.correction = {
                     caption: 'World wide ranking by ' + subject.meta('name'),
                     href: path == '/ranking/gain' ? '/ranking' : path,
-                    methodology: '<a class="button methodology" href="/about/methodology#' + subject.meta('name').toLowerCase() + '">Methodology</a>',
+                    methodologyHash:
+                        (subject.meta('component') || subject.meta('sector')) ?
+                        'scoringindicators' :
+                        subject.meta('index'),
                     title: 'Remove GDP correction'
                 };
             } else {
                 locals.correction = {
                     caption: 'World wide ranking by ' + subject.meta('name'),
                     href: path.replace('/ranking', '/ranking/delta'),
-                    methodology: '<a class="button methodology" href="/about/methodology#' + subject.meta('name').toLowerCase() + '">Methodology</a>',
+                    methodologyHash:
+                        (subject.meta('component') || subject.meta('sector')) ?
+                        'scoringindicators' :
+                        subject.meta('index'),
                     title: 'Correct for GDP'
                 };
             }
