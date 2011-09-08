@@ -204,7 +204,7 @@ view = views.Main.extend({
         return false;
     },
     countryClick: function(ev) {
-        var path = '/country/' + $(ev.currentTarget).attr('id');
+        var path = '/country/' + models.Country.path($(ev.currentTarget).attr('id'));
         return views.App.route(path);
     },
     toggleCorrection: function() {
