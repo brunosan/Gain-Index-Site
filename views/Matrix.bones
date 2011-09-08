@@ -9,7 +9,7 @@ var readinessToX = function(d) {
 // ...and 350 tall
 // Points are 15px by 15px
 var vulnerabilityToY= function(d) {
-    return Math.round(((d - 0.1) / 0.6) * 350) - 8;
+    return Math.round(((d - 0.1) / (0.7 - 0.1)) * 350) - 8;
 };
 
 var openTooltips = 0;
