@@ -40,11 +40,11 @@ view = Backbone.View.extend({
     select: function(ui) {
         this.active = ui.item;
         $('input[name=search]', this.el).val(this.active.label);
-        this.trigger(ui.item.value);
+        this.trigger(ui.item);
     },
-    trigger: function(id) {
-       views.App.route('/country/' + id);
-       $('input[name=search]', this.el).val('');
+    trigger: function(item) {
+        views.App.route('/country/' + item.path);
+        $('input[name=search]', this.el).val('');
     },
     submit: function(e) {
         e.preventDefault();
@@ -53,7 +53,7 @@ view = Backbone.View.extend({
             this.active = _(results).first();
         }
         if (this.active) {
-            this.trigger(this.active.value);
+            this.trigger(this.active);
         }
         return false;
     },
@@ -73,7 +73,7 @@ view = Backbone.View.extend({
         });
 
         return _(this.filter(results)).map(function(o) {
-            return { label: o.get('name'), value: o.get('ISO3') }
+            return { label: o.get('name'), value: o.get('ISO3'), path: o.nameToPath(o.get('name')) }
         });
     }
 });

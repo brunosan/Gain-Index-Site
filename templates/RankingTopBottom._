@@ -8,7 +8,7 @@
   <tbody>
     <% _.each(top, function(v, k) { %>
     <tr>
-      <td class='country'> <div class='rank-number'><%= k+1 %></div> <div class='nowrap'> <a href='/country/<%= v.ISO3 %>'> <%= v.name %> </a></div></td>
+      <td class='country'> <div class='rank-number'><%= k+1 %></div> <div class='nowrap'> <a href='/country/<%= v.path %>'> <%= v.name %> </a></div></td>
       <td class='score'> <%= v.value %> </td>
     </tr>
     <% }); %>
@@ -24,7 +24,7 @@
     <tbody>
       <% _.each(bottom, function(v, k) { %>
       <tr>
-        <td class='country'> <div class='rank-number'><%= length - (4-k) %></div> <div class='nowrap'> <a href='/country/<%= v.ISO3 %>'> <%= v.name %> </a></div></td>
+        <td class='country'> <div class='rank-number'><%= length - (4-k) %></div> <div class='nowrap'> <a href='/country/<%= v.path %>'> <%= v.name %> </a></div></td>
         <td class='score'> <%= v.value %> </td>
       </tr>
       <% }); %>
