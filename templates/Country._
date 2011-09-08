@@ -36,19 +36,20 @@
   <div class='details'>
     <div class='tab-wrapper clearfix'>
       <ul class='tabs level-1'>
-        <li><a href='#vulnerability' class='vulnerability'>Vulnerability</a></li>
-        <li><a href='#readiness' class='readiness'>Readiness</a></li>
+        <li><a href='#vulnerability' id='vulnerability'>Vulnerability</a></li>
+        <li><a href='#readiness' id='readiness'>Readiness</a></li>
       </ul>
       <div class='tab-wrapper clearfix'>
-        <ul class='tabs level-2'>
-          <li><a href='#vulnerability/sector' class='vulnerability sectors'>Sector</a></li>
-          <li><a href='#vulnerability/component' class='vulnerability components'>Component</a></li>
+        <ul class='tabs level-2 vulnerability'>
+          <li><a href='#vulnerability/sector' class='sectors'>Sector</a></li>
+          <li><a href='#vulnerability/component' class='components'>Component</a></li>
         </ul>
         <div class='bottomscorelabel label'>Denotes worst scores</div>
       </div>
     </div>
     <div id='tab' class='tab-content'>
-      <table id='country-data' class='data full'></table>
+      <table id='vulnerability' class='data full'></table>
+      <table id='readiness' class='data full hidden'></table>
     </div>
   </div>
 </div>
