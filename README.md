@@ -32,8 +32,7 @@ NOTE: When installing on OSX, you must close your terminal (or re-source .profil
 Updating libmapnik2 / libmapnik2-dev
 ------------------------------------
 
-As a result of the issue dicussed in the requirements ("Modern version of libsqlite3") if you upgrade libmapnik2 you must [rebuild the sqlite plugin](https://github.com/springmeyer/sqlite3-mapnik) and then rebuild node_modules
-
+As a result of the issue dicussed in the requirements ("Modern version of libsqlite3") if you upgrade libmapnik2 you must [rebuild the sqlite plugin](https://github.com/springmeyer/sqlite3-mapnik) and then rebuild node_modules.  This is specific to Linux installations, particularly on Ubuntu Lucid LTS.
 
 Uninstalling
 ------------
