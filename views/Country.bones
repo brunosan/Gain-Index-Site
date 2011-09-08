@@ -82,7 +82,9 @@ view = views.Main.extend({
         });
         this.map.featureClick = function(feature, context, index) {
             var iso = $(feature).data('iso');
-            return window.location = '/country/'+ iso;
+            if (iso) {
+                views.App.route('/country/' + iso);
+            }
         }
 
         if (this.tableView == undefined) {
