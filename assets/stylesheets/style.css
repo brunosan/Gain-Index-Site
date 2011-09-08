@@ -140,6 +140,9 @@ img.left {
   float: left;
   margin: 5px 15px 15px 0;
   }
+.hidden {
+  display: none;
+  }
 /**
  * Documents.
  */

@@ -31,12 +31,12 @@ view = views.Main.extend({
         rankBottom = list.slice(list.length - 5, list.length);
         // Names are extra long, also, format score and add path
         _.map(rankTop, function(value) {
-            value.path = models.Country.nameToPath(value.name);
+            value.path = models.Country.path(value.name);
             value.name = value.name.replace('The', '');
             value.value = value.value.substr(0, value.value.length-2);
         });
         _.map(rankBottom, function(value) {
-            value.path = models.Country.nameToPath(value.name);
+            value.path = models.Country.path(value.name);
             value.name = value.name.replace('The', '');
             value.value = value.value.substr(0, value.value.length-2);
         });
@@ -143,7 +143,7 @@ view = views.Main.extend({
         this.collection.each(function(model) {
             $('.featured .countries', that.el).append(
                 templates.FeaturedFront({
-                    path: model.nameToPath(model.meta('name')),
+                    path: model.path(model.meta('name')),
                     name: model.meta('name'),
                     iso: model.meta('ISO3')
                 })
@@ -204,7 +204,7 @@ view = views.Main.extend({
         return false;
     },
     countryClick: function(ev) {
-        var path = '/country/' + $(ev.currentTarget).attr('id');
+        var path = '/country/' + models.Country.path($(ev.currentTarget).attr('id'));
         return views.App.route(path);
     },
     toggleCorrection: function() {

@@ -1,6 +1,7 @@
 view = views.Main.extend({
     events: _.extend({
-        'click ul.tabs li a': 'selectTab',
+        'click ul.tabs.level-1 li a': 'selectVR',
+        'click ul.tabs.level-2 li a': 'selectBreakdown',
         'click table.data tr': 'openDrawer',
         'click .country-summary .gain': 'openDrawer',
         'click .country-summary .indicator': 'openDrawer',
@@ -60,13 +61,9 @@ view = views.Main.extend({
                 gain.meta('index')
         }));
 
-        if (this.tableView == undefined) {
-            this.tableView = new views.CountryTable({
-                el: $('table#country-data', this.el),
-                collection: this.model.get('indicators')
-            });
-        }
-        this.tableView.render();
+        this.ensureChildViews();
+        this.vTable.render();
+        this.rTable.render();
         this.pageTitle = 'GaIn Country Brief: ' + this.model.meta('name');
         return this;
     },
@@ -83,40 +80,55 @@ view = views.Main.extend({
         this.map.featureClick = function(feature, context, index) {
             var iso = $(feature).data('iso');
             if (iso) {
-                views.App.route('/country/' + models.Country.idToPath(iso));
+                views.App.route('/country/' + models.Country.path(iso));
             }
         }
 
-        if (this.tableView == undefined) {
-            this.tableView = new views.CountryTable({
-                el: $('table#country-data', this.el),
+        this.ensureChildViews();
+        this.vTable.attach();
+        this.rTable.attach();
+        return this;
+    },
+    ensureChildViews: function() {
+        if (this.vTable == undefined) {
+            this.vTable = new views.CountryTable({
+                el: $('table#vulnerability', this.el),
                 collection: this.model.get('indicators')
             });
         }
-        this.tableView.attach();
-        return this;
+        if (this.rTable == undefined) {
+            this.rTable = new views.CountryTable({
+                el: $('table#readiness', this.el),
+                collection: this.model.get('indicators'),
+                structure: 'components',
+                index: 'readiness'
+            });
+        }
     },
     activeLinks: function() {
         views.Main.prototype.activeLinks.apply(this, arguments);
-        $('ul.tabs.level-1 .' + this.tableView.options.tab).addClass('active');
-        $('ul.tabs.level-2 .' + this.tableView.options.structure).addClass('active');
+        $('ul.tabs.level-1 a').addClass('active');
+        $('ul.tabs.level-2').removeClass('hidden');
+        $('.tab-content table.hidden').each(function(i, el) {
+            var id = $(el).attr('id');
+            $('ul.tabs.level-1 a#' + id).removeClass('active');
+            $('ul.tabs.level-2.' + id).addClass('hidden');
+        });
+        $('ul.tabs.level-2 .' + this.vTable.options.structure).addClass('active');
         return this;
     },
-    selectTab: function(ev) {
-        var e = $(ev.currentTarget);
-
-        this.tableView.options.tab = 'vulnerability';
-        this.tableView.options.structure = 'sectors';
-        if (e.hasClass('readiness')) {
-            this.tableView.options.structure = 'components';
-            this.tableView.options.tab = 'readiness';
+    selectVR: function(ev) {
+        $('.tab-content table').addClass('hidden');
+        $('.tab-content table' + $(ev.currentTarget).attr('href')).removeClass('hidden');
+        this.activeLinks();
+        return false;
+    },
+    selectBreakdown: function(ev) {
+        this.vTable.options.structure = 'sectors';
+        if ($(ev.currentTarget).hasClass('components')) {
+            this.vTable.options.structure = 'components';
         }
-        if (e.hasClass('components')) {
-            this.tableView.options.structure = 'components';
-        }
-        this.tableView.options.tab == 'readiness' ? $('ul.tabs.level-2').hide() : $('ul.tabs.level-2').show();
-
-        this.tableView.render().attach();
+        this.vTable.render().attach();
         this.activeLinks();
         return false;
     },
