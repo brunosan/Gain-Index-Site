@@ -16,7 +16,7 @@ view = Backbone.View.extend({
                         name: indicator.meta('name') + ' rank',
                         value: (indicator.rank({format: false}) || {}).desc,
                         score: indicator.score(),
-                        outlook: indicator.outlook(),
+                        trend: indicator.trend(),
                         raw: indicator.score({format: false})
                     };
                 }

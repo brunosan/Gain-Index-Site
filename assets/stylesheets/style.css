@@ -177,15 +177,15 @@ img.left {
 /**
  * Icons.
  */
-.icon-outlook {
+.icon-trend {
   height: 15px;
   width: 15px;
   text-indent: -9999px;
   background: transparent url(../images/sprite.png) no-repeat 0 0;
   }
-  .icon-outlook-up    { background-position: 0 -1365px; }
-  .icon-outlook-down  { background-position: 0 -1345px; }
-  .icon-outlook-same  { background-position: 0 -389px; }
+  .icon-trend-up    { background-position: 0 -1365px; }
+  .icon-trend-down  { background-position: 0 -1345px; }
+  .icon-trend-same  { background-position: 0 -389px; }
 
 /**
  * Tabs
@@ -732,10 +732,10 @@ table.data tbody tr td {
   font-size: 30px;
   line-height: 40px;
   }
-.country-summary div.gain .outlook {
+.country-summary div.gain .trend {
   color: #666;
   }
-.country-summary div.gain .icon-outlook {
+.country-summary div.gain .icon-trend {
   display: inline-block;
   width: 15px;
   height: 15px;
@@ -1202,7 +1202,7 @@ table.data tbody tr.active:hover {
   padding-top: 35px;
   height: 125px;
   }
-.country-summary div.gain .outlook {
+.country-summary div.gain .trend {
   color: #666;
   }
 .country-profile .tab-content {
@@ -1537,7 +1537,7 @@ div.bottomscorelabel {
   .ranking table.data td.score {
     padding-left: 0;
     }
-.ranking table.data th.outlook {
+.ranking table.data th.trend {
   width: 65px;
   }
 .ranking table.data th.score {
@@ -1546,7 +1546,7 @@ div.bottomscorelabel {
 .ranking table.data th.country {
   padding: 0 0 0 15px;
   }
-.ranking table.data .icon-outlook {
+.ranking table.data .icon-trend {
   margin: 5px 0 0 15px;
   }
 .ranking .tab-wrapper .tab-wrapper {
