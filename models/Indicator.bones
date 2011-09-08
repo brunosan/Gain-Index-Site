@@ -554,8 +554,8 @@ model.meta = {
     "reporting": {
         "id": "reporting",
         "name": "Reporting level",
-        "description": "The reporting frequency of all indicators.",
-        "format": "number",
+        "description": "The Reporting Level measures the Gain's currentness. It is based on the reporting frequency of all indicators the GaIn is based on. 100% would correspond to all indicators reported for a particular year, 0% would correspond to no indicators being present.",
+        "format": "percent",
         "decimals": "0",
         "unit": "%s %",
         "index": null,

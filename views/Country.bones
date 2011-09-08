@@ -20,11 +20,10 @@ view = views.Main.extend({
 
         // Approach the cabinet.
         $(this.el).empty().append(templates.Cabinet({klass: 'country'}));
-        var reporting = indicators.byName('reporting').input({year: 2009, format: false});
         // Empty pockets on top.
         $('.top', this.el).empty().append(templates.Country({
             title: this.model.meta('name'),
-            reporting: Math.round(reporting * 100),
+            reporting: indicators.byName('reporting').input({year: 2009}),
             rank: rank,
             gdp: {
                 year: 2009,
