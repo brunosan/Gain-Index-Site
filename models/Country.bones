@@ -40,7 +40,7 @@ model.pathToId = function(path) {
 model.path = function(str) {
     // Detect whether ISO3 code and handle as such
     if (str.length == 3 && _.detect(model.meta, function(item) { return str == item.ISO3 })) {
-        str = _.detect(model.meta, function(country) { return country.ISO3 == id; }).name;
+        str = _.detect(model.meta, function(country) { return country.ISO3 == str; }).name;
     }
     // Handle name to path
     return str.toLowerCase().replace(/[^a-zA-Z0-9]+/gi, '-');
