@@ -29,12 +29,14 @@ view = views.Main.extend({
         });
         rankTop = list.slice(0, 5);
         rankBottom = list.slice(list.length - 5, list.length);
-        // Names are extra long, also, format score
+        // Names are extra long, also, format score and add path
         _.map(rankTop, function(value) {
+            value.path = models.Country.nameToPath(value.name);
             value.name = value.name.replace('The', '');
             value.value = value.value.substr(0, value.value.length-2);
         });
         _.map(rankBottom, function(value) {
+            value.path = models.Country.nameToPath(value.name);
             value.name = value.name.replace('The', '');
             value.value = value.value.substr(0, value.value.length-2);
         });
@@ -141,6 +143,7 @@ view = views.Main.extend({
         this.collection.each(function(model) {
             $('.featured .countries', that.el).append(
                 templates.FeaturedFront({
+                    path: model.nameToPath(model.meta('name')),
                     name: model.meta('name'),
                     iso: model.meta('ISO3')
                 })
