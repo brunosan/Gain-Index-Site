@@ -191,7 +191,8 @@ command.prototype.initialize = function(options) {
                     record._id = '/api/Indicator/static-static-' + v.ISO3;
                     record.country = v.name;
                     record.ISO3 = v.ISO3;
-
+                    record.category = 'static';
+                    record.name = 'static';
                     record.gain = parseFloat(v.gain);
 
                     records[record.ISO3] = record;
@@ -206,9 +207,16 @@ command.prototype.initialize = function(options) {
 
             actions.push(processCSV(source + '/vulnerability.csv', function(v, i) {
                 if (v.ISO3) {
+                    records[v.ISO3].trend = _(v).reduce(reduceScores, {});
+                }
+            }));
+
+            actions.push(processCSV(source + '/trend.csv', function(v, i) {
+                if (v.ISO3) {
                     records[v.ISO3].vulnerability = _(v).reduce(reduceScores, {});
                 }
             }));
+
 
             actions.push(function(next) {
                 var counter = _.after(_(records).size(), next);
