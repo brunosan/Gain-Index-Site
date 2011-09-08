@@ -73,7 +73,7 @@ view = Backbone.View.extend({
         });
 
         return _(this.filter(results)).map(function(o) {
-            return { label: o.get('name'), value: o.get('ISO3'), path: o.nameToPath(o.get('name')) }
+            return { label: o.get('name'), value: o.get('ISO3'), path: o.path(o.get('name')) }
         });
     }
 });

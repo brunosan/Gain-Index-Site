@@ -19,7 +19,7 @@ view = Backbone.View.extend({
                 $('.content', view.el).empty().append(templates.CountryDetailDrawer({
                     countryName: meta[model.id].name,
                     indicatorName: view.indicator.meta('name'),
-                    countryPath: model.nameToPath(meta[model.id].name)
+                    countryPath: model.path(meta[model.id].name)
                 }));
                 view.attach();
 
