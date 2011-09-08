@@ -10,7 +10,10 @@
 
   <div class='prose container'></div>
 
-  <div class='reporting container'>Reporting Level: <%= reporting %>%</div>
+  <div id='indicator-reporting' class='container indicator'>
+      <span class='name'>Reporting Level</span>
+      <span class='value'><%= reporting %></span>
+  </div>
 
   <div class='rankings'>
   <% if (_(rank).size()) { %>
