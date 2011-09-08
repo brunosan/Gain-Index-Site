@@ -7,6 +7,7 @@ Requirements
 - Couch 1.0.x
 - Node v0.4.9
 - npm
+- Mapnik 2.x  If using OSX http://dbsgeo.com/downloads/
 - Review package.json for node version requirements
 - Modern version of libsqlite3. Note: older versions such as on Ubuntu Lucid can result in slow map rendering. In such cases, the [mapnik sqlite plugin can be built standalone](https://github.com/springmeyer/sqlite3-mapnik), or you can use a newer version of libsqlite3
 
@@ -25,6 +26,8 @@ After cloning the repository / downloading the tarball:
 
 The application will refuse to install if it detects existing databases. To
 install anew, run `./index.js uninstall` first.
+
+NOTE: When installing on OSX, you must close your terminal (or re-source .profile) after the first step, then open a new terminal and run `npm install` as explained above.
 
 Updating libmapnik2 / libmapnik2-dev
 ------------------------------------
