@@ -207,13 +207,13 @@ command.prototype.initialize = function(options) {
 
             actions.push(processCSV(source + '/vulnerability.csv', function(v, i) {
                 if (v.ISO3) {
-                    records[v.ISO3].trend = _(v).reduce(reduceScores, {});
+                    records[v.ISO3].vulnerability = _(v).reduce(reduceScores, {});
                 }
             }));
 
             actions.push(processCSV(source + '/trend.csv', function(v, i) {
                 if (v.ISO3) {
-                    records[v.ISO3].vulnerability = _(v).reduce(reduceScores, {});
+                    records[v.ISO3].trend = _(v).reduce(reduceScores, {});
                 }
             }));
 
