@@ -163,10 +163,14 @@ view = views.Main.extend({
         var indicator = new models.Indicator({id: id});
         var locals = {
             title: indicator.meta('name'),
-            content: indicator.meta('description_long') || indicator.meta('description'),
+            content: indicator.get('id') == 'gain' ? templates.GaInFloorText() : indicator.meta('description'),
             correction: {
                 caption: 'Countries of the world by ' + indicator.meta('name'),
                 href: '#',
+                methodologyHash:
+                    (indicator.meta('component') || indicator.meta('sector')) ?
+                    'scoringindicators' :
+                    indicator.meta('index'),
                 title: indicator.isCorrection() ?
                     'Remove GDP correction' :
                     'Correct for GDP'

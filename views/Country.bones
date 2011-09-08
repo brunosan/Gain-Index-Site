@@ -20,9 +20,11 @@ view = views.Main.extend({
 
         // Approach the cabinet.
         $(this.el).empty().append(templates.Cabinet({klass: 'country'}));
+        var reporting = indicators.byName('reporting').input({year: 2009, format: false});
         // Empty pockets on top.
         $('.top', this.el).empty().append(templates.Country({
             title: this.model.meta('name'),
+            reporting: Math.round(reporting * 100),
             rank: rank,
             gdp: {
                 year: 2009,
@@ -51,7 +53,11 @@ view = views.Main.extend({
         var gain = new models.Indicator({id: 'gain'});
         $('.floor', this.el).empty().append(templates.DefaultFloor({
             title: gain.meta('name'),
-            content: gain.meta('description_long')
+            content: templates.GaInFloorText(),
+            methodologyHash:
+                (gain.meta('component') || gain.meta('sector')) ?
+                'scoringindicators' :
+                gain.meta('index')
         }));
 
         if (this.tableView == undefined) {
@@ -76,7 +82,9 @@ view = views.Main.extend({
         });
         this.map.featureClick = function(feature, context, index) {
             var iso = $(feature).data('iso');
-            return window.location = '/country/'+ models.Country.idToPath(iso);
+            if (iso) {
+                views.App.route('/country/' + models.Country.idToPath(iso));
+            }
         }
 
         if (this.tableView == undefined) {

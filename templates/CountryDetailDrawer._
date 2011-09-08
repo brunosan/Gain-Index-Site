@@ -1,5 +1,5 @@
 <div class='country-info container clearfix'>
-  <a class='button green' href='/country/<%= countryPath %>'>View profile</a>
+  <a class='button methodology' href='/country/<%= countryPath %>'>View profile</a>
   <h3><%= countryName %></h3>
   <div class='country-summary'></div>
 </div>

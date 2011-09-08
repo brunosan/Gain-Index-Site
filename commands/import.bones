@@ -191,7 +191,8 @@ command.prototype.initialize = function(options) {
                     record._id = '/api/Indicator/static-static-' + v.ISO3;
                     record.country = v.name;
                     record.ISO3 = v.ISO3;
-
+                    record.category = 'static';
+                    record.name = 'static';
                     record.gain = parseFloat(v.gain);
 
                     records[record.ISO3] = record;
@@ -209,6 +210,13 @@ command.prototype.initialize = function(options) {
                     records[v.ISO3].vulnerability = _(v).reduce(reduceScores, {});
                 }
             }));
+
+            actions.push(processCSV(source + '/trend.csv', function(v, i) {
+                if (v.ISO3) {
+                    records[v.ISO3].trend = _(v).reduce(reduceScores, {});
+                }
+            }));
+
 
             actions.push(function(next) {
                 var counter = _.after(_(records).size(), next);
@@ -332,6 +340,45 @@ command.prototype.initialize = function(options) {
 
 
     var actions = [];
+
+    actions.push(function(next) {
+        var couch = require('backbone-couch')({
+            host: config.couchHost,
+            port: config.couchPort,
+            name: config.couchPrefix + '_data',
+            basename: 'data' 
+        });
+
+        couch.db.dbDel(next);
+    });
+
+    
+    actions.push(function(next) {
+        var dir = [process.cwd(), 'design-docs', 'data'].join('/');
+
+        try {
+            if (fs.statSync(dir).isDirectory) {
+                var designDocs = _(fs.readdirSync(dir)).map(function(val) {
+                    return dir + '/' + val;
+                });
+            }
+        } catch (err) {   }
+
+        var couch = require('backbone-couch')({
+            host: config.couchHost,
+            port: config.couchPort,
+            name: config.couchPrefix + '_data',
+            basename: 'data' 
+        });
+
+        couch.install(function(err) {
+            err && errors.push(err);
+            console.log('Created data');
+            designDocs && couch.db.putDesignDocs(designDocs);
+            next();
+        });
+    });
+
 
     // Build a list of files to import by crawling the resources hierarchy.
     // Currently this is a blocking operation.

@@ -20,10 +20,10 @@ var animated = false,
 
 var quadrant = function(data) {
     // Determine which quadrant to highlight.
-    // * The turning point for Vulnerability us 0.31
-    // * The turning point for Readiness is 0.52
-    var quad = (data.vulnerability > 0.31 ? 't' : 'b');
-    quad += (data.readiness > 0.52 ? 'r' : 'l');
+    // * The turning point for Vulnerability us 0.30
+    // * The turning point for Readiness is 0.63
+    var quad = (data.vulnerability > 0.30 ? 't' : 'b');
+    quad += (data.readiness > 0.63 ? 'r' : 'l');
     return quad;
 };
 
@@ -31,8 +31,8 @@ var quadrantCoord = function(data) {
     // Determine which quadrant to highlight, base on Coords.
     // TODO it's unfortuate that we've got these two quad calcuation
     //      functions, we should be able to consolidate.
-    var quad = (data.y > vulnerabilityToY(0.31) ? 't' : 'b');
-    quad += (data.x > readinessToX(0.52) ? 'r' : 'l');
+    var quad = (data.y > vulnerabilityToY(0.30) ? 't' : 'b');
+    quad += (data.x > readinessToX(0.63) ? 'r' : 'l');
     return quad;
 };
 
@@ -94,7 +94,11 @@ view = views.Main.extend({
         'click .active-countries span.country a.remove': 'removeCountry',
         'click .active-countries span.country a.more': 'openDrawer',
         'mouseenter div.point': 'pointHover',
-        'mouseleave div.point': 'pointUnhover'
+        'mouseleave div.point': 'pointUnhover',
+        'mouseenter .interactive .quad': 'quadrantHover',
+        'mouseleave .interactive .quad': 'quadrantUnhover',
+        'mouseenter .mini-matrix-links a': 'hoverRelatedQuad',
+        'mouseleave .mini-matrix-links a': 'unHoverRelatedQuad'
     },
     pageTitle: "Matrix",
     initialize: function(options) {
@@ -106,7 +110,11 @@ view = views.Main.extend({
         var gain = new models.Indicator({id: 'gain'});
         $('.floor', this.el).empty().append(templates.DefaultFloor({
             title: 'The Readiness Matrix',
-            content: templates.MatrixFloorText()
+            content: templates.MatrixFloorText(),
+            methodologyHash:
+                (gain.meta('component') || gain.meta('sector')) ?
+                'scoringindicators' :
+                gain.meta('index')
         }));
         $('.top', this.el).empty().append(templates.Matrix());
         return this;
@@ -350,8 +358,29 @@ view = views.Main.extend({
     pointUnhover: function(ev) {
         // Decrement our count, dont' fall below 0.
         openTooltips > 0 && openTooltips--;
-
         if (openTooltips == 0) $('.tooltip', this.el).empty();
+    },
+    quadrantHover: function(ev) {
+        if ($('.quad', this.el).hasClass('active')) {
+            $('.quad', this.el).removeClass('active');
+            $('.big-matrix .matrix-overlay').remove();
+        }
+        $('.big-matrix', this.el).append($(ev.currentTarget).html());
+    },
+    quadrantUnhover: function() {
+        $('.big-matrix .matrix-overlay').remove();
+    },
+    hoverRelatedQuad: function(ev) {
+        var relativeClass = $(ev.currentTarget).attr('class'),
+            associatedQuad = $('.quad', this.el).filter('.' + relativeClass);
+        if ($('.quad', this.el).hasClass('active')) {
+            $('.quad', this.el).removeClass('active');
+            $('.big-matrix .matrix-overlay').remove();
+        }
+        $('.big-matrix', this.el).append(associatedQuad.html());
+        associatedQuad.addClass('active');
+    },
+    unHoverRelatedQuad: function() {
+        $('.big-matrix .matrix-overlay').remove();
     }
-
 });
