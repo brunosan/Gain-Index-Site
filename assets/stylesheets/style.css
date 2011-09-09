@@ -1226,7 +1226,6 @@ table.data tbody tr.active:hover {
   
 /*Reporting Level*/
 #indicator-reporting {
-  float: right;
   color: white;
   text-transform: uppercase;
   font-size: 10px;
@@ -1239,8 +1238,9 @@ table.data tbody tr.active:hover {
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
   border-radius: 3px;
-  margin: 15px 10px;
+  margin: 0 10px;
   cursor: pointer;
+  float: right;
   }
 #indicator-reporting.active {
   background-color: #767676;
@@ -1323,7 +1323,7 @@ table.data tbody tr.active:hover {
 div.bottomscorelabel {
   float: right;
   text-indent: 15px;
-  background: url('../images/sprite.png') 0px -891px no-repeat;
+  background: url('../images/sprite.png') -330px -892px no-repeat;
   }
 .country-profile .rankings {
   padding: 0 0 20px 0;
