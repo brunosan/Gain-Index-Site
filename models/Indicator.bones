@@ -23,11 +23,16 @@ model = Backbone.Model.extend({
         return this.format(value, {format: 'number', decimals: 3});
     },
     trend: function(options) {
-        var diff = this.score() - this.score({year: this.get('currentYear') - 1});
-        if (diff >= 0.5) return 'up';
-        if (diff <= -0.5) return 'down';
-        if (_.isNaN(diff)) return 'undefined';
-        return 'same';
+        if (this.get('name') == 'static') {
+            var sign = this.get('trend').sign;
+
+            switch (sign) {
+                case -1: return 'down';
+                case 0: return 'same';
+                case 1: return 'up';
+                default: return 'undefined';
+            }
+        }
     },
     input: function(options) {
         options = this.optionDefaults(options);
@@ -49,9 +54,9 @@ model = Backbone.Model.extend({
 
         var totalRanks = value.asc + value.desc;
         if (this.get('category') == 'vulnerability' || this.get('name') == 'vulnerability_delta') {
-            var color = gradientRgb(['#67b6e0', '#fc7b7e'], totalRanks, value.asc);
+            var color = gradientRgb(['#7cc0e4', '#fd9496'], totalRanks, value.asc);
         } else {
-            var color = gradientRgb(['#67b6e0', '#fc7b7e'], totalRanks, value.desc);
+            var color = gradientRgb(['#7cc0e4', '#fd9496'], totalRanks, value.desc);
         }
 
         return "<div class='rank-number' style='background-color: #" + color + ";'>" + value.desc + '</div>';

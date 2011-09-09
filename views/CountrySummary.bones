@@ -8,6 +8,8 @@ view = Backbone.View.extend({
             pin = {},
             indicators = this.model.get('indicators');
 
+        var trend = indicators.byName('static').trend();
+
         _.each(['gain', 'readiness', 'vulnerability'], function(k) {
             var indicator = indicators.byName(k);
             if (indicator) {
@@ -16,7 +18,7 @@ view = Backbone.View.extend({
                         name: indicator.meta('name') + ' rank',
                         value: (indicator.rank({format: false}) || {}).desc,
                         score: indicator.score(),
-                        trend: indicator.trend(),
+                        trend: trend,
                         raw: indicator.score({format: false})
                     };
                 }
