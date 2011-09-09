@@ -25,6 +25,9 @@ h3 {
   border-bottom: 1px solid #ebebeb;
   margin-bottom: 15px;
   }
+.rankings h3 {
+  width: 600px;
+  }
 h4 {
   font-weight: normal;
   font-size: 18px;
@@ -49,7 +52,18 @@ a {
   font-weight: bold;
   margin: 5px 0;
   }
-  
+pre {
+  background: #f8f8f8;
+  font-size: 12px;
+  margin-bottom: 15px;
+  overflow: auto;
+  padding: 10px;
+  color: #666;
+  }
+pre, pre code {
+  font-family: 'Menlo Regular',Consolas,monospace;
+  }
+
 /* Header */
 #header {
   border-bottom: #c6c6c6 1px solid;
@@ -94,10 +108,18 @@ table tr {
   }
 table tr.active {
   font-weight: bold;
+  background: #EEE;
+  }
+table tr.active td.score {
+  background: #EEE;
+  font-weight: bold;
   }
 table thead tr {
   text-align: left;
   border-bottom: 1px solid #ebebeb;
+  }
+table thead tr th {
+  padding: 5px 0 3px;
   }
 table tbody tr th {
   text-align: left;
@@ -111,13 +133,10 @@ table tr.section td {
   line-height: 16px;
   }
 table tr.index td.name {
-  font-size: 20px;
-  font-weight: bold;
   padding-bottom: 15px;
-  font-weight: 100;
-  margin-top: 15px;
+  margin-top: 10px;
   display: block;
-  font-size: 28px;
+  font-size: 18px;
   }
 
 .rank-number {
@@ -223,15 +242,12 @@ table tr.index td.name {
   background-color: #fff;
   }
 .front .ranking table.data {
-  width: 50%;
+  width: 300px;
   float: left;
   clear: none;
   table-layout: auto;
   margin-bottom: 10px;
   }
-  .front .ranking table.data.ranktop {
-    border-right: #EBEBEB 1px solid;
-    }
   .front .ranking table.data th {
     font-weight: normal;
     font-style: italic;
@@ -258,11 +274,11 @@ table.data.ranking-history {
 ul.tabs.level-1 a { display: none;}
 ul.tabs.level-1 a.exact.active { 
   padding-bottom: 15px;
-  font-weight: 100;
   margin-top: 15px;
   display: block;
   font-size: 20px;
-  border-bottom: #c6c6c6 1px solid;
+  border-bottom: #C6C6C6 1px solid;
+  font-weight: bold;
   }
 ul.tabs.level-2 a.active {
   padding-bottom: 15px;
@@ -310,7 +326,7 @@ ul.tabs.level-2 a.active {
 /****** Front page ******/
 .front #map,
 .front .map {
-  width: 960px!important;
+  width: 600px!important;
   height: 382px!important;
   }
 
@@ -351,6 +367,10 @@ ul.tabs.level-2 a.active {
   border-bottom: 1px solid #c6c6c6;
   }
 
+/*** Gain info box ***/
+#indicator-gain {
+  font-weight: bold;
+  }
 /*** Country page sector graphs ***/
 .country-sector-graph {
   margin: 12px 15px 0 0;
@@ -396,9 +416,6 @@ ul.tabs.level-2 a.active {
   display: block;
   z-index: 999999;
   }
-.drawer .content .chart {
-  padding-bottom: 15px;
-  }
 .drawer .content .graph {
   width: 285px;
   height: 150px;
@@ -410,6 +427,13 @@ ul.tabs.level-2 a.active {
   padding-bottom: 15px;
   }
 
+.drawer .container {
+  width: 320px;
+  }
+div.container {
+  width: 600px;
+  }
+
 /****** Ranking Section ******/
 .tab-wrapper,
 .country table,
@@ -419,12 +443,6 @@ ul.tabs.level-2 a.active {
 .drawer table {
   width: 100%;
   margin-bottom: 10px;
-  }
-#cabinet.ranking .drawer {
-  top: 146px;
-  }
-#cabinet.country .drawer {
-  top: 342px;
   }
 
 /****** About Section ******/
@@ -457,7 +475,17 @@ ul.tabs.level-2 a.active {
   right: 0;
   width: 320px;
   margin-left: 160px;
-  background: #f2f2f2;
+  background: #eee;
+  }
+#cabinet.ranking .drawer {
+  top: 146px;
+  }
+#cabinet.ranking .drawer.open {
+  height: 92%;
+  }
+#cabinet.country .drawer.open {
+  top: 436px;
+  height: 1150px;
   }
 .slider {
   margin-top: 20px;
@@ -472,13 +500,7 @@ ul.tabs.level-2 a.active {
 .drawer .country-summary {
   padding: 0;
   }
-/*.correction-control, .drawer {display: none;}*/
-
-
 /****** Page break avoiding ******/
-/*.description {
-  page-break-before: always;
-  }*/
 .document h2 {
   page-break-after: avoid;
   }
@@ -487,6 +509,7 @@ ul.tabs.level-2 a.active {
 .slider .content.container h3,
 #overviewdiagram,
 .bottomscorelabel,
+.trend,
 #carousel,
 .button,
 .navigation,
