@@ -54,9 +54,9 @@ model = Backbone.Model.extend({
 
         var totalRanks = value.asc + value.desc;
         if (this.get('category') == 'vulnerability' || this.get('name') == 'vulnerability_delta') {
-            var color = gradientRgb(['#67b6e0', '#fc7b7e'], totalRanks, value.asc);
+            var color = gradientRgb(['#7cc0e4', '#fd9496'], totalRanks, value.asc);
         } else {
-            var color = gradientRgb(['#67b6e0', '#fc7b7e'], totalRanks, value.desc);
+            var color = gradientRgb(['#7cc0e4', '#fd9496'], totalRanks, value.desc);
         }
 
         return "<div class='rank-number' style='background-color: #" + color + ";'>" + value.desc + '</div>';
