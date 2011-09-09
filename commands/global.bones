@@ -52,6 +52,12 @@ Bones.Command.options['mapHosts'] = {
     'default': ''
 }
 
+Bones.Command.options['maxAge'] = {
+    'title': 'maxAge=[int]',
+    'description': 'max-age setting for Cache-Control header',
+    'default': 3600
+}
+
 /**
  * Callback used to initialize the server for certain commands.
  */

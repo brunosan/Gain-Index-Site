@@ -27,15 +27,15 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="5.6"
-     inkscape:cx="40.961564"
-     inkscape:cy="107.81143"
+     inkscape:zoom="1.4"
+     inkscape:cx="325.24006"
+     inkscape:cy="100.87884"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
-     showgrid="true"
+     showgrid="false"
      inkscape:window-width="1183"
      inkscape:window-height="725"
-     inkscape:window-x="14"
+     inkscape:window-x="87"
      inkscape:window-y="0"
      inkscape:window-maximized="0"
      showguides="true"
@@ -56,7 +56,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -284,13 +284,13 @@
        width="350"
        height="1"
        x="702.36218"
-       y="-73.5"
+       y="-84"
        transform="matrix(0,1,-1,0,0,0)" />
     <rect
        inkscape:export-ydpi="90"
        inkscape:export-xdpi="90"
        inkscape:export-filename="/Users/tristen/devseed/gai-gain/assets/images/matrix-underlay.png"
-       y="-146"
+       y="-167"
        x="702.36218"
        height="1"
        width="350"
@@ -306,13 +306,13 @@
        width="350"
        height="1"
        x="702.36218"
-       y="-508.5"
+       y="-499"
        transform="matrix(0,1,-1,0,0,0)" />
     <rect
        inkscape:export-ydpi="90"
        inkscape:export-xdpi="90"
        inkscape:export-filename="/Users/tristen/devseed/gai-gain/assets/images/matrix-underlay.png"
-       y="-218.5"
+       y="-250"
        x="702.36218"
        height="1"
        width="350"
@@ -321,7 +321,7 @@
        transform="matrix(0,1,-1,0,0,0)" />
     <rect
        transform="matrix(0,1,-1,0,0,0)"
-       y="-291"
+       y="-333"
        x="702.36218"
        height="1"
        width="350"
@@ -337,18 +337,7 @@
        width="350"
        height="1"
        x="702.36218"
-       y="-363.5"
-       inkscape:export-filename="/Users/tristen/devseed/gai-gain/assets/images/matrix-underlay.png"
-       inkscape:export-xdpi="90"
-       inkscape:export-ydpi="90" />
-    <rect
-       transform="matrix(0,1,-1,0,0,0)"
-       y="-436"
-       x="702.36218"
-       height="1"
-       width="350"
-       id="rect13525"
-       style="color:#000000;fill:#ebebeb;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       y="-416"
        inkscape:export-filename="/Users/tristen/devseed/gai-gain/assets/images/matrix-underlay.png"
        inkscape:export-xdpi="90"
        inkscape:export-ydpi="90" />
@@ -359,18 +348,18 @@
        sodipodi:linespacing="125%"
        id="text13533"
        y="1067.5222"
-       x="67.255577"
+       x="-2.7444229"
        style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Helvetica"
        xml:space="preserve"><tspan
          style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#434343;fill-opacity:1;font-family:Helvetica Neue LT Std;-inkscape-font-specification:Helvetica Neue LT Std"
          y="1067.5222"
-         x="67.255577"
+         x="-2.7444229"
          id="tspan13535"
-         sodipodi:role="line">.3</tspan></text>
+         sodipodi:role="line">.2</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Helvetica"
-       x="139.75558"
+       x="76.755577"
        y="1067.5222"
        id="text13537"
        sodipodi:linespacing="125%"
@@ -379,9 +368,9 @@
        inkscape:export-ydpi="90"><tspan
          sodipodi:role="line"
          id="tspan13539"
-         x="139.75558"
+         x="76.755577"
          y="1067.5222"
-         style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#434343;fill-opacity:1;font-family:Helvetica Neue LT Std;-inkscape-font-specification:Helvetica Neue LT Std">.4</tspan></text>
+         style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#434343;fill-opacity:1;font-family:Helvetica Neue LT Std;-inkscape-font-specification:Helvetica Neue LT Std">.3</tspan></text>
     <text
        inkscape:export-ydpi="90"
        inkscape:export-xdpi="90"
@@ -389,18 +378,18 @@
        sodipodi:linespacing="125%"
        id="text13541"
        y="1067.5222"
-       x="212.25558"
+       x="158.75558"
        style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Helvetica"
        xml:space="preserve"><tspan
          style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#434343;fill-opacity:1;font-family:Helvetica Neue LT Std;-inkscape-font-specification:Helvetica Neue LT Std"
          y="1067.5222"
-         x="212.25558"
+         x="158.75558"
          id="tspan13543"
-         sodipodi:role="line">.5</tspan></text>
+         sodipodi:role="line">.4</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Helvetica"
-       x="285.25558"
+       x="243.75558"
        y="1067.5222"
        id="text13545"
        sodipodi:linespacing="125%"
@@ -409,9 +398,9 @@
        inkscape:export-ydpi="90"><tspan
          sodipodi:role="line"
          id="tspan13547"
-         x="285.25558"
+         x="243.75558"
          y="1067.5222"
-         style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#434343;fill-opacity:1;font-family:Helvetica Neue LT Std;-inkscape-font-specification:Helvetica Neue LT Std">.6</tspan></text>
+         style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#434343;fill-opacity:1;font-family:Helvetica Neue LT Std;-inkscape-font-specification:Helvetica Neue LT Std">.5</tspan></text>
     <text
        inkscape:export-ydpi="90"
        inkscape:export-xdpi="90"
@@ -419,18 +408,18 @@
        sodipodi:linespacing="125%"
        id="text13549"
        y="1067.5222"
-       x="357.25558"
+       x="327.25558"
        style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Helvetica"
        xml:space="preserve"><tspan
          style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#434343;fill-opacity:1;font-family:Helvetica Neue LT Std;-inkscape-font-specification:Helvetica Neue LT Std"
          y="1067.5222"
-         x="357.25558"
+         x="327.25558"
          id="tspan13551"
-         sodipodi:role="line">.7</tspan></text>
+         sodipodi:role="line">.6</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Helvetica"
-       x="430.25558"
+       x="410.25558"
        y="1067.5222"
        id="text13553"
        sodipodi:linespacing="125%"
@@ -439,24 +428,9 @@
        inkscape:export-ydpi="90"><tspan
          sodipodi:role="line"
          id="tspan13555"
-         x="430.25558"
+         x="410.25558"
          y="1067.5222"
-         style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#434343;fill-opacity:1;font-family:Helvetica Neue LT Std;-inkscape-font-specification:Helvetica Neue LT Std">.8</tspan></text>
-    <text
-       inkscape:export-ydpi="90"
-       inkscape:export-xdpi="90"
-       inkscape:export-filename="/Users/tristen/devseed/gai-gain/assets/images/matrix-underlay.png"
-       xml:space="preserve"
-       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Helvetica"
-       x="-2.5884209"
-       y="1067.5222"
-       id="text13567"
-       sodipodi:linespacing="125%"><tspan
-         sodipodi:role="line"
-         id="tspan13569"
-         x="-2.5884209"
-         y="1067.5222"
-         style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#434343;fill-opacity:1;font-family:Helvetica Neue LT Std;-inkscape-font-specification:Helvetica Neue LT Std">.2</tspan></text>
+         style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#434343;fill-opacity:1;font-family:Helvetica Neue LT Std;-inkscape-font-specification:Helvetica Neue LT Std">.7</tspan></text>
     <text
        inkscape:export-ydpi="90"
        inkscape:export-xdpi="90"
@@ -464,14 +438,14 @@
        sodipodi:linespacing="125%"
        id="text13571"
        y="1067.5222"
-       x="502.25558"
+       x="492.25558"
        style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Helvetica"
        xml:space="preserve"><tspan
          style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#434343;fill-opacity:1;font-family:Helvetica Neue LT Std;-inkscape-font-specification:Helvetica Neue LT Std"
          y="1067.5222"
-         x="502.25558"
+         x="492.25558"
          id="tspan13573"
-         sodipodi:role="line">.9</tspan></text>
+         sodipodi:role="line">.8</tspan></text>
     <g
        id="g229877"
        transform="matrix(0.64821142,0,0,0.64821142,323.61334,444.109)">
@@ -905,7 +879,7 @@
        width="350"
        height="1"
        x="702.36218"
-       y="-305.5"
+       y="-358"
        transform="matrix(0,1,-1,0,0,0)" />
     <rect
        inkscape:export-ydpi="90"
@@ -916,6 +890,6 @@
        width="580"
        height="1"
        x="0"
-       y="933.61218" />
+       y="934.11218" />
   </g>
 </svg>
