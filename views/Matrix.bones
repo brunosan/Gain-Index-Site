@@ -361,7 +361,9 @@ view = views.Main.extend({
         if (openTooltips == 0) $('.tooltip', this.el).empty();
     },
     quadrantHover: function(ev) {
+        $('.big-matrix .matrix-overlay', this.el).remove();
         $('.big-matrix', this.el).append($(ev.currentTarget).html());
+        $('.matrix-overlay', this.el).stop().animate({opacity: .90, duration: 250});
     },
     quadrantUnhover: function() {
         $('.big-matrix .matrix-overlay', this.el).stop().animate({
