@@ -16,6 +16,12 @@ view = views.Main.extend({
         if (!meta[this.model.get('id')]) {
             return this;
         }
+
+        var trends = this.options.staticData.get('indicators').reduce(function(result, m) {
+            result[m.get('ISO3')] = m.trend();
+            return result;
+        }, {});
+
         var id = this.model.get('id');
         _.each(meta, function(v) {
             if (v.index == meta[id].index) {
@@ -58,6 +64,8 @@ view = views.Main.extend({
 
         this.tableView = new views.RankingTable({
             el: $('table.data', this.el),
+            indicatorName: id,
+            trends: trends,
             collection: this.model.get('indicators')
         }).render();
 

@@ -23,11 +23,16 @@ model = Backbone.Model.extend({
         return this.format(value, {format: 'number', decimals: 3});
     },
     trend: function(options) {
-        var diff = this.score() - this.score({year: this.get('currentYear') - 1});
-        if (diff >= 0.5) return 'up';
-        if (diff <= -0.5) return 'down';
-        if (_.isNaN(diff)) return 'undefined';
-        return 'same';
+        if (this.get('name') == 'static') {
+            var sign = this.get('trend').sign;
+
+            switch (sign) {
+                case -1: return 'down';
+                case 0: return 'same';
+                case 1: return 'up';
+                default: return 'undefined';
+            }
+        }
     },
     input: function(options) {
         options = this.optionDefaults(options);
