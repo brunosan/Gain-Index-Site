@@ -556,9 +556,9 @@ model.meta = {
         "name": "Reporting level",
         "description": "The reporting level measures data availability. When data gaps are present we use linear interpolations, and constant extrapolations. 100% indicates that all measures where reported for a particular year.",
         "format": "percent",
+        "index": "reportinglevel",
         "decimals": "0",
         "unit": "%s %",
-        "index": null,
         "sector": null,
         "component": null
     },
