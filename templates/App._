@@ -3,14 +3,9 @@
 <head>
   <meta charset='utf-8' />
   <title><%= title %></title>
-  <link rel='shortcut icon' href='../images/favicon.ico' type='image/x-icon' />
-  <script src='/assets/bones/vendor.js?<%= version %>'></script>
+  <link rel='shortcut icon' href='/assets/gain/images/favicon.ico' type='image/x-icon' />
   <script src='/assets/bones/wax.js?<%= version %>'></script>
-  <script src='/assets/bones/core.js?<%= version %>'></script>
-  <script src='/assets/bones/views.js?<%= version %>'></script>
-  <script src='/assets/bones/routers.js?<%= version %>'></script>
-  <script src='/assets/bones/models.js?<%= version %>'></script>
-  <script src='/assets/bones/templates.js?<%= version %>'></script>
+  <script src='/assets/bones/all.js?<%= version %>'></script>
   <!--[if lte IE 8]><script src='/assets/gain/scripts/excanvas.min.js'></script><![endif]-->
   <script src='/assets/gain/scripts/flot/jquery.flot.js?<%= version %>'></script>
   <script src='/assets/gain/scripts/jquery-ui-1.8.16.custom.min.js?<%= version %>'></script>
@@ -20,20 +15,32 @@
   <link rel='stylesheet' href='/assets/gain/stylesheets/style.css?<%= version %>' media='screen' />
   <link rel='stylesheet' href='/assets/bones-admin/style.css?<%= version %>' media='screen' />
   <link rel='stylesheet' href='/assets/gain/stylesheets/print.css?<%= version %>' media='print' />
+  <script type="text/javascript">
 
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-23256792-2']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+  </script>
 </head>
 <body>
   <div id='feedbacktab'>
     <div class='tab button green'>Feedback</div>
     <div class='content'>
       <p>Please report any inconsistencies, apparent data errors or leave a general comment using the link below.</p> 
-      <a href="mailto:gain@globalai.org" class='feedback-email button green'>Send us feedback</a>
+      <a href='mailto:gain@globalai.org' class='feedback-email button green'>Send us feedback</a>
       <p>Interested in a more in depth review of the GaIn model design?</p>
-      <p><a href="/about/consultation">Participate in our Consultation process</a></p>
+      <p><a href='/about/consultation'>Participate in our Consultation process</a></p>
     </div>
   </div>
   <div id='header'><div class='limiter'>
-    <h1><a class='logo' href='/'>GaIn<span class="smalltm">™</span></a></h1>
+    <h1><a class='logo' href='/'>GaIn<span class='smalltm'>™</span></a></h1>
     <div class='tagline'>The Global Adaptation Index</div>
     <ul class='navigation'>
       <li><a  class='map exact' href='/'>Map</a></li>
@@ -48,21 +55,25 @@
   </div>
   <div id='footer1'>
     <div class='limiter'>
-      <a class='downloadbutton button' href='/download'><span>Download Data</span>
-      	<span class="description">Download GaIn™ scores and indicators between 1995 and 2010 in CSV format.</span>
-      </a>
+      <div class='download'>
+        <a href='http://creativecommons.org/licenses/by/3.0' class='cc'>Download Data under a creative commons licence</a>
+        <a class='downloadbutton button' href='/download'><span>Download GaIn™</span> scores and indicators between 1995 and 2010 in CSV format.</a>
+      </div>
       <div id='country-search' class='search content'>
-        <input class='textfield' name='search' title='Search for a country'/>
-        <input class='button' name='submit' type='submit' value='Go' />
+        <form>
+          <input class='textfield' name='search' title='Search for a country'/>
+          <input class='button' name='submit' type='submit' value='Go' />
+        </form>
       </div>
     </div>
   </div>
   <div id='footer2'>
   	<div class='limiter'>
-  	  <div id="address"><a href='http://globalai.org'>Global Adaptation Institute</a> <br>1747 Pennsylvania Ave NW, Suite 1125 - Washington, DC 20006</div>
+      <div id='address'><a href='http://globalai.org'>Global Adaptation Institute</a> <br>1747 Pennsylvania Ave NW, Suite 1125 - Washington, DC 20006</div>
   	  <div class='org'><a href='http://globalai.org'>Global Adaptaion Institute</a></div>
   	</div>
   </div>
+  <script><%= config %></script>
   <script><%= startup %></script>
 </body>
 </html>

@@ -14,10 +14,11 @@ view = Backbone.View.extend({
             total = 0;
 
         collection.each(function(indicator) {
-            var id = indicator.get('name');
-            var item = {};
-            if (_.indexOf(matches, id) > -1) {
-                item.score = !isNaN(parseFloat(indicator.score())) ? indicator.score() : 0;
+            var id = indicator.get('name'),
+                item = {},
+                score = indicator.score();
+            if (_.indexOf(matches, id) > -1 && !isNaN(parseFloat(score))) {
+                item.score = score;
                 item.name = indicator.meta('name');
                 item.id = id;
                 total += parseFloat(item.score);
@@ -29,17 +30,27 @@ view = Backbone.View.extend({
             sector.percent = Math.round((parseFloat(sector.score) / total)*100); 
             totalWidth += sector.percent;
         });
-        var i = -1;
-        while (totalWidth > 100) {
-            if (i < 0) i = data.length - 1;
-            if (data[i].percent > 1) {
-                data[i].percent--;
-                totalWidth--;
+        if (data.length) {
+            // Make sure total adds up to 100.
+            var sorted = _.sortBy(data, function(sector) { return sector.percent;});
+            var i = sorted.length;
+            while (totalWidth < 100) {
+                if (i >= sorted.length) i = 0;
+                sorted[i].percent++;
+                totalWidth++;
+                i++;
             }
-            i--;
+            var i = -1;
+            while (totalWidth > 100) {
+                if (i < 0) i = sorted.length - 1;
+                sorted[i].percent--;
+                totalWidth--;
+                i--;
+            }
         }
         $(this.el).append(templates.SectorCandyBar({
             data: data,
+            klass: data.length ? '' : 'empty',
             type: this.type
         }));
         return this;

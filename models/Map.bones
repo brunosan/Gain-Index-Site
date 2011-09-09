@@ -15,10 +15,16 @@ model = Backbone.Model.extend({
             height = options.height || 490,
             lat = options.lat || 15,
             lon = options.lon || -8,
-            z = options.z || 2;
+            z = options.z || 2,
+            extent = options.extent || false;
 
         this.controls = options.controls || ['interaction'],
         this.el = el; // Sorry mom!
+
+        // Initialize a country search collection to
+        // allow easy access to the country name from
+        // the meta info.
+        this.countryMeta = new models.CountrySearch();
 
         var mm = com.modestmaps,
             tilejson = this.tilejson();
@@ -49,7 +55,14 @@ model = Backbone.Model.extend({
         };
         this.addControls();
 
-        m.setCenterZoom(new mm.Location(lat, lon), z);
+        if (!extent) {
+            m.setCenterZoom(new mm.Location(lat, lon), z);
+        } else {
+            m.setExtent([
+                new mm.Location(extent[1], extent[0]),
+                new mm.Location(extent[3], extent[2])
+            ]);
+        }
 
         // Bind to the change event of the map model so that any time the year
         // or indicator is changed we automatically update the map.
@@ -74,13 +87,25 @@ model = Backbone.Model.extend({
     },
     tilejson: function() {
         var ind = this.get('indicator'),
-            y = this.get('year');
+            y = this.get('year'),
+            tiles = [],
+            grids = [];
+        var mapHosts = Bones.plugin.config.mapHosts.length ? Bones.plugin.config.mapHosts.split(',') : [];
+        if (mapHosts.length) {
+            _.each(mapHosts, function(subdomain) {
+                tiles.push('http://'+ subdomain + '.' + location.host+'/tiles/1.0.0/'+ ind +'-'+ y +'/{z}/{x}/{y}.png');
+                grids.push('http://'+ subdomain + '.' + location.host+'/tiles/1.0.0/'+ ind +'-'+ y +'/{z}/{x}/{y}.grid.json');
+            });
+        } else {
+            tiles.push('http://'+ location.host+'/tiles/1.0.0/'+ ind +'-'+ y +'/{z}/{x}/{y}.png');
+            grids.push('http://'+ location.host+'/tiles/1.0.0/'+ ind +'-'+ y +'/{z}/{x}/{y}.grid.json');
+        }
 
         return tilejson = {
             tilejson: '1.0.0',
             scheme: 'tms',
-            tiles: ['http://'+ location.host+'/tiles/1.0.0/'+ ind +'-'+ y +'/{z}/{x}/{y}.png'],
-            grids: ['http://'+ location.host+'/tiles/1.0.0/'+ ind +'-'+ y +'/{z}/{x}/{y}.grid.json'],
+            tiles: tiles,
+            grids: grids,
             formatter: this.featureHover,
             minzoom: 1,
             maxzoom: 6
@@ -135,8 +160,12 @@ model = Backbone.Model.extend({
             val = models.Indicator.format(data.factor_raw, ind);
             inlineData = ' data-iso="' + data.iso_a3 + '"';
         }
-        
-        return '<span'+ inlineData +'>' + data.admin + ': '+ val +'</span>';
+        var country = this.countryMeta.detect(function(m) {
+            return data.iso_a3 == m.get('ISO3');
+        });
+        var countryName = (country && country.get('name')) || data.admin;
+
+        return '<span'+ inlineData +'>' + countryName + ': '+ val +'</span>';
     },
     featureClick: function(feature, context, index) {
         // no-op.

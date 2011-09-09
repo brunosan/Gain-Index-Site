@@ -16,6 +16,12 @@ view = views.Main.extend({
         if (!meta[this.model.get('id')]) {
             return this;
         }
+
+        var trends = this.options.staticData.get('indicators').reduce(function(result, m) {
+            result[m.get('ISO3')] = m.trend();
+            return result;
+        }, {});
+
         var id = this.model.get('id');
         _.each(meta, function(v) {
             if (v.index == meta[id].index) {
@@ -58,6 +64,8 @@ view = views.Main.extend({
 
         this.tableView = new views.RankingTable({
             el: $('table.data', this.el),
+            indicatorName: id,
+            trends: trends,
             collection: this.model.get('indicators')
         }).render();
 
@@ -82,7 +90,11 @@ view = views.Main.extend({
         var subject = this.model.get('subject');
         var locals = {
             title: subject.meta('name'),
-            content: subject.meta('description_long') || subject.meta('description'),
+            content: subject.get('id') == 'gain' ? templates.GaInFloorText() : subject.meta('description'),
+            methodologyHash:
+                (subject.meta('component') || subject.meta('sector')) ?
+                'scoringindicators' :
+                subject.meta('index')
         };
         if (subject.hasCorrection() || subject.isCorrection()) {
             var path = models.Ranking.path(subject.uncorrected());
@@ -91,12 +103,20 @@ view = views.Main.extend({
                 locals.correction = {
                     caption: 'World wide ranking by ' + subject.meta('name'),
                     href: path == '/ranking/gain' ? '/ranking' : path,
+                    methodologyHash:
+                        (subject.meta('component') || subject.meta('sector')) ?
+                        'scoringindicators' :
+                        subject.meta('index'),
                     title: 'Remove GDP correction'
                 };
             } else {
                 locals.correction = {
                     caption: 'World wide ranking by ' + subject.meta('name'),
                     href: path.replace('/ranking', '/ranking/delta'),
+                    methodologyHash:
+                        (subject.meta('component') || subject.meta('sector')) ?
+                        'scoringindicators' :
+                        subject.meta('index'),
                     title: 'Correct for GDP'
                 };
             }
@@ -115,11 +135,12 @@ view = views.Main.extend({
 
         new views.CountryDetailDrawer({
             el: $('.drawer', this.el),
-            model:new models.Country({id: id}),
+            model: new models.Country({id: id}),
             indicator: this.model.get('subject'),
-            callback: function() { $('.drawer', view.el).addClass('open');}
+            callback: function() {
+                $('.drawer', view.el).addClass('open');
+            }
         });
-
         this.positionDrawer('drawer');
         return false;
     },

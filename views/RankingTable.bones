@@ -13,7 +13,9 @@ view = Backbone.View.extend({
     render: function() {
         var data = [],
             meta = models.Country.meta,
+            trends = this.options.trends,
             previousId = $('tr.active', this.el).attr('id');
+
 
         this.collection.each(function(model) {
             if (meta[model.get('ISO3')]) {
@@ -25,13 +27,19 @@ view = Backbone.View.extend({
                         .replace(/[^a-zA-Z0-9]+/gi, '-'),
                     iso3: model.get('ISO3'),
                     score: model.score(),
-                    outlook: model.outlook(),
+                    trend: trends[model.get('ISO3')] || 'undefined',
                     rank: model.rank()
                 });
             }
         });
 
+        var showTrend = _.include(
+            ['gain', 'readiness', 'vulnerability'],
+            this.options.indicatorName
+        );
+
         $(this.el).empty().append(templates.RankingTable({
+            showTrend: showTrend,
             rows: data
         }));
         // Conserve previously active table rows.

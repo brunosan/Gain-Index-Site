@@ -12,7 +12,7 @@
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    sodipodi:docname="design.svg"
-   inkscape:version="0.48.1 r9760"
+   inkscape:version="0.48.0 r9654"
    version="1.1"
    id="svg2"
    height="1969.9999"
@@ -25,16 +25,16 @@
      borderopacity="1.0"
      inkscape:pageopacity="1"
      inkscape:pageshadow="2"
-     inkscape:zoom="1"
-     inkscape:cx="581.13509"
-     inkscape:cy="1799.7878"
+     inkscape:zoom="0.70710678"
+     inkscape:cx="-1847.7077"
+     inkscape:cy="1643.3383"
      inkscape:document-units="px"
-     inkscape:current-layer="g6124"
+     inkscape:current-layer="layer11"
      showgrid="false"
      inkscape:window-width="999"
      inkscape:window-height="640"
-     inkscape:window-x="118"
-     inkscape:window-y="0"
+     inkscape:window-x="220"
+     inkscape:window-y="19"
      inkscape:window-maximized="0"
      showguides="false"
      inkscape:guide-bbox="true"
@@ -24932,330 +24932,314 @@
        d="m -240,-179.00012 0,15 5,0 0,-3 1,0 0,3 4,0 1,0 0,-15 -1,0 -4,0 0,3 -1,0 0,-3 -5,0 z m 5,4 1,0 0,3 -1,0 0,-3 z m 0,4 1,0 0,3 -1,0 0,-3 z"
        style="color:#000000;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
     <g
-       id="g7760"
-       transform="translate(-804,0)">
-      <rect
+       id="g6722"
+       transform="translate(-803,20)">
+      <flowRoot
+         transform="translate(-1008.0001,-33.140874)"
+         style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:start;text-decoration:none;line-height:150%;letter-spacing:0px;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:start;baseline-shift:baseline;color:#000000;fill:#434343;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Helvetica Neue;-inkscape-font-specification:Helvetica Neue"
+         id="flowRoot22352-9"
+         xml:space="preserve"
+         inkscape:export-filename="/Users/saman/graphics/gaIn/renders/map.png"
+         inkscape:export-xdpi="90"
+         inkscape:export-ydpi="90"><flowRegion
+           id="flowRegion22354-7"><rect
+             style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:start;text-decoration:none;line-height:150%;letter-spacing:0px;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:start;baseline-shift:baseline;color:#000000;fill:#434343;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Helvetica Neue;-inkscape-font-specification:Helvetica Neue"
+             y="135"
+             x="1027"
+             height="166.75775"
+             width="600"
+             id="rect22356-0" /></flowRegion><flowPara
+           id="flowPara22405-3">The Global Adaptation Index™ seeks to measure the major aspects of a country’s vulnerability and its readiness to undertake adaptive actions to increase their resilience to climate change. Indicators to score both &quot;Vulnerability&quot; and &quot;Readiness&quot; were selected through a deliberative consultation process.</flowPara></flowRoot>      <flowRoot
          inkscape:export-ydpi="90"
          inkscape:export-xdpi="90"
-         inkscape:export-filename="/Users/saman/Dropbox/work_repos/gai-gain/assets/images/about_illustration.png"
-         ry="4"
-         rx="4"
-         y="219.99988"
-         x="15"
-         height="130"
-         width="610"
-         id="rect10101-6"
-         style="color:#000000;fill:#ebebeb;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+         inkscape:export-filename="/Users/saman/graphics/gaIn/renders/map.png"
+         xml:space="preserve"
+         id="flowRoot8202"
+         style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:start;text-decoration:none;line-height:150%;letter-spacing:0px;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:start;baseline-shift:baseline;color:#000000;fill:#434343;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Helvetica Neue;-inkscape-font-specification:Helvetica Neue"
+         transform="translate(-1008.0001,231.85913)"><flowRegion
+           id="flowRegion8204"><rect
+             id="rect8206"
+             width="601.00012"
+             height="338.14075"
+             x="1027"
+             y="135"
+             style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:start;text-decoration:none;line-height:150%;letter-spacing:0px;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:start;baseline-shift:baseline;color:#000000;fill:#434343;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Helvetica Neue;-inkscape-font-specification:Helvetica Neue" /></flowRegion><flowPara
+           id="flowPara8208">The Vulnerability Axis seeks to capture exposure to climate related hazards, sensitivity to their impacts and the ability to cope with those impacts. The vulnerability analysis uses twenty-four indicators to measure three sectors that underlie human well-being (water, food and health). These sectors are enhanced by measuring infrastructure indicators (coastal, energy and transport).</flowPara><flowPara
+           id="flowPara8212" /><flowPara
+           id="flowPara8210">The Readiness Axis seeks to measure the ability of a country’s private and public sectors to absorb additional investment resources and apply them effectively towards increasing resiliency to climate change and other global forces. There are three categories of readiness indicators: economic, social and governance.</flowPara></flowRoot>    </g>
+    <rect
+       style="color:#000000;fill:#ebebeb;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       id="rect10101-6"
+       width="430"
+       height="110"
+       x="-2190"
+       y="219.99988"
+       rx="2.8196721"
+       ry="3.3846152"
+       inkscape:export-filename="/Users/saman/Dropbox/work_repos/gai-gain/assets/images/about_illustration.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       style="color:#000000;fill:#67b6e0;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       d="m -2157,230.99988 112,0 c 2.216,0 3.2386,1.9189 4,4 l 0,41 0,41 c 0,2.216 -1.784,4 -4,4 l -112,0 c -2.216,0 -4,-1.784 -4,-4 l 0,-82 c 0,-2.216 1.784,-4 4,-4 z"
+       id="rect7947"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ssscssssss"
+       inkscape:export-filename="/Users/saman/Dropbox/work_repos/gai-gain/assets/images/about_illustration_noindex.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <g
+       id="g10244-8"
+       transform="translate(-2391,519.48249)"
+       style="fill:#898989;fill-opacity:1"
+       inkscape:export-filename="/Users/saman/Dropbox/work_repos/gai-gain/assets/images/about_illustration_noindex.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90">
       <g
-         transform="translate(1,20)"
-         id="g6722">
-        <flowRoot
-           inkscape:export-ydpi="90"
-           inkscape:export-xdpi="90"
-           inkscape:export-filename="/Users/saman/graphics/gaIn/renders/map.png"
-           xml:space="preserve"
-           id="flowRoot22352-9"
-           style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:start;text-decoration:none;line-height:150%;letter-spacing:0px;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:start;baseline-shift:baseline;color:#000000;fill:#434343;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Helvetica Neue;-inkscape-font-specification:Helvetica Neue"
-           transform="translate(-1008.0001,-33.140874)"><flowRegion
-             id="flowRegion22354-7"><rect
-               id="rect22356-0"
-               width="600"
-               height="166.75775"
-               x="1027"
-               y="135"
-               style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:start;text-decoration:none;line-height:150%;letter-spacing:0px;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:start;baseline-shift:baseline;color:#000000;fill:#434343;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Helvetica Neue;-inkscape-font-specification:Helvetica Neue" /></flowRegion><flowPara
-             id="flowPara22405-3">The Global Adaptation Index™ seeks to measure the major aspects of a country’s vulnerability and its readiness to undertake adaptive actions to increase their resilience to climate change. Indicators to score both &quot;Vulnerability&quot; and &quot;Readiness&quot; were selected through a deliberative consultation process.</flowPara></flowRoot>        <flowRoot
-           transform="translate(-1008.0001,231.85913)"
-           style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:start;text-decoration:none;line-height:150%;letter-spacing:0px;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:start;baseline-shift:baseline;color:#000000;fill:#434343;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Helvetica Neue;-inkscape-font-specification:Helvetica Neue"
-           id="flowRoot8202"
-           xml:space="preserve"
-           inkscape:export-filename="/Users/saman/graphics/gaIn/renders/map.png"
-           inkscape:export-xdpi="90"
-           inkscape:export-ydpi="90"><flowRegion
-             id="flowRegion8204"><rect
-               style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:start;text-decoration:none;line-height:150%;letter-spacing:0px;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:start;baseline-shift:baseline;color:#000000;fill:#434343;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Helvetica Neue;-inkscape-font-specification:Helvetica Neue"
-               y="135"
-               x="1027"
-               height="338.14075"
-               width="601.00012"
-               id="rect8206" /></flowRegion><flowPara
-             id="flowPara8208">The Vulnerability Axis seeks to capture exposure to climate related hazards, sensitivity to their impacts and the ability to cope with those impacts. The vulnerability analysis uses twenty-four indicators to measure three sectors that underlie human well-being (water, food and health). These sectors are enhanced by measuring infrastructure indicators (coastal, energy and transport).</flowPara><flowPara
-             id="flowPara8212" /><flowPara
-             id="flowPara8210">The Readiness Axis seeks to measure the ability of a country’s private and public sectors to absorb additional investment resources and apply them effectively towards increasing resiliency to climate change and other global forces. There are three categories of readiness indicators: economic, social and governance.</flowPara></flowRoot>      </g>
-      <g
-         transform="translate(-5,0)"
-         id="g8417">
-        <path
-           style="color:#000000;fill:#81db4b;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
-           d="m 489,239.99988 112,0 c 2.216,0 4,1.784 4,4 l 0,82 c 0,2.216 -1.784,4 -4,4 l -112,0 c -2.216,0 -3.23862,-1.9189 -4,-4 l 0,-41 0,-41 c 0,-2.216 1.784,-4 4,-4 z"
-           id="path8294"
-           inkscape:connector-curvature="0"
-           sodipodi:nodetypes="ssssssscss"
-           inkscape:export-filename="/Users/saman/Dropbox/work_repos/gai-gain/assets/images/about_illustration_noindex.png"
-           inkscape:export-xdpi="90"
-           inkscape:export-ydpi="90" />
-        <path
-           style="color:#000000;fill:#67b6e0;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
-           d="m 69,239.99988 112,0 c 2.216,0 3.23862,1.9189 4,4 l 0,41 0,41 c 0,2.216 -1.784,4 -4,4 l -112,0 c -2.216,0 -4,-1.784 -4,-4 l 0,-82 c 0,-2.216 1.784,-4 4,-4 z"
-           id="rect7947"
-           inkscape:connector-curvature="0"
-           sodipodi:nodetypes="ssscssssss"
-           inkscape:export-filename="/Users/saman/Dropbox/work_repos/gai-gain/assets/images/about_illustration_noindex.png"
-           inkscape:export-xdpi="90"
-           inkscape:export-ydpi="90" />
-        <text
-           xml:space="preserve"
-           style="font-size:39.41331863px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-indent:0;text-align:start;text-decoration:none;line-height:120.00000477%;letter-spacing:0px;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:start;baseline-shift:baseline;color:#000000;fill:#898989;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Alternate Gothic LT No3;-inkscape-font-specification:Alternate Gothic LT No3 Bold"
-           x="426.13324"
-           y="299.64423"
-           id="text10213-8"
-           sodipodi:linespacing="120%"
-           inkscape:export-filename="/Users/saman/Dropbox/work_repos/gai-gain/assets/images/about_illustration_noindex.png"
-           inkscape:export-xdpi="90"
-           inkscape:export-ydpi="90"><tspan
-             sodipodi:role="line"
-             id="tspan10215-1"
-             x="426.13324"
-             y="299.64423">50</tspan></text>
-        <g
-           id="g10244-8"
-           transform="translate(-180,530)"
-           style="fill:#898989;fill-opacity:1"
-           inkscape:export-filename="/Users/saman/Dropbox/work_repos/gai-gain/assets/images/about_illustration_noindex.png"
-           inkscape:export-xdpi="90"
-           inkscape:export-ydpi="90">
-          <g
-             transform="matrix(2.0625,0,0,2.5,-534.1875,-449.9998)"
-             style="fill:#898989;fill-opacity:1;display:inline"
-             id="g10236-8"
-             inkscape:export-filename="/Users/saman/Dropbox/work_repos/gai-gain/assets/images/sprite.png"
-             inkscape:export-xdpi="90"
-             inkscape:export-ydpi="90">
-            <rect
-               y="83.999878"
-               x="571.24243"
-               height="1.5999932"
-               width="7.757576"
-               id="rect10238-1"
-               style="color:#000000;fill:#898989;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
-          </g>
-          <g
-             inkscape:export-ydpi="90"
-             inkscape:export-xdpi="90"
-             inkscape:export-filename="/Users/saman/Dropbox/work_repos/gai-gain/assets/images/sprite.png"
-             id="g10240-2"
-             style="fill:#898989;fill-opacity:1;display:inline"
-             transform="matrix(2.0625,0,0,2.5,-534.1875,-458.9998)">
-            <rect
-               style="color:#000000;fill:#898989;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
-               id="rect10242-1"
-               width="7.757576"
-               height="1.5999932"
-               x="571.24243"
-               y="83.999878" />
-          </g>
-        </g>
-        <text
-           xml:space="preserve"
-           style="font-size:45px;font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;text-indent:0;text-align:start;text-decoration:none;line-height:120.00000477%;letter-spacing:0px;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:start;baseline-shift:baseline;color:#000000;fill:#898989;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Hiragino Kaku Gothic Pro;-inkscape-font-specification:Hiragino Kaku Gothic Pro Light"
-           x="41"
-           y="299.99988"
-           id="text10254-3"
-           sodipodi:linespacing="120%"
-           inkscape:export-filename="/Users/saman/Dropbox/work_repos/gai-gain/assets/images/about_illustration_noindex.png"
-           inkscape:export-xdpi="90"
-           inkscape:export-ydpi="90"><tspan
-             sodipodi:role="line"
-             id="tspan10256-6"
-             x="41"
-             y="299.99988">(</tspan></text>
-        <text
-           sodipodi:linespacing="120%"
-           id="text10258-7"
-           y="299.99988"
-           x="-365"
-           style="font-size:45px;font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;text-indent:0;text-align:start;text-decoration:none;line-height:120.00000477%;letter-spacing:0px;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:start;baseline-shift:baseline;color:#000000;fill:#898989;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Hiragino Kaku Gothic Pro;-inkscape-font-specification:Hiragino Kaku Gothic Pro Light"
-           xml:space="preserve"
-           transform="scale(-1,1)"
-           inkscape:export-filename="/Users/saman/Dropbox/work_repos/gai-gain/assets/images/about_illustration_noindex.png"
-           inkscape:export-xdpi="90"
-           inkscape:export-ydpi="90"><tspan
-             y="299.99988"
-             x="-365"
-             id="tspan10260-9"
-             sodipodi:role="line">(</tspan></text>
-        <text
-           sodipodi:linespacing="120%"
-           id="text15523-0"
-           y="296.50299"
-           x="125.72354"
-           style="font-size:18px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-indent:0;text-align:center;text-decoration:none;line-height:120.00000477%;letter-spacing:0px;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:middle;baseline-shift:baseline;color:#000000;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Alternate Gothic LT No3;-inkscape-font-specification:Alternate Gothic LT No3 Bold"
-           xml:space="preserve"
-           inkscape:export-filename="/Users/saman/Dropbox/work_repos/gai-gain/assets/images/about_illustration_noindex.png"
-           inkscape:export-xdpi="90"
-           inkscape:export-ydpi="90"><tspan
-             y="296.50299"
-             x="127.09464"
-             sodipodi:role="line"
-             id="tspan7123">Readiness </tspan><tspan
-             y="318.103"
-             x="125.72354"
-             sodipodi:role="line"
-             id="tspan8260">Indicators</tspan></text>
-        <path
-           sodipodi:nodetypes="ssssssscss"
-           inkscape:connector-curvature="0"
-           id="rect7945"
-           d="m 224,239.99988 112,0 c 2.216,0 4,1.784 4,4 l 0,82 c 0,2.216 -1.784,4 -4,4 l -112,0 c -2.216,0 -3.23862,-1.9189 -4,-4 l 0,-41 0,-41 c 0,-2.216 1.784,-4 4,-4 z"
-           style="color:#000000;fill:#ff7c80;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
-           inkscape:export-filename="/Users/saman/Dropbox/work_repos/gai-gain/assets/images/about_illustration_noindex.png"
-           inkscape:export-xdpi="90"
-           inkscape:export-ydpi="90" />
-        <text
-           inkscape:export-ydpi="90"
-           inkscape:export-xdpi="90"
-           inkscape:export-filename="/Users/saman/Dropbox/work_repos/gai-gain/assets/images/about_illustration_noindex.png"
-           xml:space="preserve"
-           style="font-size:18px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-indent:0;text-align:center;text-decoration:none;line-height:120.00000477%;letter-spacing:0px;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:middle;baseline-shift:baseline;color:#000000;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Alternate Gothic LT No3;-inkscape-font-specification:Alternate Gothic LT No3 Bold"
-           x="278.02954"
-           y="298.50299"
-           id="text15531-9"
-           sodipodi:linespacing="120%"><tspan
-             sodipodi:role="line"
-             x="279.40063"
-             y="298.50299"
-             id="tspan7125">Vulnerability </tspan><tspan
-             id="tspan8258"
-             sodipodi:role="line"
-             x="278.02954"
-             y="320.103">Indicators</tspan></text>
-        <path
-           inkscape:connector-curvature="0"
-           style="color:#000000;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
-           d="m 240.5,255 c -1.5,3 -5.5,6.46243 -5.5,9.5 0,3.03756 2.46244,5.5 5.5,5.5 3.03756,0 5.5,-2.46244 5.5,-5.5 0,-3.03757 -4,-6.5 -5.5,-9.5 z m 17.5,0 c 0,3 2,4 5,4 0,-3 -2,-4 -5,-4 z m 15,0 c -3,0 -5,1 -5,4 3,0 5,-1 5,-4 z m 14,0 c -0.554,0 -1,0.446 -1,1 l 0,2 9,0 0,-2 c 0,-0.554 -0.446,-1 -1,-1 l -7,0 z m 23,0 0,15 5,0 0,-3 1,0 0,3 4,0 1,0 0,-15 -1,0 -4,0 0,3 -1,0 0,-3 -5,0 z m -44.5,2 c -0.831,0 -1.5,0.669 -1.5,1.5 l 0,4.5 0,3.5 0,3.5 3,0 0,-3.5 0,-3.5 0,-4.5 c 0,-0.831 -0.669,-1.5 -1.5,-1.5 z m 21.5,2 c -0.554,0 -1,0.446 -1,1 l 0,1 5,0 0,6 -5,0 0,3 9,0 0,-5 0,-3 0,-2 c 0,-0.554 -0.446,-1 -1,-1 l -7,0 z m 28,0 1,0 0,3 -1,0 0,-3 z m -57,1 c 0,3 2,4 5,4 0,-3 -2,-4 -5,-4 z m 15,0 c -3,0 -5,1 -5,4 3,0 5,-1 5,-4 z m 13,2 0,1 4,0 0,-1 -4,0 z m 29,1 1,0 0,3 -1,0 0,-3 z m -29,1 0,1 4,0 0,-1 -4,0 z"
-           id="path15869"
-           inkscape:export-filename="/Users/saman/Dropbox/work_repos/gai-gain/assets/images/about_illustration_noindex.png"
-           inkscape:export-xdpi="90"
-           inkscape:export-ydpi="90" />
-        <path
-           style="color:#000000;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
-           d="m 98,260.99988 5,-5 0,5 z"
-           id="path10707"
-           inkscape:connector-curvature="0"
-           inkscape:export-filename="/Users/saman/Dropbox/work_repos/gai-gain/assets/images/about_illustration_noindex.png"
-           inkscape:export-xdpi="90"
-           inkscape:export-ydpi="90" />
-        <path
-           style="color:#000000;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
-           d="m 93,256 0,1.5 0,6 0,1.5 1.5,0 3.5,0 0,3 0,1 8.5,0 1.5,0 0,-1.5 0,-6 0,-1.5 -1.5,0 -3.5,0 0,-3 0,-1 -8.5,0 -1.5,0 z m 2.90625,1 5.5625,0 -3.46875,3 -0.0312,0.0312 0.0312,0.0312 0,0.9375 0,3 -2.09375,0 c 0.0536,-0.15432 0.0937,-0.32741 0.0937,-0.5 0,-0.82843 -0.67157,-1.5 -1.5,-1.5 -0.17259,0 -0.34568,0.0401 -0.5,0.0937 l 0,-3.1875 c 0.15432,0.0536 0.32741,0.0937 0.5,0.0937 0.82843,0 1.5,-0.67157 1.5,-1.5 0,-0.17259 -0.0401,-0.34568 -0.0937,-0.5 z M 99,261 l 6.09375,0 c -0.0536,0.15432 -0.0937,0.32741 -0.0937,0.5 0,0.82843 0.67157,1.5 1.5,1.5 0.17259,0 0.34568,-0.0401 0.5,-0.0937 l 0,3.1875 C 106.84568,266.04011 106.67259,266 106.5,266 c -0.82843,0 -1.5,0.67157 -1.5,1.5 0,0.17259 0.0401,0.34568 0.0937,0.5 L 99,268 l 0,-1 c 1.38071,0 2.5,-1.11929 2.5,-2.5 0,-1.38071 -1.11929,-2.5 -2.5,-2.5 l 0,-1 z"
-           id="rect10691"
-           inkscape:connector-curvature="0"
-           inkscape:export-filename="/Users/saman/Dropbox/work_repos/gai-gain/assets/images/about_illustration_noindex.png"
-           inkscape:export-xdpi="90"
-           inkscape:export-ydpi="90" />
+         transform="matrix(2.0625,0,0,2.5,-534.1875,-449.9998)"
+         style="fill:#898989;fill-opacity:1;display:inline"
+         id="g10236-8"
+         inkscape:export-filename="/Users/saman/Dropbox/work_repos/gai-gain/assets/images/sprite.png"
+         inkscape:export-xdpi="90"
+         inkscape:export-ydpi="90">
         <rect
-           y="256.99988"
-           x="102"
-           height="4"
-           width="1"
-           id="rect10703"
-           style="color:#000000;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
-           inkscape:export-filename="/Users/saman/Dropbox/work_repos/gai-gain/assets/images/about_illustration_noindex.png"
-           inkscape:export-xdpi="90"
-           inkscape:export-ydpi="90" />
-        <path
-           style="color:#000000;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
-           d="m 124,256 -6,3 0,2 1,0 0,6 -1,0 0,3 15,0 0,-3 -1,0 0,-6 1,0 0,-2 -6,-3 -3,0 z m -4,5 1,0 0,6 -1,0 0,-6 z m 2,0 7,0 0,6 -2,0 0,-3.5 c 0,-0.831 -0.669,-1.5 -1.5,-1.5 -0.831,0 -1.5,0.669 -1.5,1.5 l 0,3.5 -2,0 0,-6 z m 8,0 1,0 0,6 -1,0 0,-6 z"
-           id="path10736"
-           inkscape:connector-curvature="0"
-           inkscape:export-filename="/Users/saman/Dropbox/work_repos/gai-gain/assets/images/about_illustration_noindex.png"
-           inkscape:export-xdpi="90"
-           inkscape:export-ydpi="90" />
-        <path
-           style="color:#000000;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
-           d="m 150,255 c -3.866,0 -7,3.134 -7,7 0,3.866 3.134,7 7,7 1.20812,0 2.3519,-0.30494 3.34375,-0.84375 l 0.0312,0 L 158,270 l -1.84375,-4.625 0,-0.0312 C 156.69506,264.3519 157,263.20812 157,262 c 0,-3.866 -3.134,-7 -7,-7 z m -0.8125,3.0625 1.625,0 0,1.84375 -0.375,3 -0.875,0 -0.375,-3 0,-1.84375 z m 0.0625,6.375 1.5,0 0,1.5 -1.5,0 0,-1.5 z"
-           id="path10759"
-           inkscape:connector-curvature="0"
-           inkscape:export-filename="/Users/saman/Dropbox/work_repos/gai-gain/assets/images/about_illustration_noindex.png"
-           inkscape:export-xdpi="90"
-           inkscape:export-ydpi="90" />
-        <path
-           style="color:#000000;fill:#898989;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
-           d="m 194,284.99988 0,4.00024 18,0 0,-4.00024 z"
-           id="rect7940"
-           inkscape:connector-curvature="0"
-           sodipodi:nodetypes="ccccc"
-           inkscape:export-filename="/Users/saman/Dropbox/work_repos/gai-gain/assets/images/about_illustration_noindex.png"
-           inkscape:export-xdpi="90"
-           inkscape:export-ydpi="90" />
-        <text
-           sodipodi:linespacing="120%"
-           id="text10250-5"
-           y="299.64426"
-           x="386.13324"
-           style="font-size:39.41331863px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-indent:0;text-align:start;text-decoration:none;line-height:120.00000477%;letter-spacing:0px;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:start;baseline-shift:baseline;color:#000000;fill:#898989;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Alternate Gothic LT No3;-inkscape-font-specification:Alternate Gothic LT No3 Bold"
-           xml:space="preserve"
-           inkscape:export-filename="/Users/saman/Dropbox/work_repos/gai-gain/assets/images/about_illustration_noindex.png"
-           inkscape:export-xdpi="90"
-           inkscape:export-ydpi="90"><tspan
-             y="299.64426"
-             x="386.13324"
-             id="tspan10252-9"
-             sodipodi:role="line">1</tspan></text>
-        <path
-           style="color:#000000;fill:#898989;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
-           d="m 373,278 0,7 -7,0 0,4 7,0 0,7 4,0 0,-7 7,0 0,-4 -7,0 0,-7 -4,0 z"
-           id="rect7934"
-           inkscape:connector-curvature="0"
-           inkscape:export-filename="/Users/saman/Dropbox/work_repos/gai-gain/assets/images/about_illustration_noindex.png"
-           inkscape:export-xdpi="90"
-           inkscape:export-ydpi="90" />
-        <path
-           inkscape:connector-curvature="0"
-           id="path8292"
-           d="M 417.94975,279.22182 413,284.17157 l -4.94975,-4.94974 -2.82843,2.82842 4.94975,4.94975 -4.94974,4.94975 2.82842,2.82843 4.94975,-4.94975 4.94975,4.94974 2.82843,-2.82842 -4.94975,-4.94975 4.94974,-4.94975 -2.82842,-2.82843 z"
-           style="color:#000000;fill:#898989;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
-           inkscape:export-filename="/Users/saman/Dropbox/work_repos/gai-gain/assets/images/about_illustration_noindex.png"
-           inkscape:export-xdpi="90"
-           inkscape:export-ydpi="90" />
-        <g
-           id="g8345"
-           transform="translate(-24.000017,-11.999994)"
-           inkscape:export-filename="/Users/saman/Dropbox/work_repos/gai-gain/assets/images/about_illustration_noindex.png"
-           inkscape:export-xdpi="90"
-           inkscape:export-ydpi="90">
-          <g
-             id="g6135-3"
-             transform="translate(484.6124,447.8437)"
-             inkscape:export-filename="/Users/saman/graphics/gaIn/renders/map.png"
-             inkscape:export-xdpi="90"
-             inkscape:export-ydpi="90"
-             style="display:inline">
-            <path
-               style="font-size:30.32188606px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-indent:0;text-align:start;text-decoration:none;line-height:120.00000477%;letter-spacing:0px;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:start;baseline-shift:baseline;color:#000000;fill:#53a721;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Droid Sans;-inkscape-font-specification:Droid Sans Bold"
-               d="m 531.25,276.09375 -1.15625,2.8125 c -0.6712,-0.33558 -1.43241,-0.61671 -2.28125,-0.84375 -0.839,-0.227 -1.72845,-0.34373 -2.65625,-0.34375 -1.00679,2e-5 -1.90939,0.17593 -2.71875,0.53125 -0.79951,0.34548 -1.49002,0.82719 -2.0625,1.46875 -0.57249,0.64159 -1.00652,1.40444 -1.3125,2.3125 -0.30599,0.90809 -0.43751,1.94716 -0.4375,3.0625 0,0.0434 -2.5e-4,0.0819 0,0.125 0.0541,-0.78156 0.21404,-1.52434 0.4375,-2.1875 0.30598,-0.90806 0.74001,-1.67091 1.3125,-2.3125 0.57248,-0.64156 1.26299,-1.12327 2.0625,-1.46875 0.80936,-0.35532 1.71196,-0.53123 2.71875,-0.53125 0.9278,2e-5 1.81725,0.11675 2.65625,0.34375 0.84884,0.22704 1.61005,0.50817 2.28125,0.84375 l 1.53125,-3.6875 c -0.11612,-0.0499 -0.25598,-0.0772 -0.375,-0.125 z m 21.25,0.71875 0,1 2.625,1.21875 0,-1 -2.625,-1.21875 z m 9.84375,0 -2.65625,1.21875 0,1 2.65625,-1.21875 0,-1 z M 537.3125,281.25 c -0.1343,0.0679 -0.27617,0.11472 -0.40625,0.1875 l 1.46875,3 c 0.68105,-0.34545 1.36006,-0.63646 2.03125,-0.84375 0.68105,-0.20727 1.38307,-0.31249 2.09375,-0.3125 0.71066,10e-6 1.26142,0.17429 1.65625,0.5 0.39481,0.32574 0.59374,0.81895 0.59375,1.5 l 0,-1 c -10e-6,-0.68105 -0.19894,-1.17426 -0.59375,-1.5 -0.39483,-0.32571 -0.94559,-0.49999 -1.65625,-0.5 -0.71068,10e-6 -1.4127,0.10523 -2.09375,0.3125 -0.67119,0.20729 -1.3502,0.4983 -2.03125,0.84375 l -1.0625,-2.1875 z m 35.9375,1.34375 c -0.59223,10e-6 -1.10519,0.10687 -1.5,0.34375 -0.39482,0.2369 -0.70062,0.5986 -0.9375,1.0625 -0.22703,0.46392 -0.4013,1.0377 -0.5,1.71875 -0.0888,0.61296 -0.11986,1.32018 -0.125,2.09375 0.0189,-0.391 0.0756,-0.75322 0.125,-1.09375 0.0987,-0.68105 0.27297,-1.25483 0.5,-1.71875 0.23688,-0.4639 0.54268,-0.8256 0.9375,-1.0625 0.39481,-0.23688 0.90777,-0.34374 1.5,-0.34375 0.78962,10e-6 1.3634,0.30417 1.71875,0.90625 0.36519,0.59224 0.53124,1.49319 0.53125,2.6875 l 0,-1 c -10e-6,-1.19431 -0.16606,-2.09526 -0.53125,-2.6875 -0.35535,-0.60208 -0.92913,-0.90624 -1.71875,-0.90625 z M 513.875,285.5 c -0.005,0.16678 0,0.33034 0,0.5 0,1.81616 0.24333,3.42078 0.6875,4.8125 0.44417,1.38186 1.08864,2.55245 1.9375,3.5 0.85872,0.93769 1.91257,1.64135 3.15625,2.125 1.25353,0.47378 2.69374,0.6875 4.3125,0.6875 0.76988,0 1.47518,-0.003 2.15625,-0.0625 0.69091,-0.0592 1.3469,-0.1513 1.96875,-0.25 0.63169,-0.10857 1.23013,-0.22694 1.8125,-0.375 0.58234,-0.15793 1.1775,-0.34371 1.75,-0.53125 l 0,-1 c -0.5725,0.18754 -1.16766,0.37332 -1.75,0.53125 -0.58237,0.14806 -1.18081,0.26643 -1.8125,0.375 -0.62185,0.0987 -1.27784,0.1908 -1.96875,0.25 -0.68107,0.0595 -1.38637,0.0625 -2.15625,0.0625 -1.61876,0 -3.05897,-0.21372 -4.3125,-0.6875 -1.24368,-0.48365 -2.29753,-1.18731 -3.15625,-2.125 -0.84886,-0.94755 -1.49333,-2.11814 -1.9375,-3.5 -0.40189,-1.25925 -0.64594,-2.70566 -0.6875,-4.3125 z m 9.1875,2 0,1 4.09375,0 0,-1 -4.09375,0 z m 21.6875,0.6875 -1.5,0.0312 c -0.6021,0.0197 -1.1167,0.11182 -1.53125,0.25 -0.41456,0.13819 -0.74338,0.32562 -1,0.5625 -0.24677,0.22703 -0.44406,0.51803 -0.5625,0.84375 -0.10858,0.31586 -0.15626,0.66769 -0.15625,1.0625 0,0.16127 0.0132,0.29873 0.0312,0.4375 0.0255,-0.17679 0.0707,-0.34207 0.125,-0.5 0.11844,-0.32572 0.31573,-0.61672 0.5625,-0.84375 0.25662,-0.23688 0.58544,-0.42431 1,-0.5625 0.41455,-0.13818 0.92915,-0.23025 1.53125,-0.25 l 1.5,-0.0312 0,-1 z m -9.375,3 c -0.0234,0.234 0,0.4653 0,0.71875 0,0.89821 0.10686,1.68244 0.34375,2.34375 0.23689,0.65145 0.55419,1.1907 0.96875,1.625 0.42442,0.42443 0.92751,0.7516 1.5,0.96875 0.57248,0.20728 1.20381,0.28125 1.875,0.28125 0.6317,0 1.18246,-0.0263 1.65625,-0.125 0.48364,-0.0987 0.92755,-0.26147 1.3125,-0.46875 0.38494,-0.20728 0.73677,-0.4654 1.0625,-0.78125 0.32571,-0.32572 0.64302,-0.71208 0.96875,-1.15625 l 0.125,0 0.875,2.25 3.15625,0 0,-1 -3.15625,0 -0.875,-2.25 -0.125,0 c -0.32573,0.44417 -0.64304,0.83053 -0.96875,1.15625 -0.32573,0.31585 -0.67756,0.57397 -1.0625,0.78125 -0.38495,0.20728 -0.82886,0.37005 -1.3125,0.46875 -0.47379,0.0987 -1.02455,0.125 -1.65625,0.125 -0.67119,0 -1.30252,-0.074 -1.875,-0.28125 -0.57249,-0.21715 -1.07558,-0.54432 -1.5,-0.96875 -0.41456,-0.4343 -0.73186,-0.97355 -0.96875,-1.625 -0.21031,-0.5871 -0.3222,-1.2879 -0.34375,-2.0625 z m 17.125,4.65625 0,1 9.84375,0 0,-1 -9.84375,0 z m 13.15625,0 0,1 4.53125,0 0,-1 -4.53125,0 z m 9.84375,0 0,1 3.3125,0 1.21875,0 2.625,0 0,-1 -2.625,0 -1.21875,0 -3.3125,0 z"
-               transform="translate(-468.11238,-435.84371)"
-               id="path6084-2"
-               inkscape:connector-curvature="0" />
-            <path
-               id="text6071-7-56"
-               d="m 57.0625,-162.9688 c -1.816166,2e-5 -3.432292,0.25814 -4.84375,0.78125 -1.401604,0.51328 -2.563956,1.28272 -3.53125,2.25 -0.957433,0.95745 -1.693983,2.09678 -2.1875,3.46875 -0.493522,1.372 -0.750002,2.9273 -0.75,4.625 -2e-6,1.81616 0.24333,3.42078 0.6875,4.8125 0.444165,1.38186 1.088642,2.55245 1.9375,3.5 0.85872,0.93769 1.912573,1.64135 3.15625,2.125 1.253533,0.47378 2.693743,0.6875 4.3125,0.6875 0.769879,0 1.475179,-0.003 2.15625,-0.0625 0.690914,-0.0592 1.346899,-0.1513 1.96875,-0.25 0.631689,-0.10857 1.230129,-0.22694 1.8125,-0.375 0.582336,-0.15793 1.177498,-0.34371 1.75,-0.53125 l 0,-11.21875 -8.59375,0 0,3.8125 4.09375,0 0,4.53125 c -0.394831,0.079 -0.795976,0.12828 -1.25,0.1875 -0.444182,0.0592 -1.004816,0.0937 -1.65625,0.0937 -0.996922,0 -1.841971,-0.17591 -2.5625,-0.53125 -0.710678,-0.35533 -1.29597,-0.85842 -1.75,-1.5 -0.454046,-0.64157 -0.814108,-1.40278 -1.03125,-2.28125 -0.207285,-0.88833 -0.281256,-1.84024 -0.28125,-2.90625 -6e-6,-1.11534 0.131511,-2.15441 0.4375,-3.0625 0.305975,-0.90806 0.740009,-1.67091 1.3125,-2.3125 0.572475,-0.64156 1.262988,-1.12327 2.0625,-1.46875 0.809362,-0.35532 1.711957,-0.53123 2.71875,-0.53125 0.927804,2e-5 1.817251,0.11675 2.65625,0.34375 0.848838,0.22704 1.610045,0.50817 2.28125,0.84375 L 63.5,-161.6251 c -0.917966,-0.3948 -1.925782,-0.72197 -3.03125,-0.96875 -1.105501,-0.24674 -2.251427,-0.37498 -3.40625,-0.375 z m 27.3125,0.3125 0,2.625 2.625,1.21875 0,14 -2.625,1.21875 0,2.59375 9.84375,0 0,-2.59375 -2.65625,-1.21875 0,-14 2.65625,-1.21875 0,-2.625 -9.84375,0 z m -9.65625,4.75 c -1.105493,2e-5 -2.180725,0.13977 -3.1875,0.40625 -1.006786,0.26652 -1.92089,0.62986 -2.75,1.09375 l 1.46875,3 c 0.681053,-0.34545 1.360057,-0.63646 2.03125,-0.84375 0.681051,-0.20727 1.383073,-0.31249 2.09375,-0.3125 0.71066,10e-6 1.261424,0.17429 1.65625,0.5 0.394806,0.32574 0.593739,0.81895 0.59375,1.5 l 0,1.25 -2.65625,0.0937 c -2.240588,0.0888 -3.906028,0.56727 -5.03125,1.40625 -1.125228,0.82912 -1.687501,2.11808 -1.6875,3.875 -10e-7,0.89821 0.106859,1.68244 0.34375,2.34375 0.236888,0.65145 0.554191,1.1907 0.96875,1.625 0.424424,0.42443 0.927513,0.7516 1.5,0.96875 0.572479,0.20728 1.203807,0.28125 1.875,0.28125 0.631699,0 1.182463,-0.0263 1.65625,-0.125 0.483642,-0.0987 0.927546,-0.26147 1.3125,-0.46875 0.384937,-0.20728 0.736767,-0.4654 1.0625,-0.78125 0.325713,-0.32572 0.643016,-0.71208 0.96875,-1.15625 l 0.125,0 0.875,2.25 3.15625,0 0,-11.03125 c -1.5e-5,-1.97407 -0.550779,-3.43894 -1.65625,-4.40625 -1.095627,-0.96728 -2.655846,-1.46873 -4.71875,-1.46875 z m 31.78125,0.0312 c -0.47379,2e-5 -0.92097,0.0576 -1.375,0.15625 -0.45405,0.0889 -0.87657,0.24011 -1.28125,0.4375 -0.40469,0.19742 -0.77954,0.44403 -1.125,0.75 -0.3356,0.306 -0.63812,0.66934 -0.875,1.09375 l -0.25,0 -0.59375,-2.125 -3.46875,0 0,16.5625 4.53125,0 0,-7.78125 c -1e-5,-0.87846 0.0263,-1.66268 0.125,-2.34375 0.0987,-0.68105 0.27297,-1.25483 0.5,-1.71875 0.23688,-0.4639 0.54268,-0.8256 0.9375,-1.0625 0.39481,-0.23688 0.90777,-0.34374 1.5,-0.34375 0.78962,1e-5 1.3634,0.30417 1.71875,0.90625 0.36519,0.59224 0.53124,1.49319 0.53125,2.6875 l 0,9.65625 3.3125,0 1.21875,0 2.625,0 0,-2.59375 -2.625,-1.21875 0,-6.96875 c -2e-5,-1.06599 -0.14964,-1.98997 -0.40625,-2.75 -0.25665,-0.76988 -0.61999,-1.41272 -1.09375,-1.90625 -0.47379,-0.4935 -1.0262,-0.83546 -1.6875,-1.0625 -0.66133,-0.23687 -1.40939,-0.37498 -2.21875,-0.375 z m -29.875,9.21875 0,1.34375 c -1.1e-5,0.53301 -0.0707,1.02295 -0.21875,1.4375 -0.148066,0.40469 -0.358509,0.74501 -0.625,1.03125 -0.25664,0.27637 -0.582175,0.47695 -0.9375,0.625 -0.355343,0.13819 -0.741701,0.21875 -1.15625,0.21875 -0.542879,0 -0.976913,-0.15126 -1.3125,-0.4375 -0.3356,-0.29611 -0.500006,-0.77782 -0.5,-1.46875 -6e-6,-0.39481 0.04767,-0.74664 0.15625,-1.0625 0.118439,-0.32572 0.315733,-0.61672 0.5625,-0.84375 0.256624,-0.23688 0.585436,-0.42431 1,-0.5625 0.414549,-0.13818 0.929147,-0.23025 1.53125,-0.25 l 1.5,-0.0312 z"
-               style="font-size:30.32188606px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-indent:0;text-align:start;text-decoration:none;line-height:120.00000477%;letter-spacing:0px;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:start;baseline-shift:baseline;color:#000000;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Droid Sans;-inkscape-font-specification:Droid Sans Bold"
-               inkscape:connector-curvature="0" />
-          </g>
-          <text
-             xml:space="preserve"
-             style="font-size:14px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-indent:0;text-align:start;text-decoration:none;line-height:120.00000477%;letter-spacing:0px;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:start;baseline-shift:baseline;color:#000000;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:3;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Droid Sans;-inkscape-font-specification:Droid Sans Bold"
-             x="597.78021"
-             y="294.86899"
-             id="text8767-3"
-             sodipodi:linespacing="120%"><tspan
-               sodipodi:role="line"
-               id="tspan8769-09"
-               x="597.78021"
-               y="294.86899">™</tspan></text>
-        </g>
+           y="83.999878"
+           x="571.24243"
+           height="1.5999932"
+           width="7.757576"
+           id="rect10238-1"
+           style="color:#000000;fill:#898989;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
       </g>
+      <g
+         inkscape:export-ydpi="90"
+         inkscape:export-xdpi="90"
+         inkscape:export-filename="/Users/saman/Dropbox/work_repos/gai-gain/assets/images/sprite.png"
+         id="g10240-2"
+         style="fill:#898989;fill-opacity:1;display:inline"
+         transform="matrix(2.0625,0,0,2.5,-534.1875,-458.9998)">
+        <rect
+           style="color:#000000;fill:#898989;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+           id="rect10242-1"
+           width="7.757576"
+           height="1.5999932"
+           x="571.24243"
+           y="83.999878" />
+      </g>
+    </g>
+    <text
+       xml:space="preserve"
+       style="font-size:45px;font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;text-indent:0;text-align:start;text-decoration:none;line-height:120.00000477%;letter-spacing:0px;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:start;baseline-shift:baseline;color:#000000;fill:#898989;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Hiragino Kaku Gothic Pro;-inkscape-font-specification:Hiragino Kaku Gothic Pro Light"
+       x="-2185"
+       y="290.99988"
+       id="text10254-3"
+       sodipodi:linespacing="120%"
+       inkscape:export-filename="/Users/saman/Dropbox/work_repos/gai-gain/assets/images/about_illustration_noindex.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"><tspan
+         sodipodi:role="line"
+         id="tspan10256-6"
+         x="-2185"
+         y="290.99988">(</tspan></text>
+    <text
+       sodipodi:linespacing="120%"
+       id="text10258-7"
+       y="290.99988"
+       x="1861"
+       style="font-size:45px;font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;text-indent:0;text-align:start;text-decoration:none;line-height:120.00000477%;letter-spacing:0px;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:start;baseline-shift:baseline;color:#000000;fill:#898989;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Hiragino Kaku Gothic Pro;-inkscape-font-specification:Hiragino Kaku Gothic Pro Light"
+       xml:space="preserve"
+       transform="scale(-1,1)"
+       inkscape:export-filename="/Users/saman/Dropbox/work_repos/gai-gain/assets/images/about_illustration_noindex.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"><tspan
+         y="290.99988"
+         x="1861"
+         id="tspan10260-9"
+         sodipodi:role="line">(</tspan></text>
+    <text
+       sodipodi:linespacing="120%"
+       id="text15523-0"
+       y="287.50299"
+       x="-2100.2764"
+       style="font-size:18px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-indent:0;text-align:center;text-decoration:none;line-height:120.00000477%;letter-spacing:0px;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:middle;baseline-shift:baseline;color:#000000;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Alternate Gothic LT No3;-inkscape-font-specification:Alternate Gothic LT No3 Bold"
+       xml:space="preserve"
+       inkscape:export-filename="/Users/saman/Dropbox/work_repos/gai-gain/assets/images/about_illustration_noindex.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"><tspan
+         y="287.50299"
+         x="-2098.9053"
+         sodipodi:role="line"
+         id="tspan7123">Readiness </tspan><tspan
+         y="309.103"
+         x="-2100.2764"
+         sodipodi:role="line"
+         id="tspan8260">Indicators</tspan></text>
+    <path
+       sodipodi:nodetypes="ssssssscss"
+       inkscape:connector-curvature="0"
+       id="rect7945"
+       d="m -2002,230.99988 112,0 c 2.216,0 4,1.784 4,4 l 0,82 c 0,2.216 -1.784,4 -4,4 l -112,0 c -2.216,0 -3.2386,-1.9189 -4,-4 l 0,-41 0,-41 c 0,-2.216 1.784,-4 4,-4 z"
+       style="color:#000000;fill:#ff7c80;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       inkscape:export-filename="/Users/saman/Dropbox/work_repos/gai-gain/assets/images/about_illustration_noindex.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <text
+       inkscape:export-ydpi="90"
+       inkscape:export-xdpi="90"
+       inkscape:export-filename="/Users/saman/Dropbox/work_repos/gai-gain/assets/images/about_illustration_noindex.png"
+       xml:space="preserve"
+       style="font-size:18px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-indent:0;text-align:center;text-decoration:none;line-height:120.00000477%;letter-spacing:0px;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:middle;baseline-shift:baseline;color:#000000;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Alternate Gothic LT No3;-inkscape-font-specification:Alternate Gothic LT No3 Bold"
+       x="-1947.9705"
+       y="289.50299"
+       id="text15531-9"
+       sodipodi:linespacing="120%"><tspan
+         sodipodi:role="line"
+         x="-1946.5994"
+         y="289.50299"
+         id="tspan7125">Vulnerability </tspan><tspan
+         id="tspan8258"
+         sodipodi:role="line"
+         x="-1947.9705"
+         y="311.103">Indicators</tspan></text>
+    <path
+       inkscape:connector-curvature="0"
+       style="color:#000000;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       d="m -1985.5,246 c -1.5,3 -5.5,6.46243 -5.5,9.5 0,3.03756 2.4624,5.5 5.5,5.5 3.0376,0 5.5,-2.46244 5.5,-5.5 0,-3.03757 -4,-6.5 -5.5,-9.5 z m 17.5,0 c 0,3 2,4 5,4 0,-3 -2,-4 -5,-4 z m 15,0 c -3,0 -5,1 -5,4 3,0 5,-1 5,-4 z m 14,0 c -0.554,0 -1,0.446 -1,1 l 0,2 9,0 0,-2 c 0,-0.554 -0.446,-1 -1,-1 l -7,0 z m 23,0 0,15 5,0 0,-3 1,0 0,3 4,0 1,0 0,-15 -1,0 -4,0 0,3 -1,0 0,-3 -5,0 z m -44.5,2 c -0.831,0 -1.5,0.669 -1.5,1.5 l 0,4.5 0,3.5 0,3.5 3,0 0,-3.5 0,-3.5 0,-4.5 c 0,-0.831 -0.669,-1.5 -1.5,-1.5 z m 21.5,2 c -0.554,0 -1,0.446 -1,1 l 0,1 5,0 0,6 -5,0 0,3 9,0 0,-5 0,-3 0,-2 c 0,-0.554 -0.446,-1 -1,-1 l -7,0 z m 28,0 1,0 0,3 -1,0 0,-3 z m -57,1 c 0,3 2,4 5,4 0,-3 -2,-4 -5,-4 z m 15,0 c -3,0 -5,1 -5,4 3,0 5,-1 5,-4 z m 13,2 0,1 4,0 0,-1 -4,0 z m 29,1 1,0 0,3 -1,0 0,-3 z m -29,1 0,1 4,0 0,-1 -4,0 z"
+       id="path15869"
+       inkscape:export-filename="/Users/saman/Dropbox/work_repos/gai-gain/assets/images/about_illustration_noindex.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       style="color:#000000;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       d="m -2128,251.99988 5,-5 0,5 z"
+       id="path10707"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/Users/saman/Dropbox/work_repos/gai-gain/assets/images/about_illustration_noindex.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       style="color:#000000;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       d="m -2133,247 0,1.5 0,6 0,1.5 1.5,0 3.5,0 0,3 0,1 8.5,0 1.5,0 0,-1.5 0,-6 0,-1.5 -1.5,0 -3.5,0 0,-3 0,-1 -8.5,0 -1.5,0 z m 2.9062,1 5.5625,0 -3.4687,3 -0.031,0.0312 0.031,0.0312 0,0.9375 0,3 -2.0938,0 c 0.054,-0.15432 0.094,-0.32741 0.094,-0.5 0,-0.82843 -0.6715,-1.5 -1.5,-1.5 -0.1725,0 -0.3456,0.0401 -0.5,0.0937 l 0,-3.1875 c 0.1544,0.0536 0.3275,0.0937 0.5,0.0937 0.8285,0 1.5,-0.67157 1.5,-1.5 0,-0.17259 -0.04,-0.34568 -0.094,-0.5 z m 3.0938,4 6.0937,0 c -0.054,0.15432 -0.094,0.32741 -0.094,0.5 0,0.82843 0.6716,1.5 1.5,1.5 0.1726,0 0.3457,-0.0401 0.5,-0.0937 l 0,3.1875 c -0.1543,-0.0537 -0.3274,-0.0938 -0.5,-0.0938 -0.8284,0 -1.5,0.67157 -1.5,1.5 0,0.17259 0.04,0.34568 0.094,0.5 l -6.0937,0 0,-1 c 1.3807,0 2.5,-1.11929 2.5,-2.5 0,-1.38071 -1.1193,-2.5 -2.5,-2.5 l 0,-1 z"
+       id="rect10691"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/Users/saman/Dropbox/work_repos/gai-gain/assets/images/about_illustration_noindex.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <rect
+       y="247.99988"
+       x="-2124"
+       height="4"
+       width="1"
+       id="rect10703"
+       style="color:#000000;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       inkscape:export-filename="/Users/saman/Dropbox/work_repos/gai-gain/assets/images/about_illustration_noindex.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       style="color:#000000;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       d="m -2102,247 -6,3 0,2 1,0 0,6 -1,0 0,3 15,0 0,-3 -1,0 0,-6 1,0 0,-2 -6,-3 -3,0 z m -4,5 1,0 0,6 -1,0 0,-6 z m 2,0 7,0 0,6 -2,0 0,-3.5 c 0,-0.831 -0.669,-1.5 -1.5,-1.5 -0.831,0 -1.5,0.669 -1.5,1.5 l 0,3.5 -2,0 0,-6 z m 8,0 1,0 0,6 -1,0 0,-6 z"
+       id="path10736"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/Users/saman/Dropbox/work_repos/gai-gain/assets/images/about_illustration_noindex.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       style="color:#000000;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       d="m -2076,246 c -3.866,0 -7,3.134 -7,7 0,3.866 3.134,7 7,7 1.2081,0 2.3519,-0.30494 3.3437,-0.84375 l 0.031,0 L -2068,261 l -1.8438,-4.625 0,-0.0312 c 0.5389,-0.9919 0.8438,-2.13568 0.8438,-3.3438 0,-3.866 -3.134,-7 -7,-7 z m -0.8125,3.0625 1.625,0 0,1.84375 -0.375,3 -0.875,0 -0.375,-3 0,-1.84375 z m 0.062,6.375 1.5,0 0,1.5 -1.5,0 0,-1.5 z"
+       id="path10759"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/Users/saman/Dropbox/work_repos/gai-gain/assets/images/about_illustration_noindex.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       style="color:#000000;fill:#898989;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       d="m -2032,275.99988 0,4.00024 18,0 0,-4.00024 z"
+       id="rect7940"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ccccc"
+       inkscape:export-filename="/Users/saman/Dropbox/work_repos/gai-gain/assets/images/about_illustration_noindex.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <text
+       xml:space="preserve"
+       style="font-size:34.93449783px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-indent:0;text-align:start;text-decoration:none;line-height:120.00000477%;letter-spacing:0px;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:start;baseline-shift:baseline;color:#000000;fill:#898989;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Alternate Gothic LT No3;-inkscape-font-specification:Alternate Gothic LT No3 Bold"
+       x="-1801.7001"
+       y="288.63303"
+       id="text10213-8"
+       sodipodi:linespacing="120%"
+       inkscape:export-filename="/Users/saman/Dropbox/work_repos/gai-gain/assets/images/about_illustration_noindex.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"><tspan
+         sodipodi:role="line"
+         id="tspan10215-1"
+         x="-1801.7001"
+         y="288.63303">50</tspan></text>
+    <text
+       sodipodi:linespacing="120%"
+       id="text10250-5"
+       y="288.63306"
+       x="-1834.6545"
+       style="font-size:34.93449783px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-indent:0;text-align:start;text-decoration:none;line-height:120.00000477%;letter-spacing:0px;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:start;baseline-shift:baseline;color:#000000;fill:#898989;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Alternate Gothic LT No3;-inkscape-font-specification:Alternate Gothic LT No3 Bold"
+       xml:space="preserve"
+       inkscape:export-filename="/Users/saman/Dropbox/work_repos/gai-gain/assets/images/about_illustration_noindex.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"><tspan
+         y="288.63306"
+         x="-1834.6545"
+         id="tspan10252-9"
+         sodipodi:role="line">1</tspan></text>
+    <path
+       inkscape:connector-curvature="0"
+       id="path8292"
+       d="m -1807.599,271.63606 -4.1363,4.13634 -4.1364,-4.13633 -2.3636,2.36361 4.1364,4.13633 -4.1364,4.13633 2.3636,2.36361 4.1364,-4.13632 4.1363,4.13631 2.3637,-2.3636 -4.1364,-4.13633 4.1364,-4.13633 -2.3637,-2.36362 z"
+       style="color:#000000;fill:#898989;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       inkscape:export-filename="/Users/saman/Dropbox/work_repos/gai-gain/assets/images/about_illustration_noindex.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       style="color:#000000;fill:#68bb37;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       d="m -1715.5,230.99988 112,0 c 2.216,0 4,1.784 4,4 l 0,82 c 0,2.216 -1.784,4 -4,4 l -112,0 c -2.216,0 -3.2386,-1.9189 -4,-4 l 0,-41 0,-41 c 0,-2.216 1.784,-4 4,-4 z"
+       id="path8294"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ssssssscss"
+       inkscape:export-filename="/Users/saman/Dropbox/work_repos/gai-gain/assets/images/about_illustration_noindex.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <g
+       id="g8345"
+       transform="translate(-2228.5,-20.999994)"
+       inkscape:export-filename="/Users/saman/Dropbox/work_repos/gai-gain/assets/images/about_illustration_noindex.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90">
+      <g
+         id="g6135-3"
+         transform="translate(484.6124,447.8437)"
+         inkscape:export-filename="/Users/saman/graphics/gaIn/renders/map.png"
+         inkscape:export-xdpi="90"
+         inkscape:export-ydpi="90"
+         style="display:inline">
+        <path
+           style="font-size:30.32188606px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-indent:0;text-align:start;text-decoration:none;line-height:120.00000477%;letter-spacing:0px;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:start;baseline-shift:baseline;color:#000000;fill:#53a721;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Droid Sans;-inkscape-font-specification:Droid Sans Bold"
+           d="m 531.25,276.09375 -1.15625,2.8125 c -0.6712,-0.33558 -1.43241,-0.61671 -2.28125,-0.84375 -0.839,-0.227 -1.72845,-0.34373 -2.65625,-0.34375 -1.00679,2e-5 -1.90939,0.17593 -2.71875,0.53125 -0.79951,0.34548 -1.49002,0.82719 -2.0625,1.46875 -0.57249,0.64159 -1.00652,1.40444 -1.3125,2.3125 -0.30599,0.90809 -0.43751,1.94716 -0.4375,3.0625 0,0.0434 -2.5e-4,0.0819 0,0.125 0.0541,-0.78156 0.21404,-1.52434 0.4375,-2.1875 0.30598,-0.90806 0.74001,-1.67091 1.3125,-2.3125 0.57248,-0.64156 1.26299,-1.12327 2.0625,-1.46875 0.80936,-0.35532 1.71196,-0.53123 2.71875,-0.53125 0.9278,2e-5 1.81725,0.11675 2.65625,0.34375 0.84884,0.22704 1.61005,0.50817 2.28125,0.84375 l 1.53125,-3.6875 c -0.11612,-0.0499 -0.25598,-0.0772 -0.375,-0.125 z m 21.25,0.71875 0,1 2.625,1.21875 0,-1 -2.625,-1.21875 z m 9.84375,0 -2.65625,1.21875 0,1 2.65625,-1.21875 0,-1 z M 537.3125,281.25 c -0.1343,0.0679 -0.27617,0.11472 -0.40625,0.1875 l 1.46875,3 c 0.68105,-0.34545 1.36006,-0.63646 2.03125,-0.84375 0.68105,-0.20727 1.38307,-0.31249 2.09375,-0.3125 0.71066,10e-6 1.26142,0.17429 1.65625,0.5 0.39481,0.32574 0.59374,0.81895 0.59375,1.5 l 0,-1 c -10e-6,-0.68105 -0.19894,-1.17426 -0.59375,-1.5 -0.39483,-0.32571 -0.94559,-0.49999 -1.65625,-0.5 -0.71068,10e-6 -1.4127,0.10523 -2.09375,0.3125 -0.67119,0.20729 -1.3502,0.4983 -2.03125,0.84375 l -1.0625,-2.1875 z m 35.9375,1.34375 c -0.59223,10e-6 -1.10519,0.10687 -1.5,0.34375 -0.39482,0.2369 -0.70062,0.5986 -0.9375,1.0625 -0.22703,0.46392 -0.4013,1.0377 -0.5,1.71875 -0.0888,0.61296 -0.11986,1.32018 -0.125,2.09375 0.0189,-0.391 0.0756,-0.75322 0.125,-1.09375 0.0987,-0.68105 0.27297,-1.25483 0.5,-1.71875 0.23688,-0.4639 0.54268,-0.8256 0.9375,-1.0625 0.39481,-0.23688 0.90777,-0.34374 1.5,-0.34375 0.78962,10e-6 1.3634,0.30417 1.71875,0.90625 0.36519,0.59224 0.53124,1.49319 0.53125,2.6875 l 0,-1 c -10e-6,-1.19431 -0.16606,-2.09526 -0.53125,-2.6875 -0.35535,-0.60208 -0.92913,-0.90624 -1.71875,-0.90625 z M 513.875,285.5 c -0.005,0.16678 0,0.33034 0,0.5 0,1.81616 0.24333,3.42078 0.6875,4.8125 0.44417,1.38186 1.08864,2.55245 1.9375,3.5 0.85872,0.93769 1.91257,1.64135 3.15625,2.125 1.25353,0.47378 2.69374,0.6875 4.3125,0.6875 0.76988,0 1.47518,-0.003 2.15625,-0.0625 0.69091,-0.0592 1.3469,-0.1513 1.96875,-0.25 0.63169,-0.10857 1.23013,-0.22694 1.8125,-0.375 0.58234,-0.15793 1.1775,-0.34371 1.75,-0.53125 l 0,-1 c -0.5725,0.18754 -1.16766,0.37332 -1.75,0.53125 -0.58237,0.14806 -1.18081,0.26643 -1.8125,0.375 -0.62185,0.0987 -1.27784,0.1908 -1.96875,0.25 -0.68107,0.0595 -1.38637,0.0625 -2.15625,0.0625 -1.61876,0 -3.05897,-0.21372 -4.3125,-0.6875 -1.24368,-0.48365 -2.29753,-1.18731 -3.15625,-2.125 -0.84886,-0.94755 -1.49333,-2.11814 -1.9375,-3.5 -0.40189,-1.25925 -0.64594,-2.70566 -0.6875,-4.3125 z m 9.1875,2 0,1 4.09375,0 0,-1 -4.09375,0 z m 21.6875,0.6875 -1.5,0.0312 c -0.6021,0.0197 -1.1167,0.11182 -1.53125,0.25 -0.41456,0.13819 -0.74338,0.32562 -1,0.5625 -0.24677,0.22703 -0.44406,0.51803 -0.5625,0.84375 -0.10858,0.31586 -0.15626,0.66769 -0.15625,1.0625 0,0.16127 0.0132,0.29873 0.0312,0.4375 0.0255,-0.17679 0.0707,-0.34207 0.125,-0.5 0.11844,-0.32572 0.31573,-0.61672 0.5625,-0.84375 0.25662,-0.23688 0.58544,-0.42431 1,-0.5625 0.41455,-0.13818 0.92915,-0.23025 1.53125,-0.25 l 1.5,-0.0312 0,-1 z m -9.375,3 c -0.0234,0.234 0,0.4653 0,0.71875 0,0.89821 0.10686,1.68244 0.34375,2.34375 0.23689,0.65145 0.55419,1.1907 0.96875,1.625 0.42442,0.42443 0.92751,0.7516 1.5,0.96875 0.57248,0.20728 1.20381,0.28125 1.875,0.28125 0.6317,0 1.18246,-0.0263 1.65625,-0.125 0.48364,-0.0987 0.92755,-0.26147 1.3125,-0.46875 0.38494,-0.20728 0.73677,-0.4654 1.0625,-0.78125 0.32571,-0.32572 0.64302,-0.71208 0.96875,-1.15625 l 0.125,0 0.875,2.25 3.15625,0 0,-1 -3.15625,0 -0.875,-2.25 -0.125,0 c -0.32573,0.44417 -0.64304,0.83053 -0.96875,1.15625 -0.32573,0.31585 -0.67756,0.57397 -1.0625,0.78125 -0.38495,0.20728 -0.82886,0.37005 -1.3125,0.46875 -0.47379,0.0987 -1.02455,0.125 -1.65625,0.125 -0.67119,0 -1.30252,-0.074 -1.875,-0.28125 -0.57249,-0.21715 -1.07558,-0.54432 -1.5,-0.96875 -0.41456,-0.4343 -0.73186,-0.97355 -0.96875,-1.625 -0.21031,-0.5871 -0.3222,-1.2879 -0.34375,-2.0625 z m 17.125,4.65625 0,1 9.84375,0 0,-1 -9.84375,0 z m 13.15625,0 0,1 4.53125,0 0,-1 -4.53125,0 z m 9.84375,0 0,1 3.3125,0 1.21875,0 2.625,0 0,-1 -2.625,0 -1.21875,0 -3.3125,0 z"
+           transform="translate(-468.11238,-435.84371)"
+           id="path6084-2"
+           inkscape:connector-curvature="0" />
+        <path
+           id="text6071-7-56"
+           d="m 57.0625,-162.9688 c -1.816166,2e-5 -3.432292,0.25814 -4.84375,0.78125 -1.401604,0.51328 -2.563956,1.28272 -3.53125,2.25 -0.957433,0.95745 -1.693983,2.09678 -2.1875,3.46875 -0.493522,1.372 -0.750002,2.9273 -0.75,4.625 -2e-6,1.81616 0.24333,3.42078 0.6875,4.8125 0.444165,1.38186 1.088642,2.55245 1.9375,3.5 0.85872,0.93769 1.912573,1.64135 3.15625,2.125 1.253533,0.47378 2.693743,0.6875 4.3125,0.6875 0.769879,0 1.475179,-0.003 2.15625,-0.0625 0.690914,-0.0592 1.346899,-0.1513 1.96875,-0.25 0.631689,-0.10857 1.230129,-0.22694 1.8125,-0.375 0.582336,-0.15793 1.177498,-0.34371 1.75,-0.53125 l 0,-11.21875 -8.59375,0 0,3.8125 4.09375,0 0,4.53125 c -0.394831,0.079 -0.795976,0.12828 -1.25,0.1875 -0.444182,0.0592 -1.004816,0.0937 -1.65625,0.0937 -0.996922,0 -1.841971,-0.17591 -2.5625,-0.53125 -0.710678,-0.35533 -1.29597,-0.85842 -1.75,-1.5 -0.454046,-0.64157 -0.814108,-1.40278 -1.03125,-2.28125 -0.207285,-0.88833 -0.281256,-1.84024 -0.28125,-2.90625 -6e-6,-1.11534 0.131511,-2.15441 0.4375,-3.0625 0.305975,-0.90806 0.740009,-1.67091 1.3125,-2.3125 0.572475,-0.64156 1.262988,-1.12327 2.0625,-1.46875 0.809362,-0.35532 1.711957,-0.53123 2.71875,-0.53125 0.927804,2e-5 1.817251,0.11675 2.65625,0.34375 0.848838,0.22704 1.610045,0.50817 2.28125,0.84375 L 63.5,-161.6251 c -0.917966,-0.3948 -1.925782,-0.72197 -3.03125,-0.96875 -1.105501,-0.24674 -2.251427,-0.37498 -3.40625,-0.375 z m 27.3125,0.3125 0,2.625 2.625,1.21875 0,14 -2.625,1.21875 0,2.59375 9.84375,0 0,-2.59375 -2.65625,-1.21875 0,-14 2.65625,-1.21875 0,-2.625 -9.84375,0 z m -9.65625,4.75 c -1.105493,2e-5 -2.180725,0.13977 -3.1875,0.40625 -1.006786,0.26652 -1.92089,0.62986 -2.75,1.09375 l 1.46875,3 c 0.681053,-0.34545 1.360057,-0.63646 2.03125,-0.84375 0.681051,-0.20727 1.383073,-0.31249 2.09375,-0.3125 0.71066,10e-6 1.261424,0.17429 1.65625,0.5 0.394806,0.32574 0.593739,0.81895 0.59375,1.5 l 0,1.25 -2.65625,0.0937 c -2.240588,0.0888 -3.906028,0.56727 -5.03125,1.40625 -1.125228,0.82912 -1.687501,2.11808 -1.6875,3.875 -10e-7,0.89821 0.106859,1.68244 0.34375,2.34375 0.236888,0.65145 0.554191,1.1907 0.96875,1.625 0.424424,0.42443 0.927513,0.7516 1.5,0.96875 0.572479,0.20728 1.203807,0.28125 1.875,0.28125 0.631699,0 1.182463,-0.0263 1.65625,-0.125 0.483642,-0.0987 0.927546,-0.26147 1.3125,-0.46875 0.384937,-0.20728 0.736767,-0.4654 1.0625,-0.78125 0.325713,-0.32572 0.643016,-0.71208 0.96875,-1.15625 l 0.125,0 0.875,2.25 3.15625,0 0,-11.03125 c -1.5e-5,-1.97407 -0.550779,-3.43894 -1.65625,-4.40625 -1.095627,-0.96728 -2.655846,-1.46873 -4.71875,-1.46875 z m 31.78125,0.0312 c -0.47379,2e-5 -0.92097,0.0576 -1.375,0.15625 -0.45405,0.0889 -0.87657,0.24011 -1.28125,0.4375 -0.40469,0.19742 -0.77954,0.44403 -1.125,0.75 -0.3356,0.306 -0.63812,0.66934 -0.875,1.09375 l -0.25,0 -0.59375,-2.125 -3.46875,0 0,16.5625 4.53125,0 0,-7.78125 c -1e-5,-0.87846 0.0263,-1.66268 0.125,-2.34375 0.0987,-0.68105 0.27297,-1.25483 0.5,-1.71875 0.23688,-0.4639 0.54268,-0.8256 0.9375,-1.0625 0.39481,-0.23688 0.90777,-0.34374 1.5,-0.34375 0.78962,1e-5 1.3634,0.30417 1.71875,0.90625 0.36519,0.59224 0.53124,1.49319 0.53125,2.6875 l 0,9.65625 3.3125,0 1.21875,0 2.625,0 0,-2.59375 -2.625,-1.21875 0,-6.96875 c -2e-5,-1.06599 -0.14964,-1.98997 -0.40625,-2.75 -0.25665,-0.76988 -0.61999,-1.41272 -1.09375,-1.90625 -0.47379,-0.4935 -1.0262,-0.83546 -1.6875,-1.0625 -0.66133,-0.23687 -1.40939,-0.37498 -2.21875,-0.375 z m -29.875,9.21875 0,1.34375 c -1.1e-5,0.53301 -0.0707,1.02295 -0.21875,1.4375 -0.148066,0.40469 -0.358509,0.74501 -0.625,1.03125 -0.25664,0.27637 -0.582175,0.47695 -0.9375,0.625 -0.355343,0.13819 -0.741701,0.21875 -1.15625,0.21875 -0.542879,0 -0.976913,-0.15126 -1.3125,-0.4375 -0.3356,-0.29611 -0.500006,-0.77782 -0.5,-1.46875 -6e-6,-0.39481 0.04767,-0.74664 0.15625,-1.0625 0.118439,-0.32572 0.315733,-0.61672 0.5625,-0.84375 0.256624,-0.23688 0.585436,-0.42431 1,-0.5625 0.414549,-0.13818 0.929147,-0.23025 1.53125,-0.25 l 1.5,-0.0312 z"
+           style="font-size:30.32188606px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-indent:0;text-align:start;text-decoration:none;line-height:120.00000477%;letter-spacing:0px;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:start;baseline-shift:baseline;color:#000000;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Droid Sans;-inkscape-font-specification:Droid Sans Bold"
+           inkscape:connector-curvature="0" />
+      </g>
+      <text
+         xml:space="preserve"
+         style="font-size:14px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-indent:0;text-align:start;text-decoration:none;line-height:120.00000477%;letter-spacing:0px;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:start;baseline-shift:baseline;color:#000000;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:3;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Droid Sans;-inkscape-font-specification:Droid Sans Bold"
+         x="597.78021"
+         y="294.86899"
+         id="text8767-3"
+         sodipodi:linespacing="120%"><tspan
+           sodipodi:role="line"
+           id="tspan8769-09"
+           x="597.78021"
+           y="294.86899">™</tspan></text>
     </g>
     <path
        sodipodi:nodetypes="cccccssccssccccccccssccc"
@@ -25422,6 +25406,65 @@
        d="m -376,1169.9999 c -2.216,0 -4,1.784 -4,4 l 0,23 27,0 0,-27 z"
        style="color:#000000;fill:#c6c6c6;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
        inkscape:connector-curvature="0" />
+    <path
+       inkscape:export-ydpi="90"
+       inkscape:export-xdpi="90"
+       inkscape:export-filename="/Users/saman/Dropbox/work_repos/gai-gain/assets/images/about_illustration_noindex.png"
+       style="color:#000000;fill:#898989;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       d="m -1841.8382,276.46471 -5.4234,0.0947 -0.095,-5.42356 -3.0991,0.0541 0.095,5.42357 -5.4236,0.0946 0.054,3.09914 5.4235,-0.0946 0.095,5.42349 3.0992,-0.0541 -0.095,-5.42356 5.4236,-0.0946 -0.054,-3.09922 z"
+       id="path230490"
+       inkscape:connector-curvature="0" />
+    <text
+       inkscape:export-ydpi="90"
+       inkscape:export-xdpi="90"
+       inkscape:export-filename="/Users/saman/Dropbox/work_repos/gai-gain/assets/images/about_illustration_noindex.png"
+       sodipodi:linespacing="120%"
+       id="text230492"
+       y="352.55081"
+       x="-2101.3359"
+       style="font-size:34.93449783px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-indent:0;text-align:center;text-decoration:none;line-height:120.00000477%;letter-spacing:0px;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:middle;baseline-shift:baseline;color:#000000;fill:#898989;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Alternate Gothic LT No3;-inkscape-font-specification:Alternate Gothic LT No3 Bold"
+       xml:space="preserve"><tspan
+         y="352.55081"
+         x="-2101.3359"
+         sodipodi:role="line"
+         id="tspan230496"
+         style="font-size:14px"><tspan
+   id="tspan230504"
+   style="font-size:18px">0 - 1  </tspan>Higher is Better</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:34.93449783px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-indent:0;text-align:center;text-decoration:none;line-height:120.00000477%;letter-spacing:0px;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:middle;baseline-shift:baseline;color:#000000;fill:#898989;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Alternate Gothic LT No3;-inkscape-font-specification:Alternate Gothic LT No3 Bold"
+       x="-1946.3359"
+       y="352.55081"
+       id="text230506"
+       sodipodi:linespacing="120%"
+       inkscape:export-filename="/Users/saman/Dropbox/work_repos/gai-gain/assets/images/about_illustration_noindex.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"><tspan
+         style="font-size:14px"
+         id="tspan230508"
+         sodipodi:role="line"
+         x="-1946.3359"
+         y="352.55081"><tspan
+   style="font-size:18px"
+   id="tspan230510">0 - 1 </tspan>Lower is Better</tspan></text>
+    <text
+       inkscape:export-ydpi="90"
+       inkscape:export-xdpi="90"
+       inkscape:export-filename="/Users/saman/Dropbox/work_repos/gai-gain/assets/images/about_illustration_noindex.png"
+       sodipodi:linespacing="120%"
+       id="text230512"
+       y="352.55081"
+       x="-1659.8359"
+       style="font-size:34.93449783px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-indent:0;text-align:center;text-decoration:none;line-height:120.00000477%;letter-spacing:0px;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:middle;baseline-shift:baseline;color:#000000;fill:#898989;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Alternate Gothic LT No3;-inkscape-font-specification:Alternate Gothic LT No3 Bold"
+       xml:space="preserve"><tspan
+         y="352.55081"
+         x="-1659.8359"
+         sodipodi:role="line"
+         id="tspan230514"
+         style="font-size:14px"><tspan
+   id="tspan230516"
+   style="font-size:18px">0 - 100 </tspan>Higher is Better</tspan></text>
   </g>
   <g
      inkscape:groupmode="layer"

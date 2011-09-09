@@ -38,8 +38,11 @@ router = Backbone.Router.extend({
     country: function(id) {
         var router = this;
         var fetcher = this.fetcher();
+        // Don't serve countries on /country/ISO
+        if (id.length == 3 && _.detect(models.Country.meta, function(o) { return id == o.ISO3 })) {
+            return router.error();
+        }
         var country = new models.Country({id: id});
-
         fetcher.push(country);
         fetcher.fetch(function(err) {
             if (err) return router.error(err);
@@ -58,9 +61,12 @@ router = Backbone.Router.extend({
         var ranking = new models.Ranking({id: id});
 
         fetcher.push(ranking);
+        var staticData = new models.Ranking({id: 'static'});
+        fetcher.push(staticData);
+
         fetcher.fetch(function(err) {
             if (err) return router.error(err);
-            router.send(views.Ranking, {model: ranking});
+            router.send(views.Ranking, {model: ranking, staticData: staticData});
         });
     },
     download: function() {
@@ -112,6 +118,7 @@ router = Backbone.Router.extend({
         var v = new view(options);
         $('#page').empty().append(v.el);
         v.render().attach().activeLinks().scrollTop();
+        _gaq && _gaq.push(['_trackPageview']);
         document.title =  (v.pageTitle ? v.pageTitle + ' | Global Adaptation Index' : 'Global Adaptation Index');
     },
     fetcher: function() {

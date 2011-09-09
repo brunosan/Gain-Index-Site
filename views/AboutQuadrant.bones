@@ -42,8 +42,8 @@ view = Backbone.View.extend({
 
         if (!missing.length && !this.templateName) {
             var coords = [
-                data.vulnerability.score({format: false}) > 0.31 ? 'Top' : 'Bottom',
-                data.readiness.score({format: false}) > 0.52 ? 'Right' : 'Left'
+                data.vulnerability.score({format: false}) > 0.30 ? 'Top' : 'Bottom',
+                data.readiness.score({format: false}) > 0.63 ? 'Right' : 'Left'
             ];
 
             template = template + coords.join('');
@@ -51,7 +51,7 @@ view = Backbone.View.extend({
 
         // Description text based on quadrant.
         $(this.el).empty().append(templates[template]({
-            country: country.get('name'),
+            country: country.get('articleName') || country.get('name'),
             ranks: ranks,
             missing: missing,
             rankVerb: {

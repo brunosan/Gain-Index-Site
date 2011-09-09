@@ -1,15 +1,15 @@
-// * Readiness range is 0.1 - 0.85
+// * Readiness range is 0.2 - 0.85
 // Our matrix is 580 px wide
 // Points are 15px by 15px
 var readinessToX = function(d) {
-    return Math.round(((d - 0.1) / 0.8) * 580) - 8;
+    return Math.round(((d - 0.2) / (0.9 - 0.2)) * 580) - 8;
 };
 
 // * Vulnerability range 0.1 - 0.6
 // ...and 350 tall
 // Points are 15px by 15px
 var vulnerabilityToY= function(d) {
-    return Math.round(((d - 0.1) / 0.6) * 350) - 8;
+    return Math.round(((d - 0.1) / (0.7 - 0.1)) * 350) - 8;
 };
 
 var openTooltips = 0;
@@ -20,10 +20,10 @@ var animated = false,
 
 var quadrant = function(data) {
     // Determine which quadrant to highlight.
-    // * The turning point for Vulnerability us 0.31
-    // * The turning point for Readiness is 0.52
-    var quad = (data.vulnerability > 0.31 ? 't' : 'b');
-    quad += (data.readiness > 0.52 ? 'r' : 'l');
+    // * The turning point for Vulnerability us 0.30
+    // * The turning point for Readiness is 0.63
+    var quad = (data.vulnerability > 0.30 ? 't' : 'b');
+    quad += (data.readiness > 0.63 ? 'r' : 'l');
     return quad;
 };
 
@@ -31,8 +31,8 @@ var quadrantCoord = function(data) {
     // Determine which quadrant to highlight, base on Coords.
     // TODO it's unfortuate that we've got these two quad calcuation
     //      functions, we should be able to consolidate.
-    var quad = (data.y > vulnerabilityToY(0.31) ? 't' : 'b');
-    quad += (data.x > readinessToX(0.52) ? 'r' : 'l');
+    var quad = (data.y > vulnerabilityToY(0.30) ? 't' : 'b');
+    quad += (data.x > readinessToX(0.63) ? 'r' : 'l');
     return quad;
 };
 
@@ -94,7 +94,11 @@ view = views.Main.extend({
         'click .active-countries span.country a.remove': 'removeCountry',
         'click .active-countries span.country a.more': 'openDrawer',
         'mouseenter div.point': 'pointHover',
-        'mouseleave div.point': 'pointUnhover'
+        'mouseleave div.point': 'pointUnhover',
+        'mouseenter .interactive .quad': 'quadrantHover',
+        'mouseleave .interactive .quad': 'quadrantUnhover',
+        'mouseenter .mini-matrix-links a': 'hoverRelatedQuad',
+        'mouseleave .mini-matrix-links a': 'unHoverRelatedQuad'
     },
     pageTitle: "Matrix",
     initialize: function(options) {
@@ -106,7 +110,11 @@ view = views.Main.extend({
         var gain = new models.Indicator({id: 'gain'});
         $('.floor', this.el).empty().append(templates.DefaultFloor({
             title: 'The Readiness Matrix',
-            content: templates.MatrixFloorText()
+            content: templates.MatrixFloorText(),
+            methodologyHash:
+                (gain.meta('component') || gain.meta('sector')) ?
+                'scoringindicators' :
+                gain.meta('index')
         }));
         $('.top', this.el).empty().append(templates.Matrix());
         return this;
@@ -190,6 +198,12 @@ view = views.Main.extend({
         // Create a collection to manage the selected countries.
         this.selected = new Backbone.Collection();
 
+        this.available = _(data).chain()
+            .map(function(d) { return _(d).pluck('iso'); })
+            .flatten()
+            .uniq()
+            .value();
+
         // Bind the transformation of the DOM to the events of this
         // collection.
         this.selected.bind('add', function(model) {
@@ -216,6 +230,7 @@ view = views.Main.extend({
         (new views.CountrySelect({
             model: new models.CountrySearch(),
             selected: this.selected,
+            available: this.available,
             resultLimit: 10
         })).render();
 
@@ -343,8 +358,32 @@ view = views.Main.extend({
     pointUnhover: function(ev) {
         // Decrement our count, dont' fall below 0.
         openTooltips > 0 && openTooltips--;
-
         if (openTooltips == 0) $('.tooltip', this.el).empty();
+    },
+    quadrantHover: function(ev) {
+        $('.big-matrix .matrix-overlay', this.el).remove();
+        $('.big-matrix', this.el).append($(ev.currentTarget).html());
+        $('.matrix-overlay', this.el).stop().animate({opacity: .90, duration: 250});
+    },
+    quadrantUnhover: function() {
+        $('.big-matrix .matrix-overlay', this.el).stop().animate({
+            opacity: 'hide',
+            duration: 250
+            });
+    },
+    hoverRelatedQuad: function(ev) {
+        var relativeClass = $(ev.currentTarget).attr('class'),
+            associatedQuad = $('.quad', this.el).filter('.' + relativeClass);
+        $('.big-matrix .matrix-overlay', this.el).remove();
+        $('.big-matrix', this.el).append(associatedQuad.html());
+        associatedQuad.addClass('active');
+        $('.quad-' + relativeClass, this.el).stop().animate({opacity: .90, duration: 250});
+    },
+    unHoverRelatedQuad: function() {
+        $('.quad', this.el).removeClass('active');
+        $('.big-matrix .matrix-overlay', this.el).stop().animate({
+            opacity: 'hide',
+            duration: 250
+        });
     }
-
 });

@@ -22,12 +22,17 @@ model = Backbone.Model.extend({
         }
         return this.format(value, {format: 'number', decimals: 3});
     },
-    outlook: function(options) {
-        var diff = this.score() - this.score({year: this.get('currentYear') - 1});
-        if (diff >= 0.5) return 'up';
-        if (diff <= -0.5) return 'down';
-        if (_.isNaN(diff)) return 'undefined';
-        return 'same';
+    trend: function(options) {
+        if (this.get('name') == 'static') {
+            var sign = this.get('trend').sign;
+
+            switch (sign) {
+                case -1: return 'down';
+                case 0: return 'same';
+                case 1: return 'up';
+                default: return 'undefined';
+            }
+        }
     },
     input: function(options) {
         options = this.optionDefaults(options);
@@ -49,9 +54,9 @@ model = Backbone.Model.extend({
 
         var totalRanks = value.asc + value.desc;
         if (this.get('category') == 'vulnerability' || this.get('name') == 'vulnerability_delta') {
-            var color = gradientRgb(['#67b6e0', '#fc7b7e'], totalRanks, value.asc);
+            var color = gradientRgb(['#7cc0e4', '#fd9496'], totalRanks, value.asc);
         } else {
-            var color = gradientRgb(['#67b6e0', '#fc7b7e'], totalRanks, value.desc);
+            var color = gradientRgb(['#7cc0e4', '#fd9496'], totalRanks, value.desc);
         }
 
         return "<div class='rank-number' style='background-color: #" + color + ";'>" + value.desc + '</div>';
@@ -551,6 +556,17 @@ model.meta = {
         "sector": null,
         "component": null
     },
+    "reporting": {
+        "id": "reporting",
+        "name": "Reporting level",
+        "description": "The reporting level measures data availability. When data gaps are present we use linear interpolations, and constant extrapolations. 100% indicates that all measures where reported for a particular year.",
+        "format": "percent",
+        "index": "reportinglevel",
+        "decimals": "0",
+        "unit": "%s %",
+        "sector": null,
+        "component": null
+    },
     "road_floods": {
         "id": "road_floods",
         "name": "Road flooding",
@@ -916,7 +932,6 @@ model.meta = {
         "id": "gain",
         "name": "GaIn™",
         "description": "The Global Adaptation Index™ (GaIn™) captures a country's Vulnerability to climate change and other global challenges on the one hand and its Readiness to improve resilience on the other hand.",
-        "description_long": "The Global Adaptation Index™ (GaIn™) summarizes a country's Vulnerability to climate change and other global challenges on the one hand and its Readiness to improve resilience on the other hand. It aims to help businesses and the public sector to better prioritize investments for a more efficient response to the immediate global challenges ahead.",
         "format": "number",
         "decimals": "1",
         "unit": null,

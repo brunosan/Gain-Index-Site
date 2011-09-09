@@ -1,22 +1,20 @@
-.page-break { page-break-before: always; }
 .limiter {
   width: 960px;
   margin: 0px auto;
   }
 body {
+  font: 12px/20px "Helvetica Neue",Helvetica,Arial,sans-serif;
   color: black;
   background: white;
   }
 
 /* Header styles */
 h1,h2,h3,h4,h5 {
-  font-family: "HelveticaNeueBoldCondensed", "HelveticaNeue-Bold-Condensed", "Arial Narrow", "Arial", sans-serif;
-  font-weight: 100;
   color: black;
   padding-top: 15px;
   padding-bottom: 15px;
   clear: left;
-  } 
+  }
 h2 {
   font-size: 28px;
   border-bottom: #c6c6c6 1px solid;
@@ -27,48 +25,58 @@ h3 {
   border-bottom: 1px solid #ebebeb;
   margin-bottom: 15px;
   }
+.rankings h3 {
+  width: 600px;
+  }
 h4 {
   font-weight: normal;
   font-size: 18px;
   }
 .drawer h4 {
-  font-family: 'HelveticaNeue', Helvetica, Arial, sans-serif;
   font-style: italic;
   font-size: 13px;
   }
-
 p {
   color: black;
   margin-bottom: 10px;
-}
-
+  }
 p:last-child {
   margin-bottom: 0px;
   }
 a {
-color: black;
-text-decoration: none;
-}
+  color: black;
+  text-decoration: none;
+  }
+.label {
+  text-align: left;
+  font-weight: bold;
+  margin: 5px 0;
+  }
+pre {
+  background: #f8f8f8;
+  font-size: 12px;
+  margin-bottom: 15px;
+  overflow: auto;
+  padding: 10px;
+  color: #666;
+  }
+pre, pre code {
+  font-family: 'Menlo Regular',Consolas,monospace;
+  }
 
-.label { 
-  font-style: italic;
-  font-weight: normal;}
-  
 /* Header */
 #header {
   border-bottom: #c6c6c6 1px solid;
   width: 960px;
   height: 60px;
   margin: 0px auto 20px auto;
-}
-
+  }
 #header .limiter {
   position: relative;
   clear: both;
   }
-  
   #header h1 a.logo {
-  font-size: 56px;
+  font-size: 46px;
   display: block;
   float: left;
   margin-bottom: 15px;
@@ -83,56 +91,142 @@ text-decoration: none;
   top: 15px;
   width: 110px;
   }
-
-  
   #header .org {
   float: right;
   text-align: right;
   top: 15px;
-    }
+  }
 
 /* Tables */
-
-table.data {
+table {
   width: 100%;
-  table-layout: fixed;
-  clear: left;
   font-size: 12px;
   }
-table.data tr {
+table tr {
+  width: 100%;
   line-height: 16px;
   }
-  
-table.data thead tr {
+table tr.active {
+  font-weight: bold;
+  background: #EEE;
+  }
+table tr.active td.score {
+  background: #EEE;
+  font-weight: bold;
+  }
+table thead tr {
   text-align: left;
   border-bottom: 1px solid #ebebeb;
   }
-table.data tbody tr {
-  border-bottom: 1px solid #ebebeb;
+table thead tr th {
+  padding: 5px 0 3px;
   }
-
-table.data tr.section { 
+table tbody tr th {
+  text-align: left;
+  }
+table tbody tr td {
+  border-bottom: 1px solid #ebebeb;
+  padding: 2px 0;
+  }
+table tr.section td {
   font-weight: bold;
   line-height: 16px;
   }
-
-table.data tr.index td.name { 
-  font-family: "HelveticaNeueBoldCondensed", "HelveticaNeue-Bold-Condensed", "Arial Narrow", "Arial", sans-serif;
-  font-size: 20px;
+table tr.index td.name {
   padding-bottom: 15px;
-  font-weight: 100;
-  margin-top: 15px;
+  margin-top: 10px;
   display: block;
-  font-size: 28px;
+  font-size: 18px;
   }
 
-.rank-number { 
+.rank-number {
+  background: #ccc!important;
   width: 20px; 
   padding: 0 5px;
   -moz-border-radius: 4px;
   -webkit-border-radius: 4px;
   border-radius: 4px;
-  text-align: center;}
+  text-align: center;
+  }
+
+
+/*** Matrix Section ***/
+.big-matrix {
+  background: transparent url(../images/matrix-underlay.png) no-repeat 20px 0;
+  position:relative;
+  height: 430px;
+  width: 640px;
+  }
+.big-matrix .graph {
+  position:relative;
+  width: 580px;
+  height: 350px;
+  margin-left: 60px;
+  margin-bottom: 30px;
+  border-style: solid;
+  border-color: #000;
+  border-width: 0 0 1px 1px;
+  }
+.big-matrix .graph div.point {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: #a8a8a8;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  -moz-box-shadow: 0 0 2px #000;
+  -webkit-box-shadow: 0 0 2px #000;
+  box-shadow: 0 0 2px #000;
+  }
+
+.big-matrix .graph div.active-tl,
+.big-matrix .graph div.active-tr,
+.big-matrix .graph div.active-br,
+.big-matrix .graph div.active-bl,
+.big-matrix .graph div.point:hover {background-color: #111; }
+.big-matrix .graph div.point .country { display: none; }
+
+.big-matrix .tooltip .country {
+  position:absolute;`
+  top: 10px;
+  right: 10px;
+  padding: 5px 5px;
+  background: #666;
+  color: #fff;
+  z-index: 200;
+  }
+.big-matrix div.year-controls {
+  float: left;
+  background: #666;
+  color: #fff;
+  margin: 20px 0 20px 60px;
+  padding: 0 5px;
+  }
+.big-matrix div.year-controls,
+.big-matrix ul.year-selector {
+  float: left;
+  padding: 0 3px;
+  }
+.big-matrix ul.year-selector li  { float: left; }
+.big-matrix ul.year-selector li a {
+  color: #fff;
+  float: left;
+  padding: 2px 5px;
+  line-height: 25px;
+  font-size: 10px;
+  font-weight: bold;
+  }
+.big-matrix ul.year-selector li a:hover,
+.big-matrix ul.year-selector li a.selected {
+  background: #000;
+  text-decoration: none;
+  }
+.big-matrix img {
+  position: absolute;
+  left: 20px;
+  top: 0;
+  }
 
 /*** Outlook ***/
  .country-summary div.gain .icon-outlook {
@@ -142,35 +236,29 @@ table.data tr.index td.name {
       }
 
 /** Front Page **/
-
-th.country {text-indent: 5px;}
-
 .front .ranking {margin-bottom: 15px;}
 
 .front .ranking {
   background-color: #fff;
   }
 .front .ranking table.data {
-  width: 50%;
+  width: 300px;
   float: left;
   clear: none;
   table-layout: auto;
   margin-bottom: 10px;
   }
-  .front .ranking table.data.ranktop {
-   border-right: #EBEBEB 1px solid;
- } 
   .front .ranking table.data th {
     font-weight: normal;
     font-style: italic;
-  }
+    }
   .front .ranking table.data tr:hover {
     background: transparent
-  }
+    }
   .front .ranking .rank-number {
     float: left;
     margin: 3px 10px 0px 0px
-  }
+    }
 
 /*** Country Page ***/
 .prose.container {margin-top: 20px;}
@@ -185,24 +273,19 @@ table.data.ranking-history {
 /** Ranking Page ***/
 ul.tabs.level-1 a { display: none;}
 ul.tabs.level-1 a.exact.active { 
-  font-family: "HelveticaNeueBoldCondensed", "HelveticaNeue-Bold-Condensed", "Arial Narrow", "Arial", sans-serif;
-  font-size: 20px;
   padding-bottom: 15px;
-  font-weight: 100;
   margin-top: 15px;
   display: block;
-  font-size: 28px;
-  border-bottom: #c6c6c6 1px solid;
+  font-size: 20px;
+  border-bottom: #C6C6C6 1px solid;
+  font-weight: bold;
   }
 ul.tabs.level-2 a.active {
-  font-family: 'AlternateGothicLTNo3Regular',"HelveticaNeueBoldCondensed", "HelveticaNeue-Bold-Condensed", "Arial Narrow", "Arial", sans-serif;
-  font-size: 20px;
   padding-bottom: 15px;
-  font-weight: 100;
   margin-top: 15px;
   display: block;
-  font-size: 28px;
-  border-bottom: #c6c6c6 1px solid;
+  font-size: 20px;
+  border-bottom: #C6C6C6 1px solid;
   }
 
 /*** Footer ***/
@@ -217,10 +300,235 @@ ul.tabs.level-2 a.active {
   #address a {
     font-weight: bold;
     }
+
+/****** Map style ******/
+.wax-tooltip {
+  background: #fff;
+  padding: 5px 10px;
+  display: block;
+  font-weight: bold;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  border-radius: 4px;
+  moz-border-radius: 4px;
+  webkit-border-radius: 4px;
+  }
+.front #map {
+  position: relative;
+  overflow: hidden;
+  }
+.front #map .map {
+  position: absolute;
+  top: 0;
+  left: 0;
+  }
+/****** Front page ******/
+.front #map,
+.front .map {
+  width: 600px!important;
+  height: 382px!important;
+  }
+
+/****** Country Section ******/
+.country-profile {
+  position: relative;
+  }
+.country-profile .info,
+.country-profile #indicator-gain,
+.country-profile .chart {
+  position: absolute;
+  left: 355px;
+  top: 170px;
+  }
+.slider h4,
+.slider h5 {
+  padding: 0;
+  }
+.description {
+  margin-top: 10px;
+  }
+.source {
+  margin: 5px 0;
+  }
+.country-profile #indicator-gain {
+  top: 105px;
+  }
+.country-profile .info {
+  top: 60px;
+  }
+.country-profile .map-wrapper {
+  float: left;
+  width: 340px;
+  margin-top: -15px;
+  }
+.country-summary {
+  padding: 10px 0;
+  border-bottom: 1px solid #c6c6c6;
+  }
+
+/*** Gain info box ***/
+#indicator-gain {
+  font-weight: bold;
+  }
+/*** Country page sector graphs ***/
+.country-sector-graph {
+  margin: 12px 15px 0 0;
+  width: 70px;
+  height: 10px;
+  background-color: #ccc;
+  }
+.drawer .country-sector-graph {
+  margin: 0 0 10px 0;
+  width: 100%;
+  position: relative
+  }
+.country-sector-graph span {
+  height: 10px;
+  margin-left: -1px;
+  border-left: 1px solid #fff;
+  display: block;
+  float: left;
+  }
+.country-sector-graph .hilite {
+  background-color: #444;
+  }
+.drawer .country-sector-graph span:hover {
+  background-color: #444;
+  }
+#indicator-vulnerability .country-sector-graph,
+#indicator-readiness .country-sector-graph {
+  background-color: #444;
+  }
+.country-sector-graph .info.show {
+  display:block;
+  }
+.country-sector-graph .bar label {
+  line-height: 18px;
+  display: none;
+  width: 285px;
+  position: absolute;
+  top: -19px;
+  left: 0;
+  background-color: #fff;
+  }
+.country-sector-graph .bar:hover label {
+  display: block;
+  z-index: 999999;
+  }
+.drawer .content .graph {
+  width: 285px;
+  height: 150px;
+  }
+.drawer .content .gain {
+  border-left: 0;
+  }
+.drawer .country-info {
+  padding-bottom: 15px;
+  }
+
+.drawer .container {
+  width: 320px;
+  }
+div.container {
+  width: 600px;
+  }
+
+/****** Ranking Section ******/
+.tab-wrapper,
+.country table,
+.ranking table {
+  width: 600px;
+  }
+.drawer table {
+  width: 100%;
+  margin-bottom: 10px;
+  }
+
+/****** About Section ******/
+.document table {
+  width: 100%;
+  margin-bottom: 15px;
+  }
+.document table td {
+  background-color: #f5f5f5;
+  border: 1px solid #fff;
+  padding: 5px 15px;
+  vertical-align: middle;
+  }
+  .document table td.water          { background-color: #f0f0f0;}
+  .document table td.health         { background-color: #ebebeb;}
+  .document table td.infrastructure { background-color: #e5e5e5;}
+  .document table td.sensitivity    { background-color: #ededed;}
+  .document table td.capacity       { background-color: #e5e5e5;}
+  .document table td.governance     { background-color: #ededed;}
+  .document table td.social         { background-color: #e5e5e5;}
+
+/****** Drawer ******/
+#cabinet {
+  position: relative;
+  }
+#cabinet .drawer {
+  padding: 0 10px;
+  position: absolute;
+  top: -20px;
+  right: 0;
+  width: 320px;
+  margin-left: 160px;
+  background: #eee;
+  }
+#cabinet.ranking .drawer {
+  top: 146px;
+  }
+#cabinet.ranking .drawer.open {
+  height: 92%;
+  }
+#cabinet.country .drawer.open {
+  top: 436px;
+  height: 1150px;
+  }
+.slider {
+  margin-top: 20px;
+  }
+.slider .indicator-time {
+  padding-bottom: 10px;
+  }
+.drawer h3 {
+  font-size: 18px;
+  margin: 0;
+  }
+.drawer .country-summary {
+  padding: 0;
+  }
+/****** Page break avoiding ******/
+.description {
+  page-break-before: avoid;
+  }
+.document h2 {
+  page-break-after: avoid;
+  }
+
 /****** Hidden ******/
-ul.tabs.level-2 li a { display: none; }
-.country-profile ul.tabs.level-1 a { display: none; }
-.slider .content.container h3, #overviewdiagram, .bottomscorelabel, #carousel, .button,.navigation, #feedbacktab, #bonesAdmin, #carousel-nav, .overview a { display: none;}
-#map-indicators, #map-years, .zoom-control { display: none;}
-.correction-control, .drawer {display: none;}
-#footer1{display: none;}
+.slider .content.container h3,
+#overviewdiagram,
+.bottomscorelabel,
+.trend,
+#carousel,
+.button,
+.navigation,
+#feedbacktab,
+#bonesAdmin,
+#carousel-nav,
+#footer1,
+#map-years,
+.zoom-control,
+.country-selector,
+.gapminder,
+.mini-matrix-links,
+.browser,
+.overview a,
+a.play-button,
+.country-profile ul.tabs.level-1 a,
+ul.tabs.level-2 li a {
+  display: none;
+  }

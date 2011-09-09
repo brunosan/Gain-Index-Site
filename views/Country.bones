@@ -1,9 +1,11 @@
 view = views.Main.extend({
     events: _.extend({
-        'click ul.tabs li a': 'selectTab',
+        'click ul.tabs.level-1 li a': 'selectVR',
+        'click ul.tabs.level-2 li a': 'selectBreakdown',
         'click table.data tr': 'openDrawer',
         'click .country-summary .gain': 'openDrawer',
         'click .country-summary .indicator': 'openDrawer',
+        'click .country-profile .reporting': 'openDrawer',
         'click .drawer .handle a': 'closeDrawer'
     }, views.Main.prototype.events),
     render: function() {
@@ -23,6 +25,7 @@ view = views.Main.extend({
         // Empty pockets on top.
         $('.top', this.el).empty().append(templates.Country({
             title: this.model.meta('name'),
+            reporting: indicators.byName('reporting').input(),
             rank: rank,
             gdp: {
                 year: 2009,
@@ -51,17 +54,17 @@ view = views.Main.extend({
         var gain = new models.Indicator({id: 'gain'});
         $('.floor', this.el).empty().append(templates.DefaultFloor({
             title: gain.meta('name'),
-            content: gain.meta('description_long')
+            content: templates.GaInFloorText(),
+            methodologyHash:
+                (gain.meta('component') || gain.meta('sector')) ?
+                'scoringindicators' :
+                gain.meta('index')
         }));
 
-        if (this.tableView == undefined) {
-            this.tableView = new views.CountryTable({
-                el: $('table#country-data', this.el),
-                collection: this.model.get('indicators')
-            });
-        }
-        this.tableView.render();
-        this.pageTitle = this.model.meta('name');
+        this.ensureChildViews();
+        this.vTable.render();
+        this.rTable.render();
+        this.pageTitle = 'GaIn Country Brief: ' + this.model.meta('name');
         return this;
     },
     attach: function() {
@@ -72,58 +75,85 @@ view = views.Main.extend({
             el: $('.country-summary .map-wrapper', this.el)[0],
             width: 340,
             height: 160,
-            lon: coords[0],
-            lat: coords[1]
+            extent: coords 
         });
         this.map.featureClick = function(feature, context, index) {
             var iso = $(feature).data('iso');
-            return window.location = '/country/'+ iso;
+            if (iso) {
+                views.App.route('/country/' + models.Country.path(iso));
+            }
         }
 
-        if (this.tableView == undefined) {
-            this.tableView = new views.CountryTable({
-                el: $('table#country-data', this.el),
+        this.ensureChildViews();
+        this.vTable.attach();
+        this.rTable.attach();
+        return this;
+    },
+    ensureChildViews: function() {
+        if (this.vTable == undefined) {
+            this.vTable = new views.CountryTable({
+                el: $('table#vulnerability', this.el),
                 collection: this.model.get('indicators')
             });
         }
-        this.tableView.attach();
-        return this;
+        if (this.rTable == undefined) {
+            this.rTable = new views.CountryTable({
+                el: $('table#readiness', this.el),
+                collection: this.model.get('indicators'),
+                structure: 'components',
+                index: 'readiness'
+            });
+        }
     },
     activeLinks: function() {
         views.Main.prototype.activeLinks.apply(this, arguments);
-        $('ul.tabs.level-1 .' + this.tableView.options.tab).addClass('active');
-        $('ul.tabs.level-2 .' + this.tableView.options.structure).addClass('active');
+        $('ul.tabs.level-1 a').addClass('active');
+        $('ul.tabs.level-2').removeClass('hidden');
+        $('.tab-content table.hidden').each(function(i, el) {
+            var id = $(el).attr('id');
+            $('ul.tabs.level-1 a#' + id).removeClass('active');
+            $('ul.tabs.level-2.' + id).addClass('hidden');
+        });
+        $('ul.tabs.level-2 .' + this.vTable.options.structure).addClass('active');
         return this;
     },
-    selectTab: function(ev) {
-        var e = $(ev.currentTarget);
-
-        this.tableView.options.tab = 'vulnerability';
-        this.tableView.options.structure = 'sectors';
-        if (e.hasClass('readiness')) {
-            this.tableView.options.structure = 'components';
-            this.tableView.options.tab = 'readiness';
+    selectVR: function(ev) {
+        $('.tab-content table').addClass('hidden');
+        $('.tab-content table' + $(ev.currentTarget).attr('href')).removeClass('hidden');
+        this.activeLinks();
+        return false;
+    },
+    selectBreakdown: function(ev) {
+        this.vTable.options.structure = 'sectors';
+        if ($(ev.currentTarget).hasClass('components')) {
+            this.vTable.options.structure = 'components';
         }
-        if (e.hasClass('components')) {
-            this.tableView.options.structure = 'components';
-        }
-        this.tableView.options.tab == 'readiness' ? $('ul.tabs.level-2').hide() : $('ul.tabs.level-2').show();
-
-        this.tableView.render().attach();
+        this.vTable.render().attach();
         this.activeLinks();
         return false;
     },
     openDrawer: function(ev) {
-        $('table.data tr').removeClass('active');
+        $('.indicator').removeClass('active');
         var ind = $(ev.currentTarget).attr('id').substr(10),
             indicator = this.model.get('indicators').byName(ind),
             country = this.model;
         if (!indicator) return;
         $(ev.currentTarget).addClass('active');
 
-        var data = this.model.get('indicators').getGraphData('name', ind);
+        // Determine wether to graph the score or input properties.
+        var propName = (ind == 'reporting') ? 'input' : 'values';
+
+        var chartTitle = indicator.meta('name');
+
+        // Score indicators have score added to the title.
+        if (propName !== 'input') {
+            chartTitle = chartTitle + ' score';
+        }
+
+        var data = this.model.get('indicators').getGraphData('name', ind, propName);
         $('.drawer .content', this.el).empty().append(templates.CountryDrawer({
             title: indicator.meta('name'),
+            chartTitle: chartTitle,
             description: indicator.meta('description'),
             indicator: indicator.get('name'),
             source: indicator.meta('source') || [],
@@ -137,31 +167,47 @@ view = views.Main.extend({
 
         // Lazy load 5 similar countries.
         var el = this.el;
+
         $('.drawer .similar-countries', el).css({opacity: 0});
-        (new models.IndicatorSummary(
-            {id: indicator.get('name'), years: [indicator.get('currentYear')]}
-        )).fetch({
-            success: function(summary) {
-                $('.drawer .similar-countries', el).empty().append(
-                    templates.SimilarCountries({
-                        similar: summary.similar(country.get('id'), 5),
-                        title: indicator.meta('name')
-                    })
-                );
-                $('.drawer .similar-countries', el).animate({opacity: 1, duration: 250});
-            }
-        });
+
+        // We can't easily determine similar countries from the input values.
+        if (propName !== 'input') {
+            (new models.IndicatorSummary(
+                {id: indicator.get('name'), years: [indicator.get('currentYear')]}
+            )).fetch({
+                success: function(summary) {
+                    $('.drawer .similar-countries', el).empty().append(
+                        templates.SimilarCountries({
+                            similar: summary.similar(country.get('id'), 5),
+                            title: indicator.meta('name')
+                        })
+                    );
+                    $('.drawer .similar-countries', el).animate({opacity: 1, duration: 250});
+                }
+            });
+        }
 
         if (data && data.length > 1) {
             var rawData = this.model.get('indicators').getRawGraphData('name', ind);
             if (rawData.length) {
                 $('.lastReported', el).empty().append('Most recent reported data from ' + _(rawData).last()[0]);
             }
-            new views.Bigline({
+            var graphOptions = {
                 el: $('.drawer .content .graph', this.el),
                 data: data,
                 rawData: rawData
-            })
+            }
+            if (propName == 'input') {
+                graphOptions.options= {
+                    yaxis: {
+                        tickFormatter: function(val, axis) {
+                            return models.Indicator.format(val, ind);
+                        }
+                    }
+                }
+            }
+
+            new views.Bigline(graphOptions)
         } else {
             $('.drawer .content .graph', this.el).hide();
         }
@@ -171,7 +217,7 @@ view = views.Main.extend({
     },
     closeDrawer: function() {
         $('.drawer', this.el).removeClass('open');
-        $('table.data tr').removeClass('active');
+        $('.indicator').removeClass('active');
         return false;
     }
 });

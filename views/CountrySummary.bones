@@ -8,6 +8,8 @@ view = Backbone.View.extend({
             pin = {},
             indicators = this.model.get('indicators');
 
+        var trend = indicators.byName('static').trend();
+
         _.each(['gain', 'readiness', 'vulnerability'], function(k) {
             var indicator = indicators.byName(k);
             if (indicator) {
@@ -16,7 +18,7 @@ view = Backbone.View.extend({
                         name: indicator.meta('name') + ' rank',
                         value: (indicator.rank({format: false}) || {}).desc,
                         score: indicator.score(),
-                        outlook: indicator.outlook(),
+                        trend: trend,
                         raw: indicator.score({format: false})
                     };
                 }
@@ -35,16 +37,16 @@ view = Backbone.View.extend({
 
             if (r && v) {
                 // Determine which quadrant to highlight.
-                // * The turning point for Readiness is 0.52
-                // * The turning point for Vulnerability us 0.31
-                var activeQuad = (v > 0.31 ? 't' : 'b');
-                activeQuad += (r > 0.52 ? 'r' : 'l');
+                // * The turning point for Readiness is 0.63
+                // * The turning point for Vulnerability us 0.30
+                var activeQuad = (v > 0.30 ? 't' : 'b');
+                activeQuad += (r > 0.63 ? 'r' : 'l');
 
                 // The Scale of things here is non-obvious.
-                // * Readiness range with .52 as the center is 0.14 - 0.9 
-                // * Vulnerability range with .31 as the center is 0.02 - 0.6
-                r = (r - 0.14) / 0.76;
-                v = (v - 0.02) / 0.62;
+                // * Readiness range with .63 as the center is 0.2 - 1.06
+                // * Vulnerability range with .30 as the center is 0.0 - 0.6
+                r = (r - 0.2) / (1.06 - 0.2);
+                v = v / 0.6;
 
                 // This math depends very heavily on the CSS which is applied to the
                 // matrix. We've got the following assumptions.

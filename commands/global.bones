@@ -46,6 +46,18 @@ Bones.Command.options['databases'] = {
     'default': 'users:data'
 }
 
+Bones.Command.options['mapHosts'] = {
+    'title': 'mapHosts=[a,b,c]',
+    'description': 'Comma-separated string of subdomain hostnames to use for serving map tiles',
+    'default': ''
+}
+
+Bones.Command.options['maxAge'] = {
+    'title': 'maxAge=[int]',
+    'description': 'max-age setting for Cache-Control header',
+    'default': 3600
+}
+
 /**
  * Callback used to initialize the server for certain commands.
  */

@@ -4,12 +4,8 @@
     <div class='background-info left clearfix'><%= gdp.label%> (<%= gdp.year %>): <%= gdp.value %></div>
     <div class='background-info right clearfix'><%= population.label%> (<%= population.year %>): <%= population.value %></div>
   </div>
-
-  <div class='country-summary'>
-  </div>
-
+  <div class='country-summary clearfix'></div>
   <div class='prose container'></div>
-
   <div class='rankings'>
   <% if (_(rank).size()) { %>
     <h3 class='container'>GaIn&#8482; Ranking since 1995</h3>
@@ -32,21 +28,26 @@
   <% } %>
   </div>
   <div class='details'>
+    <div id='indicator-reporting' class='container indicator reporting'>
+        <span class='name'>Reporting Level</span>
+        <span class='value'><%= reporting %></span>
+    </div>
     <div class='tab-wrapper clearfix'>
       <ul class='tabs level-1'>
-        <li><a href='#vulnerability' class='vulnerability'>Vulnerability</a></li>
-        <li><a href='#readiness' class='readiness'>Readiness</a></li>
+        <li><a href='#vulnerability' id='vulnerability'>Vulnerability</a></li>
+        <li><a href='#readiness' id='readiness'>Readiness</a></li>
       </ul>
       <div class='tab-wrapper clearfix'>
-        <ul class='tabs level-2'>
-          <li><a href='#vulnerability/sector' class='vulnerability sectors'>Sector</a></li>
-          <li><a href='#vulnerability/component' class='vulnerability components'>Component</a></li>
+        <ul class='tabs level-2 vulnerability'>
+          <li><a href='#vulnerability/sector' class='sectors'>Sector</a></li>
+          <li><a href='#vulnerability/component' class='components'>Component</a></li>
         </ul>
-        <div class='bottomscorelabel label'>Denotes lowest scores</div>
+        <div class='bottomscorelabel label'>Denotes worst scores</div>
       </div>
     </div>
     <div id='tab' class='tab-content'>
-      <table id='country-data' class='data full'></table>
+      <table id='vulnerability' class='data full'></table>
+      <table id='readiness' class='data full hidden'></table>
     </div>
   </div>
 </div>

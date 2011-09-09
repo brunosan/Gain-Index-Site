@@ -1,5 +1,5 @@
 <div class='indicator-info container'>
-  <a class='button green' href='/about/methodology#<%= methodologyHash %>'>Methodology</a>
+  <a class='button methodology' href='/about/methodology#<%= methodologyHash %>'>Methodology</a>
   <h3><%= title %></h3>
   <div class='description'>
     <p><%= description %></p>
@@ -7,7 +7,7 @@
 </div>
 <div class='indicator-time container'>
   <div class='chart clearfix'>
-    <h4><%= title %> score over time </h4>
+    <h4><%= chartTitle %> over time </h4>
     <div class='graph'></div>
     <div class='legend'></div>
     <h5 class='lastReported clearfix'></h5>
