@@ -133,7 +133,7 @@ view = views.Main.extend({
         return false;
     },
     openDrawer: function(ev) {
-        $('table.data tr').removeClass('active');
+        $('.indicator').removeClass('active');
         var ind = $(ev.currentTarget).attr('id').substr(10),
             indicator = this.model.get('indicators').byName(ind),
             country = this.model;
