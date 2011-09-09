@@ -35,7 +35,8 @@ model = Backbone.Model.extend({
                 return {
                     'ISO3': k,
                     'name': models.Country.meta[k]['name'],
-                    'value': models.Indicator.format(v[year], id)
+                    'value': models.Indicator.format(v[year], id),
+                    'path': models.Country.path(k)
                 };
         }).sort(function(a, b) {
             return b.value - a.value;
