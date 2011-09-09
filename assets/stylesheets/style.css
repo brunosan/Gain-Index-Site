@@ -816,30 +816,33 @@ table.data tbody tr td {
   right: 0;
   width: 290px;
   height: 175px;
-  opacity: 0.80;
-  -moz-opacity: 0.80;
-  filter:alpha(opacity=80);
+  opacity: 0;
+  -moz-opacity: 0;
+  filter:alpha(opacity=0);
   padding: 10px;
   z-index: 100;
   color: #222;
-  font-weight: bold;
+  text-shadow: 0 1px 0 rgba(255,255,255,0.25);
+  font-weight: 500;
   }
 .interactive .matrix-overlay {
   display: none;
   }
 .quad-tl{
   background-color: #F77C80;
+  padding-top: 40px;
   top: 0; 
   left: 61px;
   width: 284px;
-  height: 206px;
+  height: 176px;
   }
 .quad-tr {
   background-color: #68B5DF;
+  padding-top: 40px;
   top: 0;
   left: 364px;
   width: 256px;
-  height: 205px;
+  height: 176px;
   }
 .quad-br {
   background-color: #68BB37;
@@ -888,7 +891,8 @@ table.data tbody tr td {
 ul.mini-matrix-links {
   float: left;
   font-size: 11px;
-  line-height: 17px
+  line-height: 18px;
+  margin-top: -3px;
   }
 .browser {
   background: white;
@@ -1217,7 +1221,10 @@ table.data tbody tr.active:hover {
 .country-profile tr.worst td.score {
   background-image: url('../images/sprite.png');
   background-repeat: no-repeat;
-  background-position: 43px -885px;
+  background-position: -290px -880px;
+  }
+.country-profile tr.section td.score {
+  background-position: -290px -875px;
   }
 .country-profile th.score {
   width: 60px;
