@@ -23,9 +23,9 @@ view = views.CountrySearch.extend({
         }
         return views.CountrySearch.prototype.filter.call(this, results)
     },
-    trigger: function(id) {
+    trigger: function(item) {
         if (this.options.selected) {
-            this.options.selected.add([new models.Country({id: id})]);
+            this.options.selected.add([new models.Country({id: item.value})]);
             $('input[name=search]', this.el).val('');
         }
     }
