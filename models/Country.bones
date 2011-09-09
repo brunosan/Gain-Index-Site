@@ -433,7 +433,8 @@ model.meta = {
     },
     "CAF": {
         "ISO3": "CAF",
-        "name": "The Central African Republic",
+        "name": "Central African Republic",
+        "articleName": "The Central African Republic",
         "oecd_value": "1",
         "oecd_income": "Low",
         "coords": [
@@ -517,7 +518,8 @@ model.meta = {
     },
     "COD": {
         "ISO3": "COD",
-        "name": "The Democratic Republic of the Congo",
+        "name": "Democratic Republic of the Congo",
+        "articleName": "The Democratic Republic of the Congo",
         "oecd_value": "1",
         "oecd_income": "Low",
         "coords": [
@@ -589,7 +591,8 @@ model.meta = {
     },
     "CZE": {
         "ISO3": "CZE",
-        "name": "The Czech Republic",
+        "name": "Czech Republic",
+        "articleName": "The Czech Republic",
         "oecd_value": "4",
         "oecd_income": "Upper",
         "coords": [
@@ -637,7 +640,8 @@ model.meta = {
     },
     "DOM": {
         "ISO3": "DOM",
-        "name": "The Dominican Republic",
+        "name": "Dominican Republic",
+        "articleName": "The Dominican Republic",
         "oecd_value": "2",
         "oecd_income": "Lower middle",
         "coords": [
@@ -1105,7 +1109,8 @@ model.meta = {
     },
     "PRK": {
         "ISO3": "PRK",
-        "name": "The Democratic People's Republic of Korea",
+        "name": "Democratic People's Republic of Korea",
+        "articleName": "The Democratic People's Republic of Korea",
         "oecd_value": "1",
         "oecd_income": "Low",
         "coords": [
@@ -1117,7 +1122,8 @@ model.meta = {
     },
     "KOR": {
         "ISO3": "KOR",
-        "name": "The Republic of Korea",
+        "name": "Republic of Korea",
+        "articleName": "The Republic of Korea",
         "oecd_value": "4",
         "oecd_income": "Upper",
         "coords": [
@@ -1333,7 +1339,8 @@ model.meta = {
     },
     "MHL": {
         "ISO3": "MHL",
-        "name": "The Marshall Islands",
+        "name": "Marshall Islands",
+        "articleName": "The Marshall Islands",
         "oecd_value": "2",
         "oecd_income": "Lower middle",
         "coords": [
@@ -1381,7 +1388,8 @@ model.meta = {
     },
     "FSM": {
         "ISO3": "FSM",
-        "name": "The Federated States of Micronesia",
+        "name": "Federated States of Micronesia",
+        "articleName": "The Federated States of Micronesia",
         "oecd_value": "2",
         "oecd_income": "Lower middle",
         "coords": [
@@ -1525,7 +1533,8 @@ model.meta = {
     },
     "NLD": {
         "ISO3": "NLD",
-        "name": "The Netherlands",
+        "name": "Netherlands",
+        "articleName": "The Netherlands",
         "oecd_value": "4",
         "oecd_income": "Upper",
         "coords": [
@@ -1741,7 +1750,8 @@ model.meta = {
     },
     "RUS": {
         "ISO3": "RUS",
-        "name": "The Russian Federation",
+        "name": "Russian Federation",
+        "articleName": "The Russian Federation",
         "oecd_value": "3",
         "oecd_income": "Upper middle",
         "coords": [
@@ -2233,7 +2243,8 @@ model.meta = {
     },
     "GBR": {
         "ISO3": "GBR",
-        "name": "The United Kingdom",
+        "name": "United Kingdom",
+        "articleName": "The United Kingdom",
         "oecd_value": "4",
         "oecd_income": "Upper",
         "coords": [
@@ -2245,7 +2256,8 @@ model.meta = {
     },
     "USA": {
         "ISO3": "USA",
-        "name": "The United States",
+        "name": "United States",
+        "articleName": "The United States",
         "oecd_value": "4",
         "oecd_income": "Upper",
         "coords": [

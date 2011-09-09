@@ -59,6 +59,7 @@ view = views.Main.extend({
         var totalWidth = 0;
         _.each(sectors, function(sector) { total += parseFloat(sector.score); });
         _.each(sectors, function(sector) { sector.percent = Math.round((parseFloat(sector.score) / total)*100); });
+        sectors = _.select(sectors, function(sector) { return sector.percent > 0; });
         var i = -1;
         while (totalWidth > 100) {
             if (i < 0) i = sectors.length - 1;

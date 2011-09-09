@@ -16,12 +16,14 @@ model = Backbone.Collection.extend({
     byName: function(name) {
         return this.lookup[name];
     },
-    getGraphData: function(key, val) {
+    getGraphData: function(key, val, prop) {
+        var prop = prop || 'values';
+
         var data = this.detect(function(v) {
             return v.get(key) == val;
         });
         if (data) {
-          data = _(data.get('values')).chain()
+          data = _(data.get(prop)).chain()
 
           // Not sure if we need to ensure range...
           // var years = data.keys();

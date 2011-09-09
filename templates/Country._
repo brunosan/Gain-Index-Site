@@ -10,7 +10,7 @@
 
   <div class='prose container'></div>
 
-  <div id='indicator-reporting' class='container indicator'>
+  <div id='indicator-reporting' class='container indicator reporting'>
       <span class='name'>Reporting Level</span>
       <span class='value'><%= reporting %></span>
   </div>

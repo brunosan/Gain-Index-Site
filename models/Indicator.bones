@@ -554,7 +554,7 @@ model.meta = {
     "reporting": {
         "id": "reporting",
         "name": "Reporting level",
-        "description": "The Reporting Level measures the Gain's currentness. It is based on the reporting frequency of all indicators the GaIn is based on. 100% would correspond to all indicators reported for a particular year, 0% would correspond to no indicators being present.",
+        "description": "The reporting level measures data availability. When data gaps are present we use linear interpolations, and constant extrapolations. 100% indicates that all measures where reported for a particular year.",
         "format": "percent",
         "decimals": "0",
         "unit": "%s %",

@@ -5,6 +5,7 @@ view = views.Main.extend({
         'click table.data tr': 'openDrawer',
         'click .country-summary .gain': 'openDrawer',
         'click .country-summary .indicator': 'openDrawer',
+        'click .country-profile .reporting': 'openDrawer',
         'click .drawer .handle a': 'closeDrawer'
     }, views.Main.prototype.events),
     render: function() {
@@ -24,7 +25,7 @@ view = views.Main.extend({
         // Empty pockets on top.
         $('.top', this.el).empty().append(templates.Country({
             title: this.model.meta('name'),
-            reporting: indicators.byName('reporting').input({year: 2009}),
+            reporting: indicators.byName('reporting').input(),
             rank: rank,
             gdp: {
                 year: 2009,
@@ -132,16 +133,27 @@ view = views.Main.extend({
         return false;
     },
     openDrawer: function(ev) {
-        $('table.data tr').removeClass('active');
+        $('.indicator').removeClass('active');
         var ind = $(ev.currentTarget).attr('id').substr(10),
             indicator = this.model.get('indicators').byName(ind),
             country = this.model;
         if (!indicator) return;
         $(ev.currentTarget).addClass('active');
 
-        var data = this.model.get('indicators').getGraphData('name', ind);
+        // Determine wether to graph the score or input properties.
+        var propName = (ind == 'reporting') ? 'input' : 'values';
+
+        var chartTitle = indicator.meta('name');
+
+        // Score indicators have score added to the title.
+        if (propName !== 'input') {
+            chartTitle = chartTitle + ' score';
+        }
+
+        var data = this.model.get('indicators').getGraphData('name', ind, propName);
         $('.drawer .content', this.el).empty().append(templates.CountryDrawer({
             title: indicator.meta('name'),
+            chartTitle: chartTitle,
             description: indicator.meta('description'),
             indicator: indicator.get('name'),
             source: indicator.meta('source') || [],
@@ -155,31 +167,47 @@ view = views.Main.extend({
 
         // Lazy load 5 similar countries.
         var el = this.el;
+
         $('.drawer .similar-countries', el).css({opacity: 0});
-        (new models.IndicatorSummary(
-            {id: indicator.get('name'), years: [indicator.get('currentYear')]}
-        )).fetch({
-            success: function(summary) {
-                $('.drawer .similar-countries', el).empty().append(
-                    templates.SimilarCountries({
-                        similar: summary.similar(country.get('id'), 5),
-                        title: indicator.meta('name')
-                    })
-                );
-                $('.drawer .similar-countries', el).animate({opacity: 1, duration: 250});
-            }
-        });
+
+        // We can't easily determine similar countries from the input values.
+        if (propName !== 'input') {
+            (new models.IndicatorSummary(
+                {id: indicator.get('name'), years: [indicator.get('currentYear')]}
+            )).fetch({
+                success: function(summary) {
+                    $('.drawer .similar-countries', el).empty().append(
+                        templates.SimilarCountries({
+                            similar: summary.similar(country.get('id'), 5),
+                            title: indicator.meta('name')
+                        })
+                    );
+                    $('.drawer .similar-countries', el).animate({opacity: 1, duration: 250});
+                }
+            });
+        }
 
         if (data && data.length > 1) {
             var rawData = this.model.get('indicators').getRawGraphData('name', ind);
             if (rawData.length) {
                 $('.lastReported', el).empty().append('Most recent reported data from ' + _(rawData).last()[0]);
             }
-            new views.Bigline({
+            var graphOptions = {
                 el: $('.drawer .content .graph', this.el),
                 data: data,
                 rawData: rawData
-            })
+            }
+            if (propName == 'input') {
+                graphOptions.options= {
+                    yaxis: {
+                        tickFormatter: function(val, axis) {
+                            return models.Indicator.format(val, ind);
+                        }
+                    }
+                }
+            }
+
+            new views.Bigline(graphOptions)
         } else {
             $('.drawer .content .graph', this.el).hide();
         }
