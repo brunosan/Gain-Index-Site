@@ -1223,6 +1223,29 @@ table.data tbody tr.active:hover {
 .country-summary div.gain .trend {
   color: #666;
   }
+  
+/*Reporting Level*/
+#indicator-reporting {
+  float: right;
+  color: white;
+  text-transform: uppercase;
+  font-size: 10px;
+  font-weight: bold;
+  padding: 0 5px;
+  display: block;
+  line-height: 20px;
+  background-color: #B5B5B5;
+  border-bottom: 1px solid #8C8C8C;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  margin: 15px 10px;
+  cursor: pointer;
+  }
+#indicator-reporting.active {
+  background-color: #767676;
+  border-color: #555;
+  }
 .country-profile .tab-content {
   background-color: #fff;
   }
