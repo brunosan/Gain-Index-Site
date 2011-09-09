@@ -842,32 +842,32 @@ table.data tbody tr td {
 .quad-tl{
   background-color: #F77C80;
   padding-top: 40px;
-  top: 0; 
+  top: 0;
   left: 61px;
-  width: 284px;
-  height: 176px;
+  width: 336px;
+  height: 182px;
   }
 .quad-tr {
   background-color: #68B5DF;
   padding-top: 40px;
   top: 0;
-  left: 364px;
-  width: 256px;
-  height: 176px;
+  left: 418px;
+  width: 202px;
+  height: 182px;
   }
 .quad-br {
   background-color: #68BB37;
-  top: 225px;
-  left: 365px;
-  width: 255px;
-  height: 105px;
+  top: 233px;
+  left: 418px;
+  width: 202px;
+  height: 97px;
   }
 .quad-bl { 
   background-color: #F6CD47;
-  top: 225px;
+  top: 233px;
   left: 61px;
-  width: 284px;
-  height: 105px;
+  width: 336px;
+  height: 97px;
   }
 
 .interactive .mini-matrix .tl:hover,

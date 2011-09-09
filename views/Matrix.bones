@@ -361,26 +361,27 @@ view = views.Main.extend({
         if (openTooltips == 0) $('.tooltip', this.el).empty();
     },
     quadrantHover: function(ev) {
-        if ($('.quad', this.el).hasClass('active')) {
-            $('.quad', this.el).removeClass('active');
-            $('.big-matrix .matrix-overlay').remove();
-        }
         $('.big-matrix', this.el).append($(ev.currentTarget).html());
     },
     quadrantUnhover: function() {
-        $('.big-matrix .matrix-overlay').remove();
+        $('.big-matrix .matrix-overlay', this.el).stop().animate({
+            opacity: 'hide',
+            duration: 250
+            });
     },
     hoverRelatedQuad: function(ev) {
         var relativeClass = $(ev.currentTarget).attr('class'),
             associatedQuad = $('.quad', this.el).filter('.' + relativeClass);
-        if ($('.quad', this.el).hasClass('active')) {
-            $('.quad', this.el).removeClass('active');
-            $('.big-matrix .matrix-overlay').remove();
-        }
+        $('.big-matrix .matrix-overlay', this.el).remove();
         $('.big-matrix', this.el).append(associatedQuad.html());
         associatedQuad.addClass('active');
+        $('.quad-' + relativeClass, this.el).stop().animate({opacity: .90, duration: 250});
     },
     unHoverRelatedQuad: function() {
-        $('.big-matrix .matrix-overlay').remove();
+        $('.quad', this.el).removeClass('active');
+        $('.big-matrix .matrix-overlay', this.el).stop().animate({
+            opacity: 'hide',
+            duration: 250
+        });
     }
 });

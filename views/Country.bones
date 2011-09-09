@@ -217,7 +217,7 @@ view = views.Main.extend({
     },
     closeDrawer: function() {
         $('.drawer', this.el).removeClass('open');
-        $('table.data tr').removeClass('active');
+        $('.indicator').removeClass('active');
         return false;
     }
 });

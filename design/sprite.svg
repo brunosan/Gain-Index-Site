@@ -27,15 +27,15 @@
      borderopacity="1.0"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.5"
-     inkscape:cx="176.59203"
-     inkscape:cy="1200.8782"
+     inkscape:zoom="1"
+     inkscape:cx="24.098523"
+     inkscape:cy="1247.3248"
      inkscape:document-units="px"
-     inkscape:current-layer="layer1"
+     inkscape:current-layer="svg6367"
      showgrid="true"
      inkscape:window-width="980"
      inkscape:window-height="728"
-     inkscape:window-x="301"
+     inkscape:window-x="137"
      inkscape:window-y="0"
      inkscape:window-maximized="0"
      fit-margin-top="0"
@@ -1425,8 +1425,8 @@
        sodipodi:cy="818.5"
        sodipodi:rx="3.5"
        sodipodi:ry="3.5"
-       d="m -8,818.5 c 0,1.933 -1.5670034,3.5 -3.5,3.5 -1.932997,0 -3.5,-1.567 -3.5,-3.5 0,-1.933 1.567003,-3.5 3.5,-3.5 1.9329966,0 3.5,1.567 3.5,3.5 z"
-       transform="matrix(1.1428571,0,0,1.1428571,17.142856,-192.06636)"
+       d="m -8,818.5 a 3.5,3.5 0 1 1 -7,0 3.5,3.5 0 1 1 7,0 z"
+       transform="matrix(1.1428571,0,0,1.1428571,349.14286,-192.06636)"
        inkscape:export-filename="/Users/saman/Dropbox/work_repos/gai-gain/assets/images/sprite.png"
        inkscape:export-xdpi="90"
        inkscape:export-ydpi="90" />
@@ -2053,4 +2053,9 @@
        inkscape:export-xdpi="90"
        inkscape:export-ydpi="90" />
   </g>
+  <path
+     style="fill:#ff0000;fill-opacity:0;stroke:none"
+     d="M 590.08197,340.25 600,325.12603 590,310.25 z"
+     id="path4128"
+     inkscape:connector-curvature="0" />
 </svg>
