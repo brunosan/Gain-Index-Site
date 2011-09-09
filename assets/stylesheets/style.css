@@ -51,6 +51,9 @@ pre {
 pre, pre code {
   font-family: 'Menlo Regular',Consolas,monospace;
   }
+#cabinet h3 {
+  padding-right: 120px;
+  }
 .drawer h4 {
   font-family: 'HelveticaNeue', Helvetica, Arial, sans-serif;
   font-style: italic;
@@ -60,7 +63,7 @@ pre, pre code {
   font-family: 'HelveticaNeue', Helvetica, Arial, sans-serif;
   font-style: italic;
   font-size: 11px;
-}
+  }
 /* Use this class for getting left/right padding */
 .container {
   padding-left: 15px;
