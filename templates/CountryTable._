@@ -8,9 +8,9 @@
 <tbody>
 <% _.each(data, function(row) { %>
   <% if (worst.hasOwnProperty(row.field.id)) { %>
-    <tr id='indicator-<%= row.field.id %>' class='<%= row.klass %> worst'>
+    <tr id='indicator-<%= row.field.id %>' class='<%= row.klass %> worst indicator'>
   <% } else { %>
-    <tr id='indicator-<%= row.field.id %>' class='<%= row.klass %>'>
+    <tr id='indicator-<%= row.field.id %>' class='<%= row.klass %> indicator'>
   <% } %>
     <td class='name'><%= row.field.name %></td>
     <td class='composition'>
