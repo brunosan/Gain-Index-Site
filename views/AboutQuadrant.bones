@@ -51,7 +51,7 @@ view = Backbone.View.extend({
 
         // Description text based on quadrant.
         $(this.el).empty().append(templates[template]({
-            country: country.get('name'),
+            country: country.get('articleName') || country.get('name'),
             ranks: ranks,
             missing: missing,
             rankVerb: {
