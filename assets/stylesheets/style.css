@@ -40,6 +40,17 @@ h4 {
   font-weight: normal;
   font-size: 18px;
   }
+pre {
+  background: #f8f8f8;
+  font-size: 12px;
+  margin-bottom: 15px;
+  overflow: auto;
+  padding: 10px;
+  color: #666;
+  }
+pre, pre code {
+  font-family: 'Menlo Regular',Consolas,monospace;
+  }
 .drawer h4 {
   font-family: 'HelveticaNeue', Helvetica, Arial, sans-serif;
   font-style: italic;
