@@ -47,13 +47,17 @@ view = Backbone.View.extend({
         $('input[name=search]', this.el).val('');
     },
     submit: function(e) {
+        var search = $('input[name=search]', this.el);
+        
         e.preventDefault();
         if (!this.active) {
-            var results = this.search($('input[name=search]', this.el).val());
+            var results = this.search(search.val());
             this.active = _(results).first();
         }
         if (this.active) {
+            search.autocomplete('close');
             this.trigger(this.active);
+            this.active = false;
         }
         return false;
     },
