@@ -38,8 +38,11 @@ router = Backbone.Router.extend({
     country: function(id) {
         var router = this;
         var fetcher = this.fetcher();
+        // Don't serve countries on /country/ISO
+        if (id.length == 3 && _.detect(models.Country.meta, function(o) { return id == o.ISO3 })) {
+            return router.error();
+        }
         var country = new models.Country({id: id});
-
         fetcher.push(country);
         fetcher.fetch(function(err) {
             if (err) return router.error(err);
