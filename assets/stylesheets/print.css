@@ -102,17 +102,16 @@ table {
   width: 100%;
   font-size: 12px;
   }
+table.data {
+  width: 640px;
+  }
 table tr {
   width: 100%;
   line-height: 16px;
   }
-table tr.active {
+table tr.active td{
   font-weight: bold;
   background: #EEE;
-  }
-table tr.active td.score {
-  background: #EEE;
-  font-weight: bold;
   }
 table thead tr {
   text-align: left;

@@ -716,7 +716,7 @@ li.ui-menu-item a.ui-corner-all {
  * Data tables
  */
 table.data {
-  width: 100%;
+  width: 640px;
   table-layout: fixed;
   clear: left;
   }
@@ -1197,17 +1197,17 @@ table tr {
 table.data thead {
   border-bottom: 1px solid #c6c6c6;
   }
-table.data tbody tr.active td{
+table.full tbody tr.active td{
   cursor: pointer;
   background-color: #ebebeb;
   }
-table.data tbody tr td:hover,
-table.data tbody tr:hover {
+table.full tbody tr td:hover,
+table.full tbody tr:hover {
   cursor: pointer;
   background-color: #f5f5f5;
   }
-table.data tbody tr.active td:hover,
-table.data tbody tr.active:hover {
+table.full tbody tr.active td:hover,
+table.full tbody tr.active:hover {
   cursor: pointer;
   background-color: #ebebeb;
   }
@@ -1304,10 +1304,14 @@ table.data tbody tr.active:hover {
 .country-profile th.graph {
   width: 100px;
   }
-.country-profile td.graph div.placeholder {
+.country-profile td.graph {
   height: 20px;
   width: 80px;
   margin-top: 5px;
+  }
+.country-profile td.graph div.placeholder {
+  height: 20px;
+  width: 80px;
   }
 .country-profile div.background-info {
   width: 290px;
