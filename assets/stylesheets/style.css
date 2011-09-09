@@ -505,11 +505,6 @@ li.ui-menu-item a.ui-corner-all {
   width: 300px;
   right: 20px;
   bottom: 0;
-  -webkit-transition: all 0.3s ease-in-out;
-  -moz-transition: all 0.3s ease-in-out;
-  -o-transition: all 0.3s ease-in-out;
-  -ms-transition: all 0.3s ease-in-out;
-  -transition: all 0.3s ease-in-out;
   z-index: 21;
   }
 #feedbacktab .tab.button.green {
@@ -716,18 +711,42 @@ li.ui-menu-item a.ui-corner-all {
  * Data tables
  */
 table.data {
+  background: #fff;
   width: 640px;
   table-layout: fixed;
   clear: left;
   }
-table.data tr td{
-  line-height: 25px;
+table.data thead {
+  border-bottom: 1px solid #c6c6c6;
   }
 table.data thead tr td {
   text-align: left;
   }
 table.data tbody tr td {
   border-bottom: 1px solid #ebebeb;
+  }
+table.data tr td{
+  line-height: 25px;
+  }
+table.data.full {
+  margin-bottom: 45px;
+  }
+table tr {
+  text-align: left;
+  }
+table.full tbody tr.active td{
+  cursor: pointer;
+  background-color: #ebebeb;
+  }
+table.full tbody tr td:hover,
+table.full tbody tr:hover {
+  cursor: pointer;
+  background-color: #f5f5f5;
+  }
+table.full tbody tr.active td:hover,
+table.full tbody tr.active:hover {
+  cursor: pointer;
+  background-color: #ebebeb;
   }
 
 /**
@@ -834,10 +853,10 @@ table.data tbody tr td {
   border-radius: 0 0 0 3px;
   }
 .mini-matrix div {
-  -moz-transition: all 0.3s linear;
-  -o-transition: all 0.3s linear;
-  -webkit-transition: all 0.3s linear;
-  transition: all 0.3s linear;
+  -moz-transition: background-color 0.3s linear;
+  -o-transition: background-color 0.3s linear;
+  -webkit-transition: background-color 0.3s linear;
+  transition: background-color 0.3s linear;
   }
 .matrix-overlay {
   position: absolute;
@@ -987,6 +1006,10 @@ ul.mini-matrix-links {
   border-radius: 4px;
   background: transparent url(../images/sprite.png) repeat-x 0 -1570px;
   }
+.front .map-selector li a.selected,
+.front .map-selector li a:hover {
+  background: transparent url(../images/sprite.png) repeat-x 0 -1570px;
+  }
 .front #map-indicators {
   top: 10px;
   }
@@ -1002,16 +1025,10 @@ ul.mini-matrix-links {
   padding: 5px;
   display: block;
   }
-.front .map-selector li a:hover {
-  background: transparent url(../images/sprite.png) repeat-x 0 -1570px;
-  }
 .front .map-selector li:first-child {
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   border-radius: 4px;
-  }
-.front .map-selector li a.selected {
-  background: transparent url(../images/sprite.png) repeat-x 0 -1570px;
   }
 .front #map .wax-fullscreen {
   position: absolute;
@@ -1182,36 +1199,6 @@ ul.mini-matrix-links {
   }
 
 /**
- * Data tables
- */
-table.data {
-  background: #fff;
-  }
-  /* full page tables */
-  table.data.full {
-    margin-bottom: 45px;
-    }
-table tr {
-  text-align: left;
-  }
-table.data thead {
-  border-bottom: 1px solid #c6c6c6;
-  }
-table.full tbody tr.active td{
-  cursor: pointer;
-  background-color: #ebebeb;
-  }
-table.full tbody tr td:hover,
-table.full tbody tr:hover {
-  cursor: pointer;
-  background-color: #f5f5f5;
-  }
-table.full tbody tr.active td:hover,
-table.full tbody tr.active:hover {
-  cursor: pointer;
-  background-color: #ebebeb;
-  }
-/**
  * Country pages
  */
 .country-profile {
@@ -1241,7 +1228,7 @@ table.full tbody tr.active:hover {
 .country-summary div.gain .trend {
   color: #666;
   }
-  
+
 /*Reporting Level*/
 #indicator-reporting {
   color: white;
@@ -1273,7 +1260,7 @@ table.full tbody tr.active:hover {
 .country-profile tr.worst td.score {
   background-image: url('../images/sprite.png');
   background-repeat: no-repeat;
-  background-position: -290px -880px;
+  background-position: -290px -885px;
   }
 .country-profile tr.section td.score {
   background-position: -290px -875px;
