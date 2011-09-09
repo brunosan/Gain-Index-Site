@@ -257,24 +257,19 @@ table.data.ranking-history {
 /** Ranking Page ***/
 ul.tabs.level-1 a { display: none;}
 ul.tabs.level-1 a.exact.active { 
-  font-size: 20px;
-  font-weight: bold;
   padding-bottom: 15px;
   font-weight: 100;
   margin-top: 15px;
   display: block;
-  font-size: 28px;
+  font-size: 20px;
   border-bottom: #c6c6c6 1px solid;
   }
 ul.tabs.level-2 a.active {
-  font-size: 20px;
-  font-weight: bold;
   padding-bottom: 15px;
-  font-weight: 100;
   margin-top: 15px;
   display: block;
-  font-size: 28px;
-  border-bottom: #c6c6c6 1px solid;
+  font-size: 20px;
+  border-bottom: #C6C6C6 1px solid;
   }
 
 /*** Footer ***/
