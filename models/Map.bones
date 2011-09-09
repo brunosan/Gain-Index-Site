@@ -21,6 +21,11 @@ model = Backbone.Model.extend({
         this.controls = options.controls || ['interaction'],
         this.el = el; // Sorry mom!
 
+        // Initialize a country search collection to
+        // allow easy access to the country name from
+        // the meta info.
+        this.countryMeta = new models.CountrySearch();
+
         var mm = com.modestmaps,
             tilejson = this.tilejson();
 
@@ -155,8 +160,12 @@ model = Backbone.Model.extend({
             val = models.Indicator.format(data.factor_raw, ind);
             inlineData = ' data-iso="' + data.iso_a3 + '"';
         }
-        
-        return '<span'+ inlineData +'>' + data.admin + ': '+ val +'</span>';
+        var country = this.countryMeta.detect(function(m) {
+            return data.iso_a3 == m.get('ISO3');
+        });
+        var countryName = (country && country.get('name')) || data.admin;
+
+        return '<span'+ inlineData +'>' + countryName + ': '+ val +'</span>';
     },
     featureClick: function(feature, context, index) {
         // no-op.
