@@ -25,7 +25,6 @@ model = Backbone.Model.extend({
     trend: function(options) {
         if (this.get('name') == 'static') {
             var sign = this.get('trend').sign;
-
             switch (sign) {
                 case -1: return 'down';
                 case 0: return 'same';
