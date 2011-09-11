@@ -160,7 +160,7 @@ model.meta = {
     "coast_area": {
         "id": "coast_area",
         "name": "Coastal area",
-        "description": "Percent of land less than 5 meters above sea-level.",
+        "description": "Percent of land less than 10 meters above sea-level.",
         "format": "number",
         "decimals": "2",
         "unit": "%s %",
@@ -168,14 +168,14 @@ model.meta = {
         "sector": "infrastruct",
         "component": "exposure",
         "source": [{
-            "name": "World Resources Institute",
-            "link": "http://cait.wri.org/cait-va.php?page=valand5m&mode=view"
+            "name": "CIESIN",
+            "link": "http://sedac.ciesin.columbia.edu/gpw/lecz.jsp "
         }]
     },
     "coast_popn": {
         "id": "coast_popn",
         "name": "Coastal population",
-        "description": "Percent of population living less than 5 meters above sea-level.",
+        "description": "Percent of population living less than 10 meters above sea-level.",
         "format": "percent",
         "decimals": "2",
         "unit": "%s %",
@@ -183,8 +183,8 @@ model.meta = {
         "sector": "infrastruct",
         "component": "sensitivity",
         "source": [{
-            "name": "World Resources Institute",
-            "link": "http://cait.wri.org/cait-va.php?page=vapop5m&mode=view"
+           "name": "CIESIN",
+           "link": "http://sedac.ciesin.columbia.edu/gpw/lecz.jsp "
         }]
     },
     "corruption": {
@@ -258,8 +258,8 @@ model.meta = {
         "sector": "infrastruct",
         "component": "exposure",
         "source": [{
-            "name": "World Resources Institute",
-            "link": "http://cait.wri.org/cait-va.php?page=vaelectricity&mode=view"
+            "name": "WHO & UNPD",
+            "link": "http://content.undp.org/go/cms-service/stream/asset/?asset_id=2205620 "
         }]
     },
     "energy_sensit": {
@@ -421,7 +421,7 @@ model.meta = {
         "component": "sensitivity",
         "source": [{
             "name": "FAO",
-            "link": "http://fao.org"
+            "link": "http://FAOStat.fao.org"
         }]
     },
     "invest": {
@@ -569,7 +569,7 @@ model.meta = {
     "road_floods": {
         "id": "road_floods",
         "name": "Road flooding",
-        "description": "Frequency of floods divided by land area.",
+        "description": "Frequency of floods calculated as flood disasters per decade per 100,000 km2 of land area.",
         "format": "number",
         "decimals": "2",
         "unit": null,
@@ -732,7 +732,7 @@ model.meta = {
         "component": "sensitivity",
         "source": [{
             "name": "WHO",
-            "link": "http://who.org"
+            "link": "http://apps.who.int/ghodata/?vid=99001#""
         }]
     },
     "water_use": {
@@ -740,7 +740,7 @@ model.meta = {
         "name": "Water use",
         "description": "Percent of total internal and external water withdrawn for all uses.",
         "format": "number",
-        "decimals": "2",
+        "decimals": "1",
         "unit": "%s %",
         "index": "vulnerability",
         "sector": "water",
@@ -949,7 +949,7 @@ model.meta = {
     "gain_delta": {
         "id": "gain_delta",
         "name": "GaIn, corrected for GDP",
-        "description": "GDP corrected GaIn scores represent how far the actual GaIn score is from its expected value, based on its GDP. A positive value means a country has a better GaIn score than other countries of a similar GDP. A negative value means a country has a worse score.",
+        "description": "GDP corrected GaIn scores represent how much better or worse the actual GaIn score is from its expected value, based on its GDP. A positive value means a country has a better GaIn score than other countries of a similar GDP. A negative value means a country has a worse score.",
         "format": "number",
         "decimals": "2",
         "unit": null,
