@@ -732,7 +732,7 @@ model.meta = {
         "component": "sensitivity",
         "source": [{
             "name": "WHO",
-            "link": "http://apps.who.int/ghodata/?vid=99001#""
+            "link": "http://apps.who.int/ghodata/?vid=99001#"
         }]
     },
     "water_use": {
