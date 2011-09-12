@@ -64,7 +64,7 @@ view = views.Main.extend({
         this.ensureChildViews();
         this.vTable.render();
         this.rTable.render();
-        this.pageTitle = 'GaIn Country Brief: ' + this.model.meta('name');
+        this.pageTitle = this.model.meta('name');
         return this;
     },
     attach: function() {
