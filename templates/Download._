@@ -1,25 +1,4 @@
-<div class='download-page'>
-  <h2 class='container'>Download Data</h2>
-  <div class='prose container'>Data comprises all 192 UN countries (as of Dec. 2010), 15 years (from 1995 to 2010), all 35 Indicators and each computational step (Raw sourced data, Interpolated value to fill data gaps where possible, and Score values). Roughly half a million numbers.  </div>
-<p>
-<div class='prose container'>Data is provided in separate CSV files inside a single compressed file. </div>
-  <ul>
-    <li>Global Adaptation Index.</li>
-    <li>Vulnerability score.</li>
-    <li>Vulnerability sector scores: Water, Agriculture, Health, Infrastructure.</li>
-    <li>Component scores: Exposure, Sensitivity, Capacity.</li>
-    <li>Readiness score.</li>
-    <li>Readiness sector scores: Economic Readiness, Governance, Social Readiness.</li>
-    <li>GDP adjusted scores for GaIn, Vulnerability and Readiness scores.</li>
-    <li>All 35 indicators used to generate GaIn. (Sourced values, Input and Scores)</li>
-    <li>Additional context information (Populations and GDP)</li>
-  </ul>
-  <a href='/assets/gain/files/<%= model.escape('filename') %>' class='container button green'>
-      DOWNLOAD (.zip, <%= model.getFileSize() %>)
-      <span class='timestamp'>Last updated on <%= model.getDate() %></span>
-  </a>	<p>
-
-  Terms of use: <p>
-
-<a class='ccbadge container' href="http://creativecommons.org/licenses/by/3.0/">Attribution 3.0 Unported</a>
-</div>
+<a href='/assets/gain/files/<%= model.escape('filename') %>' class='container button green'>
+DOWNLOAD (.zip, <%= model.getFileSize() %>)
+<span class='timestamp'>Last updated on <%= model.getDate() %></span>
+</a>

@@ -7,7 +7,6 @@ router = Backbone.Router.extend({
         '/ranking/:id': 'ranking',
         '/ranking/readiness/:id': 'ranking',
         '/ranking/vulnerability/:id': 'ranking',
-        '/download': 'download',
         '/matrix': 'matrix',
         '/about': 'overview',
         '/about/:id': 'page',
@@ -69,16 +68,6 @@ router = Backbone.Router.extend({
             router.send(views.Ranking, {model: ranking, staticData: staticData});
         });
     },
-    download: function() {
-        var router = this;
-        var fetcher = this.fetcher();
-        var model = new models.Download({id: 'data'});
-
-        fetcher.push(model);
-        fetcher.fetch(function() {
-            router.send(views.Download, {model: model});
-        });
-    },
     overview: function() {
         return this.page('overview');
     },
@@ -90,9 +79,20 @@ router = Backbone.Router.extend({
             model = new models.Page({id: id});
 
         fetcher.push(model);
+
+        if (id === 'download') {
+            var dl = new models.Download({id: 'data'});
+            fetcher.push(dl);
+        }
         fetcher.fetch(function(err) {
             if (err) return router.error(err);
-            router.send(views.Page, {model: model});
+            var options = {model: model};
+
+            if (dl) {
+                options.download = dl;
+            }
+
+            router.send(views.Page, options);
         });
     },
     matrix: function() {

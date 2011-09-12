@@ -1147,30 +1147,22 @@ ul.mini-matrix-links {
 /**
  * Download page
  */
-.download-page {
-  background-color: white;
-  float: left;
-}
-
-.download-page .prose {
-}
-
-.download-page ul {
+.document .download ul {
   border: 1px solid #c6c6c6;
   padding: 10px;
-  margin: 15px 0 15px 15px;
+  margin: 15px -15px 15px 0;
    -moz-border-radius: 4px 0 0 4px;
    -webkit-border-radius: 4px 0 0 4px;
    border-radius: 4px 0 0 4px;
 }
 
-.download-page li {
+.document .download li {
   list-style: disc;
   padding: 5px 0 5px 0;
   margin-left: 20px;
 }
 
-.download-page a.button {
+.document .download a.button {
   display: block;
   font-family: 'AlternateGothicLTNo3Regular','HelveticaNeueBoldCondensed', 'HelveticaNeue-Bold-Condensed', 'Arial Narrow', 'Arial', sans-serif;
   font-weight: normal;
@@ -1179,13 +1171,13 @@ ul.mini-matrix-links {
   line-height: 40px;
   text-indent: 45px;
   padding: 10px;
-  margin: 0 15px 15px 15px;
+  margin: 0 15px 15px 0;
   width:590px;
   float: left;
   background: #68BB37 url(../images/sprite.png) no-repeat 10px -265px;
 }
 
-.download-page .timestamp {
+.document .download .timestamp {
   font-family: 'HelveticaNeue', Helvetica, Arial, sans-serif;
   float: right;
   font-size: 12px;
@@ -1193,7 +1185,7 @@ ul.mini-matrix-links {
   text-transform: none;
 }
 
-.download-page a.ccbadge {
+.document .download a.ccbadge {
   text-indent: 25px;
   float: left;
   display: block;
