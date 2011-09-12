@@ -71,6 +71,5 @@ model = Backbone.Collection.extend({
         };
         this.sort(options);
         return this;
-    },
-
+    }
 });
