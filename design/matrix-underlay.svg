@@ -28,14 +28,14 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.4"
-     inkscape:cx="325.24006"
-     inkscape:cy="100.87884"
+     inkscape:cx="927.19099"
+     inkscape:cy="-67.678158"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
      inkscape:window-width="1183"
      inkscape:window-height="725"
-     inkscape:window-x="87"
+     inkscape:window-x="111"
      inkscape:window-y="0"
      inkscape:window-maximized="0"
      showguides="true"
@@ -446,410 +446,6 @@
          x="492.25558"
          id="tspan13573"
          sodipodi:role="line">.8</tspan></text>
-    <g
-       id="g229877"
-       transform="matrix(0.64821142,0,0,0.64821142,323.61334,444.109)">
-      <g
-         transform="translate(0,390)"
-         id="g229871">
-        <rect
-           y="661.64783"
-           x="1250"
-           height="175"
-           width="290"
-           id="rect229261"
-           style="opacity:0.78640777;color:#000000;fill:#68bb37;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
-        <rect
-           style="opacity:0.78640777;color:#000000;fill:#68b5df;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
-           id="rect229263"
-           width="290"
-           height="175"
-           x="1250"
-           y="486.64789" />
-        <rect
-           style="opacity:0.78640777;color:#000000;fill:#f6cd47;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
-           id="rect229265"
-           width="290"
-           height="175"
-           x="960"
-           y="661.64783" />
-        <path
-           inkscape:connector-curvature="0"
-           id="path229267"
-           d="m 960,486.64789 290,0 0,175.00001 -290,0 z"
-           style="opacity:0.78640777;color:#000000;fill:#ff7c80;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
-      </g>
-      <text
-         xml:space="preserve"
-         style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Helvetica"
-         x="-1089.3467"
-         y="929.9046"
-         id="text229269"
-         sodipodi:linespacing="125%"
-         transform="matrix(0,-1,1,0,0,0)"
-         inkscape:export-filename="/Users/tristen/devseed/gai-gain/assets/images/matrix-underlay.png"
-         inkscape:export-xdpi="90"
-         inkscape:export-ydpi="90"><tspan
-           sodipodi:role="line"
-           id="tspan229271"
-           x="-1089.3467"
-           y="929.9046"
-           style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#434343;fill-opacity:1;font-family:Helvetica Neue LT Std;-inkscape-font-specification:Helvetica Neue LT Std">Vulnerability</tspan></text>
-      <text
-         sodipodi:linespacing="125%"
-         id="text229273"
-         y="1262.2635"
-         x="1216.9745"
-         style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Helvetica"
-         xml:space="preserve"
-         inkscape:export-filename="/Users/tristen/devseed/gai-gain/assets/images/matrix-underlay.png"
-         inkscape:export-xdpi="90"
-         inkscape:export-ydpi="90"><tspan
-           style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#434343;fill-opacity:1;font-family:Helvetica Neue LT Std;-inkscape-font-specification:Helvetica Neue LT Std"
-           y="1262.2635"
-           x="1216.9745"
-           id="tspan229275"
-           sodipodi:role="line">Readiness</tspan></text>
-      <text
-         sodipodi:linespacing="125%"
-         id="text229277"
-         y="1230.308"
-         x="943.91156"
-         style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Helvetica"
-         xml:space="preserve"
-         inkscape:export-filename="/Users/tristen/devseed/gai-gain/assets/images/matrix-underlay.png"
-         inkscape:export-xdpi="90"
-         inkscape:export-ydpi="90"><tspan
-           style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#434343;fill-opacity:1;font-family:Helvetica Neue LT Std;-inkscape-font-specification:Helvetica Neue LT Std"
-           y="1230.308"
-           x="943.91156"
-           id="tspan229279"
-           sodipodi:role="line">.1</tspan></text>
-      <text
-         xml:space="preserve"
-         style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Helvetica"
-         x="942.25555"
-         y="1171.808"
-         id="text229281"
-         sodipodi:linespacing="125%"
-         inkscape:export-filename="/Users/tristen/devseed/gai-gain/assets/images/matrix-underlay.png"
-         inkscape:export-xdpi="90"
-         inkscape:export-ydpi="90"><tspan
-           sodipodi:role="line"
-           id="tspan229283"
-           x="942.25555"
-           y="1171.808"
-           style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#434343;fill-opacity:1;font-family:Helvetica Neue LT Std;-inkscape-font-specification:Helvetica Neue LT Std">.2</tspan></text>
-      <text
-         sodipodi:linespacing="125%"
-         id="text229285"
-         y="1115.308"
-         x="942.0636"
-         style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Helvetica"
-         xml:space="preserve"
-         inkscape:export-filename="/Users/tristen/devseed/gai-gain/assets/images/matrix-underlay.png"
-         inkscape:export-xdpi="90"
-         inkscape:export-ydpi="90"><tspan
-           style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#434343;fill-opacity:1;font-family:Helvetica Neue LT Std;-inkscape-font-specification:Helvetica Neue LT Std"
-           y="1115.308"
-           x="942.0636"
-           id="tspan229287"
-           sodipodi:role="line">.3</tspan></text>
-      <text
-         xml:space="preserve"
-         style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Helvetica"
-         x="942.0036"
-         y="1055.308"
-         id="text229289"
-         sodipodi:linespacing="125%"
-         inkscape:export-filename="/Users/tristen/devseed/gai-gain/assets/images/matrix-underlay.png"
-         inkscape:export-xdpi="90"
-         inkscape:export-ydpi="90"><tspan
-           sodipodi:role="line"
-           id="tspan229291"
-           x="942.0036"
-           y="1055.308"
-           style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#434343;fill-opacity:1;font-family:Helvetica Neue LT Std;-inkscape-font-specification:Helvetica Neue LT Std">.4</tspan></text>
-      <text
-         sodipodi:linespacing="125%"
-         id="text229293"
-         y="999.30792"
-         x="942.07556"
-         style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Helvetica"
-         xml:space="preserve"
-         inkscape:export-xdpi="90"
-         inkscape:export-ydpi="90"
-         inkscape:export-filename="/Users/tristen/devseed/gai-gain/assets/images/matrix-underlay.png"><tspan
-           style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#434343;fill-opacity:1;font-family:Helvetica Neue LT Std;-inkscape-font-specification:Helvetica Neue LT Std"
-           y="999.30792"
-           x="942.07556"
-           id="tspan229295"
-           sodipodi:role="line">.5</tspan></text>
-      <text
-         inkscape:export-filename="/Users/tristen/devseed/gai-gain/assets/images/matrix-underlay.png"
-         inkscape:export-ydpi="90"
-         inkscape:export-xdpi="90"
-         xml:space="preserve"
-         style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Helvetica"
-         x="941.40088"
-         y="939.30792"
-         id="text229297"
-         sodipodi:linespacing="125%"><tspan
-           sodipodi:role="line"
-           id="tspan229299"
-           x="941.40088"
-           y="939.30792"
-           style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#434343;fill-opacity:1;font-family:Helvetica Neue LT Std;-inkscape-font-specification:Helvetica Neue LT Std">.<tspan
-   style="font-size:12px"
-   id="tspan229301">6</tspan></tspan></text>
-      <rect
-         style="color:#000000;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
-         id="rect229303"
-         width="580"
-         height="1"
-         x="960"
-         y="1168.6479"
-         inkscape:export-filename="/Users/tristen/devseed/gai-gain/assets/images/matrix-underlay.png"
-         inkscape:export-xdpi="90"
-         inkscape:export-ydpi="90" />
-      <rect
-         y="1108.6479"
-         x="960"
-         height="1"
-         width="580"
-         id="rect229305"
-         style="color:#000000;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
-         inkscape:export-filename="/Users/tristen/devseed/gai-gain/assets/images/matrix-underlay.png"
-         inkscape:export-xdpi="90"
-         inkscape:export-ydpi="90" />
-      <rect
-         style="color:#000000;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
-         id="rect229307"
-         width="580"
-         height="1"
-         x="960"
-         y="1052.1479"
-         inkscape:export-filename="/Users/tristen/devseed/gai-gain/assets/images/matrix-underlay.png"
-         inkscape:export-xdpi="90"
-         inkscape:export-ydpi="90" />
-      <rect
-         y="993.14789"
-         x="960"
-         height="1"
-         width="580"
-         id="rect229309"
-         style="color:#000000;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
-         inkscape:export-filename="/Users/tristen/devseed/gai-gain/assets/images/matrix-underlay.png"
-         inkscape:export-xdpi="90"
-         inkscape:export-ydpi="90" />
-      <rect
-         style="color:#000000;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
-         id="rect229311"
-         width="580"
-         height="1"
-         x="960"
-         y="935.64789"
-         inkscape:export-filename="/Users/tristen/devseed/gai-gain/assets/images/matrix-underlay.png"
-         inkscape:export-xdpi="90"
-         inkscape:export-ydpi="90" />
-      <rect
-         inkscape:export-ydpi="90"
-         inkscape:export-xdpi="90"
-         inkscape:export-filename="/Users/tristen/devseed/gai-gain/assets/images/matrix-underlay.png"
-         style="color:#000000;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
-         id="rect229313"
-         width="350"
-         height="1"
-         x="876.64789"
-         y="-1033.5"
-         transform="matrix(0,1,-1,0,0,0)" />
-      <rect
-         inkscape:export-ydpi="90"
-         inkscape:export-xdpi="90"
-         inkscape:export-filename="/Users/tristen/devseed/gai-gain/assets/images/matrix-underlay.png"
-         y="-1106"
-         x="876.64789"
-         height="1"
-         width="350"
-         id="rect229315"
-         style="color:#000000;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
-         transform="matrix(0,1,-1,0,0,0)" />
-      <rect
-         inkscape:export-ydpi="90"
-         inkscape:export-xdpi="90"
-         inkscape:export-filename="/Users/tristen/devseed/gai-gain/assets/images/matrix-underlay.png"
-         style="color:#000000;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
-         id="rect229317"
-         width="350"
-         height="1"
-         x="876.64789"
-         y="-1468.5"
-         transform="matrix(0,1,-1,0,0,0)" />
-      <rect
-         inkscape:export-ydpi="90"
-         inkscape:export-xdpi="90"
-         inkscape:export-filename="/Users/tristen/devseed/gai-gain/assets/images/matrix-underlay.png"
-         y="-1178.5"
-         x="876.64789"
-         height="1"
-         width="350"
-         id="rect229319"
-         style="color:#000000;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
-         transform="matrix(0,1,-1,0,0,0)" />
-      <rect
-         transform="matrix(0,1,-1,0,0,0)"
-         y="-1251"
-         x="876.64789"
-         height="1"
-         width="350"
-         id="rect229321"
-         style="color:#000000;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
-         inkscape:export-filename="/Users/tristen/devseed/gai-gain/assets/images/matrix-underlay.png"
-         inkscape:export-xdpi="90"
-         inkscape:export-ydpi="90" />
-      <rect
-         transform="matrix(0,1,-1,0,0,0)"
-         style="color:#000000;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
-         id="rect229323"
-         width="350"
-         height="1"
-         x="876.64789"
-         y="-1323.5"
-         inkscape:export-filename="/Users/tristen/devseed/gai-gain/assets/images/matrix-underlay.png"
-         inkscape:export-xdpi="90"
-         inkscape:export-ydpi="90" />
-      <rect
-         transform="matrix(0,1,-1,0,0,0)"
-         y="-1396"
-         x="876.64789"
-         height="1"
-         width="350"
-         id="rect229325"
-         style="color:#000000;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
-         inkscape:export-filename="/Users/tristen/devseed/gai-gain/assets/images/matrix-underlay.png"
-         inkscape:export-xdpi="90"
-         inkscape:export-ydpi="90" />
-      <text
-         inkscape:export-ydpi="90"
-         inkscape:export-xdpi="90"
-         inkscape:export-filename="/Users/tristen/devseed/gai-gain/assets/images/matrix-underlay.png"
-         sodipodi:linespacing="125%"
-         id="text229327"
-         y="1241.808"
-         x="1027.2556"
-         style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Helvetica"
-         xml:space="preserve"><tspan
-           style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#434343;fill-opacity:1;font-family:Helvetica Neue LT Std;-inkscape-font-specification:Helvetica Neue LT Std"
-           y="1241.808"
-           x="1027.2556"
-           id="tspan229329"
-           sodipodi:role="line">.2</tspan></text>
-      <text
-         xml:space="preserve"
-         style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Helvetica"
-         x="1099.7556"
-         y="1241.808"
-         id="text229331"
-         sodipodi:linespacing="125%"
-         inkscape:export-filename="/Users/tristen/devseed/gai-gain/assets/images/matrix-underlay.png"
-         inkscape:export-xdpi="90"
-         inkscape:export-ydpi="90"><tspan
-           sodipodi:role="line"
-           id="tspan229333"
-           x="1099.7556"
-           y="1241.808"
-           style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#434343;fill-opacity:1;font-family:Helvetica Neue LT Std;-inkscape-font-specification:Helvetica Neue LT Std">.3</tspan></text>
-      <text
-         inkscape:export-ydpi="90"
-         inkscape:export-xdpi="90"
-         inkscape:export-filename="/Users/tristen/devseed/gai-gain/assets/images/matrix-underlay.png"
-         sodipodi:linespacing="125%"
-         id="text229335"
-         y="1241.808"
-         x="1172.2556"
-         style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Helvetica"
-         xml:space="preserve"><tspan
-           style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#434343;fill-opacity:1;font-family:Helvetica Neue LT Std;-inkscape-font-specification:Helvetica Neue LT Std"
-           y="1241.808"
-           x="1172.2556"
-           id="tspan229337"
-           sodipodi:role="line">.4</tspan></text>
-      <text
-         xml:space="preserve"
-         style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Helvetica"
-         x="1245.2556"
-         y="1241.808"
-         id="text229339"
-         sodipodi:linespacing="125%"
-         inkscape:export-filename="/Users/tristen/devseed/gai-gain/assets/images/matrix-underlay.png"
-         inkscape:export-xdpi="90"
-         inkscape:export-ydpi="90"><tspan
-           sodipodi:role="line"
-           id="tspan229341"
-           x="1245.2556"
-           y="1241.808"
-           style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#434343;fill-opacity:1;font-family:Helvetica Neue LT Std;-inkscape-font-specification:Helvetica Neue LT Std">.5</tspan></text>
-      <text
-         inkscape:export-ydpi="90"
-         inkscape:export-xdpi="90"
-         inkscape:export-filename="/Users/tristen/devseed/gai-gain/assets/images/matrix-underlay.png"
-         sodipodi:linespacing="125%"
-         id="text229343"
-         y="1241.808"
-         x="1317.2556"
-         style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Helvetica"
-         xml:space="preserve"><tspan
-           style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#434343;fill-opacity:1;font-family:Helvetica Neue LT Std;-inkscape-font-specification:Helvetica Neue LT Std"
-           y="1241.808"
-           x="1317.2556"
-           id="tspan229345"
-           sodipodi:role="line">.6</tspan></text>
-      <text
-         xml:space="preserve"
-         style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Helvetica"
-         x="1390.2556"
-         y="1241.808"
-         id="text229347"
-         sodipodi:linespacing="125%"
-         inkscape:export-filename="/Users/tristen/devseed/gai-gain/assets/images/matrix-underlay.png"
-         inkscape:export-xdpi="90"
-         inkscape:export-ydpi="90"><tspan
-           sodipodi:role="line"
-           id="tspan229349"
-           x="1390.2556"
-           y="1241.808"
-           style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#434343;fill-opacity:1;font-family:Helvetica Neue LT Std;-inkscape-font-specification:Helvetica Neue LT Std">.7</tspan></text>
-      <text
-         inkscape:export-ydpi="90"
-         inkscape:export-xdpi="90"
-         inkscape:export-filename="/Users/tristen/devseed/gai-gain/assets/images/matrix-underlay.png"
-         xml:space="preserve"
-         style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Helvetica"
-         x="957.41156"
-         y="1241.808"
-         id="text229351"
-         sodipodi:linespacing="125%"><tspan
-           sodipodi:role="line"
-           id="tspan229353"
-           x="957.41156"
-           y="1241.808"
-           style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#434343;fill-opacity:1;font-family:Helvetica Neue LT Std;-inkscape-font-specification:Helvetica Neue LT Std">.1</tspan></text>
-      <text
-         inkscape:export-ydpi="90"
-         inkscape:export-xdpi="90"
-         inkscape:export-filename="/Users/tristen/devseed/gai-gain/assets/images/matrix-underlay.png"
-         sodipodi:linespacing="125%"
-         id="text229355"
-         y="1241.808"
-         x="1462.2556"
-         style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Helvetica"
-         xml:space="preserve"><tspan
-           style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#434343;fill-opacity:1;font-family:Helvetica Neue LT Std;-inkscape-font-specification:Helvetica Neue LT Std"
-           y="1241.808"
-           x="1462.2556"
-           id="tspan229357"
-           sodipodi:role="line">.8</tspan></text>
-    </g>
     <path
        inkscape:connector-curvature="0"
        id="path10755"
@@ -891,5 +487,162 @@
        height="1"
        x="0"
        y="934.11218" />
+    <rect
+       style="color:#000000;fill:#f8f8f8;stroke:#cccccc;stroke-width:2;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;fill-opacity:1"
+       id="rect5504"
+       width="283"
+       height="148"
+       x="772.50903"
+       y="1059.476"
+       inkscape:export-filename="/Users/tristen/devseed/gai-gain/assets/images/empty-graph.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <g
+       id="g5506"
+       transform="translate(-174.2767,-30.814729)"
+       inkscape:export-filename="/Users/tristen/devseed/gai-gain/assets/images/empty-graph.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90">
+      <g
+         transform="translate(0,-3.6271594)"
+         id="g5498">
+        <rect
+           inkscape:export-ydpi="90"
+           inkscape:export-xdpi="90"
+           inkscape:export-filename="/Users/tristen/devseed/gai-gain/assets/images/matrix-underlay.png"
+           y="1210.7362"
+           x="945.8963"
+           height="0.49137932"
+           width="285"
+           id="rect229303"
+           style="color:#000000;fill:#cccccc;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+        <rect
+           inkscape:export-ydpi="90"
+           inkscape:export-xdpi="90"
+           inkscape:export-filename="/Users/tristen/devseed/gai-gain/assets/images/matrix-underlay.png"
+           style="color:#000000;fill:#cccccc;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+           id="rect229305"
+           width="285"
+           height="0.49137932"
+           x="945.8963"
+           y="1181.2535" />
+        <rect
+           inkscape:export-ydpi="90"
+           inkscape:export-xdpi="90"
+           inkscape:export-filename="/Users/tristen/devseed/gai-gain/assets/images/matrix-underlay.png"
+           y="1153.4905"
+           x="945.8963"
+           height="0.49137932"
+           width="285"
+           id="rect229307"
+           style="color:#000000;fill:#cccccc;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+        <rect
+           inkscape:export-ydpi="90"
+           inkscape:export-xdpi="90"
+           inkscape:export-filename="/Users/tristen/devseed/gai-gain/assets/images/matrix-underlay.png"
+           style="color:#000000;fill:#cccccc;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+           id="rect229309"
+           width="285"
+           height="0.49137932"
+           x="945.8963"
+           y="1124.4991" />
+      </g>
+      <g
+         transform="translate(-0.24570438,0)"
+         id="g5489">
+        <rect
+           transform="matrix(0,1,-1,0,0,0)"
+           y="-982.0127"
+           x="1089.2362"
+           height="0.49137932"
+           width="150"
+           id="rect229313"
+           style="color:#000000;fill:#cccccc;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+           inkscape:export-filename="/Users/tristen/devseed/gai-gain/assets/images/matrix-underlay.png"
+           inkscape:export-xdpi="90"
+           inkscape:export-ydpi="90" />
+        <rect
+           transform="matrix(0,1,-1,0,0,0)"
+           style="color:#000000;fill:#cccccc;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+           id="rect229315"
+           width="150"
+           height="0.49137932"
+           x="1089.2362"
+           y="-1017.6377"
+           inkscape:export-filename="/Users/tristen/devseed/gai-gain/assets/images/matrix-underlay.png"
+           inkscape:export-xdpi="90"
+           inkscape:export-ydpi="90" />
+        <rect
+           transform="matrix(0,1,-1,0,0,0)"
+           y="-1195.7627"
+           x="1089.2362"
+           height="0.49137932"
+           width="150"
+           id="rect229317"
+           style="color:#000000;fill:#cccccc;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+           inkscape:export-filename="/Users/tristen/devseed/gai-gain/assets/images/matrix-underlay.png"
+           inkscape:export-xdpi="90"
+           inkscape:export-ydpi="90" />
+        <rect
+           transform="matrix(0,1,-1,0,0,0)"
+           style="color:#000000;fill:#cccccc;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+           id="rect229319"
+           width="150"
+           height="0.49137932"
+           x="1089.2362"
+           y="-1053.2627"
+           inkscape:export-filename="/Users/tristen/devseed/gai-gain/assets/images/matrix-underlay.png"
+           inkscape:export-xdpi="90"
+           inkscape:export-ydpi="90" />
+        <rect
+           inkscape:export-ydpi="90"
+           inkscape:export-xdpi="90"
+           inkscape:export-filename="/Users/tristen/devseed/gai-gain/assets/images/matrix-underlay.png"
+           style="color:#000000;fill:#cccccc;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+           id="rect229321"
+           width="150"
+           height="0.49137932"
+           x="1089.2362"
+           y="-1088.8877"
+           transform="matrix(0,1,-1,0,0,0)" />
+        <rect
+           inkscape:export-ydpi="90"
+           inkscape:export-xdpi="90"
+           inkscape:export-filename="/Users/tristen/devseed/gai-gain/assets/images/matrix-underlay.png"
+           y="-1124.5127"
+           x="1089.2362"
+           height="0.49137932"
+           width="150"
+           id="rect229323"
+           style="color:#000000;fill:#cccccc;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+           transform="matrix(0,1,-1,0,0,0)" />
+        <rect
+           inkscape:export-ydpi="90"
+           inkscape:export-xdpi="90"
+           inkscape:export-filename="/Users/tristen/devseed/gai-gain/assets/images/matrix-underlay.png"
+           style="color:#000000;fill:#cccccc;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+           id="rect229325"
+           width="150"
+           height="0.49137932"
+           x="1089.2362"
+           y="-1160.1377"
+           transform="matrix(0,1,-1,0,0,0)" />
+      </g>
+    </g>
+    <text
+       xml:space="preserve"
+       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Helvetica"
+       x="859.52069"
+       y="1143.2214"
+       id="text5577"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/Users/tristen/devseed/gai-gain/assets/images/empty-graph.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"><tspan
+         sodipodi:role="line"
+         id="tspan5579"
+         x="859.52069"
+         y="1143.2214"
+         style="font-size:28px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;fill:#b5b5b5;fill-opacity:1;font-family:Helvetica Neue LT Std;-inkscape-font-specification:Helvetica Neue LT Std Bold">No Data</tspan></text>
   </g>
 </svg>
