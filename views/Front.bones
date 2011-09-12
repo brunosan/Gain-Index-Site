@@ -3,7 +3,7 @@ view = views.Main.extend({
         'click .drawer .handle a.handle': 'closeDrawer',
         'click #map-years li a': 'yearClick',
         'click #map-indicators li a': 'indicatorClick',
-        'click .floor .correction-control a': 'toggleCorrection',
+        'click .floor .correction-control a.correct': 'toggleCorrection',
         'click .featured .country': 'countryClick'
     },
     initialize: function(options) {

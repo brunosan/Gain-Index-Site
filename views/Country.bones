@@ -209,7 +209,7 @@ view = views.Main.extend({
 
             new views.Bigline(graphOptions)
         } else {
-            $('.drawer .content .graph', this.el).hide();
+            $('.drawer .content .graph', this.el).addClass('no-data');
         }
         $('.drawer', this.el).addClass('open');
         this.positionDrawer('drawer');

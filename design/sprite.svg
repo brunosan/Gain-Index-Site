@@ -27,16 +27,16 @@
      borderopacity="1.0"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.70710678"
-     inkscape:cx="247.23561"
-     inkscape:cy="907.91355"
+     inkscape:zoom="2"
+     inkscape:cx="25.338421"
+     inkscape:cy="231.99112"
      inkscape:document-units="px"
-     inkscape:current-layer="svg6367"
-     showgrid="false"
-     inkscape:window-width="980"
-     inkscape:window-height="728"
-     inkscape:window-x="199"
-     inkscape:window-y="13"
+     inkscape:current-layer="layer1"
+     showgrid="true"
+     inkscape:window-width="1275"
+     inkscape:window-height="742"
+     inkscape:window-x="13"
+     inkscape:window-y="0"
      inkscape:window-maximized="0"
      fit-margin-top="0"
      fit-margin-left="0"
@@ -80,7 +80,7 @@
      id="layer2"
      inkscape:label="gray"
      transform="translate(1.4e-5,160.00001)"
-     style="display:inline"
+     style="display:none"
      sodipodi:insensitive="true">
     <rect
        style="opacity:0.5;color:#000000;fill:#333333;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
@@ -681,26 +681,18 @@
        inkscape:export-filename="/Users/saman/Dropbox/work_repos/gai-gain/assets/images/sprite.png"
        inkscape:export-xdpi="90"
        inkscape:export-ydpi="90" />
-    <g
-       style="display:inline"
-       id="g7854"
-       transform="translate(98.999999,-64.637705)"
-       inkscape:export-filename="/Users/saman/Dropbox/work_repos/gai-gain/assets/images/sprite.png"
-       inkscape:export-xdpi="90"
-       inkscape:export-ydpi="90">
-      <path
-         sodipodi:nodetypes="cccccc"
-         inkscape:connector-curvature="0"
-         id="path7838"
-         d="m -96,284.99988 -2,0 4,5 4.000001,-5 -2,0 z"
-         style="color:#000000;fill:#ebebeb;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
-      <path
-         style="color:#000000;fill:#ebebeb;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
-         d="m -96,281.99988 -2,0 4,-5 3.999999,5 -2,0 z"
-         id="path7840"
-         inkscape:connector-curvature="0"
-         sodipodi:nodetypes="cccccc" />
-    </g>
+    <path
+       style="color:#000000;fill:#b5b5b5;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       d="m 2.999999,220.36218 -2,0 4,5 4.000001,-5 -2,0 z"
+       id="path7838"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cccccc" />
+    <path
+       sodipodi:nodetypes="cccccc"
+       inkscape:connector-curvature="0"
+       id="path7840"
+       d="m 2.999999,217.36218 -2,0 4,-5 3.999999,5 -2,0 z"
+       style="color:#000000;fill:#b5b5b5;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
     <g
        id="g8001"
        transform="translate(160,-130.0313)"
@@ -1203,7 +1195,7 @@
        inkscape:connector-curvature="0"
        id="path7530"
        d="m 0,257.36217 13,0 -6.5,9 z"
-       style="color:#000000;fill:#c6c6c6;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1.04900002;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       style="color:#000000;fill:#767676;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1.04900002000000003;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
        inkscape:export-filename="/Users/saman/Dropbox/work_repos/gai-gain/assets/images/sprite.png"
        inkscape:export-xdpi="90"
        inkscape:export-ydpi="90" />
@@ -1215,7 +1207,7 @@
        inkscape:export-xdpi="90"
        inkscape:export-ydpi="90" />
     <path
-       style="color:#000000;fill:#c6c6c6;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1.04900002;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       style="color:#000000;fill:#767676;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1.04900002000000003;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
        d="m 0,286.36217 13,0 -6.5,-9 z"
        id="path9222"
        inkscape:connector-curvature="0"
@@ -1312,15 +1304,15 @@
        inkscape:export-xdpi="90"
        inkscape:export-ydpi="90" />
     <path
-       style="color:#000000;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
-       d="m 10,707.36218 c -5.5228473,0 -10,4.47715 -10,10 0,5.52285 4.4771527,10 10,10 5.522847,0 10,-4.47715 10,-10 0,-5.52285 -4.477153,-10 -10,-10 z m -2,6 4,0 0,5 2,0 -4,5 -4,-5 2,0 0,-5 z"
+       style="color:#000000;fill:#808080;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       d="m -45,707.36218 c -5.522847,0 -10,4.47715 -10,10 0,5.52285 4.477153,10 10,10 5.522847,0 10,-4.47715 10,-10 0,-5.52285 -4.477153,-10 -10,-10 z m -2,6 4,0 0,5 2,0 -4,5 -4,-5 2,0 0,-5 z"
        id="path8463"
        inkscape:export-filename="/Users/saman/Dropbox/work_repos/gai-gain/assets/images/sprite.png"
        inkscape:export-xdpi="90"
        inkscape:export-ydpi="90"
        inkscape:connector-curvature="0" />
     <rect
-       style="color:#000000;fill:#c6c6c6;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       style="color:#000000;fill:#b5b5b5;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
        id="rect8747"
        width="10"
        height="3.0000153"
@@ -1335,7 +1327,7 @@
        height="2.9999924"
        width="10"
        id="rect8749"
-       style="color:#000000;fill:#c6c6c6;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       style="color:#000000;fill:#b5b5b5;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
        inkscape:export-filename="/Users/saman/Dropbox/work_repos/gai-gain/assets/images/sprite.png"
        inkscape:export-xdpi="90"
        inkscape:export-ydpi="90" />
@@ -1343,7 +1335,7 @@
        inkscape:export-ydpi="90"
        inkscape:export-xdpi="90"
        inkscape:export-filename="/Users/saman/Dropbox/work_repos/gai-gain/assets/images/sprite.png"
-       style="color:#000000;fill:#ebebeb;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1.04900002;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       style="color:#000000;fill:#b5b5b5;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1.04900002000000003;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
        d="m 150,257.36217 13,0 -6.5,9 z"
        id="path18562"
        inkscape:connector-curvature="0" />
@@ -1425,7 +1417,7 @@
        sodipodi:cy="818.5"
        sodipodi:rx="3.5"
        sodipodi:ry="3.5"
-       d="m -8,818.5 a 3.5,3.5 0 1 1 -7,0 3.5,3.5 0 1 1 7,0 z"
+       d="m -8,818.5 c 0,1.933 -1.5670034,3.5 -3.5,3.5 -1.932997,0 -3.5,-1.567 -3.5,-3.5 0,-1.933 1.567003,-3.5 3.5,-3.5 1.9329966,0 3.5,1.567 3.5,3.5 z"
        transform="matrix(1.1428571,0,0,1.1428571,349.14286,-192.06636)"
        inkscape:export-filename="/Users/saman/Dropbox/work_repos/gai-gain/assets/images/sprite.png"
        inkscape:export-xdpi="90"
@@ -2039,14 +2031,14 @@
     <path
        inkscape:connector-curvature="0"
        id="path7530-4"
-       d="m 0.017013,1192.403 13,0 -6.5,9 z"
+       d="m 0.017013,1221.403 13,0 -6.5,-9 z"
        style="color:#000000;fill:#b6423c;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1.04900002;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
        inkscape:export-filename="/Users/saman/Dropbox/work_repos/gai-gain/assets/images/sprite.png"
        inkscape:export-xdpi="90"
        inkscape:export-ydpi="90" />
     <path
-       style="color:#000000;fill:#3b942f;fill-opacity:0.94117647;fill-rule:nonzero;stroke:none;stroke-width:1.04900002000000003;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
-       d="m 0.017013,1221.403 13,0 -6.5,-9 z"
+       style="color:#000000;fill:#3b942f;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1.04900002000000003;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       d="m 0.017013,1192.403 13,0 -6.5,9 z"
        id="path9222-2"
        inkscape:connector-curvature="0"
        inkscape:export-filename="/Users/saman/Dropbox/work_repos/gai-gain/assets/images/sprite.png"
@@ -2060,7 +2052,7 @@
      inkscape:connector-curvature="0" />
   <g
      id="g5058"
-     transform="matrix(0.28275001,0,0,0.28275001,30.679601,857.13081)"
+     transform="matrix(0.16360398,0,0,0.16360398,8.2378867e-5,865.02339)"
      style="fill:#ffffff;fill-opacity:1">
     <path
        id="path5014"
@@ -2144,7 +2136,7 @@
        style="fill:#ffffff;fill-opacity:1" />
     <polygon
        id="polygon5046"
-       points="338.658,65.334 331.549,65.334 324.438,65.334 324.438,40.961 324.438,16.588 331.417,16.729 338.395,16.87 338.525,41.102 "
+       points="331.549,65.334 324.438,65.334 324.438,40.961 324.438,16.588 331.417,16.729 338.395,16.87 338.525,41.102 338.658,65.334 "
        style="fill:#ffffff;fill-opacity:1" />
     <path
        id="path5048"
@@ -2153,7 +2145,7 @@
        style="fill:#ffffff;fill-opacity:1" />
     <polygon
        id="polygon5050"
-       points="338.395,11.287 331.417,11.429 324.438,11.57 324.438,5.974 324.438,0.377 331.561,0.377 338.683,0.377 338.539,5.832 "
+       points="331.417,11.429 324.438,11.57 324.438,5.974 324.438,0.377 331.561,0.377 338.683,0.377 338.539,5.832 338.395,11.287 "
        style="fill:#ffffff;fill-opacity:1" />
   </g>
 </svg>
