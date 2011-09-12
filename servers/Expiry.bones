@@ -17,7 +17,11 @@ server.prototype.expiry = function(req, res, next) {
         //  Don't cache /api/Page/* and /api/Front/*
         if (url.search(/(^\/api\/(Page|Front)).*/i) > -1) {
             res.header('Cache-Control', 'max-age=0');
-        } else {
+        } 
+        else if (url.search(/((.js|.css)\?[0-9]+$)/) > -1) {
+            res.header('Cache-Control', 'max-age=1209600');
+        }
+        else {
             res.header('Cache-Control', 'max-age=' + this.config.maxAge); 
         }
     }
