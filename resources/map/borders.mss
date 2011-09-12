@@ -1,11 +1,12 @@
 @font: "Arial Regular";
 @font_bold: "Arial Bold";
+@font_italic: "Arial Italic";
 @font_light: "Arial Narrow Regular";
 @font_bold_italic: "Arial Bold Italic";
 
 /* ---- Admin Level 0 Lines -------------------------------- */
 
-country { 
+country [BDY_STYLE!="Undisputed International Border - Coastal"] { 
   line-color: #fff;
   line-opacity: 0.75;
   [zoom>0] {line-width: 0.2; }
@@ -38,41 +39,70 @@ names[zoom>=3] {
   text-fill: #434343;
   text-placement: point;
   [zoom=3][Z_MIN<=3][Z_MAX>=3] {
-    text-name: "[NAME_EN]";
+    text-name: "[WB_NAMES]";
     text-size: @adm0-txt+1;
     text-halo-fill: rgb(180,180,180,0.5);
     text-halo-radius: 0.2;
     text-wrap-width: 40;
+    [ITALIC="TRUE"] { 
+      text-face-name: @font_italic;
+      text-size: @adm0-txt;
+    }
   }
   [zoom=4][Z_MIN<=4][Z_MAX>=4] {
-    text-name: "[NAME_EN]";
+    text-name: "[WB_NAMES]";
     text-character-spacing: 2;
     text-line-spacing: 1;
     text-size: @adm0-txt+1;
     text-halo-fill: rgb(180,180,180,0.5);
     text-halo-radius: 0.3;
     text-wrap-width: 50;
+    [ITALIC="TRUE"] { 
+      text-face-name: @font_italic;
+      text-size: @adm0-txt;
+    }
+    [WB_NAMES="Sierra Leone"] { text-dx: -1; }
   }
   [zoom=5][Z_MIN<=5][Z_MAX>=5] {
-    text-name: "[NAME_EN]";
+    text-name: "[WB_NAMES]";
     text-character-spacing: 3;
     text-line-spacing: 2;
     text-size: @adm0-txt+2;
     text-halo-fill: rgb(180,180,180,0.5);
     text-halo-radius: 0.4;
     text-wrap-width: 55;
+    [ITALIC="TRUE"] { 
+      text-face-name: @font_italic;
+      text-size: @adm0-txt+1;
+    }
+    [WB_NAMES="Jordan"] { text-dy: 1; }
+    [WB_NAMES="Montenegro"] { text-dy: 1; }
+    [WB_NAMES="FYR Macedonia"] { text-dy: -1; }
   }
   [zoom=6][Z_MIN<=6][Z_MAX>=6] {
-    text-name: "[NAME_EN]";
+    text-name: "[WB_NAMES]";
     text-character-spacing: 4;
     text-line-spacing: 3;
     text-size: @adm0-txt+4;
     text-halo-fill: rgb(180,180,180,0.5);
     text-halo-radius: 0.5;
     text-wrap-width: 70;
+    [ITALIC="TRUE"] { 
+      text-face-name: @font_italic;
+      text-size: @adm0-txt+2;
+    }
+    [WB_NAMES="Barbados"] { 
+      text-dy: -1;
+      text-dx: 1;
+    }
+    [WB_NAMES="St. Lucia"] { text-dy: -1; }
+    [WB_NAMES="Antigua and Barbuda"] {
+      text-dy: -1;
+      text-dx: 1;
+    }
   }
   [zoom>=7][Z_MAX>=7] {
-    text-name: "[NAME_EN]";
+    text-name: "[WB_NAMES]";
     text-character-spacing: 5;
     text-line-spacing: 3;
     text-size: @adm0-txt+6;
@@ -80,25 +110,13 @@ names[zoom>=3] {
     text-halo-radius: 0.5;
     text-wrap-width: 80;
     text-face-name: @font_bold;
+    [ITALIC="TRUE"] { 
+      text-face-name: @font_bold_italic;
+      text-size: @adm0-txt+4;
+    }
+    [WB_NAMES="Antigua and Barbuda"] {
+      text-dy: -1;
+      text-dx: 1;
+    }
   }
 }
-
-/* ---- Disputed Areas -------------------------------------- */
-/*disputed[zoom>3][SCALERANK<4],
-disputed[zoom>4][SCALERANK=4],
-disputed[zoom>5][SCALERANK=5] {
-  [NAME!="South Sudan"] {
-    text-name: "[NAME]";
-    text-face-name: @font_light;
-    text-fill: #fff;
-    text-halo-fill: rgba(169,169,169,0.5);
-    text-halo-radius: 1;
-    text-character-spacing: 1;
-    text-line-spacing: 1;
-    [zoom=4] { text-size: 9; }
-    [zoom=5] { text-size: 10; }
-    [zoom=6] { text-size: 11; }
-    [zoom>6] { text-size: 12; }
-  }
-}*/
-/*------------------------------------------------------------*/
