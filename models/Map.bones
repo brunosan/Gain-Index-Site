@@ -153,7 +153,14 @@ model = Backbone.Model.extend({
         if (data.factor_raw === undefined) {
             val = "Not evaluated";
         } else if (data.factor_raw === 0) {
-            val = "No GaIn&trade; score";
+            var ind = this.get('indicator');
+            if (ind == 'vulnerability' || ind == 'vulerability_delta') {
+              val = "No Vulnerability score";
+            } else if (ind == 'readiness' || ind == 'readiness_delta') {
+              val = "No Readiness score";
+            } else {
+              val = "No GaIn&trade; score";
+            }
             inlineData = ' data-iso="' + data.iso_a3 + '"';
         } else {
             var ind = this.get('indicator');
