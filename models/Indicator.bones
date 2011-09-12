@@ -52,13 +52,15 @@ model = Backbone.Model.extend({
         }
 
         var totalRanks = value.asc + value.desc;
-        if (this.get('category') == 'vulnerability' || this.get('name') == 'vulnerability_delta') {
+        if (this.meta('index') == 'vulnerability' || this.get('name') == 'vulnerability_delta') {
             var color = gradientRgb(['#7cc0e4', '#fd9496'], totalRanks, value.asc);
+            var rank = value.asc;
         } else {
             var color = gradientRgb(['#7cc0e4', '#fd9496'], totalRanks, value.desc);
+            var rank = value.desc;
         }
 
-        return "<div class='rank-number' style='background-color: #" + color + ";'>" + value.desc + '</div>';
+        return "<div class='rank-number' style='background-color: #" + color + ";'>" + rank + '</div>';
     },
     meta: function(key) {
         // TODO: Why do some indicators not have an id? Should we always use 'name'?

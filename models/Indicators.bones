@@ -60,12 +60,21 @@ model = Backbone.Collection.extend({
     sortByRank: function(options) {
         this.comparator = function(model) {
             var rank = model.rank({format: false});
-            var desc = (rank && rank.desc) || 999;
+            if (!rank) {
+              return [Infinity, Infinity];
+            }
+
+            var index = model.meta('index');
+            if (index == 'vulnerability' || model.get('name') == 'vulnerability_delta') {
+                var rank = rank.asc || 000;
+            } else {
+                var rank = rank.desc || 999;
+            }
 
             // Use the country code as a secondary
             // sort field.
             return [
-                ('000' + desc).slice(-3),
+                ('000' + rank).slice(-3),
                 model.get('ISO3')
             ].join('');
         };
