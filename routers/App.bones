@@ -80,18 +80,16 @@ router = Backbone.Router.extend({
 
         fetcher.push(model);
 
+        // Download pages need an additional dynamic model loaded.
         if (id === 'download') {
-            var dl = new models.Download({id: 'data'});
-            fetcher.push(dl);
+            var download = new models.Download({id: 'data'});
+            fetcher.push(download);
         }
+
         fetcher.fetch(function(err) {
             if (err) return router.error(err);
             var options = {model: model};
-
-            if (dl) {
-                options.download = dl;
-            }
-
+            download && (options.download = download);
             router.send(views.Page, options);
         });
     },

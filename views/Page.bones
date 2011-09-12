@@ -4,6 +4,8 @@ view = views.Document.extend({
         $(this.el).empty().append(templates.Cabinet({klass: 'page'}));
         var renderer = this.model.renderer()
         $('.top', this.el).empty().append(templates.Page(renderer));
+
+        // download page has an additional dynamic block associated with it.
         if (this.options.download && this.model.id == 'download') {
             var dl = $('#downloadlink', this.el);
             dl.length && $(dl).empty().append(
