@@ -1476,6 +1476,9 @@ div.bottomscorelabel {
 .drawer .similar-countries {
   height: 175px;
   }
+  .drawer .similar-countries.reportinglevel {
+    height: auto;
+    }
 .drawer .composition {
   height: 90px;
   }

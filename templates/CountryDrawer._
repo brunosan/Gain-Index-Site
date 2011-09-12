@@ -23,5 +23,4 @@
   </ul>
 </div>
 <% } %>
-<div class='similar-countries'>
-</div>
+<div class='similar-countries <%= methodologyHash %>'></div>
