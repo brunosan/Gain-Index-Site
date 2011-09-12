@@ -895,7 +895,7 @@ model.meta = {
     "vulnerability": {
         "id": "vulnerability",
         "name": "Vulnerability",
-        "description": "A country's GaIn™ score is composed of a Vulnerability score and a Readiness score. Vulnerability measures a country's exposure, sensitivity and ability to cope with climate related hazards, as well as accounting for the overall status of food, water, health and infrastructure within the nation.",
+        "description": "A country's GaIn score is composed of a Vulnerability score and a Readiness score. Vulnerability measures a country's exposure, sensitivity and ability to cope with climate related hazards, as well as accounting for the overall status of food, water, health and infrastructure within the nation.",
         "format": "number",
         "decimals": "2",
         "unit": null,
