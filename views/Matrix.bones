@@ -21,14 +21,14 @@ var animated = false,
 var quadrant = function(data) {
     // Determine which quadrant to highlight.
     // * The turning point for Vulnerability us 0.30.
-    // * The turning point for Readiness is 0.63. CHANGED to 0.56 (wrong calculation of median)
+    // * The turning point for Readiness is 0.56.
     var quad = (data.vulnerability > 0.30 ? 't' : 'b');
     quad += (data.readiness > 0.56 ? 'r' : 'l');
     return quad;
 };
 
 var quadrantCoord = function(data) {
-    // Determine which quadrant to highlight, base on Coords. CHANGED to R 0.56 (wrong calculation of median)
+    // Determine which quadrant to highlight, base on Coords.
     // TODO it's unfortuate that we've got these two quad calcuation
     //      functions, we should be able to consolidate.
     var quad = (data.y > vulnerabilityToY(0.30) ? 't' : 'b');
