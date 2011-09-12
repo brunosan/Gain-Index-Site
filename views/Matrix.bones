@@ -209,22 +209,36 @@ view = views.Main.extend({
         this.selected.bind('add', function(model) {
             var target = $('.graph .country-'+ model.id, view.el).parents('.point');
             var label = $('.active-countries .country-'+ model.id, view.el);
-            var data = target.get(0).__data__;
 
-            var quad = quadrant(data);
-            $(target).addClass('active-' + quad);
-            $('.active-countries', this.el).append(templates.CountryOption(data));
+            var adder = function() {
+                var data = target.get(0).__data__;
+                var quad = quadrant(data);
+                $(target).addClass('active-' + quad);
+                $('.active-countries', this.el).append(templates.CountryOption(data));
+            }
+            if (animated) {
+                view.bind('yearSet', adder);
+            } else {
+                adder();
+            }
         });
         this.selected.bind('remove', function(model) {
             var target = $('.graph .country-'+ model.id, view.el).parents('.point');
             var label = $('.active-countries .country-'+ model.id, view.el);
 
-            label.remove();
+            var remover = function() {
+                label.remove();
 
-            target.removeClass('active-tl')
-                .removeClass('active-tr')
-                .removeClass('active-bl')
-                .removeClass('active-br');
+                target.removeClass('active-tl')
+                    .removeClass('active-tr')
+                    .removeClass('active-bl')
+                    .removeClass('active-br');
+            }
+            if (animated) {
+                view.bind('yearSet', remover);
+            } else {
+                remover();
+            }
         });
 
         (new views.CountrySelect({
@@ -241,7 +255,8 @@ view = views.Main.extend({
         var currentData = this.data[year],
             count = currentData.length,
             n = 0,
-            dur = ($.browser.msie ? 2000 : 500);
+            dur = ($.browser.msie ? 2000 : 500),
+            view = this;
 
         // Update the currenYear closure
         currentYear = parseInt(year);
@@ -254,8 +269,13 @@ view = views.Main.extend({
             .each('end', function() {
                 n++;
                 if (n == count) {
-                    $('ul.year-selector a', this.el).removeClass('selected');
-                    $('ul.year-selector a.year-'+ year, this.el).addClass('selected');
+                    $('ul.year-selector a', view.el).removeClass('selected');
+                    $('ul.year-selector a.year-'+ year, view.el).addClass('selected');
+
+                    // Trigger the yearSet, and the wipe it's callbacks.
+                    view.trigger('yearSet');
+                    view.unbind('yearSet');
+
                     next && next();
                 }
             });
