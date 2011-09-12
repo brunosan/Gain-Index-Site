@@ -884,29 +884,29 @@ table.full tbody tr.active:hover {
   padding-top: 25px;
   top: 0;
   left: 61px;
-  width: 336px;
+  width: 278px;
   height: 197px;
   }
 .quad-tr {
   background-color: #68B5DF;
   padding-top: 25px;
   top: 0;
-  left: 418px;
-  width: 202px;
+  left: 359px;
+  width: 261px;
   height: 197px;
   }
 .quad-br {
   background-color: #68BB37;
   top: 233px;
-  left: 418px;
-  width: 202px;
+  left: 359px;
+  width: 261px;
   height: 97px;
   }
 .quad-bl { 
   background-color: #F6CD47;
   top: 233px;
   left: 61px;
-  width: 336px;
+  width: 278px;
   height: 97px;
   }
 
