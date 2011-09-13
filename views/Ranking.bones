@@ -29,7 +29,7 @@ view = views.Main.extend({
             if (v.index == meta[id].index) {
                 if (v.sector) {
                     sectors[v.sector] = {
-                        path: path(v.sector),
+                        path: path(),
                         name: meta[v.sector].name
                     };
                 }

@@ -80,7 +80,7 @@ view = views.Main.extend({
         this.map.featureClick = function(feature, context, index) {
             var iso = $(feature).data('iso');
             if (iso) {
-                views.App.route('/country/' + models.Country.path(iso));
+                views.App.route('/country/' + models.Country.pathSafe(iso));
             }
         }
 
