@@ -33,8 +33,7 @@ Backbone.Model.escapeHTML = function(string) {
 };
 
 model.pathToId = function(path) {
-    var that = this;
-    return _.detect(model.meta, function(country) { return that.path(country.name) == path; }).ISO3;
+    return _.detect(model.meta, function(country) { return model.path(country.name) == path; }).ISO3;
 }
 
 model.path = function(str) {
