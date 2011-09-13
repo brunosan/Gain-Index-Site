@@ -1499,6 +1499,9 @@ div.bottomscorelabel {
 .drawer table.similar .nowrap {
   width: 130px;
   }
+.drawer table.similar td.empty {
+  color: #999;
+  }
 .drawer table.similar td.country {
   border-right: 1px solid #ddd;
   }

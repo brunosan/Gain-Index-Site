@@ -3,10 +3,18 @@
     <th class='country container'>Similar Countries</th>
     <th class='indicator container'><div class='nowrap'><%= title%></div></th>
   </tr>
-<% _.each(similar, function(country) { %>
-  <tr id="country.id">
-    <td class='country container'><div class='nowrap'><a href='/country/<%= country.path %>'><%= country.name %></a></div></td>
-    <td class='indicator container'><%= country.value %></td>
+<% if (!similar) { %>
+  <tr>
+    <td class='container empty' colspan='2'>
+    No Data
+    </td>
   </tr>
-<% }); %>
+<% } else { %>
+  <% _.each(similar, function(country) { %>
+    <tr>
+      <td class='country container'><div class='nowrap'><a href='/country/<%= country.path %>'><%= country.name %></a></div></td>
+      <td class='indicator container'><%= country.value %></td>
+    </tr>
+  <% }); %>
+<% } %>
 </table>
