@@ -907,6 +907,7 @@ table.full tbody tr.active:hover {
   left: 61px;
   width: 278px;
   height: 97px;
+  padding: 8px 10px 12px;
   }
 
 .interactive .mini-matrix .tl:hover,
