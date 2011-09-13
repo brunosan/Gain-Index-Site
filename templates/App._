@@ -57,7 +57,7 @@
     <div class='limiter'>
       <div class='download'>
         <a href='http://creativecommons.org/licenses/by/3.0' class='cc'>Download Data under a creative commons licence</a>
-        <a class='downloadbutton button' href='/download'><span>Download GaIn</span> scores and indicators between 1995 and 2010 in CSV format.</a>
+        <a class='downloadbutton button' href='/about/download'><span>Download GaIn</span> scores and indicators between 1995 and 2010 in CSV format.</a>
       </div>
       <div id='country-search' class='search content'>
         <form>

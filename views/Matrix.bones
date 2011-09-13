@@ -107,40 +107,17 @@ view = views.Main.extend({
     },
     render: function() {
         $(this.el).empty().append(templates.Cabinet({klass: 'matrix'}));
-        var gain = new models.Indicator({id: 'gain'});
         $('.floor', this.el).empty().append(templates.DefaultFloor({
             title: 'The Readiness Matrix',
             content: templates.MatrixFloorText(),
-            methodologyHash:
-                (gain.meta('component') || gain.meta('sector')) ?
-                'scoringindicators' :
-                gain.meta('index')
+            methodologyLink: '/about/matrix'
         }));
         $('.top', this.el).empty().append(templates.Matrix());
         return this;
     },
     attach: function() {
-        // IE8 Has a different, and older, way of setting style-y things. So we
-        //  teach it the new hip stuff, what the kids are using.
-        if (CSSStyleDeclaration.prototype.getAttribute) {
-            CSSStyleDeclaration.prototype.getProperty = function(a) {
-                return this.getAttribute(a);
-            };
-            CSSStyleDeclaration.prototype.setProperty = function(a,b) {
-                return this.setAttribute(a,b);
-            };
-            CSSStyleDeclaration.prototype.removeProperty = function(a) {
-                return this.removeAttribute(a);
-            };
-        }
-        // Shim up `getComputedStyle` for IE8 as well.
-        if (window.getComputedStyle == undefined) {
-            window.getComputedStyle = function(x) {
-                return { getPropertyValue: function(p) { return x.p } };
-            }
-        }
-
         views.Main.prototype.attach.call(this);
+
         var view = this,
             data = {};
             map = {};
@@ -184,6 +161,20 @@ view = views.Main.extend({
             });
         });
 
+        // We cannot use d3 in IE7...
+        if (window.CSSStyleDeclaration == undefined) {
+            this.staticGraphSetup(data);
+        } else {
+            this.d3setup(data);
+        }
+        this.countrySelectorSetup(data);
+
+        return this;
+    },
+    d3setup: function(data) {
+
+        this.polyfillSetup();
+
         this.matrix = d3.select('.big-matrix .graph')
         var chart = this.matrix.selectAll("div")
             .data(data['2010'], function(d) { return d.iso });
@@ -193,8 +184,23 @@ view = views.Main.extend({
             .attr('class', 'point')
             .style('bottom', function(d) { return vulnerabilityToY(d.vulnerability) + 'px'; })
             .style('left', function(d) { return readinessToX(d.readiness) + 'px'; });
+    },
+    staticGraphSetup: function(data) {
+        $('.year-controls', this.el).remove();
+        var matrix = $('.big-matrix .graph');
+        _.each(data['2010'], function(d) {
+            var elem = $('<div>')
+              .html(templates.MatrixPoint(d))
+              .addClass('point')
+              .css('bottom', vulnerabilityToY(d.vulnerability) + 'px')
+              .css('left', readinessToX(d.readiness) + 'px');
 
+            elem.get(0).__data__ = d;
 
+            matrix.append(elem);
+        });
+    },
+    countrySelectorSetup: function(data) {
         // Create a collection to manage the selected countries.
         this.selected = new Backbone.Collection();
 
@@ -249,7 +255,32 @@ view = views.Main.extend({
         })).render();
 
         $('ul.year-selector a.year-2010', this.el).addClass('selected');
-        return this;
+    },
+    polyfillSetup: function() {
+        // IE8 Has a different, and older, way of setting style-y things. So we
+        //  teach it the new hip stuff, what the kids are using.
+        if (window.CSSStyleDeclaration && CSSStyleDeclaration.prototype.getAttribute) {
+            CSSStyleDeclaration.prototype.getProperty = function(a) {
+                return this.getAttribute(a);
+            };
+            CSSStyleDeclaration.prototype.setProperty = function(a,b) {
+                return this.setAttribute(a,b);
+            };
+            CSSStyleDeclaration.prototype.removeProperty = function(a) {
+                return this.removeAttribute(a);
+            };
+        }
+        // Shim up `getComputedStyle` for IE8 as well.
+        if (window.getComputedStyle == undefined) {
+            window.getComputedStyle = function(x) {
+                return { getPropertyValue: function(p) { return x.p } };
+            }
+        }
+
+        // IE7 doesn't have a querySelector, add a shim that will be replaced with Sizzle.
+        if (document.querySelector == undefined) {
+            document.querySelector = function() {};
+        }
     },
     setYear: function(year, next) {
         var currentData = this.data[year],
@@ -381,29 +412,32 @@ view = views.Main.extend({
         if (openTooltips == 0) $('.tooltip', this.el).empty();
     },
     quadrantHover: function(ev) {
-        $('.big-matrix .matrix-overlay', this.el).remove();
+        var relativeClass = $(ev.currentTarget).attr('class').match(/[tb][lr]/);
+        relativeClass = relativeClass[0];
+
+        $('.mini-matrix .'+ relativeClass, this.el).addClass('active');
         $('.big-matrix', this.el).append($(ev.currentTarget).html());
-        $('.matrix-overlay', this.el).stop().animate({opacity: .90, duration: 250});
+        $('.big-matrix .quad-' + relativeClass, this.el).animate({opacity: .90});
     },
-    quadrantUnhover: function() {
-        $('.big-matrix .matrix-overlay', this.el).stop().animate({
-            opacity: 'hide',
-            duration: 250
-            });
+    quadrantUnhover: function(ev) {
+        var relativeClass = $(ev.currentTarget).attr('class').match(/[tb][lr]/);
+        relativeClass = relativeClass[0];
+
+        $('.mini-matrix .'+ relativeClass, this.el).removeClass('active');
+        $('.big-matrix .quad-'+ relativeClass, this.el).fadeOut(function() {$(this).remove();});
     },
     hoverRelatedQuad: function(ev) {
         var relativeClass = $(ev.currentTarget).attr('class'),
-            associatedQuad = $('.quad', this.el).filter('.' + relativeClass);
-        $('.big-matrix .matrix-overlay', this.el).remove();
+            associatedQuad = $('.mini-matrix .quad', this.el).filter('.' + relativeClass).addClass('active');
+
         $('.big-matrix', this.el).append(associatedQuad.html());
-        associatedQuad.addClass('active');
-        $('.quad-' + relativeClass, this.el).stop().animate({opacity: .90, duration: 250});
+        $('.big-matrix .quad-' + relativeClass, this.el).animate({opacity: .90});
     },
-    unHoverRelatedQuad: function() {
-        $('.quad', this.el).removeClass('active');
-        $('.big-matrix .matrix-overlay', this.el).stop().animate({
-            opacity: 'hide',
-            duration: 250
-        });
+    unHoverRelatedQuad: function(ev) {
+        var relativeClass = $(ev.currentTarget).attr('class').match(/[tb][lr]/);
+        relativeClass = relativeClass[0];
+
+        $('.mini-matrix .'+ relativeClass, this.el).removeClass('active');
+        $('.big-matrix .quad-'+ relativeClass, this.el).fadeOut(function() {$(this).remove();});
     }
 });

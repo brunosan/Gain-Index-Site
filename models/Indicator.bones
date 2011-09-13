@@ -24,8 +24,8 @@ model = Backbone.Model.extend({
     },
     trend: function(type) {
         type = type || 'gain';
-        if (this.get('name') == 'static') {
-            var trend = this.get('trend_' + type);
+        if (this.get('name') == 'trend') {
+            var trend = this.get(type);
             if (trend) {
                 var sign = trend.sign;
                 switch (sign) {

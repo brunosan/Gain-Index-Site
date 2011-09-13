@@ -336,7 +336,6 @@ ul.tabs.level-2 a.active {
 .country-profile .chart {
   position: absolute;
   left: 355px;
-  top: 170px;
   }
 .slider h4,
 .slider h5 {
@@ -348,8 +347,17 @@ ul.tabs.level-2 a.active {
 .source {
   margin: 5px 0;
   }
+.country-profile .chart {
+  left: 435px;
+  border-left: 1px solid black;
+  padding: 10px;
+  height: 50px;
+  top: 120px;
+  }
 .country-profile #indicator-gain {
-  top: 105px;
+  top: 115px;
+  padding: 0;
+  height: 80px;
   }
 .country-profile .info {
   top: 60px;
@@ -364,6 +372,28 @@ ul.tabs.level-2 a.active {
   border-bottom: 1px solid #c6c6c6;
   }
 
+.country-profile div.prose {
+  clear: both;
+  }
+.country-profile .country-summary div.gain .name {
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 11px;
+  }
+.country-profile .country-summary div.gain .value {
+  display: block;
+  font-weight: bold;
+  font-size: 48px;
+  line-height: 42px;
+  text-align: center;
+  }
+.country-summary div.gain {
+  height: 125px;
+  }
+.country-summary div.gain .trend {
+  color: #666;
+  }
+
 /*** Gain info box ***/
 #indicator-gain {
   font-weight: bold;
@@ -373,7 +403,6 @@ ul.tabs.level-2 a.active {
   margin: 12px 15px 0 0;
   width: 70px;
   height: 10px;
-  background-color: #ccc;
   }
 .drawer .country-sector-graph {
   margin: 0 0 10px 0;
@@ -383,19 +412,23 @@ ul.tabs.level-2 a.active {
 .country-sector-graph span {
   height: 10px;
   margin-left: -1px;
-  border-left: 1px solid #fff;
   display: block;
   float: left;
   }
-.country-sector-graph .hilite {
-  background-color: #444;
+#indicator-vulnerability .country-sector-graph span,
+#indicator-readiness .country-sector-graph span,
+#indicator-readiness .country-sector-graph span {
+  border-left: 1px solid #000;
   }
-.drawer .country-sector-graph span:hover {
-  background-color: #444;
+#indicator-vulnerability .country-sector-graph span:first-child,
+#indicator-readiness .country-sector-graph span:first-child,
+#indicator-readiness .country-sector-graph span:first-child {
+  border-left: none;
   }
 #indicator-vulnerability .country-sector-graph,
-#indicator-readiness .country-sector-graph {
-  background-color: #444;
+#indicator-readiness .country-sector-graph,
+.country-sector-graph .hilite {
+  border: 1px solid #444;
   }
 .country-sector-graph .info.show {
   display:block;
@@ -441,7 +474,6 @@ div.container {
   width: 100%;
   margin-bottom: 10px;
   }
-
 /****** About Section ******/
 .document table {
   width: 100%;
@@ -472,17 +504,13 @@ div.container {
   right: 0;
   width: 320px;
   margin-left: 160px;
-  background: #eee;
   }
 #cabinet.ranking .drawer {
   top: 146px;
   }
-#cabinet.ranking .drawer.open {
-  height: 92%;
-  }
 #cabinet.country .drawer.open {
+  border: 1px solid #000;
   top: 436px;
-  height: 1150px;
   }
 .slider {
   margin-top: 20px;
@@ -528,7 +556,7 @@ div.container {
 .overview a,
 a.play-button,
 .country-profile ul.tabs.level-1 a,
-ul.tabs.level-2 li a {
+ul.level-2 {
   display: none;
   }
 
