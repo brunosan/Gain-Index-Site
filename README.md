@@ -16,8 +16,8 @@ Installation
 
 After cloning the repository / downloading the tarball:
 
-0. If on OSX without Mapnik, download http://cloud.github.com/downloads/mapnik/node-mapnik/node-mapnik-osx-universal-0.5.3-r3191.zip and unzip it in the node_modules/ directory.
-1. Change into project directory, run `npm install`
+0. Change into project directory, run `npm install`
+1. If on OSX without Mapnik, download http://cloud.github.com/downloads/mapnik/node-mapnik/node-mapnik-osx-universal-0.5.3-r3191.zip and unzip it in the node_modules/ directory.
 2. Run `./index.js install`
 3. Run `./index.js import`
 4. Run `./index.js changes`
