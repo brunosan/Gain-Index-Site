@@ -22,8 +22,8 @@ model = Backbone.Model.extend({
     pathToId: function(path) {
         return model.pathToId(path);
     },
-    path: function(str) {
-        return model.path(str);
+    path: function() {
+        return model.path(model.meta[this.get('id')].name);
     }
 });
 
@@ -36,7 +36,11 @@ model.pathToId = function(path) {
     return _.detect(model.meta, function(country) { return model.path(country.name) == path; }).ISO3;
 }
 
-model.path = function(str) {
+model.path = function(name) {
+    return name.toLowerCase().replace(/[^a-zA-Z0-9]+/gi, '-');
+}
+
+model.pathSafe = function(str) {
     // Detect whether ISO3 code and handle as such
     if (str.length == 3 && _.detect(model.meta, function(item) { return str == item.ISO3 })) {
         str = _.detect(model.meta, function(country) { return country.ISO3 == str; }).name;

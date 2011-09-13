@@ -107,14 +107,10 @@ view = views.Main.extend({
     },
     render: function() {
         $(this.el).empty().append(templates.Cabinet({klass: 'matrix'}));
-        var gain = new models.Indicator({id: 'gain'});
         $('.floor', this.el).empty().append(templates.DefaultFloor({
             title: 'The Readiness Matrix',
             content: templates.MatrixFloorText(),
-            methodologyHash:
-                (gain.meta('component') || gain.meta('sector')) ?
-                'scoringindicators' :
-                gain.meta('index')
+            methodologyLink: '/about/matrix'
         }));
         $('.top', this.el).empty().append(templates.Matrix());
         return this;
