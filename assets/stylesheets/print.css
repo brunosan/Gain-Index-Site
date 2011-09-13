@@ -3,7 +3,7 @@
   margin: 0px auto;
   }
 body {
-  font: 12px/20px "Helvetica Neue",Helvetica,Arial,sans-serif;
+  font: 13px/18px "Helvetica Neue",Helvetica,Arial,sans-serif;
   color: black;
   background: white;
   }
@@ -22,7 +22,7 @@ h2 {
   }
 h3 {
   font-size: 20px;
-  border-bottom: 1px solid #ebebeb;
+  border-bottom: 1px solid #ddd;
   margin-bottom: 15px;
   }
 .rankings h3 {
@@ -49,7 +49,8 @@ a {
   }
 .label {
   text-align: left;
-  font-weight: bold;
+  font-weight: normal;
+  font-style: italic;
   margin: 5px 0;
   }
 pre {
@@ -87,20 +88,18 @@ pre, pre code {
     }
   #header .tagline { 
   position: absolute;
-  left: 130px;
+  left: 135px;
   top: 15px;
   width: 110px;
   }
   #header .org {
   float: right;
-  text-align: right;
-  top: 15px;
   }
 
 /* Tables */
 table {
   width: 100%;
-  font-size: 12px;
+  margin-bottom: 20px;
   }
 table.data {
   width: 640px;
@@ -124,17 +123,21 @@ table tbody tr th {
   text-align: left;
   }
 table tbody tr td {
-  border-bottom: 1px solid #ebebeb;
-  padding: 2px 0;
+  border-bottom: 1px solid #B5B5B5;
+  padding: 5px 0;
+  }
+table.ranking-history tbody tr td {
+  border-bottom: none;
   }
 table tr.section td {
   font-weight: bold;
   line-height: 16px;
   }
 table tr.index td.name {
-  padding-bottom: 15px;
+  padding-bottom: 10px;
   margin-top: 10px;
-  font-size: 18px;
+  font-size: 17px;
+  font-weight: bold;
   }
 
 .rank-number {
@@ -259,7 +262,6 @@ table tr.index td.name {
 
 /*** Country Page ***/
 .prose.container {margin-top: 20px;}
-#indicator-readiness { margin-bottom: 20px;}
 table.data.ranking-history {
   margin-bottom: 20px;
   }
@@ -347,91 +349,77 @@ ul.tabs.level-2 a.active {
 .source {
   margin: 5px 0;
   }
-.country-profile .chart {
-  left: 435px;
-  border-left: 1px solid black;
-  padding: 10px;
-  height: 50px;
-  top: 120px;
-  }
 .country-profile #indicator-gain {
   top: 115px;
   padding: 0;
-  height: 80px;
   }
 .country-profile .info {
   top: 60px;
+  font-size: 10px;
+  line-height: 16px;
+  color: #999;
+  text-transform: uppercase;
   }
 .country-profile .map-wrapper {
   float: left;
   width: 340px;
   margin-top: -15px;
   }
-.country-summary {
-  padding: 10px 0;
-  border-bottom: 1px solid #c6c6c6;
+div.country {
+  border-bottom: 1px solid #C6C6C6;
+  padding: 0 0 10px;
+  margin-bottom: 10px;
   }
-
 .country-profile div.prose {
   clear: both;
   }
-.country-profile .country-summary div.gain .name {
+#indicator-gain .name {
   font-weight: bold;
   text-transform: uppercase;
   font-size: 11px;
   }
-.country-profile .country-summary div.gain .value {
+#indicator-gain .value {
   display: block;
   font-weight: bold;
   font-size: 48px;
   line-height: 42px;
-  text-align: center;
+  } 
+.featured .country{
+  position: relative;
   }
-.country-summary div.gain {
-  height: 125px;
+.featured #indicator-gain {
+  float: left;
+  width: 85px;
   }
-.country-summary div.gain .trend {
+.chart {
+  float: left;
+  margin-left: 15px;
+  border: 1px solid #B5B5B5;
+  padding: 15px 10px 20px;
+  height: 32px;
+  margin-top: 15px;
+  }
+.country-profile .chart {
+  left: 435px;
+  top: 113px;
+  }
+#indicator-gain .trend {
   color: #666;
   }
-
+#indicator-reporting {
+  margin-left: 475px;
+  margin-top: -15px;
+  margin-bottom: 5px;
+  }
 /*** Gain info box ***/
 #indicator-gain {
   font-weight: bold;
+  float: left;
+  margin-top: 10px;
   }
 /*** Country page sector graphs ***/
 .country-sector-graph {
-  margin: 12px 15px 0 0;
-  width: 70px;
-  height: 10px;
-  }
-.drawer .country-sector-graph {
-  margin: 0 0 10px 0;
-  width: 100%;
-  position: relative
-  }
-.country-sector-graph span {
-  height: 10px;
-  margin-left: -1px;
-  display: block;
-  float: left;
-  }
-#indicator-vulnerability .country-sector-graph span,
-#indicator-readiness .country-sector-graph span,
-#indicator-readiness .country-sector-graph span {
-  border-left: 1px solid #000;
-  }
-#indicator-vulnerability .country-sector-graph span:first-child,
-#indicator-readiness .country-sector-graph span:first-child,
-#indicator-readiness .country-sector-graph span:first-child {
-  border-left: none;
-  }
-#indicator-vulnerability .country-sector-graph,
-#indicator-readiness .country-sector-graph,
-.country-sector-graph .hilite {
-  border: 1px solid #444;
-  }
-.country-sector-graph .info.show {
-  display:block;
+  display: none;
   }
 .country-sector-graph .bar label {
   line-height: 18px;
@@ -449,6 +437,7 @@ ul.tabs.level-2 a.active {
 .drawer .content .graph {
   width: 285px;
   height: 150px;
+  margin: 10px 0 5px;
   }
 .drawer .content .gain {
   border-left: 0;
@@ -505,11 +494,13 @@ div.container {
   width: 320px;
   margin-left: 160px;
   }
+#cabinet .drawer.open {
+  border: 1px solid #000;
+  }
 #cabinet.ranking .drawer {
   top: 146px;
   }
 #cabinet.country .drawer.open {
-  border: 1px solid #000;
   top: 436px;
   }
 .slider {
@@ -536,6 +527,7 @@ div.container {
   }
 
 /****** Hidden ******/
+.composition-bars .label,
 .slider .content.container h3,
 #overviewdiagram,
 .bottomscorelabel,
@@ -555,9 +547,13 @@ div.container {
 .browser,
 .overview a,
 a.play-button,
-.country-profile ul.tabs.level-1 a,
-ul.level-2 {
+ul.level-2,
+ul.level-1 {
   display: none;
+  }
+table thead tr th.composition,
+table thead tr td.composition {
+  visibility: hidden;
   }
 
 /*-----------------------
