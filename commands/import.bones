@@ -173,13 +173,13 @@ command.prototype.initialize = function(options) {
     /**
      * Import a composite indicator CSV directory
      */
-    function importStaticDir(source) {
+    function importTrendDir(source) {
         return function(next) {
             var actions = [];
             var records = {};
 
             function reduceScores(memo, v, i) {
-                if (!_.include(['name', 'ISO3'], i)) {
+                if (i && !_.include(['name', 'ISO3'], i)) {
                     memo[i] = parseFloat(v);
                 }
                 return memo;
@@ -188,12 +188,12 @@ command.prototype.initialize = function(options) {
             actions.push(processCSV(source + '/gain.csv', function(v, i) {
                 if (v.ISO3) {
                     var record = {};
-                    record._id = '/api/Indicator/static-static-' + v.ISO3;
+                    record._id = '/api/Indicator/trend-trend-' + v.ISO3;
                     record.country = v.name;
                     record.ISO3 = v.ISO3;
-                    record.category = 'static';
-                    record.name = 'static';
-                    record.gain = parseFloat(v.gain);
+                    record.category = 'trend';
+                    record.name = 'trend';
+                    record.gain =  _(v).reduce(reduceScores, {});
 
                     records[record.ISO3] = record;
                 }
@@ -210,14 +210,6 @@ command.prototype.initialize = function(options) {
                     records[v.ISO3].vulnerability = _(v).reduce(reduceScores, {});
                 }
             }));
-
-            _.each(['gain', 'readiness', 'vulnerability'], function(score) {
-                actions.push(processCSV(source + '/trend_' + score + '.csv', function(v, i) {
-                    if (v.ISO3) {
-                        records[v.ISO3]['trend_' + score] = _(v).reduce(reduceScores, {});
-                    }
-                }));
-            });
 
             actions.push(function(next) {
                 var counter = _.after(_(records).size(), next);
@@ -397,7 +389,7 @@ command.prototype.initialize = function(options) {
     });
 
 
-    actions.push(importStaticDir(__dirname + '/../resources/static'));
+    actions.push(importTrendDir(__dirname + '/../resources/trends'));
 
 
 

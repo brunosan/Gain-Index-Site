@@ -60,12 +60,12 @@ router = Backbone.Router.extend({
         var ranking = new models.Ranking({id: id});
 
         fetcher.push(ranking);
-        var staticData = new models.Ranking({id: 'static'});
-        fetcher.push(staticData);
+        var trends = new models.Ranking({id: 'trend'});
+        fetcher.push(trends);
 
         fetcher.fetch(function(err) {
             if (err) return router.error(err);
-            router.send(views.Ranking, {model: ranking, staticData: staticData});
+            router.send(views.Ranking, {model: ranking, trends: trends});
         });
     },
     overview: function() {

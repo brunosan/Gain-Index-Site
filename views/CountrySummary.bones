@@ -8,9 +8,9 @@ view = Backbone.View.extend({
             pin = {},
             indicators = this.model.get('indicators');
 
-        var trend = indicators.byName('static').trend();
-
         _.each(['gain', 'readiness', 'vulnerability'], function(k) {
+            var trend = indicators.byName('trend').trend(k);
+
             var indicator = indicators.byName(k);
             if (indicator) {
                 if (k === 'gain') {
