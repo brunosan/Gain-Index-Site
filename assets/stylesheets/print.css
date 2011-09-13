@@ -362,9 +362,10 @@ ul.tabs.level-2 a.active {
 .country-profile .map-wrapper {
   float: left;
   width: 340px;
-  margin-top: -15px;
+  margin-top: -5px;
+  border: 1px solid black;
   }
-div.country {
+.featured div.country {
   border-bottom: 1px solid #000;
   padding: 0 0 10px;
   margin-bottom: 10px;
@@ -391,12 +392,10 @@ div.country {
   width: 85px;
   }
 .chart {
-  float: left;
   margin-left: 15px;
-  border: 1px solid #000;
-  padding: 15px 10px 20px;
-  height: 32px;
+  padding: 15px 0 20px;
   margin-top: 15px;
+  float: left;
   }
 .country-profile .chart {
   left: 435px;
