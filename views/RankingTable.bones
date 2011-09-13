@@ -34,13 +34,8 @@ view = Backbone.View.extend({
             }
         });
 
-        var showTrend = _.include(
-            ['gain', 'readiness', 'vulnerability'],
-            this.options.indicatorName
-        );
-
         $(this.el).empty().append(templates.RankingTable({
-            showTrend: showTrend,
+            showTrend: !_.isEmpty(trends),
             rows: data
         }));
         // Conserve previously active table rows.

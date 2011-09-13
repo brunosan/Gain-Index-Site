@@ -2,9 +2,7 @@
   <th class='rank'><a class='sort label rank activeSort' href='#sort-rank'>Rank</a></th>
   <th class='alpha'><a class='sort label alpha' href='#sort-alpha'>Country</a></th>
   <th class='income'><a class='sort label income' href='#sort-income'>Income group</a></th>
-  <% if (showTrend) { %>
-    <th class='trend'>Trend</th>
-  <% } %>
+  <th class='trend'><% if (showTrend) { %>Trend<% } %></th>
   <th class='index'>Score</th>
 </tr></thead>
 <tbody>
@@ -13,9 +11,7 @@
       <td><%= v.rank %></td>
       <td><a href="/country/<%= v.id %>"><%= v.name %></a></td>
       <td><div class='income-group <%= v.incomeClass%>'><%= v.income%></div></td>
-      <% if (showTrend) { %>
-        <td><div class='icon-trend icon-trend-<%= v.trend %>'></div></td>
-      <% } %>
+      <td><% if (showTrend) { %><div class='icon-trend icon-trend-<%= v.trend %>'><% } %></div></td>
       <td><%= v.score%></td>
     </tr>
   <% }); %>
