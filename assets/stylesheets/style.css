@@ -1530,6 +1530,7 @@ div.bottomscorelabel {
   }
 .floor .correction-control p {
   font-style: italic;
+  padding-bottom: 0;
   }
 .floor .correction-control a:hover {
   background: #8C8C8C;
