@@ -170,7 +170,7 @@ model = Backbone.Model.extend({
         var country = this.countryMeta.detect(function(m) {
             return data.iso_codes == m.get('ISO3');
         });
-        var countryName = (country && country.get('name')) || data.admin;
+        var countryName = (country && country.get('name')) || data.wb_names;
 
         return '<span'+ inlineData +'>' + countryName + ': '+ val +'</span>';
     },
