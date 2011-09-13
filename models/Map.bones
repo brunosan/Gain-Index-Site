@@ -161,16 +161,16 @@ model = Backbone.Model.extend({
             } else {
               val = "No GaIn&trade; score";
             }
-            inlineData = ' data-iso="' + data.iso_a3 + '"';
+            inlineData = ' data-iso="' + data.iso_codes + '"';
         } else {
             var ind = this.get('indicator');
             val = models.Indicator.format(data.factor_raw, ind);
-            inlineData = ' data-iso="' + data.iso_a3 + '"';
+            inlineData = ' data-iso="' + data.iso_codes + '"';
         }
         var country = this.countryMeta.detect(function(m) {
-            return data.iso_a3 == m.get('ISO3');
+            return data.iso_codes == m.get('ISO3');
         });
-        var countryName = (country && country.get('name')) || data.admin;
+        var countryName = (country && country.get('name')) || data.wb_names;
 
         return '<span'+ inlineData +'>' + countryName + ': '+ val +'</span>';
     },
