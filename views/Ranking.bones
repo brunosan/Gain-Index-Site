@@ -18,9 +18,9 @@ view = views.Main.extend({
         }
 
         var trendType = this.model.get('id');
-        var trends = this.options.staticData.get('indicators').reduce(function(result, m) {
+        var trends = this.options.trends.get('indicators').reduce(function(result, m) {
             var trend = m.trend(trendType);
-            if (trend) result[m.get('ISO3')] = m.trend(trendType);
+            if (trend) result[m.get('ISO3')] = trend;
             return result;
         }, {});
 
