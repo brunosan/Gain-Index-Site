@@ -1,5 +1,5 @@
 <div class='indicator-info container'>
-  <a class='button methodology' href='/about/methodology#<%= methodologyHash %>'>Methodology</a>
+  <a class='button methodology' href='<%= methodologyLink %>'>Methodology</a>
   <h3><%= title %></h3>
   <div class='description'>
     <p><%= description %></p>
@@ -23,4 +23,4 @@
   </ul>
 </div>
 <% } %>
-<div class='similar-countries <%= methodologyHash %>'></div>
+<div class='similar-countries <%= indicator %>'></div>

@@ -9,7 +9,7 @@
   <% _.each(rows, function(v, k) { %>
     <tr id='country-<%= v.iso3 %>'>
       <td><%= v.rank %></td>
-      <td><a href="/country/<%= v.id %>"><%= v.name %></a></td>
+      <td><a href="/country/<%= v.path %>"><%= v.name %></a></td>
       <td><div class='income-group <%= v.incomeClass%>'><%= v.income%></div></td>
       <td><% if (showTrend) { %><div class='icon-trend icon-trend-<%= v.trend %>'><% } %></div></td>
       <td><%= v.score%></td>

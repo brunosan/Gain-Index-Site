@@ -20,7 +20,7 @@ view = Backbone.View.extend({
         this.collection.each(function(model) {
             if (meta[model.get('ISO3')]) {
                 data.push({
-                    id: models.Country.path(model.get('ISO3')),
+                    path: models.Country.pathSafe(model.get('ISO3')),
                     name: meta[model.get('ISO3')].name,
                     income: meta[model.get('ISO3')].oecd_income,
                     incomeClass: meta[model.get('ISO3')].oecd_income

@@ -4,7 +4,7 @@
     <p><%= content %></p>
   </div>
   <div class='correction-control container'>
-  <a class='button methodology' href='/about/methodology#<%= correction.methodologyHash %>'>Methodology</a>
+  <a class='button methodology' href='<%= correction.methodologyLink %>'>Methodology</a>
   <p><%= correction.caption %></p>
   <a class='correct button green' href='<%= correction.href %>'><%= correction.title %></a>
   </div>
