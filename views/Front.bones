@@ -168,10 +168,10 @@ view = views.Main.extend({
             correction: {
                 caption: caption,
                 href: '#',
-                methodologyHash:
-                    (indicator.meta('component') || indicator.meta('sector')) ?
+                methodologyLink: '/about/methodology#' +
+                    ((indicator.meta('component') || indicator.meta('sector')) ?
                     'scoringindicators' :
-                    indicator.meta('index'),
+                    indicator.meta('index')),
                 title: indicator.isCorrection() ?
                     'Remove GDP correction' :
                     'Correct for GDP'

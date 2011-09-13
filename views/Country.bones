@@ -55,10 +55,10 @@ view = views.Main.extend({
         $('.floor', this.el).empty().append(templates.DefaultFloor({
             title: gain.meta('name'),
             content: templates.GaInFloorText(),
-            methodologyHash:
-                (gain.meta('component') || gain.meta('sector')) ?
+            methodologyLink: '/about/methodology#' +
+                ((gain.meta('component') || gain.meta('sector')) ?
                 'scoringindicators' :
-                gain.meta('index')
+                gain.meta('index'))
         }));
 
         this.ensureChildViews();
@@ -159,10 +159,10 @@ view = views.Main.extend({
             source: indicator.meta('source') || [],
             // We're assuming that all indicators are assigned to either a
             // component or a sector.
-            methodologyHash:
-                (indicator.meta('component') || indicator.meta('sector')) ?
+            methodologyLink: '/about/methodology#' +
+                ((indicator.meta('component') || indicator.meta('sector')) ?
                 'scoringindicators' :
-                indicator.meta('index')
+                indicator.meta('index'))
         }));
 
         // Lazy load 5 similar countries.

@@ -93,10 +93,10 @@ view = views.Main.extend({
         var locals = {
             title: subject.meta('name'),
             content: subject.get('id') == 'gain' ? templates.GaInFloorText() : subject.meta('description'),
-            methodologyHash:
-                (subject.meta('component') || subject.meta('sector')) ?
+            methodologyLink: '/about/methodology#' +
+                ((subject.meta('component') || subject.meta('sector')) ?
                 'scoringindicators' :
-                subject.meta('index')
+                subject.meta('index'))
         };
         if (subject.hasCorrection() || subject.isCorrection()) {
             var path = models.Ranking.path(subject.uncorrected()),
@@ -106,20 +106,20 @@ view = views.Main.extend({
                 locals.correction = {
                     caption: caption,
                     href: path == '/ranking/gain' ? '/ranking' : path,
-                    methodologyHash:
-                        (subject.meta('component') || subject.meta('sector')) ?
+                    methodologyLink: '/about/methodology#' +
+                        ((subject.meta('component') || subject.meta('sector')) ?
                         'scoringindicators' :
-                        subject.meta('index'),
+                        subject.meta('index')),
                     title: 'Remove GDP correction'
                 };
             } else {
                 locals.correction = {
                     caption: caption,
                     href: path.replace('/ranking', '/ranking/delta'),
-                    methodologyHash:
-                        (subject.meta('component') || subject.meta('sector')) ?
+                    methodologyLink: '/about/methodology#' +
+                        ((subject.meta('component') || subject.meta('sector')) ?
                         'scoringindicators' :
-                        subject.meta('index'),
+                        subject.meta('index')),
                     title: 'Correct for GDP'
                 };
             }
