@@ -441,7 +441,6 @@ div.container {
   width: 100%;
   margin-bottom: 10px;
   }
-
 /****** About Section ******/
 .document table {
   width: 100%;
@@ -528,7 +527,7 @@ div.container {
 .overview a,
 a.play-button,
 .country-profile ul.tabs.level-1 a,
-ul.tabs.level-2 li a {
+ul.level-2 {
   display: none;
   }
 
