@@ -1,15 +1,15 @@
 <div class='ranking'>
   <h2 class='container'>Country Rankings</h2>
-  <p class='container'>Rank countries by GaIn™, Vulnerability and Readiness.</p>
-  <p class='label container'>Table values show latest available data as of June 2011</p>
+  <p class='container'>Rank countries by GaIn, Vulnerability and Readiness.</p>
+  <p class='label container'>Table values show latest scores for 2010</p>
   <div class='tab-wrapper clearfix'>
     <ul class='tabs level-1'>
       <% if (!delta) { %>
-        <li><a href='/ranking' class='exact'>GaIn™</a></li>
+        <li><a href='/ranking' class='exact'>GaIn</a></li>
         <li><a href='/ranking/vulnerability'>Vulnerability</a></li>
         <li><a href='/ranking/readiness'>Readiness</a></li>
       <% } else { %>
-          <li><a href='/ranking/delta/gain'>GaIn™</a></li>
+          <li><a href='/ranking/delta/gain'>GaIn</a></li>
           <li><a href='/ranking/delta/vulnerability'>Vulnerability</a></li>
           <li><a href='/ranking/delta/readiness'>Readiness</a></li>
       <% } %>

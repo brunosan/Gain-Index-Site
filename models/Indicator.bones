@@ -22,15 +22,18 @@ model = Backbone.Model.extend({
         }
         return this.format(value, {format: 'number', decimals: 3});
     },
-    trend: function(options) {
+    trend: function(type) {
+        type = type || 'gain';
         if (this.get('name') == 'static') {
-            var sign = this.get('trend').sign;
-
-            switch (sign) {
-                case -1: return 'down';
-                case 0: return 'same';
-                case 1: return 'up';
-                default: return 'undefined';
+            var trend = this.get('trend_' + type);
+            if (trend) {
+                var sign = trend.sign;
+                switch (sign) {
+                    case -1: return 'down';
+                    case 0: return 'same';
+                    case 1: return 'up';
+                    default: return 'undefined';
+                }
             }
         }
     },
@@ -53,13 +56,15 @@ model = Backbone.Model.extend({
         }
 
         var totalRanks = value.asc + value.desc;
-        if (this.get('category') == 'vulnerability' || this.get('name') == 'vulnerability_delta') {
+        if (this.meta('index') == 'vulnerability' || this.get('name') == 'vulnerability_delta') {
             var color = gradientRgb(['#7cc0e4', '#fd9496'], totalRanks, value.asc);
+            var rank = value.asc;
         } else {
             var color = gradientRgb(['#7cc0e4', '#fd9496'], totalRanks, value.desc);
+            var rank = value.desc;
         }
 
-        return "<div class='rank-number' style='background-color: #" + color + ";'>" + value.desc + '</div>';
+        return "<div class='rank-number' style='background-color: #" + color + ";'>" + rank + '</div>';
     },
     meta: function(key) {
         // TODO: Why do some indicators not have an id? Should we always use 'name'?
@@ -128,7 +133,7 @@ model.formats = {
             i = parseInt(n = Math.abs(n).toFixed(c), 10) + '',
             j = ((j = i.length) > 3) ? j % 3 : 0;
 
-        var val = (j ? i.substr(0, j) + t : '') + i.substr(j).replace(/(\d{3})(?=\d)/g, "$1" + t) + (c ? d + Math.abs(n - i).toFixed(c).slice(2) : ''); 
+        var val = (j ? i.substr(0, j) + t : '') + i.substr(j).replace(/(\d{3})(?=\d)/g, "$1" + t) + (c ? d + Math.abs(n - i).toFixed(c).slice(2) : '');
 
         return (parseFloat(val) == 0 ? 0 : sign + val);
     },
@@ -146,9 +151,9 @@ model.meta = {
     "business": {
         "id": "business",
         "name": "Business freedom",
-        "description": "",
+        "description": "Individual’s right to create, operate, and close an enterprise without interference from the state.",
         "format": "number",
-        "decimals": "1",
+        "decimals": "0",
         "unit": null,
         "index": "readiness",
         "sector": null,
@@ -161,7 +166,7 @@ model.meta = {
     "coast_area": {
         "id": "coast_area",
         "name": "Coastal area",
-        "description": "Percent of land less than 5 meters above sea-level",
+        "description": "Percent of land less than 10 meters above sea-level.",
         "format": "number",
         "decimals": "2",
         "unit": "%s %",
@@ -169,14 +174,14 @@ model.meta = {
         "sector": "infrastruct",
         "component": "exposure",
         "source": [{
-            "name": "World Resources Institute",
-            "link": "http://cait.wri.org/cait-va.php?page=valand5m&mode=view"
+            "name": "CIESIN",
+            "link": "http://sedac.ciesin.columbia.edu/gpw/lecz.jsp "
         }]
     },
     "coast_popn": {
         "id": "coast_popn",
         "name": "Coastal population",
-        "description": "Percent of population living less than 5 meters above sea-level",
+        "description": "Percent of population living less than 10 meters above sea-level.",
         "format": "percent",
         "decimals": "2",
         "unit": "%s %",
@@ -184,14 +189,14 @@ model.meta = {
         "sector": "infrastruct",
         "component": "sensitivity",
         "source": [{
-            "name": "World Resources Institute",
-            "link": "http://cait.wri.org/cait-va.php?page=vapop5m&mode=view"
+           "name": "CIESIN",
+           "link": "http://sedac.ciesin.columbia.edu/gpw/lecz.jsp "
         }]
     },
     "corruption": {
         "id": "corruption",
         "name": "Control of corruption",
-        "description": "",
+        "description": "Perceptions of public power exercised for private gain, including both petty and grand forms of corruption, as well as 'capture' of the state by elites and private interests.",
         "format": "number",
         "decimals": "2",
         "unit": null,
@@ -206,22 +211,22 @@ model.meta = {
     "d-Ppt": {
         "id": "d-Ppt",
         "name": "Precipitation change",
-        "description": "Projected change in precipitation by the end of the 21st century",
+        "description": "Projected change in precipitation by late 21st century, i.e. 2070-99 compared to  1961-90.",
         "format": "percent",
-        "decimals": "2",
+        "decimals": "1",
         "unit": "%s %",
         "index": "vulnerability",
         "sector": "water",
         "component": "exposure",
         "source": [{
-            "name": "Climate Reserach Unit",
-            "link": "http://www.cru.uea.ac.uk/cru/data/precip/"
+            "name": "Climatic Research Unit, University of East Anglia. Dataset TYN CY 3.0",
+            "link": "http://www.cru.uea.ac.uk/cru/data/hrg/"
         }]
     },
     "d-Temp": {
         "id": "d-Temp",
         "name": "Temperature change",
-        "description": "Projected change in temperature by the end of the 21st century",
+        "description": "Projected change in temperature by late 21st century, i.e. 2070-99 compared to  1961-90.",
         "format": "number",
         "decimals": "1",
         "unit": "%s °C",
@@ -229,14 +234,14 @@ model.meta = {
         "sector": "water",
         "component": "exposure",
         "source": [{
-            "name": "Climate Research Unit",
-            "link": "http://www.cru.uea.ac.uk/cru/data/temperature/"
+            "name": "Climatic Research Unit, University of East Anglia. Dataset TYN CY 3.0",
+            "link": "http://www.cru.uea.ac.uk/cru/data/hrg/"
         }]
     },
     "daly": {
         "id": "daly",
         "name": "Disability adjusted life years",
-        "description": "Percent increase in DALY due to climate change in the late 21st century",
+        "description": "Projected percent increase in DALY due to climate change in the late 21st century.",
         "format": "percent",
         "decimals": "2",
         "unit": "%s %",
@@ -244,14 +249,14 @@ model.meta = {
         "sector": "health",
         "component": "exposure",
         "source": [{
-            "name": "Globalization and Health article: Adaptation costs for climate change-related cases of diarrhoeal disease, malnutrition, and malaria in 2030, by Kristie L Ebi",
+            "name": "Adaptation costs for climate change-related cases of diarrhoeal disease, malnutrition, and malaria in 2030, by Kristie L Ebi",
             "link": "http://www.globalizationandhealth.com/content/4/1/9"
         }]
     },
     "energy_access": {
         "id": "energy_access",
         "name": "Energy access",
-        "description": "Percent population with access to electricity",
+        "description": "Percent population with access to electricity.",
         "format": "number",
         "decimals": "1",
         "unit": "%s %",
@@ -259,16 +264,16 @@ model.meta = {
         "sector": "infrastruct",
         "component": "exposure",
         "source": [{
-            "name": "World Resources Institute",
-            "link": "http://cait.wri.org/cait-va.php?page=vaelectricity&mode=view"
+            "name": "WHO & UNPD",
+            "link": "http://content.undp.org/go/cms-service/stream/asset/?asset_id=2205620 "
         }]
     },
     "energy_sensit": {
         "id": "energy_sensit",
         "name": "Energy sensitivity",
-        "description": "Percent of energy derived from hydroelectric and imported power",
+        "description": "Percent of energy derived from hydroelectricity and imported power.",
         "format": "percent",
-        "decimals": "0",
+        "decimals": "1",
         "unit": "%s %",
         "index": "vulnerability",
         "sector": "infrastruct",
@@ -287,7 +292,7 @@ model.meta = {
     "enrollment": {
         "id": "enrollment",
         "name": "Tertiary education",
-        "description": "The ratio of total enrollment, regardless of age, to the population of students enrolled in tertiary educational systems",
+        "description": "The ratio of total enrollment, regardless of age, to the population in age range for tertiary education.",
         "format": "number",
         "decimals": "2",
         "unit": "%s %",
@@ -301,10 +306,10 @@ model.meta = {
     },
     "external": {
         "id": "external",
-        "name": "External dependence",
-        "description": "Percent of total expendature on health devoted to health funds or services in kind that are provided by entities not part of the country in question",
+        "name": "External health dependence",
+        "description": "Percent of total expendature devoted to health funds or services in kind that are provided by entities external to the country.",
         "format": "number",
-        "decimals": "2",
+        "decimals": "1",
         "unit": "%s %",
         "index": "vulnerability",
         "sector": "health",
@@ -317,9 +322,9 @@ model.meta = {
     "finan": {
         "id": "finan",
         "name": "Financial freedom",
-        "description": "",
+        "description": "Banking efficiency, independence from government control and interference in the financial sector.",
         "format": "number",
-        "decimals": "1",
+        "decimals": "0",
         "unit": null,
         "index": "readiness",
         "sector": null,
@@ -332,7 +337,7 @@ model.meta = {
     "fiscal": {
         "id": "fiscal",
         "name": "Fiscal freedom",
-        "description": "",
+        "description": "Tax burden imposed by government.",
         "format": "number",
         "decimals": "1",
         "unit": null,
@@ -347,7 +352,7 @@ model.meta = {
     "food_capacity": {
         "id": "food_capacity",
         "name": "Food capacity",
-        "description": "Average of the 2 best scores between use of fertilizers, mechanization and irrigation in agriculture",
+        "description": "Measure of agricultural technological capacity as the average of the 2 best scores from the use of fertilizers, the level of mechanization and the use of irrigation in agriculture.",
         "format": "number",
         "decimals": "2",
         "unit": null,
@@ -372,7 +377,7 @@ model.meta = {
     "gdp": {
         "id": "gdp",
         "name": "GDP (PPP) per capita",
-        "description": "Gross domestic product per capita",
+        "description": "Gross domestic product per capita based on purchasing power parity, in units of constant 2005 international dollar.",
         "format": "number",
         "decimals": "2",
         "unit": "%s USD",
@@ -383,7 +388,7 @@ model.meta = {
     "gov_spend": {
         "id": "gov_spend",
         "name": "Government spending",
-        "description": "",
+        "description": "Level of government expenditures as a percentage of GDP.",
         "format": "number",
         "decimals": "1",
         "unit": null,
@@ -391,16 +396,16 @@ model.meta = {
         "sector": null,
         "component": "economic",
         "source": [{
-            "name": "World Development Indicators",
+            "name": "Index of Economic Freedom",
             "link": "http://www.heritage.org/index/explore"
         }]
     },
     "health_disease": {
         "id": "health_disease",
         "name": "Disease mortality",
-        "description": "Percentage mortality due to infectious diseases",
+        "description": "Percentage mortality due to infectious diseases.",
         "format": "percent",
-        "decimals": "2",
+        "decimals": "1",
         "unit": "%s %",
         "index": "vulnerability",
         "sector": "health",
@@ -413,7 +418,7 @@ model.meta = {
     "imports": {
         "id": "imports",
         "name": "Food import dependency",
-        "description": "Proportion of cereal consumption obtained from entities not part of the country in question",
+        "description": "Proportion of cereal consumption obtained from entities not part of the country in question.",
         "format": "percent",
         "decimals": "0",
         "unit": "%s %",
@@ -422,15 +427,15 @@ model.meta = {
         "component": "sensitivity",
         "source": [{
             "name": "FAO",
-            "link": "http://example.com"
+            "link": "http://FAOStat.fao.org"
         }]
     },
     "invest": {
         "id": "invest",
         "name": "Investment freedom",
-        "description": "",
+        "description": "Constraints on the flow of investment capital. Includes rules for foreign and domestic investment; restrictions on payments, transfers, and capital transactions; labor regulations, corruption, red tape, weak infrastructure, and political and security conditions.",
         "format": "number",
-        "decimals": "1",
+        "decimals": "0",
         "unit": null,
         "index": "readiness",
         "sector": null,
@@ -443,7 +448,7 @@ model.meta = {
     "labor": {
         "id": "labor",
         "name": "Labor freedom",
-        "description": "",
+        "description": "Legal and regulatory framework of a country’s labor market.",
         "format": "number",
         "decimals": "1",
         "unit": null,
@@ -458,7 +463,7 @@ model.meta = {
     "life": {
         "id": "life",
         "name": "Life expectancy",
-        "description": "The number of years a newborn infant would live if prevailing patterns of mortality at the time of its birth were to stay the same throughout its life",
+        "description": "The number of years a newborn infant would live if prevailing patterns of mortality at the time of its birth were to stay the same throughout its life.",
         "format": "number",
         "decimals": "1",
         "unit": null,
@@ -473,7 +478,7 @@ model.meta = {
     "malnutr": {
         "id": "malnutr",
         "name": "Malnutrition",
-        "description": "Percent of under 5 year-olds with low weight for their height",
+        "description": "Percent of under 5 year-olds with low weight for their height.",
         "format": "number",
         "decimals": "1",
         "unit": "%s %",
@@ -481,16 +486,16 @@ model.meta = {
         "sector": "food",
         "component": "capacity",
         "source": [{
-            "name": "WHO",
-            "link": "http://example.com"
+            "name": "World Development Indicators",
+            "link": "http://data.worldbank.org/indicator/SH.STA.WAST.ZS"
         }]
     },
     "matern": {
         "id": "matern",
         "name": "Maternal mortality",
-        "description": "The probability that a 15-year-old female will die eventually from a maternal cause assuming that current levels of fertility and mortality (including maternal mortality) do not change in the future, taking into account competing causes of death",
+        "description": "Life time risk of maternal death is the probability that a 15-year-old female will die eventually from a maternal cause assuming that current levels of fertility and mortality (including maternal mortality) do not change in the future, taking into account competing causes of death.",
         "format": "number",
-        "decimals": "2",
+        "decimals": "0",
         "unit": "%s %",
         "index": "vulnerability",
         "sector": "health",
@@ -503,7 +508,7 @@ model.meta = {
     "mobiles": {
         "id": "mobiles",
         "name": "Mobile penetration",
-        "description": "Mobile telephone subscriptions per 100 people to a public mobile telephone service using cellular technology, which provide access to the public switched telephone network (post-paid and prepaid subscriptions are included)",
+        "description": "Mobile telephone subscriptions per 100 people to a public mobile telephone service using cellular technology, which provide access to the public switched telephone network (post-paid and prepaid subscriptions are included).",
         "format": "number",
         "decimals": "2",
         "unit": null,
@@ -518,7 +523,7 @@ model.meta = {
     "monetary": {
         "id": "monetary",
         "name": "Monetary freedom",
-        "description": "",
+        "description": "Price stability with an assessment of price controls.",
         "format": "number",
         "decimals": "1",
         "unit": null,
@@ -533,7 +538,7 @@ model.meta = {
     "non_violence": {
         "id": "non_violence",
         "name": "Political stability & non-violence",
-        "description": "",
+        "description": "Perceptions of the likelihood that the government will be destabilized or overthrown by unconstitutional or violent means, including domestic violence and terrorism.",
         "format": "number",
         "decimals": "2",
         "unit": null,
@@ -548,7 +553,7 @@ model.meta = {
     "pop": {
         "id": "pop",
         "name": "Population",
-        "description": "Total population",
+        "description": "Total population.",
         "format": "number",
         "decimals": "0",
         "unit": null,
@@ -570,22 +575,29 @@ model.meta = {
     "road_floods": {
         "id": "road_floods",
         "name": "Road flooding",
-        "description": "Frequency of floods divided by land area",
+        "description": "Frequency of floods calculated as flood disasters per decade per 100,000 km2 of land area.",
         "format": "number",
         "decimals": "2",
         "unit": null,
         "index": "vulnerability",
         "sector": "infrastruct",
         "component": "exposure",
-        "source": [{
-            "name": "CRED & WB Stats for area",
-            "link": "http://example.com"
-        }]
+        "source": [
+        {
+            "name": "World Development Indicators - Land area (sq. km)",
+            "link": "http://data.worldbank.org/indicator/AG.LND.TOTL.K2"
+        },
+        {
+            "name": "EM-DAT: The OFDA/CRED International Disaster Database - Floods.",
+            "link": "http://www.emdat.be/"
+        }
+        ]
+
     },
     "road_paved": {
         "id": "road_paved",
         "name": "Paved roads",
-        "description": "Roads surfaced with crushed stone (macadam) and hydrocarbon binder or bituminized agents, with concrete, or with cobblestones, as a percentage of all the country's roads, measured in length",
+        "description": "Roads surfaced with crushed stone (macadam) and hydrocarbon binder or bituminized agents, with concrete, or with cobblestones, as a percentage of all the country's roads, measured in length.",
         "format": "number",
         "decimals": "2",
         "unit": "%s %",
@@ -601,9 +613,9 @@ model.meta = {
     "rural_popn": {
         "id": "rural_popn",
         "name": "Rural population",
-        "description": "Total rural population as a percent of the total population",
+        "description": "Total rural population as a percent of the total population.",
         "format": "number",
-        "decimals": "2",
+        "decimals": "1",
         "unit": "%s %",
         "index": "vulnerability",
         "sector": "food",
@@ -611,7 +623,7 @@ model.meta = {
         "source": [{
             "name": "World Development Indicators - Rural Population",
             "link": "http://data.worldbank.org/indicator/SP.RUR.TOTL"
-        }, 
+        },
         {
             "name": "World Development Indicators - Total Population",
             "link": "http://data.worldbank.org/indicator/SP.POP.TOTL"
@@ -621,7 +633,7 @@ model.meta = {
     "rule_of_law": {
         "id": "rule_of_law",
         "name": "Rule of law",
-        "description": "",
+        "description": "Confidence in and abide by the rules of society, and in particular the quality of contract enforcement, property rights, the police, and the courts, as well as the likelihood of crime and violence.",
         "format": "number",
         "decimals": "2",
         "unit": null,
@@ -636,7 +648,7 @@ model.meta = {
     "sanit": {
         "id": "sanit",
         "name": "Improved sanitation facilities",
-        "description": "The percentage of the population with at least adequate access to excreta disposal facilities that can effectively prevent human, animal, and insect contact with excreta",
+        "description": "The percentage of the population with at least adequate access to excreta disposal facilities that can effectively prevent human, animal, and insect contact with excreta.",
         "format": "number",
         "decimals": "1",
         "unit": "%s %",
@@ -651,7 +663,7 @@ model.meta = {
     "staff": {
         "id": "staff",
         "name": "Health workers per capita",
-        "description": "Number of medical workers per 1000 people, based on WDI indicators on Physicians and Nurses and Midwives: Health workers per capita = (2 x Physicians) + Nurses",
+        "description": "Number of medical workers per 1000 people, based on (2 x Physicians) + (Nurses and Midwives).",
         "format": "number",
         "decimals": "2",
         "unit": null,
@@ -672,7 +684,7 @@ model.meta = {
     "trade": {
         "id": "trade",
         "name": "Trade freedom",
-        "description": "",
+        "description": "Absence of tariff and non-tariff barriers that affect imports and exports of goods and services.",
         "format": "number",
         "decimals": "1",
         "unit": null,
@@ -687,7 +699,7 @@ model.meta = {
     "voice_accountability": {
         "id": "voice_accountability",
         "name": "Voice & accountability",
-        "description": "",
+        "description": "Participation in selecting the government, as well as freedom of expression, freedom of association, and a free media.",
         "format": "number",
         "decimals": "2",
         "unit": null,
@@ -702,7 +714,7 @@ model.meta = {
     "water_access": {
         "id": "water_access",
         "name": "Water access",
-        "description": "The percentage of the population with reasonable access to an adequate amount of water from an improved source, such as a household connection, public standpipe, borehole, protected well or spring, and rainwater collection",
+        "description": "The percentage of the population with reasonable access to an adequate amount of water from an improved source, such as a household connection, public standpipe, borehole, protected well or spring, and rainwater collection.",
         "format": "number",
         "decimals": "1",
         "unit": "%s %",
@@ -717,7 +729,7 @@ model.meta = {
     "water_disease": {
         "id": "water_disease",
         "name": "Water disease",
-        "description": "Deaths due to water borne diseases in under 5 year-olds",
+        "description": "Water, sanitation & hygiene related deaths per 100,000  children under 5 years old.",
         "format": "number",
         "decimals": "0",
         "unit": null,
@@ -726,15 +738,15 @@ model.meta = {
         "component": "sensitivity",
         "source": [{
             "name": "WHO",
-            "link": "http://example.com"
+            "link": "http://apps.who.int/ghodata/?vid=99001#"
         }]
     },
     "water_use": {
         "id": "water_use",
         "name": "Water use",
-        "description": "Percent of total internal and external water withdrawn for all uses ",
+        "description": "Percent of total internal and external water withdrawn for all uses.",
         "format": "number",
-        "decimals": "2",
+        "decimals": "1",
         "unit": "%s %",
         "index": "vulnerability",
         "sector": "water",
@@ -747,7 +759,7 @@ model.meta = {
     "yield_cv": {
         "id": "yield_cv",
         "name": "Variation of cereal yield",
-        "description": "Kilograms of cereal yield per hectare of harvested land, including wheat, rice, maize, barley, oats, rye, millet, sorghum, buckwheat, and mixed grains",
+        "description": "Coefficient of variation  (Stdev / mean) of cereal yield per hectare of harvested land, including wheat, rice, maize, barley, oats, rye, millet, sorghum, buckwheat, and mixed grains.",
         "format": "number",
         "decimals": "2",
         "unit": null,
@@ -762,7 +774,7 @@ model.meta = {
     "yld_proj": {
         "id": "yld_proj",
         "name": "Yield change",
-        "description": "Projected impact of climate change on agricultural yields",
+        "description": "Projected percentage impact of climate change on agricultural yields.",
         "format": "number",
         "decimals": "2",
         "unit": "%s %",
@@ -777,9 +789,9 @@ model.meta = {
     "governance": {
         "id": "governance",
         "name": "Governance",
-        "description": "The Governance component summarizes national stability, governmental responsiveness and corruption.",
+        "description": "Corresponds to 30% of Readiness, equally weighting 'Voice and Accountability', government 'Stability' and 'Control of corruption'.",
         "format": "number",
-        "decimals": "3",
+        "decimals": "2",
         "unit": null,
         "index": "readiness",
         "sector": null,
@@ -787,10 +799,10 @@ model.meta = {
     },
     "economic": {
         "id": "economic",
-        "name": "Economic readiness",
-        "description": "The Economic component summarizes economic stability, growth and governmental regulation.",
+        "name": "Economic",
+        "description": "Corresponds to 40% of Readiness and equally weights 7 measures related to goverment regulations, taxes and business enabling environment.",
         "format": "number",
-        "decimals": "3",
+        "decimals": "2",
         "unit": null,
         "index": "readiness",
         "sector": null,
@@ -799,9 +811,9 @@ model.meta = {
     "social": {
         "id": "social",
         "name": "Social readiness",
-        "description": "The Social component summarizes the society's awareness and understanding of climate risks and their belief that changes will increase adaptation capacity.",
+        "description": "Corresponds to 30% of Readiness. It measures human capital, access to information, communications and working environment.",
         "format": "number",
-        "decimals": "3",
+        "decimals": "2",
         "unit": null,
         "index": "readiness",
         "sector": null,
@@ -810,9 +822,9 @@ model.meta = {
     "exposure": {
         "id": "exposure",
         "name": "Exposure",
-        "description": "The Exposure component summarizes the probability of climate-related hazards.",
+        "description": "The nature and degree to which a system is exposed to significant climatic variations.",
         "format": "number",
-        "decimals": "3",
+        "decimals": "2",
         "unit": null,
         "index": "vulnerability",
         "sector": null,
@@ -821,9 +833,9 @@ model.meta = {
     "sensitivity": {
         "id": "sensitivity",
         "name": "Sensitivity",
-        "description": "The Sensitivity component summarizes the potential severity of the impacts of climate-related threats.",
+        "description": "The degree to which a system is affected, either adversely or beneficially, by climate variability or change.",
         "format": "number",
-        "decimals": "3",
+        "decimals": "2",
         "unit": null,
         "index": "vulnerability",
         "sector": null,
@@ -832,9 +844,9 @@ model.meta = {
     "capacity": {
         "id": "capacity",
         "name": "Capacity",
-        "description": "The Capacity component summarizes the availability of economic, social and institutional resources to cope with and adapt to the impacts of climate change.",
+        "description": "The availability of economic, social, and institutional resources to cope with and adapt to the impacts of climate change in specific sectors. Though related, this differs from readiness indicators in that it seeks to measure the current ability to increase resilience (or reduce vulnerability) in specific sectors, whereas Readiness measures a country’s ability to facilitate further increases in resilience.",
         "format": "number",
-        "decimals": "3",
+        "decimals": "2",
         "unit": null,
         "index": "vulnerability",
         "sector": null,
@@ -845,7 +857,7 @@ model.meta = {
         "name": "Water",
         "description": "The Water score summarizes a country's current and future ability to provide clean water.",
         "format": "number",
-        "decimals": "3",
+        "decimals": "2",
         "unit": null,
         "index": "vulnerability",
         "sector": null,
@@ -856,7 +868,7 @@ model.meta = {
         "name": "Food",
         "description": "The Food score summarizes a country's food production, nutrition and rural population.",
         "format": "number",
-        "decimals": "3",
+        "decimals": "2",
         "unit": null,
         "index": "vulnerability",
         "sector": null,
@@ -865,9 +877,9 @@ model.meta = {
     "health": {
         "id": "health",
         "name": "Health",
-        "description": "The Health score summarizes a country's ability to provide health services against several mortality statistics.",
+        "description": "The Health score summarizes a country's ability to provide health services.",
         "format": "number",
-        "decimals": "3",
+        "decimals": "2",
         "unit": null,
         "index": "vulnerability",
         "sector": null,
@@ -876,9 +888,9 @@ model.meta = {
     "infrastruct": {
         "id": "infrastruct",
         "name": "Infrastructure",
-        "description": "The Infrastructure score summarizes three factors impacting human well-being in the face of climate change: coasts, energy and transportation.",
+        "description": "The Infrastructure score summarizes three factors impacting human well-being: coasts, energy and transportation.",
         "format": "number",
-        "decimals": "3",
+        "decimals": "2",
         "unit": null,
         "index": "vulnerability",
         "sector": null,
@@ -887,9 +899,11 @@ model.meta = {
     "vulnerability": {
         "id": "vulnerability",
         "name": "Vulnerability",
-        "description": "A country's GaIn™ score is composed of a Vulnerability score and a Readiness score. Vulnerability measures a country's exposure, sensitivity and ability to cope with climate related hazards, as well as accounting for the overall status of food, water, health and infrastructure within the nation.",
+        "description": "A country's GaIn score is composed of a Vulnerability score and a Readiness score. Vulnerability measures a country's exposure, sensitivity and ability to cope with climate related hazards, as well as accounting for the overall status of food, water, health and infrastructure within the nation.",
+        "map_caption": "Countries of the world by Vulnerability, higher scores are better.",
+        "ranking_caption": "World wide ranking by Vulnerability, higher scores are better.",
         "format": "number",
-        "decimals": "3",
+        "decimals": "2",
         "unit": null,
         "index": "vulnerability",
         "sector": null,
@@ -898,9 +912,11 @@ model.meta = {
     "vulnerability_delta": {
         "id": "vulnerability_delta",
         "name": "Vulnerability, corrected for GDP",
-        "description": "GDP corrected Vulnerability scores represent how far the actual Vulnerability score of a country is from its expected Vulnerability score based on its GDP.  A positive value means a country has a higher Vulnerability score than other countries of a similar GDP. A negative value means a country has a lower score.",
+        "description": "GDP corrected Vulnerability scores represent how far the actual Vulnerability score of a country is from its expected Vulnerability score based on its GDP.  A positive value means a country has a higher Vulnerability score than other countries of a similar GDP. A negative value means a country has a worse score.",
+        "map_caption": "Countries of the world by Vulnerability, corrected for GDP. Higher scores are better.",
+        "ranking_caption": "World wide ranking by Vulnerability, corrected for GDP. Higher scores are better.",
         "format": "number",
-        "decimals": "3",
+        "decimals": "2",
         "unit": null,
         "index": "vulnerability_delta",
         "sector": null,
@@ -909,9 +925,11 @@ model.meta = {
     "readiness": {
         "id": "readiness",
         "name": "Readiness",
-        "description": "A country's GaIn™ score is composed of a Vulnerability score and a Readiness score. Readiness measures the ability of a country's private and public sectors to leverage resources effectively towards increasing resiliency to climate change and other global challenges.",
+        "description": "A country's GaIn score is composed of a Vulnerability score and a Readiness score. Readiness targets those portions of the economy, governance and society that affect the speed and efficiency of absorption and implementation of Adaptation projects.",
+        "map_caption": "Countries of the world by Readiness, higher scores are better.",
+        "ranking_caption": "World wide ranking by Readiness, higher scores are better.",
         "format": "number",
-        "decimals": "3",
+        "decimals": "2",
         "unit": null,
         "index": "readiness",
         "sector": null,
@@ -920,9 +938,11 @@ model.meta = {
     "readiness_delta": {
         "id": "readiness_delta",
         "name": "Readiness, corrected for GDP",
-        "description": "GDP corrected Readiness scores represent how far the actual Readiness score of a country is from its expected score based on its GDP. A positive value means a country has a higher Readiness score than other countries of a similar GDP. A negative value means a country has a lower score.",
+        "description": "GDP corrected Readiness scores represent how far the actual Readiness score is from its expected value based on its GDP. A positive value means a country has a higher Readiness score than other countries of a similar GDP. A negative value means a country has a worse score.",
+        "map_caption": "Countries of the world by Readiness, corrected for GDP. Higher scores are better.",
+        "ranking_caption": "World wide ranking by Readiness, corrected for GDP. Higher scores are better.",
         "format": "number",
-        "decimals": "3",
+        "decimals": "2",
         "unit": null,
         "index": "readiness_delta",
         "sector": null,
@@ -930,8 +950,10 @@ model.meta = {
     },
     "gain": {
         "id": "gain",
-        "name": "GaIn™",
-        "description": "The Global Adaptation Index™ (GaIn™) captures a country's Vulnerability to climate change and other global challenges on the one hand and its Readiness to improve resilience on the other hand.",
+        "name": "GaIn",
+        "description": "The Global Adaptation Index (GaIn) captures a country's Vulnerability to climate change and other global challenges, and its Readiness to improve resilience.",
+        "map_caption": "Countries of the world by GaIn, higher scores are better.",
+        "ranking_caption": "World wide ranking by GaIn, higher scores are better.",
         "format": "number",
         "decimals": "1",
         "unit": null,
@@ -941,8 +963,10 @@ model.meta = {
     },
     "gain_delta": {
         "id": "gain_delta",
-        "name": "GaIn™, corrected for GDP",
-        "description": "GDP corrected GaIn™ scores represent how far the actual GaIn™ score of a country is from its expected score based on its GDP. A positive value means a country has a higher GaIn™ score than other countries of a similar GDP. A negative value means a country has a lower score.",
+        "name": "GaIn, corrected for GDP",
+        "description": "GDP corrected GaIn scores represent how much better or worse the actual GaIn score is from its expected value, based on its GDP. A positive value means a country has a better GaIn score than other countries of a similar GDP. A negative value means a country has a worse score.",
+        "map_caption": "Countries of the world by GaIn, corrected for GDP. Higher scores are better.",
+        "ranking_caption": "World wide ranking by GaIn, corrected for GDP. Higher scores are better.",
         "format": "number",
         "decimals": "2",
         "unit": null,

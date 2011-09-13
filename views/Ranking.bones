@@ -17,8 +17,10 @@ view = views.Main.extend({
             return this;
         }
 
+        var trendType = this.model.get('id');
         var trends = this.options.staticData.get('indicators').reduce(function(result, m) {
-            result[m.get('ISO3')] = m.trend();
+            var trend = m.trend(trendType);
+            if (trend) result[m.get('ISO3')] = m.trend(trendType);
             return result;
         }, {});
 
@@ -97,11 +99,12 @@ view = views.Main.extend({
                 subject.meta('index')
         };
         if (subject.hasCorrection() || subject.isCorrection()) {
-            var path = models.Ranking.path(subject.uncorrected());
+            var path = models.Ranking.path(subject.uncorrected()),
+                caption = subject.meta('ranking_caption') || 'World wide ranking by ' + subject.meta('name');
             template = templates.CorrectionFloor;
             if (subject.isCorrection()) {
                 locals.correction = {
-                    caption: 'World wide ranking by ' + subject.meta('name'),
+                    caption: caption,
                     href: path == '/ranking/gain' ? '/ranking' : path,
                     methodologyHash:
                         (subject.meta('component') || subject.meta('sector')) ?
@@ -111,7 +114,7 @@ view = views.Main.extend({
                 };
             } else {
                 locals.correction = {
-                    caption: 'World wide ranking by ' + subject.meta('name'),
+                    caption: caption,
                     href: path.replace('/ranking', '/ranking/delta'),
                     methodologyHash:
                         (subject.meta('component') || subject.meta('sector')) ?

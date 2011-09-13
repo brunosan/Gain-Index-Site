@@ -6,6 +6,6 @@
   <div class='correction-control container'>
   <a class='button methodology' href='/about/methodology#<%= correction.methodologyHash %>'>Methodology</a>
   <p><%= correction.caption %></p>
-  <a class='button green' href='<%= correction.href %>'><%= correction.title %></a>
+  <a class='correct button green' href='<%= correction.href %>'><%= correction.title %></a>
   </div>
 </div>

@@ -20,6 +20,7 @@ view = Backbone.View.extend({
         this.collection.each(function(model) {
             if (meta[model.get('ISO3')]) {
                 data.push({
+                    id: models.Country.path(model.get('ISO3')),
                     name: meta[model.get('ISO3')].name,
                     income: meta[model.get('ISO3')].oecd_income,
                     incomeClass: meta[model.get('ISO3')].oecd_income
@@ -33,13 +34,8 @@ view = Backbone.View.extend({
             }
         });
 
-        var showTrend = _.include(
-            ['gain', 'readiness', 'vulnerability'],
-            this.options.indicatorName
-        );
-
         $(this.el).empty().append(templates.RankingTable({
-            showTrend: showTrend,
+            showTrend: !_.isEmpty(trends),
             rows: data
         }));
         // Conserve previously active table rows.

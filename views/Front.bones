@@ -3,7 +3,7 @@ view = views.Main.extend({
         'click .drawer .handle a.handle': 'closeDrawer',
         'click #map-years li a': 'yearClick',
         'click #map-indicators li a': 'indicatorClick',
-        'click .floor .correction-control a': 'toggleCorrection',
+        'click .floor .correction-control a.correct': 'toggleCorrection',
         'click .featured .country': 'countryClick'
     },
     initialize: function(options) {
@@ -160,12 +160,13 @@ view = views.Main.extend({
     },
     renderFloor: function(id) {
         id = _.isObject(id) ? id.get('indicator') : id;
-        var indicator = new models.Indicator({id: id});
+        var indicator = new models.Indicator({id: id}),
+            caption = indicator.meta('map_caption') || 'Countries of the world by ' + indicator.meta('name');
         var locals = {
             title: indicator.meta('name'),
             content: indicator.get('id') == 'gain' ? templates.GaInFloorText() : indicator.meta('description'),
             correction: {
-                caption: 'Countries of the world by ' + indicator.meta('name'),
+                caption: caption,
                 href: '#',
                 methodologyHash:
                     (indicator.meta('component') || indicator.meta('sector')) ?

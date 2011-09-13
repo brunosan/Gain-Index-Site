@@ -64,7 +64,7 @@ view = views.Main.extend({
         this.ensureChildViews();
         this.vTable.render();
         this.rTable.render();
-        this.pageTitle = 'GaIn Country Brief: ' + this.model.meta('name');
+        this.pageTitle = this.model.meta('name');
         return this;
     },
     attach: function() {
@@ -166,25 +166,32 @@ view = views.Main.extend({
         }));
 
         // Lazy load 5 similar countries.
-        var el = this.el;
-
-        $('.drawer .similar-countries', el).css({opacity: 0});
-
         // We can't easily determine similar countries from the input values.
+        var el = this.el;
         if (propName !== 'input') {
-            (new models.IndicatorSummary(
-                {id: indicator.get('name'), years: [indicator.get('currentYear')]}
-            )).fetch({
-                success: function(summary) {
-                    $('.drawer .similar-countries', el).empty().append(
-                        templates.SimilarCountries({
-                            similar: summary.similar(country.get('id'), 5),
-                            title: indicator.meta('name')
-                        })
-                    );
-                    $('.drawer .similar-countries', el).animate({opacity: 1, duration: 250});
-                }
-            });
+            if (indicator.score({format: false}) == undefined) {
+                $('.drawer .similar-countries', el).empty().append(
+                    templates.SimilarCountries({
+                        similar: false,
+                        title: indicator.meta('name')
+                    })
+                );
+            } else {
+                $('.drawer .similar-countries', el).css({opacity: 0});
+                (new models.IndicatorSummary(
+                    {id: indicator.get('name'), years: [indicator.get('currentYear')]}
+                )).fetch({
+                    success: function(summary) {
+                        $('.drawer .similar-countries', el).empty().append(
+                            templates.SimilarCountries({
+                                similar: summary.similar(country.get('id'), 5),
+                                title: indicator.meta('name')
+                            })
+                        );
+                        $('.drawer .similar-countries', el).animate({opacity: 1, duration: 250});
+                    }
+                });
+            }
         }
 
         if (data && data.length > 1) {
@@ -209,7 +216,7 @@ view = views.Main.extend({
 
             new views.Bigline(graphOptions)
         } else {
-            $('.drawer .content .graph', this.el).hide();
+            $('.drawer .content .graph', this.el).addClass('no-data');
         }
         $('.drawer', this.el).addClass('open');
         this.positionDrawer('drawer');

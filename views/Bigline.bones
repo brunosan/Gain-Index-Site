@@ -11,7 +11,7 @@ view = Backbone.View.extend({
         legend: {
             show: true,
             container: '.drawer .chart .legend',
-            noColumns: 4,
+            noColumns: 4
         },
         series: {
             lines: { lineWidth: 1 },

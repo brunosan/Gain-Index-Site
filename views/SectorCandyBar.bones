@@ -34,14 +34,14 @@ view = Backbone.View.extend({
             // Make sure total adds up to 100.
             var sorted = _.sortBy(data, function(sector) { return sector.percent;});
             var i = sorted.length;
-            while (totalWidth < 100) {
+            while (totalWidth < 99) {
                 if (i >= sorted.length) i = 0;
                 sorted[i].percent++;
                 totalWidth++;
                 i++;
             }
             var i = -1;
-            while (totalWidth > 100) {
+            while (totalWidth > 99) {
                 if (i < 0) i = sorted.length - 1;
                 sorted[i].percent--;
                 totalWidth--;
@@ -54,5 +54,5 @@ view = Backbone.View.extend({
             type: this.type
         }));
         return this;
-    },
+    }
 });

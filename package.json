@@ -12,10 +12,10 @@
   },
   "dependencies": {
     "mapnik": "0.5.3",
-    "bones": "https://github.com/developmentseed/bones/tarball/master",
-    "bones-admin": "https://github.com/developmentseed/bones-admin/tarball/master",
-    "bones-auth": "https://github.com/developmentseed/bones-auth/tarball/master",
-    "bones-document": "https://github.com/developmentseed/bones-document/tarball/master",
+    "bones": "= 2.0.0",
+    "bones-admin": "= 2.0.0",
+    "bones-auth": "= 2.0.0",
+    "bones-document": "= 2.0.0",
     "backbone-stash": "= 0.5.0",
     "csv": "https://github.com/wdavidw/node-csv-parser/tarball/9f472a2449e7d47dd901c989fb4af51705b6b1bf",
     "d3": "= 1.29.5",
@@ -27,10 +27,10 @@
     "tilelive": "= 4.0.5",
     "tilelive-mapnik" : "= 0.2.1",
     "carto": "= 0.2.3",
-    "millstone": "https://github.com/mapbox/millstone/tarball/3d0a6fe7a5f7b0932ec9717372fcd2b6fb42ca9e",
+    "millstone": "= 0.1.1",
     "wax": "3.0.6",
     "modestmaps": "= 0.18.4",
-    "couch-sqlite": "https://github.com/developmentseed/couch-sqlite/tarball/master"
+    "couch-sqlite": "= 0.0.1"
   },
   "devDependencies": {}
 }

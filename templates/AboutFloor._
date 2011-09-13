@@ -6,7 +6,7 @@
       <li><a class='nav-methodology button' href='/about/methodology'> Methodology </a></li>
       <li><a class='nav-matrix button' href='/about/matrix'> Readiness Matrix </a></li>
       <li><a class='nav-consultation button' href='/about/consultation'> Consultation </a></li>
-      <li><a class='nav-download button' href='/download'> Download Data</a></li>
+      <li><a class='nav-download button' href='/about/download'> Download Data</a></li>
       <li><a class='nav-reference button' href='/about/reference'> Reference </a></li>
     </ul>
   </div>

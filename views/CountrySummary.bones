@@ -40,12 +40,12 @@ view = Backbone.View.extend({
                 // * The turning point for Readiness is 0.63
                 // * The turning point for Vulnerability us 0.30
                 var activeQuad = (v > 0.30 ? 't' : 'b');
-                activeQuad += (r > 0.63 ? 'r' : 'l');
+                activeQuad += (r > 0.56 ? 'r' : 'l');
 
                 // The Scale of things here is non-obvious.
-                // * Readiness range with .63 as the center is 0.2 - 1.06
+                // * Readiness range with .56 as the center is 0.03 - 1.03
                 // * Vulnerability range with .30 as the center is 0.0 - 0.6
-                r = (r - 0.2) / (1.06 - 0.2);
+                r = (r - 0.03) / (1.03 - 0.03);
                 v = v / 0.6;
 
                 // This math depends very heavily on the CSS which is applied to the
