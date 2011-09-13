@@ -22,14 +22,18 @@ model = Backbone.Model.extend({
         }
         return this.format(value, {format: 'number', decimals: 3});
     },
-    trend: function(options) {
+    trend: function(type) {
+        type = type || 'gain';
         if (this.get('name') == 'static') {
-            var sign = this.get('trend').sign;
-            switch (sign) {
-                case -1: return 'down';
-                case 0: return 'same';
-                case 1: return 'up';
-                default: return 'undefined';
+            var trend = this.get('trend_' + type);
+            if (trend) {
+                var sign = trend.sign;
+                switch (sign) {
+                    case -1: return 'down';
+                    case 0: return 'same';
+                    case 1: return 'up';
+                    default: return 'undefined';
+                }
             }
         }
     },

@@ -203,8 +203,8 @@ img.left {
   text-indent: -9999px;
   background: transparent url(../images/sprite.png) no-repeat 0 0;
   }
-  .icon-trend-up    { background-position: 0 -1365px; }
-  .icon-trend-down  { background-position: 0 -1345px; }
+  .icon-trend-up    { background-position: -35px -1365px; }
+  .icon-trend-down  { background-position: -35px -1345px; }
   .icon-trend-same  { background-position: 0 -389px; }
 
 /**

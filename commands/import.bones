@@ -211,12 +211,13 @@ command.prototype.initialize = function(options) {
                 }
             }));
 
-            actions.push(processCSV(source + '/trend.csv', function(v, i) {
-                if (v.ISO3) {
-                    records[v.ISO3].trend = _(v).reduce(reduceScores, {});
-                }
-            }));
-
+            _.each(['gain', 'readiness', 'vulnerability'], function(score) {
+                actions.push(processCSV(source + '/trend_' + score + '.csv', function(v, i) {
+                    if (v.ISO3) {
+                        records[v.ISO3]['trend_' + score] = _(v).reduce(reduceScores, {});
+                    }
+                }));
+            });
 
             actions.push(function(next) {
                 var counter = _.after(_(records).size(), next);
