@@ -412,29 +412,32 @@ view = views.Main.extend({
         if (openTooltips == 0) $('.tooltip', this.el).empty();
     },
     quadrantHover: function(ev) {
-        $('.big-matrix .matrix-overlay', this.el).remove();
+        var relativeClass = $(ev.currentTarget).attr('class').match(/[tb][lr]/);
+        relativeClass = relativeClass[0];
+
+        $('.mini-matrix .'+ relativeClass, this.el).addClass('active');
         $('.big-matrix', this.el).append($(ev.currentTarget).html());
-        $('.matrix-overlay', this.el).stop().animate({opacity: .90, duration: 250});
+        $('.big-matrix .quad-' + relativeClass, this.el).animate({opacity: .90});
     },
-    quadrantUnhover: function() {
-        $('.big-matrix .matrix-overlay', this.el).stop().animate({
-            opacity: 'hide',
-            duration: 250
-            });
+    quadrantUnhover: function(ev) {
+        var relativeClass = $(ev.currentTarget).attr('class').match(/[tb][lr]/);
+        relativeClass = relativeClass[0];
+
+        $('.mini-matrix .'+ relativeClass, this.el).removeClass('active');
+        $('.big-matrix .quad-'+ relativeClass, this.el).fadeOut(function() {$(this).remove();});
     },
     hoverRelatedQuad: function(ev) {
         var relativeClass = $(ev.currentTarget).attr('class'),
-            associatedQuad = $('.quad', this.el).filter('.' + relativeClass);
-        $('.big-matrix .matrix-overlay', this.el).remove();
+            associatedQuad = $('.mini-matrix .quad', this.el).filter('.' + relativeClass).addClass('active');
+
         $('.big-matrix', this.el).append(associatedQuad.html());
-        associatedQuad.addClass('active');
-        $('.quad-' + relativeClass, this.el).stop().animate({opacity: .90, duration: 250});
+        $('.big-matrix .quad-' + relativeClass, this.el).animate({opacity: .90});
     },
-    unHoverRelatedQuad: function() {
-        $('.quad', this.el).removeClass('active');
-        $('.big-matrix .matrix-overlay', this.el).stop().animate({
-            opacity: 'hide',
-            duration: 250
-        });
+    unHoverRelatedQuad: function(ev) {
+        var relativeClass = $(ev.currentTarget).attr('class').match(/[tb][lr]/);
+        relativeClass = relativeClass[0];
+
+        $('.mini-matrix .'+ relativeClass, this.el).removeClass('active');
+        $('.big-matrix .quad-'+ relativeClass, this.el).fadeOut(function() {$(this).remove();});
     }
 });
