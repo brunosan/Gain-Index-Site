@@ -116,6 +116,9 @@ table thead tr {
   text-align: left;
   border-bottom: 1px solid #000;
   }
+table.ranking-history thead tr {
+  border-bottom: none;
+  }
 table thead tr th {
   padding: 5px 0 3px;
   }
@@ -196,10 +199,10 @@ table tr.index td.name {
   z-index: 200;
   }
 .big-matrix div.year-controls {
+  margin: 20px 0;
   float: left;
-  background-color: #666;
-  color: #fff;
-  margin: 20px 0 20px 60px;
+  border: 1px solid black;
+  color: black;
   padding: 0 5px;
   }
 .big-matrix div.year-controls,
@@ -209,17 +212,17 @@ table tr.index td.name {
   }
 .big-matrix ul.year-selector li  { float: left; }
 .big-matrix ul.year-selector li a {
-  color: #fff;
   float: left;
   padding: 2px 5px;
   line-height: 25px;
-  font-size: 10px;
+  font-size: 12px;
   font-weight: bold;
   }
 .big-matrix ul.year-selector li a:hover,
 .big-matrix ul.year-selector li a.selected {
   background-color: #000;
   text-decoration: none;
+  color: #fff;
   }
 .big-matrix img {
   position: absolute;
@@ -262,7 +265,7 @@ table tr.index td.name {
 /*** Country Page ***/
 .prose.container {margin-top: 20px;}
 table.data.ranking-history {
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   }
 .rankings h3 {
   margin-bottom: 0px;
@@ -356,7 +359,6 @@ ul.tabs.level-2 a.active {
   top: 60px;
   font-size: 10px;
   line-height: 16px;
-  color: #999;
   text-transform: uppercase;
   }
 .country-profile .map-wrapper {
@@ -390,6 +392,11 @@ ul.tabs.level-2 a.active {
 .featured #indicator-gain {
   float: left;
   width: 85px;
+  }
+.featured h3 {
+  padding: 0 0 10px;
+  margin: 0;
+  border-bottom: none;
   }
 .chart {
   margin-left: 15px;
@@ -453,6 +460,7 @@ div.container {
 
 /****** Ranking Section ******/
 .tab-wrapper,
+.front h3,
 .country table,
 .ranking table {
   width: 600px;
@@ -510,6 +518,7 @@ div.container {
 .drawer h3 {
   font-size: 18px;
   margin: 0;
+  width: auto!important;
   }
 .drawer .country-summary {
   padding: 0;
