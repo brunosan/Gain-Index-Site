@@ -179,7 +179,7 @@ command.prototype.initialize = function(options) {
             var records = {};
 
             function reduceScores(memo, v, i) {
-                if (!_.include(['name', 'ISO3'], i)) {
+                if (i && !_.include(['name', 'ISO3'], i)) {
                     memo[i] = parseFloat(v);
                 }
                 return memo;
