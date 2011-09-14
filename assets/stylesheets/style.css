@@ -427,6 +427,7 @@ ul.tabs li a.active {
   }
 #footer1 .search input {
   height: 30px;
+  line-height: 30px;
   background-color: white;
   border-radius: 4px;
   -moz-border-radius: 4px;
