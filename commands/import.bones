@@ -5,6 +5,7 @@ var csv = require('csv'),
     _ = require('underscore')._,
     request = require('request');
 
+
 var put = function(config, db, doc, callback) {
     request.put({
         uri: 'http://' +
@@ -37,6 +38,149 @@ function formatDate(ms) {
     return date.join('-');
 }
 
+/**
+* Initalize a JSV based validation environment for records.
+*
+* @return
+*     object containing pre-registered schemas to validate against.
+*/
+function getSchemas() {
+    
+    var JSV = require('JSV').JSV;
+    var env = JSV.createEnvironment('json-schema-draft-03');
+
+    env.setOption('defaultSchemaURI', 'http://json-schema.org/hyper-schema#');
+    env.setOption('latestJSONSchemaSchemaURI', 'http://json-schema.org/schema#');
+    env.setOption('latestJSONSchemaHyperSchemaURI', 'http://json-schema.org/hyper-schema#');
+    env.setOption('latestJSONSchemaLinksURI', 'http://json-schema.org/links#');
+
+    var schemas = {};
+
+    /**
+    * This is a base schema that all our data needs to match against, 
+    * at the very least.
+    * 
+    * This schema is re-used by all the other schemas.
+    */
+    schemas.base = env.createSchema({
+        "type": "object",
+        "properties": {
+            "ISO3": {
+                "type": "string",
+                "required": true,
+                "minLength": 3,
+                "maxLength": 3,
+                "enum": _(models.Country.meta).pluck("ISO3") // make sure it's a valid iso code.
+            },
+            "category": {
+                "type": "string",
+                "required": true,
+                "enum": [ "gain", "readiness", "vulnerability", "indicators", "trend" ]
+            },
+            "name": {
+                "type": "string",
+                "required": true,
+                "minLength": 4
+            }
+        }
+    }, undefined, 'urn:indicatorBase#');
+
+    /**
+    * Schema for csv directories stored in resources/indicators.
+    *
+    * Input and origin are available for the objects imported here.
+    */
+    schemas.input = env.createSchema({
+        "extends": {"$ref": "urn:indicatorBase#"},
+        "properties": {
+            "values": {
+                "type": "object",
+                "required": true,
+                "additionalProperties": false,
+                "patternProperties": { "^[0-9]{4}$": { "type": "number" } }
+            },
+            "input": {
+                "type": "object",
+                "required": true,
+                "additionalProperties": false,
+                "patternProperties": { "^[0-9]{4}$": { "type": "number" } }
+            },
+           "origin": {
+                "type": "object",
+                "additionalProperties": false,
+                "patternProperties": { 
+                    "^[0-9]{4}$": { 
+                        "type": "string",
+                        "enum": [ "raw", "assumed", "interpolated", "extrapolated"] 
+                    } 
+                }
+            }
+        }
+    }, undefined, 'urn:indicatorInput#');
+
+    /**
+    * Schema for singular csv files loaded from resources/{gain,vulnerability,readiness}
+    *
+    * These are calculated records for the components/sectors, and have ranks calculated
+    * for them.
+    */
+    schemas.gvr = env.createSchema({
+        "extends": {"$ref": "urn:indicatorBase#"},
+        "properties": {
+            "values": {
+                "type": "object",
+                "required": true,
+                "additionalProperties": false,
+                "patternProperties": { "^[0-9]{4}$": { "type": "number" } }
+            },
+            "rank": {
+                "type": "object",
+                "required": true,
+                "additionalProperties": false,
+                "patternProperties": {
+                    "^[0-9]{4}$": {
+                        "type": "object",
+                        "additionalProperties": false,
+                        "properties": {
+                            "asc": { "type": "integer", "minimum": 1, "required" : true  },
+                            "desc": { "type": "integer", "minimum": 1, "required": true  }
+                        }
+                    }
+                }
+            }
+        }
+    }, undefined, 'urn:indicatorGVN#');
+
+    /**
+    * Schema type for the trend property descriptor.
+    */
+    env.createSchema({
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+            "value": { "type": "number", "required": true },
+            "sign": { "type": "integer", "required": true, "minimum": -1, "maximum": 1 }
+        }
+    }, undefined, 'urn:trendPropType#');
+
+    /**
+    * Schema for the trend information, loaded from resources/trends.
+    *
+    * These are not yearly values, and follow a different pattern.
+    */
+    schemas.trend = env.createSchema({
+        "extends": {"$ref": "urn:indicatorBase#"},
+        "properties": {
+            "gain": { "extends": { "$ref": "urn:trendPropType#" }, "required": true },
+            "readiness": { "extends": { "$ref": "urn:trendPropType#" }, "required": true },
+            "vulnerability": { "extends": { "$ref": "urn:trendPropType#" }, "required": true },
+        }
+    }, undefined, 'urn:indicatorTrend#');
+
+    return schemas;
+}
+
+
 command = Bones.Command.extend();
 
 command.description = 'import data';
@@ -45,6 +189,9 @@ command.prototype.initialize = function(options) {
     var config = options.config,
         errors = [];
 
+
+    // Only register the schemas when the command is actually run.
+    var schemas = getSchemas();
 
     // constructor for record class that handles
     // the meta-data.
@@ -315,6 +462,14 @@ command.prototype.initialize = function(options) {
             });
 
             actions.push(function(next) {
+                var results = _(records).reduce(function(memo, record) {
+
+
+                });
+
+            });
+
+            actions.push(function(next) {
                 var counter = _.after(_(records).size(), next);
 
                 _(records).each(function(record) {
@@ -416,7 +571,7 @@ command.prototype.initialize = function(options) {
                 }
             });
     });
-
+/*
     // Once we've built the file list import them asyncronously.
     _(actions).reduceRight(_.wrap, function() {
           if (errors.length) {
@@ -424,5 +579,8 @@ command.prototype.initialize = function(options) {
           } else {
               console.warn('Import completed.');
           }
-     })();
+    })();
+
+    */
+
 };
