@@ -674,10 +674,8 @@ li.ui-menu-item a.ui-corner-all {
   }
 #cabinet .slider.fixed {
   position: fixed;
-  top: 20px;
   }
 #cabinet.front .slider.fixed {
-  top: 20px;
   position: absolute;
   }
 #cabinet .slider.fixed.bottom {
@@ -1977,6 +1975,9 @@ and (max-device-width : 1024px) {
     clear: none;
     font-size: 11px;
     }
+  #cabinet .slider.fixed {
+    position: absolute;
+    }
   }
 @media only screen
 and (min-device-width : 320px)
@@ -2017,5 +2018,8 @@ and (max-device-width : 480px) {
     color: #5A2;
     clear: none;
     font-size: 11px;
+    }
+  #cabinet .slider.fixed {
+    position: absolute;
     }
   }
