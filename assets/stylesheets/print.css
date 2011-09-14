@@ -181,9 +181,10 @@ table tr td .placeholder {
   -moz-border-radius: 10px;
   -webkit-border-radius: 10px;
   border-radius: 10px;
-  -moz-box-shadow: 0 0 2px #000;
-  -webkit-box-shadow: 0 0 2px #000;
-  box-shadow: 0 0 2px #000;
+  -moz-box-shadow: 0 0 1px #000;
+  -webkit-box-shadow: 0 0 1px #000;
+  box-shadow: 0 0 1px #000;
+  border: 1px solid black;
   }
 
 .big-matrix .graph div.active-tl,
@@ -387,7 +388,7 @@ ul.tabs.level-2 a.active {
 #indicator-gain .value {
   display: block;
   font-weight: bold;
-  font-size: 48px;
+  font-size: 46px;
   line-height: 42px;
   } 
 .featured .country{
@@ -425,6 +426,7 @@ ul.tabs.level-2 a.active {
   font-weight: bold;
   float: left;
   margin-top: 10px;
+  text-align: center;
   }
 /*** Country page sector graphs ***/
 .country-sector-graph {
@@ -466,8 +468,9 @@ div.container {
 .tab-wrapper,
 .front h3,
 .country table,
-.ranking table {
-  width: 600px;
+.ranking table,
+table.full {
+  width: 600px!important;
   }
 .drawer table {
   width: 100%;
