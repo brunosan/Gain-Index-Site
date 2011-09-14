@@ -101,15 +101,13 @@ table {
   width: 100%;
   margin-bottom: 20px;
   }
-table.data {
-  width: 640px;
-  }
 table tr {
   width: 100%;
   line-height: 16px;
   }
 table tr.active td{
   font-weight: bold;
+  font-style: italic;
   }
 table thead tr {
   text-align: left;
@@ -305,16 +303,17 @@ ul.tabs.level-2 a.active {
 
 /****** Map style ******/
 .wax-tooltip {
-  background-color: #fff;
+  background-color: white;
   padding: 5px 10px;
   display: block;
   font-weight: bold;
   position: absolute;
   top: 10px;
   left: 10px;
-  border-radius: 4px;
-  moz-border-radius: 4px;
-  webkit-border-radius: 4px;
+  border-radius: 5px;
+  moz-border-radius: 5px;
+  webkit-border-radius: 5px;
+  border: 1px solid grey;
   }
 .front #map {
   position: relative;
@@ -355,8 +354,12 @@ ul.tabs.level-2 a.active {
   margin: 5px 0;
   }
 .country-profile #indicator-gain {
-  top: 115px;
+  top: 95px;
   padding: 0;
+  }
+.country-profile .chart {
+  left: 457px;
+  top: 95px;
   }
 .country-profile .info {
   top: 60px;
@@ -378,8 +381,11 @@ ul.tabs.level-2 a.active {
 .featured .info,
 .featured .country-summary {
   float: left;
+  width: 230px;
+  }
+.featured .info {
   width: 280px;
-  margin-right: 10px;
+  margin-right: 90px;
   }
 .featured .country-summary {
   margin-top: -10px;
@@ -401,24 +407,24 @@ ul.tabs.level-2 a.active {
 .featured .country{
   position: relative;
   }
-.featured #indicator-gain {
-  float: left;
-  width: 85px;
-  }
 .featured h3 {
   padding: 0 0 10px;
   margin: 0;
   border-bottom: none;
   }
 .chart {
-  margin-left: 15px;
-  padding: 15px 0 20px;
-  margin-top: 15px;
+  margin-left: -1px;
+  padding: 20px 10px 10px;
+  margin-top: 10px;
   float: left;
+  border: 1px solid black;
+  height: 55px;
   }
-.country-profile .chart {
-  left: 435px;
-  top: 113px;
+.slider .chart {
+  height: auto;
+  border: none;
+  padding: 10px 0;
+  margin: 0;
   }
 #indicator-gain .trend {
   color: #666;
@@ -434,6 +440,9 @@ ul.tabs.level-2 a.active {
   float: left;
   margin-top: 10px;
   text-align: center;
+  width: 100px;
+  border: 1px solid black;
+  height: 85px;
   }
 /*** Country page sector graphs ***/
 .country-sector-graph {
