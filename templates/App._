@@ -30,15 +30,6 @@
   </script>
 </head>
 <body>
-  <div id='feedbacktab'>
-    <div class='tab button green'>Feedback</div>
-    <div class='content'>
-      <p>Please report any inconsistencies, apparent data errors or leave a general comment using the link below.</p> 
-      <a href='mailto:gain@globalai.org' class='feedback-email button green'>Send us feedback</a>
-      <p>Interested in providing a more in depth review?</p>
-      <p><a href='/about/consultation'>Participate in our Consultation process</a></p>
-    </div>
-  </div>
   <div id='header'><div class='limiter'>
     <h1><a class='logo' href='/'>GaIn<span class='smalltm'>™</span></a></h1>
     <div class='tagline'>Global Adaptation Index™</div>
@@ -71,6 +62,14 @@
   	<div class='limiter'>
       <div id='address'><a href='http://globalai.org'>Global Adaptation Institute</a> <br>1747 Pennsylvania Ave NW, Suite 1125 - Washington, DC 20006</div>
   	  <div class='org'><a href='http://globalai.org'>Global Adaptaion Institute</a></div>
+      <div id='feedbacktab'>
+        <div class='tab button green'>Feedback</div>
+        <div class='content'>
+          <p>Please report any inconsistencies, apparent data errors or leave a general comment:</p>
+          <a href='mailto:gain@globalai.org' class='feedback-email button green'>Send us feedback</a>
+          <p>Interested in providing a more in depth review? <a href='/about/consultation'>Participate in our Consultation process</a></p>
+        </div>
+      </div>
   	</div>
   </div>
   <script><%= config %></script>
