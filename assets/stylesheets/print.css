@@ -420,7 +420,7 @@ ul.tabs.level-2 a.active {
   border: 1px solid black;
   height: 55px;
   }
-.slider .chart {
+.indicator-time .chart {
   height: auto;
   border: none;
   padding: 10px 0;
