@@ -468,8 +468,7 @@ div.container {
 .tab-wrapper,
 .front h3,
 .country table,
-.ranking table,
-table.full {
+.ranking table {
   width: 600px!important;
   }
 .drawer table {
@@ -508,6 +507,7 @@ table.full {
   margin-left: 160px;
   }
 #cabinet .drawer.open {
+  background: white;
   border: 1px solid #000;
   }
 #cabinet.ranking .drawer {
