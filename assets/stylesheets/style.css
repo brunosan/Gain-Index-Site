@@ -90,6 +90,7 @@ pre, pre code {
   font-weight: bold;
   text-transform: uppercase;
   color: #363636;
+  cursor: pointer;
   }
 .button.green {
   display: block;

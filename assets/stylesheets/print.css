@@ -142,7 +142,11 @@ table tr.index td.name {
   font-size: 17px;
   font-weight: bold;
   }
-
+table tr td .placeholder {
+  background: #fff;
+  width: 80px;
+  height: 20px;
+  }
 .rank-number {
   background-color: #b5b5b5!important;
   width: 20px; 
@@ -365,7 +369,7 @@ ul.tabs.level-2 a.active {
   float: left;
   width: 340px;
   margin-top: -5px;
-  border: 1px solid black;
+  border: 2px solid black;
   }
 .featured div.country {
   border-bottom: 1px solid #000;
