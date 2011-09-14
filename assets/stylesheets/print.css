@@ -55,7 +55,7 @@ a {
   }
 pre {
   background-color: #eee;
-  font-size: 12px;
+  font-size: 13px;
   margin-bottom: 15px;
   overflow: auto;
   padding: 10px;
@@ -213,11 +213,8 @@ table tr td .placeholder {
   }
 .big-matrix ul.year-selector li a:hover,
 .big-matrix ul.year-selector li a.selected {
-  background-color: #000;
   border-right: 1px solid black;
   border-left: 1px solid black;
-  text-decoration: none;
-  color: #fff;
   }
 .big-matrix img {
   position: absolute;
@@ -363,7 +360,7 @@ ul.tabs.level-2 a.active {
   }
 .country-profile .info {
   top: 60px;
-  font-size: 10px;
+  font-size: 11px;
   line-height: 16px;
   text-transform: uppercase;
   }
@@ -539,9 +536,11 @@ div.container {
   padding-bottom: 10px;
   }
 .drawer h3 {
-  font-size: 18px;
+  font-size: 17px;
   margin: 0;
   width: auto!important;
+  border-bottom: none;
+  padding-bottom: 5px;
   }
 .drawer .country-summary {
   padding: 0;
