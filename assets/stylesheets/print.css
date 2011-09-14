@@ -54,12 +54,12 @@ a {
   margin: 5px 0;
   }
 pre {
-  background-color: #f8f8f8;
+  background-color: #eee;
   font-size: 12px;
   margin-bottom: 15px;
   overflow: auto;
   padding: 10px;
-  color: #666;
+  color: #000;
   }
 pre, pre code {
   font-family: 'Menlo Regular',Consolas,monospace;
@@ -110,7 +110,6 @@ table tr {
   }
 table tr.active td{
   font-weight: bold;
-  background-color: #EEE;
   }
 table thead tr {
   text-align: left;
@@ -129,6 +128,9 @@ table tbody tr td {
   border-bottom: 1px solid #000;
   padding: 5px 0;
   }
+table tbody tr td.country {
+  width: 480px;
+  }
 table.ranking-history tbody tr td {
   border-bottom: none;
   }
@@ -146,15 +148,6 @@ table tr td .placeholder {
   background: #fff;
   width: 80px;
   height: 20px;
-  }
-.rank-number {
-  background-color: #b5b5b5!important;
-  width: 20px; 
-  padding: 0 5px;
-  -moz-border-radius: 4px;
-  -webkit-border-radius: 4px;
-  border-radius: 4px;
-  text-align: center;
   }
 
 /*** Matrix Section ***/
@@ -226,6 +219,8 @@ table tr td .placeholder {
 .big-matrix ul.year-selector li a:hover,
 .big-matrix ul.year-selector li a.selected {
   background-color: #000;
+  border-right: 1px solid black;
+  border-left: 1px solid black;
   text-decoration: none;
   color: #fff;
   }
@@ -262,9 +257,13 @@ table tr td .placeholder {
   .front .ranking table.data tr:hover {
     background-color: transparent
     }
+  .rank-number {
+    text-align: center;
+    font-weight: bold;
+    margin: 0 10px;
+    }
   .front .ranking .rank-number {
     float: left;
-    margin: 3px 10px 0px 0px
     }
 
 /*** Country Page ***/
@@ -376,6 +375,15 @@ ul.tabs.level-2 a.active {
   border-bottom: 1px solid #000;
   padding: 0 0 10px;
   margin-bottom: 10px;
+  }
+.featured .info,
+.featured .country-summary {
+  float: left;
+  width: 280px;
+  margin-right: 10px;
+  }
+.featured .country-summary {
+  margin-top: -10px;
   }
 .country-profile div.prose {
   clear: both;
