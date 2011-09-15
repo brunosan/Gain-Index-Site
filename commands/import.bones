@@ -80,7 +80,7 @@ function getSchemas() {
             "name": {
                 "type": "string",
                 "required": true,
-                "minLength": 4
+                "minLength": 3
             }
         }
     }, undefined, 'urn:indicatorBase#');
@@ -111,12 +111,29 @@ function getSchemas() {
                 "patternProperties": { 
                     "^[0-9]{4}$": { 
                         "type": "string",
-                        "enum": [ "raw", "assumed", "interpolated", "extrapolated"] 
+                        "enum": [ "raw", "assumed", "calculated"] 
                     } 
                 }
             }
         }
     }, undefined, 'urn:indicatorInput#');
+
+    /**
+    * Schema for csv directories stored in resources/indicators.
+    *
+    * This is a special case for indicators which only have input.
+    */
+    schemas.inputOnly = env.createSchema({
+        "extends": {"$ref": "urn:indicatorBase#"},
+        "properties": {
+             "input": {
+                "type": "object",
+                "required": true,
+                "additionalProperties": false,
+                "patternProperties": { "^[0-9]{4}$": { "type": "number" } }
+            }
+        }
+    }, undefined, 'urn:indicatorInputOnly#');
 
     /**
     * Schema for singular csv files loaded from resources/{gain,vulnerability,readiness}
@@ -149,7 +166,7 @@ function getSchemas() {
                 }
             }
         }
-    }, undefined, 'urn:indicatorGVN#');
+    }, undefined, 'urn:indicatorGVR#');
 
     /**
     * Schema type for the trend property descriptor.
@@ -245,6 +262,41 @@ command.prototype.initialize = function(options) {
     }
 
     /**
+    * Generate a save and validate callback for the action stack.
+    */
+    function validateAndSave(source, records, schema) {
+        return function(next) {
+            var counter = _.after(_(records).size(), next);
+            var invalid = [];
+
+            _(records).each(function(record, key) {
+                var valErrors = schemas[schema].validate(record).errors;
+
+                if (!valErrors.length) {
+                    put(config, 'data', record, function(err, doc){
+                        err && errors.push(err);
+                        counter();
+                    });
+                } else {
+                    invalid.push(record.country || key);
+                    counter();
+                }
+            });
+
+            if (invalid.length) {
+                errors.push([
+                    invalid.length, 
+                    "invalid records in",
+                    path.resolve(source).replace(process.cwd() + '/', ''), 
+                    "including",
+                    _(invalid).first(5).join(", "),
+                    invalid.length > 5 ? 'and others.' : ''
+                ].join(" ")); 
+            }
+        }
+    }
+
+    /**
      * Import a standard CSV file.
      */
     function importCSV(source, category, name) {
@@ -302,16 +354,7 @@ command.prototype.initialize = function(options) {
                 next();
             });
 
-            actions.push(function(next) {
-                var counter = _.after(_(records).size(), next);
-
-                _(records).each(function(record) {
-                    put(config, 'data', record, function(err, doc){
-                        err && errors.push(err);
-                        counter();
-                    });
-                });
-            });
+            actions.push(validateAndSave(source, records, 'gvr'));
 
             _(actions).reduceRight(_.wrap, next)();
         };
@@ -327,7 +370,10 @@ command.prototype.initialize = function(options) {
 
             function reduceScores(memo, v, i) {
                 if (i && !_.include(['name', 'ISO3'], i)) {
-                    memo[i] = parseFloat(v);
+                    var parsed = parseFloat(v);
+                    if (!_.isNaN(parsed)) {
+                        memo[i] = parsed;
+                    }
                 }
                 return memo;
             }
@@ -358,19 +404,8 @@ command.prototype.initialize = function(options) {
                 }
             }));
 
-            actions.push(function(next) {
-                var counter = _.after(_(records).size(), next);
-
-                _(records).each(function(record) {
-                    put(config, 'data', record, function(err, doc){
-                        err && errors.push(err);
-
-                        counter();
-                    });
-                });
-
-            });
-
+            actions.push(validateAndSave(source, records, 'trend'));
+           
             _(actions).reduceRight(_.wrap, next)();
         }
     }
@@ -436,22 +471,7 @@ command.prototype.initialize = function(options) {
                         } else if (raw[iso3] && raw[iso3][year] === value) {
                             memo[year] = 'assumed';
                         } else if (raw[iso3]) {
-                            var years = _(raw[iso3]).keys();
-
-                            var laterYears = _(years).any(function(y) {
-                                return y > year;
-                            });
-
-                            var earlierYears = _(years).any(function(y) {
-                                return y < year;
-                            });
-
-                            if (earlierYears && laterYears) {
-                                memo[year] = 'interpolated';
-                            } else if (earlierYears || laterYears) {
-                                memo[year] = 'extrapolated';
-                            }
-
+                            memo[year] = 'calculated';
                         }
 
                         return memo;
@@ -461,26 +481,10 @@ command.prototype.initialize = function(options) {
 
             });
 
-            actions.push(function(next) {
-                var results = _(records).reduce(function(memo, record) {
+            var inputOnly = _(['gdp', 'pop', 'reporting'])
+                .include(path.basename(source))
 
-
-                });
-
-            });
-
-            actions.push(function(next) {
-                var counter = _.after(_(records).size(), next);
-
-                _(records).each(function(record) {
-                    put(config, 'data', record, function(err, doc){
-                        err && errors.push(err);
-
-                        counter();
-                    });
-                });
-
-            });
+            actions.push(validateAndSave(source, records, inputOnly ? 'inputOnly' : 'input'));
 
             _(actions).reduceRight(_.wrap, next)();
         }
@@ -571,16 +575,18 @@ command.prototype.initialize = function(options) {
                 }
             });
     });
-/*
+
     // Once we've built the file list import them asyncronously.
     _(actions).reduceRight(_.wrap, function() {
           if (errors.length) {
               console.warn('Import completed, but with '+errors.length+' errors.');
+              _(errors).each(function(e) {
+                  console.warn(e);
+              })
           } else {
               console.warn('Import completed.');
           }
     })();
 
-    */
 
 };
