@@ -266,32 +266,39 @@ command.prototype.initialize = function(options) {
     */
     function validateAndSave(source, records, schema) {
         return function(next) {
-            var counter = _.after(_(records).size(), next);
-            var invalid = [];
+            var dirName = path.resolve(source).replace(process.cwd() + '/', '');
 
-            _(records).each(function(record, key) {
-                var valErrors = schemas[schema].validate(record).errors;
+            if (_(records).size()) {
+                var invalid = [];
 
-                if (!valErrors.length) {
-                    put(config, 'data', record, function(err, doc){
-                        err && errors.push(err);
+                var counter = _.after(_(records).size(), next);
+                _(records).each(function(record, key) {
+                    var valErrors = schemas[schema].validate(record).errors;
+
+                    if (!valErrors.length) {
+                        put(config, 'data', record, function(err, doc){
+                            err && errors.push(err);
+                            counter();
+                        });
+                    } else {
+                        invalid.push(record.country || key);
                         counter();
-                    });
-                } else {
-                    invalid.push(record.country || key);
-                    counter();
-                }
-            });
+                    }
+                });
 
-            if (invalid.length) {
-                errors.push([
-                    invalid.length, 
-                    "invalid records in",
-                    path.resolve(source).replace(process.cwd() + '/', ''), 
-                    "including",
-                    _(invalid).first(5).join(", "),
-                    invalid.length > 5 ? 'and others.' : ''
-                ].join(" ")); 
+                if (invalid.length) {
+                    errors.push([
+                        invalid.length, 
+                        "invalid records in",
+                        dirName, 
+                        "including",
+                        _(invalid).first(5).join(", "),
+                        invalid.length > 5 ? 'and others.' : ''
+                    ].join(" ")); 
+                }
+            } else {
+                errors.push("No records could be imported from " + dirName);
+                next();
             }
         }
     }
