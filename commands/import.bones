@@ -175,8 +175,8 @@ function getSchemas() {
         "type": "object",
         "additionalProperties": false,
         "properties": {
-            "value": { "type": "number", "required": true },
-            "sign": { "type": "integer", "required": true, "minimum": -1, "maximum": 1 }
+            "value": { "type": ["null", "number"], "required": true },
+            "sign": { "type": ["null", "integer"], "required": true, "minimum": -1, "maximum": 1 }
         }
     }, undefined, 'urn:trendPropType#');
 
@@ -281,7 +281,7 @@ command.prototype.initialize = function(options) {
                             counter();
                         });
                     } else {
-                        invalid.push(record.country || key);
+                        invalid.push(record.country + '(' + key + ')');
                         counter();
                     }
                 });
@@ -378,9 +378,7 @@ command.prototype.initialize = function(options) {
             function reduceScores(memo, v, i) {
                 if (i && !_.include(['name', 'ISO3'], i)) {
                     var parsed = parseFloat(v);
-                    if (!_.isNaN(parsed)) {
-                        memo[i] = parsed;
-                    }
+                    memo[i] = (!_.isNaN(parsed)) ? parsed : null;
                 }
                 return memo;
             }
