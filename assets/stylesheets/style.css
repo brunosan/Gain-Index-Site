@@ -92,6 +92,10 @@ pre, pre code {
   color: #363636;
   cursor: pointer;
   }
+.country-info .button.green,
+.button.front {
+  margin: 10px 10px 0 0;
+  }
 .button.green {
   display: block;
   color: #fff;
@@ -1133,6 +1137,7 @@ ul.mini-matrix-links {
 .front .featured .country .info {
   width: 345px;
   float: left;
+  padding-left: 10px;
   }
 .front .featured .country-summary {
   width: 249px;
