@@ -59,7 +59,7 @@ view = views.Main.extend({
             view = this;
 
         this.map = new models.Map({ year: year, indicator: indicator},
-            {controls: ['interaction', 'zoomer']});
+            {controls: ['fullscreen', 'interaction', 'zoomer']});
 
         this.map.featureClick = function(feature, context, index) {
             var iso = $(feature).data('iso');

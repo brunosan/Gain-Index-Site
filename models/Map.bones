@@ -44,9 +44,6 @@ model = Backbone.Model.extend({
         }, {silent: true});
         this.m = m; // Not using set/get to avoid needless comparisons;
 
-        // Add fullscreen laters...
-        //wax.mm.fullscreen(m, tilejson).appendTo(m.parent);
-
         // Setup our tool tip.
         this.tooltip = new wax.tooltip();
         var that = this;
@@ -71,6 +68,9 @@ model = Backbone.Model.extend({
     addControls: function() {
         var model = this;
         var controls = {
+            fullscreen: function() {
+                wax.mm.fullscreen(model.m, model.tilejson()).appendTo(model.m.parent);
+            },
             interaction: function() {
                 wax.mm.interaction(model.m, model.tilejson(), {callbacks: model.tooltip });
             },
