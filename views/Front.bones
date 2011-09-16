@@ -97,6 +97,7 @@ view = views.Main.extend({
         $('#map', this.el).append(templates.MapInterface(locals));
 
         $('#map .wax-fullscreen').click(function(e) {
+            view.scrollTop();
             $('body').toggleClass('fullscreen-map');
         });
 
@@ -184,6 +185,8 @@ view = views.Main.extend({
         $('.floor', this.el).empty().append(templates.CorrectionFloor(locals));
     },
     yearClick: function(ev) {
+        ev.preventDefault();
+
         var e = $(ev.currentTarget);
         e.parents('ul').find('a').removeClass('selected');
 
@@ -192,6 +195,8 @@ view = views.Main.extend({
         return false;
     },
     indicatorClick: function(ev) {
+        ev.preventDefault();
+
         var e = $(ev.currentTarget),
             indicator = '';
 
