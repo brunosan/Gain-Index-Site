@@ -5,6 +5,7 @@ var csv = require('csv'),
     _ = require('underscore')._,
     request = require('request');
 
+
 var put = function(config, db, doc, callback) {
     request.put({
         uri: 'http://' +
@@ -37,6 +38,166 @@ function formatDate(ms) {
     return date.join('-');
 }
 
+/**
+* Initalize a JSV based validation environment for records.
+*
+* @return
+*     object containing pre-registered schemas to validate against.
+*/
+function getSchemas() {
+    
+    var JSV = require('JSV').JSV;
+    var env = JSV.createEnvironment('json-schema-draft-03');
+
+    env.setOption('defaultSchemaURI', 'http://json-schema.org/hyper-schema#');
+    env.setOption('latestJSONSchemaSchemaURI', 'http://json-schema.org/schema#');
+    env.setOption('latestJSONSchemaHyperSchemaURI', 'http://json-schema.org/hyper-schema#');
+    env.setOption('latestJSONSchemaLinksURI', 'http://json-schema.org/links#');
+
+    var schemas = {};
+
+    /**
+    * This is a base schema that all our data needs to match against, 
+    * at the very least.
+    * 
+    * This schema is re-used by all the other schemas.
+    */
+    schemas.base = env.createSchema({
+        "type": "object",
+        "properties": {
+            "ISO3": {
+                "type": "string",
+                "required": true,
+                "minLength": 3,
+                "maxLength": 3,
+                "enum": _(models.Country.meta).pluck("ISO3") // make sure it's a valid iso code.
+            },
+            "category": {
+                "type": "string",
+                "required": true,
+                "enum": [ "gain", "readiness", "vulnerability", "indicators", "trend" ]
+            },
+            "name": {
+                "type": "string",
+                "required": true,
+                "minLength": 3
+            }
+        }
+    }, undefined, 'urn:indicatorBase#');
+
+    /**
+    * Schema for csv directories stored in resources/indicators.
+    *
+    * Input and origin are available for the objects imported here.
+    */
+    schemas.input = env.createSchema({
+        "extends": {"$ref": "urn:indicatorBase#"},
+        "properties": {
+            "values": {
+                "type": "object",
+                "required": true,
+                "additionalProperties": false,
+                "patternProperties": { "^[0-9]{4}$": { "type": "number" } }
+            },
+            "input": {
+                "type": "object",
+                "required": true,
+                "additionalProperties": false,
+                "patternProperties": { "^[0-9]{4}$": { "type": "number" } }
+            },
+           "origin": {
+                "type": "object",
+                "additionalProperties": false,
+                "patternProperties": { 
+                    "^[0-9]{4}$": { 
+                        "type": "string",
+                        "enum": [ "raw", "assumed", "calculated"] 
+                    } 
+                }
+            }
+        }
+    }, undefined, 'urn:indicatorInput#');
+
+    /**
+    * Schema for csv directories stored in resources/indicators.
+    *
+    * This is a special case for indicators which only have input.
+    */
+    schemas.inputOnly = env.createSchema({
+        "extends": {"$ref": "urn:indicatorBase#"},
+        "properties": {
+             "input": {
+                "type": "object",
+                "required": true,
+                "additionalProperties": false,
+                "patternProperties": { "^[0-9]{4}$": { "type": "number" } }
+            }
+        }
+    }, undefined, 'urn:indicatorInputOnly#');
+
+    /**
+    * Schema for singular csv files loaded from resources/{gain,vulnerability,readiness}
+    *
+    * These are calculated records for the components/sectors, and have ranks calculated
+    * for them.
+    */
+    schemas.gvr = env.createSchema({
+        "extends": {"$ref": "urn:indicatorBase#"},
+        "properties": {
+            "values": {
+                "type": "object",
+                "required": true,
+                "additionalProperties": false,
+                "patternProperties": { "^[0-9]{4}$": { "type": "number" } }
+            },
+            "rank": {
+                "type": "object",
+                "required": true,
+                "additionalProperties": false,
+                "patternProperties": {
+                    "^[0-9]{4}$": {
+                        "type": "object",
+                        "additionalProperties": false,
+                        "properties": {
+                            "asc": { "type": "integer", "minimum": 1, "required" : true  },
+                            "desc": { "type": "integer", "minimum": 1, "required": true  }
+                        }
+                    }
+                }
+            }
+        }
+    }, undefined, 'urn:indicatorGVR#');
+
+    /**
+    * Schema type for the trend property descriptor.
+    */
+    env.createSchema({
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+            "value": { "type": ["null", "number"], "required": true },
+            "sign": { "type": ["null", "integer"], "required": true, "minimum": -1, "maximum": 1 }
+        }
+    }, undefined, 'urn:trendPropType#');
+
+    /**
+    * Schema for the trend information, loaded from resources/trends.
+    *
+    * These are not yearly values, and follow a different pattern.
+    */
+    schemas.trend = env.createSchema({
+        "extends": {"$ref": "urn:indicatorBase#"},
+        "properties": {
+            "gain": { "extends": { "$ref": "urn:trendPropType#" }, "required": true },
+            "readiness": { "extends": { "$ref": "urn:trendPropType#" }, "required": true },
+            "vulnerability": { "extends": { "$ref": "urn:trendPropType#" }, "required": true },
+        }
+    }, undefined, 'urn:indicatorTrend#');
+
+    return schemas;
+}
+
+
 command = Bones.Command.extend();
 
 command.description = 'import data';
@@ -45,6 +206,9 @@ command.prototype.initialize = function(options) {
     var config = options.config,
         errors = [];
 
+
+    // Only register the schemas when the command is actually run.
+    var schemas = getSchemas();
 
     // constructor for record class that handles
     // the meta-data.
@@ -94,6 +258,48 @@ command.prototype.initialize = function(options) {
                     .on('error', errorLog)
                     .on('end', next);
             });
+        }
+    }
+
+    /**
+    * Generate a save and validate callback for the action stack.
+    */
+    function validateAndSave(source, records, schema) {
+        return function(next) {
+            var dirName = path.resolve(source).replace(process.cwd() + '/', '');
+
+            if (_(records).size()) {
+                var invalid = [];
+
+                var counter = _.after(_(records).size(), next);
+                _(records).each(function(record, key) {
+                    var valErrors = schemas[schema].validate(record).errors;
+
+                    if (!valErrors.length) {
+                        put(config, 'data', record, function(err, doc){
+                            err && errors.push(err);
+                            counter();
+                        });
+                    } else {
+                        invalid.push(record.country + '(' + key + ')');
+                        counter();
+                    }
+                });
+
+                if (invalid.length) {
+                    errors.push([
+                        invalid.length, 
+                        "invalid records in",
+                        dirName, 
+                        "including",
+                        _(invalid).first(5).join(", "),
+                        invalid.length > 5 ? 'and others.' : ''
+                    ].join(" ")); 
+                }
+            } else {
+                errors.push("No records could be imported from " + dirName);
+                next();
+            }
         }
     }
 
@@ -155,16 +361,7 @@ command.prototype.initialize = function(options) {
                 next();
             });
 
-            actions.push(function(next) {
-                var counter = _.after(_(records).size(), next);
-
-                _(records).each(function(record) {
-                    put(config, 'data', record, function(err, doc){
-                        err && errors.push(err);
-                        counter();
-                    });
-                });
-            });
+            actions.push(validateAndSave(source, records, 'gvr'));
 
             _(actions).reduceRight(_.wrap, next)();
         };
@@ -180,7 +377,8 @@ command.prototype.initialize = function(options) {
 
             function reduceScores(memo, v, i) {
                 if (i && !_.include(['name', 'ISO3'], i)) {
-                    memo[i] = parseFloat(v);
+                    var parsed = parseFloat(v);
+                    memo[i] = (!_.isNaN(parsed)) ? parsed : null;
                 }
                 return memo;
             }
@@ -211,19 +409,8 @@ command.prototype.initialize = function(options) {
                 }
             }));
 
-            actions.push(function(next) {
-                var counter = _.after(_(records).size(), next);
-
-                _(records).each(function(record) {
-                    put(config, 'data', record, function(err, doc){
-                        err && errors.push(err);
-
-                        counter();
-                    });
-                });
-
-            });
-
+            actions.push(validateAndSave(source, records, 'trend'));
+           
             _(actions).reduceRight(_.wrap, next)();
         }
     }
@@ -289,22 +476,7 @@ command.prototype.initialize = function(options) {
                         } else if (raw[iso3] && raw[iso3][year] === value) {
                             memo[year] = 'assumed';
                         } else if (raw[iso3]) {
-                            var years = _(raw[iso3]).keys();
-
-                            var laterYears = _(years).any(function(y) {
-                                return y > year;
-                            });
-
-                            var earlierYears = _(years).any(function(y) {
-                                return y < year;
-                            });
-
-                            if (earlierYears && laterYears) {
-                                memo[year] = 'interpolated';
-                            } else if (earlierYears || laterYears) {
-                                memo[year] = 'extrapolated';
-                            }
-
+                            memo[year] = 'calculated';
                         }
 
                         return memo;
@@ -314,18 +486,10 @@ command.prototype.initialize = function(options) {
 
             });
 
-            actions.push(function(next) {
-                var counter = _.after(_(records).size(), next);
+            var inputOnly = _(['gdp', 'pop', 'reporting'])
+                .include(path.basename(source))
 
-                _(records).each(function(record) {
-                    put(config, 'data', record, function(err, doc){
-                        err && errors.push(err);
-
-                        counter();
-                    });
-                });
-
-            });
+            actions.push(validateAndSave(source, records, inputOnly ? 'inputOnly' : 'input'));
 
             _(actions).reduceRight(_.wrap, next)();
         }
@@ -421,8 +585,13 @@ command.prototype.initialize = function(options) {
     _(actions).reduceRight(_.wrap, function() {
           if (errors.length) {
               console.warn('Import completed, but with '+errors.length+' errors.');
+              _(errors).each(function(e) {
+                  console.warn(e);
+              })
           } else {
               console.warn('Import completed.');
           }
-     })();
+    })();
+
+
 };
