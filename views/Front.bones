@@ -96,6 +96,10 @@ view = views.Main.extend({
 
         $('#map', this.el).append(templates.MapInterface(locals));
 
+        $('#map .wax-fullscreen').click(function(e) {
+            $('body').toggleClass('fullscreen-map');
+        });
+
         $('#carousel').after("<div id='carousel-nav'>").cycle({
             timeout: 6000,
             delay: 6000,

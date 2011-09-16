@@ -290,6 +290,10 @@ ul.tabs li a.active {
 /**
  * Header styles
  */
+.fullscreen-map #header { 
+  display: none;
+ }
+
 #header {
   height: 60px;
   background-color: #11202c;
