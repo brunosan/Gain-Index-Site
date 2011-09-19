@@ -8,3 +8,5 @@
       <li><a href='#<%= v.id %>' class='button <%= v.klass %>'><%= v.name %></a></li>
   <% }); %>
 </ul>
+
+<a href='#fullscreen' id='map-fullscreen' class='map-selector wax-fullscreen'>fullscreen</a>

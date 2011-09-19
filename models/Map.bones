@@ -4,7 +4,7 @@
 // -------
 model = Backbone.Model.extend({
     initialize: function(attr, options) {
-        _.bindAll(this, 'tilejson', 'updateMap', 'featureHover');
+        _.bindAll(this, 'tilejson', 'updateMap', 'featureHover', 'addControls');
 
         options = options || {};
 
@@ -68,9 +68,6 @@ model = Backbone.Model.extend({
     addControls: function() {
         var model = this;
         var controls = {
-            fullscreen: function() {
-                wax.mm.fullscreen(model.m, model.tilejson()).appendTo(model.m.parent);
-            },
             interaction: function() {
                 wax.mm.interaction(model.m, model.tilejson(), {callbacks: model.tooltip });
             },

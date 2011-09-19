@@ -973,9 +973,18 @@ ul.mini-matrix-links {
 /**
  * Front page
  */
-
 body.fullscreen-map {
   overflow: hidden;
+}
+
+body.fullscreen-map .front #map {
+  position: fixed !important;
+  width: auto !important;
+  height: auto !important;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }
 
 .front #map {
@@ -1059,6 +1068,7 @@ body.fullscreen-map {
  
   }
 .front #map .wax-fullscreen {
+  z-index: 26;
   position: absolute;
   right: 10px;
   bottom: 10px;
@@ -1072,7 +1082,7 @@ body.fullscreen-map {
   background: transparent url(../images/sprite.png) repeat-x 0 -1390px;
   }
 
-.front #map .wax-fullscreen-map .wax-fullscreen {
+.fullscreen-map .front #map .wax-fullscreen {
   background-position: 0 -1425px;
 }
 
