@@ -21,6 +21,8 @@ model = Backbone.Model.extend({
         this.controls = options.controls || ['interaction'],
         this.el = el; // Sorry mom!
 
+        this.isFullscreen = false;
+
         // Initialize a country search collection to
         // allow easy access to the country name from
         // the meta info.
@@ -124,6 +126,11 @@ model = Backbone.Model.extend({
 
         // Add new element
         mapEl= $("<div></div>").addClass('map');
+
+        if (this.isFullscreen) {
+            $(mapEl).addClass('wax-fullscreen-map');
+        }
+
         $('.map:last', el).after(mapEl);
 
         // Setup new map in new div.
@@ -143,6 +150,17 @@ model = Backbone.Model.extend({
         this.addControls();
         m.coordinate = coord;
         m.draw();
+    },
+    toggleFullscreen: function() {
+        $('.map', this.el).toggleClass('wax-fullscreen-map');
+
+        if (!this.isFullscreen) {
+            this.smallSize = [this.m.parent.offsetWidth, this.m.parent.offsetHeight];
+        }
+        this.m.setSize(this.smallSize[0], this.smallSize[1]);
+
+        this.isFullscreen = !this.isFullscreen;
+
     },
     featureHover: function(options, data) {
         var inlineData= '',

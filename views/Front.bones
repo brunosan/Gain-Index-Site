@@ -60,7 +60,6 @@ view = views.Main.extend({
             year = 2010,
             view = this;
 
-        this.isFullscreen = false;
 
         this.map = new models.Map({ year: year, indicator: indicator},
             {controls: ['interaction', 'zoomer']});
@@ -133,19 +132,11 @@ view = views.Main.extend({
     },
     fullscreenClick: function(e) {
         e.preventDefault();
-
         this.scrollTop();
 
         $('body').toggleClass('fullscreen-map');
-        $('#map .map', this.el).toggleClass('wax-fullscreen-map');
-
-        if (!this.isFullscreen) {
-            this.smallSize = [this.map.parent.offsetWidth, this.map.parent.offsetHeight];
-        }
-        this.map.setSize(this.smallSize[0], this.smallSize[1]);
-
-        this.isFullscreen = !this.isFullscreen;
         this.noDrawer = true;
+        this.map.toggleFullscreen();
     },
     setupPanel: function() {
         if (Bones.user && Bones.user.authenticated) {
