@@ -978,6 +978,8 @@ body.fullscreen-map {
 }
 
 body.fullscreen-map .front #map {
+
+  background: white;
   position: fixed !important;
   width: auto !important;
   height: auto !important;
@@ -1087,7 +1089,6 @@ body.fullscreen-map .front #map {
 }
 
 .wax-fullscreen-map {
-  background: white;
   position: fixed !important;
   width: auto !important;
   height: auto !important;

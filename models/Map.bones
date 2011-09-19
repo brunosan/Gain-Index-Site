@@ -126,11 +126,6 @@ model = Backbone.Model.extend({
 
         // Add new element
         mapEl= $("<div></div>").addClass('map');
-
-        if (this.isFullscreen) {
-            $(mapEl).addClass('wax-fullscreen-map');
-        }
-
         $('.map:last', el).after(mapEl);
 
         // Setup new map in new div.
@@ -140,6 +135,11 @@ model = Backbone.Model.extend({
             new mm.MouseWheelHandler,
             new mm.TouchHandler
         ]);
+
+        if (this.isFullscreen) {
+            $(mapEl).addClass('wax-fullscreen-map');
+            m.setSize(this.m.parent.offsetWidth, this.m.parent.offsetHeight);
+        }
 
         // Link panning and zooming for old and new maps.
         var om = this.m;
