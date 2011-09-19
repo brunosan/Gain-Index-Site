@@ -134,7 +134,7 @@ view = views.Main.extend({
     fullscreenClick: function(e) {
         e.preventDefault();
 
-        //this.scrollTop();
+        this.scrollTop();
 
         $('body').toggleClass('fullscreen-map');
         $('#map .map', this.el).toggleClass('wax-fullscreen-map');
@@ -145,6 +145,7 @@ view = views.Main.extend({
         this.map.setSize(this.smallSize[0], this.smallSize[1]);
 
         this.isFullscreen = !this.isFullscreen;
+        this.noDrawer = true;
     },
     setupPanel: function() {
         if (Bones.user && Bones.user.authenticated) {
