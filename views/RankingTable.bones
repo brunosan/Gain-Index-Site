@@ -16,7 +16,6 @@ view = Backbone.View.extend({
             trends = this.options.trends,
             previousId = $('tr.active', this.el).attr('id');
 
-
         this.collection.each(function(model) {
             if (meta[model.get('ISO3')]) {
                 data.push({
