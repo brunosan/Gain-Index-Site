@@ -577,6 +577,11 @@ li.ui-menu-item a.ui-corner-all {
   z-index: 15;
   width: 960px;
   }
+.fullscreen-map #cabinet {
+  position:absolute;
+  right:0;
+  top: 0;
+}
 .bonesAdminEditing #cabinet {
   z-index: auto;
   }
@@ -620,18 +625,18 @@ li.ui-menu-item a.ui-corner-all {
 .fullscreen-map #cabinet .drawer {
   left: inherit;
   margin-left: inherit;
-  top: 65px;
-  right: 0;
-  margin-right: -50%;
-
+  top: 50px;
+  right: 10px;
+  opacity: 0;
+  z-index: 20;
   border: 1px solid black;
   background: #fff;
-  border-radius: 3px 0 0 3px;
-  -moz-border-radius: 3px 0 0 3px;
-  -webkit-border-radius: 3px 0 0 3px;
-  transition: margin-right .5s ease;
-  -moz-transition: margin-right .5s ease;
-  -webkit-transition: margin-right .5s ease;
+  border-radius: 3px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  transition: opacity .5s ease;
+  -moz-transition: opacity .5s ease;
+  -webkit-transition: opacity .5s ease;
 }
 
 #cabinet .drawer.updating .content {
@@ -642,10 +647,10 @@ li.ui-menu-item a.ui-corner-all {
   margin-left: 160px;
   }
 .fullscreen-map #cabinet .drawer.open {
+  opacity: 1;
+  left: inherit;
   z-index: 26;
   margin-left: 0;
-  left: inherit;
-  margin-right: -160px
   }
 
   #cabinet .drawer.open h3 {
@@ -1068,6 +1073,7 @@ body.fullscreen-map .front #map {
   }
 .front #map-indicators {
   top: 10px;
+  left: 45px
   }
 .front #map-years {
   bottom: 10px;
@@ -1090,8 +1096,8 @@ body.fullscreen-map .front #map {
 .front #map .wax-fullscreen {
   z-index: 26;
   position: absolute;
-  right: 10px;
-  bottom: 10px;
+  left: 10px;
+  top: 10px;
   display: block;
   width: 30px;
   height: 30px;
