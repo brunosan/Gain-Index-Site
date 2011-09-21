@@ -16,8 +16,8 @@ require('tilelive-mapnik').registerProtocols(tilelive);
 var Cache = function() {
     events.EventEmitter.call(this);
 
-    // TODO do we really need this?
     this.available = false;
+    this.queued = false;
 
     // TODO make mml filename attribute on the model.
     this.filename = 'gain.mml';
@@ -28,6 +28,8 @@ util.inherits(Cache, events.EventEmitter);
 Cache.prototype.load = function() {
     var that = this,
         actions = [];
+
+    that.queued = true;
 
     // First, load and parse the mml.
     actions.push(function(next) {
@@ -76,9 +78,13 @@ Cache.prototype.load = function() {
 Cache.prototype.get = function(options) {
     var that = this;
 
+
     if (this.available) {
         return options.success(that.mml, that.xml);
     } else {
+
+        if (!that.queued) that.load();
+
         this.on('available', function() {
             if (that.err) {
                 return options.error(that.err);
@@ -96,8 +102,6 @@ var mapCache = new Cache();
 models.Tileset.prototype.sync = function(method, model, options) {
     if (method != 'read') return options.error('Method not supported: ' + method);
 
-    // Do the intialization if we're uncached.
-    if (!mapCache.available) mapCache.load();
 
     // Attach the tilelive source to our model.
     mapCache.get({
