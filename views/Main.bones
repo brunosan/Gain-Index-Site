@@ -6,6 +6,7 @@ view = Backbone.View.extend({
         !Bones.server && _.once(this.drawerEvents)();
     },
     attach: function() {
+        $('body').removeClass('fullscreen-map');
         this.feedbackEmail();
         return this;
     },
@@ -29,9 +30,9 @@ view = Backbone.View.extend({
     // --------------------------
     scrollTop: function() {
         var offset = $(window.location.hash).offset();
-        var top = offset ? offset.top : 0;
+        var top = offset ? offset.top : 1;
         // Scroll top FF, IE, Chrome safe
-        if ($('body').scrollTop(0)) {
+        if ($('body').scrollTop(1)) {
             $('body').scrollTop(top);
             return this;
         }
