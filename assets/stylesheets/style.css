@@ -1,5 +1,9 @@
 body {
   background-color: #1d354c;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  font-weight: normal;
+  line-height: 18px;
   color: #363636;
   }
 .limiter {
@@ -80,10 +84,6 @@ pre, pre code {
   font-weight: normal;
   color: #363636;
   }
-  .active .label {
-    font-weight: bold;
-    font-style: normal;
-    }
 .button {
   font-size: 10px;
   font-family: 'HelveticaNeue', Helvetica, Arial, sans-serif;
@@ -773,6 +773,11 @@ table.data tr td{
 table.data.full {
   margin-bottom: 45px;
   }
+  table.data tr td a{
+    color: #444;
+    font-weight: bold;
+    font-size: 14px;
+    }
 table tr {
   text-align: left;
   }
