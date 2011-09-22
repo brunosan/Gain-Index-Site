@@ -5,8 +5,8 @@ view = views.Main.extend({
         'click #map-indicators li a': 'indicatorClick',
         'click .floor .correction-control a.correct': 'toggleCorrection',
         'click .featured .country': 'countryClick',
-        'click #map-fullscreen': 'fullscreenClick'
-
+        'click #map-fullscreen': 'fullscreenClick',
+        'click .drawer .content a': 'exitFullscreen'
     },
     initialize: function(options) {
         _.bindAll(this, 'render', 'renderCountryFeature', 'renderFloor', 'setupPanel', 'fullscreenClick');
@@ -137,6 +137,9 @@ view = views.Main.extend({
         $('body').toggleClass('fullscreen-map');
         this.noDrawer = true;
         this.map.toggleFullscreen();
+    },
+    exitFullscreen: function(e) {
+        $('body').removeClass('fullscreen-map');
     },
     setupPanel: function() {
         if (Bones.user && Bones.user.authenticated) {
