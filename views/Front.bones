@@ -6,7 +6,9 @@ view = views.Main.extend({
         'click .floor .correction-control a.correct': 'toggleCorrection',
         'click .featured .country': 'countryClick',
         'click #map-fullscreen': 'fullscreenClick',
-        'touchmove .drawer': 'disablePan'
+        'touchmove .drawer': 'disableEvent',
+        'gesturechange .drawer': 'disableEvent'
+
     },
     initialize: function(options) {
         _.bindAll(this, 'render', 'renderCountryFeature', 'renderFloor', 'setupPanel', 'fullscreenClick');
@@ -137,9 +139,9 @@ view = views.Main.extend({
         $('body').toggleClass('fullscreen-map');
         this.map.toggleFullscreen();
     },
-    disablePan: function(e) {
+    disableEvent: function(e) {
         if (this.map.isFullscreen) {
-            return e.preventDefault();
+            e.preventDefault();
         }
     },
     setupPanel: function() {
