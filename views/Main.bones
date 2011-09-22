@@ -6,6 +6,7 @@ view = Backbone.View.extend({
         !Bones.server && _.once(this.drawerEvents)();
     },
     attach: function() {
+        $('body').removeClass('fullscreen-map');
         this.feedbackEmail();
         return this;
     },
