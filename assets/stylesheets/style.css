@@ -1739,7 +1739,10 @@ div.bottomscorelabel {
   height: 15px;
   background: transparent url(../images/sprite.png) no-repeat -35px -1135px;
   }
-.big-matrix .graph div.point:hover {background: transparent url(../images/sprite.png) no-repeat 0 -1135px;}
+.big-matrix .graph div.point:hover {
+  background: transparent url(../images/sprite.png) no-repeat 0 -1135px;
+  }
+
 .big-matrix .graph div.point .country { display: none; }
 
 .big-matrix .graph div.active-tl { background: url('../images/sprite.png') -35px -1255px; z-index: 1; } /* red */
@@ -1753,12 +1756,17 @@ div.bottomscorelabel {
 .big-matrix .graph div.active-bl:hover { background: url('../images/sprite.png') 0 -1195px; z-index: 1; } /* yellow */
 
 .big-matrix .tooltip .country {
+  background: transparent url(../images/sprite.png) repeat-x 0 -1570px;
+  color: #fff;
+  text-shadow: 0 -1px 0 rgba(0,0,0,0.9);
+  padding: 5px 10px;
+  border-radius: 4px;
+  moz-border-radius: 4px;
+  webkit-border-radius: 4px;
   position:absolute;
   top: 10px;
   right: 10px;
   padding: 5px 5px;
-  background: #666;
-  color: #fff;
   z-index: 200;
   }
 
