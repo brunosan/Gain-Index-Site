@@ -6,7 +6,7 @@
 
   <meta name="description" content="The Global Adaptation Index (GaIn) summarizes a country's Vulnerability to climate change and other global challenges on the one hand and its Readiness to improve resilience on the other hand.">
   <meta name="keywords" content="Adaptation, GaIn, climate, change, population, economy, growth, Vulnerability, Readiness, data, Index, Global, OpenData, transparency, nodejs">
-  <meta name='viewport' content='user-scalable=no, width=device-width, maximum-scale=1.0' />
+  <meta name='viewport' content='user-scalable=no, maximum-scale=1.0' />
 
   <link rel='shortcut icon' href='/assets/gain/images/favicon.ico' type='image/x-icon' />
   <script src='/assets/bones/wax.js?<%= version %>'></script>
