@@ -4,10 +4,14 @@ view = views.Main.extend({
         'click #map-years li a': 'yearClick',
         'click #map-indicators li a': 'indicatorClick',
         'click .floor .correction-control a.correct': 'toggleCorrection',
-        'click .featured .country': 'countryClick'
+        'click .featured .country': 'countryClick',
+        'click #map-fullscreen': 'fullscreenClick',
+        'touchmove .drawer': 'disableEvent',
+        'gesturechange .drawer': 'disableEvent'
+
     },
     initialize: function(options) {
-        _.bindAll(this, 'render', 'renderCountryFeature', 'renderFloor', 'setupPanel');
+        _.bindAll(this, 'render', 'renderCountryFeature', 'renderFloor', 'setupPanel', 'fullscreenClick');
         this.collection.bind('add', this.renderCountryFeature);
         views.Main.prototype.initialize.call(this, options);
         Bones.user && Bones.user.bind('auth:status', this.setupPanel);
@@ -58,6 +62,7 @@ view = views.Main.extend({
             year = 2010,
             view = this;
 
+
         this.map = new models.Map({ year: year, indicator: indicator},
             {controls: ['interaction', 'zoomer']});
 
@@ -96,6 +101,7 @@ view = views.Main.extend({
 
         $('#map', this.el).append(templates.MapInterface(locals));
 
+
         $('#carousel').after("<div id='carousel-nav'>").cycle({
             timeout: 6000,
             delay: 6000,
@@ -125,6 +131,18 @@ view = views.Main.extend({
 
         this.setupPanel();
         return this;
+    },
+    fullscreenClick: function(e) {
+        e.preventDefault();
+        this.scrollTop();
+
+        $('body').toggleClass('fullscreen-map');
+        this.map.toggleFullscreen();
+    },
+    disableEvent: function(e) {
+        if (this.map.isFullscreen) {
+            e.preventDefault();
+        }
     },
     setupPanel: function() {
         if (Bones.user && Bones.user.authenticated) {

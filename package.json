@@ -30,7 +30,8 @@
     "millstone": "= 0.1.1",
     "wax": "3.0.6",
     "modestmaps": "= 0.18.4",
-    "couch-sqlite": "= 0.0.1"
+    "couch-sqlite": "= 0.0.1",
+    "JSV": "= 3.5.0"
   },
   "devDependencies": {}
 }

@@ -4,7 +4,7 @@
 // -------
 model = Backbone.Model.extend({
     initialize: function(attr, options) {
-        _.bindAll(this, 'tilejson', 'updateMap', 'featureHover');
+        _.bindAll(this, 'tilejson', 'updateMap', 'featureHover', 'addControls');
 
         options = options || {};
 
@@ -20,6 +20,8 @@ model = Backbone.Model.extend({
 
         this.controls = options.controls || ['interaction'],
         this.el = el; // Sorry mom!
+
+        this.isFullscreen = false;
 
         // Initialize a country search collection to
         // allow easy access to the country name from
@@ -43,9 +45,6 @@ model = Backbone.Model.extend({
             height: height
         }, {silent: true});
         this.m = m; // Not using set/get to avoid needless comparisons;
-
-        // Add fullscreen laters...
-        //wax.mm.fullscreen(m, tilejson).appendTo(m.parent);
 
         // Setup our tool tip.
         this.tooltip = new wax.tooltip();
@@ -137,6 +136,11 @@ model = Backbone.Model.extend({
             new mm.TouchHandler
         ]);
 
+        if (this.isFullscreen) {
+            $(mapEl).addClass('wax-fullscreen-map');
+            m.setSize(this.m.parent.offsetWidth, this.m.parent.offsetHeight);
+        }
+
         // Link panning and zooming for old and new maps.
         var om = this.m;
         m.addCallback('panned', function(map, coords) { om.panBy(coords[0], coords[1]); });
@@ -146,6 +150,17 @@ model = Backbone.Model.extend({
         this.addControls();
         m.coordinate = coord;
         m.draw();
+    },
+    toggleFullscreen: function() {
+        $('.map', this.el).toggleClass('wax-fullscreen-map');
+
+        if (!this.isFullscreen) {
+            this.smallSize = [this.m.parent.offsetWidth, this.m.parent.offsetHeight];
+        }
+        this.m.setSize(this.smallSize[0], this.smallSize[1]);
+
+        this.isFullscreen = !this.isFullscreen;
+
     },
     featureHover: function(options, data) {
         var inlineData= '',

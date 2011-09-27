@@ -3,6 +3,20 @@ view = views.Main.extend({
         'click .drawer .handle a.handle': 'closeDrawer',
         'click table.data tr': 'openDrawer'
     }, views.Main.prototype.events),
+    initialize: function(options) {
+        _.bindAll(this, 'render', 'attach');
+
+        if (options.trends) {
+            var trendType = this.model.get('id');
+            this.trends = options.trends.get('indicators').reduce(function(result, m) {
+                var trend = m.trend(trendType);
+                if (trend) result[m.get('ISO3')] = trend;
+                return result;
+            }, {});
+        }
+
+        views.Main.prototype.initialize.call(this, options);
+    },
     render: function() {
         var data = [],
             sectors = {},
@@ -17,13 +31,7 @@ view = views.Main.extend({
             return this;
         }
 
-        var trendType = this.model.get('id');
-        var trends = this.options.trends.get('indicators').reduce(function(result, m) {
-            var trend = m.trend(trendType);
-            if (trend) result[m.get('ISO3')] = trend;
-            return result;
-        }, {});
-
+    
         var id = this.model.get('id');
         _.each(meta, function(v) {
             if (v.index == meta[id].index) {
@@ -67,7 +75,7 @@ view = views.Main.extend({
         this.tableView = new views.RankingTable({
             el: $('table.data', this.el),
             indicatorName: id,
-            trends: trends,
+            trends: this.trends,
             collection: this.model.get('indicators')
         }).render();
 
@@ -82,7 +90,8 @@ view = views.Main.extend({
         if (this.tableView == undefined) {
             this.tableView = new views.RankingTable({
                 el: $('table.data', this.el),
-                collection: this.model.get('indicators')
+                collection: this.model.get('indicators'),
+                trends: this.trends
             });
         }
         return this;
