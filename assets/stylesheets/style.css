@@ -1668,7 +1668,7 @@ div.bottomscorelabel {
 .ranking table.data th.rank,
 .ranking table.data th.income,
 .ranking table.data th.index {
-  padding-bottom: 2px;
+  padding-bottom: 5px;
   }
 .ranking table.data th,
 .ranking table.data td {
