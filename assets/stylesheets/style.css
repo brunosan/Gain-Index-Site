@@ -31,7 +31,7 @@ h1,h2,h3,h4,h5 {
   padding-top: 15px;
   padding-bottom: 15px;
   clear: left;
-  } 
+  }
 h2 {
   font-size: 28px;
   border-bottom: #c6c6c6 1px solid;
@@ -132,7 +132,7 @@ pre, pre code {
 .button.methodology:hover { background: #A8A8A8; }
 .button:hover{text-decoration: none;}
 .button.green:hover { background-color: #5A2; }
-  
+
 p {
   font-family: 'HelveticaNeue-Normal', 'HelveticaNeueNormal', Helvetica, Arial, sans-serif;
   font-style: normal;
@@ -146,7 +146,7 @@ a {
   text-decoration: none;
   }
 a:hover {
- color: #4B971E; 	
+ color: #4B971E;
  text-decoration: underline;
   }
 ul {
@@ -290,7 +290,7 @@ ul.tabs li a.active {
 /**
  * Header styles
  */
-.fullscreen-map #header { 
+.fullscreen-map #header {
   display: none;
  }
 
@@ -798,7 +798,7 @@ table.full tbody tr.active:hover {
 
 /**
  * Country summary generic styles
- * PLEASE put page specific styles in the respective pages. 
+ * PLEASE put page specific styles in the respective pages.
  */
 .country-summary {
   height: 160px;
@@ -872,28 +872,28 @@ table.full tbody tr.active:hover {
   width: 32px;
   }
 .mini-matrix .tl {
-  top: 0; 
+  top: 0;
   left: 23px;
   -moz-border-radius: 3px 0 0 0;
   -webkit-border-radius: 3px 0 0 0;
   border-radius: 3px 0 0 0;
   }
 .mini-matrix .tr {
-  top: 0px; 
+  top: 0px;
   left: 56px;
   -moz-border-radius: 0 3px 0 0;
   -webkit-border-radius: 0 3px 0 0;
   border-radius: 0 3px 0 0;
   }
 .mini-matrix .br {
-  top: 33px; 
+  top: 33px;
   left: 56px;
   -moz-border-radius: 0 0 3px 0;
   -webkit-border-radius: 0 0 3px 0;
   border-radius: 0 0 3px 0;
   }
 .mini-matrix .bl {
-  top: 33px; 
+  top: 33px;
   left: 23px;
   -moz-border-radius: 0 0 0 3px;
   -webkit-border-radius: 0 0 0 3px;
@@ -946,7 +946,7 @@ table.full tbody tr.active:hover {
   width: 261px;
   height: 97px;
   }
-.quad-bl { 
+.quad-bl {
   background-color: #F6CD47;
   top: 233px;
   left: 61px;
@@ -1096,7 +1096,7 @@ body.fullscreen-map .front #map {
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   border-radius: 4px;
- 
+
   }
 .front #map .wax-fullscreen {
   z-index: 26;
@@ -1395,7 +1395,7 @@ body.fullscreen-map .front #map {
 .country-profile .details,
 .country-profile .rankings {
   background-color: #ebebeb;
-  }  
+  }
 div.bottomscorelabel {
   float: right;
   text-indent: 15px;
@@ -1448,6 +1448,12 @@ div.bottomscorelabel {
   border-radius: 3px;
   display: block;
   }
+  .ranking .rank-number {
+    line-height: 25px;
+    padding: 0 8px;
+    top: -1px;
+    position: relative;
+    }
 .ranking-history .rank-number {
   margin: 0 auto;
   }
@@ -1608,7 +1614,7 @@ div.bottomscorelabel {
   padding-bottom: 0;
   }
 
-/** 
+/**
  * Rankings page
  */
 .top .ranking {background-color: #ebebeb;}
@@ -1625,21 +1631,28 @@ div.bottomscorelabel {
 .ranking thead tr th a {
   padding-right: 20px;
   height: 10px;
-}
-
+  }
 .ranking thead tr th a:hover {
   text-decoration: none;
   color: #8C8C8C;
   }
 
-.ranking thead tr th a.sort.label.rank   { background: url('../images/sprite.png') 221px -412px; }
-.ranking thead tr th a.sort.label.alpha  { background: url('../images/sprite.png') 238px -412px; }
-.ranking thead tr th a.sort.label.income { background: url('../images/sprite.png') 269px -412px; }
+.ranking thead tr th a.sort.label.rank   { background: url('../images/sprite.png') 221px -411px; }
+.ranking thead tr th a.sort.label.alpha  { background: url('../images/sprite.png') 238px -411px; }
+.ranking thead tr th a.sort.label.income { background: url('../images/sprite.png') 269px -411px; }
 
-.ranking thead tr th a.sort.label.rank.activeSort   { background: url('../images/sprite.png') 31px -412px; }
-.ranking thead tr th a.sort.label.alpha.activeSort  { background: url('../images/sprite.png') 48px -412px; }
-.ranking thead tr th a.sort.label.income.activeSort { background: url('../images/sprite.png') 79px -412px; }
-.ranking p.label: 
+.ranking thead tr th a.sort.label.rank.activeSort   { background: url('../images/sprite.png') 31px -411px; font-weight: bold; }
+.ranking thead tr th a.sort.label.alpha.activeSort  { background: url('../images/sprite.png') 48px -411px; font-weight: bold; }
+.ranking thead tr th a.sort.label.income.activeSort { background: url('../images/sprite.png') 79px -411px; font-weight: bold; }
+
+.ranking thead tr th a.sort.label.rank.activeSort:hover,
+.ranking thead tr th a.sort.label.alpha.activeSort:hover,
+.ranking thead tr th a.sort.label.income.activeSort:hover {
+  font-weight: bold;
+  color: #444;
+  }
+
+.ranking p.label:
 .ranking {
   background-color: #ebebeb;
   }
@@ -1651,6 +1664,11 @@ div.bottomscorelabel {
   }
 .ranking table.data th.index {
   width: 75px;
+  }
+.ranking table.data th.rank,
+.ranking table.data th.income,
+.ranking table.data th.index {
+  padding-bottom: 2px;
   }
 .ranking table.data th,
 .ranking table.data td {
@@ -1886,12 +1904,12 @@ div.bottomscorelabel {
   moz-border-radius: 3px;
   webkit-border-radius: 3px;
   }
-  
+
   .gapminder a:hover {
   text-decoration: none;
   background-color: #5A2;
   }
-  
+
 
 /**
  * Bones-admin : popups.
@@ -1918,7 +1936,7 @@ div.bottomscorelabel {
 
 /** About section **/
 /*** About section navigation*/
-#about-nav-container { 
+#about-nav-container {
   width: 200px;
   }
 #about-nav-container ul {
@@ -1964,7 +1982,7 @@ h3#overviewdiagram{
  height: 130px;
  text-indent: -9999px;
  }
- 
+
 /*** Error Page ***/
 .error-page {
   padding-top: 150px;
@@ -2019,7 +2037,7 @@ h3#overviewdiagram{
 @media only screen
 and (min-device-width : 768px)
 and (max-device-width : 1024px) {
-  #feedbacktab { 
+  #feedbacktab {
     position: static;
     width: auto;
     }
@@ -2063,7 +2081,7 @@ and (max-device-width : 1024px) {
 @media only screen
 and (min-device-width : 320px)
 and (max-device-width : 480px) {
-  #feedbacktab { 
+  #feedbacktab {
     position: static;
     width: auto;
     }
