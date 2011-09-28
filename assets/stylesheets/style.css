@@ -1454,6 +1454,13 @@ div.bottomscorelabel {
     top: -1px;
     position: relative;
     }
+    .front .ranking .rank-number {
+      float: left;
+      margin: 3px 10px 0 0;
+      position: static;
+      padding: 0 2px;
+      line-height: 19px;
+      }
 .ranking-history .rank-number {
   margin: 0 auto;
   }
@@ -1715,10 +1722,6 @@ div.bottomscorelabel {
   }
 .front .ranking table.data tr:hover {
   background: transparent
-  }
-.front .ranking .rank-number {
-  float: left;
-  margin: 3px 10px 0 0;
   }
 .front .ranking .ranktop .rank-number {
   background-color: #68B5DF;
