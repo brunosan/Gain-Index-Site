@@ -901,7 +901,7 @@ model.meta = {
         "name": "Vulnerability",
         "description": "A country's GaIn score is composed of a Vulnerability score and a Readiness score. Vulnerability measures a country's exposure, sensitivity and ability to cope with climate related hazards, as well as accounting for the overall status of food, water, health and infrastructure within the nation.",
         "map_caption": "Countries of the world by Vulnerability, higher scores are better.",
-        "ranking_caption": "World wide ranking by Vulnerability, higher scores are better.",
+        "ranking_caption": "World wide ranking by Vulnerability, lower scores are better.",
         "format": "number",
         "decimals": "2",
         "unit": null,
