@@ -4,7 +4,7 @@
   <meta charset='utf-8' />
   <title><%= title %></title>
 
-  <meta name="description" content="The Global Adaptation Index (GaIn) summarizes a country's Vulnerability to climate change and other global challenges on the one hand and its Readiness to improve resilience on the other hand.">
+  <meta name="description" content="The Global Adaptation Index (GAIN) summarizes a country's Vulnerability to climate change and other global challenges on the one hand and its Readiness to improve resilience on the other hand.">
   <meta name="keywords" content="Adaptation, GaIn, climate, change, population, economy, growth, Vulnerability, Readiness, data, Index, Global, OpenData, transparency, nodejs">
 
   <link rel='shortcut icon' href='/assets/gain/images/favicon.ico' type='image/x-icon' />
@@ -35,7 +35,7 @@
 </head>
 <body>
   <div id='header'><div class='limiter'>
-    <h1><a class='logo' href='/'>GaIn<span class='smalltm'>™</span></a></h1>
+    <h1><a class='logo' href='/'>GAIN<span class='smalltm'>™</span></a></h1>
     <div class='tagline'>Global Adaptation Index™</div>
     <ul class='navigation'>
       <li><a  class='map exact' href='/'>Map</a></li>
@@ -52,7 +52,7 @@
     <div class='limiter'>
       <div class='download'>
         <a href='http://creativecommons.org/licenses/by/3.0' class='cc'>Download Data under a creative commons licence</a>
-        <a class='downloadbutton button' href='/about/download'><span>Download GaIn</span> scores and indicators between 1995 and 2010 in CSV format.</a>
+        <a class='downloadbutton button' href='/about/download'><span>Download GAIN</span> scores and indicators between 1995 and 2010 in CSV format.</a>
       </div>
       <div id='country-search' class='search content'>
         <form>
