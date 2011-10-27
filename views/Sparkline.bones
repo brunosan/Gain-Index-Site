@@ -33,10 +33,28 @@ view = Backbone.View.extend({
                 points: { show:true, radius: 1 }
             };
 
+
             if (options.options != undefined) {
                 var opts = _.extend(options.options, this.sparklineOptions);
             } else {
                 var opts = this.sparklineOptions;
+            }
+
+            var range = [Infinity, -Infinity];
+             _(data).each(function(d) {
+                if (d[1] < range[0]) range[0] = d[1];
+                if (d[1] > range[1]) range[1] = d[1];
+            });
+            var delta = range[1] - range[0];
+            if (delta < 0.01) {
+                var center = range[1] - delta;
+                var center = range[0] + (delta / 2);
+                opts = _.extend({}, opts, {
+                    yaxis: _.extend({}, opts.yaxis,  {
+                        min: center - 0.005,
+                        max: center + 0.005
+                    })
+                });
             }
 
             $.plot(options.el, [baseline, data, end], opts);
