@@ -19,10 +19,10 @@ model = Backbone.Model.extend({
 
         if (pos == -1) return result;
         for (var i = pos; i < pos + count + 1; i++) {
-            var k = i - Math.floor(count / 2);
+            var k = i - Math.ceil(count / 2);
             similar[k] && (k != pos) && result.push(similar[k]);
         }
-        return result;
+        return result.reverse();
     },
     // Lists a specific aspect in descending order
     // -------------------------------------------
@@ -30,7 +30,7 @@ model = Backbone.Model.extend({
         if (!this.get(aspect)) return [];
         // TODO figure out a way to push this formatting logic into Indicator.bones.
         var id = aspect == 'values' ? {format: 'number', decimals: 3} : this.get('id');
-        return _.map(this.get(aspect), function(v, k) {
+        return _(this.get(aspect)).chain().map(function(v, k) {
             if (models.Country.meta[k] && models.Country.meta[k]['name'])
                 return {
                     'ISO3': k,
@@ -38,9 +38,7 @@ model = Backbone.Model.extend({
                     'value': models.Indicator.format(v[year], id),
                     'path': models.Country.pathSafe(k)
                 };
-        }).sort(function(a, b) {
-            return b.value - a.value;
-        });
+        }).sortBy(function(v) {return v.value;}).value();
     },
     url: function() {
         var url = '/api/IndicatorSummary/' + encodeURIComponent(this.get('id')) + '?';
