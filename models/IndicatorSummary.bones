@@ -19,10 +19,10 @@ model = Backbone.Model.extend({
 
         if (pos == -1) return result;
         for (var i = pos; i < pos + count + 1; i++) {
-            var k = i - Math.ceil(count / 2);
+            var k = i - Math.floor(count / 2);
             similar[k] && (k != pos) && result.push(similar[k]);
         }
-        return result.reverse();
+        return result;
     },
     // Lists a specific aspect in descending order
     // -------------------------------------------
@@ -38,7 +38,7 @@ model = Backbone.Model.extend({
                     'value': models.Indicator.format(v[year], id),
                     'path': models.Country.pathSafe(k)
                 };
-        }).sortBy(function(v) {return v.value;}).value();
+        }).sortBy(function(v) {return v.value;}).value().reverse();
     },
     url: function() {
         var url = '/api/IndicatorSummary/' + encodeURIComponent(this.get('id')) + '?';
