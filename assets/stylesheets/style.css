@@ -315,16 +315,16 @@ ul.tabs li a.active {
 #header h1 a.logo {
   display: block;
   position: absolute;
-  top:13px;
-  left: 5px;
+  top:18px;
+  left: 10px;
   text-indent: -9999px;
-  width: 110px;
-  height: 30px;
+  width: 80px;
+  height: 25px;
   background: transparent url(../images/sprite.png) no-repeat -160px 0;
   }
 #header .tagline {
   position: absolute;
-  left: 120px;
+  left: 100px;
   top: 15px;
   font-family: 'HelveticaNeue-Bold', 'HelveticaNeueBold', Helvetica, Arial, sans-serif;
   font-size: 12px;
