@@ -5,9 +5,14 @@ Requirements
 ------------
 
 - Couch 1.0.x
+`brew install couchdb`
 - Node v0.4.9
+`brew install node`
 - npm
-- Mapnik 2.x.  If using OSX, get it here http://dbsgeo.com/downloads/
+`curl http://npmjs.org/install.sh | sh`
+- Mapnik 2.x.  
+ If using OSX, get it here http://dbsgeo.com/downloads/
+`brew install mapnik`
 - Review package.json for node version requirements
 - Modern version of libsqlite3. Note: older versions such as on Ubuntu Lucid can result in slow map rendering. In such cases, the [mapnik sqlite plugin can be built standalone](https://github.com/springmeyer/sqlite3-mapnik), or you can use a newer version of libsqlite3
 
