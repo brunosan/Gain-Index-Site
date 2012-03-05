@@ -7,7 +7,9 @@ Requirements
 - Couch 1.0.x
 `brew install couchdb`
 - Node v0.4.9
-`brew install node`
+`brew install node` for dependencies
+I used [nvm](https://github.com/creationix/nvm) to install the specific version
+`nvm install v0.4.9`
 - npm
 `curl http://npmjs.org/install.sh | sh`
 - Mapnik 2.x.  
