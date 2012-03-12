@@ -1,0 +1,5 @@
+info it worked if it ends with ok
+verbose cli [ 'node',
+verbose cli   '/Users/brunosan/.nvm/v0.6.12/bin/npm',
+verbose cli   'install',
+verbose cli   '-f' ]

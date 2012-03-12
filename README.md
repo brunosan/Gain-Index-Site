@@ -9,7 +9,7 @@ Requirements
 - Node v0.4.9
 `brew install node` for dependencies. 
 I used [nvm](https://github.com/creationix/nvm) to install the specific node version
-`nvm install v0.4.9`
+`nvm install v0.4.9` then `nvm use v0.4.9`
 - npm.
 `curl http://npmjs.org/install.sh | sh`
 - Mapnik 2.x.  
@@ -24,7 +24,7 @@ Installation
 After cloning the repository / downloading the tarball:
 
 0. Change into project directory, run `npm install`  [Error. See ticket.](https://github.com/globalai/Index-site/issues/6)
-1. If on OSX without Mapnik, download http://cloud.github.com/downloads/mapnik/node-mapnik/node-mapnik-osx-universal-0.5.3-r3191.zip and unzip it in the node_modules/ directory.
+1. If on OSX without Mapnik, [download] (http://cloud.github.com/downloads/mapnik/node-mapnik/node-mapnik-osx-universal-0.5.3-r3191.zip) and unzip it in the node_modules/ directory.
 2. Run `./index.js install`
 3. Run `./index.js import`
 4. Run `./index.js changes`
