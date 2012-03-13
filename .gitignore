@@ -6,3 +6,4 @@ fixtures
 files
 assets/files
 *.swp
+*.log
