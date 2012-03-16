@@ -1,5 +1,1188 @@
 info it worked if it ends with ok
 verbose cli [ 'node',
-verbose cli   '/Users/brunosan/.nvm/v0.6.12/bin/npm',
+verbose cli   '/Users/brunosan/.nvm/v0.4.9/bin/npm',
 verbose cli   'install',
-verbose cli   '-f' ]
+verbose cli   'tilelive' ]
+info using npm@1.0.1rc8
+info using node@v0.4.9
+verbose config file /Users/brunosan/.npmrc
+verbose config file /Users/brunosan/.nvm/v0.4.9/etc/npmrc
+silly testEngine { author: 
+silly testEngine    { name: 'Development Seed',
+silly testEngine      email: 'info@developmentseed.org',
+silly testEngine      url: 'developmentseed.org' },
+silly testEngine   name: 'gain',
+silly testEngine   description: 'Global Adaptation Index website',
+silly testEngine   version: '0.0.0',
+silly testEngine   repository: 
+silly testEngine    { type: 'git',
+silly testEngine      url: 'git://github.com/developmentseed/gain.git' },
+silly testEngine   engines: { node: '~v0.4.10' },
+silly testEngine   dependencies: 
+silly testEngine    { mapnik: '0.5.3',
+silly testEngine      bones: '= 2.0.0',
+silly testEngine      'bones-admin': '= 2.0.0',
+silly testEngine      'bones-auth': '= 2.0.0',
+silly testEngine      'bones-document': '= 2.0.0',
+silly testEngine      'backbone-stash': '= 0.5.0',
+silly testEngine      csv: 'https://github.com/wdavidw/node-csv-parser/tarball/9f472a2449e7d47dd901c989fb4af51705b6b1bf',
+silly testEngine      d3: '= 1.29.5',
+silly testEngine      underscore: '= 1.1.7',
+silly testEngine      request: 'https://github.com/mikeal/request/tarball/8bb7f98ba8b78c217552c979811c07f1299318fe',
+silly testEngine      'backbone-couch': '= 1.0.0',
+silly testEngine      sqlite3: '= 2.0.16',
+silly testEngine      chrono: '= 1.0.1',
+silly testEngine      tilelive: '= 4.0.5',
+silly testEngine      'tilelive-mapnik': '= 0.2.1',
+silly testEngine      carto: '= 0.2.3',
+silly testEngine      millstone: '= 0.1.1',
+silly testEngine      wax: '3.0.6',
+silly testEngine      modestmaps: '= 0.18.4',
+silly testEngine      'couch-sqlite': '= 0.0.1',
+silly testEngine      JSV: '= 3.5.0' },
+silly testEngine   devDependencies: {},
+silly testEngine   _id: 'gain@0.0.0',
+silly testEngine   _engineSupported: false,
+silly testEngine   _npmVersion: '1.0.1rc8',
+silly testEngine   _nodeVersion: 'v0.4.9',
+silly testEngine   _defaultsLoaded: true }
+WARN Invalid range in engines.node.  Please see `npm help json` ~v0.4.10
+verbose caching /Users/brunosan/Sites/GaIn/Index-site/package.json
+verbose loadDefaults gain@0.0.0
+silly testEngine { name: 'backbone',
+silly testEngine   description: 'Give your JS App some Backbone with Models, Views, Collections, and Events.',
+silly testEngine   url: 'http://backbonejs.org',
+silly testEngine   keywords: [ 'util', 'functional', 'server', 'client', 'browser' ],
+silly testEngine   author: 
+silly testEngine    { name: 'Jeremy Ashkenas',
+silly testEngine      email: 'jeremy@documentcloud.org' },
+silly testEngine   contributors: [],
+silly testEngine   dependencies: { underscore: '>=1.3.1' },
+silly testEngine   lib: '.',
+silly testEngine   main: 'backbone.js',
+silly testEngine   version: '0.9.1',
+silly testEngine   devDependencies: {},
+silly testEngine   _id: 'backbone@0.9.1',
+silly testEngine   engines: { node: '*' },
+silly testEngine   _engineSupported: true,
+silly testEngine   _npmVersion: '1.0.1rc8',
+silly testEngine   _nodeVersion: 'v0.4.9',
+silly testEngine   _defaultsLoaded: true }
+verbose caching /Users/brunosan/Sites/GaIn/Index-site/node_modules/backbone/package.json
+verbose loadDefaults backbone@0.9.1
+silly testEngine { name: 'backbone-couch',
+silly testEngine   description: 'Backbone.js sync for CouchDB',
+silly testEngine   author: 
+silly testEngine    { name: 'Development Seed',
+silly testEngine      email: 'info@developmentseed.org',
+silly testEngine      url: 'http://developmentseed.org/' },
+silly testEngine   version: '1.0.0',
+silly testEngine   homepage: 'https://github.com/developmentseed/backbone-couch',
+silly testEngine   repository: 
+silly testEngine    { type: 'git',
+silly testEngine      url: 'git://github.com/developmentseed/backbone-couch.git' },
+silly testEngine   main: './backbone-couch',
+silly testEngine   engines: { node: '*' },
+silly testEngine   dependencies: 
+silly testEngine    { request: '1.9.x',
+silly testEngine      backbone: '= 0.5.1',
+silly testEngine      underscore: '1.1.x' },
+silly testEngine   scripts: { test: 'expresso' },
+silly testEngine   _id: 'backbone-couch@1.0.0',
+silly testEngine   devDependencies: {},
+silly testEngine   optionalDependencies: {},
+silly testEngine   _engineSupported: true,
+silly testEngine   _npmVersion: '1.0.1rc8',
+silly testEngine   _nodeVersion: 'v0.4.9',
+silly testEngine   _defaultsLoaded: true,
+silly testEngine   dist: { shasum: '81dbcdce4b4b38148a6555481e76075b8480812e' },
+silly testEngine   _from: 'backbone-couch@= 1.0.0' }
+verbose caching /Users/brunosan/Sites/GaIn/Index-site/node_modules/backbone-couch/package.json
+silly testEngine { name: 'backbone-stash',
+silly testEngine   version: '0.5.0',
+silly testEngine   author: { name: 'Young Hahn' },
+silly testEngine   dependencies: { underscore: '>= 1.1.5 < 1.2.0', stash: '= 0.0.2' },
+silly testEngine   licenses: [ { type: 'BSD' } ],
+silly testEngine   main: './backbone-stash',
+silly testEngine   _id: 'backbone-stash@0.5.0',
+silly testEngine   devDependencies: {},
+silly testEngine   optionalDependencies: {},
+silly testEngine   engines: { node: '*' },
+silly testEngine   _engineSupported: true,
+silly testEngine   _npmVersion: '1.0.1rc8',
+silly testEngine   _nodeVersion: 'v0.4.9',
+silly testEngine   _defaultsLoaded: true,
+silly testEngine   dist: { shasum: '1a46b27384414985d70ff7bdaaf72d8cbeab764e' },
+silly testEngine   _from: 'backbone-stash@= 0.5.0' }
+verbose caching /Users/brunosan/Sites/GaIn/Index-site/node_modules/backbone-stash/package.json
+silly testEngine { name: 'bones',
+silly testEngine   description: 'Framework for using backbone.js on the client and server.',
+silly testEngine   version: '2.0.0',
+silly testEngine   author: 
+silly testEngine    { name: 'Development Seed',
+silly testEngine      email: 'info@developmentseed.org',
+silly testEngine      url: 'http://developmentseed.org/' },
+silly testEngine   main: './bones.js',
+silly testEngine   dependencies: 
+silly testEngine    { underscore: '1.1.x',
+silly testEngine      express: '2.4.4',
+silly testEngine      backbone: '0.5.1',
+silly testEngine      jquery: '1.5.x',
+silly testEngine      optimist: '0.1.x',
+silly testEngine      mirror: '0.3.x' },
+silly testEngine   scripts: 
+silly testEngine    { test: 'expresso -I ..',
+silly testEngine      coverage: './test/coverage.sh' },
+silly testEngine   _id: 'bones@2.0.0',
+silly testEngine   devDependencies: {},
+silly testEngine   optionalDependencies: {},
+silly testEngine   engines: { node: '*' },
+silly testEngine   _engineSupported: true,
+silly testEngine   _npmVersion: '1.0.1rc8',
+silly testEngine   _nodeVersion: 'v0.4.9',
+silly testEngine   _defaultsLoaded: true,
+silly testEngine   dist: { shasum: '960b5fe53ba79cb0d1b73c3f1f81819428c5c23c' },
+silly testEngine   _from: 'bones@= 2.0.0' }
+verbose caching /Users/brunosan/Sites/GaIn/Index-site/node_modules/bones/package.json
+silly testEngine { name: 'bones-admin',
+silly testEngine   version: '2.0.0',
+silly testEngine   scripts: { test: 'expresso' },
+silly testEngine   _id: 'bones-admin@2.0.0',
+silly testEngine   dependencies: {},
+silly testEngine   devDependencies: {},
+silly testEngine   optionalDependencies: {},
+silly testEngine   engines: { node: '*' },
+silly testEngine   _engineSupported: true,
+silly testEngine   _npmVersion: '1.0.1rc8',
+silly testEngine   _nodeVersion: 'v0.4.9',
+silly testEngine   _defaultsLoaded: true,
+silly testEngine   dist: { shasum: '0ddd545a730a188c021ce1bb27ef18c69f9cf725' },
+silly testEngine   _from: 'bones-admin@= 2.0.0' }
+verbose caching /Users/brunosan/Sites/GaIn/Index-site/node_modules/bones-admin/package.json
+silly testEngine { name: 'bones-auth',
+silly testEngine   description: 'User model with password based authentication for Bones.',
+silly testEngine   version: '2.0.0',
+silly testEngine   author: 
+silly testEngine    { name: 'Development Seed',
+silly testEngine      email: 'info@developmentseed.org',
+silly testEngine      url: 'http://developmentseed.org/' },
+silly testEngine   scripts: { test: 'expresso' },
+silly testEngine   dependencies: { email: '0.2.3' },
+silly testEngine   _id: 'bones-auth@2.0.0',
+silly testEngine   devDependencies: {},
+silly testEngine   optionalDependencies: {},
+silly testEngine   engines: { node: '*' },
+silly testEngine   _engineSupported: true,
+silly testEngine   _npmVersion: '1.0.1rc8',
+silly testEngine   _nodeVersion: 'v0.4.9',
+silly testEngine   _defaultsLoaded: true,
+silly testEngine   dist: { shasum: '468b986d99e091f16bd20928c199e1df2c8595b1' },
+silly testEngine   _from: 'bones-auth@= 2.0.0' }
+verbose caching /Users/brunosan/Sites/GaIn/Index-site/node_modules/bones-auth/package.json
+silly testEngine { name: 'bones-document',
+silly testEngine   version: '2.0.0',
+silly testEngine   dependencies: 
+silly testEngine    { JSV: 'https://github.com/garycourt/JSV/tarball/e05e2595cb9e11251e5231a1f384043443532bd6',
+silly testEngine      showdown: 'https://github.com/coreyti/showdown/tarball/3c52317851e07772ceef1593686e9cf018ae6563' },
+silly testEngine   bundleDependencies: [ 'bones', 'expresso' ],
+silly testEngine   scripts: { test: 'expresso' },
+silly testEngine   _id: 'bones-document@2.0.0',
+silly testEngine   devDependencies: {},
+silly testEngine   optionalDependencies: {},
+silly testEngine   engines: { node: '*' },
+silly testEngine   _engineSupported: true,
+silly testEngine   _npmVersion: '1.0.1rc8',
+silly testEngine   _nodeVersion: 'v0.4.9',
+silly testEngine   _defaultsLoaded: true,
+silly testEngine   dist: { shasum: 'be3c86d8f483c2cb9b2f07d724a73f9b2f571c84' },
+silly testEngine   _from: 'bones-document@= 2.0.0' }
+verbose caching /Users/brunosan/Sites/GaIn/Index-site/node_modules/bones-document/package.json
+silly testEngine { name: 'carto',
+silly testEngine   description: 'Mapnik Stylesheet Compiler',
+silly testEngine   url: 'https://github.com/mapbox/carto',
+silly testEngine   repositories: 
+silly testEngine    [ { type: 'git',
+silly testEngine        url: 'http://github.com/mapbox/carto.git' } ],
+silly testEngine   author: 
+silly testEngine    { name: 'MapBox',
+silly testEngine      email: 'info@mapbox.com',
+silly testEngine      url: 'http://mapbox.com/' },
+silly testEngine   keywords: [ 'mapnik', 'maps', 'css', 'stylesheets' ],
+silly testEngine   contributors: 
+silly testEngine    [ { name: 'Tom MacWright',
+silly testEngine        email: 'macwright@gmail.com' },
+silly testEngine      { name: 'Konstantin Käfer' },
+silly testEngine      { name: 'Alexis Sellier',
+silly testEngine        email: 'self@cloudhead.net' } ],
+silly testEngine   version: '0.2.3',
+silly testEngine   licenses: [ { type: 'Apache' } ],
+silly testEngine   bin: 
+silly testEngine    { carto: './bin/carto',
+silly testEngine      cartox: './bin/cartox',
+silly testEngine      'mml2json.js': './bin/mml2json.js' },
+silly testEngine   main: './lib/carto/index',
+silly testEngine   engines: { node: '0.4.x' },
+silly testEngine   dependencies: { underscore: '1.1.x', xml2js: '>= 0.1.0' },
+silly testEngine   devDependencies: 
+silly testEngine    { expresso: '0.8.x',
+silly testEngine      docco: '0.3.x',
+silly testEngine      jshint: '0.2.x',
+silly testEngine      sax: '0.1.x' },
+silly testEngine   scripts: { pretest: 'npm install --dev', test: 'expresso' },
+silly testEngine   _id: 'carto@0.2.3',
+silly testEngine   optionalDependencies: {},
+silly testEngine   _engineSupported: true,
+silly testEngine   _npmVersion: '1.0.1rc8',
+silly testEngine   _nodeVersion: 'v0.4.9',
+silly testEngine   _defaultsLoaded: true,
+silly testEngine   dist: { shasum: 'fecb65f493ee0868882140cbec34834d2e11dabb' },
+silly testEngine   _from: 'carto@= 0.2.3' }
+verbose caching /Users/brunosan/Sites/GaIn/Index-site/node_modules/carto/package.json
+silly testEngine { name: 'chrono',
+silly testEngine   author: { name: 'Konstantin Käfer' },
+silly testEngine   description: 'Format dates in JavaScript',
+silly testEngine   version: '1.0.1',
+silly testEngine   repository: 
+silly testEngine    { type: 'git',
+silly testEngine      url: 'git://github.com/kkaefer/chrono.js.git' },
+silly testEngine   bugs: { url: 'https://github.com/kkaefer/chrono.js/issues' },
+silly testEngine   main: 'index',
+silly testEngine   _id: 'chrono@1.0.1',
+silly testEngine   dependencies: {},
+silly testEngine   devDependencies: {},
+silly testEngine   optionalDependencies: {},
+silly testEngine   engines: { node: '*' },
+silly testEngine   _engineSupported: true,
+silly testEngine   _npmVersion: '1.0.1rc8',
+silly testEngine   _nodeVersion: 'v0.4.9',
+silly testEngine   _defaultsLoaded: true,
+silly testEngine   dist: { shasum: '836e18e6fa284782367b5614e90e9f1e8cbc041f' },
+silly testEngine   _from: 'chrono@= 1.0.1' }
+verbose caching /Users/brunosan/Sites/GaIn/Index-site/node_modules/chrono/package.json
+silly testEngine { author: { name: 'Dmitri Gaskin', url: 'dmitrig01' },
+silly testEngine   name: 'couch-sqlite',
+silly testEngine   description: 'Ports data from couchdb to SQLite.',
+silly testEngine   version: '0.0.1',
+silly testEngine   homepage: 'http://github.com/developmentseed/couch-sqlite',
+silly testEngine   repository: 
+silly testEngine    { type: 'git',
+silly testEngine      url: 'git://github.com/developmentseed/couch-sqlite.git' },
+silly testEngine   main: './index.js',
+silly testEngine   dependencies: 
+silly testEngine    { underscore: '= 1.1.7',
+silly testEngine      sqlite3: '= 2.0.16',
+silly testEngine      request: 'https://github.com/mikeal/request/tarball/8bb7f98ba8b78c217552c979811c07f1299318fe',
+silly testEngine      step: '= 0.0.4' },
+silly testEngine   devDependencies: {},
+silly testEngine   _id: 'couch-sqlite@0.0.1',
+silly testEngine   optionalDependencies: {},
+silly testEngine   engines: { node: '*' },
+silly testEngine   _engineSupported: true,
+silly testEngine   _npmVersion: '1.0.1rc8',
+silly testEngine   _nodeVersion: 'v0.4.9',
+silly testEngine   _defaultsLoaded: true,
+silly testEngine   dist: { shasum: 'fe54ffcda3849044522e8f1570f99de08c106516' },
+silly testEngine   _from: 'couch-sqlite@= 0.0.1' }
+verbose caching /Users/brunosan/Sites/GaIn/Index-site/node_modules/couch-sqlite/package.json
+silly testEngine { name: 'csv',
+silly testEngine   version: '0.0.9',
+silly testEngine   description: 'CSV parser with simple api, full of options and tested against large datasets.',
+silly testEngine   author: { name: 'David Worms', email: 'david@adaltas.com' },
+silly testEngine   contributors: 
+silly testEngine    [ { name: 'David Worms', email: 'david@adaltas.com' },
+silly testEngine      { name: 'Will White',
+silly testEngine        email: 'https://github.com/willwhite' },
+silly testEngine      { name: 'Justin Latimer',
+silly testEngine        email: 'https://github.com/justinlatimer' } ],
+silly testEngine   directories: { lib: './lib' },
+silly testEngine   main: './lib/csv',
+silly testEngine   engines: { node: '>= 0.1.90' },
+silly testEngine   keywords: [ 'parser', 'csv' ],
+silly testEngine   repository: 
+silly testEngine    { type: 'git',
+silly testEngine      url: 'git://github.com/wdavidw/node-csv-parser.git' },
+silly testEngine   _id: 'csv@0.0.9',
+silly testEngine   dependencies: {},
+silly testEngine   devDependencies: {},
+silly testEngine   optionalDependencies: {},
+silly testEngine   _engineSupported: true,
+silly testEngine   _npmVersion: '1.0.1rc8',
+silly testEngine   _nodeVersion: 'v0.4.9',
+silly testEngine   _defaultsLoaded: true,
+silly testEngine   dist: { shasum: '6ab0d5dfc650c559cbb905977ac4404fa22ecd39' },
+silly testEngine   _from: 'csv@https://github.com/wdavidw/node-csv-parser/tarball/9f472a2449e7d47dd901c989fb4af51705b6b1bf' }
+verbose caching /Users/brunosan/Sites/GaIn/Index-site/node_modules/csv/package.json
+silly testEngine { name: 'd3',
+silly testEngine   version: '1.29.5',
+silly testEngine   description: 'A small, free JavaScript library for manipulating documents based on data.',
+silly testEngine   keywords: 
+silly testEngine    [ 'dom',
+silly testEngine      'w3c',
+silly testEngine      'visualization',
+silly testEngine      'svg',
+silly testEngine      'animation',
+silly testEngine      'canvas' ],
+silly testEngine   homepage: 'http://mbostock.github.com/d3/',
+silly testEngine   author: 
+silly testEngine    { name: 'Mike Bostock',
+silly testEngine      url: 'http://bost.ocks.org/mike' },
+silly testEngine   files: [ '*.js', 'LICENSE' ],
+silly testEngine   repository: 
+silly testEngine    { type: 'git',
+silly testEngine      url: 'git://github.com/mbostock/d3.git' },
+silly testEngine   dependencies: 
+silly testEngine    { 'uglify-js': '1.0.6',
+silly testEngine      jsdom: '0.2.3',
+silly testEngine      vows: '0.5.10' },
+silly testEngine   _id: 'd3@1.29.5',
+silly testEngine   devDependencies: {},
+silly testEngine   optionalDependencies: {},
+silly testEngine   engines: { node: '*' },
+silly testEngine   _engineSupported: true,
+silly testEngine   _npmVersion: '1.0.1rc8',
+silly testEngine   _nodeVersion: 'v0.4.9',
+silly testEngine   _defaultsLoaded: true,
+silly testEngine   dist: { shasum: 'c9f8883a59210fa69dc5f6ffed3f079426b9675c' },
+silly testEngine   _from: 'd3@= 1.29.5' }
+verbose caching /Users/brunosan/Sites/GaIn/Index-site/node_modules/d3/package.json
+silly testEngine { name: 'express',
+silly testEngine   description: 'Sinatra inspired web development framework',
+silly testEngine   version: '2.5.8',
+silly testEngine   author: 
+silly testEngine    { name: 'TJ Holowaychuk',
+silly testEngine      email: 'tj@vision-media.ca' },
+silly testEngine   contributors: 
+silly testEngine    [ { name: 'TJ Holowaychuk',
+silly testEngine        email: 'tj@vision-media.ca' },
+silly testEngine      { name: 'Aaron Heckmann',
+silly testEngine        email: 'aaron.heckmann+github@gmail.com' },
+silly testEngine      { name: 'Ciaran Jessup', email: 'ciaranj@gmail.com' },
+silly testEngine      { name: 'Guillermo Rauch', email: 'rauchg@gmail.com' } ],
+silly testEngine   dependencies: 
+silly testEngine    { connect: '1.x',
+silly testEngine      mime: '1.2.4',
+silly testEngine      qs: '0.4.x',
+silly testEngine      mkdirp: '0.3.0' },
+silly testEngine   devDependencies: 
+silly testEngine    { 'connect-form': '0.2.1',
+silly testEngine      ejs: '0.4.2',
+silly testEngine      expresso: '0.9.2',
+silly testEngine      hamljs: '0.6.x',
+silly testEngine      jade: '0.16.2',
+silly testEngine      stylus: '0.13.0',
+silly testEngine      should: '0.3.2',
+silly testEngine      'express-messages': '0.0.2',
+silly testEngine      'node-markdown': '>= 0.0.1',
+silly testEngine      'connect-redis': '>= 0.0.1' },
+silly testEngine   keywords: [ 'framework', 'sinatra', 'web', 'rest', 'restful' ],
+silly testEngine   repository: 
+silly testEngine    { type: 'git',
+silly testEngine      url: 'git://github.com/visionmedia/express.git' },
+silly testEngine   main: 'index',
+silly testEngine   bin: { express: './bin/express' },
+silly testEngine   scripts: { test: 'make test', prepublish: 'npm prune' },
+silly testEngine   engines: { node: '>= 0.4.1 < 0.7.0' },
+silly testEngine   _id: 'express@2.5.8',
+silly testEngine   _engineSupported: true,
+silly testEngine   _npmVersion: '1.0.1rc8',
+silly testEngine   _nodeVersion: 'v0.4.9',
+silly testEngine   _defaultsLoaded: true }
+verbose caching /Users/brunosan/Sites/GaIn/Index-site/node_modules/express/package.json
+verbose loadDefaults express@2.5.8
+silly testEngine { name: 'jQuery',
+silly testEngine   description: 'jQuery: The Write Less, Do More, JavaScript Library (packaged for Ender.JS)',
+silly testEngine   url: 'http://jquery.com',
+silly testEngine   keywords: [ 'util', 'dom', 'jquery', 'ender' ],
+silly testEngine   author: { name: 'John Resig', email: 'jeresig@gmail.com' },
+silly testEngine   contributors: [],
+silly testEngine   dependencies: {},
+silly testEngine   lib: '.',
+silly testEngine   main: './node-jquery.js',
+silly testEngine   version: '1.6.3',
+silly testEngine   devDependencies: {},
+silly testEngine   _id: 'jQuery@1.6.3',
+silly testEngine   engines: { node: '*' },
+silly testEngine   _engineSupported: true,
+silly testEngine   _npmVersion: '1.0.1rc8',
+silly testEngine   _nodeVersion: 'v0.4.9',
+silly testEngine   _defaultsLoaded: true }
+verbose caching /Users/brunosan/Sites/GaIn/Index-site/node_modules/jQuery/package.json
+verbose loadDefaults jQuery@1.6.3
+silly testEngine { name: 'jsdom',
+silly testEngine   version: '0.2.13',
+silly testEngine   description: 'A javascript implementation of the W3C DOM',
+silly testEngine   keywords: [ 'dom', 'w3c', 'javascript' ],
+silly testEngine   maintainers: 
+silly testEngine    [ { name: 'Elijah Insua',
+silly testEngine        email: 'tmpvar@gmail.com',
+silly testEngine        url: 'http://tmpvar.com' } ],
+silly testEngine   contributors: 
+silly testEngine    [ { name: 'Vincent Greene',
+silly testEngine        email: 'ulteriorlife@gmail.com' },
+silly testEngine      { name: 'Dav Glass', email: 'davglass@gmail.com' },
+silly testEngine      { name: 'Felix Gnass', email: 'fgnass@gmail.com' },
+silly testEngine      { name: 'Charlie Robbins',
+silly testEngine        email: 'charlie.robbins@gmail.com' },
+silly testEngine      { name: 'Aria Stewart', email: 'aredridel@nbtsc.org' },
+silly testEngine      { name: 'Matthew',
+silly testEngine        email: 'N.A.',
+silly testEngine        url: 'http://github.com/matthewpflueger/' },
+silly testEngine      { name: 'Olivier El Mekki',
+silly testEngine        email: 'unknown',
+silly testEngine        url: 'http://blog.olivier-elmekki.com/' },
+silly testEngine      { name: 'Shimon Dookdin',
+silly testEngine        email: 'helpmepro1@gmail.com' },
+silly testEngine      { name: 'Daniel Cassidy',
+silly testEngine        email: 'mail@danielcassidy.me.uk',
+silly testEngine        url: 'http://www.danielcassidy.me.uk/' },
+silly testEngine      { name: 'Sam Ruby',
+silly testEngine        email: 'N/A',
+silly testEngine        url: 'http://intertwingly.net/blog/' },
+silly testEngine      { name: 'hij1nx', url: 'http://github.com/hij1nx' },
+silly testEngine      { name: 'Yonathan Randolph',
+silly testEngine        url: 'http://github.com/yonran' },
+silly testEngine      { name: 'Martin Davis',
+silly testEngine        url: 'http://github.com/waslogic' },
+silly testEngine      { name: 'Andreas Lind Petersen',
+silly testEngine        email: 'andreas@one.com' },
+silly testEngine      { name: 'd-ash', url: 'http://github.com/d-ash' },
+silly testEngine      { name: 'Robin Zhong', email: 'fbzhong@gmail.com' },
+silly testEngine      { name: 'Alexander Flatter',
+silly testEngine        email: 'flatter@gmail.com' },
+silly testEngine      { name: 'Heng Liu', email: 'liucougar@gmail.com' },
+silly testEngine      { name: 'Brian McDaniel',
+silly testEngine        url: 'http://github.com/brianmcd' },
+silly testEngine      { name: 'John Hurliman',
+silly testEngine        email: 'jhurliman@jhurliman.org' },
+silly testEngine      { name: 'Jimmy Mabey' },
+silly testEngine      { name: 'Gregory Tomlinson' },
+silly testEngine      { name: 'Jason Davies',
+silly testEngine        url: 'http://www.jasondavies.com/' },
+silly testEngine      { name: 'Josh Marshall',
+silly testEngine        url: 'http://www.ponderingtheobvious.com/' },
+silly testEngine      { name: 'Jason Priestley',
+silly testEngine        url: 'https://github.com/jhp' },
+silly testEngine      { name: 'Derek Lindahl',
+silly testEngine        url: 'https://github.com/dlindahl' },
+silly testEngine      { name: 'Chris Roebuck',
+silly testEngine        email: 'chris@quillu.com',
+silly testEngine        url: 'http://www.quillu.com' },
+silly testEngine      { name: 'Avi Deitcher',
+silly testEngine        url: 'https://github.com/deitch' } ],
+silly testEngine   bugs: 
+silly testEngine    { email: 'tmpvar@gmail.com',
+silly testEngine      url: 'http://github.com/tmpvar/jsdom/issues' },
+silly testEngine   licenses: 
+silly testEngine    [ { type: 'MIT',
+silly testEngine        url: 'http://github.com/tmpvar/jsdom/blob/master/LICENSE.txt' } ],
+silly testEngine   repositories: 
+silly testEngine    [ { type: 'git',
+silly testEngine        url: 'http://github.com/tmpvar/jsdom.git' } ],
+silly testEngine   implements: [ 'http://www.w3.org/TR/REC-DOM-Level-1' ],
+silly testEngine   dependencies: 
+silly testEngine    { htmlparser: '1.x',
+silly testEngine      request: '2.x',
+silly testEngine      cssom: '0.2.x',
+silly testEngine      contextify: '0.1.x' },
+silly testEngine   optionalDependencies: { contextify: '0.1.x' },
+silly testEngine   devDependencies: 
+silly testEngine    { nodeunit: '>=0.5.x',
+silly testEngine      'console.log': '*',
+silly testEngine      optimist: '*' },
+silly testEngine   engines: { node: '>=0.1.9' },
+silly testEngine   directories: { lib: './lib/jsdom' },
+silly testEngine   main: './lib/jsdom',
+silly testEngine   _id: 'jsdom@0.2.13',
+silly testEngine   _engineSupported: true,
+silly testEngine   _npmVersion: '1.0.1rc8',
+silly testEngine   _nodeVersion: 'v0.4.9',
+silly testEngine   _defaultsLoaded: true }
+verbose caching /Users/brunosan/Sites/GaIn/Index-site/node_modules/jsdom/package.json
+verbose loadDefaults jsdom@0.2.13
+silly testEngine { name: 'JSV',
+silly testEngine   version: '3.5.0',
+silly testEngine   description: 'A JavaScript implementation of a extendable, fully compliant JSON Schema validator.',
+silly testEngine   homepage: 'http://github.com/garycourt/JSV',
+silly testEngine   author: { name: 'Gary Court', email: 'gary.court@gmail.com' },
+silly testEngine   licenses: 
+silly testEngine    [ { type: 'FreeBSD',
+silly testEngine        url: 'http://github.com/garycourt/JSV/raw/master/jsv.js' } ],
+silly testEngine   maintainers: [ { name: 'Gary Court', email: 'gary.court@gmail.com' } ],
+silly testEngine   bugs: 
+silly testEngine    { email: 'gary.court@gmail.com',
+silly testEngine      url: 'http://github.com/garycourt/JSV/issues' },
+silly testEngine   repositories: 
+silly testEngine    [ { type: 'git',
+silly testEngine        url: 'git://github.com/garycourt/JSV.git' } ],
+silly testEngine   dependencies: {},
+silly testEngine   main: 'lib/jsv.js',
+silly testEngine   keywords: [ 'json', 'schema', 'validator' ],
+silly testEngine   _id: 'JSV@3.5.0',
+silly testEngine   devDependencies: {},
+silly testEngine   optionalDependencies: {},
+silly testEngine   engines: { node: '*' },
+silly testEngine   _engineSupported: true,
+silly testEngine   _npmVersion: '1.0.1rc8',
+silly testEngine   _nodeVersion: 'v0.4.9',
+silly testEngine   _defaultsLoaded: true,
+silly testEngine   dist: { shasum: '02ef7c4fce14d13b3a68194e676efd6aeedabe6e' },
+silly testEngine   _from: 'JSV@= 3.5.0' }
+verbose caching /Users/brunosan/Sites/GaIn/Index-site/node_modules/JSV/package.json
+silly testEngine { name: 'millstone',
+silly testEngine   version: '0.1.1',
+silly testEngine   main: './lib/millstone.js',
+silly testEngine   description: 'Prepares datasources in an MML file for consumption in Mapnik',
+silly testEngine   url: 'https://github.com/mapbox/millstone',
+silly testEngine   licenses: [ { type: 'BSD' } ],
+silly testEngine   repositories: 
+silly testEngine    [ { type: 'git',
+silly testEngine        url: 'git://github.com/mapbox/millstone.git' } ],
+silly testEngine   author: 
+silly testEngine    { name: 'MapBox',
+silly testEngine      email: 'info@mapbox.com',
+silly testEngine      url: 'http://mapbox.com/' },
+silly testEngine   dependencies: 
+silly testEngine    { underscore: '1.1.x',
+silly testEngine      step: '0.0.x',
+silly testEngine      'generic-pool': '1.0.x',
+silly testEngine      get: '~0.4.2',
+silly testEngine      srs: '~0.2.7',
+silly testEngine      zipfile: '~0.2.2',
+silly testEngine      sqlite3: '~2.0.16' },
+silly testEngine   devDependencies: { expresso: '0.8.x' },
+silly testEngine   scripts: 
+silly testEngine    { pretest: 'which expresso || npm install --dev',
+silly testEngine      test: 'which expresso | sh' },
+silly testEngine   _id: 'millstone@0.1.1',
+silly testEngine   engines: { node: '*' },
+silly testEngine   _engineSupported: true,
+silly testEngine   _npmVersion: '1.0.1rc8',
+silly testEngine   _nodeVersion: 'v0.4.9',
+silly testEngine   _defaultsLoaded: true }
+verbose caching /Users/brunosan/Sites/GaIn/Index-site/node_modules/millstone/package.json
+verbose loadDefaults millstone@0.1.1
+silly testEngine { name: 'mirror',
+silly testEngine   version: '0.3.3',
+silly testEngine   author: 
+silly testEngine    { name: 'Development Seed',
+silly testEngine      email: 'info@developmentseed.org',
+silly testEngine      url: 'http://www.developmentseed.org' },
+silly testEngine   main: './mirror',
+silly testEngine   dependencies: { 'uglify-js': '1.0.2' },
+silly testEngine   devDependencies: { express: '2.3.x', expresso: '0.7.x' },
+silly testEngine   _id: 'mirror@0.3.3',
+silly testEngine   engines: { node: '*' },
+silly testEngine   _engineSupported: true,
+silly testEngine   _npmVersion: '1.0.1rc8',
+silly testEngine   _nodeVersion: 'v0.4.9',
+silly testEngine   _defaultsLoaded: true }
+verbose caching /Users/brunosan/Sites/GaIn/Index-site/node_modules/mirror/package.json
+verbose loadDefaults mirror@0.3.3
+silly testEngine { name: 'modestmaps',
+silly testEngine   description: 'a display and interaction library for tile-based maps',
+silly testEngine   version: '0.18.4',
+silly testEngine   author: 
+silly testEngine    { name: 'Tom Carden',
+silly testEngine      email: 'tom@tom-carden.co.uk',
+silly testEngine      url: 'http://www.tom-carden.co.uk/' },
+silly testEngine   contributors: 
+silly testEngine    [ { name: 'Mike Migurski',
+silly testEngine        email: 'mike-fromsite@teczno.com' },
+silly testEngine      { name: 'Tom MacWright',
+silly testEngine        email: 'macwright@gmail.com' } ],
+silly testEngine   keywords: [ 'map', 'geo' ],
+silly testEngine   main: './modestmaps.js',
+silly testEngine   homepage: 'https://github.com/stamen/modestmaps-js',
+silly testEngine   repositories: 
+silly testEngine    [ { type: 'git',
+silly testEngine        url: 'git://github.com/stamen/modestmaps-js.git' } ],
+silly testEngine   devDependencies: 
+silly testEngine    { docco: '~0.3.0',
+silly testEngine      expresso: '~0.7.0',
+silly testEngine      'uglify-js': '~1.0.0' },
+silly testEngine   directories: {},
+silly testEngine   _id: 'modestmaps@0.18.4',
+silly testEngine   dependencies: {},
+silly testEngine   optionalDependencies: {},
+silly testEngine   engines: { node: '*' },
+silly testEngine   _engineSupported: true,
+silly testEngine   _npmVersion: '1.0.1rc8',
+silly testEngine   _nodeVersion: 'v0.4.9',
+silly testEngine   _defaultsLoaded: true,
+silly testEngine   dist: { shasum: 'd0f89c43db34bc10fbca0548b1aab528b8b6aeaa' },
+silly testEngine   _from: 'modestmaps@= 0.18.4' }
+verbose caching /Users/brunosan/Sites/GaIn/Index-site/node_modules/modestmaps/package.json
+silly testEngine { name: 'request',
+silly testEngine   description: 'Simplified HTTP request client.',
+silly testEngine   tags: [ 'http', 'simple', 'util', 'utility' ],
+silly testEngine   version: '1.9.5',
+silly testEngine   author: 
+silly testEngine    { name: 'Mikeal Rogers',
+silly testEngine      email: 'mikeal.rogers@gmail.com' },
+silly testEngine   repository: 
+silly testEngine    { type: 'git',
+silly testEngine      url: 'git://github.com/mikeal/request.git' },
+silly testEngine   bugs: { url: 'http://github.com/mikeal/request/issues' },
+silly testEngine   engines: [ 'node >= 0.3.6', node: ' >= 0.3.6' ],
+silly testEngine   main: './main',
+silly testEngine   _id: 'request@1.9.5',
+silly testEngine   dependencies: {},
+silly testEngine   devDependencies: {},
+silly testEngine   optionalDependencies: {},
+silly testEngine   _engineSupported: true,
+silly testEngine   _npmVersion: '1.0.1rc8',
+silly testEngine   _nodeVersion: 'v0.4.9',
+silly testEngine   _defaultsLoaded: true,
+silly testEngine   dist: { shasum: '11f5e713e2a4949a12a912ff46c48f2352c33eb3' },
+silly testEngine   _from: 'request@https://github.com/mikeal/request/tarball/8bb7f98ba8b78c217552c979811c07f1299318fe' }
+verbose caching /Users/brunosan/Sites/GaIn/Index-site/node_modules/request/package.json
+silly testEngine { name: 'showdown',
+silly testEngine   version: '0.0.1',
+silly testEngine   author: { name: 'John Fraser' },
+silly testEngine   contributors: 
+silly testEngine    [ { name: 'John Gruber' },
+silly testEngine      { name: 'John Fraser' },
+silly testEngine      { name: 'Corey Innis' },
+silly testEngine      { name: 'Remy Sharp' },
+silly testEngine      { name: 'Konstantin Käfer' } ],
+silly testEngine   repository: 
+silly testEngine    { type: 'git',
+silly testEngine      url: 'git://github.com/coreyti/showdown.git' },
+silly testEngine   licenses: [ { type: 'BSD' } ],
+silly testEngine   main: './src/showdown',
+silly testEngine   dependencies: {},
+silly testEngine   devDependencies: {},
+silly testEngine   _id: 'showdown@0.0.1',
+silly testEngine   engines: { node: '*' },
+silly testEngine   _engineSupported: true,
+silly testEngine   _npmVersion: '1.0.1rc8',
+silly testEngine   _nodeVersion: 'v0.4.9',
+silly testEngine   _defaultsLoaded: true }
+verbose caching /Users/brunosan/Sites/GaIn/Index-site/node_modules/showdown/package.json
+verbose loadDefaults showdown@0.0.1
+silly testEngine { name: 'tilelive-mapnik',
+silly testEngine   version: '0.2.1',
+silly testEngine   main: './lib/mapnik.js',
+silly testEngine   description: 'Mapnik backend for tilelive',
+silly testEngine   url: 'http://github.com/mapbox/tilelive-mapnik',
+silly testEngine   keywords: [ 'map', 'server', 'mapnik', 'tms' ],
+silly testEngine   licenses: [ { type: 'BSD' } ],
+silly testEngine   repositories: 
+silly testEngine    [ { type: 'git',
+silly testEngine        url: 'http://github.com/mapbox/tilelive-mapnik.git' } ],
+silly testEngine   contributors: 
+silly testEngine    [ { name: 'Tom MacWright', email: 'tmcw' },
+silly testEngine      { name: 'Will White', email: 'willwhite' },
+silly testEngine      { name: 'Dane Springmeyer', email: 'springmeyer' },
+silly testEngine      { name: 'Young Hahn', email: 'yhahn' } ],
+silly testEngine   dependencies: 
+silly testEngine    { step: '0.0.x',
+silly testEngine      underscore: '1.1.x',
+silly testEngine      'generic-pool': '1.0.x',
+silly testEngine      mapnik: '0.5.x',
+silly testEngine      eio: '0.0.x',
+silly testEngine      sphericalmercator: '1.0.0' },
+silly testEngine   devDependencies: { expresso: '0.7.x' },
+silly testEngine   engines: { node: '0.4.x' },
+silly testEngine   scripts: 
+silly testEngine    { pretest: 'which expresso || npm install --dev',
+silly testEngine      test: 'which expresso | sh' },
+silly testEngine   _id: 'tilelive-mapnik@0.2.1',
+silly testEngine   optionalDependencies: {},
+silly testEngine   _engineSupported: true,
+silly testEngine   _npmVersion: '1.0.1rc8',
+silly testEngine   _nodeVersion: 'v0.4.9',
+silly testEngine   _defaultsLoaded: true,
+silly testEngine   dist: { shasum: 'e79d7278ebc8a8cc4dee1da327fd27d1dcc47e43' },
+silly testEngine   _from: 'tilelive-mapnik@= 0.2.1' }
+verbose caching /Users/brunosan/Sites/GaIn/Index-site/node_modules/tilelive-mapnik/package.json
+silly testEngine { name: 'underscore',
+silly testEngine   description: 'JavaScript\'s functional programming helper library.',
+silly testEngine   homepage: 'http://documentcloud.github.com/underscore/',
+silly testEngine   keywords: [ 'util', 'functional', 'server', 'client', 'browser' ],
+silly testEngine   author: 
+silly testEngine    { name: 'Jeremy Ashkenas',
+silly testEngine      email: 'jeremy@documentcloud.org' },
+silly testEngine   contributors: [],
+silly testEngine   dependencies: {},
+silly testEngine   repository: 
+silly testEngine    { type: 'git',
+silly testEngine      url: 'git://github.com/documentcloud/underscore.git' },
+silly testEngine   main: 'underscore.js',
+silly testEngine   version: '1.1.7',
+silly testEngine   _id: 'underscore@1.1.7',
+silly testEngine   devDependencies: {},
+silly testEngine   optionalDependencies: {},
+silly testEngine   engines: { node: '*' },
+silly testEngine   _engineSupported: true,
+silly testEngine   _npmVersion: '1.0.1rc8',
+silly testEngine   _nodeVersion: 'v0.4.9',
+silly testEngine   _defaultsLoaded: true,
+silly testEngine   dist: { shasum: '8fd07fe8a4cf718357cb044e635fafeaf882a10e' },
+silly testEngine   _from: 'underscore@= 1.1.7' }
+verbose caching /Users/brunosan/Sites/GaIn/Index-site/node_modules/underscore/package.json
+silly testEngine { name: 'wax',
+silly testEngine   version: '3.0.6',
+silly testEngine   description: 'Tools for improving web maps.',
+silly testEngine   author: 
+silly testEngine    { name: 'MapBox',
+silly testEngine      email: 'info@mapbox.com',
+silly testEngine      url: 'http://mapbox.com/' },
+silly testEngine   contributors: 
+silly testEngine    [ { name: 'Tom MacWright',
+silly testEngine        email: 'macwright@gmail.com' },
+silly testEngine      { name: 'Young Hahn',
+silly testEngine        email: 'young@developmentseed.org' },
+silly testEngine      { name: 'Will White',
+silly testEngine        email: 'will@developmentseed.org' } ],
+silly testEngine   licenses: [ { type: 'BSD' } ],
+silly testEngine   devDependencies: 
+silly testEngine    { jshint: '0.2.3',
+silly testEngine      'uglify-js': '1.0.x',
+silly testEngine      docco: '0.3.x',
+silly testEngine      banner: '0.0.x' },
+silly testEngine   _id: 'wax@3.0.6',
+silly testEngine   dependencies: {},
+silly testEngine   optionalDependencies: {},
+silly testEngine   engines: { node: '*' },
+silly testEngine   _engineSupported: true,
+silly testEngine   _npmVersion: '1.0.1rc8',
+silly testEngine   _nodeVersion: 'v0.4.9',
+silly testEngine   _defaultsLoaded: true,
+silly testEngine   dist: { shasum: '67aeaf7ac8313c801ba088b9251fc98bc0490170' },
+silly testEngine   _from: 'wax@3.0.6' }
+verbose caching /Users/brunosan/Sites/GaIn/Index-site/node_modules/wax/package.json
+verbose has wscript [ undefined,
+verbose has wscript   { file: '/Users/brunosan/Sites/GaIn/Index-site/node_modules/mapnik/package.json',
+verbose has wscript     wscript: 
+verbose has wscript      [ '\ndef configure',
+verbose has wscript        '\n',
+verbose has wscript        index: 2873,
+verbose has wscript        input: 'import os\nimport sys\nfrom glob import glob\nfrom os import unlink, symlink, popen, uname, environ\nfrom os.path import exists\nfrom shutil import copy2 as copy\nfrom subprocess import call\n\n# node-wafadmin\nimport Options\nimport Utils\n\nTARGET = \'_mapnik\'\nTARGET_FILE = \'%s.node\' % TARGET\nbuilt = \'build/default/%s\' % TARGET_FILE\ndest = \'lib/%s\' % TARGET_FILE\nsettings = \'lib/mapnik_settings.js\'\n\n# detect this install: http://dbsgeo.com/downloads/#mapnik200\nHAS_OSX_FRAMEWORK = False\n\n# this goes into a mapnik_settings.js file beside the C++ _mapnik.node\nsettings_template = """\nmodule.exports.paths = {\n    \'fonts\': %s,\n    \'input_plugins\': %s\n};\n"""\n\n# number of parallel compile jobs\njobs=1\nif os.environ.has_key(\'JOBS\'):\n  jobs = int(os.environ[\'JOBS\'])\n\ndef write_mapnik_settings(fonts=\'undefined\',input_plugins=\'undefined\'):\n    global settings_template\n    if \'__dirname\' in fonts or \'__dirname\' in input_plugins:\n        settings_template = "var path = require(\'path\');\\n" + settings_template\n    open(settings,\'w\').write(settings_template % (fonts,input_plugins))\n\ndef ensure_min_mapnik_revision(conf,revision=3055):\n    # mapnik-config was basically written for node-mapnik\n    # so a variety of kinks mean that we need a very\n    # recent version for things to work properly\n    # http://trac.mapnik.org/log/trunk/utils/mapnik-config\n\n    #TODO - if we require >=2503 then we can check return type not "Usage" string...\n    if popen("%s --libs" % conf.env[\'MAPNIK_CONFIG\']).read().startswith(\'Usage\') \\\n      or popen("%s --input-plugins" % conf.env[\'MAPNIK_CONFIG\']).read().startswith(\'Usage\') \\\n      or popen("%s --svn-revision" % conf.env[\'MAPNIK_CONFIG\']).read().startswith(\'Usage\'):\n        Utils.pprint(\'YELLOW\', \'mapnik-config version is too old, mapnik > %s is required for auto-configuring build\' % revision)\n        conf.fatal(\'please upgrade to mapnik trunk\')\n\n    failed = False\n    found_ver = None\n\n    try:\n        found_ver = int(popen("%s --svn-revision" % conf.env[\'MAPNIK_CONFIG\']).readline().strip())\n        if not found_ver >= revision:\n            failed = True\n            print found_ver,revision\n        else:\n            Utils.pprint(\'GREEN\', \'Sweet, found viable mapnik svn-revision r%s (via mapnik-config)\' % (found_ver))\n    except Exception,e:\n        print e\n        failed = True\n\n    if failed:\n        if found_ver:\n            msg = \'mapnik-config version is too old, mapnik > r%s is required for auto-configuring build, found only r%s\' % (revision,found_ver)\n        else:\n            msg = \'mapnik-config version is too old, mapnik > r%s is required for auto-configuring build\' % revision\n\n        Utils.pprint(\'YELLOW\', msg)\n        conf.fatal(\'please upgrade to mapnik trunk\')\n\n\ndef set_options(opt):\n    opt.tool_options("compiler_cxx")\n    #opt.add_option(\'-D\', \'--debug\', action=\'store_true\', default=False, dest=\'debug\')\n\ndef configure(conf):\n    global HAS_OSX_FRAMEWORK\n\n    conf.check_tool("compiler_cxx")\n    conf.check_tool("node_addon")\n    if sys.platform == \'darwin\':\n        conf.check_tool(\'osx\')\n    settings_dict = {}\n    cairo_cxxflags = []\n    grid_cxxflags = []\n\n    # future auto-support for mapnik frameworks..\n    path_list = environ.get(\'PATH\', \'\').split(os.pathsep)\n    \n    # if user is not setting LINKFLAGS (custom compile) detect and auto-configure\n    # against the Mapnik.Framework installer\n    framework_path = \'/Library/Frameworks/Mapnik.framework/Programs\'\n    if not os.environ.has_key(\'LINKFLAGS\') and os.path.exists(\'/Library/Frameworks/Mapnik.framework\'):\n        path_list.append(framework_path)\n        HAS_OSX_FRAMEWORK = True\n    else:\n        if framework_path in path_list:\n            path_list.remove(framework_path)\n\n    mapnik_config = conf.find_program(\'mapnik-config\', var=\'MAPNIK_CONFIG\', path_list=path_list)\n    if not mapnik_config:\n        conf.fatal(\'\\n\\nSorry, the "mapnik-config" program was not found.\\nOnly Mapnik Trunk (future Mapnik 2.0 release) provides this tool, and therefore node-mapnik requires Mapnik trunk.\\n\\nSee http://trac.mapnik.org/wiki/Mapnik2 for more info.\\n\')\n        \n    # this breaks with git cloned mapnik repos, so skip it\n    #ensure_min_mapnik_revision(conf)\n\n    # todo - check return value of popen otherwise we can end up with\n    # return of \'Usage: mapnik-config [OPTION]\'\n    all_ldflags = popen("%s --libs" % mapnik_config).readline().strip().split(\' \')\n\n    # only link to libmapnik, which should be in first two flags\n    linkflags = []\n    if os.environ.has_key(\'LINKFLAGS\'):\n        linkflags.extend(os.environ[\'LINKFLAGS\'].split(\' \'))\n    #linkflags.extend(all_ldflags[:2])\n    \n    # add prefix to linkflags if it is unique\n    prefix_lib = os.path.join(conf.env[\'PREFIX\'],\'lib\')\n    if not \'/usr/local\' in prefix_lib:\n        linkflags.insert(0,\'-L%s\' % prefix_lib)\n\n    conf.env.append_value("LINKFLAGS", linkflags)\n\n    # unneeded currently as second item from mapnik-config is -lmapnik2\n    conf.env.append_value("LIB_MAPNIK", "mapnik2")\n\n    if \'-lcairo\' in all_ldflags:\n\n        if HAS_OSX_FRAMEWORK and os.path.exists(\'/Library/Frameworks/Mapnik.framework/Headers/cairo\'):\n            # prep for this specific install of mapnik 1.0: http://dbsgeo.com/downloads/#mapnik200\n            cairo_cxxflags.append(\'-I/Library/Frameworks/Mapnik.framework/Headers/cairomm-1.0\')\n            cairo_cxxflags.append(\'-I/Library/Frameworks/Mapnik.framework/Headers/cairo\')\n            cairo_cxxflags.append(\'-I/Library/Frameworks/Mapnik.framework/Headers/sigc++-2.0\')\n            cairo_cxxflags.append(\'-I/Library/Frameworks/Mapnik.framework/unix/lib/sigc++-2.0/include\')\n            cairo_cxxflags.append(\'-I/Library/Frameworks/Mapnik.framework/Headers\') #fontconfig\n            Utils.pprint(\'GREEN\',\'Sweet, found cairo library, will attempt to compile with cairo support for pdf/svg output\')\n    else:\n        Utils.pprint(\'YELLOW\',\'Notice: "mapnik-config --libs" is not reporting Cairo support in your mapnik version, so node-mapnik will not be built with Cairo support (pdf/svg output)\')\n\n\n    # TODO - too much potential pollution here, need to limit this upstream\n    cxxflags = popen("%s --cflags" % mapnik_config).readline().strip().split(\' \')\n    if HAS_OSX_FRAMEWORK:\n        cxxflags.insert(0,\'-I/Library/Frameworks/Mapnik.framework/Versions/2.0/unix/include/freetype2\')\n    \n    # if cairo is available\n    if cairo_cxxflags:\n        cxxflags.append(\'-DHAVE_CAIRO\')\n        cxxflags.extend(cairo_cxxflags)\n    \n    # add prefix to includes if it is unique\n    prefix_inc = os.path.join(conf.env[\'PREFIX\'],\'include/node\')\n    if not \'/usr/local\' in prefix_inc:\n        cxxflags.insert(0,\'-I%s\' % prefix_inc)\n\n    conf.env.append_value("CXXFLAGS_MAPNIK", cxxflags)\n\n    #ldflags = []\n    #conf.env.append_value("LDFLAGS", ldflags)\n\n    # settings for fonts and input plugins\n    if os.environ.has_key(\'MAPNIK_INPUT_PLUGINS\'):\n        settings_dict[\'input_plugins\'] =  os.environ[\'MAPNIK_INPUT_PLUGINS\']\n    else:\n        settings_dict[\'input_plugins\'] = \'\\\'%s\\\'\' % popen("%s --input-plugins" % mapnik_config).readline().strip()\n\n    if os.environ.has_key(\'MAPNIK_FONTS\'):\n        settings_dict[\'fonts\'] =  os.environ[\'MAPNIK_FONTS\']\n    else:\n        settings_dict[\'fonts\'] = \'\\\'%s\\\'\' % popen("%s --fonts" % mapnik_config).readline().strip()\n\n\n    write_mapnik_settings(**settings_dict)\n\ndef build(bld):\n    Options.options.jobs = jobs;\n    obj = bld.new_task_gen("cxx", "shlib", "node_addon", install_path=None)\n    obj.cxxflags = ["-O3", "-g", "-D_FILE_OFFSET_BITS=64", "-D_LARGEFILE_SOURCE"]\n    # uncomment the next line to remove \'-undefined dynamic_lookup\' \n    # in order to review linker errors (v8, libev/eio references can be ignored)\n    #obj.env[\'LINKFLAGS_MACBUNDLE\'] = [\'-bundle\']\n    obj.target = TARGET\n    obj.source =  ["src/node_mapnik.cpp",\n                   "src/mapnik_map.cpp",\n                   "src/mapnik_color.cpp",\n                   "src/mapnik_geometry.cpp",\n                   "src/mapnik_feature.cpp",\n                   "src/mapnik_image.cpp",\n                   "src/mapnik_image_view.cpp",\n                   "src/mapnik_grid.cpp",\n                   "src/mapnik_grid_view.cpp",\n                   "src/mapnik_js_datasource.cpp",\n                   "src/mapnik_memory_datasource.cpp",\n                   "src/mapnik_projection.cpp",\n                   "src/mapnik_layer.cpp",\n                   "src/mapnik_datasource.cpp",\n                   "src/mapnik_featureset.cpp"\n                  ]\n    obj.uselib = "MAPNIK"\n    # install \'mapnik\' module\n    lib_dir = bld.path.find_dir(\'./lib\')\n    bld.install_files(\'${LIBPATH_NODE}/node/mapnik\', lib_dir.ant_glob(\'**/*\'), cwd=lib_dir, relative_trick=True)\n    # install command line programs\n    bin_dir = bld.path.find_dir(\'./bin\')\n    bld.install_files(\'${PREFIX_NODE}/bin\', bin_dir.ant_glob(\'*\'), cwd=bin_dir, relative_trick=True, chmod=0755)\n\n\ndef shutdown():\n    if Options.commands[\'clean\']:\n        if exists(TARGET): unlink(TARGET)\n    if Options.commands[\'clean\']:\n        if exists(dest):\n            unlink(dest)\n    else:\n        if exists(built):\n            copy(built,dest)\n' ],
+verbose has wscript     serverjs: false } ]
+silly testEngine { name: 'mapnik',
+silly testEngine   version: '0.5.3',
+silly testEngine   main: './lib/mapnik.js',
+silly testEngine   description: 'C++ map rendering library for node',
+silly testEngine   keywords: [ 'map', 'graphics', 'canvas', 'tile' ],
+silly testEngine   url: 'http://github.com/mapnik/node-mapnik',
+silly testEngine   repositories: 
+silly testEngine    [ { type: 'git',
+silly testEngine        url: 'git://github.com/mapnik/node-mapnik.git' } ],
+silly testEngine   author: { name: 'Dane Springmeyer', email: 'dane@dbsgeo.com' },
+silly testEngine   contributors: [],
+silly testEngine   licenses: [ 'BSD' ],
+silly testEngine   dependencies: {},
+silly testEngine   bin: 
+silly testEngine    { 'mapnik-inspect.js': './bin/mapnik-inspect.js',
+silly testEngine      'mapnik-render.js': './bin/mapnik-render.js' },
+silly testEngine   directories: { examples: 'examples', src: 'src' },
+silly testEngine   engines: { node: '>= 0.2.3' },
+silly testEngine   scripts: { install: 'node-waf -v configure build' },
+silly testEngine   _id: 'mapnik@0.5.3',
+silly testEngine   devDependencies: {},
+silly testEngine   optionalDependencies: {},
+silly testEngine   _engineSupported: true,
+silly testEngine   _npmVersion: '1.0.1rc8',
+silly testEngine   _nodeVersion: 'v0.4.9',
+silly testEngine   _defaultsLoaded: true,
+silly testEngine   dist: { shasum: '1db34bc656322904d7b8ba7a34c52b55b11fbafe' },
+silly testEngine   _from: 'mapnik@0.5.3' }
+verbose caching /Users/brunosan/Sites/GaIn/Index-site/node_modules/mapnik/package.json
+verbose has wscript [ undefined,
+verbose has wscript   { file: '/Users/brunosan/Sites/GaIn/Index-site/node_modules/sqlite3/package.json',
+verbose has wscript     wscript: 
+verbose has wscript      [ '\ndef configure',
+verbose has wscript        '\n',
+verbose has wscript        index: 317,
+verbose has wscript        input: 'import os\nimport Options\nfrom Configure import ConfigurationError\nfrom os.path import exists\nfrom shutil import copy2 as copy\n\nTARGET = \'sqlite3_bindings\'\nTARGET_FILE = \'%s.node\' % TARGET\nbuilt = \'build/default/%s\' % TARGET_FILE\ndest = \'lib/%s\' % TARGET_FILE\n\ndef set_options(opt):\n  opt.tool_options("compiler_cxx")\n\ndef configure(conf):\n  conf.check_tool("compiler_cxx")\n  conf.check_tool("node_addon")\n  \n  linkflags = []\n  if os.environ.has_key(\'LINKFLAGS\'):\n      linkflags.extend(os.environ[\'LINKFLAGS\'].split(\' \'))\n  conf.env.append_value("LINKFLAGS", linkflags)\n\n  try:\n    conf.check_cfg(package="sqlite3", args=\'--libs --cflags\',\n                   uselib_store="SQLITE3", mandatory=True)\n  except ConfigurationError:\n    conf.check(lib="sqlite3", libpath=[\'/usr/local/lib\', \'/opt/local/lib\'],\n               uselib_store="SQLITE3", mandatory=True)\n\ndef build(bld):\n  obj = bld.new_task_gen("cxx", "shlib", "node_addon")\n  obj.cxxflags = ["-g", "-D_FILE_OFFSET_BITS=64", "-D_LARGEFILE_SOURCE",\n                  "-DSQLITE_ENABLE_RTREE=1", "-pthread", "-Wall"]\n  obj.target = TARGET\n  obj.source = "src/sqlite3.cc src/database.cc src/statement.cc"\n  obj.uselib = "SQLITE3"\n\ndef shutdown():\n  if Options.commands[\'clean\']:\n      if exists(TARGET_FILE):\n        unlink(TARGET_FILE)\n  else:\n    if exists(built):\n      copy(built, dest)\n' ],
+verbose has wscript     serverjs: false } ]
+silly testEngine { name: 'sqlite3',
+silly testEngine   description: 'Asynchronous, non-blocking SQLite3 bindings',
+silly testEngine   version: '2.0.16',
+silly testEngine   homepage: 'http://github.com/developmentseed/node-sqlite3',
+silly testEngine   author: 
+silly testEngine    { name: 'Konstantin Käfer',
+silly testEngine      email: 'kkaefer@gmail.com' },
+silly testEngine   contributors: 
+silly testEngine    [ { name: 'Orlando Vazquez',
+silly testEngine        email: 'ovazquez@gmail.com' },
+silly testEngine      { name: 'Artem Kustikov',
+silly testEngine        email: 'kustikoff@gmail.com' },
+silly testEngine      { name: 'Eric Fredricksen',
+silly testEngine        email: 'efredricksen@gmail.com' },
+silly testEngine      { name: 'John Wright', email: 'mrjjwright@gmail.com' },
+silly testEngine      { name: 'Ryan Dahl', email: 'ry@tinyclouds.org' },
+silly testEngine      { name: 'Will White',
+silly testEngine        email: 'will@developmentseed.org' },
+silly testEngine      { name: 'Tom MacWright',
+silly testEngine        email: 'tom@developmentseed.org' },
+silly testEngine      { name: 'Dane Springmeyer',
+silly testEngine        email: 'dane@developmentseed.org' },
+silly testEngine      { name: 'Carter Thaxton',
+silly testEngine        email: 'carter.thaxton@gmail.com' },
+silly testEngine      { name: 'Audrius Kažukauskas',
+silly testEngine        email: 'audrius@neutrino.lt' },
+silly testEngine      { name: 'Johannes Schauer', email: 'josch@pyneo.org' } ],
+silly testEngine   repository: 
+silly testEngine    { type: 'git',
+silly testEngine      url: 'git://github.com/developmentseed/node-sqlite3.git' },
+silly testEngine   engines: { node: '>=0.2.4 <0.5' },
+silly testEngine   licenses: [ { type: 'BSD' } ],
+silly testEngine   main: './lib/sqlite3',
+silly testEngine   _id: 'sqlite3@2.0.16',
+silly testEngine   scripts: { preinstall: 'node-waf clean || (exit 0); node-waf configure build' },
+silly testEngine   dependencies: {},
+silly testEngine   devDependencies: {},
+silly testEngine   optionalDependencies: {},
+silly testEngine   _engineSupported: true,
+silly testEngine   _npmVersion: '1.0.1rc8',
+silly testEngine   _nodeVersion: 'v0.4.9',
+silly testEngine   _defaultsLoaded: true,
+silly testEngine   dist: { shasum: 'd58a363ecb978c80ddd21d2f1ed61b9df7d4b176' },
+silly testEngine   _from: 'sqlite3@= 2.0.16' }
+verbose caching /Users/brunosan/Sites/GaIn/Index-site/node_modules/sqlite3/package.json
+verbose into /Users/brunosan/Sites/GaIn/Index-site [ 'tilelive' ]
+verbose cache add [ 'tilelive', null ]
+info addNamed [ 'tilelive', '' ]
+verbose addNamed [ null, '' ]
+verbose GET tilelive
+verbose raw, before any munging tilelive
+verbose url resolving [ 'http://registry.npmjs.org/', './tilelive' ]
+verbose url resolved http://registry.npmjs.org/tilelive
+verbose url parsed { protocol: 'http:',
+verbose url parsed   slashes: true,
+verbose url parsed   host: 'registry.npmjs.org',
+verbose url parsed   hostname: 'registry.npmjs.org',
+verbose url parsed   href: 'http://registry.npmjs.org/tilelive',
+verbose url parsed   pathname: '/tilelive' }
+verbose response http://registry.npmjs.org/tilelive
+silly chunk {"_id":"tilelive","_rev":"59-0b3e9ec3d1dafd04f135ed4c2c86a9fc","name":"tilelive","description":"Frontend for various tile backends, mapnik and mbtiles","dist-tags":{"latest":"4.2.0"},"versions":{"1.0.1":{"name":"tilelive","main":"./index","description":"TileLive","url":"http://github.com/developmentseed/tilelive.js","keywords":["mapping"],"contributors":[],"dependencies":{"mapnik":">= 0.1.2","mess":">= 0.0.40","node-get":">= 0.0.0","underscore":">= 1.1.1","generic-pool":">= 1.0.3"},"version":"1.0.1","_id":"tilelive@1.0.1","engines":{"node":"*"},"_nodeSupported":true,"_npmVersion":"0.2.11-5","_nodeVersion":"v0.2.5","dist":{"shasum":"c5c646950c329762d0bde68fb6e1a46001c8c2c7","tarball":"http://registry.npmjs.org/tilelive/-/tilelive-1.0.1.tgz"},"directories":{}},"1.0.3":{"name":"tilelive","main":"./index","description":"TileLive","url":"http://github.com/developmentseed/tilelive.js","keywords":["mapping"],"contributors":[{"name":"Tom MacWright","email":"tmcw"},{"name":"Will White","email":"willwhite"},{"name":"Young Hahn","email":"yhahn"}],"dependencies":{"mapnik":">= 0.1.2","carto":">= 0.0.40","node-get":">= 0.0.3","underscore":">= 1.1.1","generic-pool":">= 1.0.3"},"version":"1.0.3","_id":"tilelive@1.0.3","engines":{"node":"*"},"_engineSupported":true,"_npmVersion":"0.2.17","_nodeVersion":"v0.2.5","directories":{"lib":"./lib","bin":"./bin"},"bin":{"express":"bin/express","node":"bin/node"},"files":[""],"_defaultsLoaded":true,"dist":{"shasum":"7a135dcd92bdb73950f5c7421e58e40f1811a7c7","tarball":"http://registry.npmjs.org/tilelive/-/tilelive-1.0.3.tgz"}},"1.0.4":{"name":"tilelive","main":"./index","description":"TileLive","url":"http://github.com/developmentseed/tilelive.js","keywords":["mapping"],"contributors":[{"name":"Tom MacWright","email":"tmcw"},{"name":"Will White","email":"willwhite"},{"name":"Young Hahn","email":"yhahn"}],"dependencies":{"mapnik":">= 0.1.2","carto":">= 0.0.40","node-get":">= 0.0.2","underscore":">= 1.1.1","generic-pool":">= 1.0.3"},"version":"1.0.4","_id":"tilelive@1.0.4","engines":{"node":"*"},"_engineSupported":true,"_npmVersion":"0.2.17","_nodeVersion":"v0.2.5","directories":{"lib":"./lib","bin":"./bin"},"bin":{"express":"bin/express","node":"bin/node"},"files":[""],"_defaultsLoaded":true,"dist":{"shasum":"31d75b13200a5e4df761f729d92b605e2dfe250e","tarball":"http://registry.npmjs.org/tilelive/-/tilelive-1.0.4.tgz"}},"2.0.1":{"name":"tilelive","main":"./lib/tilelive/index","description":"TileLive","url":"http://github.com/mapbox/tilelive.js","keywords":["mapping"],"licenses":["BSD"],"contributors":[{"name":"Tom MacWright","email":"tmcw"},{"name":"Will White","email":"willwhite"},{"name":"Young Hahn","email":"yhahn"}],"dependencies":{"mapnik":">= 0.2.12","carto":">= 0.1.3","node-get":">= 0.1.0","sqlite3":">= 2.0.8","underscore":">= 1.1.1","generic-pool":">= 1.0.3","step":">= 0.0.4","compress":"https://github.com/kkaefer/n
+silly chunk ode-compress/tarball/master"},"bin":{"tilelive_server.js":"./bin/tilelive_server.js"},"version":"2.0.1","_id":"tilelive@2.0.1","engines":{"node":"*"},"_engineSupported":true,"_npmVersion":"0.2.18","_nodeVersion":"v0.2.5","directories":{"lib":"./lib","bin":"./bin"},"files":[""],"_defaultsLoaded":true,"dist":{"shasum":"247553f0d39bb4e2ff60373a4bebfb4b6291a417","tarball":"http://registry.npmjs.org/tilelive/-/tilelive-2.0.1.tgz"}},"2.0.2":{"name":"tilelive","main":"./lib/tilelive/index","description":"TileLive","url":"http://github.com/mapbox/tilelive.js","keywords":["mapping"],"licenses":["BSD"],"contributors":[{"name":"Tom MacWright","email":"tmcw"},{"name":"Will White","email":"willwhite"},{"name":"Young Hahn","email":"yhahn"}],"dependencies":{"mapnik":">= 0.3.0","carto":">= 0.1.3","node-get":">= 0.1.0","sqlite3":">= 2.0.8","underscore":">= 1.1.1","generic-pool":">= 1.0.3","step":">= 0.0.4","zlib":">= 1.0.2"},"bin":{"tilelive_server.js":"./bin/tilelive_server.js"},"version":"2.0.2","devDependencies":{},"_id":"tilelive@2.0.2","engines":{"node":"*"},"_engineSupported":true,"_npmVersion":"1.0.1rc9","_nodeVersion":"v0.4.6","_defaultsLoaded":true,"dist":{"shasum":"8efcc2ed6b5ae2cfd0908712ccab060f17bde4b6","tarball":"http://registry.npmjs.org/tilelive/-/tilelive-2.0.2.tgz"},"directories":{}},"2.0.3":{"name":"tilelive","main":"./lib/tilelive/index","description":"Map server with node-mapnik, carto, and mbtiles","url":"http://github.com/mapbox/tilelive.js","keywords":["map","server","mapnik","tms"],"licenses":[{"type":"BSD"}],"repositories":[{"type":"git","url":"http://github.com/mapbox/tilelive.js.git"}],"contributors":[{"name":"Tom MacWright","email":"tmcw"},{"name":"Will White","email":"willwhite"},{"name":"Dane Springmeyer","email":"springmeyer"},{"name":"Young Hahn","email":"yhahn"}],"dependencies":{"mapnik":"https://github.com/mapnik/node-mapnik/tarball/master","carto":">= 0.1.5","get":">= 0.1.1","sqlite3":">= 2.0.8","underscore":">= 1.1.1","generic-pool":">= 1.0.3","step":">= 0.0.4","zlib":">= 1.0.2"},"devDependencies":{"expresso":">= 0.7.6","docco":">= 0.2.0"},"bin":{"seed.js":"./bin/seed.js"},"engines":{"node":">= 0.2.6"},"version":"2.0.3","_id":"tilelive@2.0.3","_engineSupported":true,"_npmVersion":"1.0.1rc9","_nodeVersion":"v0.4.6","_defaultsLoaded":true,"dist":{"shasum":"0a4e2872607661efc6f70d756860827e2684c57f","tarball":"http://registry.npmjs.org/tilelive/-/tilelive-2.0.3.tgz"},"directories":{}},"3.0.0":{"name":"tilelive","main":"./lib/tilelive/index","description":"Map server with backends for mapnik and mbtiles","url":"http://github.com/mapbox/tilelive.js","keywords":["map","server","mapnik","tms"],"licenses":[{"type":"BSD"}],"repositories":[{"type":"git","url":"http://github.com/mapbox/tilelive.js.git"}],"contributors":[{"name":"Tom MacWright","email":"tmcw"},{"name":"Will White","email":"willwhite"},{"name":"Dane Springmeyer","email":"springmeyer"},{"name":"Young Hahn","email":"yhahn"}],"dependencies":{"generic-pool":"https://github.com/tmcw/node-pool/tarball/error_parameter","optimist":"0.2.x","step":"0.0.x","underscore":"1.1.x"},"devDependencies":{"docco":"0.3.x","expresso":"0.7.x","jshint":"0.2.0"},"bin":{"tilebatch":"./bin/tilebatch"},"engines":{"node":"0.4.x"},"version":"3.0.0","scripts":{"pretest":"npm install --dev","test":"make test"},"_id":"tilelive@3.0.0","_engineSupported":true,"_npmVersion":"1.0.3","_nodeVersion":"v0.4.6","_defaultsLoaded":true,"dist":{"shasum":"b06753c6269edcd386469b440728e84275e1521a","tarball":"http://registry.npmjs.org/tilelive/-/tilelive-3.0.0.tgz"},"directories":{}},"3.0.1":{"name":"tilelive","main":"./lib/tilelive/index","description":"Map server with backends for mapnik and mbtiles","url":"http://github.com/mapbox/tilelive.js","keywords":["map","server","mapnik","tms"],"licenses":[{"type":"BSD"}],"repositories":[{"type":"git","url":"http://github.com/mapbox/tilelive.js.git"}],"contributors":[{"name":"Tom MacWright","email":"tmcw"},{"name":"Will White","email":"willwhite"},{"name":"Dane Springmeyer","email":"springmeyer"},{"name":"Young Hahn","email":"yhahn"}],"dependencies":{"generic-pool":"https://github.com/tmcw/node-pool/tarball/error_parameter","optimist":"0.2.x","step":"0.0.x","underscore":"1.1.x"},"devDependencies":{"docco":"0.3.x","expresso":"0.7.x","jshint":"0.2.0"},"bin":{"tilebatch":"./bin/tilebatch"},"engines":{"node":"0.4.x"},"version":"3.0.1","scripts":{"pretest":"npm install --dev","test":"make test"},"_id":"tilelive@3.0.1","_engineSupported":true,"_npmVersion":"1.0.3","_nodeVersion":"v0.4.6","_defaultsLoaded":true,"dist":{"shasum":"bad3839c4e804cdfb6cdc80c99beba3cf11c6737","tarball":"http://registry.npmjs.org/tilelive/-/tilelive-3.0.1.tgz"},"directories":{}},"3.0.2":{"name":"tilelive","main":"./lib/tilelive/index","description":"Map server with backends for mapnik and mbtiles","url":"http://github.com/mapbox/tilelive.js","keywords":["map","server","mapnik","tms"],"licenses":[{"type":"BSD"}],"repositories":[{"type":"git","url":"http://github.com/mapbox/tilelive.js.git"}],"author":{"name":"MapBox","email":"info@mapbox.com","url":"http://mapbox.com/"},"contributors":[{"name":"Tom MacWright","email":"tmcw"},{"name":"Will White","email":"willwhite"},{"name":"Dane Springmeyer","email":"springmeyer"},{"name":"Young Hahn","email":"yhahn"}],"dependencies":{"generic-pool":"1.0.x","optimist":"0.2.x","step":"0.0.x","underscore":"1.1.x"},"devDependencies":{"docco":"0.3.x","expresso":"0.7.x","jshint":"0.2.0"},"bin":{"tilebatch":"./bin/tilebatch"},"engines":{"node":"0.4.x"},"version":"3.0.2","scripts":{"pretest":"npm install --dev","test":"make test"},"_id":"tilelive@3.0.2","_engineSupported":true,"_npmVersion":"1.0.3","_nodeVersion":"v0.4.6","_defaultsLoaded":true,"dist":{"shasum":"fe8199366940dc9ecba599d27e518ceb39981f39","tarball":"http://registry.npmjs.org/tilelive/-/tilelive-3.0.2.tgz"},"directories":{}},"4.0.0":{"name":"tilelive","version":"4.0.0","main":"./lib/tilelive.js","description":"Frontend for various tile backends, mapnik and mbtiles","url":"http://github.com/mapbox/tilelive.js","keywords":["map","server","mapnik","tms"],"licenses":[{"type":"BSD"}],"repositories":[{"type":"git","url":"http://github.com/mapbox/tilelive.js.git"}],"author":{"name":"MapBox","email":"info@mapbox.com","url":"http://mapbox.com/"},"contributors":[{"name":"Tom MacWright","email":"tmcw"},{"name":"Will White","email":"willwhite"},{"name":"Dane Springmeyer","email":"springmeyer"},{"name":"Young Hahn","email":"yhahn"},{"name":"Konstantin Käfer","email":"kkaefer"}],"dependencies":{"generic-pool":"1.0.x","optimist":"0.2.x","step":"0.0.x","sphericalmercator":"1.0.0","underscore":"1.1.x"},"devDependencies":{"docco":"0.3.x","expresso":"0.7.x","jshint":"0.2.0","mbtiles":"0.1.x","tilejson":"0.0.x"},"bin":{"tilebatch":"./bin/tilebatch"},"engines":{"node":"0.4.x"},"scripts":{"pretest":"npm install --dev","test":"make test"},"_npmJsonOpts":{"file":"/Users/kkaefer/.npm/tilelive/4.0.0/package/package.json","wscript":false,"contributors":false,"serverjs":false},"_id":"tilelive@4.0.0","_engineSupported":true,"_npmVersion":"1.0.14","_nodeVersion":"v0.4.9","_defaultsLoaded":true,"dist":{"shasum":"6c84aff8a3ec7ee78a348ff2084f81ad061512e4","tarball":"http://registry.npmjs.org/tilelive/-/tilelive-4.0.0.tgz"},"directories":{}},"3.0.3":{"name":"tilelive","main":"./lib/tilelive/index","description":"Map server with backends for mapnik and mbtiles","url":"http://github.com/mapbox/tilelive.js","keywords":["map","server","mapnik","tms"],"licenses":[{"type":"BSD"}],"repositories":[{"type":"git","url":"http://github.com/mapbox/tilelive.js.git"}],"author":{"name":"MapBox","email":"info@mapbox.com","url":"http://mapbox.com/"},"contributors":[{"name":"Tom MacWright","email":"tmcw"},{"name":"Will White","email":"willwhite"},{"name":"Dane Springmeyer","email":"springmeyer"},{"name":"Young Hahn","email":"yhahn"}],"dependencies":{"generic-pool":"1.0.x","optimist":"0.2.x","step":"0.0.x","sphericalmercator":"1.0.0","underscore":"1.1.x"},"bin":{"tilebatch":"./bin/tilebatch"},"engines":{"node":"0.4.x"},"version":"3.0.3","_npmJsonOpts":{"file":"/home/devseed/.npm/tilelive/3.0.3/package/package.json","wscript":false,"contributors":false,"serverjs":false},"_id":"tilelive@3.0.3","devDependencies":{},"_engineSupported":true,"_npmVersion":"1.0.15","_nodeVersion":"v0.4.9","_defaultsLoaded":true,"dist":{"shasum":"d9aa40469aeb17a616fa4e778e9e7f927ed8edc4","tarball":"http://registry.npmjs.org/tilelive/-/tilelive-3.0.3.tgz"},"scripts":{},"directories":{}},"4.0.1":{"name":"tilelive","version":"4.0.1","main":"./lib/tilelive.js","description":"Frontend for various tile backends, mapnik and mbtiles","url":"http://github.com/mapbox/tilelive.js","keywords":["map","server","mapnik","tms"],"licenses":[{"type":"BSD"}],"repositories":[{"type":"git","url":"http://github.com/mapbox/tilelive.js.git"}],"author":{"name":"MapBox","email":"info@mapbox.com","url":"http://mapbox.com/"},"contributors":[{"name":"Tom MacWright","email":"tmcw"},{"name":"Will White","email":"willwhite"},{"name":"Dane Springmeyer","email":"springmeyer"},{"name":"Young Hahn","email":"yhahn"},{"name":"Konstantin Käfer","email":"kkaefer"}],"dependencies":{"generic-pool":"1.0.x","optimist":"0.2.x","step":"0.0.x","sphericalmercator":"1.0.0","underscore":"1.1.x"},"devDependencies":{"docco":"0.3.x","expresso":"0.7.x","jshint":"0.2.0","mbtiles":"0.1.x","tilejson":"0.0.x"},"bin":{"tilelive":"./bin/tilelive"},"engines":{"node":"0.4.x"},"scripts":{"pretest":"npm install --dev","test":"make test"},"_npmJsonOpts":{"file":"/home/devseed/.npm/tilelive/4.0.1/package/package.json","wscript":false,"contributors":false,"serverjs":false},"_id":"tilelive@4.0.1","_engineSupported":true,"_npmVersion":"1.0.15","_nodeVersion":"v0.4.9","_defaultsLoaded":true,"dist":{"shasum":"3d45e2690cc84edc5234ebae22456564346717bc","tarball":"http://registry.npmjs.org/tilelive/-/tilelive-4.0.1.tgz"},"directories":{}},"4.0.2":{"name":"tilelive","version":"4.0.2","main":"./lib/tilelive.js","description":"Frontend for various tile backends, mapnik and mbtiles","url":"http://github.com/mapbox/tilelive.js","keywords":["map","server","mapnik","tms"],"licenses":[{"type":"BSD"}],"repositories":[{"type":"git","url":"http://github.com/mapbox/tilelive.js.git"}],"author":{"name":"MapBox","email":"info@mapbox.com","url":"http://mapbox.com/"},"contributors":[{"name":"Tom MacWright","email":"tmcw"},{"name":"Will White","email":"willwhite"},{"name":"Dane Springmeyer","email":"springmeyer"},{"name":"Young Hahn","email":"yhahn"},{"name":"Konstantin Käfer","email":"kkaefer"}],"dependencies":{"generic-pool":"1.0.x","optimist":"0.2.x","step":"0.0.x","sphericalmercator":"1.0.0","underscore":"1.1.x"},"devDependencies":{"docco":"0.3.x","expresso":"0.7.x","jshint":"0.2.0","mbtiles":"0.1.x","tilejson":"0.0.x"},"bin":{"tilelive":"./bin/tilelive"},"engines":{"node":"0.4.x"},"scripts":{"pretest":"npm install --dev","test":"make test"},"_npmJsonOpts":{"file":"/Users/kkaefer/.npm/tilelive/4.0.2/package/package.json","wscript":false,"contributors":false,"serverjs":false},"_id":"tilelive@4.0.2","_engineSupported":true,"_npmVersion":"1.0.14","_nodeVersion":"v0.4.9","_defaultsLoaded":true,"dist":{"shasum":"eb50db23d65652c32d148a24cf3108847ae3f2a7","tarball":"http://registry.npmjs.org/tilelive/-/tilelive-4.0.2.tgz"},"directories":{}},"4.0.3":{"name":"tilelive","version":"4.0.3","main":"./lib/tilelive.js","description":"Frontend for various tile backends, mapnik and mbtiles","url":"http://github.com/mapbox/tilelive.js","keywords":["map","server","mapnik","tms"],"licenses":[{"type":"BSD"}],"repositories":[{"type":"git","url":"http://github.com/mapbox/tilelive.js.git"}],"author":{"name":"MapBox","email":"info@mapbox.com","url":"http://mapbox.com/"},"contributors":[{"name":"Tom MacWright","email":"tmcw"},{"name":"Will White","email":"willwhite"},{"name":"Dane Springmeyer","email":"springmeyer"},{"name":"Young Hahn","email":"yhahn"},{"name":"Konstantin Käfer","email":"kkaefer"}],"dependencies":{"generic-pool":"1.0.x","optimist":"0.2.x","step":"0.0.x","sphericalmercator":"1.0.0","underscore":"1.1.x"},"devDependencies":{"docco":"0.3.x","expresso":"0.7.x","jshint":"0.2.0","mbtiles":"0.1.x","tilejson":"0.0.x"},"bin":{"tilelive":"./bin/tilelive"},"engines":{"node":"0.4.x"},"scripts":{"pretest":"npm install --dev","test":"make test"},"_npmJsonOpts":{"file":"/home/devseed/.npm/tilelive/4.0.3/package/package.json","wscript":false,"contributors":false,"serverjs":false},"_id":"tilelive@4.0.3","_engineSupported":true,"_npmVersion":"1.0.22","_nodeVersion":"v0.4.9","_defaultsLoaded":true,"dist":{"shasum":"5c5bf96e16060698499498f3da921f2e357cecc5","tarball":"http://registry.npmjs.org/tilelive/-/tilelive-4.0.3.tgz"},"directories":{}},"4.0.4":{"name":"tilelive","version":"4.0.4","main":"./lib/tilelive.js","description":"Frontend for various tile backends, mapnik and mbtiles","url":"http://github.com/mapbox/tilelive.js","keywords":["map","server","mapnik","tms"],"licenses":[{"type":"BSD"}],"repositories":[{"type":"git","url":"http://
+silly chunk github.com/mapbox/tilelive.js.git"}],"author":{"name":"MapBox","email":"info@mapbox.com","url":"http://mapbox.com/"},"contributors":[{"name":"Tom MacWright","email":"tmcw"},{"name":"Will White","email":"willwhite"},{"name":"Dane Springmeyer","email":"springmeyer"},{"name":"Young Hahn","email":"yhahn"},{"name":"Konstantin Käfer","email":"kkaefer"}],"dependencies":{"generic-pool":"1.0.x","optimist":"0.2.x","step":"0.0.x","sphericalmercator":"1.0.0","underscore":"1.1.x"},"devDependencies":{"docco":"0.3.x","expresso":"0.7.x","jshint":"0.2.0","mbtiles":"0.1.x","tilejson":"0.0.x"},"bin":{"tilelive":"./bin/tilelive"},"engines":{"node":"0.4.x"},"scripts":{"pretest":"npm install --dev","test":"make test"},"_npmJsonOpts":{"file":"/Users/kkaefer/.npm/tilelive/4.0.4/package/package.json","wscript":false,"contributors":false,"serverjs":false},"_id":"tilelive@4.0.4","_engineSupported":true,"_npmVersion":"1.0.14","_nodeVersion":"v0.4.9","_defaultsLoaded":true,"dist":{"shasum":"6dd3ac807c1598f2ede71c5040f8f0a9d283fc90","tarball":"http://registry.npmjs.org/tilelive/-/tilelive-4.0.4.tgz"},"directories":{}},"4.0.5":{"name":"tilelive","version":"4.0.5","main":"./lib/tilelive.js","description":"Frontend for various tile backends, mapnik and mbtiles","url":"http://github.com/mapbox/tilelive.js","keywords":["map","server","mapnik","tms"],"licenses":[{"type":"BSD"}],"repositories":[{"type":"git","url":"http://github.com/mapbox/tilelive.js.git"}],"author":{"name":"MapBox","email":"info@mapbox.com","url":"http://mapbox.com/"},"contributors":[{"name":"Tom MacWright","email":"tmcw"},{"name":"Will White","email":"willwhite"},{"name":"Dane Springmeyer","email":"springmeyer"},{"name":"Young Hahn","email":"yhahn"},{"name":"Konstantin Käfer","email":"kkaefer"}],"dependencies":{"generic-pool":"1.0.x","optimist":"0.2.x","step":"0.0.x","sphericalmercator":"1.0.0","underscore":"1.1.x"},"devDependencies":{"docco":"0.3.x","expresso":"0.7.x","jshint":"0.2.0","mbtiles":"0.1.x","tilejson":"0.0.x","tilelive-mapnik":"0.2.x"},"bin":{"tilelive":"./bin/tilelive"},"engines":{"node":"0.4.x"},"scripts":{"pretest":"npm install --dev","test":"make test"},"_npmJsonOpts":{"file":"/home/devseed/.npm/tilelive/4.0.5/package/package.json","wscript":false,"contributors":false,"serverjs":false},"_id":"tilelive@4.0.5","_engineSupported":true,"_npmVersion":"1.0.22","_nodeVersion":"v0.4.10","_defaultsLoaded":true,"dist":{"shasum":"61fd6dcaf0713c2c21b654bd3c890897672cc4ef","tarball":"http://registry.npmjs.org/tilelive/-/tilelive-4.0.5.tgz"},"maintainers":[{"name":"tmcw","email":"macwright@gmail.com"},{"name":"yhahn","email":"young@developmentseed.org"},{"name":"springmeyer","email":"dane@dbsgeo.com"},{"name":"kkaefer","email":"kkaefer@gmail.com"},{"name":"willwhite","email":"will@developmentseed.org"}],"directories":{}},"4.1.0":{"name":"tilelive","version":"4.1.0","main":"./lib/tilelive.js","description":"Frontend for various tile backends, mapnik and mbtiles","url":"http://github.com/mapbox/tilelive.js","keywords":["map","server","mapnik","tms"],"licenses":[{"type":"BSD"}],"repositories":[{"type":"git","url":"http://github.com/mapbox/tilelive.js.git"}],"author":{"name":"MapBox","email":"info@mapbox.com","url":"http://mapbox.com/"},"contributors":[{"name":"Tom MacWright","email":"tmcw"},{"name":"Will White","email":"willwhite"},{"name":"Dane Springmeyer","email":"springmeyer"},{"name":"Young Hahn","email":"yhahn"},{"name":"Konstantin Käfer","email":"kkaefer"}],"dependencies":{"generic-pool":"1.0.x","optimist":"0.2.x","step":"0.0.x","sphericalmercator":"1.0.0","underscore":"1.1.x"},"devDependencies":{"docco":"0.3.x","expresso":"0.7.x","jshint":"0.2.0","mbtiles":"0.1.x","tilejson":"0.0.x","tilelive-mapnik":"0.2.x"},"bin":{"tilelive":"./bin/tilelive"},"engines":{"node":"0.4.x"},"scripts":{"pretest":"npm install --dev","test":"make test"},"_npmJsonOpts":{"file":"/Users/diggersf/.npm/tilelive/4.1.0/package/package.json","wscript":false,"contributors":false,"serverjs":false},"_id":"tilelive@4.1.0","_engineSupported":true,"_npmVersion":"1.0.26","_nodeVersion":"v0.4.11","_defaultsLoaded":true,"dist":{"shasum":"9c4432fbcf32b6eb5f4924ffa9f9464a10b55291","tarball":"http://registry.npmjs.org/tilelive/-/tilelive-4.1.0.tgz"},"maintainers":[{"name":"tmcw","email":"macwright@gmail.com"},{"name":"yhahn","email":"young@developmentseed.org"},{"name":"springmeyer","email":"dane@dbsgeo.com"},{"name":"kkaefer","email":"kkaefer@gmail.com"},{"name":"willwhite","email":"will@developmentseed.org"}],"directories":{}},"4.1.1":{"name":"tilelive","version":"4.1.1","main":"./lib/tilelive.js","description":"Frontend for various tile backends, mapnik and mbtiles","url":"http://github.com/mapbox/tilelive.js","keywords":["map","server","mapnik","tms"],"licenses":[{"type":"BSD"}],"repositories":[{"type":"git","url":"http://github.com/mapbox/tilelive.js.git"}],"author":{"name":"MapBox","email":"info@mapbox.com","url":"http://mapbox.com/"},"contributors":[{"name":"Tom MacWright","email":"tmcw"},{"name":"Will White","email":"willwhite"},{"name":"Dane Springmeyer","email":"springmeyer"},{"name":"Young Hahn","email":"yhahn"},{"name":"Konstantin Käfer","email":"kkaefer"}],"dependencies":{"generic-pool":"1.0.x","optimist":"0.2.x","step":"0.0.x","sphericalmercator":"1.0.0","underscore":"1.1.x"},"devDependencies":{"docco":"0.3.x","expresso":"0.7.x","jshint":"0.2.0","mbtiles":"0.1.x","tilejson":"0.0.x","tilelive-mapnik":"0.2.x"},"bin":{"tilelive":"./bin/tilelive"},"engines":{"node":"0.4.x"},"scripts":{"pretest":"npm install --dev","test":"make test"},"_npmJsonOpts":{"file":"/Users/diggersf/.npm/tilelive/4.1.1/package/package.json","wscript":false,"contributors":false,"serverjs":false},"_id":"tilelive@4.1.1","_engineSupported":true,"_npmVersion":"1.0.26","_nodeVersion":"v0.4.11","_defaultsLoaded":true,"dist":{"shasum":"a98f85c88ec2b9add831ed909123a8ae6ca837ca","tarball":"http://registry.npmjs.org/tilelive/-/tilelive-4.1.1.tgz"},"maintainers":[{"name":"tmcw","email":"macwright@gmail.com"},{"name":"yhahn","email":"young@developmentseed.org"},{"name":"springmeyer","email":"dane@dbsgeo.com"},{"name":"kkaefer","email":"kkaefer@gmail.com"},{"name":"willwhite","email":"will@developmentseed.org"}],"directories":{}},"4.2.0":{"name":"tilelive","version":"4.2.0","main":"./lib/tilelive.js","description":"Frontend for various tile backends, mapnik and mbtiles","url":"http://github.com/mapbox/tilelive.js","keywords":["map","server","mapnik","tms"],"licenses":[{"type":"BSD"}],"repositories":[{"type":"git","url":"http://github.com/mapbox/tilelive.js.git"}],"author":{"name":"MapBox","email":"info@mapbox.com","url":"http://mapbox.com/"},"contributors":[{"name":"Tom MacWright","email":"tmcw"},{"name":"Will White","email":"willwhite"},{"name":"Dane Springmeyer","email":"springmeyer"},{"name":"Young Hahn","email":"yhahn"},{"name":"Konstantin Käfer","email":"kkaefer"}],"dependencies":{"generic-pool":"~1.0.9","optimist":"~0.3.1","step":"~0.0.5","sphericalmercator":"~1.0.1","underscore":"~1.3.1"},"devDependencies":{"docco":"~0.3.0","mocha":"~0.14","jshint":"~0.5.9","mbtiles":"~0.2.0","tilejson":"~0.1.0","tilelive-mapnik":"~0.3.0"},"bin":{"tilelive":"./bin/tilelive"},"engines":{"node":"~0.6.x"},"scripts":{"test":"make test"},"_npmUser":{"name":"kkaefer","email":"kkaefer@gmail.com"},"_id":"tilelive@4.2.0","optionalDependencies":{},"_engineSupported":true,"_npmVersion":"1.1.0-3","_nodeVersion":"v0.6.10","_defaultsLoaded":true,"dist":{"shasum":"55113b7fbb8282f48848fd95c0fb471e11030a82","tarball":"http://registry.npmjs.org/tilelive/-/tilelive-4.2.0.tgz"},"readme":"# tilelive.js\n\ntilelive.js is an interface for tilestore modules for [node.js](http://nodejs.org/). It defines an [API](https://github.com/mapbox/tilelive.js/blob/master/API.md) to interact with implementations for a particular tile store.\n\n## Backends\n\n- [MBTiles](https://github.com/mapbox/node-mbtiles)\n- [TileJSON](https://github.com/mapbox/node-tilejson)\n- [Mapnik](https://github.com/mapbox/tilelive-mapnik)\n\n## Usage\n\nTilelive doesn't ship with any Tilestore backends by default. To use a particular backend, register it with tilelive using `require('[implementation]').registerProtocols(tilelive);`.\n\n* `tilelive.list(source, callback)`: Lists all tilesets in a directory. `source` is a folder that is used by registered implementations to search for individual tilesets. `callback` receives an error object (or `null`) and a hash hash with keys being Tilestore IDs and values being Tilestore URIs. Example:\n\n```javascript\n{\n    \"world-light\": \"mbtiles:///path/to/file/world-light.mbtiles\",\n    \"mapquest\": \"tilejson:///path/to/file/mapquest.tilejson\"\n}\n```\n\n* `tilelive.findID(source, id, callback)`: Looks for a particular tileset ID in a directory. `callback` receives an error object (or `null`) and the URI of the tileset.\n\n\n* `tilelive.load(uri, callback)`: Loads the Tilestore object associated with the specified `uri`. `callback` receives an error object (or `null`) and the Tilestore object.\n\n* `tilelive.info(uri, callback)`: Loads the Tilestore object associated with the specified `uri` and retrieves its metadata in a [TileJSON](http://github.com/mapbox/tilejson) compliant format. `callback` receives an error object (or `null`), the metadata hash and the Tilestore object.\n\n* `tilelive.all(source, callback)`: Loads metadata in a [TileJSON](http://github.com/mapbox/tilejson) compliant format for all tilesets in the `source` directory. `callback` receives an error object (or `null`) and an array with TileJSON metadata about each tileset in that directory.\n\n\n* `tilelive.verify(tilejson)`: Validates a TileJSON object and returns error objects for invalid entries.\n\n* `tilelive.copy(args, callback)`: Copies data from one tilestore into another tilestore. `args` is a configuration hash with these keys:\n\n  * `source`: a Tilestore object that implements the Tilesource interface\n  * `sink`: a Tilestore object that implements the Tilesink interface\n  * `bbox`: an array with W/S/E/N boundaries in WGS84 format (-180...180, -90...90)\n  * `minZoom`: the minimum zoom for data to be copied (inclusive)\n  * `maxZoom`: the maximum zoom for data to be copied (inclusive)\n  * `concurrency`: (default: `100`) how many data objects should be copied simultaneously.\n  * `callback`: (optional) called when copying is complete\n  * `tiles`: copy tiles (`true` or `false`)\n  * `grids`: copy grids (`true` or `false`)\n\n  This function returns an EventEmitter that has these events emitted:\n\n  * `warning`: An error occurred during copying. `err` is the first argument.\n  * `error`: An error occured while initializing the tilesource/tilesink.\n  * `finished`: Copying completed\n\n  The EventEmitter also has these properties. They are updated continuously while copying. Check them occassionally to report status to the user.\n\n  * `copied`: Number of elements that have been copied so far\n  * `failed`: Number of elements that couldn't be copied.\n  * `total`: Total number of elements to be copied.\n  * `started`: Timestamp of when the action started in milliseconds after epoch\n\n## bin/tilelive\n\ntilelive can be used to copy data between tilestores. For a full list of options, run `bin/tilelive`.\n\n## Tests\n\nTo run the tests\n\n    npm test\n\n## Usage\n\nSee `examples` or [geode](https://github.com/mapbox/geode) for examples of a tilelive powered server.\n\n# Changelog\n\n## 4.1.0\n\n* Tilesources are not verify()'ed automatically during info(). Clients must now\n  do this.\n\n## 4.0.0\n\n* Updated to use Tilestore/Tilesink/Tilesource interface\n* Uses the TileJSON format internally\n* Switched to Tilestore URIs\n* Interfaces updated to XYZ. Order of parameters is now z, x, y\n* Added copy command\n\n## 3.0.0\n\nSplit out `tilelive-mapnik`, `mbtiles` backends.\n\n## 2.0.3\n\nThis release is all distribution fixes:\n\n* Uses devDependencies to support docs and testing\n* Fixes test that depended on node-get\n* Removes tilelive_server example: replaced by [geode](https://github.com/mapbox/geode).\n\n## 2.0.2\n\n* Now uses and requires node-mapnik 0.3.0\n\n## 2.0.1\n\nMinor release: adds `Pool` argument to `Tile.getMap()`, to let users dispose of used maps.\n\n## 2.0.0\n\n* `node-sqlite3` replaces `node-sqlite` for better performance and stability.\n* deep render grid support - `layer.json` now supports legends and interaction.\n* `server.js` removed from examples\n* `tilelive_server.js` added to `bin/`\n\n## 1.1.0\n\n* Tiles no longer accept `tile` as a scheme. TMS or XYZ are required; TMS is default.\n* options.mapfile is now options.datasource, and can accept a Carto MML object.\n\n","maintainers":[{"name":"tmcw","email":"macwright@gmail.com"},{"name":"yhahn","email":"young@developmentseed.org"},{"name":"springmeyer","email":"dane@dbsgeo.com"},{"name":"kkaefer","email":"kkaefer@gmail.com"},{"name":"willwhite","email":"will@developmentseed.org"}],"directories":{}}},"maintainers":[{"name":"tmcw","email":"macwright@gmail.com"},{"name":"yhahn","email":"young@developmentseed.org"},{"name":"springmeyer","email":"dane@dbsgeo.com"},{"name":"kkaefer","email":"kkaefer@gmail.com"},{"name":"willwhite","email":"will@developmentseed.org"}],"time":{"1.0.1":"2011-02-04T20:10:27.394Z","1.0.3":"2011-02-08T21:34:40.727Z","1.0.4":"2011-02-08T21:36:22.922Z","2.0.1":"2011-03-12T18:38:15.624Z","2.0.2":"2011-04-29T20:01:48.096Z","2.0.3":"2011-05-03T15:50:40.129Z","3.0.0":"2011-05-20T14:54:25.466Z","3.0.1":"2011-05-20T19:32:53.910Z","3.0.2":"2011-05-25T07:22:58.496Z","4.0.0":"2011-07-13T15:32:46.922Z","3.0.3":"2011-07-20T19:02:14.355Z","4.0.1":"2011-07-25T15:04:45.995Z","4.0.2":"2011-07-26T14:50:46.284Z","4.0.3":"2011-07-27T00:34:59.564Z","4.0.4":"2011-07-27T18:21:55.230Z","4.0.5":"2011-08-15T16:28:36.383Z","4.1.0":"2011-08-31T18:19:52.951Z","4.1.1":"2011-09-01T04:19:25.482Z","4.2.0":"2012-03-08T23:44:55.184Z"},"author":{"name":"MapBox","email":"info@mapbox.com","url":"http://mapbox.com/"}}
+silly get cb [ 200,
+silly get cb   { vary: 'Accept',
+silly get cb     server: 'CouchDB/1.2.0 (Erlang OTP/R15B)',
+silly get cb     etag: '"CTCSHIQRV16WV5VGZ6GCDMBIL"',
+silly get cb     date: 'Mon, 12 Mar 2012 22:29:41 GMT',
+silly get cb     'content-type': 'application/json',
+silly get cb     'content-length': '29908' } ]
+verbose GET tilelive/4.2.0
+verbose raw, before any munging tilelive/4.2.0
+verbose url resolving [ 'http://registry.npmjs.org/', './tilelive/4.2.0' ]
+verbose url resolved http://registry.npmjs.org/tilelive/4.2.0
+verbose url parsed { protocol: 'http:',
+verbose url parsed   slashes: true,
+verbose url parsed   host: 'registry.npmjs.org',
+verbose url parsed   hostname: 'registry.npmjs.org',
+verbose url parsed   href: 'http://registry.npmjs.org/tilelive/4.2.0',
+verbose url parsed   pathname: '/tilelive/4.2.0' }
+verbose response http://registry.npmjs.org/tilelive/4.2.0
+silly chunk {"name":"tilelive","version":"4.2.0","main":"./lib/tilelive.js","description":"Frontend for various tile backends, mapnik and mbtiles","url":"http://github.com/mapbox/tilelive.js","keywords":["map","server","mapnik","tms"],"licenses":[{"type":"BSD"}],"repositories":[{"type":"git","url":"http://github.com/mapbox/tilelive.js.git"}],"author":{"name":"MapBox","email":"info@mapbox.com","url":"http://mapbox.com/"},"contributors":[{"name":"Tom MacWright","email":"tmcw"},{"name":"Will White","email":"willwhite"},{"name":"Dane Springmeyer","email":"springmeyer"},{"name":"Young Hahn","email":"yhahn"},{"name":"Konstantin Käfer","email":"kkaefer"}],"dependencies":{"generic-pool":"~1.0.9","optimist":"~0.3.1","step":"~0.0.5","sphericalmercator":"~1.0.1","underscore":"~1.3.1"},"devDependencies":{"docco":"~0.3.0","mocha":"~0.14","jshint":"~0.5.9","mbtiles":"~0.2.0","tilejson":"~0.1.0","tilelive-mapnik":"~0.3.0"},"bin":{"tilelive":"./bin/tilelive"},"engines":{"node":"~0.6.x"},"scripts":{"test":"make test"},"_npmUser":{"name":"kkaefer","email":"kkaefer@gmail.com"},"_id":"tilelive@4.2.0","optionalDependencies":{},"_engineSupported":true,"_npmVersion":"1.1.0-3","_nodeVersion":"v0.6.10","_defaultsLoaded":true,"dist":{"shasum":"55113b7fbb8282f48848fd95c0fb471e11030a82","tarball":"http://registry.npmjs.org/tilelive/-/tilelive-4.2.0.tgz"},"readme":"# tilelive.js\n\ntilelive.js is an interface for tilestore modules for [node.js](http://nodejs.org/)
+silly chunk . It defines an [API](https://github.com/mapbox/tilelive.js/blob/master/API.md) to interact with implementations for a particular tile store.\n\n## Backends\n\n- [MBTiles](https://github.com/mapbox/node-mbtiles)\n- [TileJSON](https://github.com/mapbox/node-tilejson)\n- [Mapnik](https://github.com/mapbox/tilelive-mapnik)\n\n## Usage\n\nTilelive doesn't ship with any Tilestore backends by default. To use a particular backend, register it with tilelive using `require('[implementation]').registerProtocols(tilelive);`.\n\n* `tilelive.list(source, callback)`: Lists all tilesets in a directory. `source` is a folder that is used by registered implementations to search for individual tilesets. `callback` receives an error object (or `null`) and a hash hash with keys being Tilestore IDs and values being Tilestore URIs. Example:\n\n```javascript\n{\n    \"world-light\": \"mbtiles:///path/to/file/world-light.mbtiles\",\n    \"mapquest\": \"tilejson:///path/to/file/mapquest.tilejson\"\n}\n```\n\n* `tilelive.findID(source, id, callback)`: Looks for a particular tileset ID in a directory. `callback` receives an error object (or `null`) and the URI of the tileset.\n\n\n* `tilelive.load(uri, callback)`: Loads the Tilestore object associated with the specified `uri`. `callback` receives an error object (or `null`) and the Tilestore object.\n\n* `tilelive.info(uri, callback)`: Loads the Tilestore object associated with the specified `uri` and 
+silly chunk retrieves its metadata in a [TileJSON](http://github.com/mapbox/tilejson) compliant format. `callback` receives an error object (or `null`), the metadata hash and the Tilestore object.\n\n* `tilelive.all(source, callback)`: Loads metadata in a [TileJSON](http://github.com/mapbox/tilejson) compliant format for all tilesets in the `source` directory. `callback` receives an error object (or `null`) and an array with TileJSON metadata about each tileset in that directory.\n\n\n* `tilelive.verify(tilejson)`: Validates a TileJSON object and returns error objects for invalid entries.\n\n* `tilelive.copy(args, callback)`: Copies data from one tilestore into another tilestore. `args` is a configuration hash with these keys:\n\n  * `source`: a Tilestore object that implements the Tilesource interface\n  * `sink`: a Tilestore object that implements the Tilesink interface\n  * `bbox`: an array with W/S/E/N boundaries in WGS84 format (-180...180, -90...90)\n  * `minZoom`: the minimum zoom for data to be copied (inclusive)\n  * `maxZoom`: the maximum zoom for data to be copied (inclusive)\n  * `concurrency`: (default: `100`) how many data objects should be copied simultaneously.\n  * `callback`: (optional) called when copying is complete\n  * `tiles`: copy tiles (`true` or `false`)\n  * `grids`: copy grids (`true` or `false`)\n\n  This function returns an EventEmitter that has these events emitted:\n\n  * `warning`: An error occurred duri
+silly chunk ng copying. `err` is the first argument.\n  * `error`: An error occured while initializing the tilesource/tilesink.\n  * `finished`: Copying completed\n\n  The EventEmitter also has these properties. They are updated continuously while copying. Check them occassionally to report status to the user.\n\n  * `copied`: Number of elements that have been copied so far\n  * `failed`: Number of elements that couldn't be copied.\n  * `total`: Total number of elements to be copied.\n  * `started`: Timestamp of when the action started in milliseconds after epoch\n\n## bin/tilelive\n\ntilelive can be used to copy data between tilestores. For a full list of options, run `bin/tilelive`.\n\n## Tests\n\nTo run the tests\n\n    npm test\n\n## Usage\n\nSee `examples` or [geode](https://github.com/mapbox/geode) for examples of a tilelive powered server.\n\n# Changelog\n\n## 4.1.0\n\n* Tilesources are not verify()'ed automatically during info(). Clients must now\n  do this.\n\n## 4.0.0\n\n* Updated to use Tilestore/Tilesink/Tilesource interface\n* Uses the TileJSON format internally\n* Switched to Tilestore URIs\n* Interfaces updated to XYZ. Order of parameters is now z, x, y\n* Added copy command\n\n## 3.0.0\n\nSplit out `tilelive-mapnik`, `mbtiles` backends.\n\n## 2.0.3\n\nThis release is all distribution fixes:\n\n* Uses devDependencies to support docs and testing\n* Fixes test that depended on node-get\n* Removes tilelive_server example: replaced by [geode](https://github.com/mapbox/geode).\n\n## 2.0.2\n\n* Now uses and requires node-mapnik 0.3.0\n\n## 2.0.1\n\nMinor release: adds `Pool` argument to `Tile.getMap()`, to let users dispose of used maps.\n\n## 2.0.0\n\n* `node-sqlite3` replaces `node-sqlite` for better performance and stability.\n* deep render grid support - `layer.json` now supports legends and interaction.\n* `server.js` removed from examples\n* `tilelive_server.js` added to `bin/`\n\n## 1.1.0\n\n* Tiles no longer accept `tile` as a scheme. TMS or XYZ are required; TMS is default.\n* options.mapfile is now options.datasource, and can accept a Carto MML object.\n\n","maintainers":[{"name":"tmcw","email":"macwright@gmail.com"},{"name":"yhahn","email":"young@developmentseed.org"},{"name":"springmeyer","email":"dane@dbsgeo.com"},{"name":"kkaefer","email":"kkaefer@gmail.com"},{"name":"willwhite","email":"will@developmentseed.org"}],"directories":{}}
+silly get cb [ 200,
+silly get cb   { vary: 'Accept',
+silly get cb     server: 'CouchDB/1.2.0 (Erlang OTP/R15B)',
+silly get cb     etag: '"CTCSHIQRV16WV5VGZ6GCDMBIL"',
+silly get cb     date: 'Mon, 12 Mar 2012 22:29:41 GMT',
+silly get cb     'content-type': 'application/json',
+silly get cb     'content-length': '6729' } ]
+verbose mkdir done: /Users/brunosan/.npm/tilelive/4.2.0
+verbose bin dist [ '0.4-darwin-11.3.0',
+verbose bin dist   { shasum: '55113b7fbb8282f48848fd95c0fb471e11030a82',
+verbose bin dist     tarball: 'http://registry.npmjs.org/tilelive/-/tilelive-4.2.0.tgz' } ]
+verbose addRemoteTarball [ 'http://registry.npmjs.org/tilelive/-/tilelive-4.2.0.tgz',
+verbose addRemoteTarball   '55113b7fbb8282f48848fd95c0fb471e11030a82' ]
+verbose mkdir done: /var/folders/xn/qrn358h51xj74fz_v_q2y5b80000gn/T/npm-1331591381408/1331591381408-0.823222158709541
+info fetch http://registry.npmjs.org/tilelive/-/tilelive-4.2.0.tgz
+verbose fetch to /var/folders/xn/qrn358h51xj74fz_v_q2y5b80000gn/T/npm-1331591381408/1331591381408-0.823222158709541/tmp.tgz
+silly updated sha bytes 40960
+silly updated sha bytes 40960
+silly updated sha bytes 40960
+silly updated sha bytes 40960
+silly updated sha bytes 40960
+silly updated sha bytes 40960
+silly updated sha bytes 40960
+silly updated sha bytes 40960
+silly updated sha bytes 40960
+silly updated sha bytes 40960
+silly updated sha bytes 40960
+silly updated sha bytes 40960
+silly updated sha bytes 40960
+silly updated sha bytes 40960
+silly updated sha bytes 40960
+silly updated sha bytes 40960
+silly updated sha bytes 40960
+silly updated sha bytes 40960
+silly updated sha bytes 40960
+silly updated sha bytes 40960
+silly updated sha bytes 40960
+silly updated sha bytes 40960
+silly updated sha bytes 40960
+silly updated sha bytes 40960
+silly updated sha bytes 40960
+silly updated sha bytes 40960
+silly updated sha bytes 40960
+silly updated sha bytes 40960
+silly updated sha bytes 40960
+silly updated sha bytes 40960
+silly updated sha bytes 40960
+silly updated sha bytes 40960
+silly updated sha bytes 40960
+silly updated sha bytes 40960
+silly updated sha bytes 40960
+silly updated sha bytes 40960
+silly updated sha bytes 40960
+silly updated sha bytes 40960
+silly updated sha bytes 40960
+silly updated sha bytes 40960
+silly updated sha bytes 37373
+info shasum 55113b7fbb8282f48848fd95c0fb471e11030a82
+info shasum /var/folders/xn/qrn358h51xj74fz_v_q2y5b80000gn/T/npm-1331591381408/1331591381408-0.823222158709541/tmp.tgz
+verbose mkdir done: /var/folders/xn/qrn358h51xj74fz_v_q2y5b80000gn/T/npm-1331591381408/1331591381408-0.823222158709541/contents/___package.npm
+verbose unpack_ uid, gid [ undefined, undefined ]
+verbose unpackTarget /var/folders/xn/qrn358h51xj74fz_v_q2y5b80000gn/T/npm-1331591381408/1331591381408-0.823222158709541/contents/package
+verbose success gzip "--decompress" "--stdout" "/var/folders/xn/qrn358h51xj74fz_v_q2y5b80000gn/T/npm-1331591381408/1331591381408-0.823222158709541/tmp.tgz"
+verbose success tar "-mvxpf" "-" "--no-same-owner" "-C" "/var/folders/xn/qrn358h51xj74fz_v_q2y5b80000gn/T/npm-1331591381408/1331591381408-0.823222158709541/contents/___package.npm"
+verbose gunzed /var/folders/xn/qrn358h51xj74fz_v_q2y5b80000gn/T/npm-1331591381408/1331591381408-0.823222158709541/contents/___package.npm/package
+verbose rm'ed /var/folders/xn/qrn358h51xj74fz_v_q2y5b80000gn/T/npm-1331591381408/1331591381408-0.823222158709541/contents/package
+verbose renamed [ '/var/folders/xn/qrn358h51xj74fz_v_q2y5b80000gn/T/npm-1331591381408/1331591381408-0.823222158709541/contents/___package.npm/package',
+verbose renamed   '/var/folders/xn/qrn358h51xj74fz_v_q2y5b80000gn/T/npm-1331591381408/1331591381408-0.823222158709541/contents/package' ]
+silly testEngine { name: 'tilelive',
+silly testEngine   version: '4.2.0',
+silly testEngine   main: './lib/tilelive.js',
+silly testEngine   description: 'Frontend for various tile backends, mapnik and mbtiles',
+silly testEngine   url: 'http://github.com/mapbox/tilelive.js',
+silly testEngine   keywords: [ 'map', 'server', 'mapnik', 'tms' ],
+silly testEngine   licenses: [ { type: 'BSD' } ],
+silly testEngine   repositories: 
+silly testEngine    [ { type: 'git',
+silly testEngine        url: 'http://github.com/mapbox/tilelive.js.git' } ],
+silly testEngine   author: 
+silly testEngine    { name: 'MapBox',
+silly testEngine      email: 'info@mapbox.com',
+silly testEngine      url: 'http://mapbox.com/' },
+silly testEngine   contributors: 
+silly testEngine    [ { name: 'Tom MacWright', email: 'tmcw' },
+silly testEngine      { name: 'Will White', email: 'willwhite' },
+silly testEngine      { name: 'Dane Springmeyer', email: 'springmeyer' },
+silly testEngine      { name: 'Young Hahn', email: 'yhahn' },
+silly testEngine      { name: 'Konstantin Käfer', email: 'kkaefer' } ],
+silly testEngine   dependencies: 
+silly testEngine    { 'generic-pool': '~1.0.9',
+silly testEngine      optimist: '~0.3.1',
+silly testEngine      step: '~0.0.5',
+silly testEngine      sphericalmercator: '~1.0.1',
+silly testEngine      underscore: '~1.3.1' },
+silly testEngine   devDependencies: 
+silly testEngine    { docco: '~0.3.0',
+silly testEngine      mocha: '~0.14',
+silly testEngine      jshint: '~0.5.9',
+silly testEngine      mbtiles: '~0.2.0',
+silly testEngine      tilejson: '~0.1.0',
+silly testEngine      'tilelive-mapnik': '~0.3.0' },
+silly testEngine   bin: { tilelive: './bin/tilelive' },
+silly testEngine   engines: { node: '~0.6.x' },
+silly testEngine   scripts: { test: 'make test' },
+silly testEngine   _id: 'tilelive@4.2.0',
+silly testEngine   _engineSupported: false,
+silly testEngine   _npmVersion: '1.0.1rc8',
+silly testEngine   _nodeVersion: 'v0.4.9',
+silly testEngine   _defaultsLoaded: true,
+silly testEngine   path: '/var/folders/xn/qrn358h51xj74fz_v_q2y5b80000gn/T/npm-1331591381408/1331591381408-0.823222158709541/contents/package' }
+verbose caching /var/folders/xn/qrn358h51xj74fz_v_q2y5b80000gn/T/npm-1331591381408/1331591381408-0.823222158709541/contents/package/package.json
+verbose loadDefaults tilelive@4.2.0
+verbose tarball contents [ 'package' ]
+verbose from cache /var/folders/xn/qrn358h51xj74fz_v_q2y5b80000gn/T/npm-1331591381408/1331591381408-0.823222158709541/contents/package/package.json
+verbose pack /var/folders/xn/qrn358h51xj74fz_v_q2y5b80000gn/T/npm-1331591381408/1331591381408-0.823222158709541/contents/package /Users/brunosan/.npm/tilelive/4.2.0/package.tgz
+verbose from cache /var/folders/xn/qrn358h51xj74fz_v_q2y5b80000gn/T/npm-1331591381408/1331591381408-0.823222158709541/contents/package/package.json
+verbose mkdir'ed /Users/brunosan/.npm/tilelive/4.2.0
+verbose tar about to write tar and gzip it.
+silly tar args [ '-cvf',
+silly tar args   '-',
+silly tar args   'package/.npmignore',
+silly tar args   'package/API.md',
+silly tar args   'package/LICENSE',
+silly tar args   'package/Makefile',
+silly tar args   'package/package.json',
+silly tar args   'package/README.md',
+silly tar args   'package/bin/benchmark.sh',
+silly tar args   'package/bin/copy',
+silly tar args   'package/bin/tilelive',
+silly tar args   'package/examples/server.js',
+silly tar args   'package/examples/stylesheet.xml',
+silly tar args   'package/lib/copytask.js',
+silly tar args   'package/lib/dummyprotocol.js',
+silly tar args   'package/lib/filescheme.js',
+silly tar args   'package/lib/pyramidscheme.js',
+silly tar args   'package/lib/queue.js',
+silly tar args   'package/lib/scanlinescheme.js',
+silly tar args   'package/lib/scheme.js',
+silly tar args   'package/lib/statistics.js',
+silly tar args   'package/lib/tile.js',
+silly tar args   'package/lib/tilelive.js',
+silly tar args   'package/test/copy.test.js',
+silly tar args   'package/test/list.test.js',
+silly tar args   'package/test/load.test.js',
+silly tar args   'package/test/pyramid.test.js',
+silly tar args   'package/test/scanline.test.js',
+silly tar args   'package/test/fixtures/faulty.mbtiles',
+silly tar args   'package/test/fixtures/mapquest.tilejson',
+silly tar args   'package/test/fixtures/plain_1.mbtiles',
+silly tar args   'package/test/fixtures/plain_2.mbtiles',
+silly tar args   'package/test/fixtures/plain_4.mbtiles',
+silly tar args   'package/test/fixtures/plain_4.tilejson' ]
+verbose success tar -cvf - <file list elided>
+verbose success gzip "--stdout"
+verbose mkdir done: /Users/brunosan/.npm/tilelive/4.2.0/___package.npm
+verbose unpack_ uid, gid [ undefined, undefined ]
+verbose unpackTarget /Users/brunosan/.npm/tilelive/4.2.0/package
+verbose success gzip "--decompress" "--stdout" "/Users/brunosan/.npm/tilelive/4.2.0/package.tgz"
+verbose success tar "-mvxpf" "-" "--no-same-owner" "-C" "/Users/brunosan/.npm/tilelive/4.2.0/___package.npm"
+verbose gunzed /Users/brunosan/.npm/tilelive/4.2.0/___package.npm/package
+verbose rm'ed /Users/brunosan/.npm/tilelive/4.2.0/package
+verbose renamed [ '/Users/brunosan/.npm/tilelive/4.2.0/___package.npm/package',
+verbose renamed   '/Users/brunosan/.npm/tilelive/4.2.0/package' ]
+silly testEngine { name: 'tilelive',
+silly testEngine   version: '4.2.0',
+silly testEngine   main: './lib/tilelive.js',
+silly testEngine   description: 'Frontend for various tile backends, mapnik and mbtiles',
+silly testEngine   url: 'http://github.com/mapbox/tilelive.js',
+silly testEngine   keywords: [ 'map', 'server', 'mapnik', 'tms' ],
+silly testEngine   licenses: [ { type: 'BSD' } ],
+silly testEngine   repositories: 
+silly testEngine    [ { type: 'git',
+silly testEngine        url: 'http://github.com/mapbox/tilelive.js.git' } ],
+silly testEngine   author: 
+silly testEngine    { name: 'MapBox',
+silly testEngine      email: 'info@mapbox.com',
+silly testEngine      url: 'http://mapbox.com/' },
+silly testEngine   contributors: 
+silly testEngine    [ { name: 'Tom MacWright', email: 'tmcw' },
+silly testEngine      { name: 'Will White', email: 'willwhite' },
+silly testEngine      { name: 'Dane Springmeyer', email: 'springmeyer' },
+silly testEngine      { name: 'Young Hahn', email: 'yhahn' },
+silly testEngine      { name: 'Konstantin Käfer', email: 'kkaefer' } ],
+silly testEngine   dependencies: 
+silly testEngine    { 'generic-pool': '~1.0.9',
+silly testEngine      optimist: '~0.3.1',
+silly testEngine      step: '~0.0.5',
+silly testEngine      sphericalmercator: '~1.0.1',
+silly testEngine      underscore: '~1.3.1' },
+silly testEngine   devDependencies: 
+silly testEngine    { docco: '~0.3.0',
+silly testEngine      mocha: '~0.14',
+silly testEngine      jshint: '~0.5.9',
+silly testEngine      mbtiles: '~0.2.0',
+silly testEngine      tilejson: '~0.1.0',
+silly testEngine      'tilelive-mapnik': '~0.3.0' },
+silly testEngine   bin: { tilelive: './bin/tilelive' },
+silly testEngine   engines: { node: '~0.6.x' },
+silly testEngine   scripts: { test: 'make test' },
+silly testEngine   _id: 'tilelive@4.2.0',
+silly testEngine   _engineSupported: false,
+silly testEngine   _npmVersion: '1.0.1rc8',
+silly testEngine   _nodeVersion: 'v0.4.9',
+silly testEngine   _defaultsLoaded: true,
+silly testEngine   dist: { shasum: '71afaecc9c4157b79c04b4e2e0f6c50416e0a561' } }
+verbose caching /Users/brunosan/.npm/tilelive/4.2.0/package/package.json
+verbose loadDefaults tilelive@4.2.0
+silly updated sha bytes 40960
+silly updated sha bytes 40960
+silly updated sha bytes 40960
+silly updated sha bytes 40960
+silly updated sha bytes 40960
+silly updated sha bytes 40960
+silly updated sha bytes 40960
+silly updated sha bytes 40960
+silly updated sha bytes 40960
+silly updated sha bytes 40960
+silly updated sha bytes 40960
+silly updated sha bytes 40960
+silly updated sha bytes 40960
+silly updated sha bytes 40960
+silly updated sha bytes 40960
+silly updated sha bytes 40960
+silly updated sha bytes 40960
+silly updated sha bytes 40960
+silly updated sha bytes 40960
+silly updated sha bytes 40960
+silly updated sha bytes 40960
+silly updated sha bytes 40960
+silly updated sha bytes 40960
+silly updated sha bytes 40960
+silly updated sha bytes 40960
+silly updated sha bytes 40960
+silly updated sha bytes 40960
+silly updated sha bytes 40960
+silly updated sha bytes 40960
+silly updated sha bytes 40960
+silly updated sha bytes 40960
+silly updated sha bytes 40960
+silly updated sha bytes 40960
+silly updated sha bytes 40960
+silly updated sha bytes 40960
+silly updated sha bytes 40960
+silly updated sha bytes 40960
+silly updated sha bytes 40960
+silly updated sha bytes 40960
+silly updated sha bytes 40960
+silly updated sha bytes 33738
+info shasum 71afaecc9c4157b79c04b4e2e0f6c50416e0a561
+info shasum /Users/brunosan/.npm/tilelive/4.2.0/package.tgz
+verbose from cache /Users/brunosan/.npm/tilelive/4.2.0/package/package.json
+silly resolved [ { name: 'tilelive',
+silly resolved     version: '4.2.0',
+silly resolved     main: './lib/tilelive.js',
+silly resolved     description: 'Frontend for various tile backends, mapnik and mbtiles',
+silly resolved     url: 'http://github.com/mapbox/tilelive.js',
+silly resolved     keywords: [ 'map', 'server', 'mapnik', 'tms' ],
+silly resolved     licenses: [ { type: 'BSD' } ],
+silly resolved     repositories: 
+silly resolved      [ { type: 'git',
+silly resolved          url: 'http://github.com/mapbox/tilelive.js.git' } ],
+silly resolved     author: 
+silly resolved      { name: 'MapBox',
+silly resolved        email: 'info@mapbox.com',
+silly resolved        url: 'http://mapbox.com/' },
+silly resolved     contributors: 
+silly resolved      [ { name: 'Tom MacWright', email: 'tmcw' },
+silly resolved        { name: 'Will White', email: 'willwhite' },
+silly resolved        { name: 'Dane Springmeyer', email: 'springmeyer' },
+silly resolved        { name: 'Young Hahn', email: 'yhahn' },
+silly resolved        { name: 'Konstantin Käfer', email: 'kkaefer' } ],
+silly resolved     dependencies: 
+silly resolved      { 'generic-pool': '~1.0.9',
+silly resolved        optimist: '~0.3.1',
+silly resolved        step: '~0.0.5',
+silly resolved        sphericalmercator: '~1.0.1',
+silly resolved        underscore: '~1.3.1' },
+silly resolved     devDependencies: 
+silly resolved      { docco: '~0.3.0',
+silly resolved        mocha: '~0.14',
+silly resolved        jshint: '~0.5.9',
+silly resolved        mbtiles: '~0.2.0',
+silly resolved        tilejson: '~0.1.0',
+silly resolved        'tilelive-mapnik': '~0.3.0' },
+silly resolved     bin: { tilelive: './bin/tilelive' },
+silly resolved     engines: { node: '~0.6.x' },
+silly resolved     scripts: { test: 'make test' },
+silly resolved     _id: 'tilelive@4.2.0',
+silly resolved     _engineSupported: false,
+silly resolved     _npmVersion: '1.0.1rc8',
+silly resolved     _nodeVersion: 'v0.4.9',
+silly resolved     _defaultsLoaded: true,
+silly resolved     dist: { shasum: '71afaecc9c4157b79c04b4e2e0f6c50416e0a561' } } ]
+info into /Users/brunosan/Sites/GaIn/Index-site tilelive@4.2.0
+info installOne tilelive@4.2.0
+verbose installOne cb tilelive@4.2.0
+ERR! Unsupported
+ERR! Not compatible with your version of node/npm: tilelive@4.2.0
+ERR! Required: {"node":"~0.6.x"}
+ERR! Actual:   {"npm":"1.0.1rc8","node":"v0.4.9"}
+ERR! 
+ERR! System Darwin 11.3.0
+ERR! command "node" "/Users/brunosan/.nvm/v0.4.9/bin/npm" "install" "tilelive"
+verbose exit [ 1, true ]
