@@ -7,24 +7,26 @@ Requirements
 - Couch 1.0.x
 `brew install couchdb`
 - Node v0.4.9
-`brew install node` for dependencies. 
+`brew install node` for dependencies.
 I used [nvm](https://github.com/creationix/nvm) to install the specific node version
 `nvm install v0.4.9` then `nvm use v0.4.9`
 - npm. *Be sure that the npm you use lives inside the nvm directory, so that it's the correct version*
 `curl http://npmjs.org/install.sh | sh`
-- Mapnik 2.x.  
+- Mapnik 2.x.
  If using OSX, get it [here](http://dbsgeo.com/downloads/) or `brew install mapnik`
 - Review package.json for node version requirements
 - Modern version of libsqlite3. Note: older versions such as on Ubuntu Lucid can result in slow map rendering. In such cases, the [mapnik sqlite plugin can be built standalone](https://github.com/springmeyer/sqlite3-mapnik), or you can use a newer version of libsqlite3
 
--`npm install` will throw an error for mapnik. That's ok 
+-`npm install` will throw an error for mapnik. That's ok
 
 Installation
 ------------
 
 After cloning the repository / downloading the tarball:
 
-0. Change into project directory, run `npm install`  [Error. See ticket.](https://github.com/globalai/Index-site/issues/6)
+0. Change into project directory, run:
+  `nvm use v0.4.10` (`npm install v0.4.10` if you don´t have it)
+   `npm install`
 1. If on OSX without Mapnik, [download] (https://github.com/downloads/mapnik/mapnik/mapnik_2.1.0-rc1.dmg) and unzip it in the node_modules/ directory.
 2. Run `./index.js install`
 3. Run `./index.js import`
