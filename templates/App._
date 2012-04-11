@@ -70,7 +70,7 @@
         <div class='tab button green'>Feedback</div>
         <div class='content'>
           <p>Please report any inconsistencies, apparent data errors or leave a general comment:</p>
-          <a href='mailto:gain@globalai.org' class='feedback-email button green'>Send us feedback</a>
+          <a href='mailto:index@gain.org' class='feedback-email button green'>Send us feedback</a>
           <p>Interested in providing a more in depth review? <a href='/about/consultation'>Participate in our Consultation process</a></p>
         </div>
       </div>
