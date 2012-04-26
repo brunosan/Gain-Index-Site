@@ -16,7 +16,7 @@ I used [nvm](https://github.com/creationix/nvm) to install the specific node ver
 - Review package.json for node version requirements
 - Modern version of libsqlite3. Note: older versions such as on Ubuntu Lucid can result in slow map rendering. In such cases, the [mapnik sqlite plugin can be built standalone](https://github.com/springmeyer/sqlite3-mapnik), or you can use a newer version of libsqlite3
 
--`npm install` will throw an error for mapnik. That's ok.
+-Do `npm install` It will throw an error for mapnik. That's ok.
 
 Installation
 ------------
@@ -49,6 +49,9 @@ Uninstalling
 
 Usage
 -----
+
+Change into project directory, run:
+  `nvm use v0.4.10`
 
 See usage options
 
