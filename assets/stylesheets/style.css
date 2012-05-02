@@ -315,16 +315,17 @@ ul.tabs li a.active {
 #header h1 a.logo {
   display: block;
   position: absolute;
-  top:18px;
-  left: 10px;
+  top: 3px;
+  left: 1px;
   text-indent: -9999px;
-  width: 80px;
-  height: 25px;
-  background: transparent url(../images/sprite.png) no-repeat -160px 0;
+  width: 101px;
+  height: 57px;
+  background: transparent url(../images/sprite.png) no-repeat -193px -215px;
+  z-index: 9999;
   }
 #header .tagline {
   position: absolute;
-  left: 100px;
+  left: 108px;
   top: 15px;
   font-family: 'HelveticaNeue-Bold', 'HelveticaNeueBold', Helvetica, Arial, sans-serif;
   font-size: 12px;
@@ -371,10 +372,10 @@ ul.tabs li a.active {
   display: block;
   position: absolute;
   left: 810px;
-  top: 10px;
+  top: 3px;
   width: 150px;
-  height: 40px;
-  background: no-repeat url(../images/sprite.png) 0 0;
+  height: 60px;
+  background: no-repeat url(../images/sprite.png) -145px -286px;
   text-indent: -9999px;
   }
 /*** Top Footer styles ***/
