@@ -1,1 +1,1 @@
-<p>The Global Adaptation Index&#8482; for <%= country %> could not be generated because of missing indicators for <%= missing.join(' and ') %>. <% _(ranks).each(function(rank, key) { %> <%= country %> is the <%= rank %> <%= rankVerb[key] %> country. <% }); %></p>
+<p>The GAIN Index&#8482; for <%= country %> could not be generated because of missing indicators for <%= missing.join(' and ') %>. <% _(ranks).each(function(rank, key) { %> <%= country %> is the <%= rank %> <%= rankVerb[key] %> country. <% }); %></p>

@@ -1,5 +1,5 @@
-Global Adaptation Index website
---------------------------
+GAIN Index website
+------------------
 
 Requirements
 ------------

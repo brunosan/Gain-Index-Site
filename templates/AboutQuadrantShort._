@@ -4,6 +4,6 @@
 <%= (ranks.readiness && ranks.vulnerability) ? ' and the ' : '' %>
 <%= (ranks.vulnerability) ? ranks.vulnerability + ' ' + rankVerb.vulnerability + ' country' : '' %>.
 <% if (ranks.gain) { %> <% } else { %>
-The Global Adaptation Index for <%= country %> could not be generated because of missing indicators for <%= missing.join(' and ') %>.
+The GAIN Index for <%= country %> could not be generated because of missing indicators for <%= missing.join(' and ') %>.
 <% } %>
 </p>
