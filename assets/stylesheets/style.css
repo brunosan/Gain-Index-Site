@@ -315,12 +315,12 @@ ul.tabs li a.active {
 #header h1 a.logo {
   display: block;
   position: absolute;
-  top: 3px;
-  left: 1px;
+  top: -2px;
+  left: -3px;
   text-indent: -9999px;
-  width: 101px;
-  height: 57px;
-  background: transparent url(../images/sprite.png) no-repeat -193px -215px;
+  width: 112px;
+  height: 63px;
+  background: transparent url(../images/sprite.png) no-repeat -174px -262px;
   z-index: 9999;
   }
 #header .tagline {
@@ -337,7 +337,7 @@ ul.tabs li a.active {
   }
 #header .navigation {
   position: absolute;
-  left: 300px;
+  left: 287px;
   top: 10px;
   }
 #header .navigation li {
@@ -372,10 +372,10 @@ ul.tabs li a.active {
   display: block;
   position: absolute;
   left: 810px;
-  top: 3px;
+  top: 10px;
   width: 150px;
-  height: 60px;
-  background: no-repeat url(../images/sprite.png) -145px -286px;
+  height: 40px;
+  background: no-repeat url(../images/sprite.png) 0px 0px;
   text-indent: -9999px;
   }
 /*** Top Footer styles ***/
