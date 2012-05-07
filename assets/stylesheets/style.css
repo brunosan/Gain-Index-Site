@@ -320,7 +320,7 @@ ul.tabs li a.active {
   text-indent: -9999px;
   width: 112px;
   height: 63px;
-  background: transparent url(../images/sprite.png) no-repeat -174px -262px;
+  background: transparent url(../images/sprite.png) no-repeat -201px 5px;
   z-index: 9999;
   }
 #header .tagline {
