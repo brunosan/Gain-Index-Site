@@ -18,7 +18,7 @@ view = Backbone.View.extend({
             .split('?')
             .shift();
         var info = _.reduce({
-            'subject': 'GaIn - Site feedback',
+            'subject': 'GAIN Index - Site feedback',
             'body': '\n\n\nSent from ' + window.location.href + '\n'
         }, function(memo, v, k) {
             memo += memo == '' ? '?' : '&';
