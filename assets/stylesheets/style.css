@@ -315,8 +315,8 @@ ul.tabs li a.active {
 #header h1 a.logo {
   display: block;
   position: absolute;
-  top: -2px;
-  left: -3px;
+  top: -3px;
+  left: -10px;
   text-indent: -9999px;
   width: 112px;
   height: 63px;
