@@ -4,7 +4,7 @@
     <div class='item container'>
       <div class='overview active slide1'>
         <h2>Discover Improvement Opportunities</h2>
-        <p>Assess where the greatest needs and opportunities for improving resilience to climate change exist. <a href='/ranking'>Explore GAIN rankings.</a></p>
+        <p>Assess where the greatest needs and opportunities for improving resilience to climate change exist. <a href='/ranking'>Explore GAIN Index rankings.</a></p>
       </div>
     </div>
     <div class='item container'>
@@ -16,18 +16,18 @@
     <div class='item container'>
       <div class='overview slide3'>
         <h2>Rigorous and Evolving</h2>
-        <p>The Global Adaptation Index has been designed by industry experts and is improved under a continuous open review process. <a href='/about/methodology'>See our methodology.</a></p>
+        <p>The GAIN Index has been designed by industry experts and is improved under a continuous open review process. <a href='/about/methodology'>See our methodology.</a></p>
       </div>
     </div>
     <div class='item container'>
       <div class='overview slide4'>
         <h2>It's Open: Analyze and Republish</h2>
-        <p>Download, analyze and republish GAIN data under and open Creative Commons license. <a href="/about/download">Get started now.</a></p>
+        <p>Download, analyze and republish GAIN Index data under and open Creative Commons license. <a href="/about/download">Get started now.</a></p>
       </div>
     </div>
   </div>
   <a class='front button green' href='/ranking'> View Full Rankings </a>
-  <h3 class='container'> Global Adaptation Index Country Rankings</h3>
+  <h3 class='container'> GAIN Index Country Rankings</h3>
   <div class='ranking clearfix'>
   </div>
   <h3 class='container'>Featured Countries</h3>
@@ -36,6 +36,6 @@
   </div>
   <div class='mission container'>
     <h3>About the Global Adaptation Institute</h3>
-    <p class='prose'>The Global Adaptation Institute is a non-profit environmental organization guided by a vision of building resilience against climate change and other global forces as a key component to sustainable development. Our mission is to enhance the world's understanding of the urgency for adaptation to climate change and other global forces through private and public investments for developing countries.</p>
+    <p class='prose'>The Global Adaptation Institute, GAIN, is a non-profit environmental organization guided by a vision of building resilience against climate change and other global forces as a key component to sustainable development. Our mission is to enhance the world's understanding of the urgency for adaptation to climate change and other global forces through private and public investments for developing countries.</p>
   </div>
 </div>

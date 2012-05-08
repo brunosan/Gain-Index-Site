@@ -47,7 +47,7 @@ routers.App.send = function(view, options, res) {
         mapHosts = Bones.plugin.config.mapHosts;
     }
 
-    var title = (main.pageTitle ? main.pageTitle + ' | Global Adaptation Index' : 'Global Adaptation Index');
+    var title = (main.pageTitle ? main.pageTitle + ' | GAIN Index' : 'GAIN Index');
     res.send(Bones.plugin.templates.App({
         version: time,
         title: title,
