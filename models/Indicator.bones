@@ -973,7 +973,178 @@ model.meta = {
         "index": "gain",
         "sector": null,
         "component": null
-    }
+    },
+    "Urban_concentration": {
+       "id": "Urban_concentration",
+       "name": "Urban concentration",
+       "description": "Percentage of the country population living in the largest city.",
+       "format": "number",
+       "decimals": "2",
+       "unit": "%s %",
+       "index": "vulnerability",
+       "sector": "habitat",
+       "component": "exposure",
+       "source": [{
+           "name": "World Development Indicators - Population in largest city",
+           "link": "http://data.worldbank.org/indicator/EN.URB.LCTY.UR.ZS"
+       }]
+   },
+   "Urban_excess_growth": {
+       "id": "Urban_excess_growth",
+       "name": "Urban excess growth",
+       "description": "Excess rate of population growth in urban centres compared with the population growth rate in the whole country (annual %).",
+       "format": "number",
+       "decimals": "2",
+       "unit": "%s %",
+       "index": "vulnerability",
+       "sector": "habitat",
+       "component": "sensitivity",
+       "source": [{
+           "name": "World Development Indicators - Urban population growth",
+           "link": "http://data.worldbank.org/indicator/SP.URB.GROW"
+           "name": "World Development Indicators - Urban population",
+           "link": "http://data.worldbank.org/indicator/SP.URB.TOTL"
+           "name": "World Development Indicators - Population growth",
+           "link": "http://data.worldbank.org/indicator/SP.POP.GROW"
+       }]
+   },
+   "Urban_risk": {
+       "id": "Urban_risk",
+       "name": "Urban risk",
+       "description": "A natural disaster risk index for populations living in large cities (i.e. >0.75M
+people).",
+       "format": "number",
+       "decimals": "2",
+       "unit": "null",
+       "index": "vulnerability",
+       "sector": "habitat",
+       "component": "exposure",
+       "source": [{
+           "name": "UN Dept Economic & Social Affairs;",
+           "link": "http://esa.un.org/unup/CD-ROM/Urban-Agglomerations.htm"
+       }]
+   },
+   "threatened_species": {
+       "id": "threatened_species",
+       "name": "Threatened species",
+       "description": "Composite measure made up of (1) the percentage of mammal species recorded as threatened; (2) the percentage of plant species threatened; and (3) the number of bird species threatened.",
+       "format": "number",
+       "decimals": "2",
+       "unit": "%s %",
+       "index": "vulnerability",
+       "sector": "habitat",
+       "component": "sensitivity",
+       "source": [{
+           "name": "IUCN Red Book",
+           "link": "http://www.iucnredlist.org/"
+       }]
+   },
+   "slums": {
+       "id": "slums",
+       "name": "Slums",
+       "description": "Urban Population Living in Slums.",
+       "format": "number",
+       "decimals": "2",
+       "unit": "%s %",
+       "index": "vulnerability",
+       "sector": "habitat",
+       "component": "sensitivity",
+       "source": [{
+           "name": "United Nations Indicators - Millenium Development Goals",
+           "link": "http://mdgs.un.org/unsd/mdg/SeriesDetail.aspx?srid=710"
+       }]
+   },
+   "ecological_footprint": {
+       "id": "ecological_footprint",
+       "name": "Ecological footprint",
+       "description": "Measures the number of hectares of land and water, both within and outside the country, to supply the average demand on the ecosystems services by the lifestyles of the population of each country. This is compared with the estimated capacity of a country’s ecosystems to regenerate and maintain ecosystem services for either internal use or export. This measure uses the surplus or deficit of capacity to supply over the demand within each country.",
+       "format": "number",
+       "decimals": "2",
+       "unit": "null",
+       "index": "vulnerability",
+       "sector": "ecosystems",
+       "component": "sensitivity",
+       "source": [{
+           "name": "National Footprint Accounts 2011 edition",
+           "link": "http://www.footprintnetwork.org"
+       }]
+   },
+   "protected_biomes": {
+       "id": "protected_biomes",
+       "name": "Protected biomes",
+       "description": "The weighted percentage of biomes under protected status, where the weight is determined by the size of biomes within a country. Countries are not rewarded for protecting beyond 17% of any given biome (i.e., scores are capped at 17% per biome) so that higher levels of protection of some biomes cannot be used to offset lower levels of protection of other biomes.",
+       "format": "number",
+       "decimals": "2",
+       "unit": "null",
+       "index": "vulnerability",
+       "sector": "ecosystems",
+       "component": "capacity",
+       "source": [{
+           "name": "Emerson, J.W. et al. 2012: 2012 Environmental Performance Index and Pilot Trend Environmental Performance
+Index."
+           "link": "http://epi.yale.edu/downloads"
+       }]
+   },
+   "Trade_transport": {
+       "id": "Trade_transport",
+       "name": "Quality of trade and transport-related infrastructure",
+       "description": "Logistics professionals' perception of country's quality of trade and transport related infrastructure (e.g. ports, railroads, roads, information technology), on a rating ranging from 1 (very low) to 5 (very high). Scores are averaged across all respondents.",
+       "format": "number",
+       "decimals": "null",
+       "unit": "null",
+       "index": "vulnerability",
+       "sector": "habitat",
+       "component": "capacity",
+       "source": [{
+           "name": "World Development Indicators -  Logistics Performance Index",
+           "link": "http://data.worldbank.org/indicator/LP.LPI.INFR.XQ"
+       }]
+   },
+   "international_treaties": {
+       "id": "international_treaties",
+       "name": "Engagement in International Environmental Conventions",
+       "description": "The country’s participation in international forums, which is taken as an indicator its capacity to engage in multilateral negotiations and to reach agreement on appropriate actions internally.",
+       "format": "number",
+       "decimals": "null",
+       "unit": "null",
+       "index": "vulnerability",
+       "sector": "ecosystems",
+       "component": "capacity",
+       "source": [{
+           "name": "Environmental Treaties and Resource Indicators",
+           "link": "http://sedac.ciesin.columbia.edu/entri/index.jsp"
+       }]
+   },
+   "Dependency_natural": {
+       "id": "Dependency_natural",
+       "name": "Dependency on natural capital",
+       "description": "Use of natural capital in national accounting. Specifically natural capital related to ecosystem services: crop, pasture, forest (timber), forest (non-timber) and protected areas. Sub-surface capital such as oil, gas and mineral reserves are not included in this measure for GAIN.",
+       "format": "number",
+       "decimals": "2",
+       "unit": "%s %",
+       "index": "vulnerability",
+       "sector": "ecosystems",
+       "component": "exposure",
+       "source": [{
+           "name": "The Changing Wealth of Nations : Measuring Sustainable Development in the New Millennium. World Bank 2011",
+           "link": "http://data.worldbank.org/sites/default/files/total_and_per_capita_wealth_of_nations.xls"
+       }]
+   },
+   "Electrical_outages": {
+       "id": "Electrical_outages",
+       "name": "Value lost due to electrical outages",
+       "description": "Percentage of sale lost due to electrical outages (% of sales).",
+       "format": "number",
+       "decimals": "2",
+       "unit": "%s %",
+       "index": "vulnerability",
+       "sector": "habitat",
+       "component": "capacity",
+       "source": [{
+           "name": "World Development Indicators - Value lost due to electrical outages",
+           "link": "http://data.worldbank.org/indicator/IC.FRM.OUTG.ZS"
+       }]
+   }
 };
 
 // Color utilities
