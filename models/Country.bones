@@ -49,6 +49,8 @@ model.pathSafe = function(str) {
     return str.toLowerCase().replace(/[^a-zA-Z0-9]+/gi, '-');
 }
 
+
+
 model.meta = {
     "AFG": {
         "ISO3": "AFG",
@@ -77,8 +79,8 @@ model.meta = {
     "DZA": {
         "ISO3": "DZA",
         "name": "Algeria",
-        "oecd_value": "2",
-        "oecd_income": "Lower middle",
+        "oecd_value": "3",
+        "oecd_income": "Upper middle",
         "coords": [
             -8.68238544464111,
             18.9755611419678,
@@ -101,8 +103,8 @@ model.meta = {
     "AGO": {
         "ISO3": "AGO",
         "name": "Angola",
-        "oecd_value": "2",
-        "oecd_income": "Lower middle",
+        "oecd_value": "3",
+        "oecd_income": "Upper middle",
         "coords": [
             11.6636590957642,
             -18.0314064025879,
@@ -113,8 +115,8 @@ model.meta = {
     "ATG": {
         "ISO3": "ATG",
         "name": "Antigua and Barbuda",
-        "oecd_value": "4",
-        "oecd_income": "Upper",
+        "oecd_value": "3",
+        "oecd_income": "Upper middle",
         "coords": [
             -61.8934020996094,
             16.9890918731689,
@@ -173,8 +175,8 @@ model.meta = {
     "AZE": {
         "ISO3": "AZE",
         "name": "Azerbaijan",
-        "oecd_value": "2",
-        "oecd_income": "Lower middle",
+        "oecd_value": "3",
+        "oecd_income": "Upper middle",
         "coords": [
             44.7745552062988,
             38.3926429748535,
@@ -257,8 +259,8 @@ model.meta = {
     "BLZ": {
         "ISO3": "BLZ",
         "name": "Belize",
-        "oecd_value": "3",
-        "oecd_income": "Upper middle",
+        "oecd_value": "2",
+        "oecd_income": "Lower middle",
         "coords": [
             -89.2365188598633,
             15.8796510696411,
@@ -305,8 +307,8 @@ model.meta = {
     "BIH": {
         "ISO3": "BIH",
         "name": "Bosnia & Herzegovina",
-        "oecd_value": "2",
-        "oecd_income": "Lower middle",
+        "oecd_value": "3",
+        "oecd_income": "Upper middle",
         "coords": [
             15.715877532959,
             42.5593223571777,
@@ -474,8 +476,8 @@ model.meta = {
     "CHN": {
         "ISO3": "CHN",
         "name": "China",
-        "oecd_value": "2",
-        "oecd_income": "Lower middle",
+        "oecd_value": "3",
+        "oecd_income": "Upper middle",
         "coords": [
             73.6022491455078,
             18.1691493988037,
@@ -486,8 +488,8 @@ model.meta = {
     "COL": {
         "ISO3": "COL",
         "name": "Colombia",
-        "oecd_value": "2",
-        "oecd_income": "Lower middle",
+        "oecd_value": "3",
+        "oecd_income": "Upper middle",
         "coords": [
             -81.7228927612305,
             -4.23648452758789,
@@ -547,8 +549,8 @@ model.meta = {
     "CIV": {
         "ISO3": "CIV",
         "name": "Côte d'Ivoire",
-        "oecd_value": "1",
-        "oecd_income": "Low",
+        "oecd_value": "2",
+        "oecd_income": "Lower middle",
         "coords": [
             -8.61872005462646,
             4.34392166137695,
@@ -559,8 +561,8 @@ model.meta = {
     "HRV": {
         "ISO3": "HRV",
         "name": "Croatia",
-        "oecd_value": "3",
-        "oecd_income": "Upper middle",
+        "oecd_value": "4",
+        "oecd_income": "Upper",
         "coords": [
             13.5018930435181,
             42.4160423278809,
@@ -645,8 +647,8 @@ model.meta = {
         "ISO3": "DOM",
         "name": "Dominican Republic",
         "articleName": "The Dominican Republic",
-        "oecd_value": "2",
-        "oecd_income": "Lower middle",
+        "oecd_value": "3",
+        "oecd_income": "Upper middle",
         "coords": [
             -72.0098419189453,
             17.545337677002,
@@ -657,8 +659,8 @@ model.meta = {
     "ECU": {
         "ISO3": "ECU",
         "name": "Ecuador",
-        "oecd_value": "2",
-        "oecd_income": "Lower middle",
+        "oecd_value": "3",
+        "oecd_income": "Upper middle",
         "coords": [
             -92.0116195678711,
             -5.0113730430603,
@@ -741,8 +743,8 @@ model.meta = {
     "FJI": {
         "ISO3": "FJI",
         "name": "Fiji",
-        "oecd_value": "3",
-        "oecd_income": "Upper middle",
+        "oecd_value": "2",
+        "oecd_income": "Lower middle",
         "coords": [
             171.6721649169924,
             -14.082745030178442,
@@ -825,8 +827,8 @@ model.meta = {
     "GHA": {
         "ISO3": "GHA",
         "name": "Ghana",
-        "oecd_value": "1",
-        "oecd_income": "Low",
+        "oecd_value": "2",
+        "oecd_income": "Lower middle",
         "coords": [
             -3.2625093460083,
             4.73692083358765,
@@ -981,8 +983,8 @@ model.meta = {
     "IRN": {
         "ISO3": "IRN",
         "name": "Iran",
-        "oecd_value": "2",
-        "oecd_income": "Lower middle",
+        "oecd_value": "3",
+        "oecd_income": "Upper middle",
         "coords": [
             44.0148620605469,
             25.0767631530762,
@@ -1065,8 +1067,8 @@ model.meta = {
     "JOR": {
         "ISO3": "JOR",
         "name": "Jordan",
-        "oecd_value": "2",
-        "oecd_income": "Lower middle",
+        "oecd_value": "3",
+        "oecd_income": "Upper middle",
         "coords": [
             34.9498329162598,
             29.1899490356445,
@@ -1163,8 +1165,8 @@ model.meta = {
     "LAO": {
         "ISO3": "LAO",
         "name": "Laos",
-        "oecd_value": "1",
-        "oecd_income": "Low",
+        "oecd_value": "2",
+        "oecd_income": "Lower middle",
         "coords": [
             100.097068786621,
             13.9154558181763,
@@ -1307,8 +1309,8 @@ model.meta = {
     "MDV": {
         "ISO3": "MDV",
         "name": "Maldives",
-        "oecd_value": "2",
-        "oecd_income": "Lower middle",
+        "oecd_value": "3",
+        "oecd_income": "Upper middle",
         "coords": [
             72.6852035522461,
             -0.688690721988678,
@@ -1429,8 +1431,8 @@ model.meta = {
     "MKD": {
         "ISO3": "MKD",
         "name": "Macedonia",
-        "oecd_value": "2",
-        "oecd_income": "Lower middle",
+        "oecd_value": "3",
+        "oecd_income": "Upper middle",
         "coords": [
             20.4441566467285,
             40.8493919372559,
@@ -1453,8 +1455,8 @@ model.meta = {
     "MNE": {
         "ISO3": "MNE",
         "name": "Montenegro",
-        "oecd_value": "4",
-        "oecd_income": "Upper",
+        "oecd_value": "3",
+        "oecd_income": "Upper middle",
         "coords": [
             18.4335289001465,
             41.8520698547363,
@@ -1501,8 +1503,8 @@ model.meta = {
     "NAM": {
         "ISO3": "NAM",
         "name": "Namibia",
-        "oecd_value": "2",
-        "oecd_income": "Lower middle",
+        "oecd_value": "3",
+        "oecd_income": "Upper middle",
         "coords": [
             11.7182292938232,
             -28.9593696594238,
@@ -1586,8 +1588,8 @@ model.meta = {
     "NGA": {
         "ISO3": "NGA",
         "name": "Nigeria",
-        "oecd_value": "1",
-        "oecd_income": "Low",
+        "oecd_value": "2",
+        "oecd_income": "Lower middle",
         "coords": [
             2.67108178138733,
             4.27193641662598,
@@ -1622,8 +1624,8 @@ model.meta = {
     "PAK": {
         "ISO3": "PAK",
         "name": "Pakistan",
-        "oecd_value": "1",
-        "oecd_income": "Low",
+        "oecd_value": "2",
+        "oecd_income": "Lower middle",
         "coords": [
             60.8443756103516,
             23.6943168640137,
@@ -1658,8 +1660,8 @@ model.meta = {
     "PNG": {
         "ISO3": "PNG",
         "name": "Papua New Guinea",
-        "oecd_value": "1",
-        "oecd_income": "Low",
+        "oecd_value": "2",
+        "oecd_income": "Lower middle",
         "coords": [
             140.849197387695,
             -11.6363954544067,
@@ -1682,8 +1684,8 @@ model.meta = {
     "PER": {
         "ISO3": "PER",
         "name": "Peru",
-        "oecd_value": "2",
-        "oecd_income": "Lower middle",
+        "oecd_value": "3",
+        "oecd_income": "Upper middle",
         "coords": [
             -81.3544387817383,
             -18.3445644378662,
@@ -1706,8 +1708,8 @@ model.meta = {
     "POL": {
         "ISO3": "POL",
         "name": "Poland",
-        "oecd_value": "3",
-        "oecd_income": "Upper middle",
+        "oecd_value": "4",
+        "oecd_income": "Upper",
         "coords": [
             14.1239223480225,
             48.994010925293,
@@ -1779,8 +1781,8 @@ model.meta = {
     "KNA": {
         "ISO3": "KNA",
         "name": "Saint Kitts and Nevis",
-        "oecd_value": "3",
-        "oecd_income": "Upper middle",
+        "oecd_value": "4",
+        "oecd_income": "Upper",
         "coords": [
             -62.8603210449219,
             17.1002998352051,
@@ -1863,8 +1865,8 @@ model.meta = {
     "SEN": {
         "ISO3": "SEN",
         "name": "Senegal",
-        "oecd_value": "1",
-        "oecd_income": "Low",
+        "oecd_value": "2",
+        "oecd_income": "Lower middle",
         "coords": [
             -17.5353851318359,
             12.3056058883667,
@@ -1875,8 +1877,8 @@ model.meta = {
     "SRB": {
         "ISO3": "SRB",
         "name": "Serbia",
-        "oecd_value": "4",
-        "oecd_income": "Upper",
+        "oecd_value": "3",
+        "oecd_income": "Upper middle",
         "coords": [
             18.8448333740234,
             42.2349510192871,
@@ -1947,8 +1949,8 @@ model.meta = {
     "SLB": {
         "ISO3": "SLB",
         "name": "Solomon Islands",
-        "oecd_value": "1",
-        "oecd_income": "Low",
+        "oecd_value": "2",
+        "oecd_income": "Lower middle",
         "coords": [
             155.508255004883,
             -12.2905673980713,
@@ -2103,8 +2105,8 @@ model.meta = {
     "THA": {
         "ISO3": "THA",
         "name": "Thailand",
-        "oecd_value": "2",
-        "oecd_income": "Lower middle",
+        "oecd_value": "3",
+        "oecd_income": "Upper middle",
         "coords": [
             97.3513946533203,
             5.62988996505737,
@@ -2115,8 +2117,8 @@ model.meta = {
     "TLS": {
         "ISO3": "TLS",
         "name": "Timor-Leste",
-        "oecd_value": "1",
-        "oecd_income": "Low",
+        "oecd_value": "2",
+        "oecd_income": "Lower middle",
         "coords": [
             124.030235290527,
             -9.50122833251953,
@@ -2163,8 +2165,8 @@ model.meta = {
     "TUN": {
         "ISO3": "TUN",
         "name": "Tunisia",
-        "oecd_value": "2",
-        "oecd_income": "Lower middle",
+        "oecd_value": "3",
+        "oecd_income": "Upper middle",
         "coords": [
             7.4798321723938,
             30.2289047241211,
@@ -2187,8 +2189,8 @@ model.meta = {
     "TKM": {
         "ISO3": "TKM",
         "name": "Turkmenistan",
-        "oecd_value": "2",
-        "oecd_income": "Lower middle",
+        "oecd_value": "3",
+        "oecd_income": "Upper middle",
         "coords": [
             52.438117980957,
             35.1406440734863,
@@ -2199,8 +2201,8 @@ model.meta = {
     "TUV": {
         "ISO3": "TUV",
         "name": "Tuvalu",
-        "oecd_value": "1",
-        "oecd_income": "Low",
+        "oecd_value": "3",
+        "oecd_income": "Upper middle",
         "coords": [
             176.125442504883,
             -9.42071628570557,
@@ -2285,8 +2287,8 @@ model.meta = {
     "UZB": {
         "ISO3": "UZB",
         "name": "Uzbekistan",
-        "oecd_value": "1",
-        "oecd_income": "Low",
+        "oecd_value": "2",
+        "oecd_income": "Lower middle",
         "coords": [
             55.9758377075195,
             37.1851463317871,
@@ -2321,8 +2323,8 @@ model.meta = {
     "VNM": {
         "ISO3": "VNM",
         "name": "Viet Nam",
-        "oecd_value": "1",
-        "oecd_income": "Low",
+        "oecd_value": "2",
+        "oecd_income": "Lower middle",
         "coords": [
             102.11865234375,
             8.56539535522461,
@@ -2333,8 +2335,8 @@ model.meta = {
     "YEM": {
         "ISO3": "YEM",
         "name": "Yemen",
-        "oecd_value": "1",
-        "oecd_income": "Low",
+        "oecd_value": "2",
+        "oecd_income": "Lower middle",
         "coords": [
             42.5457534790039,
             12.1111993789673,
@@ -2345,8 +2347,8 @@ model.meta = {
     "ZMB": {
         "ISO3": "ZMB",
         "name": "Zambia",
-        "oecd_value": "1",
-        "oecd_income": "Low",
+        "oecd_value": "2",
+        "oecd_income": "Lower middle",
         "coords": [
             21.9798774719238,
             -18.0692329406738,
