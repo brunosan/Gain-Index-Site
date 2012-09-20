@@ -1024,6 +1024,21 @@ people).",
            "link": "http://esa.un.org/unup/CD-ROM/Urban-Agglomerations.htm"
        }]
    },
+   "Exx": {
+       "id": "Exx",
+       "name": "Exx",
+       "description": "TBD",
+       "format": "number",
+       "decimals": "2",
+       "unit": "null",
+       "index": "vulnerability",
+       "sector": "ecosystems",
+       "component": "exposure",
+       "source": [{
+           "name": "TBD",
+           "link": "#"
+       }]
+   },
    "threatened_species": {
        "id": "threatened_species",
        "name": "Threatened species",
