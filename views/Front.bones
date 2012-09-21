@@ -191,8 +191,8 @@ view = views.Main.extend({
                     'scoringindicators' :
                     indicator.meta('index')),
                 title: indicator.isCorrection() ?
-                    'Remove GDP correction' :
-                    'Correct for GDP'
+                    'Remove GDP adjustment' :
+                    'Adjust for GDP'
             }
         };
         $('.floor', this.el).empty().append(templates.CorrectionFloor(locals));

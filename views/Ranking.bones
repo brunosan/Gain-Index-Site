@@ -119,7 +119,7 @@ view = views.Main.extend({
                         ((subject.meta('component') || subject.meta('sector')) ?
                         'scoringindicators' :
                         subject.meta('index')),
-                    title: 'Remove GDP correction'
+                    title: 'Remove GDP adjustment'
                 };
             } else {
                 locals.correction = {
@@ -129,7 +129,7 @@ view = views.Main.extend({
                         ((subject.meta('component') || subject.meta('sector')) ?
                         'scoringindicators' :
                         subject.meta('index')),
-                    title: 'Correct for GDP'
+                    title: 'Adjust for GDP'
                 };
             }
         }
