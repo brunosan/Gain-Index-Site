@@ -6,7 +6,7 @@
 
 /* ---- Admin Level 0 Lines -------------------------------- */
 
-country [BDY_STYLE!="Undisputed International Border - Coastal"] { 
+#country [BDY_STYLE!="Undisputed International Border - Coastal"] {
   line-color: #fff;
   line-opacity: 0.75;
   [zoom>0] {line-width: 0.2; }
@@ -19,11 +19,11 @@ country [BDY_STYLE!="Undisputed International Border - Coastal"] {
 
 /* ---- Admin Level 0 Labels -------------------------------- */
 
-label_lines[zoom=3][Z_MIN<=3][Z_MAX>=3],
-label_lines[zoom=4][Z_MIN<=4][Z_MAX>=4],
-label_lines[zoom=5][Z_MIN<=5][Z_MAX>=5],
-label_lines[zoom=6][Z_MIN<=6][Z_MAX>=6],
-label_lines[zoom=7][Z_MIN<=7][Z_MAX>=7] {
+#label_lines[zoom=3][Z_MIN<=3][Z_MAX>=3],
+#label_lines[zoom=4][Z_MIN<=4][Z_MAX>=4],
+#label_lines[zoom=5][Z_MIN<=5][Z_MAX>=5],
+#label_lines[zoom=6][Z_MIN<=6][Z_MAX>=6],
+#label_lines[zoom=7][Z_MIN<=7][Z_MAX>=7] {
   line-color: #434343;
   line-opacity: 0.8;
   line-width: 0.8;
@@ -32,7 +32,7 @@ label_lines[zoom=7][Z_MIN<=7][Z_MAX>=7] {
 
 @adm0-txt: 9;
 
-names[zoom>=3] {
+#names[zoom>=3] {
   text-name: "''";
   text-allow-overlap: false;
   text-face-name: @font;
