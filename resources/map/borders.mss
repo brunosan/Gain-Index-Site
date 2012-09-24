@@ -41,7 +41,7 @@
   [zoom=3][Z_MIN<=3][Z_MAX>=3] {
     text-name: "[WB_NAMES]";
     text-size: @adm0-txt+1;
-    text-halo-fill: rgb(180,180,180,0.5);
+    text-halo-fill: rgba(180,180,180,0.5);
     text-halo-radius: 0.2;
     text-wrap-width: 40;
     [ITALIC="TRUE"] { 
@@ -54,7 +54,7 @@
     text-character-spacing: 2;
     text-line-spacing: 1;
     text-size: @adm0-txt+1;
-    text-halo-fill: rgb(180,180,180,0.5);
+    text-halo-fill: rgba(180,180,180,0.5);
     text-halo-radius: 0.3;
     text-wrap-width: 50;
     [ITALIC="TRUE"] { 
@@ -68,7 +68,7 @@
     text-character-spacing: 3;
     text-line-spacing: 2;
     text-size: @adm0-txt+2;
-    text-halo-fill: rgb(180,180,180,0.5);
+    text-halo-fill: rgba(180,180,180,0.5);
     text-halo-radius: 0.4;
     text-wrap-width: 55;
     [ITALIC="TRUE"] { 
@@ -84,7 +84,7 @@
     text-character-spacing: 4;
     text-line-spacing: 3;
     text-size: @adm0-txt+4;
-    text-halo-fill: rgb(180,180,180,0.5);
+    text-halo-fill: rgba(180,180,180,0.5);
     text-halo-radius: 0.5;
     text-wrap-width: 70;
     [ITALIC="TRUE"] { 
@@ -106,7 +106,7 @@
     text-character-spacing: 5;
     text-line-spacing: 3;
     text-size: @adm0-txt+6;
-    text-halo-fill: rgb(180,180,180,0.5);
+    text-halo-fill: rgba(180,180,180,0.5);
     text-halo-radius: 0.5;
     text-wrap-width: 80;
     text-face-name: @font_bold;
