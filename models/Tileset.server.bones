@@ -60,9 +60,11 @@ Cache.prototype.load = function() {
         new carto.Renderer({
             filename: that.filename,
         }).render(that.mml, function(err, output) {
-            if (err) return this.err = err;
-
-            that.xml = output;
+            if (err) {
+                that.err = err;
+            } else {
+                that.xml = output;
+            }
             next();
         });
     });
