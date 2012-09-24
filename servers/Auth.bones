@@ -1,7 +1,7 @@
 // Restrict non-authenticated users to GET requests.
 servers.Auth.augment({
-    initialize: function(super, app) {
-        super.call(this, app);
+    initialize: function(parent, app) {
+        parent.call(this, app);
         this.use(this.access.bind(this));
     }
 });
