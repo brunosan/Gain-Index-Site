@@ -1001,9 +1001,9 @@ model.meta = {
        "component": "sensitivity",
        "source": [{
            "name": "World Development Indicators - Urban population growth",
-           "link": "http://data.worldbank.org/indicator/SP.URB.GROW"
+           "link": "http://data.worldbank.org/indicator/SP.URB.GROW",
            "name": "World Development Indicators - Urban population",
-           "link": "http://data.worldbank.org/indicator/SP.URB.TOTL"
+           "link": "http://data.worldbank.org/indicator/SP.URB.TOTL",
            "name": "World Development Indicators - Population growth",
            "link": "http://data.worldbank.org/indicator/SP.POP.GROW"
        }]
