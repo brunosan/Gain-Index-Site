@@ -5,7 +5,7 @@ Requirements
 ------------
 
 - Couch 1.0.x - `brew install couchdb`
-- Node v0.8.9 - `nvm install 0.8.9`
+- Node v0.8.9 - `nvm install v0.8.9`
 - Mapnik 2.x - on OSX `brew install mapnik`
 - libsqlite3 - Modern version of libsqlite3. Note: older versions such as on Ubuntu Lucid can result in slow map rendering. In such cases, the [mapnik sqlite plugin can be built standalone](https://github.com/springmeyer/sqlite3-mapnik).
 
