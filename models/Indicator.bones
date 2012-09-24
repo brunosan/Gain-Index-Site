@@ -1011,8 +1011,7 @@ model.meta = {
    "Urban_risk": {
        "id": "Urban_risk",
        "name": "Urban risk",
-       "description": "A natural disaster risk index for populations living in large cities (i.e. >0.75M
-people).",
+       "description": "A natural disaster risk index for populations living in large cities (i.e. >0.75M people).",
        "format": "number",
        "decimals": "2",
        "unit": "null",
@@ -1095,8 +1094,7 @@ people).",
        "sector": "ecosystems",
        "component": "capacity",
        "source": [{
-           "name": "Emerson, J.W. et al. 2012: 2012 Environmental Performance Index and Pilot Trend Environmental Performance
-Index."
+           "name": "Emerson, J.W. et al. 2012: 2012 Environmental Performance Index and Pilot Trend Environmental Performance Index.",
            "link": "http://epi.yale.edu/downloads"
        }]
    },
