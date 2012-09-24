@@ -1,6 +1,6 @@
 server = Bones.Server.extend({
     initialize: function(app) {
-        _.bindAll(this, 'load', 'tile', 'grid', 'layer');
+        _.bindAll(this, 'load', 'tile', 'grid');
 
         this.config = app.config;
         this.config.header = { 'Cache-Control': 'max-age=' + 60 * 60 };
@@ -10,7 +10,6 @@ server = Bones.Server.extend({
         // x.0.0 endpoints.
         this.get('/tiles/:version(1|2).0.0/:tileset/:z/:x/:y.(png|jpg|jpeg)', this.tile);
         this.get('/tiles/:version(1|2).0.0/:tileset/:z/:x/:y.grid.json', this.grid);
-        this.get('/tiles/:version(1|2).0.0/:tileset/layer.json', this.layer);
     },
 
     validTilesetID: function(id) {
@@ -75,10 +74,5 @@ server = Bones.Server.extend({
                 res.send(grid, headers);
             }
         });
-    },
-
-    // Layer endpoint.
-    layer: function(req, res, next) {
-        res.send(res.model.tilejson());
     }
 });
