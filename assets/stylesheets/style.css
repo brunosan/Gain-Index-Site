@@ -368,16 +368,6 @@ ul.tabs li a.active {
 #header .navigation li a.about.active:hover   { background-position: -265px -110px; width: 75px; }
 #header .navigation li a.about:hover          { background-position: -265px -170px; width: 75px; }
 
-#header .org a {
-  display: block;
-  position: absolute;
-  left: 810px;
-  top: 10px;
-  width: 150px;
-  height: 40px;
-  background: no-repeat url(../images/sprite.png) 0px 0px;
-  text-indent: -9999px;
-  }
 /*** Top Footer styles ***/
 #footer1 {
   height: 60px;
