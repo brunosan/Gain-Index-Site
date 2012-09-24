@@ -5,7 +5,7 @@ server = servers.Route.augment({
     },
     initializeAssets: function(parent, app) {
         parent.call(this, app);
-        this.get('/assets/bones/wax.js', this.assets.wax);
+        this.get('/assets/bones/wax.js', this.assets.wax.handler);
     }
 });
 server.prototype.assets.wax = new mirror([
