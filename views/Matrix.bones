@@ -98,7 +98,8 @@ view = views.Main.extend({
         'mouseenter .interactive .quad': 'quadrantHover',
         'mouseleave .interactive .quad': 'quadrantUnhover',
         'mouseenter .mini-matrix-links a': 'hoverRelatedQuad',
-        'mouseleave .mini-matrix-links a': 'unHoverRelatedQuad'
+        'mouseleave .mini-matrix-links a': 'unHoverRelatedQuad',
+        'click .mini-matrix-links a': '_return'
     },
     pageTitle: "Matrix",
     initialize: function(options) {
@@ -115,6 +116,7 @@ view = views.Main.extend({
         $('.top', this.el).empty().append(templates.Matrix());
         return this;
     },
+    _return: function(e) { return false; },
     attach: function() {
         views.Main.prototype.attach.call(this);
 
