@@ -27,12 +27,12 @@
      borderopacity="1.0"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1"
-     inkscape:cx="81.867077"
-     inkscape:cy="196.31806"
+     inkscape:zoom="16"
+     inkscape:cx="149.41554"
+     inkscape:cy="1169.2245"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
-     showgrid="false"
+     showgrid="true"
      inkscape:window-width="1464"
      inkscape:window-height="916"
      inkscape:window-x="196"
@@ -539,11 +539,12 @@
     <path
        inkscape:connector-curvature="0"
        id="path7530"
-       d="m 0,257.36217 13,0 -6.5,9 z"
-       style="color:#000000;fill:#767676;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1.04900002000000003;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       d="m 0.999986,257.36217 8,0 -4,5 z"
+       style="color:#000000;fill:#767676;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1.04900002;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
        inkscape:export-filename="/Users/saman/Dropbox/work_repos/gai-gain/assets/images/sprite.png"
        inkscape:export-xdpi="90"
-       inkscape:export-ydpi="90" />
+       inkscape:export-ydpi="90"
+       sodipodi:nodetypes="cccc" />
     <g
        style="fill:#ebebeb;fill-opacity:1;display:inline"
        id="g7854-8-2"
@@ -552,13 +553,14 @@
        inkscape:export-xdpi="90"
        inkscape:export-ydpi="90" />
     <path
-       style="color:#000000;fill:#767676;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1.04900002000000003;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
-       d="m 0,286.36217 13,0 -6.5,-9 z"
+       style="color:#000000;fill:#767676;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1.04900002;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       d="m 0.999986,286.36217 8,0 -4,-5 z"
        id="path9222"
        inkscape:connector-curvature="0"
        inkscape:export-filename="/Users/saman/Dropbox/work_repos/gai-gain/assets/images/sprite.png"
        inkscape:export-xdpi="90"
-       inkscape:export-ydpi="90" />
+       inkscape:export-ydpi="90"
+       sodipodi:nodetypes="cccc" />
     <path
        inkscape:connector-curvature="0"
        id="rect6584-3"
@@ -680,10 +682,11 @@
        inkscape:export-ydpi="90"
        inkscape:export-xdpi="90"
        inkscape:export-filename="/Users/saman/Dropbox/work_repos/gai-gain/assets/images/sprite.png"
-       style="color:#000000;fill:#b5b5b5;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1.04900002000000003;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
-       d="m 150,257.36217 13,0 -6.5,9 z"
+       style="color:#000000;fill:#b5b5b5;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1.04900002;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       d="m 150.99999,257.36217 8,0 -4,5 z"
        id="path18562"
-       inkscape:connector-curvature="0" />
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cccc" />
     <g
        style="display:inline"
        transform="translate(5.7220459e-6,-1514.6377)"
