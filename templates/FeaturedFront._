@@ -1,7 +1,9 @@
 <div class='country clearfix' id='<%= iso %>'>
   <div class='info'>
-    <h3><a href='/country/<%= path %>'><%= name %></a></h3>
-    <div class='prose'></div>
+    <div class='inner'>
+      <h3><a href='/country/<%= path %>'><%= name %></a></h3>
+      <div class='prose'></div>
+    </div>
   </div>
   <div class='country-summary clearfix'></div>
 </div>

@@ -47,7 +47,7 @@
     <div id='main'><%= main %></div>
   </div>
   <div id='footer1'>
-    <div class='limiter'>
+    <div class='limiter clearfix'>
       <div class='download'>
         <a href='http://creativecommons.org/licenses/by/3.0' class='cc'>Download Data under a creative commons licence</a>
         <a class='downloadbutton button' href='/about/download'><span>Download the GAIN Index</span> scores and indicators between 1995 and 2010 in CSV format.</a>
@@ -61,7 +61,7 @@
     </div>
   </div>
   <div id='footer2'>
-  	<div class='limiter'>
+  	<div class='limiter clearfix'>
       <div id='address'><a href='http://gain.org'>Global Adaptation Institute</a> <br>1747 Pennsylvania Ave NW, Suite 1125 - Washington, DC 20006</div>
   	  <div class='org'><a href='http://gain.org'>Global Adaptation Institute</a></div>
       <div id='feedbacktab'>
