@@ -33,9 +33,10 @@ h1,h2,h3,h4,h5 {
   clear: left;
   }
 h2 {
-  font-size: 28px;
+  font-size: 32px;
   border-bottom: #c6c6c6 1px solid;
   margin-bottom: 15px;
+  padding-top:40px;
   }
 h3 {
   font-size: 20px;
@@ -214,26 +215,28 @@ img.left {
 /**
  * Tabs
  */
-ul.tabs.level-1 {}
 ul.tabs.level-1 li {
   float: left;
-  margin-left: 10px;
+  margin-left: 5px;
   }
+  ul.tabs.level-1 li:first-child {
+    margin-left:10px;
+    }
 ul.tabs.level-1 li a {
   line-height: 30px;
-  -moz-border-radius: 4px 4px 0 0;
-  -webkit-border-radius: 4px 4px 0 0;
-  border-radius: 4px 4px 0 0;
   float: left;
   width: auto;
   padding: 0 20px;
-  background-color: #dadada;
+  background-color: #c8c8c8;
   text-align: center;
   font-family: 'AlternateGothicLTNo3Regular','HelveticaNeueBoldCondensed', 'HelveticaNeue-Bold-Condensed', 'Arial Narrow', 'Arial', sans-serif;
   color: #363636;
   font-size: 18px;
   text-transform: uppercase;
   text-decoration: none;
+  -webkit-border-radius: 4px 4px 0 0;
+     -moz-border-radius: 4px 4px 0 0;
+          border-radius: 4px 4px 0 0;
   text-shadow: 0 1px rgba(255,255,255,.5);
   }
 ul.tabs li a.active {
@@ -295,13 +298,12 @@ ul.tabs li a.active {
  }
 
 #header {
-  height: 60px;
+  height: 80px;
   background-color: #11202c;
-  -moz-box-shadow: 0 0 20px #000;
-  -webkit-box-shadow: 0 0 20px #000;
-  box-shadow: 0 0 20px #000;
   position: relative;
   z-index: 20;
+  -webkit-box-shadow: 0 0 20px rgba(0,0,0,0.25);
+          box-shadow: 0 0 20px rgba(0,0,0,0.25);
   }
 #header .limiter {
   position: relative;
@@ -310,17 +312,17 @@ ul.tabs li a.active {
 #header h1,
 #header .navigation {
   float: left;
-  height: 60px
+  height: 80px
   }
 #header h1 a.logo {
+  background: transparent url(../images/sprite.png) no-repeat -160px 0;
   display: block;
   position: absolute;
-  top: -3px;
-  left: -10px;
+  top: 15px;
+  left: 0;
   text-indent: -9999px;
-  width: 112px;
-  height: 63px;
-  background: transparent url(../images/sprite.png) no-repeat -201px 5px;
+  width: 180px;
+  height: 50px;
   z-index: 9999;
   }
 #header .tagline {
@@ -337,36 +339,63 @@ ul.tabs li a.active {
   }
 #header .navigation {
   position: absolute;
-  left: 287px;
-  top: 13px;
+  left: 199px;
+  margin:0;padding:0;
   }
 #header .navigation li {
   float: left;
   }
 #header .navigation li a {
+  font: 15px/80px 'AlternateGothicLTNo3Regular','HelveticaNeueBoldCondensed', 'HelveticaNeue-Bold-Condensed', 'Arial Narrow', 'Arial', sans-serif;
+  text-transform:uppercase;
+  text-decoration:none;
   float: left;
-  height: 45px;
-  width: 65px;
-  margin-right: 10px;
-  text-indent: -9999px;
-  background: transparent url(../images/sprite.png) no-repeat 0 0;
+  height: 80px;
+  width: 99px;
+  border-right:1px solid #35434c;
+  color: white;
+  -webkit-font-smoothing: antialiased;
+  padding-left:10px;
   }
-#header .navigation li a.map                  { background-position: 0 -60px; }
-#header .navigation li a.map.active           { background-position: 0 -110px; }
-#header .navigation li a.map.active:hover     { background-position: 0 -110px; }
-#header .navigation li a.map:hover            { background-position: 0 -170px; }
-#header .navigation li a.rank                 { background-position: -75px -60px; width: 90px; }
-#header .navigation li a.rank.active          { background-position: -75px -110px; width: 90px; }
-#header .navigation li a.rank.active:hover    { background-position: -75px -110px; width: 90px; }
-#header .navigation li a.rank:hover           { background-position: -75px -170px; width: 90px; }
-#header .navigation li a.matrix               { background-position: -175px -60px; width: 80px; }
-#header .navigation li a.matrix.active        { background-position: -175px -110px; width: 80px; }
-#header .navigation li a.matrix.active:hover  { background-position: -175px -110px; width: 80px; }
-#header .navigation li a.matrix:hover         { background-position: -175px -170px; width: 80px; }
-#header .navigation li a.about                { background-position: -265px -60px; width: 75px; }
-#header .navigation li a.about.active         { background-position: -265px -110px; width: 75px; }
-#header .navigation li a.about.active:hover   { background-position: -265px -110px; width: 75px; }
-#header .navigation li a.about:hover          { background-position: -265px -170px; width: 75px; }
+  #header .navigation li:first-child a {
+    width: 98px;
+    border-left:1px solid #35434c;
+    }
+  #header .navigation li a:hover {
+    background-color:#35434c;
+    }
+  #header .navigation li a.active {
+    background-color:#fff;
+    color:#11202C;
+    }
+  #header .navigation li a .icon {
+    background: transparent url(../images/sprite.png) no-repeat 0 0;
+    display:inline-block;
+    float:left;
+    width:20px;
+    height:20px;
+    margin:30px 5px 0 10px;
+    }
+
+#header .navigation li a .map                  { background-position: 0 -60px; margin-left:15px; }
+#header .navigation li a:hover .map            { background-position: 0px -60px; }
+#header .navigation li a.active .map           { background-position: -100px -60px; }
+#header .navigation li a.active:hover .map     { background-position: -100px -60px; }
+
+#header .navigation li a .rank                 { background-position: -25px -60px; margin-left:5px;}
+#header .navigation li a:hover .rank           { background-position: -25px -60px; }
+#header .navigation li a.active .rank          { background-position: -125px -60px; }
+#header .navigation li a.active:hover .rank    { background-position: -125px -60px; }
+
+#header .navigation li a .matrix               { background-position: -50px -60px; }
+#header .navigation li a:hover .matrix         { background-position: -50px -60px; }
+#header .navigation li a.active .matrix        { background-position: -150px -60px; }
+#header .navigation li a.active:hover .matrix  { background-position: -150px -60px; }
+
+#header .navigation li a .about                { background-position: -75px -60px; }
+#header .navigation li a:hover .about          { background-position: -75px -60px; }
+#header .navigation li a.active .about         { background-position: -175px -60px; }
+#header .navigation li a.active:hover .about   { background-position: -175px -60px; }
 
 /*** Top Footer styles ***/
 #footer1 {
@@ -1138,6 +1167,7 @@ body.fullscreen-map .front #map {
 .front #carousel h2{
   border-bottom: 0;
   margin-bottom: 0;
+  padding-top:30px;
   }
 .front #carousel .overview {
   display: none;

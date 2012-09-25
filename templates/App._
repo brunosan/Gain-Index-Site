@@ -37,10 +37,10 @@
   <div id='header'><div class='limiter'>
     <h1><a class='logo' href='/'>GAIN Index</a></h1>
     <ul class='navigation'>
-      <li><a  class='map exact' href='/'>Map</a></li>
-      <li><a  class='rank' href='/ranking'>Rankings</a></li>
-      <li><a  class='matrix' href='/matrix'>Matrix</a></li>
-      <li><a  class='about' href='/about'>About</a></li>
+      <li><a class='map exact' href='/'><span class='icon map'></span>Map</a></li>
+      <li><a class='rank' href='/ranking'><span class='icon rank'></span>Rankings</a></li>
+      <li><a class='matrix' href='/matrix'><span class='icon matrix'></span>Matrix</a></li>
+      <li><a class='about' href='/about'><span class='icon about'></span>About</a></li>
     </ul>
   </div></div>
   <div id='page' class='limiter clearfix'>
