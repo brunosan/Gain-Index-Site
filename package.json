@@ -31,7 +31,8 @@
     "wax": "3.0.6",
     "modestmaps": "= 0.18.4",
     "couch-sqlite": "https://github.com/developmentseed/couch-sqlite/tarball/c41867795e5e5b2c43e37fecf15f86a6078d28c5",
-    "JSV": "= 3.5.0"
+    "JSV": "= 3.5.0",
+    "jsdom": "=0.2.15"
   },
   "devDependencies": {}
 }
