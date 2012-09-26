@@ -80,7 +80,7 @@ model = Backbone.Model.extend({
     hasCorrection: function() {
         return !_.isUndefined(model.meta[(this.id || this.get('name')) + '_delta']);
     },
-    // Determines whether this indicator is corrected for GDP
+    // Determines whether this indicator is adjusted for GDP
     // ------------------------------------------------------
     isCorrection: function() {
         return (this.id || this.get('name')).slice(-6) == '_delta';
