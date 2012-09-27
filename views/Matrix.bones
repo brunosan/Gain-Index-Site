@@ -50,7 +50,7 @@ var classTween = function(d, i, a) {
 
             var yc = parseInt(this.style.bottom.slice(0, -2));
             var yRange = vulnerabilityToY(d.vulnerability) - yc;
-            
+
             return function(n) {
                 return 'point active-' + quadrantCoord({
                     x: (n * xRange) + xc,
@@ -136,22 +136,27 @@ view = views.Main.extend({
             view.options[series].get('indicators').each(function(v) {
                 _(v.get('values')).each(function(d, y) {
                     var iso = v.get('ISO3');
+
                     if (countries[iso] == undefined) {
                       countries[iso] = new models.Country({id: iso});
                     }
+                    console.log(map[y]);
+                    // return;
 
-                    if (map[y][iso] == undefined) {
-                        var item = {
-                            iso: iso,
-                            name: countries[iso].meta('name')
-                        };
+                    if (map[y] !== undefined) {
+                        if (map[y][iso] == undefined) {
+                            var item = {
+                                iso: iso,
+                                name: countries[iso].meta('name')
+                            };
 
-                        map[y][iso] = item;
-                        data[y].push(item);
+                            map[y][iso] = item;
+                            data[y].push(item);
+                        }
+
+                        // And the original data.
+                        map[y][iso][series] = d;
                     }
-
-                    // And the original data.
-                    map[y][iso][series] = d;
                 })
             });
         });
@@ -312,7 +317,7 @@ view = views.Main.extend({
                     next && next();
                 }
             });
-    }, 
+    },
     yearSelect: function(ev) {
         var year = $(ev.currentTarget).text();
         if (this.data[year] == undefined) return true;
