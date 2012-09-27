@@ -45,7 +45,7 @@ function formatDate(ms) {
 *     object containing pre-registered schemas to validate against.
 */
 function getSchemas() {
-    
+
     var JSV = require('JSV').JSV;
     var env = JSV.createEnvironment('json-schema-draft-03');
 
@@ -57,9 +57,9 @@ function getSchemas() {
     var schemas = {};
 
     /**
-    * This is a base schema that all our data needs to match against, 
+    * This is a base schema that all our data needs to match against,
     * at the very least.
-    * 
+    *
     * This schema is re-used by all the other schemas.
     */
     schemas.base = env.createSchema({
@@ -108,11 +108,11 @@ function getSchemas() {
            "origin": {
                 "type": "object",
                 "additionalProperties": false,
-                "patternProperties": { 
-                    "^[0-9]{4}$": { 
+                "patternProperties": {
+                    "^[0-9]{4}$": {
                         "type": "string",
-                        "enum": [ "raw", "assumed", "calculated"] 
-                    } 
+                        "enum": [ "raw", "assumed", "calculated"]
+                    }
                 }
             }
         }
@@ -175,8 +175,8 @@ function getSchemas() {
         "type": "object",
         "additionalProperties": false,
         "properties": {
-            "value": { "type": ["null", "number"], "required": true },
-            "sign": { "type": ["null", "integer"], "required": true, "minimum": -1, "maximum": 1 }
+            "Value": { "type": ["null", "number"], "required": true },
+            "Sign": { "type": ["null", "integer"], "required": true, "minimum": -1, "maximum": 1 }
         }
     }, undefined, 'urn:trendPropType#');
 
@@ -213,10 +213,11 @@ command.prototype.initialize = function(options) {
     // constructor for record class that handles
     // the meta-data.
     function Record(data, category, name) {
+        console.log(name);
         this._id = '/api/Indicator/' + category + '-' + name + '-' + data.ISO3;
         this.category = category;
         this.name = name;
-        this.country = data.name;
+        this.country = data.Name;
         this.ISO3 = data.ISO3;
 
         return this;
@@ -288,13 +289,13 @@ command.prototype.initialize = function(options) {
 
                 if (invalid.length) {
                     errors.push([
-                        invalid.length, 
+                        invalid.length,
                         "invalid records in",
-                        dirName, 
+                        dirName,
                         "including",
                         _(invalid).first(5).join(", "),
                         invalid.length > 5 ? 'and others.' : ''
-                    ].join(" ")); 
+                    ].join(" "));
                 }
             } else {
                 errors.push("No records could be imported from " + dirName);
@@ -376,7 +377,7 @@ command.prototype.initialize = function(options) {
             var records = {};
 
             function reduceScores(memo, v, i) {
-                if (i && !_.include(['name', 'ISO3'], i)) {
+                if (i && !_.include(['Name', 'ISO3'], i)) {
                     var parsed = parseFloat(v);
                     memo[i] = (!_.isNaN(parsed)) ? parsed : null;
                 }
@@ -387,7 +388,7 @@ command.prototype.initialize = function(options) {
                 if (v.ISO3) {
                     var record = {};
                     record._id = '/api/Indicator/trend-trend-' + v.ISO3;
-                    record.country = v.name;
+                    record.country = v.Name;
                     record.ISO3 = v.ISO3;
                     record.category = 'trend';
                     record.name = 'trend';
@@ -410,7 +411,7 @@ command.prototype.initialize = function(options) {
             }));
 
             actions.push(validateAndSave(source, records, 'trend'));
-           
+
             _(actions).reduceRight(_.wrap, next)();
         }
     }
@@ -447,8 +448,8 @@ command.prototype.initialize = function(options) {
                 }
             }));
 
-            // Import all of the Raw0/Raw01/Raw02/Raw03 files into a 
-            // single raw hash we use to check for the presence of a 
+            // Import all of the Raw0/Raw01/Raw02/Raw03 files into a
+            // single raw hash we use to check for the presence of a
             // year's value.
             var rawX = {};
             var processRawX = function(filename) {
@@ -486,7 +487,7 @@ command.prototype.initialize = function(options) {
 
             });
 
-            var inputOnly = _(['gdp', 'pop', 'reporting'])
+            var inputOnly = _(['gdp', 'pop', 'nurses_mw', 'physicians'])
                 .include(path.basename(source))
 
             actions.push(validateAndSave(source, records, inputOnly ? 'inputOnly' : 'input'));
@@ -503,13 +504,13 @@ command.prototype.initialize = function(options) {
             host: config.couchHost,
             port: config.couchPort,
             name: config.couchPrefix + '_data',
-            basename: 'data' 
+            basename: 'data'
         });
 
         couch.db.dbDel(next);
     });
 
-    
+
     actions.push(function(next) {
         var dir = [process.cwd(), 'design-docs', 'data'].join('/');
 
@@ -525,7 +526,7 @@ command.prototype.initialize = function(options) {
             host: config.couchHost,
             port: config.couchPort,
             name: config.couchPrefix + '_data',
-            basename: 'data' 
+            basename: 'data'
         });
 
         couch.install(function(err) {
@@ -552,10 +553,7 @@ command.prototype.initialize = function(options) {
         });
     });
 
-
     actions.push(importTrendDir(__dirname + '/../resources/trends'));
-
-
 
     // Zip up and register the file created as ready for download.
     actions.push(function(next) {
@@ -571,9 +569,9 @@ command.prototype.initialize = function(options) {
                 else {
                     console.log('Zip file created');
                     fs.stat(__dirname + '/../assets/files/' + filename, function(err, stats) {
-                        (new models.Download({id: 'data'})).save({ 
-                            filename: filename, 
-                            timestamp: ts, 
+                        (new models.Download({id: 'data'})).save({
+                            filename: filename,
+                            timestamp: ts,
                             size: stats.size
                         }, { success: next });
                     });

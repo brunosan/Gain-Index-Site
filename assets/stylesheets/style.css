@@ -1869,13 +1869,12 @@ div.bottomscorelabel {
   min-height: 180px;
   }
 .country-selector .active-countries span.country {
+  background: transparent url(../images/sprite.png) repeat-x 0 -1570px;
   display: block;
   float: left;
   margin: 0 5px 10px 0;
   padding: 0 35px 0 10px;
   line-height: 30px;
-  background: #a8a8a8;
-  border-top: 2px solid #888;
   position: relative;
   -webkit-border-radius: 4px;
           border-radius: 4px;

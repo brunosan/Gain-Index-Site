@@ -561,6 +561,17 @@ model.meta = {
         "sector": null,
         "component": null
     },
+    "physicians": {
+        "id": "physicians",
+        "name": "Physicians",
+        "description": "Number of physicians",
+        "format": "number",
+        "decimals": "0",
+        "unit": null,
+        "index": null,
+        "sector": null,
+        "component": null
+    },
     "reporting": {
         "id": "reporting",
         "name": "Reporting level",
@@ -974,7 +985,7 @@ model.meta = {
         "sector": null,
         "component": null
     },
-    "Urban_concentration": {
+    "urban_concentration": {
        "id": "Urban_concentration",
        "name": "Urban concentration",
        "description": "Percentage of the country population living in the largest city.",
@@ -989,7 +1000,7 @@ model.meta = {
            "link": "http://data.worldbank.org/indicator/EN.URB.LCTY.UR.ZS"
        }]
    },
-   "Urban_excess_growth": {
+   "urban_excess_growth": {
        "id": "Urban_excess_growth",
        "name": "Urban excess growth",
        "description": "Excess rate of population growth in urban centres compared with the population growth rate in the whole country (annual %).",
@@ -1008,7 +1019,7 @@ model.meta = {
            "link": "http://data.worldbank.org/indicator/SP.POP.GROW"
        }]
    },
-   "Urban_risk": {
+   "urban_risk": {
        "id": "Urban_risk",
        "name": "Urban risk",
        "description": "A natural disaster risk index for populations living in large cities (i.e. >0.75M people).",
@@ -1023,7 +1034,7 @@ model.meta = {
            "link": "http://esa.un.org/unup/CD-ROM/Urban-Agglomerations.htm"
        }]
    },
-   "Exx": {
+   "exx": {
        "id": "Exx",
        "name": "Exx",
        "description": "TBD",
@@ -1098,7 +1109,7 @@ model.meta = {
            "link": "http://epi.yale.edu/downloads"
        }]
    },
-   "Trade_transport": {
+   "trade_transport": {
        "id": "Trade_transport",
        "name": "Quality of trade and transport-related infrastructure",
        "description": "Logistics professionals' perception of country's quality of trade and transport related infrastructure (e.g. ports, railroads, roads, information technology), on a rating ranging from 1 (very low) to 5 (very high). Scores are averaged across all respondents.",
@@ -1128,7 +1139,7 @@ model.meta = {
            "link": "http://sedac.ciesin.columbia.edu/entri/index.jsp"
        }]
    },
-   "Dependency_natural": {
+   "dependency_natural": {
        "id": "Dependency_natural",
        "name": "Dependency on natural capital",
        "description": "Use of natural capital in national accounting. Specifically natural capital related to ecosystem services: crop, pasture, forest (timber), forest (non-timber) and protected areas. Sub-surface capital such as oil, gas and mineral reserves are not included in this measure for GAIN.",
@@ -1143,7 +1154,7 @@ model.meta = {
            "link": "http://data.worldbank.org/sites/default/files/total_and_per_capita_wealth_of_nations.xls"
        }]
    },
-   "Electrical_outages": {
+   "electrical_outages": {
        "id": "Electrical_outages",
        "name": "Value lost due to electrical outages",
        "description": "Percentage of sale lost due to electrical outages (% of sales).",

@@ -10,8 +10,8 @@ view = Backbone.View.extend({
 
         _.each(['gain', 'readiness', 'vulnerability'], function(k) {
             var trend = indicators.byName('trend').trend(k);
-
             var indicator = indicators.byName(k);
+
             if (indicator) {
                 if (k === 'gain') {
                     summary[k] = {

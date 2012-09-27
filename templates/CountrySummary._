@@ -20,8 +20,8 @@
   </div>
 <% _.each(['vulnerability', 'readiness'], function(stat) { %>
   <div id='indicator-<%= stat %>' class='indicator'>
-      <span class='name'><%= data[stat].name %></span>
-      <span class='value'><%= data[stat].value %></span>
+    <span class='name'><%= data[stat].name %></span>
+    <span class='value'><%= data[stat].value %></span>
   </div>
 <% }); %>
 </div>
