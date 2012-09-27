@@ -317,7 +317,6 @@ ul.tabs li a.active {
 #header h1,
 #header .navigation {
   float: left;
-  height: 75px
   }
 #header h1 a.logo {
   background: transparent url(../images/sprite.png) no-repeat -160px 0;
@@ -345,24 +344,30 @@ ul.tabs li a.active {
 #header .navigation {
   position: absolute;
   left: 241px;
-  margin:0;padding:0;
-  background-color:#35434c;
+  margin:15px 0 0;padding:0;
   }
 #header .navigation li {
   float: left;
   }
 #header .navigation li a {
-  font: 15px/75px 'AlternateGothicLTNo3Regular','HelveticaNeueBoldCondensed', 'HelveticaNeue-Bold-Condensed', 'Arial Narrow', 'Arial', sans-serif;
+  font: 15px/40px 'AlternateGothicLTNo3Regular','HelveticaNeueBoldCondensed', 'HelveticaNeue-Bold-Condensed', 'Arial Narrow', 'Arial', sans-serif;
   text-transform:uppercase;
   text-decoration:none;
   float: left;
   height: 100%;
   width: 99px;
-  border-right:1px solid #11202c;
   color: white;
   padding-left:10px;
+  margin-left:1px;
+  -webkit-border-radius: 4px;
+          border-radius: 4px;
+  -webkit-transition: background-color 0.1s linear;
+     -moz-transition: background-color 0.1s linear;
+       -o-transition: background-color 0.1s linear;
+          transition: background-color 0.1s linear;
   }
   #header .navigation li a:hover {
+    background-color:#35434c;
     }
   #header .navigation li a.active {
     background-color:#fff;
@@ -374,7 +379,7 @@ ul.tabs li a.active {
     float:left;
     width:20px;
     height:20px;
-    margin:25px 5px 0 10px;
+    margin:10px 5px 0 10px;
     }
 
 #header .navigation li a .map                  { background-position: 0 -60px; margin-left:15px; }
@@ -396,6 +401,16 @@ ul.tabs li a.active {
 #header .navigation li a:hover .about          { background-position: -75px -60px; }
 #header .navigation li a.active .about         { background-position: -175px -60px; }
 #header .navigation li a.active:hover .about   { background-position: -175px -60px; }
+
+#header small {
+  float:right;
+  line-height:75px;
+  }
+  #header small a {
+    color:#626d75;
+    text-decoration:none;
+    }
+
 
 /*** Top Footer styles ***/
 #footer1 {

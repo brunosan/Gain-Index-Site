@@ -42,6 +42,7 @@
       <li><a class='matrix' href='/matrix'><span class='icon matrix'></span>Matrix</a></li>
       <li><a class='about' href='/about'><span class='icon about'></span>About</a></li>
     </ul>
+    <small><a href='http://gain.org'>Global Adaptation Institute</a></small>
   </div></div>
   <div id='page' class='limiter clearfix'>
     <div id='main'><%= main %></div>
