@@ -550,6 +550,17 @@ model.meta = {
             "link": "http://info.worldbank.org/governance/wgi/index.asp"
         }]
     },
+    "nurses_mw": {
+        "id": "nurses_mw",
+        "name": "Nurses",
+        "description": "Nurses Description",
+        "format": "number",
+        "decimals": "0",
+        "unit": null,
+        "index": null,
+        "sector": null,
+        "component": null
+    },
     "pop": {
         "id": "pop",
         "name": "Population",

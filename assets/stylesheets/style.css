@@ -1073,7 +1073,7 @@ body.fullscreen-map .front #map {
   }
 .front #map .zoom-control a:hover {
   text-decoration: none;
-  background:#333;
+  background-color:#333;
   }
 
 .front .map-selector {
@@ -1236,12 +1236,10 @@ body.fullscreen-map .front #map {
  */
 .document .download ul {
   border: 1px solid #c6c6c6;
-  padding: 10px;
-  margin: 15px -15px 15px 0;
-   -moz-border-radius: 4px 0 0 4px;
-   -webkit-border-radius: 4px 0 0 4px;
-   border-radius: 4px 0 0 4px;
-}
+  padding: 15px;
+  -webkit-border-radius: 4px;
+          border-radius: 4px;
+  }
 
 .document .download li {
   list-style: disc;
@@ -1277,7 +1275,7 @@ body.fullscreen-map .front #map {
   float: left;
   display: block;
   background: transparent url(../images/sprite.png) no-repeat 15px -230px;
-  margin-bottom: 15px;
+  margin-bottom: 30px;
   }
 
 /**
@@ -1423,7 +1421,7 @@ div.bottomscorelabel {
           border-radius: 4px;
   }
 .country-profile table.ranking-history {
-  width: 624px;
+  width: 100%;
   background-color: transparent;
   }
 .country-profile table.ranking-history th.label {

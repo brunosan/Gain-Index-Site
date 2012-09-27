@@ -487,7 +487,7 @@ command.prototype.initialize = function(options) {
 
             });
 
-            var inputOnly = _(['gdp', 'pop', 'nurses_mw', 'physicians'])
+            var inputOnly = _(['gdp', 'pop', 'reporting', 'nurses_mw', 'physicians'])
                 .include(path.basename(source))
 
             actions.push(validateAndSave(source, records, inputOnly ? 'inputOnly' : 'input'));

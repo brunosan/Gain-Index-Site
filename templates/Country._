@@ -30,10 +30,6 @@
     </div>
   </div>
   <div class='details'>
-    <div id='indicator-reporting' class='container indicator reporting'>
-        <span class='name'>Reporting Level</span>
-        <span class='value'><%= reporting %></span>
-    </div>
     <div class='tab-wrapper clearfix'>
       <ul class='tabs level-1'>
         <li><a href='#vulnerability' id='vulnerability'>Vulnerability</a></li>
