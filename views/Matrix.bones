@@ -4,7 +4,7 @@ var latestYear = 2011;
 // Our matrix is 580 px wide
 // Points are 15px by 15px
 var readinessToX = function(d) {
-    return Math.round(((d - 0.2) / (0.9 - 0.2)) * 580) - 8;
+    return Math.round(((d - 0) / (0.9 - 0)) * 580) - 8;
 };
 
 // * Vulnerability range 0.1 - 0.6
