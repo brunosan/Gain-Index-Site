@@ -394,20 +394,22 @@ model.meta = {
             "link": "http://data.worldbank.org/indicator/SH.XPD.EXTR.ZS"
         }]
     },
-    "exx": {
-       "id": "exx",
-       "name": "Exx",
-       "description": "TBD",
-       "format": "number",
-       "decimals": "2",
-       "unit": "null",
-       "index": "vulnerability",
-       "sector": "ecosystems",
-       "component": "exposure",
-       "source": [{
-           "name": "TBD",
-           "link": "#"
-       }]
+	"exx": {
+	       "id": "biome_threat",
+	       "name": "Projected Biome Threat",
+	       "description": "The proportion of the land of a country on which the existing biome is no longer matched to the projected climate of the late 21st century.",
+	       "format": "number",
+	       "decimals": "2",
+	       "unit": "null",
+	       "index": "vulnerability",
+	       "sector": "ecosystems",
+	       "component": "exposure",
+	       "source": [{
+	           "name": "Gonzalez, et al. (2010), Global patterns in the vulnerability of ecosystems to vegetation shifts due to climate change. Global Ecology and Biogeography, 19: 755–768. doi: 10.1111/j.1466-8238.2010.00558.x Annex S3",
+	           "link": "http://pgonzalez.home.igc.org/Gonzalez_et_al_2010_GEB_SI.pdf",
+	           "name": "J. Hansen, et al., Global warming in the twenty-first century: An alternative scenario. Proc. Natl. Acad. Sci. 97, 9875-9880, doi:10.1073/pnas.170278997 (2000).",
+	           "link": "http://pubs.giss.nasa.gov/docs/2000/2000_Hansen_etal_2.pdf"
+	       }]
     },
     "fertilizers": {
         "id": "fertilizers",
