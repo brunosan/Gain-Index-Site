@@ -956,29 +956,29 @@ table.full tbody tr.active:hover {
   padding-top: 25px;
   top: 0;
   left: 61px;
-  width: 278px;
+  width: 338px;
   height: 197px;
   }
 .quad-tr {
   background-color: #68B5DF;
   padding-top: 25px;
   top: 0;
-  left: 359px;
-  width: 261px;
+  left: 420px;
+  width: 200px;
   height: 197px;
   }
 .quad-br {
   background-color: #68BB37;
   top: 233px;
-  left: 359px;
-  width: 261px;
+  left: 420px;
+  width: 200px;
   height: 97px;
   }
 .quad-bl {
   background-color: #F6CD47;
   top: 233px;
   left: 61px;
-  width: 278px;
+  width: 338px;
   height: 97px;
   padding: 8px 10px 12px;
   }
