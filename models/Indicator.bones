@@ -148,6 +148,36 @@ model.formats = {
 };
 
 model.meta = {
+    // resources/gain
+    // --------------------------------
+    "gain_delta": {
+        "id": "gain_delta",
+        "name": "GAIN Index, adjusted for GDP",
+        "description": "GDP adjusted GAIN Index scores represent how much better or worse the actual GAIN Index score is from its expected value, based on its GDP. A positive value means a country has a better GAIN Index score than other countries of a similar GDP. A negative value means a country has a worse score.",
+        "map_caption": "Countries of the world by GAIN Index, adjusted for GDP. Higher scores are better.",
+        "ranking_caption": "World wide ranking by GAIN Index, adjusted for GDP. Higher scores are better.",
+        "format": "number",
+        "decimals": "2",
+        "unit": null,
+        "index": "gain",
+        "sector": null,
+        "component": null
+    },
+    "gain": {
+        "id": "gain",
+        "name": "GAIN Index",
+        "description": "The GAIN Index captures a country's Vulnerability to climate change and other global challenges, and its Readiness to improve resilience.",
+        "map_caption": "Countries of the world by GAIN Index, higher scores are better.",
+        "ranking_caption": "World wide ranking by GAIN Index, higher scores are better.",
+        "format": "number",
+        "decimals": "1",
+        "unit": null,
+        "index": "gain",
+        "sector": null,
+        "component": null
+    },
+    // resources/indicators
+    // --------------------------------
     "business": {
         "id": "business",
         "name": "Business freedom",
@@ -208,8 +238,8 @@ model.meta = {
             "link": "http://info.worldbank.org/governance/wgi/sc_country.asp"
         }]
     },
-    "d-Ppt": {
-        "id": "d-Ppt",
+    "d-ppt": {
+        "id": "d-ppt",
         "name": "Precipitation change",
         "description": "Projected change in precipitation by late 21st century, i.e. 2070-99 compared to  1961-90.",
         "format": "percent",
@@ -223,7 +253,7 @@ model.meta = {
             "link": "http://www.cru.uea.ac.uk/cru/data/hrg/"
         }]
     },
-    "d-Temp": {
+    "d-temp": {
         "id": "d-Temp",
         "name": "Temperature change",
         "description": "Projected change in temperature by late 21st century, i.e. 2070-99 compared to  1961-90.",
@@ -252,6 +282,51 @@ model.meta = {
             "name": "Adaptation costs for climate change-related cases of diarrhoeal disease, malnutrition, and malaria in 2030, by Kristie L Ebi",
             "link": "http://www.globalizationandhealth.com/content/4/1/9"
         }]
+    },
+    "dependency_natural": {
+       "id": "dependency_natural",
+       "name": "Dependency on natural capital",
+       "description": "Use of natural capital in national accounting. Specifically natural capital related to ecosystem services: crop, pasture, forest (timber), forest (non-timber) and protected areas. Sub-surface capital such as oil, gas and mineral reserves are not included in this measure for GAIN.",
+       "format": "number",
+       "decimals": "2",
+       "unit": "%s %",
+       "index": "vulnerability",
+       "sector": "ecosystems",
+       "component": "exposure",
+       "source": [{
+           "name": "The Changing Wealth of Nations : Measuring Sustainable Development in the New Millennium. World Bank 2011",
+           "link": "http://data.worldbank.org/sites/default/files/total_and_per_capita_wealth_of_nations.xls"
+       }]
+    },
+    "ecological_footprint": {
+       "id": "ecological_footprint",
+       "name": "Ecological footprint",
+       "description": "Measures the number of hectares of land and water, both within and outside the country, to supply the average demand on the ecosystems services by the lifestyles of the population of each country. This is compared with the estimated capacity of a country’s ecosystems to regenerate and maintain ecosystem services for either internal use or export. This measure uses the surplus or deficit of capacity to supply over the demand within each country.",
+       "format": "number",
+       "decimals": "2",
+       "unit": "null",
+       "index": "vulnerability",
+       "sector": "ecosystems",
+       "component": "sensitivity",
+       "source": [{
+           "name": "National Footprint Accounts 2011 edition",
+           "link": "http://www.footprintnetwork.org"
+       }]
+    },
+    "electrical_outages": {
+       "id": "electrical_outages",
+       "name": "Value lost due to electrical outages",
+       "description": "Percentage of sale lost due to electrical outages (% of sales).",
+       "format": "number",
+       "decimals": "2",
+       "unit": "%s %",
+       "index": "vulnerability",
+       "sector": "habitat",
+       "component": "capacity",
+       "source": [{
+           "name": "World Development Indicators - Value lost due to electrical outages",
+           "link": "http://data.worldbank.org/indicator/IC.FRM.OUTG.ZS"
+       }]
     },
     "energy_access": {
         "id": "energy_access",
@@ -317,6 +392,36 @@ model.meta = {
         "source": [{
             "name": "World Development Indicators",
             "link": "http://data.worldbank.org/indicator/SH.XPD.EXTR.ZS"
+        }]
+    },
+    "exx": {
+       "id": "exx",
+       "name": "Exx",
+       "description": "TBD",
+       "format": "number",
+       "decimals": "2",
+       "unit": "null",
+       "index": "vulnerability",
+       "sector": "ecosystems",
+       "component": "exposure",
+       "source": [{
+           "name": "TBD",
+           "link": "#"
+       }]
+    },
+    "fertilizers": {
+        "id": "fertilizers",
+        "name": "Fertilizers",
+        "description": "",
+        "format": "number",
+        "decimals": "2",
+        "unit": "%s %",
+        "index": "vulnerability",
+        "sector": "food",
+        "component": "exposure",
+        "source": [{
+            "name": "",
+            "link": ""
         }]
     },
     "finan": {
@@ -430,6 +535,21 @@ model.meta = {
             "link": "http://FAOStat.fao.org"
         }]
     },
+    "international_treaties": {
+       "id": "international_treaties",
+       "name": "Engagement in International Environmental Conventions",
+       "description": "The country’s participation in international forums, which is taken as an indicator its capacity to engage in multilateral negotiations and to reach agreement on appropriate actions internally.",
+       "format": "number",
+       "decimals": "null",
+       "unit": "null",
+       "index": "vulnerability",
+       "sector": "ecosystems",
+       "component": "capacity",
+       "source": [{
+           "name": "Environmental Treaties and Resource Indicators",
+           "link": "http://sedac.ciesin.columbia.edu/entri/index.jsp"
+       }]
+    },
     "invest": {
         "id": "invest",
         "name": "Investment freedom",
@@ -443,6 +563,21 @@ model.meta = {
         "source": [{
             "name": "Index of Economic Freedom",
             "link": "http://www.heritage.org/index/explore"
+        }]
+    },
+    "irrigated": {
+        "id": "irrigated",
+        "name": "Irrigated",
+        "description": "",
+        "format": "number",
+        "decimals": "2",
+        "unit": null,
+        "index": "readiness",
+        "sector": null,
+        "component": "social",
+        "source": [{
+            "name": "",
+            "link": ""
         }]
     },
     "labor": {
@@ -473,6 +608,21 @@ model.meta = {
         "source": [{
             "name": "World Development Indicators",
             "link": "http://data.worldbank.org/indicator/SP.DYN.LE00.IN"
+        }]
+    },
+    "machinery": {
+        "id": "machinery",
+        "name": "Machinery",
+        "description": "",
+        "format": "number",
+        "decimals": "2",
+        "unit": null,
+        "index": "readiness",
+        "sector": null,
+        "component": "social",
+        "source": [{
+            "name": "",
+            "link": ""
         }]
     },
     "malnutr": {
@@ -557,9 +707,20 @@ model.meta = {
         "format": "number",
         "decimals": "0",
         "unit": null,
-        "index": null,
-        "sector": null,
-        "component": null
+        "index": "vulnerability",
+        "sector": "health",
+        "component": "capacity"
+    },
+    "physicians": {
+        "id": "physicians",
+        "name": "Physicians",
+        "description": "Number of physicians",
+        "format": "number",
+        "decimals": "0",
+        "unit": null,
+        "index": "vulnerability",
+        "sector": "health",
+        "component": "capacity"
     },
     "pop": {
         "id": "pop",
@@ -572,27 +733,20 @@ model.meta = {
         "sector": null,
         "component": null
     },
-    "physicians": {
-        "id": "physicians",
-        "name": "Physicians",
-        "description": "Number of physicians",
-        "format": "number",
-        "decimals": "0",
-        "unit": null,
-        "index": null,
-        "sector": null,
-        "component": null
-    },
-    "reporting": {
-        "id": "reporting",
-        "name": "Reporting level",
-        "description": "The reporting level measures data availability. When data gaps are present we use linear interpolations, and constant extrapolations. 100% indicates that all measures where reported for a particular year.",
-        "format": "percent",
-        "index": "reportinglevel",
-        "decimals": "0",
-        "unit": "%s %",
-        "sector": null,
-        "component": null
+    "protected_biomes": {
+       "id": "protected_biomes",
+       "name": "Protected biomes",
+       "description": "The weighted percentage of biomes under protected status, where the weight is determined by the size of biomes within a country. Countries are not rewarded for protecting beyond 17% of any given biome (i.e., scores are capped at 17% per biome) so that higher levels of protection of some biomes cannot be used to offset lower levels of protection of other biomes.",
+       "format": "number",
+       "decimals": "2",
+       "unit": "null",
+       "index": "vulnerability",
+       "sector": "ecosystems",
+       "component": "capacity",
+       "source": [{
+           "name": "Emerson, J.W. et al. 2012: 2012 Environmental Performance Index and Pilot Trend Environmental Performance Index.",
+           "link": "http://epi.yale.edu/downloads"
+       }]
     },
     "road_floods": {
         "id": "road_floods",
@@ -614,7 +768,6 @@ model.meta = {
             "link": "http://www.emdat.be/"
         }
         ]
-
     },
     "road_paved": {
         "id": "road_paved",
@@ -630,6 +783,21 @@ model.meta = {
         {
             "name": "World Development Indicators",
             "link": "http://data.worldbank.org/indicator/IS.ROD.PAVE.ZS"
+        }]
+    },
+    "rule_of_law": {
+        "id": "rule_of_law",
+        "name": "Rule of law",
+        "description": "Confidence in and abide by the rules of society, and in particular the quality of contract enforcement, property rights, the police, and the courts, as well as the likelihood of crime and violence.",
+        "format": "number",
+        "decimals": "2",
+        "unit": null,
+        "index": "readiness",
+        "sector": null,
+        "component": "social",
+        "source": [{
+            "name": "Worldwide Governance Indicators",
+            "link": "http://info.worldbank.org/governance/wgi/sc_country.asp"
         }]
     },
     "rural_popn": {
@@ -652,21 +820,6 @@ model.meta = {
         }
         ]
     },
-    "rule_of_law": {
-        "id": "rule_of_law",
-        "name": "Rule of law",
-        "description": "Confidence in and abide by the rules of society, and in particular the quality of contract enforcement, property rights, the police, and the courts, as well as the likelihood of crime and violence.",
-        "format": "number",
-        "decimals": "2",
-        "unit": null,
-        "index": "readiness",
-        "sector": null,
-        "component": "social",
-        "source": [{
-            "name": "Worldwide Governance Indicators",
-            "link": "http://info.worldbank.org/governance/wgi/sc_country.asp"
-        }]
-    },
     "sanit": {
         "id": "sanit",
         "name": "Improved sanitation facilities",
@@ -682,6 +835,21 @@ model.meta = {
             "link": "http://data.worldbank.org/indicator/SH.STA.ACSN"
         }]
     },
+   "slums": {
+       "id": "slums",
+       "name": "Slums",
+       "description": "Urban Population Living in Slums.",
+       "format": "number",
+       "decimals": "2",
+       "unit": "%s %",
+       "index": "vulnerability",
+       "sector": "habitat",
+       "component": "sensitivity",
+       "source": [{
+           "name": "United Nations Indicators - Millenium Development Goals",
+           "link": "http://mdgs.un.org/unsd/mdg/SeriesDetail.aspx?srid=710"
+       }]
+   },
     "staff": {
         "id": "staff",
         "name": "Health workers per capita",
@@ -703,6 +871,21 @@ model.meta = {
         }
         ]
     },
+    "threatened_species": {
+       "id": "threatened_species",
+       "name": "Threatened species",
+       "description": "Composite measure made up of (1) the percentage of mammal species recorded as threatened; (2) the percentage of plant species threatened; and (3) the number of bird species threatened.",
+       "format": "number",
+       "decimals": "2",
+       "unit": "%s %",
+       "index": "vulnerability",
+       "sector": "habitat",
+       "component": "sensitivity",
+       "source": [{
+           "name": "IUCN Red Book",
+           "link": "http://www.iucnredlist.org/"
+       }]
+    },
     "trade": {
         "id": "trade",
         "name": "Trade freedom",
@@ -717,6 +900,70 @@ model.meta = {
             "name": "Index of Economic Freedom",
             "link": "http://www.heritage.org/index/explore"
         }]
+    },
+    "trade_transport": {
+       "id": "trade_transport",
+       "name": "Quality of trade and transport-related infrastructure",
+       "description": "Logistics professionals' perception of country's quality of trade and transport related infrastructure (e.g. ports, railroads, roads, information technology), on a rating ranging from 1 (very low) to 5 (very high). Scores are averaged across all respondents.",
+       "format": "number",
+       "decimals": "null",
+       "unit": "null",
+       "index": "vulnerability",
+       "sector": "habitat",
+       "component": "capacity",
+       "source": [{
+           "name": "World Development Indicators -  Logistics Performance Index",
+           "link": "http://data.worldbank.org/indicator/LP.LPI.INFR.XQ"
+       }]
+    },
+    "urban_concentration": {
+       "id": "urban_concentration",
+       "name": "Urban concentration",
+       "description": "Percentage of the country population living in the largest city.",
+       "format": "number",
+       "decimals": "2",
+       "unit": "%s %",
+       "index": "vulnerability",
+       "sector": "habitat",
+       "component": "exposure",
+       "source": [{
+           "name": "World Development Indicators - Population in largest city",
+           "link": "http://data.worldbank.org/indicator/EN.URB.LCTY.UR.ZS"
+       }]
+    },
+    "urban_excess_growth": {
+       "id": "urban_excess_growth",
+       "name": "Urban excess growth",
+       "description": "Excess rate of population growth in urban centres compared with the population growth rate in the whole country (annual %).",
+       "format": "number",
+       "decimals": "2",
+       "unit": "%s %",
+       "index": "vulnerability",
+       "sector": "habitat",
+       "component": "sensitivity",
+       "source": [{
+           "name": "World Development Indicators - Urban population growth",
+           "link": "http://data.worldbank.org/indicator/SP.URB.GROW",
+           "name": "World Development Indicators - Urban population",
+           "link": "http://data.worldbank.org/indicator/SP.URB.TOTL",
+           "name": "World Development Indicators - Population growth",
+           "link": "http://data.worldbank.org/indicator/SP.POP.GROW"
+       }]
+    },
+    "urban_risk": {
+       "id": "urban_risk",
+       "name": "Urban risk",
+       "description": "A natural disaster risk index for populations living in large cities (i.e. >0.75M people).",
+       "format": "number",
+       "decimals": "2",
+       "unit": "null",
+       "index": "vulnerability",
+       "sector": "habitat",
+       "component": "exposure",
+       "source": [{
+           "name": "UN Dept Economic & Social Affairs;",
+           "link": "http://esa.un.org/unup/CD-ROM/Urban-Agglomerations.htm"
+       }]
     },
     "voice_accountability": {
         "id": "voice_accountability",
@@ -808,17 +1055,8 @@ model.meta = {
             "link": "http://www.cgdev.org/content/publications/detail/1424986"
         }]
     },
-    "governance": {
-        "id": "governance",
-        "name": "Governance",
-        "description": "Corresponds to 30% of Readiness, equally weighting 'Voice and Accountability', government 'Stability' and 'Control of corruption'.",
-        "format": "number",
-        "decimals": "2",
-        "unit": null,
-        "index": "readiness",
-        "sector": null,
-        "component": null
-    },
+    // resources/readiness
+    // --------------------------------
     "economic": {
         "id": "economic",
         "name": "Economic",
@@ -830,126 +1068,10 @@ model.meta = {
         "sector": null,
         "component": null
     },
-    "social": {
-        "id": "social",
-        "name": "Social readiness",
-        "description": "Corresponds to 30% of Readiness. It measures human capital, access to information, communications and working environment.",
-        "format": "number",
-        "decimals": "2",
-        "unit": null,
-        "index": "readiness",
-        "sector": null,
-        "component": null
-    },
-    "exposure": {
-        "id": "exposure",
-        "name": "Exposure",
-        "description": "The nature and degree to which a system is exposed to significant climatic variations.",
-        "format": "number",
-        "decimals": "2",
-        "unit": null,
-        "index": "vulnerability",
-        "sector": null,
-        "component": null
-    },
-    "sensitivity": {
-        "id": "sensitivity",
-        "name": "Sensitivity",
-        "description": "The degree to which a system is affected, either adversely or beneficially, by climate variability or change.",
-        "format": "number",
-        "decimals": "2",
-        "unit": null,
-        "index": "vulnerability",
-        "sector": null,
-        "component": null
-    },
-    "capacity": {
-        "id": "capacity",
-        "name": "Capacity",
-        "description": "The availability of economic, social, and institutional resources to cope with and adapt to the impacts of climate change in specific sectors. Though related, this differs from readiness indicators in that it seeks to measure the current ability to increase resilience (or reduce vulnerability) in specific sectors, whereas Readiness measures a country’s ability to facilitate further increases in resilience.",
-        "format": "number",
-        "decimals": "2",
-        "unit": null,
-        "index": "vulnerability",
-        "sector": null,
-        "component": null
-    },
-    "water": {
-        "id": "water",
-        "name": "Water",
-        "description": "The Water score summarizes a country's current and future ability to provide clean water.",
-        "format": "number",
-        "decimals": "2",
-        "unit": null,
-        "index": "vulnerability",
-        "sector": null,
-        "component": null
-    },
-    "food": {
-        "id": "food",
-        "name": "Food",
-        "description": "The Food score summarizes a country's food production, nutrition and rural population.",
-        "format": "number",
-        "decimals": "2",
-        "unit": null,
-        "index": "vulnerability",
-        "sector": null,
-        "component": null
-    },
-    "health": {
-        "id": "health",
-        "name": "Health",
-        "description": "The Health score summarizes a country's ability to provide health services.",
-        "format": "number",
-        "decimals": "2",
-        "unit": null,
-        "index": "vulnerability",
-        "sector": null,
-        "component": null
-    },
-    "infrastruct": {
-        "id": "infrastruct",
-        "name": "Infrastructure",
-        "description": "The Infrastructure score summarizes three factors impacting human well-being: coasts, energy and transportation.",
-        "format": "number",
-        "decimals": "2",
-        "unit": null,
-        "index": "vulnerability",
-        "sector": null,
-        "component": null
-    },
-    "vulnerability": {
-        "id": "vulnerability",
-        "name": "Vulnerability",
-        "description": "A country's GAIN Index score is composed of a Vulnerability score and a Readiness score. Vulnerability measures a country's exposure, sensitivity and ability to cope with climate related hazards, as well as accounting for the overall status of food, water, health and infrastructure within the nation.",
-        "map_caption": "Countries of the world by Vulnerability, lower scores (blue) are better.",
-        "ranking_caption": "World wide ranking by Vulnerability, lower scores are better.",
-        "format": "number",
-        "decimals": "2",
-        "unit": null,
-        "index": "vulnerability",
-        "sector": null,
-        "component": null
-    },
-    "vulnerability_delta": {
-        "id": "vulnerability_delta",
-        "name": "Vulnerability, adjusted for GDP",
-        "description": "GDP adjusted Vulnerability scores represent how far the actual Vulnerability score of a country is from its expected Vulnerability score based on its GDP.  A positive value means a country has a higher Vulnerability score than other countries of a similar GDP. A negative value means a country has a worse score.",
-        "map_caption": "Countries of the world by Vulnerability, adjusted for GDP. Lower scores (blue) are better.",
-        "ranking_caption": "World wide ranking by Vulnerability, adjusted for GDP. Lower scores are better.",
-        "format": "number",
-        "decimals": "2",
-        "unit": null,
-        "index": "vulnerability_delta",
-        "sector": null,
-        "component": null
-    },
-    "readiness": {
-        "id": "readiness",
-        "name": "Readiness",
-        "description": "A country's GAIN Index score is composed of a Vulnerability score and a Readiness score. Readiness targets those portions of the economy, governance and society that affect the speed and efficiency of absorption and implementation of Adaptation projects.",
-        "map_caption": "Countries of the world by Readiness, higher scores are better.",
-        "ranking_caption": "World wide ranking by Readiness, higher scores are better.",
+    "governance": {
+        "id": "governance",
+        "name": "Governance",
+        "description": "Corresponds to 30% of Readiness, equally weighting 'Voice and Accountability', government 'Stability' and 'Control of corruption'.",
         "format": "number",
         "decimals": "2",
         "unit": null,
@@ -970,216 +1092,157 @@ model.meta = {
         "sector": null,
         "component": null
     },
-    "gain": {
-        "id": "gain",
-        "name": "GAIN Index",
-        "description": "The GAIN Index captures a country's Vulnerability to climate change and other global challenges, and its Readiness to improve resilience.",
-        "map_caption": "Countries of the world by GAIN Index, higher scores are better.",
-        "ranking_caption": "World wide ranking by GAIN Index, higher scores are better.",
-        "format": "number",
-        "decimals": "1",
-        "unit": null,
-        "index": "gain",
-        "sector": null,
-        "component": null
-    },
-    "gain_delta": {
-        "id": "gain_delta",
-        "name": "GAIN Index, adjusted for GDP",
-        "description": "GDP adjusted GAIN Index scores represent how much better or worse the actual GAIN Index score is from its expected value, based on its GDP. A positive value means a country has a better GAIN Index score than other countries of a similar GDP. A negative value means a country has a worse score.",
-        "map_caption": "Countries of the world by GAIN Index, adjusted for GDP. Higher scores are better.",
-        "ranking_caption": "World wide ranking by GAIN Index, adjusted for GDP. Higher scores are better.",
+    "readiness": {
+        "id": "readiness",
+        "name": "Readiness",
+        "description": "A country's GAIN Index score is composed of a Vulnerability score and a Readiness score. Readiness targets those portions of the economy, governance and society that affect the speed and efficiency of absorption and implementation of Adaptation projects.",
+        "map_caption": "Countries of the world by Readiness, higher scores are better.",
+        "ranking_caption": "World wide ranking by Readiness, higher scores are better.",
         "format": "number",
         "decimals": "2",
         "unit": null,
-        "index": "gain",
+        "index": "readiness",
         "sector": null,
         "component": null
     },
-    "urban_concentration": {
-       "id": "Urban_concentration",
-       "name": "Urban concentration",
-       "description": "Percentage of the country population living in the largest city.",
-       "format": "number",
-       "decimals": "2",
-       "unit": "%s %",
-       "index": "vulnerability",
-       "sector": "habitat",
-       "component": "exposure",
-       "source": [{
-           "name": "World Development Indicators - Population in largest city",
-           "link": "http://data.worldbank.org/indicator/EN.URB.LCTY.UR.ZS"
-       }]
-   },
-   "urban_excess_growth": {
-       "id": "Urban_excess_growth",
-       "name": "Urban excess growth",
-       "description": "Excess rate of population growth in urban centres compared with the population growth rate in the whole country (annual %).",
-       "format": "number",
-       "decimals": "2",
-       "unit": "%s %",
-       "index": "vulnerability",
-       "sector": "habitat",
-       "component": "sensitivity",
-       "source": [{
-           "name": "World Development Indicators - Urban population growth",
-           "link": "http://data.worldbank.org/indicator/SP.URB.GROW",
-           "name": "World Development Indicators - Urban population",
-           "link": "http://data.worldbank.org/indicator/SP.URB.TOTL",
-           "name": "World Development Indicators - Population growth",
-           "link": "http://data.worldbank.org/indicator/SP.POP.GROW"
-       }]
-   },
-   "urban_risk": {
-       "id": "Urban_risk",
-       "name": "Urban risk",
-       "description": "A natural disaster risk index for populations living in large cities (i.e. >0.75M people).",
-       "format": "number",
-       "decimals": "2",
-       "unit": "null",
-       "index": "vulnerability",
-       "sector": "habitat",
-       "component": "exposure",
-       "source": [{
-           "name": "UN Dept Economic & Social Affairs;",
-           "link": "http://esa.un.org/unup/CD-ROM/Urban-Agglomerations.htm"
-       }]
-   },
-   "exx": {
-       "id": "Exx",
-       "name": "Exx",
-       "description": "TBD",
-       "format": "number",
-       "decimals": "2",
-       "unit": "null",
-       "index": "vulnerability",
-       "sector": "ecosystems",
-       "component": "exposure",
-       "source": [{
-           "name": "TBD",
-           "link": "#"
-       }]
-   },
-   "threatened_species": {
-       "id": "threatened_species",
-       "name": "Threatened species",
-       "description": "Composite measure made up of (1) the percentage of mammal species recorded as threatened; (2) the percentage of plant species threatened; and (3) the number of bird species threatened.",
-       "format": "number",
-       "decimals": "2",
-       "unit": "%s %",
-       "index": "vulnerability",
-       "sector": "habitat",
-       "component": "sensitivity",
-       "source": [{
-           "name": "IUCN Red Book",
-           "link": "http://www.iucnredlist.org/"
-       }]
-   },
-   "slums": {
-       "id": "slums",
-       "name": "Slums",
-       "description": "Urban Population Living in Slums.",
-       "format": "number",
-       "decimals": "2",
-       "unit": "%s %",
-       "index": "vulnerability",
-       "sector": "habitat",
-       "component": "sensitivity",
-       "source": [{
-           "name": "United Nations Indicators - Millenium Development Goals",
-           "link": "http://mdgs.un.org/unsd/mdg/SeriesDetail.aspx?srid=710"
-       }]
-   },
-   "ecological_footprint": {
-       "id": "ecological_footprint",
-       "name": "Ecological footprint",
-       "description": "Measures the number of hectares of land and water, both within and outside the country, to supply the average demand on the ecosystems services by the lifestyles of the population of each country. This is compared with the estimated capacity of a country’s ecosystems to regenerate and maintain ecosystem services for either internal use or export. This measure uses the surplus or deficit of capacity to supply over the demand within each country.",
-       "format": "number",
-       "decimals": "2",
-       "unit": "null",
-       "index": "vulnerability",
-       "sector": "ecosystems",
-       "component": "sensitivity",
-       "source": [{
-           "name": "National Footprint Accounts 2011 edition",
-           "link": "http://www.footprintnetwork.org"
-       }]
-   },
-   "protected_biomes": {
-       "id": "protected_biomes",
-       "name": "Protected biomes",
-       "description": "The weighted percentage of biomes under protected status, where the weight is determined by the size of biomes within a country. Countries are not rewarded for protecting beyond 17% of any given biome (i.e., scores are capped at 17% per biome) so that higher levels of protection of some biomes cannot be used to offset lower levels of protection of other biomes.",
-       "format": "number",
-       "decimals": "2",
-       "unit": "null",
-       "index": "vulnerability",
-       "sector": "ecosystems",
-       "component": "capacity",
-       "source": [{
-           "name": "Emerson, J.W. et al. 2012: 2012 Environmental Performance Index and Pilot Trend Environmental Performance Index.",
-           "link": "http://epi.yale.edu/downloads"
-       }]
-   },
-   "trade_transport": {
-       "id": "Trade_transport",
-       "name": "Quality of trade and transport-related infrastructure",
-       "description": "Logistics professionals' perception of country's quality of trade and transport related infrastructure (e.g. ports, railroads, roads, information technology), on a rating ranging from 1 (very low) to 5 (very high). Scores are averaged across all respondents.",
-       "format": "number",
-       "decimals": "null",
-       "unit": "null",
-       "index": "vulnerability",
-       "sector": "habitat",
-       "component": "capacity",
-       "source": [{
-           "name": "World Development Indicators -  Logistics Performance Index",
-           "link": "http://data.worldbank.org/indicator/LP.LPI.INFR.XQ"
-       }]
-   },
-   "international_treaties": {
-       "id": "international_treaties",
-       "name": "Engagement in International Environmental Conventions",
-       "description": "The country’s participation in international forums, which is taken as an indicator its capacity to engage in multilateral negotiations and to reach agreement on appropriate actions internally.",
-       "format": "number",
-       "decimals": "null",
-       "unit": "null",
-       "index": "vulnerability",
-       "sector": "ecosystems",
-       "component": "capacity",
-       "source": [{
-           "name": "Environmental Treaties and Resource Indicators",
-           "link": "http://sedac.ciesin.columbia.edu/entri/index.jsp"
-       }]
-   },
-   "dependency_natural": {
-       "id": "Dependency_natural",
-       "name": "Dependency on natural capital",
-       "description": "Use of natural capital in national accounting. Specifically natural capital related to ecosystem services: crop, pasture, forest (timber), forest (non-timber) and protected areas. Sub-surface capital such as oil, gas and mineral reserves are not included in this measure for GAIN.",
-       "format": "number",
-       "decimals": "2",
-       "unit": "%s %",
-       "index": "vulnerability",
-       "sector": "ecosystems",
-       "component": "exposure",
-       "source": [{
-           "name": "The Changing Wealth of Nations : Measuring Sustainable Development in the New Millennium. World Bank 2011",
-           "link": "http://data.worldbank.org/sites/default/files/total_and_per_capita_wealth_of_nations.xls"
-       }]
-   },
-   "electrical_outages": {
-       "id": "Electrical_outages",
-       "name": "Value lost due to electrical outages",
-       "description": "Percentage of sale lost due to electrical outages (% of sales).",
-       "format": "number",
-       "decimals": "2",
-       "unit": "%s %",
-       "index": "vulnerability",
-       "sector": "habitat",
-       "component": "capacity",
-       "source": [{
-           "name": "World Development Indicators - Value lost due to electrical outages",
-           "link": "http://data.worldbank.org/indicator/IC.FRM.OUTG.ZS"
-       }]
-   }
+    "social": {
+        "id": "social",
+        "name": "Social readiness",
+        "description": "Corresponds to 30% of Readiness. It measures human capital, access to information, communications and working environment.",
+        "format": "number",
+        "decimals": "2",
+        "unit": null,
+        "index": "readiness",
+        "sector": null,
+        "component": null
+    },
+    // resources/vulnerability
+    // --------------------------------
+    "capacity": {
+        "id": "capacity",
+        "name": "Capacity",
+        "description": "The availability of economic, social, and institutional resources to cope with and adapt to the impacts of climate change in specific sectors. Though related, this differs from readiness indicators in that it seeks to measure the current ability to increase resilience (or reduce vulnerability) in specific sectors, whereas Readiness measures a country’s ability to facilitate further increases in resilience.",
+        "format": "number",
+        "decimals": "2",
+        "unit": null,
+        "index": "vulnerability",
+        "sector": null,
+        "component": null
+    },
+    "ecosystems": {
+        "id": "ecosystems",
+        "name": "Ecosystems",
+        "description": "",
+        "format": "number",
+        "decimals": "2",
+        "unit": null,
+        "index": "vulnerability",
+        "sector": null,
+        "component": null
+    },
+    "exposure": {
+        "id": "exposure",
+        "name": "Exposure",
+        "description": "The nature and degree to which a system is exposed to significant climatic variations.",
+        "format": "number",
+        "decimals": "2",
+        "unit": null,
+        "index": "vulnerability",
+        "sector": null,
+        "component": null
+    },
+    "food": {
+        "id": "food",
+        "name": "Food",
+        "description": "The Food score summarizes a country's food production, nutrition and rural population.",
+        "format": "number",
+        "decimals": "2",
+        "unit": null,
+        "index": "vulnerability",
+        "sector": null,
+        "component": null
+    },
+    "habitat": {
+        "id": "habitat",
+        "name": "Habitat",
+        "description": "",
+        "format": "number",
+        "decimals": "2",
+        "unit": null,
+        "index": "vulnerability",
+        "sector": null,
+        "component": null
+    },
+    "health": {
+        "id": "health",
+        "name": "Health",
+        "description": "The Health score summarizes a country's ability to provide health services.",
+        "format": "number",
+        "decimals": "2",
+        "unit": null,
+        "index": "vulnerability",
+        "sector": null,
+        "component": null
+    },
+    "infrastructure": {
+        "id": "infrastructure",
+        "name": "Infrastructure",
+        "description": "The Infrastructure score summarizes three factors impacting human well-being: coasts, energy and transportation.",
+        "format": "number",
+        "decimals": "2",
+        "unit": null,
+        "index": "vulnerability",
+        "sector": null,
+        "component": null
+    },
+    "sensitivity": {
+        "id": "sensitivity",
+        "name": "Sensitivity",
+        "description": "The degree to which a system is affected, either adversely or beneficially, by climate variability or change.",
+        "format": "number",
+        "decimals": "2",
+        "unit": null,
+        "index": "vulnerability",
+        "sector": null,
+        "component": null
+    },
+    "vulnerability_delta": {
+        "id": "vulnerability_delta",
+        "name": "Vulnerability, adjusted for GDP",
+        "description": "GDP adjusted Vulnerability scores represent how far the actual Vulnerability score of a country is from its expected Vulnerability score based on its GDP.  A positive value means a country has a higher Vulnerability score than other countries of a similar GDP. A negative value means a country has a worse score.",
+        "map_caption": "Countries of the world by Vulnerability, adjusted for GDP. Lower scores (blue) are better.",
+        "ranking_caption": "World wide ranking by Vulnerability, adjusted for GDP. Lower scores are better.",
+        "format": "number",
+        "decimals": "2",
+        "unit": null,
+        "index": "vulnerability_delta",
+        "sector": null,
+        "component": null
+    },
+    "vulnerability": {
+        "id": "vulnerability",
+        "name": "Vulnerability",
+        "description": "A country's GAIN Index score is composed of a Vulnerability score and a Readiness score. Vulnerability measures a country's exposure, sensitivity and ability to cope with climate related hazards, as well as accounting for the overall status of food, water, health and infrastructure within the nation.",
+        "map_caption": "Countries of the world by Vulnerability, lower scores (blue) are better.",
+        "ranking_caption": "World wide ranking by Vulnerability, lower scores are better.",
+        "format": "number",
+        "decimals": "2",
+        "unit": null,
+        "index": "vulnerability",
+        "sector": null,
+        "component": null
+    },
+    "water": {
+        "id": "water",
+        "name": "Water",
+        "description": "The Water score summarizes a country's current and future ability to provide clean water.",
+        "format": "number",
+        "decimals": "2",
+        "unit": null,
+        "index": "vulnerability",
+        "sector": null,
+        "component": null
+    }
 };
 
 // Color utilities

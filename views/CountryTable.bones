@@ -18,7 +18,7 @@ view = views.Main.extend({
             var field = {
                 field: meta[key],
                 klass: klass,
-                raw: null, 
+                raw: null,
                 normalized: null
             };
             var sector = {};
@@ -31,17 +31,19 @@ view = views.Main.extend({
                 field.score = indicator.score();
             }
             // Create new hash to determine worst scores.
-            scores[field.field.id] = {};
-            scores[field.field.id].score = field.score;
-            scores[field.field.id].index = field.field.index;
-            scores[field.field.id].name = field.field.id;
-            scores[field.field.id].sector = field.field.sector;
-            if (field.field.component == null && field.field.id != that.options.tab) {
-                sector.id = field.field.id;
-                sector.score = !isNaN(parseFloat(field.score)) ? field.score : 0;
-                sectors.push(sector);
+            if (field.field != undefined) {
+                scores[field.field.id] = {};
+                scores[field.field.id].score = field.score;
+                scores[field.field.id].index = field.field.index;
+                scores[field.field.id].name = field.field.id;
+                scores[field.field.id].sector = field.field.sector;
+                if (field.field.component == null && field.field.id != that.options.tab) {
+                    sector.id = field.field.id;
+                    sector.score = !isNaN(parseFloat(field.score)) ? field.score : 0;
+                    sectors.push(sector);
+                }
+                data.push(field);
             }
-            data.push(field);
         };
 
         appendData(this.options.tab, 'index');

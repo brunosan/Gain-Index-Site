@@ -34,6 +34,7 @@ view = views.Main.extend({
     
         var id = this.model.get('id');
         _.each(meta, function(v) {
+
             if (v.index == meta[id].index) {
                 if (v.sector) {
                     sectors[v.sector] = {
