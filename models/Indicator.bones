@@ -411,21 +411,6 @@ model.meta = {
 	           "link": "http://pubs.giss.nasa.gov/docs/2000/2000_Hansen_etal_2.pdf"
 	       }]
     },
-    "fertilizers": {
-        "id": "fertilizers",
-        "name": "Fertilizers",
-        "description": "",
-        "format": "number",
-        "decimals": "2",
-        "unit": "%s %",
-        "index": "vulnerability",
-        "sector": "food",
-        "component": "exposure",
-        "source": [{
-            "name": "",
-            "link": ""
-        }]
-    },
     "finan": {
         "id": "finan",
         "name": "Financial freedom",
@@ -567,21 +552,6 @@ model.meta = {
             "link": "http://www.heritage.org/index/explore"
         }]
     },
-    "irrigated": {
-        "id": "irrigated",
-        "name": "Irrigated",
-        "description": "",
-        "format": "number",
-        "decimals": "2",
-        "unit": null,
-        "index": "readiness",
-        "sector": null,
-        "component": "social",
-        "source": [{
-            "name": "",
-            "link": ""
-        }]
-    },
     "labor": {
         "id": "labor",
         "name": "Labor freedom",
@@ -610,21 +580,6 @@ model.meta = {
         "source": [{
             "name": "World Development Indicators",
             "link": "http://data.worldbank.org/indicator/SP.DYN.LE00.IN"
-        }]
-    },
-    "machinery": {
-        "id": "machinery",
-        "name": "Machinery",
-        "description": "",
-        "format": "number",
-        "decimals": "2",
-        "unit": null,
-        "index": "readiness",
-        "sector": null,
-        "component": "social",
-        "source": [{
-            "name": "",
-            "link": ""
         }]
     },
     "malnutr": {
