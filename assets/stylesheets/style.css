@@ -162,6 +162,8 @@ ul.tabs.level-2 li a,
   .country-selector input.button:hover,
   .button.methodology:hover {
     border:1px solid #606060;
+    }
+  ul.tabs.level-2 li a:hover {
     position:relative;
     }
   ul.tabs.level-2 li a:active,
