@@ -121,3 +121,9 @@ view.route = function(path) {
     }
     return true;
 };
+
+
+// Start/End Years
+// ---------------
+view.startYear = 1995;
+view.endYear = 2011;

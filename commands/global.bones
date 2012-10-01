@@ -10,7 +10,6 @@ Bones.Command.options['files'] = {
     }
 };
 
-
 Bones.Command.options['couchHost'] = {
     'title': 'couchHost=[host]',
     'description': 'Couch DB Host.',
@@ -56,6 +55,18 @@ Bones.Command.options['maxAge'] = {
     'title': 'maxAge=[int]',
     'description': 'max-age setting for Cache-Control header',
     'default': 3600
+}
+
+Bones.Command.options['startYear'] = {
+    'title': 'startYear=[int]',
+    'description': 'Start year of the data',
+    'default': 1995
+}
+
+Bones.Command.options['endYear'] = {
+    'title': 'endYear=[int]',
+    'description': 'End (or latest) year of the data',
+    'default': 2011
 }
 
 /**

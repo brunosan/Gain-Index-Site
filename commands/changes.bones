@@ -4,7 +4,7 @@ command = Bones.Command.extend();
 command.description = 'listen for changes';
 command.prototype.initialize = function(options) {
     var schema = 'NAME VARCHAR, ISO3 VARCHAR';
-    for (i = 1995; i <= 2010; i++) {
+    for (i = Bones.Command.options['startYear']; i <= Bones.Command.options['endYear']; i++) {
         schema += ", '" + i + "_raw' REAL";
         schema += ", '" + i + "' INTEGER";
     }
@@ -28,7 +28,7 @@ command.prototype.initialize = function(options) {
                 return false;
             }
             var values = {};
-            for (var i = 1995; i <= 2010; i++) {
+            for (var i = Bones.Command.options['startYear']; i <= Bones.Command.options['endYear']; i++) {
                 if (!doc.values[i]) {
                     values[i +'_raw'] = 0;
                     values[i] = 0;

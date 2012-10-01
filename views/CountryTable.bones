@@ -149,29 +149,43 @@ view.prototype.tree = {
                 "d-Ppt",
                 "d-Temp",
                 "daly",
+                "dependency_natural",
                 "energy_access",
+                "exx",
                 "health_disease",
                 "road_floods",
+                "urban_concentration",
+                "urban_risk",
                 "yield_cv",
                 "yld_proj"
             ],
             "sensitivity": [
                 "coast_popn",
+                "ecological_footprint",
+                "electrical_outages",
                 "energy_sensit",
                 "external",
                 "imports",
                 "road_paved",
                 "rural_popn",
+                "slums",
                 "staff",
+                "threatened_species",
+                "urban_excess_growth",
                 "water_disease",
                 "water_use"
             ],
             "capacity": [
                 "food_capacity",
+                "international_treaties",
                 "life",
                 "malnutr",
                 "matern",
+                "nurses_mw",
+                "physicians",
+                "protected_biomes",
                 "sanit",
+                "trade_transport",
                 "water_access"
             ]
         },
@@ -184,13 +198,21 @@ view.prototype.tree = {
                 "yield_cv",
                 "yld_proj"
             ],
-            "water": [
-                "d-Ppt",
-                "d-Temp",
-                "sanit",
-                "water_access",
-                "water_disease",
-                "water_use"
+            "ecosystems": [
+                "dependency_natural",
+                "ecological_footprint",
+                "exx",
+                "international_treaties",
+                "protected_biomes"
+            ],
+            "habitat": [
+                "electrical_outages",
+                "slums",
+                "threatened_species",
+                "trade_transport",
+                "urban_concentration",
+                "urban_excess_growth",
+                "urban_risk"
             ],
             "health": [
                 "daly",
@@ -198,15 +220,25 @@ view.prototype.tree = {
                 "health_disease",
                 "life",
                 "matern",
+                "nurses_mw",
+                "physicians",
                 "staff"
             ],
-            "infrastruct": [
+            "infrastructure": [
                 "coast_area",
                 "coast_popn",
                 "energy_access",
                 "energy_sensit",
                 "road_floods",
                 "road_paved"
+            ],
+            "water": [
+                "d-Ppt",
+                "d-Temp",
+                "sanit",
+                "water_access",
+                "water_disease",
+                "water_use"
             ]
         }
     },

@@ -3,7 +3,7 @@
   <p class='container'>Rank countries by GAIN Index, Vulnerability and Readiness.</p>
   <p class='label container'>Table values show latest scores for 2010</p>
   <div class='tab-wrapper clearfix'>
-    <ul class='tabs level-1'>
+    <ul class='tabs level-1 clearfix'>
       <% if (!delta) { %>
         <li><a href='/ranking' class='exact'>GAIN Index</a></li>
         <li><a href='/ranking/vulnerability'>Vulnerability</a></li>
@@ -16,16 +16,16 @@
     </ul>
     <div class='tab-wrapper clearfix'>
     <% if (active.path) { %>
-      <ul class='tabs level-2'>
+      <ul class='tabs level-2 clearfix'>
         <li><a href='<%= active.path %>' class='exact'><%= active.name %></a></li>
       </ul>
     <% } %>
-      <ul class='tabs level-2'>
+      <ul class='tabs level-2 clearfix'>
       <% _.each(sectors, function(sector) { %>
         <li><a href='<%= sector.path %>'><%= sector.name %></a></li>
       <% }); %>
       </ul>
-      <ul class='tabs level-2'>
+      <ul class='tabs level-2 clearfix last'>
       <% _.each(components, function(component) { %>
         <li><a href='<%= component.path %>'><%= component.name %></a></li>
       <% }); %>

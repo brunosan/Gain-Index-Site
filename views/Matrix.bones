@@ -142,8 +142,6 @@ view = views.Main.extend({
                     if (countries[iso] == undefined) {
                       countries[iso] = new models.Country({id: iso});
                     }
-                    console.log(map[y]);
-                    // return;
 
                     if (map[y] !== undefined) {
                         if (map[y][iso] == undefined) {

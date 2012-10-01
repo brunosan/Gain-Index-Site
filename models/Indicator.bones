@@ -201,7 +201,7 @@ model.meta = {
         "decimals": "2",
         "unit": "%s %",
         "index": "vulnerability",
-        "sector": "infrastruct",
+        "sector": "infrastructure",
         "component": "exposure",
         "source": [{
             "name": "CIESIN",
@@ -216,7 +216,7 @@ model.meta = {
         "decimals": "2",
         "unit": "%s %",
         "index": "vulnerability",
-        "sector": "infrastruct",
+        "sector": "infrastructure",
         "component": "sensitivity",
         "source": [{
            "name": "CIESIN",
@@ -336,7 +336,7 @@ model.meta = {
         "decimals": "1",
         "unit": "%s %",
         "index": "vulnerability",
-        "sector": "infrastruct",
+        "sector": "infrastructure",
         "component": "exposure",
         "source": [{
             "name": "WHO & UNPD",
@@ -351,7 +351,7 @@ model.meta = {
         "decimals": "1",
         "unit": "%s %",
         "index": "vulnerability",
-        "sector": "infrastruct",
+        "sector": "infrastructure",
         "component": "sensitivity",
         "source": [
         {
@@ -713,7 +713,7 @@ model.meta = {
         "decimals": "2",
         "unit": null,
         "index": "vulnerability",
-        "sector": "infrastruct",
+        "sector": "infrastructure",
         "component": "exposure",
         "source": [
         {
@@ -734,7 +734,7 @@ model.meta = {
         "decimals": "2",
         "unit": "%s %",
         "index": "vulnerability",
-        "sector": "infrastruct",
+        "sector": "infrastructure",
         "component": "sensitivity",
         "source": [
         {
