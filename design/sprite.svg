@@ -27,14 +27,14 @@
      borderopacity="1.0"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:zoom="2"
-     inkscape:cx="9.4155441"
-     inkscape:cy="249.22454"
+     inkscape:zoom="4"
+     inkscape:cx="20.010469"
+     inkscape:cy="1021.2109"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="true"
-     inkscape:window-width="1464"
-     inkscape:window-height="916"
+     inkscape:window-width="1280"
+     inkscape:window-height="756"
      inkscape:window-x="196"
      inkscape:window-y="38"
      inkscape:window-maximized="0"
@@ -121,48 +121,30 @@
        id="path7840"
        d="m 2.999999,217.36218 -2,0 4,-5 3.999999,5 -2,0 z"
        style="color:#000000;fill:#b5b5b5;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
-    <g
-       id="g8053"
-       transform="translate(-41,180.99998)"
-       inkscape:export-filename="/Users/saman/Dropbox/work_repos/gai-gain/assets/images/sprite.png"
-       inkscape:export-xdpi="90"
-       inkscape:export-ydpi="90">
-      <rect
-         style="color:#000000;fill:#434343;fill-opacity:1;stroke:none;stroke-width:2;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
-         id="rect8023-8-0"
-         width="20"
-         height="19.999998"
-         x="41"
-         y="236.36218"
-         rx="3.9999974"
-         ry="3.9999974" />
-      <path
-         style="font-size:medium;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:start;text-decoration:none;line-height:normal;letter-spacing:normal;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:start;baseline-shift:baseline;color:#000000;fill:#ebebeb;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:2;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Sans;-inkscape-font-specification:Sans"
-         d="m 46.71875,240.64355 -1.4375,1.4375 4.28125,4.28125 -4.28125,4.28125 1.4375,1.4375 L 51,247.7998 l 4.28125,4.28125 1.4375,-1.4375 -4.28125,-4.28125 4.28125,-4.28125 -1.4375,-1.4375 L 51,244.9248 46.71875,240.64355 z"
-         id="path8060-5-5"
-         inkscape:connector-curvature="0" />
-    </g>
-    <g
-       id="g8049"
-       transform="translate(-1,210.99998)"
-       inkscape:export-filename="/Users/saman/Dropbox/work_repos/gai-gain/assets/images/sprite.png"
-       inkscape:export-xdpi="90"
-       inkscape:export-ydpi="90">
-      <rect
-         ry="3.9999974"
-         rx="3.9999974"
-         y="236.36218"
-         x="1"
-         height="19.999998"
-         width="20"
-         id="rect8018"
-         style="color:#000000;fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
-      <path
-         inkscape:connector-curvature="0"
-         id="path8020"
-         d="m 6.71875,240.64355 -1.4375,1.4375 4.28125,4.28125 -4.28125,4.28125 1.4375,1.4375 L 11,247.7998 l 4.28125,4.28125 1.4375,-1.4375 -4.28125,-4.28125 4.28125,-4.28125 -1.4375,-1.4375 L 11,244.9248 6.71875,240.64355 z"
-         style="font-size:medium;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:start;text-decoration:none;line-height:normal;letter-spacing:normal;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:start;baseline-shift:baseline;color:#000000;fill:#ebebeb;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:2;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Sans;-inkscape-font-specification:Sans" />
-    </g>
+    <rect
+       ry="3.9999974"
+       rx="3.9999974"
+       y="417.36215"
+       x="0"
+       height="19.999998"
+       width="20"
+       id="rect8023-8-0"
+       style="color:#000000;fill:#434343;fill-opacity:1;stroke:none;stroke-width:2;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+    <path
+       inkscape:connector-curvature="0"
+       id="path8060-5-5"
+       d="m 12.867033,431.66682 1.437499,-1.4375 -2.867035,-2.86703 2.867046,-2.86704 -1.437508,-1.43751 -2.867034,2.86704 -2.8670337,-2.86704 -1.4374986,1.4375 2.8670342,2.86703 -2.8670454,2.86704 1.4375074,1.43751 2.8670337,-2.86704 z"
+       style="font-size:medium;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:start;text-decoration:none;line-height:normal;letter-spacing:normal;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:start;baseline-shift:baseline;color:#000000;fill:#ebebeb;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:2;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Sans;-inkscape-font-specification:Sans"
+       sodipodi:nodetypes="ccccccccccccc" />
+    <rect
+       style="color:#000000;fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       id="rect8018"
+       width="20"
+       height="19.999998"
+       x="0"
+       y="447.36215"
+       rx="3.9999974"
+       ry="3.9999974" />
     <path
        transform="matrix(0.16666667,0,0,0.16666667,-12.5,154.52884)"
        d="m 135,245 c 0,16.56854 -13.43146,30 -30,30 -16.568542,0 -30,-13.43146 -30,-30 0,-16.56854 13.431458,-30 30,-30 16.56854,0 30,13.43146 30,30 z"
@@ -1777,6 +1759,12 @@
        id="path10288"
        d="m 80.999986,1247.3622 0,2 8,0 0,-2 z"
        style="fill:#ffffff;fill-opacity:1;stroke:none" />
+    <path
+       sodipodi:nodetypes="ccccccccccccc"
+       style="font-size:medium;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:start;text-decoration:none;line-height:normal;letter-spacing:normal;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:start;baseline-shift:baseline;color:#000000;fill:#ebebeb;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:2;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Sans;-inkscape-font-specification:Sans"
+       d="m 12.867033,461.66682 1.437499,-1.4375 -2.867035,-2.86703 2.867046,-2.86704 -1.437508,-1.43751 -2.867034,2.86704 -2.8670337,-2.86704 -1.4374986,1.4375 2.8670342,2.86703 -2.8670454,2.86704 1.4375074,1.43751 2.8670337,-2.86704 z"
+       id="path3575"
+       inkscape:connector-curvature="0" />
   </g>
   <path
      style="fill:#ff0000;fill-opacity:0;stroke:none"

@@ -1,7 +1,7 @@
 <div class='ranking'>
   <h2 class='container'>Country Rankings</h2>
   <p class='container'>Rank countries by GAIN Index, Vulnerability and Readiness.</p>
-  <p class='label container'>Table values show latest scores for 2010</p>
+  <p class='label container'>Table values show latest scores for <%= current %></p>
   <div class='tab-wrapper clearfix'>
     <ul class='tabs level-1 clearfix'>
       <% if (!delta) { %>

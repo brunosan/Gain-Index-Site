@@ -31,7 +31,6 @@ view = views.Main.extend({
             return this;
         }
 
-    
         var id = this.model.get('id');
         _.each(meta, function(v) {
             if (v.index == meta[id].index) {
@@ -67,6 +66,7 @@ view = views.Main.extend({
         $('.top', this.el).empty().append(templates.Ranking({
             indicatorName: this.model.get('subject').meta('name'),
             active: active,
+            current: views.App.endYear,
             sectors: sectors,
             components: components,
             delta: this.model.get('subject').isCorrection()

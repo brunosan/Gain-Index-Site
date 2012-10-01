@@ -1,5 +1,3 @@
-var latestYear = 2011;
-
 // * Readiness range is 0.2 - 0.85
 // Our matrix is 580 px wide
 // Points are 15px by 15px
@@ -18,7 +16,7 @@ var openTooltips = 0;
 
 // Some closure variables to help with animation.
 var animated = false,
-    currentYear = latestYear;
+    currentYear = views.App.endYear;
 
 var quadrant = function(data) {
     // Determine which quadrant to highlight.
@@ -129,7 +127,7 @@ view = views.Main.extend({
 
         this.data = data;
 
-        for (var i = 1995; i <= latestYear; i++) {
+        for (var i = views.App.startYear; i <= views.App.endYear; i++) {
             data[i] = [];
             map[i] = {};
         }
@@ -184,7 +182,7 @@ view = views.Main.extend({
 
         this.matrix = d3.select('.big-matrix .graph')
         var chart = this.matrix.selectAll("div")
-            .data(data[latestYear.toString()], function(d) { return d.iso });
+            .data(data[views.App.endYear.toString()], function(d) { return d.iso });
 
         chart.enter().append("div")
             .html(function(d) { return templates.MatrixPoint(d); })
@@ -195,7 +193,7 @@ view = views.Main.extend({
     staticGraphSetup: function(data) {
         $('.year-controls', this.el).remove();
         var matrix = $('.big-matrix .graph');
-        _.each(data[latestYear.toString()], function(d) {
+        _.each(data[views.App.endYear.toString()], function(d) {
             var elem = $('<div>')
               .html(templates.MatrixPoint(d))
               .addClass('point')
@@ -261,7 +259,7 @@ view = views.Main.extend({
             resultLimit: 10
         })).render();
 
-        $('ul.year-selector a.year-' + latestYear, this.el).addClass('selected');
+        $('ul.year-selector a.year-' +  views.App.endYear, this.el).addClass('selected');
     },
     polyfillSetup: function() {
         // IE8 Has a different, and older, way of setting style-y things. So we
@@ -334,7 +332,7 @@ view = views.Main.extend({
         }
 
         // If we click play from the most recent year, we really want to start from 1995
-        if (currentYear == latestYear) currentYear = 1994;
+        if (currentYear == views.App.endYear) currentYear =  views.App.startYear;
 
         var actions = [],
             view = this;
@@ -345,7 +343,7 @@ view = views.Main.extend({
             next();
         });
 
-        for (var i = (currentYear + 1); i <= latestYear; i++) {
+        for (var i = (currentYear + 1); i <= views.App.endYear; i++) {
             (function(y) {
                 actions.push(function(next) {
                     if (animated) { view.setYear(y, next) }

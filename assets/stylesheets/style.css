@@ -737,7 +737,7 @@ li.ui-menu-item a.ui-corner-all {
   background: transparent url(../images/sprite.png) no-repeat 0 -575px;
   }
 #cabinet .drawer a.close.handle:hover {
-  background: transparent url(../images/sprite.png) no-repeat 0 -605px;
+  background-position: 0 -605px;
   }
 
 #cabinet .indicator-time .lastReported {
