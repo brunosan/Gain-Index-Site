@@ -56,6 +56,14 @@ model = Backbone.Model.extend({
         }
 
         var totalRanks = value.asc + value.desc;
+
+        // red - ff7c80
+        // blue - 68b5df
+        // yellow - f6cd47
+        // green - 68bb37
+
+        // Log the vulnerability and readiness value 
+
         if (this.meta('index') == 'vulnerability' || this.get('name') == 'vulnerability_delta') {
             var color = gradientRgb(['#7cbee3', '#a99cb5', '#fd9496'], totalRanks, value.asc);
             var rank = value.asc;

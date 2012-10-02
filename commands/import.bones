@@ -176,7 +176,7 @@ function getSchemas() {
         "additionalProperties": false,
         "properties": {
             "Value": { "type": ["null", "number"], "required": true },
-            "Sign": { "type": ["null", "integer"], "required": true, "minimum": -1, "maximum": 1 }
+            "Trend": { "type": ["null", "integer"], "required": true, "minimum": -1, "maximum": 1 }
         }
     }, undefined, 'urn:trendPropType#');
 
