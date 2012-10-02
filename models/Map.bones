@@ -11,7 +11,7 @@ model = Backbone.Model.extend({
         // Setup the map and add it to the model.
         // NOTE: the maps default element, width and height, etc.. can be overridden.
         var el = options.el || document.getElementById('map'),
-            width = options.width || 640,
+            width = options.width || 680,
             height = options.height || 490,
             lat = options.lat || 15,
             lon = options.lon || -8,
