@@ -138,7 +138,7 @@ ul.tabs.level-2 li a,
   color:#444;
   margin:10px auto;
   text-shadow:0 1px 0 rgba(255,255,255,0.8);
-  padding:4px 15px;
+  padding:4px 10px;
   -moz-border-radius:2px;
   border-radius:2px;
   font-weight:600;
@@ -175,7 +175,7 @@ ul.tabs.level-2 li a,
     border-color:#b0b0b0;
     -moz-box-shadow:inset 0 3px 4px rgba(0, 0, 0, 0.10);
          box-shadow:inset 0 3px 4px rgba(0, 0, 0, 0.10);
-    }  
+    }
 
 
 .indicator-info .button.methodology {
@@ -1121,7 +1121,7 @@ body.fullscreen-map .front #map {
   }
 
 .front .map-selector {
-  background: transparent url(../images/sprite.png) repeat-x 0 -1570px;
+  background:#666;
   z-index: 100;
   position: absolute;
   display: block;
@@ -1129,6 +1129,9 @@ body.fullscreen-map .front #map {
   line-height:30px;
   margin:0;
   padding:0;
+  }
+.front .map-selector li a {
+  font-weight:300;
   }
 .front .map-selector li a.selected,
 .front .map-selector li a:hover {
@@ -1155,9 +1158,10 @@ body.fullscreen-map .front #map {
 .front #map-years {
   bottom:0;
   width:100%;
+  text-align:center;
   }
 .front .map-selector li {
-  float: left;
+  display:inline-block;
   }
 .front .map-selector li a {
   color: #fff;
@@ -1839,7 +1843,7 @@ div.bottomscorelabel {
 
 .big-matrix div.year-controls {
   float:left;
-  background: transparent url(../images/sprite.png) repeat-x 0 -1570px;
+  background: #666;
   color: #fff;
   margin: 20px 0 0;
   width:100%;
@@ -1870,7 +1874,7 @@ div.bottomscorelabel {
   padding: 2px 5px;
   line-height: 25px;
   font-size: 10px;
-  font-weight: bold;
+  font-weight: 300;
   }
 .big-matrix ul.year-selector li a:hover,
 .big-matrix ul.year-selector li a.selected {
