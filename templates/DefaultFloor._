@@ -1,6 +1,6 @@
 <div class='content'>
   <div class='container'>
-    <a class='button methodology' href='<%= methodologyLink %>'>Methodology</a>
+    <a class='button default methodology' href='<%= methodologyLink %>'>Methodology</a>
     <h3><%= title %></h3>
     <p><%= content %></p>
   </div>

@@ -52,6 +52,8 @@ routers.App.send = function(view, options, res) {
         version: time,
         title: title,
         main: $(main.el).html(),
+        startYear: views.App.startYear,
+        endYear: views.App.endYear,
         config: 'Bones.plugin = Bones.plugin || {};  Bones.plugin.config = {' +
             'mapHosts: "' + mapHosts + '"' +
         '};',

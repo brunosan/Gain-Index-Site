@@ -13,7 +13,7 @@ model = Backbone.Model.extend({
         var el = options.el || document.getElementById('map'),
             width = options.width || 680,
             height = options.height || 490,
-            lat = options.lat || 15,
+            lat = options.lat || 28,
             lon = options.lon || -8,
             z = options.z || 2,
             extent = options.extent || false;
@@ -174,7 +174,7 @@ model = Backbone.Model.extend({
             } else if (ind == 'readiness' || ind == 'readiness_delta') {
               val = "No Readiness score";
             } else {
-              val = "No GaIn&trade; score";
+              val = "No GAIN score";
             }
             inlineData = ' data-iso="' + data.iso_codes + '"';
         } else {

@@ -16,7 +16,7 @@ router = Backbone.Router.extend({
         var router = this;
         var fetcher = this.fetcher();
         var feature = new models.Front({id: 'front'});
-        var ranking = new models.IndicatorSummary({id: 'gain', years: [2010]});
+        var ranking = new models.IndicatorSummary({id: 'gain', years: [views.App.endYear]});
         fetcher.push(feature);
         fetcher.push(ranking);
         fetcher.fetch(function() {

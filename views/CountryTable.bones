@@ -93,7 +93,12 @@ view = views.Main.extend({
         _.each(scores, function(score) {
             worst[score.name] = score.score;
         });
-        $(this.el).empty().append(templates.CountryTable({data: data, worst: worst}));
+        $(this.el).empty().append(templates.CountryTable({
+            data: data,
+            worst: worst,
+            startYear: views.App.startYear,
+            endYear: views.App.endYear
+        }));
         return this;
     },
     attach: function() {

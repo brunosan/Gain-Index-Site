@@ -1,7 +1,7 @@
 <thead><tr>
     <th class='name label'>Indicator</th>
     <th class='composition label'>Composition</th>
-    <th class='graph label'>1995 to 2010</th>
+    <th class='graph label'><%= startYear %> to <%= endYear %></th>
     <th class='raw label'>Raw</th>
     <th class='score label'>Score</th>
 </tr></thead>

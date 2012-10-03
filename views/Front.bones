@@ -28,7 +28,7 @@ view = views.Main.extend({
             rankBottom = [];
         var ranking = this.model;
         // Toss out non-numeric values like '-'
-        var list = _.reject(ranking.list('values', 2010), function(v) {
+        var list = _.reject(ranking.list('values', views.App.endYear), function(v) {
             return isNaN(parseFloat(v.value)) 
         });
         rankTop = list.slice(0, 5);
@@ -59,7 +59,7 @@ view = views.Main.extend({
     attach: function() {
         views.Main.prototype.attach.call(this);
         var indicator = 'gain',
-            year = 2010,
+            year = views.App.endYear,
             view = this;
 
 
@@ -78,7 +78,7 @@ view = views.Main.extend({
         this.map.bind('change:indicator', this.renderFloor);
 
         var locals = {indicators: [], years: []};
-        for (var i = 1995; i <= 2010; i++) {
+        for (var i = views.App.startYear; i <= views.App.endYear; i++) {
             var item = {year: i, klass: 'year-'+ i};
             if (i == year) {
                 item.klass += ' selected';

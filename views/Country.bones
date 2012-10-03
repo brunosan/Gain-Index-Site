@@ -28,12 +28,12 @@ view = views.Main.extend({
             title: this.model.meta('name'),
             rank: rank,
             gdp: {
-                year: 2009,
+                year: views.App.endYear,
                 value: indicators.byName('gdp').input({year: 2009}),
                 label: indicators.byName('gdp').meta('name')
             },
             population: {
-                year: 2009,
+                year: views.App.endYear,
                 value: indicators.byName('pop').input({year: 2009}),
                 label: indicators.byName('pop').meta('name')
             }
@@ -71,7 +71,7 @@ view = views.Main.extend({
         views.Main.prototype.attach.call(this);
         var coords = (this.model.meta('coords'));
 
-        this.map = new models.Map({year: 2010, indicator: 'gain'}, {
+        this.map = new models.Map({year: views.App.endYear, indicator: 'gain'}, {
             el: $('.country-summary .map-wrapper', this.el)[0],
             width: 340,
             height: 160,
