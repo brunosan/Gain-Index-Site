@@ -213,7 +213,6 @@ command.prototype.initialize = function(options) {
     // constructor for record class that handles
     // the meta-data.
     function Record(data, category, name) {
-        console.log(name);
         this._id = '/api/Indicator/' + category + '-' + name + '-' + data.ISO3;
         this.category = category;
         this.name = name;
@@ -308,6 +307,14 @@ command.prototype.initialize = function(options) {
      * Import a standard CSV file.
      */
     function importCSV(source, category, name) {
+        var round = function(val) {
+            return Math.round(parseFloat(val) * 1000) / 1000;
+        };
+        if (category === 'gain') {
+            round = function(val) {
+                return Math.round(parseFloat(val) * 10) / 10;
+            };
+        }
         return function(next) {
             var actions = [];
             var records = {};
@@ -337,8 +344,9 @@ command.prototype.initialize = function(options) {
                     memo[year] = _(values).chain()
                         .pluck(year)
                         .without(null, undefined)
-                        .uniq() // multiple countries can share the same rank
-                        .sortBy(parseFloat)
+                        .map(round)
+                        .uniq()
+                        .sort()
                         .value() || [];
                     return memo;
                 }, {});
@@ -346,7 +354,8 @@ command.prototype.initialize = function(options) {
                 // Determine the rank for a value both from the front and the back
                 // of the sorted value array for each year.
                 function reduceRank(memo, value, year) {
-                    var index = _(sorted[year]).indexOf(value);
+                    var index = _(sorted[year]).indexOf(round(value));
+
                     if (~index) {
                         var rank = {};
                         rank.asc = index + 1;
