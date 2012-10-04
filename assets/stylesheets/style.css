@@ -366,7 +366,7 @@ ul.tabs.level-1 li a.active {
   background: transparent url(../images/sprite.png) no-repeat -160px 0;
   display: block;
   position: absolute;
-  top: 15px;
+  top: 14px;
   left: 0;
   text-indent: -9999px;
   width: 180px;
@@ -388,7 +388,7 @@ ul.tabs.level-1 li a.active {
 #header .navigation {
   position: absolute;
   left: 241px;
-  margin:15px 0 0;padding:0;
+  margin:17px 0 0;padding:0;
   }
 #header .navigation li {
   float: left;
@@ -1792,10 +1792,10 @@ div.bottomscorelabel {
   background: transparent
   }
 .front .ranking .ranktop .rank-number {
-  background-color: #68B5DF;
+  background-color: #79ba51;
   }
 .front .ranking .rankbottom .rank-number {
-  background-color: #FD7A7D;
+  background-color: #f85f5f;
   }
 
 
