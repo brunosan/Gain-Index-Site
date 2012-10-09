@@ -5,7 +5,6 @@ var csv = require('csv'),
     _ = require('underscore')._,
     request = require('request');
 
-
 var put = function(config, db, doc, callback) {
     request.put({
         uri: 'http://' +
@@ -197,7 +196,6 @@ function getSchemas() {
     return schemas;
 }
 
-
 command = Bones.Command.extend();
 
 command.description = 'import data';
@@ -241,7 +239,6 @@ command.prototype.initialize = function(options) {
     function errorLog(err) {
         console.warn(err);
     }
-
 
     /**
      * Wrapper to pass a callback into the csv processing stack.
@@ -505,7 +502,6 @@ command.prototype.initialize = function(options) {
         }
     }
 
-
     var actions = [];
 
     actions.push(function(next) {
@@ -518,7 +514,6 @@ command.prototype.initialize = function(options) {
 
         couch.db.dbDel(next);
     });
-
 
     actions.push(function(next) {
         var dir = [process.cwd(), 'design-docs', 'data'].join('/');
@@ -545,7 +540,6 @@ command.prototype.initialize = function(options) {
             next();
         });
     });
-
 
     // Build a list of files to import by crawling the resources hierarchy.
     // Currently this is a blocking operation.
