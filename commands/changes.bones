@@ -1,7 +1,7 @@
 var couch_sqlite = require('couch-sqlite');
 
 command = Bones.Command.extend();
-command.description = 'listen for changes';
+command.description = 'set up CouchDB > Sqlite changes feed';
 command.prototype.initialize = function(options) {
     var schema = 'NAME VARCHAR, ISO3 VARCHAR';
     for (i = options.config.startYear; i <= options.config.endYear; i++) {
