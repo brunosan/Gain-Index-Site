@@ -12,7 +12,7 @@ command.prototype.initialize = function(options) {
     var sqliteIndicators = {
         'gain': [0, 1],
         'gain_delta': [30, 1.66],
-        'vulnerability': [-1, -100],
+        'vulnerability': [-0.8, -130],
         'vulnerability_delta': [-0.5, -100],
         'readiness': [0, 100],
         'readiness_delta': [0.5, 100]
