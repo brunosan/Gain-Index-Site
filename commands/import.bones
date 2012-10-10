@@ -547,6 +547,7 @@ command.prototype.initialize = function(options) {
     categories.forEach(function(v) {
         var contents = fs.readdirSync(__dirname + '/../resources/' + v);
         contents.forEach(function(i) {
+            i = i.toLowerCase();
             var target = __dirname + '/../resources/' + v + '/' + i;
             if (i.match(/\.csv$/)) {
                 actions.push(importCSV(target, v, i.slice(0, -4)));
