@@ -57,10 +57,18 @@ view = views.Main.extend({
         });
 
         // Calculate the % for each sector and stick onto data.graph
-        var total = 0;
-        var totalWidth = 0;
-        _.each(sectors, function(sector) { total += parseFloat(sector.score); });
-        _.each(sectors, function(sector) { sector.percent = Math.round((parseFloat(sector.score) / total)*100); });
+        var total = _(sectors)
+            .chain()
+            .pluck('score')
+            .reduce(function(m, n) {return m + parseFloat(n); }, 0)
+            .value();
+        var totalWidth = _(sectors)
+            .chain()
+            .reduce(function(memo, sector) {
+                sector.percent = Math.round((parseFloat(sector.score) / total)*100);
+                return memo + sector.percent;
+            }, 0)
+            .value();
         sectors = _.select(sectors, function(sector) { return sector.percent > 0; });
         var i = -1;
         while (totalWidth > 100) {
