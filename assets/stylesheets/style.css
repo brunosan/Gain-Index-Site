@@ -1220,13 +1220,46 @@ body.fullscreen-map .front #map {
           border-radius: 4px;
   }
 
-/* body.fullscreen-map .front #map .legend */
+.front #map .legend {
+  opacity: 0;
+  transition:         0.4s opacity;
+  -webkit-transition: 0.4s opacity;
+  }
+  .front #map .legend.active {
+    opacity: 1;
+    }
 .front #map .legend {
   bottom: 30px;
   right: 5px;
   position: absolute;
   z-index: 30;
-}
+  }
+  .front #map .legend.vulnerability,
+  .front #map .legend.readiness {
+    bottom: 55px;
+    right: 10px;
+    }
+
+.legend .label {
+  font-style: normal;
+  font-size: 11px;
+  width: 25px;
+  margin: 0 5px;
+  line-height: 15px;
+  }
+.legend .scale,
+.legend .label { float: left; }
+
+.legend .scale { width: 128px; }
+.legend .scale .swatch { float: left; width: 15px; height: 15px; margin-right: 1px; }
+.legend .scale .scale-1 { background-color: #f85f5f; }
+.legend .scale .scale-2 { background-color: #f5734e; }
+.legend .scale .scale-3 { background-color: #eb944e; }
+.legend .scale .scale-4 { background-color: #E2B343; }
+.legend .scale .scale-5 { background-color: #ded943; }
+.legend .scale .scale-6 { background-color: #B3CE44; }
+.legend .scale .scale-7 { background-color: #94c250; }
+.legend .scale .scale-8 { background-color: #79ba51; }
 
 .front #carousel {
   height: 155px;

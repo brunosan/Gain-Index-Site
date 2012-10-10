@@ -1,12 +1,40 @@
 <div class='front'>
   <div id='map'>
-    <div class='legend gain gain_delta'>
+    <div class='legend gain active'>
       <div class="mini-matrix">
         <div class="quad tl active"></div>
         <div class="quad tr active"></div>
         <div class="quad br active"></div>
         <div class="quad bl active"></div>
       </div>
+    </div>
+    <div class='legend readiness'>
+      <div class='label'>Less</div>
+      <div class='scale'>
+        <div class='swatch scale-1'></div>
+        <div class='swatch scale-2'></div>
+        <div class='swatch scale-3'></div>
+        <div class='swatch scale-4'></div>
+        <div class='swatch scale-5'></div>
+        <div class='swatch scale-6'></div>
+        <div class='swatch scale-7'></div>
+        <div class='swatch scale-8'></div>
+      </div>
+      <div class='label'>More</div>
+    </div>
+    <div class='legend vulnerability'>
+      <div class='label'>More</div>
+      <div class='scale'>
+        <div class='swatch scale-1'></div>
+        <div class='swatch scale-2'></div>
+        <div class='swatch scale-3'></div>
+        <div class='swatch scale-4'></div>
+        <div class='swatch scale-5'></div>
+        <div class='swatch scale-6'></div>
+        <div class='swatch scale-7'></div>
+        <div class='swatch scale-8'></div>
+      </div>
+      <div class='label'>Less</div>
     </div>
   </div>
   <div id='carousel'>

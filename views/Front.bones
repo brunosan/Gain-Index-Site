@@ -218,6 +218,8 @@ view = views.Main.extend({
                 indicator = v.slice(10);
             }
         });
+        $('.legend', this.el).removeClass('active');
+        $('.legend.' + indicator, this.el).addClass('active');
         this.map.set({indicator: indicator});
         this.noDrawer = true;
         return false;
