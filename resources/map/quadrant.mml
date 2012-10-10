@@ -18,7 +18,7 @@
     {
       "Datasource": {
         "file": "layers/countries.sqlite",
-        "table": "(SELECT country_poly.*, d1.ISO3 AS ISO3, d1.`<%= year %>_raw` AS vulnerability, d2.`<%= year %>_raw` as readiness FROM country_poly LEFT JOIN indicators.data AS d1 ON country_poly.iso_codes = d1.ISO3 AND d1.NAME='<% if (indicator == 'gain_delta') { %>vulnerability_delta<% } else { %>vulnerability<% } %>' LEFT JOIN indicators.data AS d2 ON country_poly.iso_codes = d2.ISO3 AND d2.NAME = '<% if (indicator == 'gain_delta') { %>readiness_delta<% } else { %>readiness<% } %>')",
+        "table": "(SELECT country_poly.*, d0.`<%=year %>_raw` as factor_raw, d1.`<%= year %>_raw` AS vulnerability, d2.`<%= year %>_raw` as readiness FROM country_poly LEFT JOIN indicators.data AS d0 ON country_poly.iso_codes = d0.ISO3 AND d0.NAME='<%= indicator%>' LEFT JOIN indicators.data AS d1 ON country_poly.iso_codes = d1.ISO3 AND d1.NAME='<% if (indicator == 'gain_delta') { %>vulnerability_delta<% } else { %>vulnerability<% } %>' LEFT JOIN indicators.data AS d2 ON country_poly.iso_codes = d2.ISO3 AND d2.NAME = '<% if (indicator == 'gain_delta') { %>readiness_delta<% } else { %>readiness<% } %>')",
         "attachdb": "indicators@../../files/indicators.sqlite",
         "key_field": "",
         "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34",
