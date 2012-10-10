@@ -1,5 +1,14 @@
 <div class='front'>
-  <div id='map'></div>
+  <div id='map'>
+    <div class='legend gain gain_delta'>
+      <div class="mini-matrix">
+        <div class="quad tl active"></div>
+        <div class="quad tr active"></div>
+        <div class="quad br active"></div>
+        <div class="quad bl active"></div>
+      </div>
+    </div>
+  </div>
   <div id='carousel'>
     <div class='item container'>
       <div class='overview active slide1'>

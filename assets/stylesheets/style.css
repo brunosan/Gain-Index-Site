@@ -1219,6 +1219,15 @@ body.fullscreen-map .front #map {
   -webkit-border-radius: 4px;
           border-radius: 4px;
   }
+
+/* body.fullscreen-map .front #map .legend */
+.front #map .legend {
+  bottom: 30px;
+  right: 5px;
+  position: absolute;
+  z-index: 30;
+}
+
 .front #carousel {
   height: 155px;
   background-color: #ebebeb;
