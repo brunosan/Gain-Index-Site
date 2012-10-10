@@ -1,0 +1,79 @@
+{
+  "_center": {
+    "lat": 33.376412351246586,
+    "lon": 65.21484374999997,
+    "zoom": 5
+  },
+  "_format": "png",
+  "interactivity": {
+    "layer": "scores",
+    "fields": [ "iso_codes", "wb_names", "factor_raw"]
+  },
+  "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+  "Stylesheet": [
+    "indicator.mss",
+    "borders.mss"
+  ],
+  "Layer": [
+    {
+      "Datasource": {
+        "file": "layers/countries.sqlite",
+        "table": "(SELECT country_poly.*, data.'<%= year %>' as factor, data.'<%= year %>_raw' as factor_raw FROM country_poly LEFT JOIN indicators.data ON country_poly.iso_codes = data.ISO3 AND data.NAME = '<%= indicator %>')",
+        "attachdb": "indicators@../../files/indicators.sqlite",
+        "key_field": "",
+        "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34",
+        "geometry_table":"country_poly",
+        "geometry_field":"GEOMETRY",
+        "multiple_geometries":true,
+        "id": "scores",
+        "project": "gain",
+        "type": "sqlite"
+      },
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "id": "scores",
+      "name": "scores",
+      "class": "",
+      "geometry": "polygon"
+    },
+    {
+      "geometry": "linestring",
+      "name": "country",
+      "id": "country",
+      "srs": "",
+      "class": "",
+      "Datasource": {
+        "file": "layers/worldbankboundaries",
+        "id": "country",
+        "project": "gain",
+        "type": "shape"
+      }
+    },
+    {
+      "geometry": "point",
+      "name": "names",
+      "id": "names",
+      "srs": "",
+      "class": "",
+      "Datasource": {
+        "file": "layers/countrypts",
+        "id": "names",
+        "project": "gain",
+        "type": "shape"
+      }
+    },
+    {
+      "geometry": "linestring",
+      "name": "label_lines",
+      "id": "label_lines",
+      "srs": "",
+      "class": "",
+      "Datasource": {
+        "file": "layers/label_lines",
+        "type": "shape"
+      }
+    }
+  ],
+  "legend": "",
+  "description": "",
+  "attribution": ""
+}

@@ -13,14 +13,13 @@ require('tilelive-mapnik').registerProtocols(tilelive);
 //
 // In-process cache of the Mapnik XML template we generate, and the localized
 // MML we use to do so..
-var Cache = function() {
+var Cache = function(filename) {
     events.EventEmitter.call(this);
 
     this.available = false;
     this.queued = false;
 
-    // TODO make mml filename attribute on the model.
-    this.filename = 'gain.mml';
+    this.filename = filename;
     this.base = path.normalize(__dirname + '/../resources/map/');
 }
 util.inherits(Cache, events.EventEmitter);
@@ -97,7 +96,10 @@ Cache.prototype.get = function(options) {
     }
 };
 
-var mapCache = new Cache();
+// There are two types of maps, create a cache for each of them.
+var indicatorCache = new Cache('indicator.mml');
+var quadrantCache = new Cache('quadrant.mml');
+
 // End map cache
 // -----
 
@@ -106,6 +108,10 @@ models.Tileset.prototype.sync = function(method, model, options) {
 
 
     // Attach the tilelive source to our model.
+    var mapCache = indicatorCache;
+    if (model.get('indicator').indexOf('gain') == 0) {
+        mapCache = quadrantCache;
+    }
     mapCache.get({
         success:function(mml, xml) {
             // Setup the basic map "uri" for mapnik.
@@ -123,20 +129,17 @@ models.Tileset.prototype.sync = function(method, model, options) {
                 },
             };
 
-            // Merge in the XML and MML from our cache.
-
             uri.xml = _.template(xml, {
                 year: model.get('year'),
                 indicator: model.get('indicator')
             });
-            
+
             // http://trac.mapnik.org/wiki/OutputFormats?version=8#PNGQuantization
             // reduce colors to 50 so that png encoding is faster and the tiles are smaller
             // if you see color degradation increase c higher, up to 256
             mml.format = "png8:c=50"
             
             uri.mml = mml;
-            
 
             tilelive.load(uri, function(err, source) {
                 if (err) return options.error(err);
