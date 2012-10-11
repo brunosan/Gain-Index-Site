@@ -218,11 +218,14 @@ view = views.Main.extend({
                 indicator = v.slice(10);
             }
         });
-        $('.legend', this.el).removeClass('active');
-        $('.legend.' + indicator, this.el).addClass('active');
+        this.legend(indicator);
         this.map.set({indicator: indicator});
         this.noDrawer = true;
         return false;
+    },
+    legend: function(indicator) {
+        $('.legend', this.el).removeClass('active');
+        $('.legend.' + indicator, this.el).addClass('active');
     },
     countryClick: function(ev) {
         var path = '/country/' + models.Country.pathSafe($(ev.currentTarget).attr('id'));
@@ -234,8 +237,10 @@ view = views.Main.extend({
         // a mapping.
         var indicator = this.map.get('indicator');
         if (indicator.slice(-6) === '_delta') {
+            this.legend(indicator.slice(0, -6));
             this.map.set({indicator: indicator.slice(0, -6)});
         } else {
+            this.legend(indicator + '_delta');
             this.map.set({indicator: indicator + '_delta'});
         }
         return false;

@@ -8,7 +8,7 @@
         <div class="quad bl active"></div>
       </div>
     </div>
-    <div class='legend readiness vulnerability'>
+    <div class='legend readiness vulnerability gain_delta readiness_delta vulnerability_delta'>
       <div class='label'>Worse</div>
       <div class='scale'>
         <div class='swatch scale-1'></div>
