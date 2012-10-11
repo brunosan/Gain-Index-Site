@@ -1090,7 +1090,7 @@ model.meta = {
     "ecosystems": {
         "id": "ecosystems",
         "name": "Ecosystems",
-        "description": "",
+        "description": "Ecosystem services are the multitude of processes that humans rely upon to support their lives and livelihoods.",
         "format": "number",
         "decimals": "2",
         "unit": null,
@@ -1123,7 +1123,7 @@ model.meta = {
     "habitat": {
         "id": "habitat",
         "name": "Habitat",
-        "description": "",
+        "description": "Habitat measures the stresses rapid economic, migration and population growth place on human settlements and urban areas.",
         "format": "number",
         "decimals": "2",
         "unit": null,
