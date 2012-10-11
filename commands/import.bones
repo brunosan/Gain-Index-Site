@@ -342,7 +342,6 @@ command.prototype.initialize = function(options) {
                         .pluck(year)
                         .without(null, undefined)
                         .map(round)
-                        .uniq()
                         .sort()
                         .value() || [];
                     return memo;
@@ -352,11 +351,12 @@ command.prototype.initialize = function(options) {
                 // of the sorted value array for each year.
                 function reduceRank(memo, value, year) {
                     var index = _(sorted[year]).indexOf(round(value));
+                    var lastIndex = _(sorted[year]).lastIndexOf(round(value));
 
                     if (~index) {
                         var rank = {};
                         rank.asc = index + 1;
-                        rank.desc = _(sorted[year]).size() - index;
+                        rank.desc = _(sorted[year]).size() - lastIndex;
                         memo[year] = rank;
                     }
                     return memo;
