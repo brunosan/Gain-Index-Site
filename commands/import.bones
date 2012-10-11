@@ -524,7 +524,9 @@ command.prototype.initialize = function(options) {
                     return dir + '/' + val;
                 });
             }
-        } catch (err) {   }
+        } catch (e) {
+            console.error(e.toString());
+        }
 
         var couch = require('backbone-couch')({
             host: config.couchHost,
@@ -545,16 +547,20 @@ command.prototype.initialize = function(options) {
     // Currently this is a blocking operation.
     var categories = ['gain', 'indicators', 'readiness', 'vulnerability'];
     categories.forEach(function(v) {
-        var contents = fs.readdirSync(__dirname + '/../resources/' + v);
-        contents.forEach(function(i) {
-            i = i.toLowerCase();
-            var target = __dirname + '/../resources/' + v + '/' + i;
-            if (i.match(/\.csv$/)) {
-                actions.push(importCSV(target, v, i.slice(0, -4)));
-            } else if (fs.statSync(target).isDirectory()) {
-                actions.push(importIndicatorDir(target, v, i));
-            }
-        });
+        try {
+            var contents = fs.readdirSync(__dirname + '/../resources/' + v);
+            contents.forEach(function(i) {
+                i = i.toLowerCase();
+                var target = __dirname + '/../resources/' + v + '/' + i;
+                if (i.match(/\.csv$/)) {
+                    actions.push(importCSV(target, v, i.slice(0, -4)));
+                } else if (fs.statSync(target).isDirectory()) {
+                    actions.push(importIndicatorDir(target, v, i));
+                }
+            });
+        } catch (e) {
+            console.error(e.toString());
+        }
     });
 
     actions.push(importTrendDir(__dirname + '/../resources/trends'));
