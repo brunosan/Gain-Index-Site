@@ -168,7 +168,7 @@ model.meta = {
         "id": "gain",
         "name": "GAIN Index",
         "description": "The GAIN Index captures a country's Vulnerability to climate change and other global challenges, and its Readiness to improve resilience.",
-        "map_caption": "Countries of the world by GAIN Index, higher scores are better.",
+        "map_caption": "Countries of the world by their quadrant position on the GAIN Index.",
         "ranking_caption": "World wide ranking by GAIN Index, higher scores are better.",
         "format": "number",
         "decimals": "1",
