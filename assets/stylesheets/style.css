@@ -1229,22 +1229,30 @@ body.fullscreen-map .front #map {
     opacity: 1;
     }
 .front #map .legend {
-  bottom: 30px;
-  right: 5px;
+  bottom: 33px;
+  right: 10px;
   position: absolute;
   z-index: 30;
+  background-color: rgba(255, 255, 255, .5);
+  padding: 1px;
+  border-radius: 2px;
+  }
+  .front #map .legend .mini-matrix {
+    width: 88px;
+    height: 85px;
+    overflow: hidden;
   }
   .front #map .legend.vulnerability,
   .front #map .legend.readiness {
-    bottom: 55px;
-    right: 10px;
+    bottom: 50px;
+    right: 7px;
     }
 
 .legend .label {
   font-style: normal;
   font-size: 11px;
-  width: 25px;
-  margin: 0 5px;
+  width: 33px;
+  margin: 0 3px;
   line-height: 15px;
   }
 .legend .scale,
