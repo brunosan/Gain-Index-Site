@@ -19,4 +19,8 @@ Map {
       polygon-fill: #68BB37; // Green quadrant
     }
   }
+  [factor_raw=null] {
+    polygon-pattern-file: url(images/diagonal_8.png);
+    polygon-pattern-alignment: global;
+  }
 }
