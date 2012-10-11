@@ -837,7 +837,7 @@ model.meta = {
        "decimals": "2",
        "unit": "%s %",
        "index": "vulnerability",
-       "sector": "habitat",
+       "sector": "ecosystems",
        "component": "sensitivity",
        "source": [{
            "name": "IUCN Red Book",
