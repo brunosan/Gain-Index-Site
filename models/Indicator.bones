@@ -525,7 +525,7 @@ model.meta = {
     },
     "international_treaties": {
        "id": "international_treaties",
-       "name": "Engagement in International Environmental Conventions",
+       "name": "International Environmental Conventions",
        "description": "The country’s participation in international forums, which is taken as an indicator its capacity to engage in multilateral negotiations and to reach agreement on appropriate actions internally.",
        "format": "number",
        "decimals": "0",
@@ -861,7 +861,7 @@ model.meta = {
     },
     "trade_transport": {
        "id": "trade_transport",
-       "name": "Quality of trade and transport-related infrastructure",
+       "name": "Trade and transport infrastructure",
        "description": "Logistics professionals' perception of country's quality of trade and transport related infrastructure (e.g. ports, railroads, roads, information technology), on a rating ranging from 1 (very low) to 5 (very high). Scores are averaged across all respondents.",
        "format": "number",
        "decimals": "2",
