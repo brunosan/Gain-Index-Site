@@ -4,7 +4,7 @@ Map {
 }
 
 #scores {
-  [vulnerability > .3] {
+  [vulnerability > .33] {
     [readiness <= .56] {
       polygon-fill: #F77C80; // Red quadrant
     }
@@ -12,7 +12,7 @@ Map {
       polygon-fill: #68B5DF; // Blue quadrant
     }
   }
-  [vulnerability <= .3] {
+  [vulnerability <= .33] {
     [readiness <= .56] {
       polygon-fill: #F6CD47; // Yellow quadrant
     }
