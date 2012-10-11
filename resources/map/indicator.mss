@@ -1,5 +1,6 @@
 Map {
   background-color: #fff;
+  background-image: url(images/dots.png);
 }
 
 #scores {
