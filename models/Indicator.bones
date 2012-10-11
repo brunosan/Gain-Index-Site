@@ -255,7 +255,7 @@ model.meta = {
         }]
     },
     "d-temp": {
-        "id": "d-Temp",
+        "id": "d-temp",
         "name": "Temperature change",
         "description": "Projected change in temperature by late 21st century, i.e. 2070-99 compared to  1961-90.",
         "format": "number",
