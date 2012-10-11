@@ -92,7 +92,7 @@ view = views.Main.extend({
             scores.sort(function(a, b) { return b.score - a.score; });
             scores = scores.slice(0,3);
         } else {
-            scores = _.filter(scores, function(item) {return item.score < 0.3; });
+            scores = _.filter(scores, function(item) {return item.score < 0.33; });
             scores.sort(function(a, b) { return a.score - b.score; });
             scores = scores.slice(0,3);
         }
