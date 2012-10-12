@@ -109,7 +109,7 @@ models.Tileset.prototype.sync = function(method, model, options) {
 
     // Attach the tilelive source to our model.
     var mapCache = indicatorCache;
-    if (model.get('indicator').indexOf('gain') == 0) {
+    if (model.get('indicator') == 'gain') {
         mapCache = quadrantCache;
     }
     mapCache.get({

@@ -194,8 +194,8 @@ view.prototype.tree = {
                 "life",
                 "malnutr",
                 "matern",
-                "nurses_mw",
-                "physicians",
+                // "nurses_mw",
+                // "physicians",
                 "protected_biomes",
                 "sanit",
                 "trade_transport",
@@ -233,8 +233,8 @@ view.prototype.tree = {
                 "health_disease",
                 "life",
                 "matern",
-                "nurses_mw",
-                "physicians",
+                // "nurses_mw",
+                // "physicians",
                 "staff"
             ],
             "infrastructure": [
