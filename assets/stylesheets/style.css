@@ -1006,7 +1006,7 @@ table.full tbody tr.active:hover {
   top: 0;
   left: 61px;
   width: 338px;
-  height: 197px;
+  height: 182px;
   }
 .quad-tr {
   background-color: #68B5DF;
@@ -1014,21 +1014,21 @@ table.full tbody tr.active:hover {
   top: 0;
   left: 420px;
   width: 200px;
-  height: 197px;
+  height: 182px;
   }
 .quad-br {
   background-color: #68BB37;
-  top: 233px;
+  top: 216px;
   left: 420px;
   width: 200px;
-  height: 97px;
+  height: 115px;
   }
 .quad-bl {
   background-color: #F6CD47;
-  top: 233px;
+  top: 216px;
   left: 61px;
   width: 338px;
-  height: 97px;
+  height: 115px;
   padding: 8px 10px 12px;
   }
 
@@ -1243,6 +1243,7 @@ body.fullscreen-map .front #map {
     overflow: hidden;
   }
   .front #map .legend.vulnerability,
+  .front #map .legend.gain,
   .front #map .legend.readiness {
     bottom: 50px;
     right: 7px;
