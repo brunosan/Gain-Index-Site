@@ -438,8 +438,8 @@ model.meta = {
     },
     "CAF": {
         "ISO3": "CAF",
-        "name": "Central African Republic",
-        "articleName": "The Central African Republic",
+        "name": "Central African Rep.",
+        "articleName": "The Central African Rep.",
         "oecd_value": "1",
         "oecd_income": "Low",
         "coords": [
@@ -523,8 +523,8 @@ model.meta = {
     },
     "COD": {
         "ISO3": "COD",
-        "name": "Democratic Republic of the Congo",
-        "articleName": "The Democratic Republic of the Congo",
+        "name": "Dem. Rep. of the Congo",
+        "articleName": "The Dem. Rep. of the Congo",
         "oecd_value": "1",
         "oecd_income": "Low",
         "coords": [
@@ -1114,8 +1114,8 @@ model.meta = {
     },
     "PRK": {
         "ISO3": "PRK",
-        "name": "Democratic People's Republic of Korea",
-        "articleName": "The Democratic People's Republic of Korea",
+        "name": "Dem. People's Rep. of Korea",
+        "articleName": "The Dem. People's Rep. of Korea",
         "oecd_value": "1",
         "oecd_income": "Low",
         "coords": [
@@ -1393,7 +1393,7 @@ model.meta = {
     },
     "FSM": {
         "ISO3": "FSM",
-        "name": "Federated States of Micronesia",
+        "name": "Micronesia",
         "articleName": "The Federated States of Micronesia",
         "oecd_value": "2",
         "oecd_income": "Lower middle",
