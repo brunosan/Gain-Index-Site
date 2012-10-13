@@ -159,8 +159,8 @@ view.prototype.tree = {
         "components": {
             "exposure": [
                 "coast_area",
-                "d-Ppt",
-                "d-Temp",
+                "d-ppt",
+                "d-temp",
                 "daly",
                 "dependency_natural",
                 "energy_access",
@@ -246,8 +246,8 @@ view.prototype.tree = {
                 "road_paved"
             ],
             "water": [
-                "d-Ppt",
-                "d-Temp",
+                "d-ppt",
+                "d-temp",
                 "sanit",
                 "water_access",
                 "water_disease",
