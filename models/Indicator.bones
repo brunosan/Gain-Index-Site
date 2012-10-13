@@ -658,28 +658,6 @@ model.meta = {
             "link": "http://info.worldbank.org/governance/wgi/index.asp"
         }]
     },
-    "nurses_mw": {
-        "id": "nurses_mw",
-        "name": "Nurses",
-        "description": "Nurses Description",
-        "format": "number",
-        "decimals": "0",
-        "unit": null,
-        "index": "vulnerability",
-        "sector": "health",
-        "component": "capacity"
-    },
-    "physicians": {
-        "id": "physicians",
-        "name": "Physicians",
-        "description": "Number of physicians",
-        "format": "number",
-        "decimals": "0",
-        "unit": null,
-        "index": "vulnerability",
-        "sector": "health",
-        "component": "capacity"
-    },
     "pop": {
         "id": "pop",
         "name": "Population",
