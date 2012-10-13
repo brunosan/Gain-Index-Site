@@ -1,6 +1,6 @@
 <div class='front'>
   <div id='map'>
-    <div class='legend gain active'>
+    <div class='legend matrix '>
       <div class="mini-matrix">
         <div class="quad tl active"></div>
         <div class="quad tr active"></div>
@@ -8,7 +8,7 @@
         <div class="quad bl active"></div>
       </div>
     </div>
-    <div class='legend readiness vulnerability gain_delta readiness_delta vulnerability_delta'>
+    <div class='legend active readiness vulnerability gain gain_delta readiness_delta vulnerability_delta'>
       <div class='label'>Worse</div>
       <div class='scale'>
         <div class='swatch scale-1'></div>
