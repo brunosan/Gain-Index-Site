@@ -8,7 +8,7 @@ view = Backbone.View.extend({
         var collection = this.model.get('indicators'),
             data = [],
             matches = (this.type == 'Vulnerability') ? 
-              ['water', 'food', 'health', 'infrastruct'] : 
+              ['water', 'food', 'health', 'infrastruct','habitat','ecosystems'] : 
               ['economic', 'governance', 'social'],
             totalWidth = 0,
             total = 0;
