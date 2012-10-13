@@ -164,7 +164,7 @@ view.prototype.tree = {
                 "daly",
                 "dependency_natural",
                 "energy_access",
-                "exx",
+                "biome_threat",
                 "health_disease",
                 "road_floods",
                 "urban_concentration",
@@ -214,7 +214,7 @@ view.prototype.tree = {
             "ecosystems": [
                 "dependency_natural",
                 "ecological_footprint",
-                "exx",
+                "biome_threat",
                 "international_treaties",
                 "protected_biomes"
             ],

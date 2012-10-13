@@ -239,7 +239,7 @@ model.meta = {
         "id": "coast_popn",
         "name": "Coastal population",
         "description": "Percent of population living less than 10 meters above sea-level.",
-        "format": "percent",
+        "format": "number",
         "decimals": "2",
         "unit": "%s %",
         "index": "vulnerability",
@@ -421,7 +421,7 @@ model.meta = {
             "link": "http://data.worldbank.org/indicator/SH.XPD.EXTR.ZS"
         }]
     },
-	"exx": {
+	"biome_threat": {
 	       "id": "biome_threat",
 	       "name": "Projected Biome Threat",
 	       "description": "The proportion of the land of a country on which the existing biome is no longer matched to the projected climate of the late 21st century.",
