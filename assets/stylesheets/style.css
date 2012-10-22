@@ -1972,7 +1972,7 @@ div.bottomscorelabel {
 .country-selector .active-countries {
   float: left;
   padding: 15px 0;
-  min-height: 180px;
+  min-height: 40px;
   }
 .country-selector .active-countries span.country {
   background: transparent url(../images/sprite.png) repeat-x 0 -1570px;
