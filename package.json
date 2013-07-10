@@ -11,7 +11,7 @@
     "node": "~v0.8.9"
   },
   "dependencies": {
-    "mapnik": "0.7.14",
+    "mapnik": "~0.7.22",
     "bones": "= 2.3.0",
     "bones-admin": "= 2.0.0",
     "bones-auth": "= 2.0.0",
