@@ -126,4 +126,4 @@ view.route = function(path) {
 // Start/End Years
 // ---------------
 view.startYear = 1995;
-view.endYear = 2011;
+view.endYear = 2012;

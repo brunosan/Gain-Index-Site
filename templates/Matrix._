@@ -5,7 +5,7 @@
   <div class='year-controls'>
     <a href='#play' class='play-button'>Play</a>
     <ul class='year-selector'>
-      <% for (var y= 1995; y <= 2011; y++) { %>
+      <% for (var y= 1995; y <= 2012; y++) { %>
         <li><a href='#<%= y %>' class='year-<%= y %>'><%= y %></a></li>
       <% } %>
     </ul>

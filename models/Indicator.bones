@@ -1,7 +1,7 @@
 model = Backbone.Model.extend({
     url: '',
     defaults: {
-        currentYear: 2011,
+        currentYear: 2012,
         input: {},
         values: {}
     },
