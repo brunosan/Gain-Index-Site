@@ -2,7 +2,7 @@
   "author": "Development Seed <info@developmentseed.org> (developmentseed.org)",
   "name": "gain",
   "description": "GAIN Index website",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "repository": {
     "type": "git",
     "url": "git://github.com/developmentseed/gain.git"
