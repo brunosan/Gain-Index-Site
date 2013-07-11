@@ -66,7 +66,7 @@ Bones.Command.options['startYear'] = {
 Bones.Command.options['endYear'] = {
     'title': 'endYear=[int]',
     'description': 'End (or latest) year of the data',
-    'default': 2011
+    'default': 2012
 }
 
 /**
