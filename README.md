@@ -61,3 +61,8 @@ If server should be accessible on a host other than the OS default, host needs
 to be specified:
 
     ./index.js --host=[host]
+
+When debugind data, this one liner might be handy:
+
+    ./index.js uninstall; ./index.js install; ./index.js import ;
+./index.js changes ;  ./index.js & ; sleep 20 ; open http://localhost:3000/
